@@ -1,3 +1,17 @@
+# 当前三账户调度
+
+America/Los_Angeles 工作日13:20收盘复盘并冻结下一交易日计划，20:20补跑。固定在同一仓库和运行目录执行：
+
+```sh
+/path/to/venv/bin/python /absolute/repo/outputs/paired_stock_monitor/run_pair.py --phase auto
+```
+
+当前入口使用Unix文件锁，适用于macOS/Linux。程序串行运行三账户、只下载一次行情，检查快照一致性。报告读取 `outputs/paired_stock_monitor/comparison.json` 和 `COMPARISON.md`；失败状态为 `ERROR_NO_NEW_RECOMMENDATIONS`。晚间无变化保持安静，收盘交易日汇报三个独立账户及次日计划。定时器不随代码安装。
+
+下文只适用于保留的旧单账户CLI，不适用于三账户入口。
+
+---
+
 # 调度与通知
 
 建议 America/Los_Angeles 时区的工作日06:20执行盘前任务，13:20执行收盘任务。程序根据NYSE日历判断休市和已完成交易日，并处理夏令时；提前收盘日在下午任务时统一结算。

@@ -18,3 +18,13 @@ config.json
 status.json
 last_error.json
 DAILY_STATUS.md
+
+# Three-account runtime: publish source/config only, never local state.
+work/
+outputs/**/comparison.json
+outputs/**/COMPARISON.md
+outputs/**/retrospective_*.json
+outputs/**/*.lock
+!outputs/daily_stock_monitor/config.json
+!outputs/pressure_shadow_monitor/config.json
+!outputs/resilience_shadow_monitor/config.json

@@ -1,5 +1,35 @@
 # Stock Signal Monitor
 
+当前定时运行入口是三账户收盘监控：基准、量价压力影子、抗跌性影子。只做独立模拟，不连接券商。旧版 `stock-monitor` CLI 保留，仍是单账户盘前版本；它不会运行以下三账户流程。
+
+## 当前三账户入口
+
+安装依赖后，从仓库根目录执行：
+
+```sh
+python -m pip install .
+python outputs/paired_stock_monitor/run_pair.py --phase auto
+python -m unittest discover -s outputs/paired_stock_monitor -p 'test_*.py' -v
+```
+
+- 收盘数据完整后冻结下一交易日计划，下一开盘价代理成交，日线完整后核对；重复运行不重复入账。
+- 三账户共用同一不可变快照；Yahoo缺失时尝试经验证的已有快照或StockAnalysis备用数据，无法确认则停止新建议。
+- 基准 `r12_cmf_rebound_v1`；压力影子 `r12_cmf_pressure_shadow_v1`；抗跌影子 `r12_cmf_resilience_shadow_v1`。第三账户在基准入围股票内加入10%下跌日beta残差抗跌排序，R12–1保持30%。
+- 各自10万美元，每只预算10%、最多5只、每行业2只，双边成本0.10%，guarded10退出。
+- 第三账户起点2026-09-28；同期统计从该日开始，收益包含原账户继承持仓，胜率仅计同期新入场平仓交易。60个共同完整交易日且各100笔此类平仓才做初步评估。
+- 统一摘要在 `outputs/paired_stock_monitor/COMPARISON.md`，各账户独立SQLite账本和CSV位于自己的目录；行情缓存为 `work/stock_monitor_cache/`。这些运行数据不提交。
+
+本仓库同步运行代码及冻结配置，**不含现有账户账本或历史行情**。全新克隆不会恢复已有模拟成绩，也不会获得任何历史补记授权。新使用者应在首次运行前把三个配置的 `paper_start` 设为同一未来NYSE交易日；账户初始化后不要修改代码或配置来绕过指纹检查。已有账户升级需另行审核迁移，不能删除账本重建历史。
+
+目前源码目录结构用于保持现有策略指纹与相对依赖一致；`outputs/factor_research` 和 `outputs/swing_research` 是运行时因子依赖，其中独立研究入口所需历史数据库未发布。不要把旧CLI和新入口当作相同执行版本。
+
+完整执行约定：[三账户规则](outputs/paired_stock_monitor/RULES.md)、[第三账户规则](outputs/resilience_shadow_monitor/RULES.md)。调度仍需在本机配置，本仓库不安装定时任务。
+
+---
+
+## 原单账户CLI文档
+
+
 日线多因子选股、盘前计划和前向模拟账本。当前规则为 R12–1 + CMF 回调反弹策略；只做模拟，不连接券商或自动下单。
 
 ## 安装
@@ -61,3 +91,5 @@ python -m unittest discover -s tests -v
 历史研究使用当前股票池，有幸存者偏差，且进行了多轮模型选择。本仓库不包含完整历史数据或声称可独立重现此前全部研究绩效。它提供选定策略的运行代码与前向模拟跟踪。
 
 收盘触发的风险退出不保证止损价；跳空会扩大损失。模拟忽略税、现金利息、分红到账延迟和实际交易限制。新数据和独立前向结果才是后续评估依据。
+
+旧账户目录的两项历史集成测试依赖未发布研究数据，缺失时明确跳过；合成数据测试仍正常执行。冻结执行源码保留原始字节（包括 reconciliation_v2.py 末尾空行），避免无意义的指纹变化。
