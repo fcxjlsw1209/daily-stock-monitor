@@ -1,0 +1,7 @@
+results/
+*.json
+*.csv
+*.csv.gz
+*.log
+RESULTS.html
+__pycache__/

@@ -25,6 +25,10 @@ python -m unittest discover -s outputs/paired_stock_monitor -p 'test_*.py' -v
 
 完整执行约定：[三账户规则](outputs/paired_stock_monitor/RULES.md)、[第三账户规则](outputs/resilience_shadow_monitor/RULES.md)。调度仍需在本机配置，本仓库不安装定时任务。
 
+## 独立离线研究
+
+新增 [YXL近似复刻与动能因子增量研究](research/yxl_proxy/README.md)：包含事前实验规则、回测代码、测试和历史结果摘要。与三个冻结监控账户隔离，不上传行情或账本，不自动上线。完整历史重跑需要自备匹配的研究数据。
+
 ---
 
 ## 原单账户CLI文档
