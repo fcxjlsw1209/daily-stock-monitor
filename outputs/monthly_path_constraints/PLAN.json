@@ -1,0 +1,12 @@
+{
+  "purpose": "Recover image-compatible whole paths before fitting another monthly selection model.",
+  "author_link": "Long/cash; month-end equal three/two holdings held at fixed shares; positive medium-term momentum skipping the most recent two months. Initial chart date Aug17 is an explicit initialization assumption. No portfolio diversification scoring, stops, leverage, or changed momentum lag.",
+  "new_observation": "The source image also prints monthly strategy daily-return correlation to QQQ=0.712. This is an OUTPUT constraint, not a portfolio correlation-selection factor.",
+  "reason": "Old image overlap scores could accept overly smooth paths with higher Sharpe and shallower drawdowns. Require observed DD extrema and jointly match terminal wealth, Sharpe, maximum DD and correlation.",
+  "data": "Existing unchanged cached adjusted prices and historical index-union Top32 proxy, core17/theme17 ETF hypotheses; unknown original all-US market-cap pool and ETF list remain limitations.",
+  "preregistered_search": "Two ETF pools, each seeded from the old continuous hindsight path and from local image fits. Five full coordinate sweeps; first three metric weight 1, next two weight 4. All tested month candidates and latent accepted states saved.",
+  "optimizer_scales_not_acceptance_tolerances": {"log_terminal": 0.02, "sharpe": 0.03, "correlation": 0.02, "maximum_drawdown": 0.01},
+  "important": "This is inverse attribution using future prices, not a strategy backtest, real returns, or independent OOS. No potential transaction export before the existing reconstruction gate. A matching inverse path does not by itself supply an executable ranking rule.",
+  "followup": "Identify months and securities stable across compatible paths. Test whether documented momentum/volatility/industry/price-volume score ordering can explain them with a bounded small correction. Do not fit security/date lookup rules or per-month coefficients.",
+  "no_original_ledger_changes": true
+}

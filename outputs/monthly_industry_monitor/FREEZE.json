@@ -1,0 +1,8 @@
+{
+  "outputs/monthly_industry_monitor/observe.py": "ca9380f3e2d8a2164497c6452dc98970dcebd98e9f565c9cd7e4ea5ac4fae51a",
+  "outputs/monthly_industry_monitor/inputs.py": "b7d2961223f8b8300ff835812c8f1ccbe1d964c8ecadd99591655cb826ca201d",
+  "outputs/monthly_industry_monitor/strategy.py": "3b94ea656fa8259f27cf3585cc3f220d1a8fd912854abdeb29be960e88ca0718",
+  "outputs/monthly_industry_monitor/base_strategy.py": "dcdd830e19f20790bbcbc4a9cc886d2582dc5908b631fbd592f9a0c55c3b9543",
+  "outputs/monthly_industry_monitor/config.json": "e21372e07d388911f522921bc6407d2d98e2129803f1e614fa6a93c92c0b5455",
+  "outputs/monthly_industry_monitor/RULES.md": "16392025ddeb5ea257854a92f2f561cadbc456770d7dd0c7bb6613b496ffea90"
+}

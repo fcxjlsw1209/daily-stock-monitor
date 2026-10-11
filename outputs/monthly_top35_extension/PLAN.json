@@ -1,0 +1,17 @@
+{
+  "objective": "Keep the existing simple monthly formula fixed; compare published Top32 versus Top35 for the existing 44 months, then extend both to the 69 author-ledger periods starting 2020-12-31.",
+  "strategy": "simple_leader",
+  "weights": {"mom252_risk_recent63": 0.5, "vol126": 0.35, "neg_downside63": 0.15},
+  "normalization": "Within the complete contemporaneous stock-plus-core17 universe, scale each feature from its 10th to 90th percentile, clip to [0,1], subtract 0.5. Retain the previous eligibility gate and stable lexical tie breaks.",
+  "gate": "295 consecutive valid adjusted close sessions and P[t-42]/P[t-252]-1 > 0.",
+  "portfolio": "3 equal-weight positions; exactly 2 eligible positions get equal halves; fewer than 2 remain cash. Monthly fixed shares, rebalance differences at month-end close.",
+  "cost_per_side": 0.0,
+  "new_fit_or_search": false,
+  "ranking_expansion": "All ranks 33-35 enter at every decision date, not only author-selected winners. Issuer deduplication precedes the rank cutoff.",
+  "recent_source": "Existing corrected 44 published monthly rankings; Top32 must exactly reproduce the previous daily equity and holdings control.",
+  "earlier_source": "Cached issuer-wide historical capitalization observations, historical US listing evidence, and source-aligned prior prices; collect missing relevant free sources as needed. Keep observation dates, dates used, corrections and limitations in a separate manifest. No old index-constrained pool is substituted.",
+  "availability": "Earlier reconstructed rankings use observations no later than the previous trading session, rolled by split-consistent price ratios when necessary. Historical vendor revision/publication vintages remain unverified.",
+  "coverage_audit": "Independent historical global large-company references only cross-check candidate coverage and cap units, never replace the monthly pool or provide future ranking membership.",
+  "reporting": "Separate unchanged published44 comparison from extended69 research comparison. Explain the earlier universe reconstruction and any remaining historical coverage uncertainty. Author ledger is simulated learning material, not verified actual trading.",
+  "protected": "No changes to existing research outputs, rules, weights, ledgers, frozen plans, monitoring code, or automation. New files only in this experiment directory."
+}

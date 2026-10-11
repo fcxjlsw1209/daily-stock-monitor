@@ -1,0 +1,69 @@
+{
+  "created_utc": "2026-10-09T22:53:21.914514+00:00",
+  "objective": "Reconstruct supplied monthly holdings; no return optimization and no chart inputs.",
+  "fixed_masks": "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_filtered_reconstruction/PLAN.json",
+  "training": "Annual refit before first holding month of each year; preceding five years, monthly next-month returns fully matured at cutoff. No author holdings enter model fits.",
+  "labels": [
+    "excess_next_month_vs_SPY_clipped_1",
+    "cross_sectional_next_month_rank",
+    "excess_div_known_vol63_sqrt21_clipped_5"
+  ],
+  "ridge_alphas": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "ridge_recent_half_lives_months": [
+    12,
+    24
+  ],
+  "gbdt": {
+    "depth": [
+      2,
+      3
+    ],
+    "max_iter": 100,
+    "learning_rate": 0.05,
+    "min_samples_leaf": 40,
+    "l2_regularization": 1,
+    "early_stopping": false,
+    "random_state": 1729,
+    "weak_gate": "SPY close < MA200"
+  },
+  "scoring": "Original fixed candidate pool and gate; core >=50%; total ML <=15%, new layers <=20%; all old/new state+ML+pattern corrections <=20%. Weights come from support, preserving core when possible. Unused weak-market budget returns to support.",
+  "search": "Finite grid of 3 targets x 3 Ridge alphas x 2 recent half-lives x 2 tree depths; base seeds from prior compact leaders, plus pure long momentum. Rank predictions among eligible assets. Original A54/B39 masks frozen.",
+  "weights": {
+    "ordinary_ridge": [
+      0,
+      0.05,
+      0.1
+    ],
+    "recent_ridge": [
+      0,
+      0.025,
+      0.05
+    ],
+    "weak_gbdt": [
+      0,
+      0.025,
+      0.05
+    ],
+    "shape": [
+      0,
+      0.025,
+      0.05
+    ]
+  },
+  "shapes": [
+    "all_shapes",
+    "volume_shapes",
+    "chase_penalty"
+  ],
+  "limitations": [
+    "Stock membership/capitalization and sector labels are inherited historical proxies, not certified author universe.",
+    "Exact ETF17, training objective and factor definitions unknown. Model choices are hypotheses.",
+    "Current-close features assume descriptive close-time selection, not proven same-close executable fills.",
+    "No author prior holdings, position P&L, calendar event guesses or intra-month exits used.",
+    "A/B filtered months and hyperparameter search are retrospective diagnostics, not independent OOS."
+  ]
+}

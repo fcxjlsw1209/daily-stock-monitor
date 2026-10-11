@@ -1,5 +1,10 @@
 # Stock Signal Monitor
 
+**2026-10-11 更新：** 最新六个日观察账户、四个月观察账户及研究代码位于
+`outputs/`；统一入口为 `outputs/paired_stock_monitor/run_pair.py`。
+部署前请读 [当前代码、版本与数据依赖](docs/LATEST_WORKSPACE.md)。本仓库不含私有行情
+缓存、作者交易记录或现有模拟账本。下面的 `stock-monitor` 安装说明仍对应早期单账户 CLI。
+
 当前定时运行入口是三账户收盘监控：基准、量价压力影子、抗跌性影子。只做独立模拟，不连接券商。旧版 `stock-monitor` CLI 保留，仍是单账户盘前版本；它不会运行以下三账户流程。
 
 ## 当前三账户入口

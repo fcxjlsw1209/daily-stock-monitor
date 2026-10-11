@@ -1,0 +1,8 @@
+{
+  "outputs/monthly_stability_monitor/observe.py": "284299ecf27341fbaed2ddb2b22102fd6364bfdce2c47ee2d11fd75055cbd774",
+  "outputs/monthly_stability_monitor/inputs.py": "dd97fb4a9f7b2102d2c7f497825526a484628fa86ee9891312bfb5abad7c8ded",
+  "outputs/monthly_stability_monitor/strategy.py": "7edd80e0f11ff5dae51721237ca74cb2f98de57a7b1067e5735de7574031f140",
+  "outputs/monthly_stability_monitor/base_strategy.py": "dcdd830e19f20790bbcbc4a9cc886d2582dc5908b631fbd592f9a0c55c3b9543",
+  "outputs/monthly_stability_monitor/config.json": "11d9e5bd38189206ce8a08593254a6ccba4115e7921ac82f3e2df2bdc9000b43",
+  "outputs/monthly_stability_monitor/RULES.md": "3176b70560512a3596280c0cdfdbba5f7e46ad78056dcf621ec4e7425c290ad0"
+}

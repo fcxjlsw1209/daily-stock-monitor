@@ -1,0 +1,198 @@
+{
+  "sklearn_version": "1.6.1",
+  "configs": [
+    {
+      "kind": "ridge",
+      "target": 0,
+      "alpha": 0.1,
+      "half_life": 0
+    },
+    {
+      "kind": "ridge",
+      "target": 0,
+      "alpha": 0.1,
+      "half_life": 12
+    },
+    {
+      "kind": "ridge",
+      "target": 0,
+      "alpha": 0.1,
+      "half_life": 24
+    },
+    {
+      "kind": "ridge",
+      "target": 0,
+      "alpha": 1.0,
+      "half_life": 0
+    },
+    {
+      "kind": "ridge",
+      "target": 0,
+      "alpha": 1.0,
+      "half_life": 12
+    },
+    {
+      "kind": "ridge",
+      "target": 0,
+      "alpha": 1.0,
+      "half_life": 24
+    },
+    {
+      "kind": "ridge",
+      "target": 0,
+      "alpha": 10.0,
+      "half_life": 0
+    },
+    {
+      "kind": "ridge",
+      "target": 0,
+      "alpha": 10.0,
+      "half_life": 12
+    },
+    {
+      "kind": "ridge",
+      "target": 0,
+      "alpha": 10.0,
+      "half_life": 24
+    },
+    {
+      "kind": "ridge",
+      "target": 1,
+      "alpha": 0.1,
+      "half_life": 0
+    },
+    {
+      "kind": "ridge",
+      "target": 1,
+      "alpha": 0.1,
+      "half_life": 12
+    },
+    {
+      "kind": "ridge",
+      "target": 1,
+      "alpha": 0.1,
+      "half_life": 24
+    },
+    {
+      "kind": "ridge",
+      "target": 1,
+      "alpha": 1.0,
+      "half_life": 0
+    },
+    {
+      "kind": "ridge",
+      "target": 1,
+      "alpha": 1.0,
+      "half_life": 12
+    },
+    {
+      "kind": "ridge",
+      "target": 1,
+      "alpha": 1.0,
+      "half_life": 24
+    },
+    {
+      "kind": "ridge",
+      "target": 1,
+      "alpha": 10.0,
+      "half_life": 0
+    },
+    {
+      "kind": "ridge",
+      "target": 1,
+      "alpha": 10.0,
+      "half_life": 12
+    },
+    {
+      "kind": "ridge",
+      "target": 1,
+      "alpha": 10.0,
+      "half_life": 24
+    },
+    {
+      "kind": "ridge",
+      "target": 2,
+      "alpha": 0.1,
+      "half_life": 0
+    },
+    {
+      "kind": "ridge",
+      "target": 2,
+      "alpha": 0.1,
+      "half_life": 12
+    },
+    {
+      "kind": "ridge",
+      "target": 2,
+      "alpha": 0.1,
+      "half_life": 24
+    },
+    {
+      "kind": "ridge",
+      "target": 2,
+      "alpha": 1.0,
+      "half_life": 0
+    },
+    {
+      "kind": "ridge",
+      "target": 2,
+      "alpha": 1.0,
+      "half_life": 12
+    },
+    {
+      "kind": "ridge",
+      "target": 2,
+      "alpha": 1.0,
+      "half_life": 24
+    },
+    {
+      "kind": "ridge",
+      "target": 2,
+      "alpha": 10.0,
+      "half_life": 0
+    },
+    {
+      "kind": "ridge",
+      "target": 2,
+      "alpha": 10.0,
+      "half_life": 12
+    },
+    {
+      "kind": "ridge",
+      "target": 2,
+      "alpha": 10.0,
+      "half_life": 24
+    },
+    {
+      "kind": "gbdt",
+      "target": 0,
+      "depth": 2
+    },
+    {
+      "kind": "gbdt",
+      "target": 0,
+      "depth": 3
+    },
+    {
+      "kind": "gbdt",
+      "target": 1,
+      "depth": 2
+    },
+    {
+      "kind": "gbdt",
+      "target": 1,
+      "depth": 3
+    },
+    {
+      "kind": "gbdt",
+      "target": 2,
+      "depth": 2
+    },
+    {
+      "kind": "gbdt",
+      "target": 2,
+      "depth": 3
+    }
+  ],
+  "predictions_sha256": "356c69d70b4ad56cb709ac25225faa6cb884e0b063073c06893707a30f848a18"
+}

@@ -1,0 +1,22 @@
+{
+  "purpose": "Conditionally infer a uniform monthly selection rule from the user-designated 122 allocation labels.",
+  "labels": "theme17__prior__draw_v2__blocks",
+  "labels_assumed_true_for_inference_only": true,
+  "author_trades_independently_verified": false,
+  "scope": "Long/cash, three equal allocations, month-end close, fixed units within month. No daily stops, leverage, date/security memorization, or change to the two-month momentum skip.",
+  "core_features": "6-, 9-, and 12-month momentum skipping 42 trading sessions; raw and risk adjusted.",
+  "side_features": "21/63/126-session volatility, 63-session downside volatility, industry-relative 60-session return, CMF21/63, 21/126 volume ratio, 252-session high proximity, 126-session moving-average distance.",
+  "normalization": "Decision-date percentile ranks within the unchanged proxy universe; missing non-core inputs receive neutral median rank and remain counted in diagnostics.",
+  "models_before_testing": [
+    "raw momentum 80% R12-2 plus 20% R6-2",
+    "constrained pairwise Ridge: 50% positive momentum weights, 50% signed side-factor L1 budget",
+    "constrained pairwise Ridge: 60% positive momentum weights, 40% signed side-factor L1 budget",
+    "constrained pairwise Ridge: 80% positive momentum weights, 20% signed side-factor L1 budget",
+    "60/40 rule multiplied by 0.9 plus Ridge interaction correction clipped to +/-0.05",
+    "unconstrained Ridge on the same allowed inputs, diagnostic only because momentum dominance is not enforced"
+  ],
+  "loss": "Mean squared chosen-minus-unchosen score error against a common 0.10 ranking margin plus 0.001 L2 regularization; month-equal weighting. No parameter selection by return.",
+  "validation": "Whole-sample explanatory fit and expanding prior-calendar-year fits from 2020. Report exact portfolios, overlap, selected-stock ranks, replay CAGR/Sharpe/drawdown, and image compatibility. Held-out labels are inferred from a full-history image and are not independent investment out-of-sample evidence.",
+  "unknowns_retained": ["Actual ETF list", "Exact author universe", "Original historical prices", "Author ranking normalization", "Model definition"],
+  "protected": "Do not alter original research, ledgers, plans, source hashes, or admission decisions. Do not change labels to improve rule fit."
+}

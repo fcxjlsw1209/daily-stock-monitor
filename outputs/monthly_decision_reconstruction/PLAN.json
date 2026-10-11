@@ -1,0 +1,26 @@
+{
+  "task": "Reconstruct decisions one month at a time from the supplied guidance and assumed transaction labels, without full-period return backtests.",
+  "labels_assumed_true_for_this_task": true,
+  "source_path": "theme17__prior__draw_v2__blocks",
+  "initial_boundary": "2016-08-17 is not month-end. Record it as the supplied initial allocation, not as an independently established regular monthly decision. Begin rule reconstruction with 2016-08-31.",
+  "decision_information": "Only trailing features and contemporaneous candidate membership. No subsequent returns, NAV, CAGR, Sharpe or image-fit loss is used in this study.",
+  "process": [
+    "Freeze the candidate universe and factor snapshot at each decision date.",
+    "Record the target three, entries, exits and retained names.",
+    "Compare every chosen name with every eligible unchosen name.",
+    "Test whether a guidance-compatible score can select exactly these three this month.",
+    "Carry the previous compatible rule into the next month before using its labels.",
+    "Intersect ranking constraints with earlier months. If inconsistent, retain the conflict rather than silently changing weights each month.",
+    "Write individual decision cards, including counterexamples and unresolved alternatives."
+  ],
+  "features": "Reuse the 6 positive momentum core features (6/9/12-month raw and risk-adjusted returns, all skipping 42 sessions) and 10 volatility/industry/price-volume side factors already documented. No security/date dummy variables or new unrelated factors.",
+  "normalization_hypotheses": [
+    "percentile ranks within the whole contemporaneous proxy universe",
+    "raw magnitude scaled by that date's 10th/90th percentiles and clipped to [0,1]",
+    "percentile ranks separately within stocks and ETFs before comparing their scores"
+  ],
+  "guidance_interpretation": "Momentum weights nonnegative and consume at least 50% of an L1-normalized score budget; side factors may have either sign. This numerical dominance constraint and normalization are hypotheses, not author-disclosed facts.",
+  "solver": "Maximum common chosen-minus-unchosen score margin by linear programming; preserve solver status, primal/dual objective and worst inequality. Positive strict margin confirms only within-family feasibility for that month.",
+  "small_model_diagnostic": "A hypothetical arbitrary +/-0.05 per-security correction is reported only as an oracle feasibility envelope, never called a fitted model or used as a reproduced decision.",
+  "prohibitions": "Do not concatenate per-month fitted rules into a backtest, change labels, use later-month labels to explain an earlier decision, relax the original curve gate, or change live observation accounts."
+}

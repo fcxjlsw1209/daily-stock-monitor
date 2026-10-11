@@ -1,0 +1,17 @@
+{
+  "authorized_goal": "User asks to exhaust factor combinations to match supplied monthly holdings, or produce a guide-consistent strategy with backtest CAGR>=70%.",
+  "tracks": [
+    "Holdings reconstruction: maximize exact monthly set matches and total selected-symbol overlap, report all69 including unavailable proxy members",
+    "Alternative strategy: measure actual2016-08-17 to2026-09-24 CAGR and2020-12-31 to2026-09-24 CAGR separately; high-return alternatives are not author replications"
+  ],
+  "scope": "Long/cash, no borrowing or leveraged ETFs; three equal or two equal if exactly two eligible, otherwise cash; monthly rebalance, fixed units intramonth, no incumbent bonus, pullback entry, rebound label or intramonth stops.",
+  "universes": "Pre-existing historical cap-ranked foreign-inclusive proxyTop32 plus core17 or theme17. Keep unknown true ETF list/cap vintage limitations. Do not inject ledger winners. Primary search uses exactTop32 proxy; boundary sensitivity separate.",
+  "core": "At least50% score weight on one interpretable long/medium momentum definition, skipping latest42sessions. Windows126/189/252/294; arithmetic and log momentum, matched-window mean/std Sharpe, current/aligned volatility-adjusted momentum, half-vol adjustment, log-price trend slope timesR2. Window choices and transforms fixed across history.",
+  "side": "No more than50% combined score on at most two volatility, downside, beta/idiosyncratic-volatility, CMF, volume/dollar-volume, close-location, path-consistency, trend-position, acceleration or relative-industry/market factors. Test positive and negative signs explicitly; no ticker/date identity factors.",
+  "normalizations": "Contemporaneous pooled cross-sectional percentile and clipped10th-to90th percentile magnitude. Rank before eligibility gates. Missing feature values neutral; inputs never backfilled from future.",
+  "grid": "Pure core; one side at10/20/30/40/50%; two sides with total20/30/40/50% split equally, plus asymmetric70/20/10 and60/30/10. Exhaust every declared core/side choice, ETF hypothesis and normalization. Deduplicate identical factor arrays, retain mappings and exact trial recipe.",
+  "selection": "Separate full-ledger descriptive winners, holdings-match winners, and candidates selected on2021-2024 before checking2025-2026. All years were previously viewed; not independent OOS.",
+  "screen": "Zero-cost same-close arithmetic first for all grid cases; reject a selected missing price path rather than silently skipping. Recompute retained candidates with daily equity, Sharpe, maximumDD, two-sided transaction cost10bp, next-open execution and previous-close signals.",
+  "search_integrity": "Store all evaluated trials in isolatedSQLite and recipes with input/code hashes. No production code, account, ledger or frozen-plan writes; no live orders. Do not quietly redefine70% to mean only a favorable short window. If thresholds unmet, report actual results without fabrication.",
+  "latest_user_scope": "Do not use the original image; supplied holdings, dates and ledger returns are the sole replication labels. Primary70% threshold is full ledger window2020-12-31 to2026-09-24. Earlier data is extra robustness history only."
+}

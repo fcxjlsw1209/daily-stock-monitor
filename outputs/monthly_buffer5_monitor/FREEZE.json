@@ -1,0 +1,22 @@
+{
+  "outputs/daily_stock_monitor/engine.py": "7e3c6808c8e537a925bcd5ac4de501bb253f2856b36501f7f98d1647d29a3787",
+  "outputs/dual_strategy_research/research.py": "fdca145f2b49681c7cd84608e11ff82ee3d80a189e66ca7cc7b7b6a0e8bf6e8c",
+  "outputs/four_factor_rebound/factors.py": "18a3aa400aec342d2a9eb3161bfea8b3f8b2c575fea32a16122f7d87e29ba6ff",
+  "outputs/four_factor_rebound/prepare.py": "2a663eaa23bddd7ecb70ffeeb1d736ed7f1bdbcd231263b51c006623d56b4f7c",
+  "outputs/four_factor_rebound/run.py": "4b1027858e0344de7f2481a6a4cb41b0335b7a0260645be4e2ca2571e8a74d13",
+  "outputs/four_factor_rebound/validate_selected.py": "f665857d26caa051dbca1658e078d4e975f2a2e4a937f8e2ee8e2e929e5e5484",
+  "outputs/four_factor_rebound/vendor_pool.py": "7d532730b7bd1be2f16a89d1c59812898d7356f9f1705fa7ba247917f80472f0",
+  "outputs/index_union/cash_acquisitions.py": "31866c48ea877415dfd7ed7d59652aaaeb196925339798687d082b1a95e3d1e8",
+  "outputs/index_union/data_eligibility.py": "e2fa969b19f400566507a465f6041854b1b4ad4c6a44e3da18ed6b3386d3367a",
+  "outputs/index_union/dynamic_features.py": "1740dd58c960e9db6ab2932cb8e31dda9929dada811bf25afccae15e07efa20d",
+  "outputs/index_union/historical_backtest.py": "94e4f2bb73cad2b27a3cbabb2cf43586de35a5e0db4982c3c816a1b9610e8662",
+  "outputs/index_union/price_units.py": "353e2f039d022a03cf90be06028d680b8dd389fad7bb216727cc2ecbda226291",
+  "outputs/index_union/research_scope.py": "89a1361dbe20a66dd50031a6c16ec2781b58ccf979f83ed9c1f6bcef2c13d166",
+  "outputs/index_union/run_available_research.py": "67133948d20abf0b1f0d343106b795680205a3508e7de8c7d15a4bbb3870fd44",
+  "outputs/index_union/spin_distributions.py": "c98c5efd7f7a76612b6becef79db2485679ce442fa99b4b6fc2092d8ff6eb284",
+  "outputs/index_union/terminal_baskets.py": "04a5787f36403b65fa3f3529aa96e8a30ee9018464fca1f10cc2315068cf363a",
+  "outputs/index_union/union_execution.py": "b2b1f523802f96ff268784282cfede7e583e126b45946bc607e43128f6380985",
+  "outputs/monthly_buffer5_monitor/config.json": "2f162023068650ad37f44395e5a9b582ccbf6fb83ae8ba4d26b182d9426995d9",
+  "outputs/monthly_buffer5_monitor/observe.py": "64ddac77e58f093b45f4fd894bc87ffdf58bf8bfb10268c1a933e28be7e15290",
+  "outputs/strategy_improvements/research.py": "06e2b1b56a6c021b2563a69a1bf95baa3034336bef1122389878eb5b0fbffb93"
+}

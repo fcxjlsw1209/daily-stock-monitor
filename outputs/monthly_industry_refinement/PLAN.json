@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-10T23:33:54.420260+00:00",
+  "reference": "Frozen industry candidate80.8349%CAGR. Use identical monthly Top32 archive/17ETF pool and gate. Anchor selected from reused history; no pristine OOS claim.",
+  "hypothesis": "Refine risk denominator of skipped-two-month long momentum; distinguish upside/idiosyncratic volatility; multi-horizon stock-versus-own-sector relative momentum; tilt industry correction towards stability/tail resilience; small price-volume or ML layer; market-conditioned activation and monthend turnover buffer.",
+  "hard_rules": "52%long-core category, numerator skips42sessions, at most25%ofcore changes definition. Other48% redistributed. No daily pullback gate or intramonth exits. Max3equal positions;2half;<2cash. Zero-cost same-close primary; independent next-open checks.",
+  "finite_search": "Single-family bounded changes, then pairs of up to2training-selected architectures per family. No holdout-driven grid expansion. Core alternatives half-power/aligned252/downside63 blend10%or25%; support volatility replacements25%or50%; sector126/252blend; industry budgets10/15/20% and weights; global/weak/highvol/union state; addon2.5/5%; retention3/5.",
+  "selection": "First35months only. Require trainSharpe>=industry-.10, maxDD>=industry-.05 and at least2of3trainingblocks not worse. Freeze highesttrainCAGR primary and highestrobustscore control. Also report prefix-only walkforward12->18,18->24,24->35. Later34 evaluated once after freeze.",
+  "protection": "No change to any registered monthly/daily observer, frozen prior study or source input. No author holding targets in search. Annual prior Ridge forecasts are past-five-year mature-label only.",
+  "limitations": "Archive universe/cap/sector proxies and assumedETF17; all history previously explored. Search not proof of future alpha. Event-calendar tweaks omitted absent exact reliable definitions."
+}

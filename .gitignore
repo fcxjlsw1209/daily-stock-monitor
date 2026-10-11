@@ -28,3 +28,25 @@ outputs/**/*.lock
 !outputs/daily_stock_monitor/config.json
 !outputs/pressure_shadow_monitor/config.json
 !outputs/resilience_shadow_monitor/config.json
+
+# Archived workspace: allow source and explicit non-runtime metadata only.
+outputs/**/*.json
+!outputs/**/config.json
+!outputs/**/FREEZE.json
+!outputs/**/FROZEN.json
+!outputs/**/PLAN.json
+!outputs/**/GRID.json
+!outputs/**/MODEL_CONFIGS.json
+outputs/**/plans/
+outputs/**/snapshots/
+outputs/**/prices/
+outputs/**/sources/
+outputs/**/additional_sources/
+outputs/**/vendor*/
+outputs/**/STATUS.*
+outputs/**/TESTS.txt
+*.npz
+*.npy
+*.parquet
+*.h5
+*.nc

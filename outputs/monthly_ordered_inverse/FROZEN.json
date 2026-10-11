@@ -1,0 +1,114 @@
+{
+  "winner": {
+    "id": 57,
+    "key": "top32_theme17_percentile",
+    "core": "mom294_risk_half",
+    "vol_sign": 1.0,
+    "acceleration": false,
+    "regularization": 0.01,
+    "spec": [
+      [
+        "mom294_risk_half",
+        1.0,
+        "core"
+      ],
+      [
+        "vol126",
+        1.0,
+        "vol"
+      ],
+      [
+        "industry_relative60",
+        1.0,
+        "industry"
+      ],
+      [
+        "industry_lagged60",
+        1.0,
+        "industry"
+      ],
+      [
+        "cmf21",
+        1.0,
+        "shape"
+      ],
+      [
+        "cmf21",
+        -1.0,
+        "shape"
+      ],
+      [
+        "cmf63",
+        1.0,
+        "shape"
+      ],
+      [
+        "cmf63",
+        -1.0,
+        "shape"
+      ],
+      [
+        "signed_volume63",
+        1.0,
+        "shape"
+      ],
+      [
+        "signed_volume63",
+        -1.0,
+        "shape"
+      ],
+      [
+        "highvol_cmf63",
+        1.0,
+        "shape"
+      ],
+      [
+        "highvol_cmf63",
+        -1.0,
+        "shape"
+      ],
+      [
+        "trend_industry60",
+        1.0,
+        "shape"
+      ],
+      [
+        "trend_industry60",
+        -1.0,
+        "shape"
+      ]
+    ],
+    "weights": [
+      0.5418883059951931,
+      0.15699577655036404,
+      0.06124804196490173,
+      0.039867875489541044,
+      0.037922727284945335,
+      0.019081497177773535,
+      0.0,
+      0.05599254203592312,
+      0.027667566113685708,
+      0.0,
+      8.646088809098271e-19,
+      0.021797143260521724,
+      0.0,
+      0.037538524127150565
+    ],
+    "objective": 0.002158921617918945,
+    "calibration": {
+      "months": 48,
+      "set_exact": 9,
+      "order_exact": 1,
+      "top1_exact": 20,
+      "shared_slots": 86,
+      "position_exact": 35,
+      "pairs_correct": 80,
+      "pairs_total": 140,
+      "unavailable_author_slots": 2,
+      "selection_score": 0.5843253968253967
+    }
+  },
+  "trial_count": 256,
+  "selection": "calibration ordered similarity only",
+  "created_at": "2026-10-10T04:53:18.703629+00:00"
+}

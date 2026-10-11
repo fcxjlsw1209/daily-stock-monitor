@@ -1,0 +1,254 @@
+{
+  "leaders": {
+    "balanced": {
+      "id": 148,
+      "norm": "percentile",
+      "family": 12,
+      "core": [
+        "calendar14_skip2_risk"
+      ],
+      "ml": false,
+      "temp": 0.1,
+      "regularization": 0.0,
+      "spec": [
+        [
+          "calendar14_skip2_risk",
+          1.0,
+          "core"
+        ],
+        [
+          "vol126",
+          1.0,
+          "vol"
+        ],
+        [
+          "vol126",
+          -1.0,
+          "vol"
+        ],
+        [
+          "industry_relative60",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_lagged60",
+          1.0,
+          "industry"
+        ],
+        [
+          "cmf21",
+          1.0,
+          "shape"
+        ],
+        [
+          "cmf21",
+          -1.0,
+          "shape"
+        ],
+        [
+          "cmf63",
+          1.0,
+          "shape"
+        ],
+        [
+          "cmf63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "signed_volume63",
+          1.0,
+          "shape"
+        ],
+        [
+          "signed_volume63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "highvol_cmf63",
+          1.0,
+          "shape"
+        ],
+        [
+          "highvol_cmf63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "trend_industry60",
+          1.0,
+          "shape"
+        ],
+        [
+          "trend_industry60",
+          -1.0,
+          "shape"
+        ],
+        [
+          "acceleration_skip42",
+          1.0,
+          "accel"
+        ]
+      ],
+      "weights": [
+        0.5880087915243973,
+        0.30000000000000004,
+        8.760164030060928e-16,
+        0.04659741069803653,
+        0.034918915303081305,
+        0.0,
+        2.450237617510932e-16,
+        0.028852819418466867,
+        0.0,
+        7.19848832641699e-17,
+        0.0,
+        0.0,
+        1.5736813368800832e-16,
+        0.0016220630560188436,
+        0.0,
+        0.0
+      ],
+      "loss": 2.0373518640887927,
+      "calibration": {
+        "months": 48,
+        "set_exact": 9,
+        "order_exact": 3,
+        "top1_exact": 19,
+        "shared_slots": 90,
+        "position_exact": 39,
+        "pairs_correct": 80,
+        "pairs_total": 140,
+        "unavailable_author_slots": 2,
+        "selection_score": 0.5982142857142857
+      }
+    },
+    "ordered": {
+      "id": 37,
+      "norm": "percentile",
+      "family": 3,
+      "core": [
+        "mom252_risk_half"
+      ],
+      "ml": false,
+      "temp": 0.02,
+      "regularization": 0.1,
+      "spec": [
+        [
+          "mom252_risk_half",
+          1.0,
+          "core"
+        ],
+        [
+          "vol126",
+          1.0,
+          "vol"
+        ],
+        [
+          "vol126",
+          -1.0,
+          "vol"
+        ],
+        [
+          "industry_relative60",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_lagged60",
+          1.0,
+          "industry"
+        ],
+        [
+          "cmf21",
+          1.0,
+          "shape"
+        ],
+        [
+          "cmf21",
+          -1.0,
+          "shape"
+        ],
+        [
+          "cmf63",
+          1.0,
+          "shape"
+        ],
+        [
+          "cmf63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "signed_volume63",
+          1.0,
+          "shape"
+        ],
+        [
+          "signed_volume63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "highvol_cmf63",
+          1.0,
+          "shape"
+        ],
+        [
+          "highvol_cmf63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "trend_industry60",
+          1.0,
+          "shape"
+        ],
+        [
+          "trend_industry60",
+          -1.0,
+          "shape"
+        ],
+        [
+          "acceleration_skip42",
+          1.0,
+          "accel"
+        ]
+      ],
+      "weights": [
+        0.5000000000000262,
+        0.16920694360824423,
+        0.11747425328140486,
+        0.01331880311033849,
+        6.970174947528095e-16,
+        0.0384159180796089,
+        0.03970903866875107,
+        0.01964513720417245,
+        0.008476544930730237,
+        0.018074826885496217,
+        0.010073248574680225,
+        0.014078882802415297,
+        0.014052691061712865,
+        0.005628720012800439,
+        0.022506987959557245,
+        0.009338003820060491
+      ],
+      "loss": 2.7330903347634634,
+      "calibration": {
+        "months": 48,
+        "set_exact": 10,
+        "order_exact": 3,
+        "top1_exact": 15,
+        "shared_slots": 82,
+        "position_exact": 39,
+        "pairs_correct": 73,
+        "pairs_total": 140,
+        "unavailable_author_slots": 2,
+        "selection_score": 0.545436507936508
+      }
+    }
+  },
+  "trial_count": 528,
+  "training": "First48 only; no return-based selection"
+}

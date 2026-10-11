@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-10-10T05:20:21.465238+00:00",
+  "user_correction": "Industry ETF proxy is accepted. Compare stock with its own sector ETF; do not reward an industry ETF merely for outperforming other sectors.",
+  "momentum": "All stock return/momentum windows skip latest42 sessions or2 calendar monthends, including industry-relative returns and acceleration. Volatility and price-volume shapes may use recent observations.",
+  "industry_formula": "(P_stock[t-42]/P_stock[t-n])/(P_sector[t-42]/P_sector[t-n])-1, n126 or252; normalize among stocks only. ETF and unknown classifications get neutral0 after normalization.",
+  "excluded": [
+    "sector/industry ETF absolute strength",
+    "recent industry-relative return",
+    "recent stock-return penalties",
+    "cached ML predictions with recent-return inputs",
+    "daily pullback entry gate"
+  ],
+  "features": "Same22 long-core families; volatility126; relative industry126/252; CMF21/63, signed volume63, volume21/126, broad-market-state CMF63; skip42 acceleration.",
+  "budgets": "Core>=50%, volatility<=30%, industry<=20%, combined shapes/state/acceleration<=20%, acceleration<=10%. These caps are research assumptions, not author-disclosed weights.",
+  "grid": "22 core families x2 normalizations x3 temperatures(.02,.05,.10) x2 regularization levels(0,.10)=264 fits.",
+  "universe": "Unchanged reconstructed Top32 plus assumed theme17; classification history and cap snapshots remain inherited research proxies. No author-label universe additions.",
+  "selection": "First48 periods ending through2024-12-31 only. Freeze balanced-matching and exact-order leaders before looking at later21. Return is not a selection target. Previously viewed later history is not pristine OOS.",
+  "replay": "Monthend final-close features and same-close zero-cost fill; fixed adjusted total-return units during each month. First start2020-12-31, last mark2026-09-24. Next-open control separately. Same-close is an idealized reproduction convention, not guaranteed executable.",
+  "protection": "No changes to existing observation ledgers, rules, plans, fingerprints, or source inputs."
+}

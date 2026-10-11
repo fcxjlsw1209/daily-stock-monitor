@@ -1,0 +1,9 @@
+# Optional research environment, matched to the local 2026-10-11 run.
+# Install the base package first: python -m pip install .
+# Individual legacy data collectors may require additional format readers.
+scipy==1.13.1
+scikit-learn==1.6.1
+matplotlib==3.9.4
+requests==2.32.5
+beautifulsoup4==4.15.0
+lxml==6.1.3

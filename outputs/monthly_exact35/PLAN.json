@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-10-10T21:11:01.801985+00:00",
+  "request": "Fit first35 monthly three-name holdings AND order exactly by any explainable method, then freeze and measure same method on later34.",
+  "labels": "Supplied records immutable. All35 training targets available to fit. Later34 records not consumed by training or complexity selection; history already viewed in previous studies, so not pristine OOS.",
+  "acceptance": "35/35 exact ordered triples for every admitted model, then one same-method34-month replay. No changes after seeing validation.",
+  "universe": "Choose smallest uniform width32..40 that covers every training author target in cached cap ranking. This boundary envelope is a disclosed substitute for originalTop32; never one-month/ticker injection. Same width and assumed theme17 apply to all69 months.",
+  "features": "Known-at-monthend long momentum(skip42sessions/two calendar months), volatility/risk, own-sector relative strength, price-volume patterns and observable market state. No ticker, calendar date, month id, future price or author label enters predictor features.",
+  "baseline": "Fixed70% mean four long-momentum ranks +15%vol126 +10%own-sector skipped252 +5%CMF21. Diagnostic starting rule, not author-disclosed formula.",
+  "models": [
+    "Explainable ordinal regression tree for scores3/2/1/0; reduce leaves while maintaining all35 ordered matches",
+    "Long-momentum baseline plus residual tree; training score corrections are minimum-L2 projection satisfying author order with .005margin",
+    "Same baseline plus15-neighbor inverse-square-distance residual interpolation; historical feature analogues, no ticker/date lookup"
+  ],
+  "selection": "For trees test depth1..32 then unbounded; among exactly matching trees also test cost-complexity pruning, choose least leaves then depth. No return/validation optimization. k15 fixed in advance.",
+  "limitation": "Exact high-capacity fitting may memorize samples. Residual size/complexity explicitly reported; no claim that this is the author small-ML model or original32 pool.",
+  "execution": "Zero costs, monthend final-close/same-close idealization, equal three positions, fixed shares within month. Next-open sensitivity also exported. No observer-account changes."
+}

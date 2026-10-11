@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-10-10T07:19:54.878893+00:00",
+  "hypothesis": "Fit shared factor-weight regimes from observable market style; previous sign-at-zero partitions were unverified assumptions.",
+  "hard_rules": "Core returns and own-sector relative returns skip42sessions/two months; core>=50%,vol<=30%,sector<=20%,shape+accel<=20%. Long-only3 equal names, monthend same-close zero costs, fixed intramonth shares. No ticker/date features or teacher holdings as trading state.",
+  "seeds": "Three no-gate and three gated distinct scoring families, ordered only by architecture first35 inner-validation matching. No outer returns considered.",
+  "tree": "Global root; greedily split at training-only market-feature quantiles1/3,1/2,2/3 or binary midpoint. Each child needs6 months. At most2 or3 leaves. Optimize choice likelihood/pairwise loss with .10 shrinkage to global weights and .03 penalty per extra leaf. No leaf may move L1 beyond.30 or.60 from root; convex blend preserves all score budgets.",
+  "markets": [
+    "growth_relative63",
+    "smallcap_relative63",
+    "defensive_minus_cyclical63",
+    "tlt_return63",
+    "spy_above200",
+    "highvol"
+  ],
+  "grid": "6seeds x2max-leaves x2L1caps x3retentions=72policies. Inner fit17/eval6 plus fit23/eval12. Freeze by matching(.6slots+.25sets+.15order), refit35, evaluate34.",
+  "limitations": "Imitation study using supplied author labels, not claiming original ML training target. Reused historical validation is not pristine OOS. Proxy pools and assumedETF17 remain unverified.",
+  "protection": "Do not change prior accounts, sources or frozen research."
+}

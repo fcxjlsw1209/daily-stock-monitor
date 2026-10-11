@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-10-10T16:28:15.333330+00:00",
+  "immutable": "Supplied holdings, monthly fixed-share equal-weight execution and author guidance. Core momentum excludes last42 sessions or2 calendar months. Zero costs for reproduction.",
+  "relaxed": "No50/30/20/10 factor budgets, no sum-to-one, no fixed295-price warmup or positive momentum gate, no requirement that industry-relative performance excludes recent2months. Coefficients are common across securities; no ticker/date/month-label features.",
+  "hypotheses": "Momentum times volatility powers -1,-.5,0,.5,1; raw/log and calendar/trading anchors; stock versus own sector ETF at21/63/126/252 and skip42 horizons; risk, volume and price-path corrections; observable regimes and nonlinear monotonic core bases.",
+  "pool": "Original proxyTop32 and previously approvedTop35 boundary control; theme17 and core17 ETF assumptions. Top35 is a sensitivity, not a claim that author used35. Original17 list and exact cap reconstruction remain unknown.",
+  "models": "Nonnegative monotonic core coefficients, signed side factors. Pairwise Ridge margin loss; data-fitting inverse coefficients are not claimed to be original annual five-year market-return Ridge. No new ML-return forecasts this experiment.",
+  "selection": "Inner first17/eval6 and first23/eval12. First35 refit, later34 frozen evaluation. Select by held-out holdings, not returns. Latter34 previously viewed; not pristine OOS. Show sets and list order separately. Also all69 refit solely for explanatory ceiling.",
+  "guidance_check": "No arbitrary numeric weight cap; audit core contribution cross-sectional dispersion versus each risk/industry/shape group. Candidate guide screen requires core to be largest on training. This operational screen is an assumption, not author-disclosed.",
+  "grid": "4pool/ETF x2normalizations x3architectures x4ridge strengths x3order masses x2side penalties x3retentions=1728 policies; shared fits reused.",
+  "protections": "New research directory only. No modifications to previous results, source holdings, prices, monitors, plans or ledgers."
+}

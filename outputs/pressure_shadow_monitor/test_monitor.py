@@ -80,7 +80,7 @@ class MonitorTests(unittest.TestCase):
         self.assertEqual(completed_session(pd.Timestamp('2026-11-27T18:20Z')),pd.Timestamp('2026-11-27'))
         self.assertEqual(completed_session(pd.Timestamp('2026-11-27T18:10Z')),pd.Timestamp('2026-11-25'))
 
-    @unittest.skipUnless((P.parent/"stock_database"/"stocks.sqlite").exists(), "Requires unpublished historical research fixtures")
+    @unittest.skipUnless((P.parent / "stock_database/stocks.sqlite").exists(), "Requires unpublished historical research fixtures")
     def test_feature_causality(self):
         data,raw=load_inputs();f=features(data,raw);n=3100
         short=replace(data,**{k:getattr(data,k).iloc[:n] for k in ['close','opening','dividends','volume','sector_prices']})
@@ -88,7 +88,7 @@ class MonitorTests(unittest.TestCase):
         for k in ['score','ma5','atr','cmf']:pd.testing.assert_frame_equal(f[k].iloc[:n],g[k])
         for k in f['masks']:pd.testing.assert_frame_equal(f['masks'][k].iloc[:n],g['masks'][k])
 
-    @unittest.skipUnless((P.parent/"strategy_selection"/"daily_equity.csv.gz").exists(), "Requires unpublished research results")
+    @unittest.skipUnless((P.parent / "strategy_selection/daily_equity.csv.gz").exists(), "Requires unpublished historical research fixtures")
     def test_research_accounts(self):
         root=P.parent/'strategy_selection';d=pd.read_csv(root/'daily_equity.csv.gz');o=pd.read_csv(root/'orders.csv.gz')
         for (name,cost),g in o.groupby(['strategy','cost_bps']):

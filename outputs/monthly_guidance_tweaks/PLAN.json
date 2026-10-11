@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-10-10T23:13:29.752295+00:00",
+  "objective": "Improve monthly CAGR subject to training Sharpe/drawdown guards. Author holdings/order are diagnostics only.",
+  "anchor": "Preserve exactly previous77.6221%CAGR candidate monthly reconstructedTop32+theme17 universe, positive252skip42 momentum and295-session warmup, normalization and52%core. Verify zero-tweak69month holdings parity before any search.",
+  "factors": "Author-guided anti-chase/gaps, shakeout recovery/dry consolidation/failed rebounds, tail resilience, stock-vs-own-sector strength, sector-link stability, down-volume pressure easing, annual ordinary/recent Ridge and weak-market GBDT, monthend own-position profit penalties.",
+  "ML": "Reuse cached102-feature weekly dataset. Prior5years,21session excess return clipped[-1,1], only label_end<=annual previousDecember cutoff. Ordinary/recent Ridge alpha1/10/100; GBDT depth2/3,100iterations,.05rate,minleaf100,L2=1,seed1729,early_stoppingFalse. Annual method retrains on then-past prices, no author labels.",
+  "small_budget": "Core contribution .52 remains exactly unchanged. Correction budget0/2.5/5/7.5/10/15% taken proportionally from original48%support. Global/weak/highvol/low-score-conviction activation. Monthend retention3/5. Own-profit penalty0/2.5/5points, bounded tanh(log episode gain / monthlyvol) for own held names only.",
+  "grid": "StageA single signals plus fixed multi-layer bundles,5positive budgets x4activation x2retention plus zero controls;StageB top8 distinct training-only architectures x3profit penalties. Finite grid, no subsequent holdout-directed expansion.",
+  "split": "First35 holding months Jan2021-Nov2023 selection; later34 after freeze. Entire history was viewed in prior work: not untouched OOS. Original anchor itself selected by historical research.",
+  "primary": "Highest trainingCAGR with Sharpe>=anchor-.10, drawdown>=anchor-.05, and at least2of3 training12/12/11month blocks outperform anchor. Baseline always eligible. Secondary highestSharpe and robust(Sharpe+.25loggrowth-.5DD). Tie lowerbudget then simpler configuration.",
+  "execution": "Long-only, max3 equally weighted at monthend,2half,<2cash; fixed intramonth units, no intramonth stops. Primaryzero-cost same-close idealization; next-open/cost sensitivities. No live account, ledger, rules, automation or historical source modifications.",
+  "calendar": "FOMC/election/holiday layers excluded this round: no verified event dataset or author specification. Do not guess dates or imply these daily hints necessarily belong to monthly strategy."
+}

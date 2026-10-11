@@ -1,0 +1,235 @@
+{
+  "created_utc": "2026-10-11T05:09:03.102790+00:00",
+  "selected": {
+    "primary": {
+      "id": 105,
+      "family": "combined",
+      "spec": [
+        {
+          "family": "residual",
+          "key": "resid_126_210_sum",
+          "amount": 0.025,
+          "state": "calm10"
+        },
+        {
+          "key": "ml_4",
+          "state": "weak_narrow",
+          "amount": 0.05
+        }
+      ],
+      "training": {
+        "cagr": 0.5446651526163626,
+        "sharpe": 1.6254043185306446,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 22.75559822012844
+      },
+      "early": {
+        "cagr": 0.4634486875206485,
+        "sharpe": 1.4541022877952918,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 4.285703268301813
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "robust": 2.0222684587541693
+    },
+    "robust": {
+      "id": 105,
+      "family": "combined",
+      "spec": [
+        {
+          "family": "residual",
+          "key": "resid_126_210_sum",
+          "amount": 0.025,
+          "state": "calm10"
+        },
+        {
+          "key": "ml_4",
+          "state": "weak_narrow",
+          "amount": 0.05
+        }
+      ],
+      "training": {
+        "cagr": 0.5446651526163626,
+        "sharpe": 1.6254043185306446,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 22.75559822012844
+      },
+      "early": {
+        "cagr": 0.4634486875206485,
+        "sharpe": 1.4541022877952918,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 4.285703268301813
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "robust": 2.0222684587541693
+    }
+  },
+  "controls": {
+    "state": {
+      "id": 47,
+      "family": "state",
+      "spec": [
+        {
+          "key": "profile_rotation",
+          "state": "breadth_improving",
+          "amount": 0.025
+        }
+      ],
+      "training": {
+        "cagr": 0.5352846659483137,
+        "sharpe": 1.590471292569032,
+        "max_drawdown": -0.31125995821743635,
+        "total_return": 21.724401582755824
+      },
+      "early": {
+        "cagr": 0.4486702536683278,
+        "sharpe": 1.3986951978562452,
+        "max_drawdown": -0.31125995821743635,
+        "total_return": 4.056258428146019
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "robust": 1.953944923751566
+    },
+    "new_ml": {
+      "id": 93,
+      "family": "new_ml",
+      "spec": [
+        {
+          "key": "ml_4",
+          "state": "weak_narrow",
+          "amount": 0.05
+        }
+      ],
+      "training": {
+        "cagr": 0.5368216671262598,
+        "sharpe": 1.605217641526864,
+        "max_drawdown": -0.31125995821743624,
+        "total_return": 21.89066932198542
+      },
+      "early": {
+        "cagr": 0.45108760394502045,
+        "sharpe": 1.4207730230773123,
+        "max_drawdown": -0.31125995821743624,
+        "total_return": 4.09325357870025
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "robust": 1.9808469005628038
+    },
+    "return_control": {
+      "id": 65,
+      "family": "return_control",
+      "spec": [
+        {
+          "key": "ml_1",
+          "state": "weak_narrow",
+          "amount": 0.025
+        }
+      ],
+      "training": {
+        "cagr": 0.5364778072528129,
+        "sharpe": 1.60585226361792,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.853380839880074
+      },
+      "early": {
+        "cagr": 0.44808994995802753,
+        "sharpe": 1.4168910369568533,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.047408386340172
+      },
+      "recent": {
+        "cagr": 0.6793708214098912,
+        "sharpe": 1.8817778699808807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.527745545957468
+      },
+      "robust": 1.9770657920900783
+    }
+  },
+  "baseline": {
+    "id": 0,
+    "family": "baseline",
+    "spec": [],
+    "training": {
+      "cagr": 0.5349155442763764,
+      "sharpe": 1.6031917771530346,
+      "max_drawdown": -0.3112599582174367,
+      "total_return": 21.684626736023116
+    },
+    "early": {
+      "cagr": 0.44808994995802753,
+      "sharpe": 1.416891036956853,
+      "max_drawdown": -0.3112599582174367,
+      "total_return": 4.047408386340172
+    },
+    "recent": {
+      "cagr": 0.6751035896184099,
+      "sharpe": 1.875574426281807,
+      "max_drawdown": -0.26943979580801936,
+      "total_return": 3.4943117338027694
+    },
+    "robust": 1.9758607264415782
+  },
+  "residual_control": {
+    "id": 1,
+    "family": "residual_control",
+    "spec": [
+      {
+        "family": "residual",
+        "key": "resid_126_210_sum",
+        "amount": 0.025,
+        "state": "calm10"
+      }
+    ],
+    "training": {
+      "cagr": 0.5427493014764397,
+      "sharpe": 1.6234135425294554,
+      "max_drawdown": -0.31125995821743635,
+      "total_return": 22.541770270429375
+    },
+    "early": {
+      "cagr": 0.46042549803093014,
+      "sharpe": 1.450315988354401,
+      "max_drawdown": -0.31125995821743635,
+      "total_return": 4.238125805418942
+    },
+    "recent": {
+      "cagr": 0.6751035896184099,
+      "sharpe": 1.875574426281807,
+      "max_drawdown": -0.26943979580801936,
+      "total_return": 3.4943117338027694
+    },
+    "robust": 2.0173884978243035
+  },
+  "trials": 108,
+  "admissible": 11,
+  "code_sha256": "53866e5ffcb06146f73bb409747df4bb6f5b7864c1bfe0edebb639d551aa4c6d",
+  "data_hashes": {
+    "PLAN.json": "6423747c1c985adb77306a65fc24069e3503c8b83c53c727fa8eeaf95742c131",
+    "TRAIN_DATA.npz": "5b48915c9d035fb40be1b683f898de0a3e16b9a6e86be70d4d0d8da14a0b5de2",
+    "TRAIN_DATA.json": "7eb8a1489d368a09db6fb21a8872087739edd7c8ea71d4c616028d33f961263c",
+    "FEATURES.npz": "055000ef377c0f2dc1606781aeb7165b27293077abae854633411f5c1002ce23",
+    "FORECASTS.npz": "8b131c1ac172a5f0f093ae836b5e667eeceeafbd2e3b6c6f24df92a3d5b70295",
+    "FORECAST_AUDIT.json": "aa33ee527b15eac3e83b885758db257a52f61ff61f6a066cd54ed4c79980de89"
+  }
+}

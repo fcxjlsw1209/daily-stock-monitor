@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-11T05:00:46.536862+00:00",
+  "purpose": "Finish directions4 market state and5 top-three ML / return-downside ranking. Preserve65.3395543 observer and65.9476507 research control.",
+  "universe": "Exact122 monthly Top32-proxy+theme17 pools, unchanged eligibility. Weekly ML training beforeAug2016 uses inherited historical foreign membership proxy; thereafter last already observed monthlyTop32, not future pool. This inherited proxy is not certified point-in-time universe.",
+  "state_grid": "4profiles sector/quality/lowdownside/rotation x4gates trend_broad/weak_narrow/high_dispersion/breadth_improving x2.5/5/10% from noncore support =48. Breadth thresholds60/40%,SPY200trend; dispersion21 cross-stock std above its prior252session median.",
+  "ml": "Annual trailing5years weekly samples, next21session fully mature labels. Six configs: ordinary-return control, top3-weighted pairwise rank Ridge, downside-adjusted-rank Ridge; alpha10/100; half-life12months. No author labels or identifier features. Features include skip42long momentum,volatility,own-sector relative,volume/price shapes and observed state interactions.",
+  "targets": "return:21session excess vsSPY clip[-1,1]; pair:future return percentile differences with3x weight across realizedtop3 boundary, only pairs touching the past-scoretop8; downside_rank:rank(excess_return-.5*max(0,-minimum21sessionreturn)). Path labels require all21future prices and are used only after label_end<=cutoff.",
+  "ml_grid": "6forecasts x2.5/5/10% support correction xglobal/highvol/weak_narrow =54. State-only48 plus controls2=104 initially. No unchanged daily pullback entry gate introduced.",
+  "combination": "Using first88 only, choose best admissible state and genuinely-newML(target pair/downside) singles. Test their sum plus combinations with fixed2.5%residual; cap total simultaneous correction10%,scale addons proportionately. At most4additional combos. Ordinary-returnRidge only comparator, not mislabeled new.",
+  "split": "Train first88 through2023-11-30; early53 and recent35 constraints. Freeze primary, robust and family controls BEFORE last34 replay. Market-model annual retraining in later periods may use then-mature past prices, never future labels. Repeatedly researched history, not pristine OOS.",
+  "selection": "Same guards as previous round relative to65.34:trainSharpe>=base-.05,DD>=base-.03,earlyCAGR>=base,recent35CAGR>=base-.02. MaxtrainCAGR primary; worst-segmentSharpe robust. Include65.95 residual control as competitor.",
+  "execution": "Long-only,unlevered,max3equal,2half,<2cash; fixed monthly units; core>=50%,unchanged. Zero-cost same-close idealization primary,next-open0cost and5bp/side sensitivities. No full-history tuning after freeze.",
+  "protection": "No changes to observers, plans, ledgers, originalcode/data/automation. No promotion. New outputs only here."
+}

@@ -1,0 +1,424 @@
+{
+  "created_utc": "2026-10-10T23:50:11.785131+00:00",
+  "selected": {
+    "return_primary": {
+      "id": 34,
+      "family": "industry",
+      "spec": {
+        "core": "original",
+        "core_blend": 0.0,
+        "vol": "vol126",
+        "vol_blend": 0.0,
+        "horizon": "126",
+        "industry_weights": [
+          0.25,
+          0.5,
+          0.25
+        ],
+        "budget": 0.1,
+        "mode": "highvol",
+        "addon": "none",
+        "addon_budget": 0.0,
+        "retain": 3,
+        "core_weight": 0.52,
+        "core252_blend": 0.0
+      },
+      "training": {
+        "cagr": 0.4852510735265858,
+        "sharpe": 1.4918341005754039,
+        "max_drawdown": -0.3283344263195761,
+        "total_return": 16.85089965467683
+      },
+      "robust": 0.9170382332478388,
+      "segments": [
+        {
+          "cagr": 0.07506366776599549,
+          "sharpe": 0.5222031681447324,
+          "max_drawdown": -0.09676412156411773,
+          "total_return": 0.07139651300336314
+        },
+        {
+          "cagr": 0.4737339220181409,
+          "sharpe": 2.2113963817091244,
+          "max_drawdown": -0.08733710577153353,
+          "total_return": 0.47335451916993754
+        },
+        {
+          "cagr": 0.02822018114604452,
+          "sharpe": 0.23809064186846515,
+          "max_drawdown": -0.2960026665982898,
+          "total_return": 0.02820118282298223
+        },
+        {
+          "cagr": 0.33670974804885057,
+          "sharpe": 0.9056976780152102,
+          "max_drawdown": -0.32833442631957643,
+          "total_return": 0.33751453938669895
+        },
+        {
+          "cagr": 1.0038993729551868,
+          "sharpe": 1.9663347766637047,
+          "max_drawdown": -0.2694397958080199,
+          "total_return": 0.9991665334427045
+        },
+        {
+          "cagr": 1.3159919798225324,
+          "sharpe": 3.1557619460336706,
+          "max_drawdown": -0.11446292390774637,
+          "total_return": 1.3093846274209375
+        },
+        {
+          "cagr": 0.7272862519711516,
+          "sharpe": 2.1583422855573158,
+          "max_drawdown": -0.13380464517338175,
+          "total_return": 0.7318348825980749
+        },
+        {
+          "cagr": 0.0875450585303581,
+          "sharpe": 0.4557567887579846,
+          "max_drawdown": -0.13829027563715246,
+          "total_return": 0.028428925932101112
+        }
+      ]
+    },
+    "robust_control": {
+      "id": 45,
+      "family": "industry",
+      "spec": {
+        "core": "original",
+        "core_blend": 0.0,
+        "vol": "vol126",
+        "vol_blend": 0.0,
+        "horizon": "blend",
+        "industry_weights": [
+          0.5,
+          0.25,
+          0.25
+        ],
+        "budget": 0.2,
+        "mode": "highvol",
+        "addon": "none",
+        "addon_budget": 0.0,
+        "retain": 3,
+        "core_weight": 0.52,
+        "core252_blend": 0.0
+      },
+      "training": {
+        "cagr": 0.45010370947982636,
+        "sharpe": 1.4441587279821932,
+        "max_drawdown": -0.3076805255238261,
+        "total_return": 13.9928523189792
+      },
+      "robust": 0.9760416421620663,
+      "segments": [
+        {
+          "cagr": 0.07506366776599549,
+          "sharpe": 0.5222031681447324,
+          "max_drawdown": -0.09676412156411773,
+          "total_return": 0.07139651300336314
+        },
+        {
+          "cagr": 0.47373392201814135,
+          "sharpe": 2.2113963817091267,
+          "max_drawdown": -0.08733710577153353,
+          "total_return": 0.473354519169938
+        },
+        {
+          "cagr": 0.08303952240574608,
+          "sharpe": 0.43079316894125363,
+          "max_drawdown": -0.29600266659828967,
+          "total_return": 0.08298216218874876
+        },
+        {
+          "cagr": 0.3451037426988077,
+          "sharpe": 0.9425726205916917,
+          "max_drawdown": -0.30768052552382574,
+          "total_return": 0.34593106182078537
+        },
+        {
+          "cagr": 0.7562444409913625,
+          "sharpe": 1.634498628221026,
+          "max_drawdown": -0.26943979580801947,
+          "total_return": 0.7528829686649054
+        },
+        {
+          "cagr": 1.294039965257126,
+          "sharpe": 3.3389047101345244,
+          "max_drawdown": -0.09455955280115891,
+          "total_return": 1.2875693518922882
+        },
+        {
+          "cagr": 0.5766298022452396,
+          "sharpe": 1.943569603143985,
+          "max_drawdown": -0.1338046451733821,
+          "total_return": 0.5800876608917818
+        },
+        {
+          "cagr": 0.0875450585303581,
+          "sharpe": 0.4557567887579846,
+          "max_drawdown": -0.13829027563715246,
+          "total_return": 0.028428925932101112
+        }
+      ]
+    }
+  },
+  "controls": {
+    "industry80": {
+      "id": 0,
+      "family": "control",
+      "spec": {
+        "core": "original",
+        "core_blend": 0.0,
+        "vol": "vol126",
+        "vol_blend": 0.0,
+        "horizon": "252",
+        "industry_weights": [
+          0.5,
+          0.25,
+          0.25
+        ],
+        "budget": 0.15,
+        "mode": "highvol",
+        "addon": "none",
+        "addon_budget": 0.0,
+        "retain": 3,
+        "core_weight": 0.52,
+        "core252_blend": 0.0
+      },
+      "training": {
+        "cagr": 0.4757347875373439,
+        "sharpe": 1.479629771828403,
+        "max_drawdown": -0.3283344263195762,
+        "total_return": 16.034210196185324
+      },
+      "robust": 0.9274572480717952,
+      "segments": [
+        {
+          "cagr": 0.07506366776599549,
+          "sharpe": 0.5222031681447324,
+          "max_drawdown": -0.09676412156411773,
+          "total_return": 0.07139651300336314
+        },
+        {
+          "cagr": 0.4737339220181409,
+          "sharpe": 2.211396381709127,
+          "max_drawdown": -0.08733710577153353,
+          "total_return": 0.47335451916993754
+        },
+        {
+          "cagr": 0.038723798593062186,
+          "sharpe": 0.27565699539122573,
+          "max_drawdown": -0.3023025455332582,
+          "total_return": 0.03869759705218212
+        },
+        {
+          "cagr": 0.29167342382262085,
+          "sharpe": 0.8278109224524121,
+          "max_drawdown": -0.3283344263195763,
+          "total_return": 0.2923592358894871
+        },
+        {
+          "cagr": 0.9577057910624225,
+          "sharpe": 1.8964292621771315,
+          "max_drawdown": -0.2694397958080197,
+          "total_return": 0.9532370098625114
+        },
+        {
+          "cagr": 1.3194781943377376,
+          "sharpe": 3.2770797169788914,
+          "max_drawdown": -0.09455955280115891,
+          "total_return": 1.312849061417873
+        },
+        {
+          "cagr": 0.7257398274985238,
+          "sharpe": 2.222496670207446,
+          "max_drawdown": -0.13380464517338198,
+          "total_return": 0.7302769283409956
+        },
+        {
+          "cagr": 0.0875450585303581,
+          "sharpe": 0.4557567887579846,
+          "max_drawdown": -0.13829027563715246,
+          "total_return": 0.028428925932101112
+        }
+      ]
+    },
+    "anchor77": {
+      "id": 1,
+      "family": "old_anchor",
+      "spec": {
+        "core": "original",
+        "core_blend": 0.0,
+        "vol": "vol126",
+        "vol_blend": 0.0,
+        "horizon": "252",
+        "industry_weights": [
+          0.5,
+          0.25,
+          0.25
+        ],
+        "budget": 0.0,
+        "mode": "highvol",
+        "addon": "none",
+        "addon_budget": 0.0,
+        "retain": 3,
+        "core_weight": 0.52,
+        "core252_blend": 0.0
+      },
+      "training": {
+        "cagr": 0.4510191472862284,
+        "sharpe": 1.412794302832857,
+        "max_drawdown": -0.34046720827371324,
+        "total_return": 14.061946163925159
+      },
+      "robust": 0.796040810841957,
+      "segments": [
+        {
+          "cagr": 0.07506366776599549,
+          "sharpe": 0.5222031681447324,
+          "max_drawdown": -0.09676412156411773,
+          "total_return": 0.07139651300336314
+        },
+        {
+          "cagr": 0.47390623984253555,
+          "sharpe": 2.19666747057134,
+          "max_drawdown": -0.08733710577153353,
+          "total_return": 0.47352667824592487
+        },
+        {
+          "cagr": -0.015461010618532556,
+          "sharpe": 0.07982722453120551,
+          "max_drawdown": -0.3032570396052269,
+          "total_return": -0.015450825112098832
+        },
+        {
+          "cagr": 0.29620551008896223,
+          "sharpe": 0.8321659817226059,
+          "max_drawdown": -0.3283344263195762,
+          "total_return": 0.29690314935060624
+        },
+        {
+          "cagr": 1.0038993729551868,
+          "sharpe": 1.966334776663704,
+          "max_drawdown": -0.2694397958080198,
+          "total_return": 0.9991665334427045
+        },
+        {
+          "cagr": 1.1927030134174923,
+          "sharpe": 2.949423191582956,
+          "max_drawdown": -0.11446292390774604,
+          "total_return": 1.1868543125523234
+        },
+        {
+          "cagr": 0.6577859377324833,
+          "sharpe": 2.04399186195969,
+          "max_drawdown": -0.13380464517338186,
+          "total_return": 0.6618231097946357
+        },
+        {
+          "cagr": 0.0875450585303581,
+          "sharpe": 0.4557567887579846,
+          "max_drawdown": -0.13829027563715246,
+          "total_return": 0.028428925932101112
+        }
+      ]
+    },
+    "prior82": {
+      "id": 78,
+      "family": "previous82",
+      "spec": {
+        "core": "original",
+        "core_blend": 0.0,
+        "vol": "vol126",
+        "vol_blend": 0.0,
+        "horizon": "blend",
+        "industry_weights": [
+          0.25,
+          0.25,
+          0.5
+        ],
+        "budget": 0.15,
+        "mode": "highvol",
+        "addon": "ridge_10_12",
+        "addon_budget": 0.025,
+        "retain": 3,
+        "core_weight": 0.52,
+        "core252_blend": 0.0
+      },
+      "training": {
+        "cagr": 0.474054642328243,
+        "sharpe": 1.4536735979512607,
+        "max_drawdown": -0.3283344263195761,
+        "total_return": 15.893420633934888
+      },
+      "robust": 0.8285242034691718,
+      "segments": [
+        {
+          "cagr": 0.07506366776599549,
+          "sharpe": 0.5222031681447324,
+          "max_drawdown": -0.09676412156411773,
+          "total_return": 0.07139651300336314
+        },
+        {
+          "cagr": 0.48025846058765365,
+          "sharpe": 2.215298162077498,
+          "max_drawdown": -0.08733710577153353,
+          "total_return": 0.4798730376719329
+        },
+        {
+          "cagr": -0.016641380394139538,
+          "sharpe": 0.07293366470431757,
+          "max_drawdown": -0.29600266659829,
+          "total_return": -0.016630423863134625
+        },
+        {
+          "cagr": 0.3268520093728513,
+          "sharpe": 0.8883772468639194,
+          "max_drawdown": -0.3283344263195762,
+          "total_return": 0.32763048453695953
+        },
+        {
+          "cagr": 0.8941059425188891,
+          "sharpe": 1.7694773970602915,
+          "max_drawdown": -0.26943979580801936,
+          "total_return": 0.8899946684965965
+        },
+        {
+          "cagr": 1.4397921818801152,
+          "sharpe": 3.335237801797972,
+          "max_drawdown": -0.09455955280115891,
+          "total_return": 1.4324006975174535
+        },
+        {
+          "cagr": 0.721645032518226,
+          "sharpe": 2.1424875946720374,
+          "max_drawdown": -0.1338046451733821,
+          "total_return": 0.7261516359733382
+        },
+        {
+          "cagr": 0.0875450585303581,
+          "sharpe": 0.4557567887579846,
+          "max_drawdown": -0.13829027563715246,
+          "total_return": 0.028428925932101112
+        }
+      ]
+    }
+  },
+  "candidate_count": 101,
+  "admissible_count": 65,
+  "training_return_end": "2023-11-30",
+  "code_hashes": {
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_2016_extension/optimize.py": "a97e710de148e081b1083b773aa99bb342c0e4d66b268f69cfd973181bb9ef36",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_2016_extension/extend.py": "c7a8f66d63ec230127ff67b9499900798521a601715e60325da15ce30b35857e"
+  },
+  "data_hashes": {
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_2016_extension/INPUTS.json": "3b46968f486e88fa170ac01f120dd5ef74ebd5a56243c6991c5a4fea506076f4",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_2016_extension/DATA.npz": "acb48df7b432e3eb317c214e145ee0815e98fbd3e89f838ac4402659b7bf688b",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_2016_extension/FEATURES.npz": "1d44b505ddcfd2979e30ba4e73ff528cd1d72efc5ca7e745c3f1c51401fbf5b5",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_2016_extension/LAYERS.npz": "3ff192811c77e557f70c4f28f5d69da53d06f5e7089b7c5ca946e563d2c2ec9c",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_2016_extension/PREDICTIONS.npz": "711034bc2bc7df01b23ce07e06e368a64442db9690e8414e4b73fb4f4916b37b",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_2016_extension/PRICES.npz": "c877cbe443964d53972114bc654c473608362a6bb31577fb1de5e00cbd3c1485",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_2016_extension/POOLS.json": "9e6833a4a630bc2d60e37d0d6e64732091b5dd25e4e37b6994c75aef676cce13",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_2016_extension/FORECAST_AUDIT.json": "61f241cf9646fc89e719f5391456eb5b345d893b3a72fcc1339a72d60521d550"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "strategy_id": "monthly_momentum_buffer5_net_v1",
+  "registered_utc": "2026-10-08T19:29:10.895359+00:00",
+  "start": "2026-10-08",
+  "initial_capital": 100000,
+  "max_positions": 3,
+  "sector_limit": 2,
+  "weights": "equal_after_cost",
+  "round_trip_cost_bps": 10,
+  "entry_rank": 3,
+  "retain_rank": 5,
+  "core_momentum_positive": true,
+  "score_weights": {
+    "skip2_annual_momentum": 0.5,
+    "vol_adjusted_momentum": 0.2,
+    "industry_relative": 0.15,
+    "cmf21": 0.1,
+    "near_52week_high": 0.05
+  },
+  "universe": "historical_Nasdaq100_union_SP100_vendor_Top32_plus17_unlevered_ETFs",
+  "rebalance": "NYSE last session of month close, prior session completed signals",
+  "within_month": "fixed shares except verified corporate actions",
+  "no_backfill": true,
+  "paper_only": true,
+  "data_certified": false,
+  "origin": "User approved monthly buffer5 observation on 2026-10-08",
+  "research_result": "../strategy_improvements/monthly_buffer5_cost10.json",
+  "activation_condition": "Current complete dynamic-universe panel; immutable plan saved before execution; no use of static100 as substitute."
+}

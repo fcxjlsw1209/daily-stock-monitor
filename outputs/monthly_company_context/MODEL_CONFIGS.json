@@ -1,0 +1,70 @@
+[
+  {
+    "id": 0,
+    "kind": "global_ridge"
+  },
+  {
+    "id": 1,
+    "kind": "company_mean",
+    "prior_mass": 6.0
+  },
+  {
+    "id": 2,
+    "kind": "company_mean",
+    "prior_mass": 12.0
+  },
+  {
+    "id": 3,
+    "kind": "company_context",
+    "bandwidth": 0.25,
+    "prior_mass": 6.0
+  },
+  {
+    "id": 4,
+    "kind": "company_context",
+    "bandwidth": 0.25,
+    "prior_mass": 12.0
+  },
+  {
+    "id": 5,
+    "kind": "company_context",
+    "bandwidth": 0.5,
+    "prior_mass": 6.0
+  },
+  {
+    "id": 6,
+    "kind": "company_context",
+    "bandwidth": 0.5,
+    "prior_mass": 12.0
+  },
+  {
+    "id": 7,
+    "kind": "company_shape",
+    "bandwidth": 0.5,
+    "prior_mass": 6.0
+  },
+  {
+    "id": 8,
+    "kind": "company_signal",
+    "bandwidth": 0.5,
+    "prior_mass": 6.0
+  },
+  {
+    "id": 9,
+    "kind": "company_signal",
+    "bandwidth": 0.5,
+    "prior_mass": 12.0
+  },
+  {
+    "id": 10,
+    "kind": "company_signal_context",
+    "bandwidth": 0.5,
+    "prior_mass": 6.0
+  },
+  {
+    "id": 11,
+    "kind": "company_signal_context",
+    "bandwidth": 0.5,
+    "prior_mass": 12.0
+  }
+]

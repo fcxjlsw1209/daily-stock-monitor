@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-10-10T02:30:48.567888+00:00",
+  "objective": "Guidance-constrained monthly model research; improve author holdings similarity and risk-adjusted historical performance without bespoke monthly exceptions.",
+  "primary_pool": "Existing69 historical Top35 company pools plus unchanged core17 ETF assumption; no new ranking or ETF list fitting.",
+  "sensitivity_pool": "Top32 after primary rules are selected.",
+  "portfolio": "Only long/cash;3 equal positions,2 equal halves,<2 cash; monthly fixed shares; no daily pullback gate,no leverage,no within-month exit.",
+  "cost_per_side": 0.0,
+  "primary_execution": "Same-close descriptive replay aligned with supplied author ledger; separately report next-open zero-cost.",
+  "calibration": "First48 holding months through2024-12-31 for selection; final21 months2025-2026 for one subsequent check. Entire history has been seen in prior research: not pristine OOS.",
+  "core_definitions": "Daily252/294 endpoints skipping42; calendar12/14 months endpoints skipping2monthends. Raw momentum and division by recent63d volatility to power0.5 or1 or aligned volatility. Normalization percentile versus10th/90th magnitude.",
+  "core_weight_minimum": 0.5,
+  "correction_total_maximum": 0.2,
+  "ml_total_maximum": 0.1,
+  "diagnostics": "Attribute monthly log-return shortfalls; compare minimum core-score correction needed to admit author selections; separate set matches from return matches.",
+  "tracks": [
+    "Finite coarse factor-definition/support grid, choose separately by prior48-month holdings matches and prior48-month return; preserve all trials.",
+    "Constrained pairwise Ridge-style inverse preference fit on author choices through2024 only; max2support factors plus bounded state/shape contributions; diagnostic,not author method proof.",
+    "Annual five-year market-return-trained Ridge using weekly observations with fully matured21-session targets,ordinary/recent models; small forecast correction only; author choices never enter these model fits."
+  ],
+  "limits": "No expanding after seeing final21-month check; do not tune on its returns. Exact holdings replication not guaranteed. Unknown ETF17 and historical ranking vintages remain.",
+  "protected": "All existing research,simulation plans,ledgers and automation unchanged; new experiment directory only."
+}

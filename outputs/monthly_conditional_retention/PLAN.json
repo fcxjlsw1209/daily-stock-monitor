@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-10-10T05:42:51.871092+00:00",
+  "objective": "Compare observable-regime fresh ranking against monthend retention/replacement and conditional exits, using supplied ordered holdings.",
+  "hard_rules": "No intramonth trading. Long momentum and stock/own-sector-ETF relative momentum still skip latest42 sessions/two calendar months. No new recent-return ranking factor, ticker/date intercept, or author holdings injected into trading state.",
+  "source": "Unchanged reconstructed Top32 + assumed theme17 from strict-relative study; no certified original-author pool claim.",
+  "seeds": "Six distinct core families from prior264 trials, chosen only by first48 calibration similarity; keep their original normalization and coefficients.",
+  "states": "SPY aboveMA200, SPYvol63 above trailing252 median, and their four-way cross. Each group needs8 calibration months, otherwise uses global coefficients. Every state retains original core/industry/correction budgets.",
+  "state_grid": "6 seeds x (global + 3 partitions x2 coefficient-turnover budgets .10/.20) =42 scoring rules. Fit deltas only on first48 labels, using ordered likelihood and .10 shrinkage toward global coefficients.",
+  "retention_grid": "(rank buffer, replacement gap): (3,0),(4,0),(5,0),(7,0),(5,.03),(5,.06). Gap0 means retain all qualifying incumbents within the buffer; positive gap permits replacing even within-buffer incumbents when an outsider exceeds their score by that gap. Fill remaining slots with best eligible outsiders.",
+  "exit_grid": "none; fixed loss15%/profit50%; sigma-normalized loss2.5/profit5/trail3; adaptive version; adaptive no-profit variant; adaptive tight(1.5,3,2); adaptive wide(3.5,8,5). 42x6x7=1764 policies.",
+  "threshold_units": "sigma=known daily63-session std *sqrt21. Adaptive multiplier: weak SPYtrend .8, highmarketvol .9, strong core percentile>=.75 1.25, weak core percentile<.5 .8. Loss clipped5%-50%,profit10%-100%,trail8%-60%. Hypotheses, not author parameters.",
+  "holding_state": "Own recursively chosen positions, weighted-average adjusted cost updated only on additions, cost unchanged on trims; own episode closing-price peak. Conditions checked only at current monthend close. Exit names blocked from immediate same-rebalance repurchase.",
+  "selection": "Freeze leaders for fresh, retention-only, explicit exits and overall by calibration matching, never later returns. Evaluate first48/later21/all with CAGR, daily Sharpe, drawdown, ordered/set/slot match and transition fit. Later21 previously seen, not pristine OOS.",
+  "execution": "Zero cost, same-close idealized reproduction primary; next-open sensitivity regenerates decisions with its own executed costs/peaks, never blindly shifts stateful primary orders.",
+  "protected": "Read-only source prices and every existing observation account; no auto-promotion or live trades."
+}

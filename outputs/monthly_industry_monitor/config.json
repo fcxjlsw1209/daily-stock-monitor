@@ -1,0 +1,55 @@
+{
+  "strategy_id": "monthly_momentum_industry_paper_v1",
+  "registered_utc": "2026-10-10T23:29:13.238112+00:00",
+  "start": "2026-10-12",
+  "initial_capital": 100000.0,
+  "max_positions": 3,
+  "sector_limit": null,
+  "round_trip_cost_bps": 10,
+  "score_weights": {
+    "base": {
+      "mom294_risk_recent63": 0.52,
+      "vol126": 0.21937500000000001,
+      "acceleration_skip42": 0.185625,
+      "high_market_vol__neg_cmf63": 0.075
+    },
+    "high_vol_correction": {
+      "budget": 0.15,
+      "sector_relative": 0.075,
+      "sector_stability": 0.0375,
+      "tail_resilience": 0.0375
+    }
+  },
+  "etfs": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "TLT",
+    "GLD",
+    "XLE",
+    "XLF",
+    "XLI",
+    "XLK",
+    "XLV",
+    "XLY",
+    "SMH",
+    "SOXX",
+    "IGV",
+    "VGT",
+    "MTUM",
+    "ARKK"
+  ],
+  "universe": "monthly_top35_extension/POOLS.json Top32 monthly archived US-listed company proxy + theme17; exact guidance_tweaks pool, not the older regime-monitor pool",
+  "signal": "completedNYSElastsessionofmonth",
+  "execution": "nextNYSEsessionopen",
+  "first_signal": "2026-10-30",
+  "first_execution": "2026-11-02",
+  "paper_only": true,
+  "no_backfill": true,
+  "no_optimization": true,
+  "data_certified": false,
+  "units": "normalized adjusted-price total-return units; synthetic dividend-reinvestment approximation, not broker shares",
+  "research_rules_sha256": "856a054b29ba0fa88c8f6b0922310828b6b053b15737c22f4a995504a7855bc5",
+  "research_candidate": "category_industry",
+  "research_same_close_cagr": 0.8083489706867797
+}

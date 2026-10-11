@@ -1,0 +1,398 @@
+{
+  "leaders": {
+    "balanced": {
+      "id": 94,
+      "norm": "percentile",
+      "family": 11,
+      "core": [
+        "calendar14_skip2_raw"
+      ],
+      "ml": "patterns",
+      "temp": 0.1,
+      "regularization": 0.0,
+      "spec": [
+        [
+          "calendar14_skip2_raw",
+          1.0,
+          "core"
+        ],
+        [
+          "vol126",
+          1.0,
+          "vol"
+        ],
+        [
+          "vol126",
+          -1.0,
+          "vol"
+        ],
+        [
+          "industry_relative60",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_lagged60",
+          1.0,
+          "industry"
+        ],
+        [
+          "cmf21",
+          1.0,
+          "shape"
+        ],
+        [
+          "cmf21",
+          -1.0,
+          "shape"
+        ],
+        [
+          "cmf63",
+          1.0,
+          "shape"
+        ],
+        [
+          "cmf63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "signed_volume63",
+          1.0,
+          "shape"
+        ],
+        [
+          "signed_volume63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "highvol_cmf63",
+          1.0,
+          "shape"
+        ],
+        [
+          "highvol_cmf63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "trend_industry60",
+          1.0,
+          "shape"
+        ],
+        [
+          "trend_industry60",
+          -1.0,
+          "shape"
+        ],
+        [
+          "acceleration_skip42",
+          1.0,
+          "accel"
+        ],
+        [
+          "ordinary_ridge",
+          1.0,
+          "ml"
+        ],
+        [
+          "recent_ridge",
+          1.0,
+          "ml"
+        ],
+        [
+          "industry_long126",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_long252",
+          1.0,
+          "industry"
+        ],
+        [
+          "anti_recent42",
+          1.0,
+          "shape"
+        ],
+        [
+          "anti_extension200",
+          1.0,
+          "shape"
+        ],
+        [
+          "anti_gap5",
+          1.0,
+          "shape"
+        ],
+        [
+          "shakeout5",
+          1.0,
+          "shape"
+        ],
+        [
+          "dry_consolidation",
+          1.0,
+          "shape"
+        ],
+        [
+          "anti_failed_rebounds5",
+          1.0,
+          "shape"
+        ],
+        [
+          "signed_volume_trend",
+          1.0,
+          "shape"
+        ],
+        [
+          "long_path_quality",
+          1.0,
+          "shape"
+        ]
+      ],
+      "weights": [
+        0.720194376269178,
+        0.21211006329147722,
+        0.0,
+        0.031608615463165096,
+        0.015314634258383166,
+        1.7558654183402744e-16,
+        0.0,
+        0.006620757348202493,
+        0.0,
+        2.046126668705378e-16,
+        9.457227111178197e-17,
+        5.633480606916791e-16,
+        0.0,
+        0.0,
+        6.967879371362271e-16,
+        3.180100497171545e-17,
+        0.0,
+        0.0,
+        1.875720580376758e-16,
+        0.0,
+        1.5832739850077382e-16,
+        3.5996945023029296e-16,
+        4.2014972886703125e-17,
+        0.0,
+        0.0,
+        5.4736443775271285e-17,
+        0.008780740969324725,
+        0.005370812400268709
+      ],
+      "loss": 2.0055926035348888,
+      "calibration": {
+        "months": 48,
+        "set_exact": 9,
+        "order_exact": 2,
+        "top1_exact": 18,
+        "shared_slots": 93,
+        "position_exact": 38,
+        "pairs_correct": 79,
+        "pairs_total": 140,
+        "unavailable_author_slots": 2,
+        "selection_score": 0.6050595238095238
+      }
+    },
+    "ordered": {
+      "id": 222,
+      "norm": "magnitude",
+      "family": 5,
+      "core": [
+        "mom294_risk_recent63"
+      ],
+      "ml": "patterns",
+      "temp": 0.1,
+      "regularization": 0.0,
+      "spec": [
+        [
+          "mom294_risk_recent63",
+          1.0,
+          "core"
+        ],
+        [
+          "vol126",
+          1.0,
+          "vol"
+        ],
+        [
+          "vol126",
+          -1.0,
+          "vol"
+        ],
+        [
+          "industry_relative60",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_lagged60",
+          1.0,
+          "industry"
+        ],
+        [
+          "cmf21",
+          1.0,
+          "shape"
+        ],
+        [
+          "cmf21",
+          -1.0,
+          "shape"
+        ],
+        [
+          "cmf63",
+          1.0,
+          "shape"
+        ],
+        [
+          "cmf63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "signed_volume63",
+          1.0,
+          "shape"
+        ],
+        [
+          "signed_volume63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "highvol_cmf63",
+          1.0,
+          "shape"
+        ],
+        [
+          "highvol_cmf63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "trend_industry60",
+          1.0,
+          "shape"
+        ],
+        [
+          "trend_industry60",
+          -1.0,
+          "shape"
+        ],
+        [
+          "acceleration_skip42",
+          1.0,
+          "accel"
+        ],
+        [
+          "ordinary_ridge",
+          1.0,
+          "ml"
+        ],
+        [
+          "recent_ridge",
+          1.0,
+          "ml"
+        ],
+        [
+          "industry_long126",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_long252",
+          1.0,
+          "industry"
+        ],
+        [
+          "anti_recent42",
+          1.0,
+          "shape"
+        ],
+        [
+          "anti_extension200",
+          1.0,
+          "shape"
+        ],
+        [
+          "anti_gap5",
+          1.0,
+          "shape"
+        ],
+        [
+          "shakeout5",
+          1.0,
+          "shape"
+        ],
+        [
+          "dry_consolidation",
+          1.0,
+          "shape"
+        ],
+        [
+          "anti_failed_rebounds5",
+          1.0,
+          "shape"
+        ],
+        [
+          "signed_volume_trend",
+          1.0,
+          "shape"
+        ],
+        [
+          "long_path_quality",
+          1.0,
+          "shape"
+        ]
+      ],
+      "weights": [
+        0.5374575858666879,
+        0.30000000000000004,
+        3.577264491331721e-17,
+        0.03643133404267053,
+        0.013148423322790948,
+        8.81875118144014e-18,
+        0.0,
+        0.02668839191398289,
+        2.15026434031217e-16,
+        0.0,
+        0.0,
+        7.113175793575731e-17,
+        3.851167643589685e-18,
+        0.003469008925933865,
+        0.0,
+        0.0,
+        0.03501941208033666,
+        0.0,
+        9.79292112709935e-17,
+        0.004223591463286377,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.03433999000159834,
+        0.009222262382713833
+      ],
+      "loss": 1.982990411342767,
+      "calibration": {
+        "months": 48,
+        "set_exact": 12,
+        "order_exact": 3,
+        "top1_exact": 16,
+        "shared_slots": 89,
+        "position_exact": 32,
+        "pairs_correct": 71,
+        "pairs_total": 140,
+        "unavailable_author_slots": 2,
+        "selection_score": 0.5625992063492063
+      }
+    }
+  },
+  "trial_count": 352,
+  "training": "First48 only; no return-based selection"
+}

@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-10-10T07:11:41.470100+00:00",
+  "hypothesis": "Long momentum first qualifies, then bounded score differentiates candidates. Compare retaining absolute factor distances vs cross-sectional rank, and top3-set vs ordered-choice fitting.",
+  "hard_rules": "Long-only, up to3 equal monthend positions, fixed intramonth units, zero cost idealized same-close; core and own-sector relative return numerators skip42sessions/two months. No ticker/month lookup, no future return optimized.",
+  "transforms": "Percentile control; monthly zscore followed by .5*tanh(z/1.5); fixed economically scaled raw factors followed by .5*tanh. No fitting normalization to later months.",
+  "gates": "Positive12-2 control; top half or top12 by mean percentile of core menu among positive/warmup candidates. Same gate applies all names, including incumbent exits. Missing author targets count as mismatches.",
+  "objectives": "Constrained ordered likelihood vs pairwise selected>unselected(75%) and author-order(25%) logistic loss. Same core>=50%,vol<=30%,own-sector<=20%,shape+accel<=20% budgets.",
+  "selection": "4pool/ETF controls x3scales x4core menus x3gates x2objectives x2regimes x2retentions=1152policies. Inner fit17/eval6 and fit23/eval12. Select on inner18 .6slots+.25sets+.15orders, freeze, refit35, evaluate34 once. Historical latter34 reused; not pristine OOS.",
+  "limitation": "Proxy market-cap pools and two assumed ETF17 lists; user-approved Top35 control. No change to observation accounts or past research. No performance-driven promotion."
+}

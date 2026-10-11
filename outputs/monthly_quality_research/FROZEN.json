@@ -1,0 +1,176 @@
+{
+  "created_utc": "2026-10-11T04:47:24.495440+00:00",
+  "selected": {
+    "primary": {
+      "id": 11,
+      "family": "residual",
+      "spec": [
+        {
+          "family": "residual",
+          "key": "resid_126_210_sum",
+          "amount": 0.025,
+          "state": "calm10"
+        }
+      ],
+      "training": {
+        "cagr": 0.5427493014764397,
+        "sharpe": 1.6234135425294554,
+        "max_drawdown": -0.31125995821743635,
+        "total_return": 22.541770270429375
+      },
+      "early": {
+        "cagr": 0.46042549803093014,
+        "sharpe": 1.450315988354401,
+        "max_drawdown": -0.31125995821743635,
+        "total_return": 4.238125805418942
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "robust": 2.0173884978243035
+    },
+    "robust": {
+      "id": 11,
+      "family": "residual",
+      "spec": [
+        {
+          "family": "residual",
+          "key": "resid_126_210_sum",
+          "amount": 0.025,
+          "state": "calm10"
+        }
+      ],
+      "training": {
+        "cagr": 0.5427493014764397,
+        "sharpe": 1.6234135425294554,
+        "max_drawdown": -0.31125995821743635,
+        "total_return": 22.541770270429375
+      },
+      "early": {
+        "cagr": 0.46042549803093014,
+        "sharpe": 1.450315988354401,
+        "max_drawdown": -0.31125995821743635,
+        "total_return": 4.238125805418942
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "robust": 2.0173884978243035
+    }
+  },
+  "family_controls": {
+    "baseline": {
+      "id": 0,
+      "family": "baseline",
+      "spec": [],
+      "training": {
+        "cagr": 0.5349155442763764,
+        "sharpe": 1.6031917771530346,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.684626736023116
+      },
+      "early": {
+        "cagr": 0.44808994995802753,
+        "sharpe": 1.416891036956853,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.047408386340172
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "robust": 1.9758607264415782
+    },
+    "residual": {
+      "id": 11,
+      "family": "residual",
+      "spec": [
+        {
+          "family": "residual",
+          "key": "resid_126_210_sum",
+          "amount": 0.025,
+          "state": "calm10"
+        }
+      ],
+      "training": {
+        "cagr": 0.5427493014764397,
+        "sharpe": 1.6234135425294554,
+        "max_drawdown": -0.31125995821743635,
+        "total_return": 22.541770270429375
+      },
+      "early": {
+        "cagr": 0.46042549803093014,
+        "sharpe": 1.450315988354401,
+        "max_drawdown": -0.31125995821743635,
+        "total_return": 4.238125805418942
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "robust": 2.0173884978243035
+    },
+    "quality": {
+      "id": 0,
+      "family": "baseline",
+      "spec": [],
+      "training": {
+        "cagr": 0.5349155442763764,
+        "sharpe": 1.6031917771530346,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.684626736023116
+      },
+      "early": {
+        "cagr": 0.44808994995802753,
+        "sharpe": 1.416891036956853,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.047408386340172
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "robust": 1.9758607264415782
+    },
+    "calibration": {
+      "id": 0,
+      "family": "baseline",
+      "spec": [],
+      "training": {
+        "cagr": 0.5349155442763764,
+        "sharpe": 1.6031917771530346,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.684626736023116
+      },
+      "early": {
+        "cagr": 0.44808994995802753,
+        "sharpe": 1.416891036956853,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.047408386340172
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "robust": 1.9758607264415782
+    }
+  },
+  "trials": 163,
+  "admissible": 9,
+  "code_sha256": "5af173a8d6a659153278eedc4e38bc2c95f18dee5b10ac4d67cf44bdeb1ddfde",
+  "features_sha256": "310768a7b3a0e5b1832b2ec10a58f1bf234c009a77ba0f27e1bad2cd1cffcdce"
+}

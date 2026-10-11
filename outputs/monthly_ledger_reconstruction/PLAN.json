@@ -1,0 +1,12 @@
+{
+  "purpose": "Infer uniform monthly selection hypotheses from the 69 user-supplied simulated holdings periods, not from previous pixel-implied holdings.",
+  "evidence": "outputs/monthly_supplied_ledger_audit/PERIODS.json",
+  "primary_universe": "Reuse pre-existing foreign-inclusive Top32 cap-ranked proxy, then add pre-existing theme17 ETF hypothesis; also check core17. Do not inject a known winner or drop an inconvenient competitor based on supplied labels.",
+  "universe_limit": "Historical index-union plus five foreign issuers is still an approximation to author's all-US-listed Top32; vintage of cap snapshots and the original 17 ETF list unresolved.",
+  "execution": "Three equal positions at supplied month-end start close, fixed units between month ends, zero costs; no intramonth stops, no sector cap, no leverage.",
+  "author_guidance": "Primary medium/long momentum skipping latest 42 sessions; interpretable volatility, relative industry and volume-price adjustments; only a small explicitly bounded model correction.",
+  "first_pass": "Audit target inclusion. Measure pure momentum and risk-adjusted momentum baselines, percentile versus magnitude standardization. Select by holdings agreement, never subsequent profit.",
+  "inverse_pass": "Pairwise chosen-over-unchosen constraints, positive momentum, at least 60% core score weight, bounded side coefficients. Local feasibility is only diagnosis; no per-month weight stitching. Fit one shared rule, then inspect sequential year-frozen rules and failures.",
+  "validation": "Local/source hashes, feature prefix invariance, all shares positive, no future returns in features or rule fitting, fit-period boundaries. Previously viewed historical labels are not independent financial out-of-sample data.",
+  "policy": "Do not change six monitoring accounts or monthly buffer observer, prior rule contracts or old evidence. Save all tested configurations and failed results. This is research; candidate outputs are diagnostic selections, never admitted author trades or live orders. 2016-2020 still lack ledger labels."
+}

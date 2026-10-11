@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-10-11T04:15:15.965351+00:00",
+  "hypothesis": "Reconsider whole score architecture, not just tiny weight nudges. Long momentum skips42sessions; compare recent/aligned volatility risk adjustment, own-sector relative strength, path persistence and market-conditioned volatility preferences.",
+  "data": "Unmodified122dates/Top32-proxy+assumed17ETF from2016 extension. No pool optimization; identical missing-data/positive252skip42/295warmup gate.",
+  "split": "Train first88 periods Aug2016-Nov2023; freeze before last34. Separate early53 and recent35 training diagnostics. Historical periods already reused, not pristine OOS.",
+  "search": "12 predefined long-core definitions x3coreweights x5supports x4riskmodes x2retentions; baseline controls. Then top2training configurations per core family, with <=10%price-volume/recentRidge correction globally or highvol-only. All searches training-only.",
+  "selection": "Primary maxCAGR with trainSharpe>=previous-.05, trainDD>=previous-.03, earlyCAGR>=previous early, recent35CAGR>=previous recent-.05. Robust control prioritizes minimum early/recent Sharpe plus aggregate CAGR and drawdown. Baseline always included.",
+  "validation": "Prefix-only36/60/76-month selection on predefined stageA, then24/16/12month forward blocks entirely before outer holdout. Freeze both final selectors, report both. No holdout-driven extra sweep.",
+  "execution": "Long-only,unlevered,3equal,2half,<2cash; fixed monthly units. Complete-close/same-close0cost primary; next-open0cost and5bp/side controls. No intramonth exits.",
+  "limitations": "Author full chart80.64%/Sharpe1.867 reference only; pre2021author holdings absent. Cap proxy/ETF list/sector history limitations inherited. Selection on reused history may overfit; no promotion to observers.",
+  "sources": [
+    "https://www.nber.org/papers/w20439",
+    "https://www.nber.org/papers/w22208"
+  ],
+  "source_scope": "Motivate state/risk diagnostics only. These papers do not validate this long-only monthly strategy or predict its return."
+}

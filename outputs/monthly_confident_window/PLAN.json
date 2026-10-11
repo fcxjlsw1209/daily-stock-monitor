@@ -1,0 +1,8 @@
+{
+  "request": "Begin rule inference from a short interval with comparatively stable inferred trades, then check its continuous return/drawdown path.",
+  "selection_before_rule_fit": "Rank all complete three-month windows by count of unanimous holdings across the nine existing full-image paths, then average top-three inclusion agreement and visible image coverage. No strategy returns, CAGR, Sharpe or ease of rule fit used to select the window.",
+  "confidence": "Agreement is relative stability, not a probability or independent confirmation. Recheck every selected month against all eligible triples and fixed image calibration, including horizontal shifts of +/-0.35 pixels. near-best+1 is a diagnostic ambiguity set, not a confidence interval.",
+  "inference": "Stable anchor months constrain a common rule. Ambiguous middle-month alternatives remain alternatives. Try positive momentum-only first, then the existing momentum>=50% linear family. Do not invent ticker/date features or accept negative core-momentum effects.",
+  "curve_test": "Only the selected short window. Equal weights at month end, fixed adjusted-price units, zero fees. Use one initial NAV and prior peak from the existing continuous path; never reset NAV or peak each month. No full-period return backtest.",
+  "scope": "Retrospective reconstruction using image evidence; not an out-of-sample strategy test. Keep original records, observation accounts and fingerprints unchanged."
+}

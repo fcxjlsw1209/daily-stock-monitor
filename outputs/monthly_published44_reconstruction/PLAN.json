@@ -1,0 +1,39 @@
+{
+  "objective": "44-month published-ranking universe substitution and monthly holdings reconstruction",
+  "dates": [
+    "2023-01-31",
+    "2026-09-24"
+  ],
+  "cost_bps": 0,
+  "execution": "same_close_descriptive_replay",
+  "selection": "Equal weight up to 3; 2 candidates equal halves; fewer than 2 stay cash. Fixed units until next monthend.",
+  "eligibility": "295 consecutive valid close sessions and positive 252-day momentum skipping 42 sessions, inherited unchanged.",
+  "fixed_models": [
+    "return_leader",
+    "development_leader",
+    "holdings_leader",
+    "simple_leader",
+    "latest_multilayer",
+    "pure_mom252_skip42"
+  ],
+  "ml": "Frozen annual Ridge models trained previously on matured market-return labels and the old proxy pool. Recompute current candidate features and ranks; no refit or new author labels in ML.",
+  "search": "Finite compact long-momentum-first grid, at least 50% core; select by exact holdings then overlap, not returns. Report old fixed models independently. First 23 dates (through 2024) calibration, remaining 21 dates comparison; also explicitly retrospective whole44 matching leader.",
+  "etfs": "Retain each existing model theme17/core17 hypothesis, not claimed author exact roster.",
+  "universe_corrections": [
+    {
+      "symbol": "LTM",
+      "not_exchange_listed_start": "2020-06-22",
+      "not_exchange_listed_end_exclusive": "2024-07-25",
+      "reason": "NYSE delisting and July2024 relisting; vendor registry stale.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1047716/000162828024006398/ltm-20231231.htm",
+      "relisting_source": "https://ir.latam.com/Portuguese/not-cias/press-releases/detalhes-da-noticia/2024/LATAM-Announces-Relisting-on-New-York-Stock-Exchange-and-Pricing-of-Underwritten-Offering-07-24-2024/default.aspx"
+    }
+  ],
+  "skhy": "Current Yahoo quote and active registry support listing; conflicting same-day delisted registry retained as limitation. New IPO has <295 sessions and cannot be selected; include a no-SKHY universe sensitivity.",
+  "limitations": [
+    "44 dated lists are retrospective vendor archives, not author exact Yahoo capitalization proxies.",
+    "All periods already examined historically; no independent out-of-sample claim.",
+    "No paper ledgers, production rules, frozen plans or old research outputs changed.",
+    "No author winners added to override the Top32 cutoff."
+  ]
+}

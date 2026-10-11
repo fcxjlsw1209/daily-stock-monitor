@@ -1,0 +1,12 @@
+# Frozen comparison protocol (2026-09-27)
+Research only: no monitor rules, plans, or ledgers changed.
+
+Requested period 2000-01-03 through 2026-09-25, 1999 warmup. Fixed SMA200 on QQQ adjusted close; yesterday signal executed next regular session open. Equality retains previous signal. No parameter search, RSI, holding cap or stop. Compare QQQ buy/hold, QLD buy/hold, annual 50/50 QQQ/TQQQ, SMA200 QLD/QQQ, QLD/interest cash, QQQ/interest cash.
+
+Use Yahoo adjusted daily price series, adjusted open = Open * Adj Close / Close; old position earns overnight before rebalance, new position earns intraday after rebalance. Total-return units assume distributions reinvested, no tax. Trading fee 5bp per purchased/sold dollar, no fees for cash. No forced liquidation at sample end. Fractions allowed.
+
+Before ETF history starts, daily-reset synthetic 2x/3x QQQ total returns minus 0.95% annual expense and borrowing cost (prior available IRX-derived rate + 0.50% spread) on borrowed notional. Approximate overnight synthetic value from same prior-close exposure; intraday factor = full-day factor / overnight factor, NEVER independently reset leverage at the open. Cost accrues on calendar days, with 6.5 hours intraday. Actual ETF returns start only when both today's and prior session's real bars exist; never repeat modeled financing fees on actual ETF prices. This is a proxy, not reconstructed tradable pre-inception market prices; QQQ's embedded fund expenses remain in proxy.
+
+Cash earns prior-session 13-week bill quoted yield converted approximately from bank-discount basis assuming 91-day maturity: y/(1-y*91/360)*365/360. Daily simple accrual, not a tradable Treasury total-return index or guaranteed broker cash rate. Forward fill yield only with lag, max 10 calendar days. Financing same base rate. Sensitivities: 10bp per side; financing spread 0 and 1%; zero-yield cash. Report actual QLD-era separately starting 2007-01-03, and post-2010 history (2011+) for all actual ETFs.
+
+Statistics: annualized compound return from first opening to last close, maximum daily closing equity drawdown including initial capital, peak/trough/recovery dates, invested share of sessions, rebalance count. Crisis drawdown: local peak within 2000-2003 or 2007-2009 and recovery subsequently; distinct from return to initial capital. Rolling 5/10-year outcomes to avoid one start-date conclusion. No claims of out-of-sample validation or exact replication of supplied table.

@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-10-10T22:56:38.303633+00:00",
+  "primary": "balanced",
+  "selected": {
+    "balanced": {
+      "spec": {
+        "id": 509,
+        "core": "core_calendar14_v0",
+        "side": "quality",
+        "core_weight": 0.5,
+        "market": "risk_aware",
+        "gate": "all",
+        "retain": 5
+      },
+      "robust": 1.5240212514720353,
+      "training": {
+        "cagr": 0.4475740221044997,
+        "sharpe": 1.6772956471692007,
+        "max_drawdown": -0.16576330891680513,
+        "total_return": 1.9374329922993847
+      },
+      "blocks": [
+        {
+          "cagr": 0.6522563244534836,
+          "sharpe": 1.9488592990753018,
+          "max_drawdown": -0.16576330891680513,
+          "total_return": 0.6517055651262835
+        },
+        {
+          "cagr": 0.29836034428423974,
+          "sharpe": 1.2696669969017518,
+          "max_drawdown": -0.10694024721966655,
+          "total_return": 0.29720761323032163
+        },
+        {
+          "cagr": 0.4105744374767306,
+          "sharpe": 1.8161574271030096,
+          "max_drawdown": -0.09898854913619148,
+          "total_return": 0.3709633580749805
+        }
+      ]
+    },
+    "sharpe": {
+      "spec": {
+        "id": 509,
+        "core": "core_calendar14_v0",
+        "side": "quality",
+        "core_weight": 0.5,
+        "market": "risk_aware",
+        "gate": "all",
+        "retain": 5
+      },
+      "robust": 1.5240212514720353,
+      "training": {
+        "cagr": 0.4475740221044997,
+        "sharpe": 1.6772956471692007,
+        "max_drawdown": -0.16576330891680513,
+        "total_return": 1.9374329922993847
+      },
+      "blocks": [
+        {
+          "cagr": 0.6522563244534836,
+          "sharpe": 1.9488592990753018,
+          "max_drawdown": -0.16576330891680513,
+          "total_return": 0.6517055651262835
+        },
+        {
+          "cagr": 0.29836034428423974,
+          "sharpe": 1.2696669969017518,
+          "max_drawdown": -0.10694024721966655,
+          "total_return": 0.29720761323032163
+        },
+        {
+          "cagr": 0.4105744374767306,
+          "sharpe": 1.8161574271030096,
+          "max_drawdown": -0.09898854913619148,
+          "total_return": 0.3709633580749805
+        }
+      ]
+    },
+    "return": {
+      "spec": {
+        "id": 509,
+        "core": "core_calendar14_v0",
+        "side": "quality",
+        "core_weight": 0.5,
+        "market": "risk_aware",
+        "gate": "all",
+        "retain": 5
+      },
+      "robust": 1.5240212514720353,
+      "training": {
+        "cagr": 0.4475740221044997,
+        "sharpe": 1.6772956471692007,
+        "max_drawdown": -0.16576330891680513,
+        "total_return": 1.9374329922993847
+      },
+      "blocks": [
+        {
+          "cagr": 0.6522563244534836,
+          "sharpe": 1.9488592990753018,
+          "max_drawdown": -0.16576330891680513,
+          "total_return": 0.6517055651262835
+        },
+        {
+          "cagr": 0.29836034428423974,
+          "sharpe": 1.2696669969017518,
+          "max_drawdown": -0.10694024721966655,
+          "total_return": 0.29720761323032163
+        },
+        {
+          "cagr": 0.4105744374767306,
+          "sharpe": 1.8161574271030096,
+          "max_drawdown": -0.09898854913619148,
+          "total_return": 0.3709633580749805
+        }
+      ]
+    }
+  },
+  "code_sha256": "09cc769235534104321af69b81149e3cf545f57acd503bdeab624f6b68d03fd3",
+  "source_hashes": {
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_exact35/INPUTS.json": "eb21107bbfb77f6c4855f8d482c81728239c9d4606e03a11171e818f179e7730",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_exact35/FEATURES.npz": "acbe724599193a08edab2aba02001f291458fa69774b8c67a9485f77954e59a2",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_exact35/PRICES.npz": "0dc292874df003dc41b5af62aa716b76a20ab9b7d7b3a91ddf7fac0b04f1fc5d",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_exact35/exact35.py": "6f6e5367ea758641d1f8dcc87c386a673b8c948bfda4dfb44f40d2a6604352c2",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_decision_audit/MONTHS.json": "8801b8c1d2e9019b8059d57c2a1e7b2edf0d8bed86b7f103828d5598380eba5a",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_supplied_ledger_audit/PERIODS.json": "f61d9909ec5332227141231c741530437396dd57b39829bb81e9157181ecaced",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_factor_search_v2/validate.py": "b5c6bbbfa5f4db0821f6b0dacb33a43c974cceb8a150578803eef73132cd30e4"
+  },
+  "candidate_count": 1152,
+  "author_labels_used": false
+}

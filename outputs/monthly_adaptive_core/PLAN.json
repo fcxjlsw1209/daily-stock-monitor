@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-10T06:49:44.884622+00:00",
+  "acceptance": "All69 monthly author three-name sets and ordered lists, monthend changes, and rounded monthly-return replay. Do not count lookup tables or per-month oracle fits as reproduction.",
+  "task": "Extend long-core mixtures so observable market regimes can change momentum horizon/risk normalization; add bounded stock-specific risk/price-path corrections.",
+  "unchanged": "Only monthend decisions, fixed adjusted units within month, zero cost. Long/industry returns exclude42sessions/two calendar months. No daily pullback entry gate, no short-horizon return factor, no author state fed into portfolio.",
+  "pool": "Separate current research Top32 and previously user-approved Top35 controls, same theme17. No one-off COST or author-name additions; 2022-05-31 COST is proxy rank36, ~0.103% below rank35.",
+  "core_menus": {
+    "fixed": [
+      "calendar14_skip2_half"
+    ],
+    "durations": [
+      "mom252_skip42",
+      "mom294_skip42",
+      "calendar12_skip2_raw",
+      "calendar14_skip2_raw"
+    ],
+    "risk_methods": [
+      "mom252_risk_recent63",
+      "mom294_risk_recent63",
+      "mom252_risk_aligned",
+      "mom294_risk_aligned",
+      "calendar12_skip2_half",
+      "calendar14_skip2_half",
+      "calendar12_skip2_risk",
+      "calendar14_skip2_risk"
+    ],
+    "broad": [
+      "mom252_skip42",
+      "mom294_skip42",
+      "calendar12_skip2_raw",
+      "calendar14_skip2_raw",
+      "mom252_risk_recent63",
+      "mom294_risk_recent63",
+      "mom252_risk_aligned",
+      "mom294_risk_aligned",
+      "calendar12_skip2_half",
+      "calendar14_skip2_half",
+      "calendar12_skip2_risk",
+      "calendar14_skip2_risk",
+      "trend_quality252_skip42",
+      "trend_quality294_skip42",
+      "mean_sharpe252_skip42",
+      "mean_sharpe294_skip42"
+    ]
+  },
+  "feature_modes": [
+    "legacy",
+    "risk_path"
+  ],
+  "path_definition": "Downside63, idio63, volatility21/126 use recent risk; distance to252close-high, mean intraday close-location21, squared-return jump concentration63 are bounded price-volume/path corrections, never core momentum.",
+  "weights": "Same constraints: core>=50%, vol<=30%, own-sector relative<=20%, all shape/accel<=20%, accel<=10%; these remain research assumptions, not disclosed author weights.",
+  "contexts": "Global, growth(QQQ/SPY63), smallcap(IWM/SPY63), defensive-minus-cyclical63, bonds(TLT63), growth x high SPYvol. Group requires8 calibration months; otherwise global. State L1 weight delta<=.30.",
+  "fit": "Constrained ordered likelihood temp.05, regularization.10. 4core menus x2feature modes x2norms x2pools x6contexts x4retention=768candidate policies. Two forward inner folds: fit17/eval6, fit23/eval12; first35 only.",
+  "select": "Aggregate inner18months: .60 slot recall+.25 exactset+.15 exactorder. Prefer simpler policy on ties. Freeze matching leader, plus adaptive and risk/path category leaders, then refit selected specification on35.",
+  "validation": "Outer34 unchanged (2023-11-30 to2026-09-24). Previously reused history is not pristine OOS. Do not use outer labels or returns to select candidates.",
+  "diagnostics": "After frozen validation, optionally all35 per-month feasibility identifies whether added features explain training contradictions. No oracle-generated trade performance.",
+  "protected": "Read-only original strategy accounts, ledgers, plans, fingerprints, input datasets and prior research."
+}

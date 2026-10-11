@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-10-10T05:08:41.053162+00:00",
+  "hypothesis": "A small penalty for recent overextension/gaps and monthly price-volume patterns may explain selling recent winners despite high older momentum. Long sector-relative momentum uses the same42-session gap as core.",
+  "family": "Reuse22 core families. Two predeclared correction menus: chase-only and chase+volume/path patterns. All purely score corrections, never require current pullback.",
+  "grid": "22 core families x2 normalizations x2 menus x2 temperatures(.05,.10) x2 penalties(0,.10)=352 fits. Annual market Ridge <=10% remains available but may get zero weight.",
+  "limits": "Same>=50% long core,vol<=30%,industry<=20%,all corrections<=20%. Direction of chase penalty is fixed negative, recovery/dry-volume positive; no arbitrary ticker or month identifiers.",
+  "selection": "Two calibration-only leaders, same similarity and ordered-match criteria. First48/later21 reused historical check, not independent OOS. Returns never used to choose leaders.",
+  "source_limits": "Sector panel is the inherited historical proxy. Added foreign mappings are explicit broad-sector research assumptions. No claim of complete certified historical sector classifications.",
+  "frozen_accounts": "No changes. Zero-cost research replay only. No presentation work."
+}

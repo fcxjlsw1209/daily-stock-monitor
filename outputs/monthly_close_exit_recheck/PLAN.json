@@ -1,0 +1,310 @@
+{
+  "created_at": "2026-10-10T07:16:21.990903+00:00",
+  "hypothesis": "Author hinted market/volatility/signal-dependent exits. User confirms no intramonth trades. Test such thresholds strictly at monthend, followed by next-ranked eligible replacements.",
+  "seeds": "Six unique scoring specs chosen only from architecture first35 inner18 matching; ignore outer returns and matches.",
+  "grid": {
+    "scoring_seeds": 6,
+    "exit_rules": 41,
+    "retentions": [
+      [
+        3,
+        0.0
+      ],
+      [
+        5,
+        0.0
+      ],
+      [
+        5,
+        0.03
+      ],
+      [
+        7,
+        0.03
+      ]
+    ],
+    "policies": 984
+  },
+  "thresholds": [
+    {
+      "name": "none"
+    },
+    {
+      "name": "fixed",
+      "loss": 0.1,
+      "profit": 0.25
+    },
+    {
+      "name": "fixed",
+      "loss": 0.1,
+      "profit": 0.5
+    },
+    {
+      "name": "fixed",
+      "loss": 0.2,
+      "profit": 0.25
+    },
+    {
+      "name": "fixed",
+      "loss": 0.2,
+      "profit": 0.5
+    },
+    {
+      "name": "sigma",
+      "loss_k": 1.5,
+      "profit_k": null,
+      "trail_k": 2.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 1.5,
+      "profit_k": null,
+      "trail_k": 4.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 1.5,
+      "profit_k": 3.0,
+      "trail_k": 2.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 1.5,
+      "profit_k": 3.0,
+      "trail_k": 4.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 1.5,
+      "profit_k": 5.0,
+      "trail_k": 2.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 1.5,
+      "profit_k": 5.0,
+      "trail_k": 4.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 2.5,
+      "profit_k": null,
+      "trail_k": 2.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 2.5,
+      "profit_k": null,
+      "trail_k": 4.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 2.5,
+      "profit_k": 3.0,
+      "trail_k": 2.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 2.5,
+      "profit_k": 3.0,
+      "trail_k": 4.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 2.5,
+      "profit_k": 5.0,
+      "trail_k": 2.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 2.5,
+      "profit_k": 5.0,
+      "trail_k": 4.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 3.5,
+      "profit_k": null,
+      "trail_k": 2.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 3.5,
+      "profit_k": null,
+      "trail_k": 4.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 3.5,
+      "profit_k": 3.0,
+      "trail_k": 2.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 3.5,
+      "profit_k": 3.0,
+      "trail_k": 4.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 3.5,
+      "profit_k": 5.0,
+      "trail_k": 2.0,
+      "adaptive": false
+    },
+    {
+      "name": "sigma",
+      "loss_k": 3.5,
+      "profit_k": 5.0,
+      "trail_k": 4.0,
+      "adaptive": false
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 1.5,
+      "profit_k": null,
+      "trail_k": 2.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 1.5,
+      "profit_k": null,
+      "trail_k": 4.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 1.5,
+      "profit_k": 3.0,
+      "trail_k": 2.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 1.5,
+      "profit_k": 3.0,
+      "trail_k": 4.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 1.5,
+      "profit_k": 5.0,
+      "trail_k": 2.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 1.5,
+      "profit_k": 5.0,
+      "trail_k": 4.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 2.5,
+      "profit_k": null,
+      "trail_k": 2.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 2.5,
+      "profit_k": null,
+      "trail_k": 4.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 2.5,
+      "profit_k": 3.0,
+      "trail_k": 2.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 2.5,
+      "profit_k": 3.0,
+      "trail_k": 4.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 2.5,
+      "profit_k": 5.0,
+      "trail_k": 2.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 2.5,
+      "profit_k": 5.0,
+      "trail_k": 4.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 3.5,
+      "profit_k": null,
+      "trail_k": 2.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 3.5,
+      "profit_k": null,
+      "trail_k": 4.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 3.5,
+      "profit_k": 3.0,
+      "trail_k": 2.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 3.5,
+      "profit_k": 3.0,
+      "trail_k": 4.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 3.5,
+      "profit_k": 5.0,
+      "trail_k": 2.0,
+      "adaptive": true
+    },
+    {
+      "name": "adaptive",
+      "loss_k": 3.5,
+      "profit_k": 5.0,
+      "trail_k": 4.0,
+      "adaptive": true
+    }
+  ],
+  "hard_rules": "Monthend close only, fixed shares between monthends. Do not use author prior holdings/costs/peaks. Use own simulated weighted cost and past closing peak. Exit names cannot be repurchased at same close; may requalify next month. Equal weight up to3, fewer than2 means cash. Zero costs.",
+  "adaptive": "Existing rule: monthly sigma=63daily std*sqrt21; weak SPYtrend .8, highmarketvol .9, strong core quartile1.25, weak half.8. Loss5-50%,profit10-100%,trail8-60% caps. These are research hypotheses, not original author values.",
+  "training": "Fit17/eval6 and fit23/eval12; aggregate18 matching, no returns to select. Refit chosen scorer35, freeze exits, then later34 validation. Reused history not untouched OOS.",
+  "objective": "Same .6slot+.25set+.15ordered matching; ties prefer none exits, smaller buffer, earlier seed/rule.",
+  "protection": "Observation ledgers/rules/plans/fingerprints untouched. No promotion. Same-close execution is idealized reproduction, next-open sensitivity separate."
+}

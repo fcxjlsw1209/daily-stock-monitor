@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-11T06:59:28.846719+00:00",
+  "purpose": "Test small month-end rank-boundary changes using existing forecasts; preserve all registered observers.",
+  "universe": "Exact archived122 Top32-proxy+assumedtheme17 pools. Same long-momentum skip42,positive momentum and295-session warmup eligibility. No author-specific pool reconstruction in this experiment.",
+  "base": "Previous research66.10% score: frozen65.34% baseline +2.5% residual in calm10 +5% weekly utility Ridge in weak_narrow. Original65.34% control.",
+  "selector": "Top4/top5 retention. Alternatively, keep incumbents only within top4/top5 and replace weakest retained name only when strongest challenger exceeds it by .005/.01/.02 total-score units. If below2 eligible, cash; otherwise2half or3equal. Noneligible or out-of-pool incumbent must exit. At each month-end all selected names reset equal; fixed shares inside month.",
+  "shrink": "Compare existing weekly utility alpha10 rank to alpha100 and/or actual-month utility alpha10. If absolute rank disagreement>.15/.30, multiply existing5% ML budget by0/.5 for that security; return unused budget to original support. Both comparator takes max disagreement. A disagreement proxy, not calibrated confidence. No refitting.",
+  "grid": "2controls +2buffer +6gap +12shrink +96selector/shrink combinations =118 configs; fully enumerated before training.",
+  "split": "First88 periods through2023-11-30 choose/freeze, then later34 replay. History repeatedly researched, including later34: not untouchedOOS. No date/ticker special cases; no post-later34 retuning.",
+  "selection": "Guard against previous66:trainSharpe>=base-.05,maxDD>=base-.03,early53CAGR>=base,recent35CAGR>=base-.02. Primary maxtrainCAGR; secondary priorrobustscore. Reportbestadmissibleperfamily, otherwiseprevious66 fallback. Sequentialprefix diagnostic36/60/76, then24/16/12 periods. Original andprevious controls always retained.",
+  "checks": "Independent fixed-unit replay, original122-order parity, prefix causality, forceexit, score-gap tie behavior, prediction disagreement budget, protected-file hashes. Diagnose changed months and replace largest beneficial changed month with baseline only for attribution, never reselection.",
+  "execution": "Primaryzero-costsame-final-close idealized replay2016-08-17..2026-09-24. Next-openzero and5bp/side sensitivity. No real trading.",
+  "caveats": "Estimated historical cap/member pool, assumed ETF list, earlier training-membership proxies, same-close execution idealization, and repeated historical search persist. This does not reproduce the author or establish future80/100% returns."
+}

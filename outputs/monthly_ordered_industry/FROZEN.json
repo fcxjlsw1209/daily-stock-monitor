@@ -1,0 +1,482 @@
+{
+  "leaders": {
+    "balanced": {
+      "id": 76,
+      "norm": "percentile",
+      "family": 12,
+      "core": [
+        "calendar14_skip2_risk"
+      ],
+      "ml": true,
+      "temp": 0.1,
+      "regularization": 0.0,
+      "spec": [
+        [
+          "calendar14_skip2_risk",
+          1.0,
+          "core"
+        ],
+        [
+          "vol126",
+          1.0,
+          "vol"
+        ],
+        [
+          "vol126",
+          -1.0,
+          "vol"
+        ],
+        [
+          "industry_relative60",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_lagged60",
+          1.0,
+          "industry"
+        ],
+        [
+          "cmf21",
+          1.0,
+          "shape"
+        ],
+        [
+          "cmf21",
+          -1.0,
+          "shape"
+        ],
+        [
+          "cmf63",
+          1.0,
+          "shape"
+        ],
+        [
+          "cmf63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "signed_volume63",
+          1.0,
+          "shape"
+        ],
+        [
+          "signed_volume63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "highvol_cmf63",
+          1.0,
+          "shape"
+        ],
+        [
+          "highvol_cmf63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "trend_industry60",
+          1.0,
+          "shape"
+        ],
+        [
+          "trend_industry60",
+          -1.0,
+          "shape"
+        ],
+        [
+          "acceleration_skip42",
+          1.0,
+          "accel"
+        ],
+        [
+          "ordinary_ridge",
+          1.0,
+          "ml"
+        ],
+        [
+          "recent_ridge",
+          1.0,
+          "ml"
+        ],
+        [
+          "industry_long126",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_long252",
+          1.0,
+          "industry"
+        ],
+        [
+          "anti_recent42",
+          1.0,
+          "shape"
+        ],
+        [
+          "anti_extension200",
+          1.0,
+          "shape"
+        ],
+        [
+          "anti_gap5",
+          1.0,
+          "shape"
+        ],
+        [
+          "shakeout5",
+          1.0,
+          "shape"
+        ],
+        [
+          "dry_consolidation",
+          1.0,
+          "shape"
+        ],
+        [
+          "anti_failed_rebounds5",
+          1.0,
+          "shape"
+        ],
+        [
+          "signed_volume_trend",
+          1.0,
+          "shape"
+        ],
+        [
+          "long_path_quality",
+          1.0,
+          "shape"
+        ],
+        [
+          "sector_strength_long",
+          1.0,
+          "industry"
+        ],
+        [
+          "sector_strength_recent",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_strength_long",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_strength_recent",
+          1.0,
+          "industry"
+        ],
+        [
+          "relative_narrow_long",
+          1.0,
+          "industry"
+        ],
+        [
+          "peer_breadth200",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_correlation_stability",
+          1.0,
+          "industry"
+        ]
+      ],
+      "weights": [
+        0.5024222757391543,
+        0.3000000000000007,
+        0.0,
+        0.047139727189006796,
+        0.021023946639448694,
+        6.677858995991542e-16,
+        5.853528119910433e-16,
+        0.004431000988438774,
+        0.0,
+        2.47737920011892e-16,
+        0.0,
+        1.9357127476572278e-16,
+        0.0,
+        4.910419931218222e-16,
+        0.0,
+        0.0,
+        0.04253862494755914,
+        0.0,
+        0.008339327106527303,
+        0.0,
+        0.0,
+        0.0,
+        3.367923700478082e-16,
+        8.577055623897045e-17,
+        2.5011750025852536e-16,
+        0.0,
+        0.01138503011356617,
+        4.3539309315751714e-16,
+        0.0,
+        1.6922813019678543e-16,
+        0.0573366647812335,
+        0.0,
+        0.005383402495064522,
+        1.9497622043891758e-16,
+        4.2612713504970633e-16
+      ],
+      "loss": 2.021145266752829,
+      "calibration": {
+        "months": 48,
+        "set_exact": 9,
+        "order_exact": 1,
+        "top1_exact": 17,
+        "shared_slots": 89,
+        "position_exact": 34,
+        "pairs_correct": 81,
+        "pairs_total": 140,
+        "unavailable_author_slots": 2,
+        "selection_score": 0.598313492063492
+      }
+    },
+    "ordered": {
+      "id": 74,
+      "norm": "percentile",
+      "family": 12,
+      "core": [
+        "calendar14_skip2_risk"
+      ],
+      "ml": true,
+      "temp": 0.05,
+      "regularization": 0.0,
+      "spec": [
+        [
+          "calendar14_skip2_risk",
+          1.0,
+          "core"
+        ],
+        [
+          "vol126",
+          1.0,
+          "vol"
+        ],
+        [
+          "vol126",
+          -1.0,
+          "vol"
+        ],
+        [
+          "industry_relative60",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_lagged60",
+          1.0,
+          "industry"
+        ],
+        [
+          "cmf21",
+          1.0,
+          "shape"
+        ],
+        [
+          "cmf21",
+          -1.0,
+          "shape"
+        ],
+        [
+          "cmf63",
+          1.0,
+          "shape"
+        ],
+        [
+          "cmf63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "signed_volume63",
+          1.0,
+          "shape"
+        ],
+        [
+          "signed_volume63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "highvol_cmf63",
+          1.0,
+          "shape"
+        ],
+        [
+          "highvol_cmf63",
+          -1.0,
+          "shape"
+        ],
+        [
+          "trend_industry60",
+          1.0,
+          "shape"
+        ],
+        [
+          "trend_industry60",
+          -1.0,
+          "shape"
+        ],
+        [
+          "acceleration_skip42",
+          1.0,
+          "accel"
+        ],
+        [
+          "ordinary_ridge",
+          1.0,
+          "ml"
+        ],
+        [
+          "recent_ridge",
+          1.0,
+          "ml"
+        ],
+        [
+          "industry_long126",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_long252",
+          1.0,
+          "industry"
+        ],
+        [
+          "anti_recent42",
+          1.0,
+          "shape"
+        ],
+        [
+          "anti_extension200",
+          1.0,
+          "shape"
+        ],
+        [
+          "anti_gap5",
+          1.0,
+          "shape"
+        ],
+        [
+          "shakeout5",
+          1.0,
+          "shape"
+        ],
+        [
+          "dry_consolidation",
+          1.0,
+          "shape"
+        ],
+        [
+          "anti_failed_rebounds5",
+          1.0,
+          "shape"
+        ],
+        [
+          "signed_volume_trend",
+          1.0,
+          "shape"
+        ],
+        [
+          "long_path_quality",
+          1.0,
+          "shape"
+        ],
+        [
+          "sector_strength_long",
+          1.0,
+          "industry"
+        ],
+        [
+          "sector_strength_recent",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_strength_long",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_strength_recent",
+          1.0,
+          "industry"
+        ],
+        [
+          "relative_narrow_long",
+          1.0,
+          "industry"
+        ],
+        [
+          "peer_breadth200",
+          1.0,
+          "industry"
+        ],
+        [
+          "industry_correlation_stability",
+          1.0,
+          "industry"
+        ]
+      ],
+      "weights": [
+        0.49999999999999956,
+        0.2723470196838678,
+        1.777625668974698e-16,
+        0.030928311262549444,
+        0.01820234980003516,
+        0.0,
+        3.859492441420881e-17,
+        0.044817760550748535,
+        9.099290295155877e-17,
+        0.0,
+        1.635594924703922e-16,
+        0.0,
+        0.004231270302226646,
+        0.0020823133147733074,
+        2.0456768229035993e-16,
+        0.0,
+        1.7300342734734496e-16,
+        2.143452210369907e-19,
+        0.0,
+        0.0,
+        0.019637067320148676,
+        6.216482347171158e-17,
+        0.014141419806596459,
+        0.005309732325709776,
+        0.008660520729330618,
+        0.0,
+        0.034385432831107475,
+        1.4297840504689586e-16,
+        0.0,
+        0.0,
+        0.04525680207290616,
+        0.0,
+        1.7452158861948635e-16,
+        0.0,
+        3.4199885842894687e-17
+      ],
+      "loss": 1.8795431549259922,
+      "calibration": {
+        "months": 48,
+        "set_exact": 10,
+        "order_exact": 4,
+        "top1_exact": 17,
+        "shared_slots": 91,
+        "position_exact": 36,
+        "pairs_correct": 78,
+        "pairs_total": 140,
+        "unavailable_author_slots": 2,
+        "selection_score": 0.5945436507936508
+      }
+    }
+  },
+  "trial_count": 264,
+  "training": "First48 only; no return-based selection"
+}

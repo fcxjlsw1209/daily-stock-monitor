@@ -1,0 +1,35 @@
+# Historical Nasdaq-100 union S&P 100 — user-approved replacement
+
+Approved in this thread on 2026-10-06 America/Los_Angeles. Universe version: historical_ndx_sp100_union_v3_available_data. This replaces the requested whole-US-market daily capitalization Top100 research scope. It does not modify any existing six-account simulation.
+
+## Membership
+
+For each signal session from 2010-01-04 through the last complete trading session, use the issuer-level union of the Nasdaq-100 and S&P 100 constituents actually effective during that session. Retain both index provenance flags. Do not truncate the union to 100, impose an exchange-specific quota, substitute S&P 500, or filter by current index membership. User-approved conservative entry timing (2026-10-07): additions enter the candidate pool on the first actual US exchange trading session strictly after both their index effective New York calendar date and their announcement publication New York calendar date. Signals use that session close, with execution at the following session open. Use the exchange calendar, not weekdays. No need to recover an earlier announcement solely to admit an addition sooner. Deletions remain effective on the actual index removal date; this delay does not extend trading beyond a delisting. The candidate pool can temporarily be smaller than the official union. Baseline members established before the research start are not newly delayed. Corporate ticker changes do not by themselves change issuer membership. An index can have more securities than issuers.
+
+Reconstruct a verified starting snapshot and all intervening additions, deletions, spin-offs, replacements, and symbol/class changes. Save announcement publication timestamps and effective timestamps separately, with primary-source URL and checksum. Incomplete event coverage must not be treated as unchanged membership. Community/Wikipedia/GitHub data are discovery hints until reconciled with primary evidence. Later publication delays candidate eligibility under the conservative entry rule; it is never backdated. Sources with only a publication date use the end of that New York date as the conservative known timestamp.
+
+## Security selection and factors
+
+Use permanent issuer/security identities and effective-dated listing and class mappings. For multiple eligible index constituent common share classes of one issuer, select the class with the highest trailing 63 completed-session mean raw dollar volume as of the signal close; require at least 20 valid sessions for this comparison; tie-break lexicographically by permanent security ID. If the class comparison is incomplete, block the affected membership snapshot rather than guess. A single constituent security needs no class comparison. Prefer neither modern ticker names nor current liquidity retrospectively. Held securities retain their own identity; representative changes do not invent a forced exit. At most one position per issuer.
+
+Select members before each strategy's existing price-history/liquidity filters. Recompute cross-sectional factor percentiles within the eligible union each day. Insufficient history prevents that issuer's entry; do not replace it with a nonmember. Retain exit/valuation data after membership removal. Reuse the six frozen strategies' factors, weights, costs, sizing, industry limits and exits; no new optimization. Preserve point-in-time industry evidence for industry limits.
+
+## Admission and execution
+
+Required: complete verified constituent history for both indexes; complete issuer/class identity; required OHLCV and warmup; documented split/dividend/spin-off and terminal-event treatment; contemporaneous industry classification; execution timing without lookahead; separate strategy versions and immutable membership hashes. Daily close signals execute at the next eligible session open with existing costs. No performance until all required gates pass. User-approved missing-data entry exclusions below supersede complete quote coverage for new candidates. Never silently drop a held position, fill missing prices with zero, or splice bankrupt old equity to new equity.
+
+Whole-market share-count/ADR total-market-cap reconstruction is no longer needed for universe membership. Price unit, ADR corporate action and class-identity checks remain necessary. Reuse original evidence under ../dynamic_top100 without rewriting it.
+
+Original six paper accounts remain legacy comparisons. New union simulations require separate versioned accounts after validation; no historical plan or ledger edits. No broker connection or purchases. Compare strategy returns on common dates and disclose exposure differences and any selection/parameter tuning history.
+
+## 2026-10-07 user-approved available-data amendment (v3)
+
+The user explicitly authorized treating a security as ineligible on dates with missing data and proceeding toward backtesting. This supersedes the earlier blanket requirement to recover every constituent-session quote before research can start. Historical membership itself is retained; the tradable subset is filtered separately.
+
+At each signal close, exclude securities with unavailable, quarantined, nonfinite or invalid same-session OHLCV/adjusted close before cross-sectional ranking. Preserve pre-membership price history. Keep each frozen strategy's warmup requirements; never fill gaps with zero or forward-fill factor inputs. Identity and units must be established before presenting a series as available. A current or future gap does not remove earlier valid observations or retroactively prevent an earlier purchase. Archive availability is a retrospective research selection assumption, not proof the stock was untradable in real time.
+
+For an already planned new buy, unavailable next-session opening price cancels that entry without fees or replacement picks. Decisions do not inspect the next-session closing price. If the open exists but the close is unavailable, do not erase the filled trade retrospectively. Existing holdings are never filtered out of inventory or performance; missing valuation and terminal consideration still require explicit treatment and can stop the affected run. No sale at an invented last price or zero write-off.
+
+This authorization removes missing new-entry quotes as a blanket gate; it does not certify missing issuer mappings, constituent evidence, point-in-time sectors or corporate-action returns. Original six paper accounts, plans, weights and fingerprints remain unchanged. Outputs must report the available-data scope and exclusions, rather than claim complete historical coverage or unbiased full-universe performance.
+
+Available-data implementation clarification: apply signal-day availability before choosing among an issuer's eligible classes. A missing class is excluded for that signal only; if one observed class remains, no comparison is needed. Comparisons among multiple remaining classes still require certified trailing raw dollar volume. Unknown identity or price units are not made valid by this filter; inventory is never passed through the candidate filter.

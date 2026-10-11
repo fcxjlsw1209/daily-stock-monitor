@@ -1,0 +1,63 @@
+{
+  "strategy_id": "monthly_momentum_stability_paper_v1",
+  "registered_utc": "2026-10-11T04:40:09.873201+00:00",
+  "start": "2026-10-12",
+  "initial_capital": 100000.0,
+  "max_positions": 3,
+  "sector_limit": null,
+  "round_trip_cost_bps": 10,
+  "score_weights": {
+    "calm_spy63_annvol_below_10pct": {
+      "raw_mom252_skip42": 0.5,
+      "vol126": 0.2,
+      "sector126": 0.0875,
+      "sector252": 0.0875,
+      "path252_skip42": 0.05,
+      "state_cmf63": 0.075
+    },
+    "otherwise_base": {
+      "mom294_risk63": 0.52,
+      "vol126": 0.219375,
+      "accel_skip42": 0.185625,
+      "state_cmf63": 0.075
+    },
+    "highvol_support_replacement": {
+      "budget": 0.1,
+      "sector126": 0.025,
+      "stability": 0.05,
+      "tail": 0.025
+    }
+  },
+  "etfs": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "TLT",
+    "GLD",
+    "XLE",
+    "XLF",
+    "XLI",
+    "XLK",
+    "XLV",
+    "XLY",
+    "SMH",
+    "SOXX",
+    "IGV",
+    "VGT",
+    "MTUM",
+    "ARKK"
+  ],
+  "universe": "Unmodified monthly_2016_extension earlyTop32 and monthly_top35_extension later/current monthend Top32 proxy + theme17; no forward fill",
+  "signal": "completedNYSElastsessionofmonth",
+  "execution": "nextNYSEsessionopen",
+  "first_signal": "2026-10-30",
+  "first_execution": "2026-11-02",
+  "paper_only": true,
+  "no_backfill": true,
+  "no_optimization": true,
+  "data_certified": false,
+  "units": "normalized adjusted-price total-return units; synthetic dividend-reinvestment approximation, not broker shares",
+  "research_rules_sha256": "c2edb5c15e472a8253e7a349e9cbde65a355765c78118d6bf19ea5be8260d59a",
+  "research_candidate": "monthly_stability_research.robust_control",
+  "research_same_close_cagr": 0.6533955430086957
+}

@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-10-10T07:29:01.073387+00:00",
+  "hypothesis": "Old shape+lagged-acceleration<=20% was an invented research constraint, not disclosed guidance. Test separately capped acceleration and less restrictive support budgets.",
+  "modes": {
+    "strict": "prior budgets unchanged",
+    "separate_acceleration": "core>=50%,vol<=30%,industry<=20%,shape<=20%,acceleration<=20%,ML<=10%; no shape+accel aggregate cap",
+    "core50": "core>=50%,shape<=20%,acceleration<=20%,ML<=10%; remaining volatility/sector weights share remaining<=50%",
+    "dominant40": "explicit assumption sensitivity: long core>=40%,long core+lagged acceleration>=50%,core weight>=volatility and own-sector groups; shape20%,accel20%,ML10%"
+  },
+  "hard_rules": "Monthend fixed3 equal shares, no intramonth trades, zero costs. Core/own-sector returns and acceleration exclude42sessions/two calendar months. No additional features or stock/date labels. No observer/account migration.",
+  "grid": "6inner-only families x4budget modes x2losses x2states x3retentions=288policies. Fit17/eval6,fit23/eval12. Only first35 choose. Refit35/freeze then later34. Select matching, never returns.",
+  "caveat": "No numeric original weight limits known. dominant40 is explicitly broader than earlier >=50% long-core convention, separately reported. All historical validation has previously been seen, not pristine OOS."
+}

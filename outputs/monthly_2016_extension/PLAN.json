@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-10-10T23:45:57.812352+00:00",
+  "dates": [
+    "2016-08-17",
+    "2026-09-24"
+  ],
+  "initialization": "Initial three selected at Aug17 close, then actual monthends. Initial midmonth is an explicit convention, not recovered author holdings.",
+  "pool": "Primary early reconstructed listed-issuer Top32+same assumed theme17. 474 cached histories, historical listing evidence, cap observation no later than previous trading day. Add CHL using Apr2016 known shares/5; PTR uses Apr2016 known total shares/100 times ADR price as H-price proxy. Shell multiplier2.1 is upper-bound scenario, not exact cap. Run foreign-cap sensitivities. From2020-12-31 preserve archived69 pools exactly.",
+  "uncertainties": "Not certified full US market census or author universe. Retrospective cap archive, multiclass/ADR proxies, current coarse sector mapping, prior historical membership for Ridge training. Missing prelaunch ETF and insufficient295history ineligible, never filter on future returns. Frozen2021+ prices/features remain unchanged.",
+  "baseline": "Extend exact77.6221 anchor,80.8349 industry and82.1979 annual-primary specifications. Early Ridge annually retrained on previous5years weekly mature21session excess-return targets, same102features/alpha10/half-life12. Preserve2021+ original forecasts.",
+  "search": "Finite non-ML single-family candidates from previous refinement grid plus small recent-Ridge adjustments; exclude unavailable tree forecasts. Add bounded long-core weight .55/.60/.65 and skip-two-month 252-vs294 blend25/50%, support scale proportionately. No per-ticker/date rules or author holding labels.",
+  "selection": "Return-priority subject to trainSharpe>=frozen industry-.10 and maxDD>=industry-.05. Training2016-08-17..2023-11-30. Freeze highest CAGR primary and robust control before evaluation Dec2023..Sep2026. Also yearly training return diagnostics. No post-holdout grid expansion. Reused history, not pristine OOS.",
+  "execution": "Long-only max3 equal,2half,<2cash; fixed monthly adjusted-total-return units. Zero-cost same-close primary. Next-open0cost and5bp/side controls, independent replay. Do not sum monthly and daily strategy returns.",
+  "protection": "No observer/source/prior-research/automation mutation. No live orders. Author2016 chart statistics reference only; no fabricated pre2021 author trades."
+}

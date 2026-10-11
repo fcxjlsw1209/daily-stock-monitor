@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-10-10T07:24:33.396484+00:00",
+  "hypothesis": "Retest author-mentioned anti-chasing, gap, shakeout recovery, dry consolidation and failed-rebound shapes under corrected own-sector benchmark and chronological35/34 split.",
+  "hard_rules": "Core and sector-relative return numerators skip42sessions/two months; no recent return ranking or daily pullback gate. Monthend only, fixed intramonth units, zero costs. Patterns compete within combined20% shape+acceleration budget; core>=50%.",
+  "features": {
+    "rebound21_atr": -1.0,
+    "positive_gap5_vol": -1.0,
+    "shakeout_recovery5": 1.0,
+    "dry_consolidation": 1.0,
+    "failed_rebounds5": -1.0,
+    "market_tail_residual252": 1.0
+  },
+  "formulas_source": "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_multilayer_reconstruction/research.py",
+  "unused": "Ignore sector correlation outputs from shared builder; no absolute sector-ETF strength. No calendar-event guesses or author cost/profit features.",
+  "training": "Same6 earlier inner-only scoring seeds,3pattern menus,global/growth partitions,3retentions=108policies. Inner fit17/eval6 plus fit23/eval12. Select by .6slots+.25sets+.15orders, refit35/freeze/validate34. No returns to select; reused history not untouched OOS.",
+  "limitations": "Assumed17ETF list and market-cap proxy pools; these hypotheses are not author code. No observation-account changes."
+}

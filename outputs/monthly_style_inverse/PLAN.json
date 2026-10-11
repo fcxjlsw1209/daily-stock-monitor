@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-10-10T05:57:27.848940+00:00",
+  "task": "Explain every author monthly holding change using long momentum, volatility, own-sector relative strength, price-volume features and observable market styles.",
+  "split": {
+    "train_months": 35,
+    "validation_months": 34,
+    "training_signal_end": "2023-10-31",
+    "training_return_end": "2023-11-30",
+    "validation_signal_start": "2023-11-30",
+    "validation_end": "2026-09-24",
+    "inner_fit": 23,
+    "inner_validation": 12
+  },
+  "warning": "Previously explored history; newly enforced split does not make the latter34 untouched OOS.",
+  "core": "All22 previously defined momentum families, both normalizations; no seed or coefficient selected using the old48-month fit. All return numerators and own-sector relative returns skip42sessions/two calendar months.",
+  "styles": "63-session QQQ/SPY, IWM/SPY, defensive(XLP/XLV/XLU) minus cyclical(XLK/XLY/XLI), TLT return, growth x market-volatility. These select shared factor weights, never directly reward a stock for sector absolute return.",
+  "fitting": "Fit on first23 only. Global constrained ordered likelihood temp.05, regularization.10. State deltas L1<=.30; state requires8 fit-months or uses global. 44base families x6 partitions x4 retention policies=1056 comparisons, selected only by next12 months.",
+  "inner_selection": "0.60 slot recall +0.25 exact set fraction +0.15 exact order fraction; ties favor fewer regimes, fresh ranking, simpler core, earlier candidate. Never select by return.",
+  "freeze": "Choose global and style leaders in inner validation, refit selected specifications on first35, freeze before outer34 evaluation. No label-based updates in outer34.",
+  "constraints": "Core>=50%; volatility<=30%; industry<=20%; combined shape/acceleration<=20%; acceleration<=10%. Author list treated as descending rank by user hypothesis. No ticker/date coefficients, no intramonth trade, no copied author holdings in model state.",
+  "diagnostics": "After freezing, report all69 author additions/retentions/exits and all candidate scores. Solve single-month constrained linear feasibility and minimum arbitrary residual score correction; these use author labels and are explanatory oracles, never executable models.",
+  "execution": "Zero costs, last-trading-day close signal and same-close idealization; fixed adjusted total-return units within each month. Next-open sensitivity separate. Original pool and assumed17ETF list unchanged.",
+  "protection": "Isolated research outputs; no original account, source, plan or fingerprint changes."
+}

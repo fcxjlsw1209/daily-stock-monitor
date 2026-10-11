@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-10-10T05:04:57.186781+00:00",
+  "purpose": "Continue ordered monthly reconstruction. Direct Plackett-Luce first/second/third choices instead of pairwise squared-margin loss.",
+  "factors": "All core momentum excludes latest42 sessions or2 completed calendar months. Add long log-price trend quality and a few multi-horizon core mixtures. No daily pullback gate.",
+  "universe": "Same reconstructed Top32/theme17; isolated ASML sector60=XLK proxy correction documented by previous control; no author pool additions.",
+  "model_correction": "Ordinary and12-month-half-life Ridge forecasts reuse existing annual five-year market-return-trained alpha10 models, configurations2 and3. Predict with this universe features; combined weight<=10%. No new fitting of those models to author labels.",
+  "constraints": "Nonnegative budget sums1; total core>=50%,volatility<=30%,industry<=20%,all shape/state/acceleration/ML corrections<=20%,acceleration<=10%,ML<=10%.",
+  "grid": "22 core families x2 normalizations x3 softmax temperatures(.02,.05,.10) x2 ridge-to-prior penalties(0,.10) x2 ML settings=528 fits.",
+  "training": "First48 through2024-12-31 only, save before later21. Later period has been seen in earlier rounds; this is research reuse, not untouched OOS.",
+  "selection": "Freeze two leaders using calibration data only: equal-weight slot recall and internal order accuracy; separately exact ordered-month priority. Do not select on return.",
+  "evaluation": "Same-close zero-cost69-month replay, next-open control, author/old candidate comparators; no live promotion.",
+  "user_steering": "No visualization or presentation work; prioritize optimization and verification."
+}

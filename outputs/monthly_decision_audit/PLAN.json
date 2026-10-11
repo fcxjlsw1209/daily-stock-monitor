@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-10-10T04:11:44.545391+00:00",
+  "objective": "Month-by-month accounting of author selection-set differences and inferred month-end entries/exits; not model fitting or performance search.",
+  "periods": 69,
+  "primary": "Frozen prior_return_leader_top32_theme17, no ML",
+  "secondary": [
+    "Top35 same rule",
+    "core17 same stock pool",
+    "core-only",
+    "remove each support without renormalization",
+    "replace risk denominator/window one at a time",
+    "fixed industry-relative substitute for state correction"
+  ],
+  "inputs": "Only cached source-hashed prices, author supplied simulated period holdings and prior rank reconstructions. All features through signal close; next-month returns not used to select or explain ranks.",
+  "matching": "Author holdings are unordered sets, not published rank1-3. Pairwise differences only compare missed author choices with our selected outsiders.",
+  "exit": "Infer full removals from adjacent sets; partial trims and actual stop reasons cannot be recovered from a holdings list. No daily stops inferred.",
+  "correction_bound": "Diagnostic optimistic additive correction w*z, z in [-0.5,0.5], pairwise score gap<=w; not author ML reconstruction or probability.",
+  "protections": "No rule fitting, returns optimization, ledger edits, plan edits, automation or existing code changes."
+}

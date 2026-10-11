@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-10-10T04:52:10.498215+00:00",
+  "objective": "Explain original ordered monthly selections, not maximize historical return.",
+  "order_assumption": "User-approved hypothesis: original list is rank1>rank2>rank3; not independently confirmed by author.",
+  "primary": "Reconstructed monthly US-listed Top32 plus unchanged theme17 ETF assumption.",
+  "controls": [
+    "Top35/theme17",
+    "Top32/core17"
+  ],
+  "calibration": "First48 holding months ending through2024-12-31; later21 scored only after freezing. Already-viewed history, not pristine OOS.",
+  "family": "16 long-momentum definitions, each skipping42 sessions or2 calendar months; positive/negative126-session volatility, recent and skip42 industry-relative60, small CMF/signed-volume/state corrections; optional skip42 acceleration capped10%.",
+  "constraints": "Nonnegative weights sum1. Core>=50%; volatility<=30%; industry sum<=20%; shape/state/acceleration total<=20%, acceleration<=10%. No pullback entry gate. Positive252-skip42 momentum plus295-session price warmup.",
+  "fits": 256,
+  "grid": "16 cores x2 normalizations x2 volatility signs x2 acceleration settings x2 regularization levels.",
+  "loss": "Equal weight selected-over-outsider and author-internal-order squared margin losses; each month equal within group; margin.01; regularization0 or.01 toward fixed prior.",
+  "selection": "Calibration only: equal mean of selected-slot recall and internal-order accuracy; ties by exact ordered months, set months, then lower objective and earlier trial.",
+  "diagnostics": "Refit selected specification to all69 for retrospective explanatory upper check, and solve per-month linear feasibility for the same family. This is not original author code recovery or proof against other models.",
+  "execution": "Three equal positions, two half, fewer cash; monthend same-close zero-cost descriptive replay, and next-open control; fixed shares between rebalances.",
+  "protected": "All original accounts, plans, ledgers, fingerprints and prior research remain unchanged; no automation edits."
+}

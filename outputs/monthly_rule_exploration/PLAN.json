@@ -1,0 +1,11 @@
+{
+  "task": "Continue finding a guidance-consistent, stable short-window decision rule, with cross-window and frozen adjacent-month checks.",
+  "windows_order": ["2022-07-29/2022-10-31", "2025-07-31/2025-10-31", "2026-01-30/2026-04-30", "2020-06-30/2020-09-30"],
+  "selection_basis": "Highest-ranked non-overlapping complete windows in the previous confidence ranking; no return or rule-fit selection. The third and fourth are the next non-overlapping windows in that ranking.",
+  "features": "Existing six positive medium-term momentum features, skipping42 sessions, plus ten volatility/industry/price-volume factors. Only three score families: linear; linear with bounded quadratic SIDE terms; linear with bounded SIDE threshold terms. No security/date indicators, no negative core-momentum terms.",
+  "budgets": "Core >=50% of L1 score budget; nonlinear model <=10% and each security's correction <=0.05. Core response remains nondecreasing with all side inputs fixed.",
+  "ambiguity": "Enumerate eligible triples in each short-window month with unchanged point-in-time proxy pool. Use near-best+1 under all three horizontal shifts as an ambiguity set, not probability. Retain at most12 per month by worst excess image loss, then at most30 three-month combinations by summed excess image loss. Report truncation, do not call this exhaustive identification.",
+  "local_candidate_screen": "Common fixed weights must strictly select each of the three target sets; continuous short-window wealth/relative/drawdown must not be rejected by existing image screen; coefficient rounding to0.001 must preserve all decisions; >=95% of500 fixed-seed relative +/-1% coefficient perturbations must preserve all decisions. These are research robustness checks, not proof of author recovery.",
+  "selection": "Among locally screened candidates prefer linear, then quadratic, then threshold; fewer nonzero coefficients; larger common score margin. Never select by profit. After this selection freeze and check the next month once. Also cross-check other preselected windows without refitting.",
+  "guardrails": "Original image thresholds, author guidance, account ledgers, prior labels and fingerprints remain unchanged. No full-period return backtest. A local pass must not be promoted to global reproduction or independent out-of-sample performance. Keep every failed trial."
+}

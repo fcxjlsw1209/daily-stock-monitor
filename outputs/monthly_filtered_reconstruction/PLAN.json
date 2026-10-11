@@ -1,0 +1,1404 @@
+{
+  "created_utc": "2026-10-09T22:23:44.447089+00:00",
+  "purpose": "Match all three source-ledger holdings in each retained period; retrospective rule inference, not OOS performance.",
+  "slices": {
+    "A": "Exclude months where frozen return_leader selected ARKK/SOXX or source target outside original theme17+Top32 proxy.",
+    "B": "If A exact matching remains below90%, exclude baseline-selected stocks ranked28-32; freeze this mask before any new fit."
+  },
+  "counts": {
+    "all": 69,
+    "A": 54,
+    "B": 39
+  },
+  "boundary": "Estimated issuer cap ranks at original monthend signal; ETFs not cap-ranked. The baseline is fixed and never replaced by a refit for inclusion.",
+  "constraints": [
+    "Same49 candidates and eligibility; ARKK/SOXX remain candidates. Only months are excluded.",
+    "Single uniform scoring formula: nonnegative long momentum core>=50%, noncore<=50%, small market state/Ridge correction<=10%.",
+    "No ticker/date-specific coefficients, future returns, original chart, or repeated exclusions until fit.",
+    "No change to eight existing paper observers. No CAGR calculated from disconnected retained months."
+  ],
+  "records": [
+    {
+      "date": "2020-12-31",
+      "end": "2021-01-29",
+      "target": [
+        "TSLA",
+        "BABA",
+        "AAPL"
+      ],
+      "baseline": [
+        "TSLA",
+        "TSM",
+        "NVDA"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2021-01-29",
+      "end": "2021-02-26",
+      "target": [
+        "TSLA",
+        "NVDA",
+        "PYPL"
+      ],
+      "baseline": [
+        "TSLA",
+        "NVDA",
+        "ARKK"
+      ],
+      "excluded_etf": [
+        "ARKK"
+      ],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": false,
+      "included_B": false
+    },
+    {
+      "date": "2021-02-26",
+      "end": "2021-03-31",
+      "target": [
+        "TSLA",
+        "NVDA",
+        "PYPL"
+      ],
+      "baseline": [
+        "PDD",
+        "TSLA",
+        "ARKK"
+      ],
+      "excluded_etf": [
+        "ARKK"
+      ],
+      "missing_target": [],
+      "baseline_boundary": {
+        "PDD": 32
+      },
+      "included_A": false,
+      "included_B": false
+    },
+    {
+      "date": "2021-03-31",
+      "end": "2021-04-30",
+      "target": [
+        "TSLA",
+        "NVDA",
+        "PYPL"
+      ],
+      "baseline": [
+        "ARKK",
+        "ASML",
+        "PYPL"
+      ],
+      "excluded_etf": [
+        "ARKK"
+      ],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": false,
+      "included_B": false
+    },
+    {
+      "date": "2021-04-30",
+      "end": "2021-05-28",
+      "target": [
+        "TSLA",
+        "NVDA",
+        "PYPL"
+      ],
+      "baseline": [
+        "PYPL",
+        "ARKK",
+        "ASML"
+      ],
+      "excluded_etf": [
+        "ARKK"
+      ],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": false,
+      "included_B": false
+    },
+    {
+      "date": "2021-05-28",
+      "end": "2021-06-30",
+      "target": [
+        "NVDA",
+        "ASML",
+        "TSM"
+      ],
+      "baseline": [
+        "BAC",
+        "PYPL",
+        "TSLA"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2021-06-30",
+      "end": "2021-07-30",
+      "target": [
+        "TSLA",
+        "PYPL",
+        "ASML"
+      ],
+      "baseline": [
+        "ASML",
+        "PYPL",
+        "GOOGL"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2021-07-30",
+      "end": "2021-08-31",
+      "target": [
+        "BAC",
+        "TSLA",
+        "NVDA"
+      ],
+      "baseline": [
+        "BAC",
+        "NVDA",
+        "TSLA"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2021-08-31",
+      "end": "2021-09-30",
+      "target": [
+        "TSLA",
+        "BAC",
+        "NVDA"
+      ],
+      "baseline": [
+        "NVDA",
+        "TSLA",
+        "TSM"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2021-09-30",
+      "end": "2021-10-29",
+      "target": [
+        "TSLA",
+        "NVDA",
+        "XLF"
+      ],
+      "baseline": [
+        "NKE",
+        "TSLA",
+        "NVDA"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {
+        "NKE": 31
+      },
+      "included_A": true,
+      "included_B": false
+    },
+    {
+      "date": "2021-10-29",
+      "end": "2021-11-30",
+      "target": [
+        "TSLA",
+        "NVDA",
+        "ASML"
+      ],
+      "baseline": [
+        "ASML",
+        "NVDA",
+        "NKE"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2021-11-30",
+      "end": "2021-12-31",
+      "target": [
+        "BAC",
+        "XLE",
+        "ASML"
+      ],
+      "baseline": [
+        "ASML",
+        "JPM",
+        "XOM"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2021-12-31",
+      "end": "2022-01-31",
+      "target": [
+        "XLE",
+        "TSLA",
+        "BAC"
+      ],
+      "baseline": [
+        "XLE",
+        "XOM",
+        "BAC"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {
+        "XOM": 31
+      },
+      "included_A": true,
+      "included_B": false
+    },
+    {
+      "date": "2022-01-31",
+      "end": "2022-02-28",
+      "target": [
+        "XLE",
+        "XOM",
+        "CVX"
+      ],
+      "baseline": [
+        "NVDA",
+        "BAC",
+        "XOM"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2022-02-28",
+      "end": "2022-03-31",
+      "target": [
+        "PFE",
+        "LLY",
+        "XOM"
+      ],
+      "baseline": [
+        "NVDA",
+        "XLE",
+        "XOM"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2022-03-31",
+      "end": "2022-04-29",
+      "target": [
+        "XOM",
+        "XLE",
+        "PFE"
+      ],
+      "baseline": [
+        "XOM",
+        "PFE",
+        "XLE"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2022-04-29",
+      "end": "2022-05-31",
+      "target": [
+        "XOM",
+        "XLE",
+        "CVX"
+      ],
+      "baseline": [
+        "PFE",
+        "XLE",
+        "XOM"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2022-05-31",
+      "end": "2022-06-30",
+      "target": [
+        "COST",
+        "PFE",
+        "CVX"
+      ],
+      "baseline": [
+        "NVO",
+        "ABBV",
+        "XOM"
+      ],
+      "excluded_etf": [],
+      "missing_target": [
+        "COST"
+      ],
+      "baseline_boundary": {},
+      "included_A": false,
+      "included_B": false
+    },
+    {
+      "date": "2022-06-30",
+      "end": "2022-07-29",
+      "target": [
+        "CVX",
+        "XOM",
+        "XLE"
+      ],
+      "baseline": [
+        "XOM",
+        "CVX",
+        "XLE"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2022-07-29",
+      "end": "2022-08-31",
+      "target": [
+        "XLE",
+        "XOM",
+        "CVX"
+      ],
+      "baseline": [
+        "XOM",
+        "XLE",
+        "CVX"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2022-08-31",
+      "end": "2022-09-30",
+      "target": [
+        "XOM",
+        "MRK",
+        "LLY"
+      ],
+      "baseline": [
+        "LLY",
+        "NVO",
+        "PFE"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2022-09-30",
+      "end": "2022-10-31",
+      "target": [
+        "CVX",
+        "XOM",
+        "XLE"
+      ],
+      "baseline": [
+        "NVO",
+        "XOM",
+        "LLY"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2022-10-31",
+      "end": "2022-11-30",
+      "target": [
+        "XOM",
+        "XLE",
+        "COST"
+      ],
+      "baseline": [
+        "XOM",
+        "XLE",
+        "COST"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {
+        "COST": 28
+      },
+      "included_A": true,
+      "included_B": false
+    },
+    {
+      "date": "2022-11-30",
+      "end": "2022-12-30",
+      "target": [
+        "XLE",
+        "CVX",
+        "XOM"
+      ],
+      "baseline": [
+        "UNH",
+        "XOM",
+        "CVX"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2022-12-30",
+      "end": "2023-01-31",
+      "target": [
+        "CVX",
+        "XOM",
+        "XLE"
+      ],
+      "baseline": [
+        "CVX",
+        "XLE",
+        "XOM"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2023-01-31",
+      "end": "2023-02-28",
+      "target": [
+        "CVX",
+        "XOM",
+        "XLE"
+      ],
+      "baseline": [
+        "XLE",
+        "XOM",
+        "CVX"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2023-02-28",
+      "end": "2023-03-31",
+      "target": [
+        "XOM",
+        "XLE",
+        "CVX"
+      ],
+      "baseline": [
+        "MRK",
+        "NVO",
+        "XOM"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2023-03-31",
+      "end": "2023-04-28",
+      "target": [
+        "XOM",
+        "XLE",
+        "MRK"
+      ],
+      "baseline": [
+        "XOM",
+        "XLE",
+        "NVO"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2023-04-28",
+      "end": "2023-05-31",
+      "target": [
+        "XOM",
+        "MRK",
+        "NVO"
+      ],
+      "baseline": [
+        "NVO",
+        "NVDA",
+        "AVGO"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2023-05-31",
+      "end": "2023-06-30",
+      "target": [
+        "MRK",
+        "NVO",
+        "XOM"
+      ],
+      "baseline": [
+        "NVO",
+        "NVDA",
+        "AVGO"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2023-06-30",
+      "end": "2023-07-31",
+      "target": [
+        "META",
+        "MRK",
+        "NVO"
+      ],
+      "baseline": [
+        "NVDA",
+        "META",
+        "NVO"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2023-07-31",
+      "end": "2023-08-31",
+      "target": [
+        "NVDA",
+        "META",
+        "LLY"
+      ],
+      "baseline": [
+        "NVDA",
+        "META",
+        "LLY"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2023-08-31",
+      "end": "2023-09-29",
+      "target": [
+        "META",
+        "AVGO",
+        "NVDA"
+      ],
+      "baseline": [
+        "AVGO",
+        "NVDA",
+        "ORCL"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2023-09-29",
+      "end": "2023-10-31",
+      "target": [
+        "META",
+        "ADBE",
+        "AVGO"
+      ],
+      "baseline": [
+        "AVGO",
+        "ORCL",
+        "JPM"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2023-10-31",
+      "end": "2023-11-30",
+      "target": [
+        "META",
+        "ADBE",
+        "NVDA"
+      ],
+      "baseline": [
+        "AVGO",
+        "LLY",
+        "ADBE"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {
+        "ADBE": 28
+      },
+      "included_A": true,
+      "included_B": false
+    },
+    {
+      "date": "2023-11-30",
+      "end": "2023-12-29",
+      "target": [
+        "META",
+        "NVDA",
+        "AVGO"
+      ],
+      "baseline": [
+        "ADBE",
+        "NVO",
+        "NVDA"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2023-12-29",
+      "end": "2024-01-31",
+      "target": [
+        "ADBE",
+        "META",
+        "NVDA"
+      ],
+      "baseline": [
+        "NVO",
+        "NVDA",
+        "AVGO"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2024-01-31",
+      "end": "2024-02-29",
+      "target": [
+        "META",
+        "AMD",
+        "NVDA"
+      ],
+      "baseline": [
+        "NVO",
+        "MSFT",
+        "NVDA"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2024-02-29",
+      "end": "2024-03-28",
+      "target": [
+        "NFLX",
+        "AMZN",
+        "META"
+      ],
+      "baseline": [
+        "CRM",
+        "MSFT",
+        "META"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {
+        "CRM": 29
+      },
+      "included_A": true,
+      "included_B": false
+    },
+    {
+      "date": "2024-03-28",
+      "end": "2024-04-30",
+      "target": [
+        "NFLX",
+        "NVDA",
+        "AMZN"
+      ],
+      "baseline": [
+        "NVDA",
+        "AMD",
+        "META"
+      ],
+      "excluded_etf": [],
+      "missing_target": [
+        "NFLX"
+      ],
+      "baseline_boundary": {
+        "AMD": 31
+      },
+      "included_A": false,
+      "included_B": false
+    },
+    {
+      "date": "2024-04-30",
+      "end": "2024-05-31",
+      "target": [
+        "META",
+        "AMZN",
+        "NVDA"
+      ],
+      "baseline": [
+        "META",
+        "NVDA",
+        "AVGO"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2024-05-31",
+      "end": "2024-06-28",
+      "target": [
+        "META",
+        "AMZN",
+        "NVDA"
+      ],
+      "baseline": [
+        "NVDA",
+        "META",
+        "AVGO"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2024-06-28",
+      "end": "2024-07-31",
+      "target": [
+        "AMZN",
+        "META",
+        "NVDA"
+      ],
+      "baseline": [
+        "NVDA",
+        "LLY",
+        "TM"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {
+        "TM": 30
+      },
+      "included_A": true,
+      "included_B": false
+    },
+    {
+      "date": "2024-07-31",
+      "end": "2024-08-30",
+      "target": [
+        "NFLX",
+        "NVDA",
+        "META"
+      ],
+      "baseline": [
+        "NVDA",
+        "LLY",
+        "NVO"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2024-08-30",
+      "end": "2024-09-30",
+      "target": [
+        "META",
+        "NVDA",
+        "AVGO"
+      ],
+      "baseline": [
+        "GOOGL",
+        "LLY",
+        "NVO"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2024-09-30",
+      "end": "2024-10-31",
+      "target": [
+        "NVDA",
+        "TSM",
+        "AVGO"
+      ],
+      "baseline": [
+        "SAP",
+        "NVDA",
+        "LLY"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {
+        "SAP": 31
+      },
+      "included_A": true,
+      "included_B": false
+    },
+    {
+      "date": "2024-10-31",
+      "end": "2024-11-29",
+      "target": [
+        "NVDA",
+        "TSM",
+        "NFLX"
+      ],
+      "baseline": [
+        "SAP",
+        "META",
+        "COST"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {
+        "SAP": 29
+      },
+      "included_A": true,
+      "included_B": false
+    },
+    {
+      "date": "2024-11-29",
+      "end": "2024-12-31",
+      "target": [
+        "NVDA",
+        "TSM",
+        "META"
+      ],
+      "baseline": [
+        "META",
+        "SAP",
+        "AVGO"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {
+        "SAP": 30
+      },
+      "included_A": true,
+      "included_B": false
+    },
+    {
+      "date": "2024-12-31",
+      "end": "2025-01-31",
+      "target": [
+        "TSM",
+        "NVDA",
+        "NFLX"
+      ],
+      "baseline": [
+        "META",
+        "NVDA",
+        "SAP"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {
+        "SAP": 28
+      },
+      "included_A": true,
+      "included_B": false
+    },
+    {
+      "date": "2025-01-31",
+      "end": "2025-02-28",
+      "target": [
+        "BAC",
+        "NVDA",
+        "TSM"
+      ],
+      "baseline": [
+        "NFLX",
+        "TMUS",
+        "BAC"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {
+        "TMUS": 31
+      },
+      "included_A": true,
+      "included_B": false
+    },
+    {
+      "date": "2025-02-28",
+      "end": "2025-03-31",
+      "target": [
+        "TSLA",
+        "AVGO",
+        "TSM"
+      ],
+      "baseline": [
+        "NFLX",
+        "TSM",
+        "META"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2025-03-31",
+      "end": "2025-04-30",
+      "target": [
+        "TSLA",
+        "NFLX",
+        "WMT"
+      ],
+      "baseline": [
+        "NFLX",
+        "JPM",
+        "TSLA"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2025-04-30",
+      "end": "2025-05-30",
+      "target": [
+        "BABA",
+        "TSLA",
+        "PLTR"
+      ],
+      "baseline": [
+        "PLTR",
+        "BABA",
+        "NFLX"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {
+        "PLTR": 31,
+        "BABA": 29
+      },
+      "included_A": true,
+      "included_B": false
+    },
+    {
+      "date": "2025-05-30",
+      "end": "2025-06-30",
+      "target": [
+        "BABA",
+        "PLTR",
+        "PM"
+      ],
+      "baseline": [
+        "PM",
+        "SAP",
+        "PLTR"
+      ],
+      "excluded_etf": [],
+      "missing_target": [
+        "BABA"
+      ],
+      "baseline_boundary": {
+        "PM": 30
+      },
+      "included_A": false,
+      "included_B": false
+    },
+    {
+      "date": "2025-06-30",
+      "end": "2025-07-31",
+      "target": [
+        "BABA",
+        "TSLA",
+        "PLTR"
+      ],
+      "baseline": [
+        "SAP",
+        "PM",
+        "PLTR"
+      ],
+      "excluded_etf": [],
+      "missing_target": [
+        "BABA"
+      ],
+      "baseline_boundary": {
+        "PM": 30
+      },
+      "included_A": false,
+      "included_B": false
+    },
+    {
+      "date": "2025-07-31",
+      "end": "2025-08-29",
+      "target": [
+        "TSLA",
+        "BABA",
+        "PLTR"
+      ],
+      "baseline": [
+        "AVGO",
+        "GE",
+        "PLTR"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {
+        "GE": 30
+      },
+      "included_A": true,
+      "included_B": false
+    },
+    {
+      "date": "2025-08-29",
+      "end": "2025-09-30",
+      "target": [
+        "PLTR",
+        "ORCL",
+        "TSLA"
+      ],
+      "baseline": [
+        "AVGO",
+        "ARKK",
+        "NFLX"
+      ],
+      "excluded_etf": [
+        "ARKK"
+      ],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": false,
+      "included_B": false
+    },
+    {
+      "date": "2025-09-30",
+      "end": "2025-10-31",
+      "target": [
+        "PLTR",
+        "ORCL",
+        "AVGO"
+      ],
+      "baseline": [
+        "PLTR",
+        "ARKK",
+        "AVGO"
+      ],
+      "excluded_etf": [
+        "ARKK"
+      ],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": false,
+      "included_B": false
+    },
+    {
+      "date": "2025-10-31",
+      "end": "2025-11-28",
+      "target": [
+        "PLTR",
+        "BABA",
+        "AVGO"
+      ],
+      "baseline": [
+        "ARKK",
+        "AVGO",
+        "GOOGL"
+      ],
+      "excluded_etf": [
+        "ARKK"
+      ],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": false,
+      "included_B": false
+    },
+    {
+      "date": "2025-11-28",
+      "end": "2025-12-31",
+      "target": [
+        "BABA",
+        "PLTR",
+        "TSLA"
+      ],
+      "baseline": [
+        "ARKK",
+        "TSLA",
+        "PLTR"
+      ],
+      "excluded_etf": [
+        "ARKK"
+      ],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": false,
+      "included_B": false
+    },
+    {
+      "date": "2025-12-31",
+      "end": "2026-01-30",
+      "target": [
+        "AVGO",
+        "MU",
+        "TSM"
+      ],
+      "baseline": [
+        "GOOGL",
+        "MU",
+        "BABA"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {
+        "MU": 30
+      },
+      "included_A": true,
+      "included_B": false
+    },
+    {
+      "date": "2026-01-30",
+      "end": "2026-02-27",
+      "target": [
+        "MU",
+        "AVGO",
+        "ASML"
+      ],
+      "baseline": [
+        "MU",
+        "GOOGL",
+        "LLY"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2026-02-27",
+      "end": "2026-03-31",
+      "target": [
+        "MU",
+        "PLTR",
+        "AVGO"
+      ],
+      "baseline": [
+        "MU",
+        "BABA",
+        "GOOGL"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {
+        "BABA": 31
+      },
+      "included_A": true,
+      "included_B": false
+    },
+    {
+      "date": "2026-03-31",
+      "end": "2026-04-30",
+      "target": [
+        "BABA",
+        "MU",
+        "AMD"
+      ],
+      "baseline": [
+        "MU",
+        "AMD",
+        "ASML"
+      ],
+      "excluded_etf": [],
+      "missing_target": [
+        "BABA"
+      ],
+      "baseline_boundary": {
+        "AMD": 28
+      },
+      "included_A": false,
+      "included_B": false
+    },
+    {
+      "date": "2026-04-30",
+      "end": "2026-05-29",
+      "target": [
+        "ASML",
+        "INTC",
+        "MU"
+      ],
+      "baseline": [
+        "MU",
+        "CAT",
+        "ASML"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2026-05-29",
+      "end": "2026-06-30",
+      "target": [
+        "MU",
+        "AMAT",
+        "LRCX"
+      ],
+      "baseline": [
+        "TSM",
+        "CAT",
+        "LRCX"
+      ],
+      "excluded_etf": [],
+      "missing_target": [
+        "AMAT"
+      ],
+      "baseline_boundary": {},
+      "included_A": false,
+      "included_B": false
+    },
+    {
+      "date": "2026-06-30",
+      "end": "2026-07-31",
+      "target": [
+        "INTC",
+        "AMD",
+        "MU"
+      ],
+      "baseline": [
+        "INTC",
+        "AMD",
+        "CAT"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    },
+    {
+      "date": "2026-07-31",
+      "end": "2026-08-31",
+      "target": [
+        "INTC",
+        "MU",
+        "AMD"
+      ],
+      "baseline": [
+        "INTC",
+        "AMD",
+        "SOXX"
+      ],
+      "excluded_etf": [
+        "SOXX"
+      ],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": false,
+      "included_B": false
+    },
+    {
+      "date": "2026-08-31",
+      "end": "2026-09-24",
+      "target": [
+        "INTC",
+        "MU",
+        "AMD"
+      ],
+      "baseline": [
+        "INTC",
+        "MU",
+        "AMD"
+      ],
+      "excluded_etf": [],
+      "missing_target": [],
+      "baseline_boundary": {},
+      "included_A": true,
+      "included_B": true
+    }
+  ]
+}

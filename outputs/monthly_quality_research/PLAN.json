@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-10-11T04:45:38.807499+00:00",
+  "baseline": "Frozen monthly_stability_research.robust_control65.3395543%; no registered strategy mutation.",
+  "ordered_families": [
+    "1 residual long momentum: joint rolling market+own-sector betas, prior-day estimates; 126/252beta windows; 210/252formation sessions ending42sessions ago; sum or sum/std; 2.5/5/10% support-only correction; global/calm/highvol.",
+    "2 quality-conditioned volatility: path efficiency, positive-day persistence or inverse largest-absolute-day concentration ending42sessions ago; rank volatility126*quality_percentile^1or2; replace half/all volatility weight; global/calm/highvol.",
+    "3 stock/ETF calibration: within-class ranks or own trailing756day percentile (min252observations) then cross-sectional ranks; apply core/support/all; blend25/50/100%; global/calm/highvol. No enforced stock/ETF allocation."
+  ],
+  "combination": "After individual training only, retain one admissible maximum-training-CAGR single change per family, test combinations of these three (up to7 nonempty). Keep original baseline option.",
+  "execution": "Long-only,unlevered,max3equal,2half,<2cash; monthend fixed units. Long core>=50%; same frozen122pools/prices/eligibility. Zero-cost same-close primary; next-open0cost and5bp/side diagnostic.",
+  "selection": "First88periods through2023-11-30. Require trainSharpe>=baseline-.05; drawdown no worse than baseline by>.03; early53CAGR>=baseline; recent35CAGR>=baseline-.02. Select maxtrainCAGR primary plus worst-segment-Sharpe robust control; retain best admissible single-family controls. Freeze all before evaluating last34.",
+  "validation": "Causality/prefix invariance; prior-beta availability; skip42for long factors; no future-validity candidate filtering; baseline122decision parity; independent daily/monthly replay; old ledgers/code protected.",
+  "limits": "All history previously researched. Not author reproduction; historical cap/sector proxy and assumedETF17 limitations inherited. No additional search after holdout evaluation. No guarantee80percent.",
+  "references": [
+    "https://pure.eur.nl/en/publications/residual-momentum/",
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2370931"
+  ]
+}

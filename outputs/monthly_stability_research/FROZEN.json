@@ -1,0 +1,89 @@
+{
+  "created_at": "2026-10-11T04:17:07.679894+00:00",
+  "selected": {
+    "return_primary": {
+      "id": 0,
+      "family": "baseline",
+      "spec": {
+        "baseline": true
+      },
+      "training": {
+        "cagr": 0.4852510735265858,
+        "sharpe": 1.4918341005754039,
+        "max_drawdown": -0.3283344263195761,
+        "total_return": 16.85089965467683
+      },
+      "early": {
+        "cagr": 0.362225557733582,
+        "sharpe": 1.2062235106373724,
+        "max_drawdown": -0.3283344263195761,
+        "total_return": 2.863629436103047
+      },
+      "recent": {
+        "cagr": 0.6910694478495645,
+        "sharpe": 1.911466649639861,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.620241135930905
+      },
+      "robust": 1.7135069453322391
+    },
+    "robust_control": {
+      "id": 0,
+      "family": "baseline",
+      "spec": {
+        "baseline": true
+      },
+      "training": {
+        "cagr": 0.4852510735265858,
+        "sharpe": 1.4918341005754039,
+        "max_drawdown": -0.3283344263195761,
+        "total_return": 16.85089965467683
+      },
+      "early": {
+        "cagr": 0.362225557733582,
+        "sharpe": 1.2062235106373724,
+        "max_drawdown": -0.3283344263195761,
+        "total_return": 2.863629436103047
+      },
+      "recent": {
+        "cagr": 0.6910694478495645,
+        "sharpe": 1.911466649639861,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.620241135930905
+      },
+      "robust": 1.7135069453322391
+    }
+  },
+  "candidate_count": 1441,
+  "predefined_count": 1441,
+  "admissible_count": 1,
+  "primary": "return_primary",
+  "baseline": {
+    "id": 0,
+    "family": "baseline",
+    "spec": {
+      "baseline": true
+    },
+    "training": {
+      "cagr": 0.4852510735265858,
+      "sharpe": 1.4918341005754039,
+      "max_drawdown": -0.3283344263195761,
+      "total_return": 16.85089965467683
+    },
+    "early": {
+      "cagr": 0.362225557733582,
+      "sharpe": 1.2062235106373724,
+      "max_drawdown": -0.3283344263195761,
+      "total_return": 2.863629436103047
+    },
+    "recent": {
+      "cagr": 0.6910694478495645,
+      "sharpe": 1.911466649639861,
+      "max_drawdown": -0.26943979580801936,
+      "total_return": 3.620241135930905
+    },
+    "robust": 1.7135069453322391
+  },
+  "code_sha256": "2d22b1bcef8925c8f98d6778142968f2ee3e2f0847c46caf2aea8c6de2b72ad4",
+  "feature_sha256": "2a0fbc9b42bca011340929d6ff7821be24e82bd094c1e655517d370eb3f91832"
+}

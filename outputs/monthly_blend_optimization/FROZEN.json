@@ -1,0 +1,366 @@
+{
+  "created_utc": "2026-10-11T06:46:55.826542+00:00",
+  "selected": {
+    "primary": {
+      "id": 683,
+      "family": "economic_utility",
+      "recipe_id": 56,
+      "spec": [
+        {
+          "family": "residual",
+          "key": "resid_126_210_sum",
+          "amount": 0.025,
+          "state": "calm10"
+        },
+        {
+          "key": "recipe_56",
+          "amount": 0.075,
+          "state": "weak_narrow"
+        }
+      ],
+      "training": {
+        "cagr": 0.5555341287380755,
+        "sharpe": 1.645681557199711,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 24.000687666656727
+      },
+      "early": {
+        "cagr": 0.46651507751473,
+        "sharpe": 1.4639570917350817,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 4.334300389422253
+      },
+      "recent": {
+        "cagr": 0.6993902222326736,
+        "sharpe": 1.908433513010114,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.68677911657024
+      },
+      "robust": 2.041011162550366
+    },
+    "robust": {
+      "id": 683,
+      "family": "economic_utility",
+      "recipe_id": 56,
+      "spec": [
+        {
+          "family": "residual",
+          "key": "resid_126_210_sum",
+          "amount": 0.025,
+          "state": "calm10"
+        },
+        {
+          "key": "recipe_56",
+          "amount": 0.075,
+          "state": "weak_narrow"
+        }
+      ],
+      "training": {
+        "cagr": 0.5555341287380755,
+        "sharpe": 1.645681557199711,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 24.000687666656727
+      },
+      "early": {
+        "cagr": 0.46651507751473,
+        "sharpe": 1.4639570917350817,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 4.334300389422253
+      },
+      "recent": {
+        "cagr": 0.6993902222326736,
+        "sharpe": 1.908433513010114,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.68677911657024
+      },
+      "robust": 2.041011162550366
+    }
+  },
+  "family_controls": {
+    "weekly_mix": {
+      "id": 8,
+      "family": "weekly_mix",
+      "recipe_id": 0,
+      "spec": [
+        {
+          "family": "residual",
+          "key": "resid_126_210_sum",
+          "amount": 0.025,
+          "state": "calm10"
+        },
+        {
+          "key": "recipe_0",
+          "amount": 0.05,
+          "state": "weak_narrow"
+        }
+      ],
+      "training": {
+        "cagr": 0.5446651526163626,
+        "sharpe": 1.6254043185306446,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 22.75559822012844
+      },
+      "early": {
+        "cagr": 0.4634486875206485,
+        "sharpe": 1.4541022877952918,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 4.285703268301813
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "robust": 2.0222684587541693
+    },
+    "monthly_mix": {
+      "id": 2,
+      "family": "previous66",
+      "spec": [
+        {
+          "family": "residual",
+          "key": "resid_126_210_sum",
+          "amount": 0.025,
+          "state": "calm10"
+        },
+        {
+          "key": "ml_4",
+          "state": "weak_narrow",
+          "amount": 0.05
+        }
+      ],
+      "training": {
+        "cagr": 0.5446651526163626,
+        "sharpe": 1.6254043185306446,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 22.75559822012844
+      },
+      "early": {
+        "cagr": 0.4634486875206485,
+        "sharpe": 1.4541022877952918,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 4.285703268301813
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "robust": 2.0222684587541693
+    },
+    "economic_utility": {
+      "id": 683,
+      "family": "economic_utility",
+      "recipe_id": 56,
+      "spec": [
+        {
+          "family": "residual",
+          "key": "resid_126_210_sum",
+          "amount": 0.025,
+          "state": "calm10"
+        },
+        {
+          "key": "recipe_56",
+          "amount": 0.075,
+          "state": "weak_narrow"
+        }
+      ],
+      "training": {
+        "cagr": 0.5555341287380755,
+        "sharpe": 1.645681557199711,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 24.000687666656727
+      },
+      "early": {
+        "cagr": 0.46651507751473,
+        "sharpe": 1.4639570917350817,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 4.334300389422253
+      },
+      "recent": {
+        "cagr": 0.6993902222326736,
+        "sharpe": 1.908433513010114,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.68677911657024
+      },
+      "robust": 2.041011162550366
+    },
+    "frequency_mix": {
+      "id": 2,
+      "family": "previous66",
+      "spec": [
+        {
+          "family": "residual",
+          "key": "resid_126_210_sum",
+          "amount": 0.025,
+          "state": "calm10"
+        },
+        {
+          "key": "ml_4",
+          "state": "weak_narrow",
+          "amount": 0.05
+        }
+      ],
+      "training": {
+        "cagr": 0.5446651526163626,
+        "sharpe": 1.6254043185306446,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 22.75559822012844
+      },
+      "early": {
+        "cagr": 0.4634486875206485,
+        "sharpe": 1.4541022877952918,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 4.285703268301813
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "robust": 2.0222684587541693
+    },
+    "regime_mix": {
+      "id": 2,
+      "family": "previous66",
+      "spec": [
+        {
+          "family": "residual",
+          "key": "resid_126_210_sum",
+          "amount": 0.025,
+          "state": "calm10"
+        },
+        {
+          "key": "ml_4",
+          "state": "weak_narrow",
+          "amount": 0.05
+        }
+      ],
+      "training": {
+        "cagr": 0.5446651526163626,
+        "sharpe": 1.6254043185306446,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 22.75559822012844
+      },
+      "early": {
+        "cagr": 0.4634486875206485,
+        "sharpe": 1.4541022877952918,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 4.285703268301813
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "robust": 2.0222684587541693
+    }
+  },
+  "base": {
+    "id": 2,
+    "family": "previous66",
+    "spec": [
+      {
+        "family": "residual",
+        "key": "resid_126_210_sum",
+        "amount": 0.025,
+        "state": "calm10"
+      },
+      {
+        "key": "ml_4",
+        "state": "weak_narrow",
+        "amount": 0.05
+      }
+    ],
+    "training": {
+      "cagr": 0.5446651526163626,
+      "sharpe": 1.6254043185306446,
+      "max_drawdown": -0.31125995821743646,
+      "total_return": 22.75559822012844
+    },
+    "early": {
+      "cagr": 0.4634486875206485,
+      "sharpe": 1.4541022877952918,
+      "max_drawdown": -0.31125995821743646,
+      "total_return": 4.285703268301813
+    },
+    "recent": {
+      "cagr": 0.6751035896184099,
+      "sharpe": 1.875574426281807,
+      "max_drawdown": -0.26943979580801936,
+      "total_return": 3.4943117338027694
+    },
+    "robust": 2.0222684587541693
+  },
+  "original": {
+    "id": 0,
+    "family": "original65",
+    "spec": [],
+    "training": {
+      "cagr": 0.5349155442763764,
+      "sharpe": 1.6031917771530346,
+      "max_drawdown": -0.3112599582174367,
+      "total_return": 21.684626736023116
+    },
+    "early": {
+      "cagr": 0.44808994995802753,
+      "sharpe": 1.416891036956853,
+      "max_drawdown": -0.3112599582174367,
+      "total_return": 4.047408386340172
+    },
+    "recent": {
+      "cagr": 0.6751035896184099,
+      "sharpe": 1.875574426281807,
+      "max_drawdown": -0.26943979580801936,
+      "total_return": 3.4943117338027694
+    },
+    "robust": 1.9758607264415782
+  },
+  "residual": {
+    "id": 1,
+    "family": "residual65",
+    "spec": [
+      {
+        "family": "residual",
+        "key": "resid_126_210_sum",
+        "amount": 0.025,
+        "state": "calm10"
+      }
+    ],
+    "training": {
+      "cagr": 0.5427493014764397,
+      "sharpe": 1.6234135425294554,
+      "max_drawdown": -0.31125995821743635,
+      "total_return": 22.541770270429375
+    },
+    "early": {
+      "cagr": 0.46042549803093014,
+      "sharpe": 1.450315988354401,
+      "max_drawdown": -0.31125995821743635,
+      "total_return": 4.238125805418942
+    },
+    "recent": {
+      "cagr": 0.6751035896184099,
+      "sharpe": 1.875574426281807,
+      "max_drawdown": -0.26943979580801936,
+      "total_return": 3.4943117338027694
+    },
+    "robust": 2.0173884978243035
+  },
+  "trials": 963,
+  "admissible": 4,
+  "code_sha256": "f1e3d5c095fa55dcc001d9ae9159012954791a5de9ff5e8c88ded1b67366c626",
+  "input_hashes": {
+    "PLAN.json": "5b31fd90171e2b940f34d2aa7c4bb9ffce2103360a93c3330eb4e5b324b06570",
+    "MONTHLY_TRAIN.npz": "601f784acc5cd0ddade394b57d335cbafe94ddf50d4167d879fa9ff10e40e309",
+    "MONTHLY_TRAIN.json": "b9050cdffe06fd8ae816461e3f53b93defa3b4fc600ee318722ada9d422ca1b9",
+    "PREDICTIONS.npz": "03ad738d3835af95425229f5e7d576bc38b5661be169f9d1bfa7e85b452592ab",
+    "FORECAST_AUDIT.json": "d482f172bc8533ffc968e66e027cf1136ed8ba7c9f431e3da6dea68954f23a5e",
+    "RECIPES.json": "2018e93a35b99e18413f41516652cf0423d9dc9831e9d3d47db85cd7308b1b67",
+    "INPUT_HASHES.json": "54cd77c84138c6dc12d68909d7f97eda185aa0e5c26f7da42bd7ddf16f665fe7"
+  }
+}

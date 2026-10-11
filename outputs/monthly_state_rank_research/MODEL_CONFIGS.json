@@ -1,0 +1,32 @@
+[
+  {
+    "target": "return",
+    "alpha": 10.0,
+    "half_life": 12
+  },
+  {
+    "target": "return",
+    "alpha": 100.0,
+    "half_life": 12
+  },
+  {
+    "target": "top3_pair",
+    "alpha": 10.0,
+    "half_life": 12
+  },
+  {
+    "target": "top3_pair",
+    "alpha": 100.0,
+    "half_life": 12
+  },
+  {
+    "target": "downside_rank",
+    "alpha": 10.0,
+    "half_life": 12
+  },
+  {
+    "target": "downside_rank",
+    "alpha": 100.0,
+    "half_life": 12
+  }
+]

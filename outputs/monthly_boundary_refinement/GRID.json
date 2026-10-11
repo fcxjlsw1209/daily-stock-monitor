@@ -1,0 +1,1678 @@
+[
+  {
+    "id": 0,
+    "family": "original65",
+    "base": "original65",
+    "selector": {
+      "kind": "top3"
+    },
+    "shrink": null
+  },
+  {
+    "id": 1,
+    "family": "previous66",
+    "base": "previous66",
+    "selector": {
+      "kind": "top3"
+    },
+    "shrink": null
+  },
+  {
+    "id": 2,
+    "family": "retention",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 4
+    },
+    "shrink": null
+  },
+  {
+    "id": 3,
+    "family": "retention",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 5
+    },
+    "shrink": null
+  },
+  {
+    "id": 4,
+    "family": "switch_gap",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.005
+    },
+    "shrink": null
+  },
+  {
+    "id": 5,
+    "family": "switch_gap",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.01
+    },
+    "shrink": null
+  },
+  {
+    "id": 6,
+    "family": "switch_gap",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.02
+    },
+    "shrink": null
+  },
+  {
+    "id": 7,
+    "family": "switch_gap",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.005
+    },
+    "shrink": null
+  },
+  {
+    "id": 8,
+    "family": "switch_gap",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.01
+    },
+    "shrink": null
+  },
+  {
+    "id": 9,
+    "family": "switch_gap",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.02
+    },
+    "shrink": null
+  },
+  {
+    "id": 10,
+    "family": "disagreement",
+    "base": "previous66",
+    "selector": {
+      "kind": "top3"
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 11,
+    "family": "disagreement",
+    "base": "previous66",
+    "selector": {
+      "kind": "top3"
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 12,
+    "family": "disagreement",
+    "base": "previous66",
+    "selector": {
+      "kind": "top3"
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 13,
+    "family": "disagreement",
+    "base": "previous66",
+    "selector": {
+      "kind": "top3"
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 14,
+    "family": "disagreement",
+    "base": "previous66",
+    "selector": {
+      "kind": "top3"
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 15,
+    "family": "disagreement",
+    "base": "previous66",
+    "selector": {
+      "kind": "top3"
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 16,
+    "family": "disagreement",
+    "base": "previous66",
+    "selector": {
+      "kind": "top3"
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 17,
+    "family": "disagreement",
+    "base": "previous66",
+    "selector": {
+      "kind": "top3"
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 18,
+    "family": "disagreement",
+    "base": "previous66",
+    "selector": {
+      "kind": "top3"
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 19,
+    "family": "disagreement",
+    "base": "previous66",
+    "selector": {
+      "kind": "top3"
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 20,
+    "family": "disagreement",
+    "base": "previous66",
+    "selector": {
+      "kind": "top3"
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 21,
+    "family": "disagreement",
+    "base": "previous66",
+    "selector": {
+      "kind": "top3"
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 22,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 4
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 23,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 4
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 24,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 4
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 25,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 4
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 26,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 4
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 27,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 4
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 28,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 4
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 29,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 4
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 30,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 4
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 31,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 4
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 32,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 4
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 33,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 4
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 34,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 5
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 35,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 5
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 36,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 5
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 37,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 5
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 38,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 5
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 39,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 5
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 40,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 5
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 41,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 5
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 42,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 5
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 43,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 5
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 44,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 5
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 45,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "buffer",
+      "ceiling": 5
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 46,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 47,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 48,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 49,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 50,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 51,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 52,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 53,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 54,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 55,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 56,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 57,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 58,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 59,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 60,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 61,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 62,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 63,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 64,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 65,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 66,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 67,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 68,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 69,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 70,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 71,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 72,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 73,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 74,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 75,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 76,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 77,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 78,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 79,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 80,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 81,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 4,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 82,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 83,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 84,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 85,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 86,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 87,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 88,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 89,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 90,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 91,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 92,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 93,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.005
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 94,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 95,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 96,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 97,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 98,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 99,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 100,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 101,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 102,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 103,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 104,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 105,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.01
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 106,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 107,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 108,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 109,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "alpha",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 110,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 111,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 112,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 113,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "frequency",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 114,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 115,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.15,
+      "floor": 0.5
+    }
+  },
+  {
+    "id": 116,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.0
+    }
+  },
+  {
+    "id": 117,
+    "family": "combined",
+    "base": "previous66",
+    "selector": {
+      "kind": "gap",
+      "ceiling": 5,
+      "gap": 0.02
+    },
+    "shrink": {
+      "comparator": "both",
+      "threshold": 0.3,
+      "floor": 0.5
+    }
+  }
+]

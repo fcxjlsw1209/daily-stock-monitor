@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-10-10T22:56:35.230683+00:00",
+  "objective": "Prioritize return, Sharpe and drawdown; holdings/order agreement is an after-freeze diagnostic, never training objective.",
+  "split": "First35 holding months Jan2021-Nov2023 for design selection; later34 Dec2023-Sep24,2026 evaluated after freeze. These dates already viewed in prior work; not pristine independent OOS.",
+  "universe": "Unchanged cached uniformTop36+assumedtheme17 from exact35 experiment; pool width is not searched. Historical ranking remains a proxy.",
+  "family": "8 long-momentum definitions all skip latest2months;4 supporting portfolios; core weights50/65/80%;3 market modes(static/risk-aware/cash-belowSPY200);2 core gates(all/upperhalf);2 monthly retention limits(top3/top5):1152 fixed configurations.",
+  "guidance": "Long only, no leverage, at most3 equal positions,2 half,<2cash; fixed units intra-month. Risk-aware substitutes inverse downside volatility when SPYbelow200 or highvol, and reverses CMF in highvol. No daily entry pullback condition.",
+  "primary": "Maximize robust training criterion .4*overall_dailySharpe+.4*minimum_blockSharpe+.2*mean_blockSharpe+.25*log(1+CAGR)-.5*abs(maxDD). Blocks first12,next12,last11 months. Tie lowerID.",
+  "controls": "TrainingSharpe winner and trainingCAGR winner also frozen; compare old high-return candidate exact historical holdings and old formula remapped to same pool, unmodified exact35 model, author and QQQ.",
+  "inner_check": "Expanding-prefix choice at12/18/24 months, followed by next6/6/11 months. Concatenate subsequent returns of chosen virtual rule; this is an inner diagnostic, not a second tuning objective. Final choice still all35 criterion.",
+  "execution": "Primary zero-cost same-final-close monthly selection/rebalance idealization. Next-open and5bp/side cost controls. No author monthly return targets, curve-fitting, deep tree, date/ticker features or per-month exceptions.",
+  "output": "Report all3 predeclared selectors regardless of holdout ordering; never switch primary after evaluation. No live observer, ledger, plan, fingerprint, or automation modifications."
+}

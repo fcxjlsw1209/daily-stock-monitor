@@ -1,0 +1,316 @@
+{
+  "created_at": "2026-10-10T23:14:14.657768+00:00",
+  "primary": "annual_primary",
+  "leaders": {
+    "annual_primary": {
+      "spec": {
+        "id": 802,
+        "profit": 0.025,
+        "layer": "ridge_10_12",
+        "budget": 0.15,
+        "mode": "highvol",
+        "retain": 3
+      },
+      "training": {
+        "cagr": 0.7299981468649144,
+        "sharpe": 1.9620030177267813,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.9369487234189293
+      },
+      "segments": [
+        {
+          "cagr": 0.6740443079368044,
+          "sharpe": 1.6990698946880245,
+          "max_drawdown": -0.26943979580801936,
+          "total_return": 0.673471729839701
+        },
+        {
+          "cagr": 0.9728671492908585,
+          "sharpe": 2.3944375441484445,
+          "max_drawdown": -0.1228302199770176,
+          "total_return": 0.9683121028336439
+        },
+        {
+          "cagr": 0.5545760228708767,
+          "sharpe": 1.8120982051160852,
+          "max_drawdown": -0.13829027563715257,
+          "total_return": 0.498808935149611
+        }
+      ],
+      "robust": 1.8604463943252738
+    },
+    "sharpe_control": {
+      "spec": {
+        "id": 812,
+        "profit": 0.025,
+        "layer": "shape_mix",
+        "budget": 0.05,
+        "mode": "highvol",
+        "retain": 3
+      },
+      "training": {
+        "cagr": 0.7226008712836989,
+        "sharpe": 2.0023718604704555,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.875704174698601
+      },
+      "segments": [
+        {
+          "cagr": 0.6694682243746979,
+          "sharpe": 1.6925901433189943,
+          "max_drawdown": -0.26943979580801936,
+          "total_return": 0.6689002445130856
+        },
+        {
+          "cagr": 0.9536651261804834,
+          "sharpe": 2.5801154953443155,
+          "max_drawdown": -0.09455955280115891,
+          "total_return": 0.9492192686960435
+        },
+        {
+          "cagr": 0.5545760228708767,
+          "sharpe": 1.8120982051160852,
+          "max_drawdown": -0.13829027563715257,
+          "total_return": 0.498808935149611
+        }
+      ],
+      "robust": 1.8848773139891943
+    },
+    "robust_control": {
+      "spec": {
+        "id": 812,
+        "profit": 0.025,
+        "layer": "shape_mix",
+        "budget": 0.05,
+        "mode": "highvol",
+        "retain": 3
+      },
+      "training": {
+        "cagr": 0.7226008712836989,
+        "sharpe": 2.0023718604704555,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.875704174698601
+      },
+      "segments": [
+        {
+          "cagr": 0.6694682243746979,
+          "sharpe": 1.6925901433189943,
+          "max_drawdown": -0.26943979580801936,
+          "total_return": 0.6689002445130856
+        },
+        {
+          "cagr": 0.9536651261804834,
+          "sharpe": 2.5801154953443155,
+          "max_drawdown": -0.09455955280115891,
+          "total_return": 0.9492192686960435
+        },
+        {
+          "cagr": 0.5545760228708767,
+          "sharpe": 1.8120982051160852,
+          "max_drawdown": -0.13829027563715257,
+          "total_return": 0.498808935149611
+        }
+      ],
+      "robust": 1.8848773139891943
+    }
+  },
+  "categories": {
+    "shape": {
+      "spec": {
+        "id": 812,
+        "profit": 0.025,
+        "layer": "shape_mix",
+        "budget": 0.05,
+        "mode": "highvol",
+        "retain": 3
+      },
+      "training": {
+        "cagr": 0.7226008712836989,
+        "sharpe": 2.0023718604704555,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.875704174698601
+      },
+      "segments": [
+        {
+          "cagr": 0.6694682243746979,
+          "sharpe": 1.6925901433189943,
+          "max_drawdown": -0.26943979580801936,
+          "total_return": 0.6689002445130856
+        },
+        {
+          "cagr": 0.9536651261804834,
+          "sharpe": 2.5801154953443155,
+          "max_drawdown": -0.09455955280115891,
+          "total_return": 0.9492192686960435
+        },
+        {
+          "cagr": 0.5545760228708767,
+          "sharpe": 1.8120982051160852,
+          "max_drawdown": -0.13829027563715257,
+          "total_return": 0.498808935149611
+        }
+      ],
+      "robust": 1.8848773139891943
+    },
+    "industry": {
+      "spec": {
+        "id": 278,
+        "profit": 0.0,
+        "layer": "industry_mix",
+        "budget": 0.15,
+        "mode": "highvol",
+        "retain": 3
+      },
+      "training": {
+        "cagr": 0.6914172185718168,
+        "sharpe": 1.947057556076605,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.623009619616976
+      },
+      "segments": [
+        {
+          "cagr": 0.6599181440841344,
+          "sharpe": 1.6744277508527374,
+          "max_drawdown": -0.26943979580801936,
+          "total_return": 0.6593597337072259
+        },
+        {
+          "cagr": 0.8722630367816029,
+          "sharpe": 2.472372641883855,
+          "max_drawdown": -0.09455955280115891,
+          "total_return": 0.8682728914068751
+        },
+        {
+          "cagr": 0.5460047036075801,
+          "sharpe": 1.7800748461717935,
+          "max_drawdown": -0.13829027563715268,
+          "total_return": 0.4912276156063313
+        }
+      ],
+      "robust": 1.840390932891205
+    },
+    "ml": {
+      "spec": {
+        "id": 802,
+        "profit": 0.025,
+        "layer": "ridge_10_12",
+        "budget": 0.15,
+        "mode": "highvol",
+        "retain": 3
+      },
+      "training": {
+        "cagr": 0.7299981468649144,
+        "sharpe": 1.9620030177267813,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.9369487234189293
+      },
+      "segments": [
+        {
+          "cagr": 0.6740443079368044,
+          "sharpe": 1.6990698946880245,
+          "max_drawdown": -0.26943979580801936,
+          "total_return": 0.673471729839701
+        },
+        {
+          "cagr": 0.9728671492908585,
+          "sharpe": 2.3944375441484445,
+          "max_drawdown": -0.1228302199770176,
+          "total_return": 0.9683121028336439
+        },
+        {
+          "cagr": 0.5545760228708767,
+          "sharpe": 1.8120982051160852,
+          "max_drawdown": -0.13829027563715257,
+          "total_return": 0.498808935149611
+        }
+      ],
+      "robust": 1.8604463943252738
+    },
+    "profit": {
+      "spec": {
+        "id": 802,
+        "profit": 0.025,
+        "layer": "ridge_10_12",
+        "budget": 0.15,
+        "mode": "highvol",
+        "retain": 3
+      },
+      "training": {
+        "cagr": 0.7299981468649144,
+        "sharpe": 1.9620030177267813,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.9369487234189293
+      },
+      "segments": [
+        {
+          "cagr": 0.6740443079368044,
+          "sharpe": 1.6990698946880245,
+          "max_drawdown": -0.26943979580801936,
+          "total_return": 0.673471729839701
+        },
+        {
+          "cagr": 0.9728671492908585,
+          "sharpe": 2.3944375441484445,
+          "max_drawdown": -0.1228302199770176,
+          "total_return": 0.9683121028336439
+        },
+        {
+          "cagr": 0.5545760228708767,
+          "sharpe": 1.8120982051160852,
+          "max_drawdown": -0.13829027563715257,
+          "total_return": 0.498808935149611
+        }
+      ],
+      "robust": 1.8604463943252738
+    }
+  },
+  "base": {
+    "spec": {
+      "id": 0,
+      "profit": 0.0,
+      "layer": "anti_chase",
+      "budget": 0.0,
+      "mode": "global",
+      "retain": 3
+    },
+    "training": {
+      "cagr": 0.636371605267672,
+      "sharpe": 1.8088375517861228,
+      "max_drawdown": -0.26943979580801936,
+      "total_return": 3.198232965891199
+    },
+    "segments": [
+      {
+        "cagr": 0.6694682243746979,
+        "sharpe": 1.6925901433189943,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 0.6689002445130856
+      },
+      {
+        "cagr": 0.6899248380341652,
+        "sharpe": 1.9921609475408417,
+        "max_drawdown": -0.11446292390774615,
+        "total_return": 0.6869111880033678
+      },
+      {
+        "cagr": 0.5460047036075801,
+        "sharpe": 1.780074846171794,
+        "max_drawdown": -0.13829027563715268,
+        "total_return": 0.4912276156063313
+      }
+    ],
+    "robust": 1.7532932480164134
+  },
+  "candidate_count": 818,
+  "admissible_count": 254,
+  "code_sha256": "0664f5b7de4f5141fab7e11cba70f4f616aec44b1bb400703a127ed4da6a35a3",
+  "input_hashes": {
+    "INPUTS.json": "291e1d848093fc99e1f9683c2aaf5d17369825f441a9a6fe1f3a28803a568f3e",
+    "DATA.npz": "1278e15af24243d2636b7747a7a6bbad29be09a0fa6538af6e88395ede6ad105",
+    "SHAPES.npz": "4db833f7bc589cd8b199f90befd51d20e32a1575b2e7e5d320e0a0fee8369ace",
+    "PRICES.npz": "e7241e0991511da5cb390250ead2850b000b71becd29f9a947abe58639b2bd14",
+    "PREDICTIONS.npz": "4c11d3558a9b46f9638709c4dd7a205d39eec449c17d166c105744024b450646",
+    "FORECAST_AUDIT.json": "95b63e845ef6d129e774691a03e31347a54f6683398fd79390f7f580082c3523"
+  },
+  "author_labels_used": false
+}
