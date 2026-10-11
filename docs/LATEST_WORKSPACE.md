@@ -22,6 +22,11 @@ replay with 0.05% cost per side was 63.17%. The archived universe is an estimate
 historical Top32 plus an assumed 17-ETF list; repeated research is not pristine
 out-of-sample evidence.
 
+The subsequent [daily-episode-memory experiment](MONTHLY_EPISODE_RESEARCH.md)
+reached 66.36% on the same full-period idealized basis. Its entire incremental
+benefit came from one 2016 month, so it also remains research-only. Neither
+research result replaces the registered stability account.
+
 ## Running without Codex
 
 These are ordinary Python scripts, not an LLM service. Python 3.9+ and the pinned

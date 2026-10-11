@@ -1,0 +1,170 @@
+[
+  {
+    "id": 0,
+    "horizon": 5,
+    "match": "signal",
+    "target": "excess",
+    "mode": "level"
+  },
+  {
+    "id": 1,
+    "horizon": 5,
+    "match": "signal",
+    "target": "excess",
+    "mode": "increment"
+  },
+  {
+    "id": 2,
+    "horizon": 5,
+    "match": "signal",
+    "target": "utility",
+    "mode": "level"
+  },
+  {
+    "id": 3,
+    "horizon": 5,
+    "match": "signal",
+    "target": "utility",
+    "mode": "increment"
+  },
+  {
+    "id": 4,
+    "horizon": 5,
+    "match": "context",
+    "target": "excess",
+    "mode": "level"
+  },
+  {
+    "id": 5,
+    "horizon": 5,
+    "match": "context",
+    "target": "excess",
+    "mode": "increment"
+  },
+  {
+    "id": 6,
+    "horizon": 5,
+    "match": "context",
+    "target": "utility",
+    "mode": "level"
+  },
+  {
+    "id": 7,
+    "horizon": 5,
+    "match": "context",
+    "target": "utility",
+    "mode": "increment"
+  },
+  {
+    "id": 8,
+    "horizon": 10,
+    "match": "signal",
+    "target": "excess",
+    "mode": "level"
+  },
+  {
+    "id": 9,
+    "horizon": 10,
+    "match": "signal",
+    "target": "excess",
+    "mode": "increment"
+  },
+  {
+    "id": 10,
+    "horizon": 10,
+    "match": "signal",
+    "target": "utility",
+    "mode": "level"
+  },
+  {
+    "id": 11,
+    "horizon": 10,
+    "match": "signal",
+    "target": "utility",
+    "mode": "increment"
+  },
+  {
+    "id": 12,
+    "horizon": 10,
+    "match": "context",
+    "target": "excess",
+    "mode": "level"
+  },
+  {
+    "id": 13,
+    "horizon": 10,
+    "match": "context",
+    "target": "excess",
+    "mode": "increment"
+  },
+  {
+    "id": 14,
+    "horizon": 10,
+    "match": "context",
+    "target": "utility",
+    "mode": "level"
+  },
+  {
+    "id": 15,
+    "horizon": 10,
+    "match": "context",
+    "target": "utility",
+    "mode": "increment"
+  },
+  {
+    "id": 16,
+    "horizon": 21,
+    "match": "signal",
+    "target": "excess",
+    "mode": "level"
+  },
+  {
+    "id": 17,
+    "horizon": 21,
+    "match": "signal",
+    "target": "excess",
+    "mode": "increment"
+  },
+  {
+    "id": 18,
+    "horizon": 21,
+    "match": "signal",
+    "target": "utility",
+    "mode": "level"
+  },
+  {
+    "id": 19,
+    "horizon": 21,
+    "match": "signal",
+    "target": "utility",
+    "mode": "increment"
+  },
+  {
+    "id": 20,
+    "horizon": 21,
+    "match": "context",
+    "target": "excess",
+    "mode": "level"
+  },
+  {
+    "id": 21,
+    "horizon": 21,
+    "match": "context",
+    "target": "excess",
+    "mode": "increment"
+  },
+  {
+    "id": 22,
+    "horizon": 21,
+    "match": "context",
+    "target": "utility",
+    "mode": "level"
+  },
+  {
+    "id": 23,
+    "horizon": 21,
+    "match": "context",
+    "target": "utility",
+    "mode": "increment"
+  }
+]
