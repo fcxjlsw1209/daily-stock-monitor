@@ -78,6 +78,21 @@ provenance separately from offline replays. Its initial preflight made no HTTP
 requests because the required declaration was unavailable. This snapshot does
 not contain downloaded Form 4 data or a strategy based on those filings.
 
+### Incremental reader correction and experiment 265 prototype
+
+The additive `monthly_gain_survival264_saved_reader_v4.py` corrects the saved
+reader's explicit test-receipt binding to the registered `TESTS_V2.json`.
+The original reader and registered strategy files remain unchanged. Its 30
+synthetic regression checks passed, including the original 21 reader checks.
+The private addendum and receipt are still required for an actual local review;
+publishing this correction does not claim that experiment 264 has completed.
+
+The unregistered `monthly_gain_concentration265_kernel.py` compares daily
+positive-gain concentration with concentration across twelve fixed 21-session
+blocks. Its 22 synthetic tests passed. It has no data loading, strategy
+integration, ranking, training, orders, or backtest result. This source snapshot
+does not promote the prototype or change the retained 67.67% result.
+
 ## Observer versions and account continuity
 
 `outputs/paired_stock_monitor/run_pair.py` orchestrates all ten independent

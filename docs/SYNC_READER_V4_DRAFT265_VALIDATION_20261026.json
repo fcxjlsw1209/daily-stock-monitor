@@ -1,0 +1,40 @@
+{
+  "completed_utc": "2026-10-26T18:16:59.819122+00:00",
+  "base_commit": "b22f7f85e4c0da5d6f08e77af957a7d5094778f5",
+  "purpose": "Incremental source sync: additive experiment-264 saved-reader correction and unregistered experiment-265 synthetic kernel. No new backtest return claim.",
+  "source_export": {
+    "files": 2907,
+    "source_hashes_match": true,
+    "published_hashes_match": true,
+    "modes_match": true,
+    "unchanged_observer_exports": 106,
+    "changed_existing_exported_files": 0,
+    "manifest_sha256": "4f8964be195c56f931cd7d760545a24fface67c6173b153419d573a9324d5cd7"
+  },
+  "tests": [
+    {
+      "suite": "base_and_exporter",
+      "tests": 24,
+      "exit_code": 0,
+      "root_terminal_chunk": "c5e39e"
+    },
+    {
+      "suite": "saved_reader_v4_synthetic",
+      "tests": 30,
+      "exit_code": 0,
+      "root_terminal_chunk": "10fbd1"
+    },
+    {
+      "suite": "gain_concentration265_synthetic_kernel",
+      "tests": 22,
+      "exit_code": 0,
+      "root_terminal_chunk": "2eed88"
+    }
+  ],
+  "candidate265_registered": false,
+  "candidate265_actual_backtest_run": false,
+  "candidate_promoted": false,
+  "source_roots_modified_by_sync": false,
+  "live_observers_run": false,
+  "private_data_or_credentials_exported": false
+}
