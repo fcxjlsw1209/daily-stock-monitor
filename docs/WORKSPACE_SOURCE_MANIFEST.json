@@ -1689,8 +1689,11 @@
     "work/monthly_forward_guidance132_runner.py": "e7768e7a7094c61c918f96887b04c044d25482070cfafa24735fcd065cb4aa97",
     "work/monthly_forward_guidance_contract_v1.py": "96b9f8f4953e37a413f7e7d345bf4d0d9dc97bafd306864e23af4ededb22b7c9",
     "work/monthly_forward_guidance_factor132.py": "22e8b6506828e8f2c040efd0bfd4c58b9bbfd7f3f3e63dc7075efbd94945df2b",
+    "work/monthly_gain_concentration265_host.py": "9fdbc1d32c5b796730d87d839ffaa8faa28576798457b0e2c27fe3893030113b",
+    "work/monthly_gain_concentration265_independent.py": "8657d62a6296c6ad57cb962581c8291261db6ce5d145c42605cf6effb04ba53d",
     "work/monthly_gain_concentration265_kernel.py": "29a541f71b746820f384b63efc459c380c3624bd17b067ed73b5883251ceb253",
     "work/monthly_gain_concentration265_math_independent.py": "feb0993633d841b155d705899b7c05d2234a5e65d38205e970acb62607470f5a",
+    "work/monthly_gain_concentration265_saved_reader.py": "8990f2e15e423808546da661ae36717a6dd83dd71fee377f918d55599a2decd8",
     "work/monthly_gain_concentration265_selection.py": "1a2ee88266073e6e6de47c6937a4b942134e81569cf5df261b776cdef21134be",
     "work/monthly_gain_survival264_host.py": "74d6d9c2d678e5dd0b5408aff5a33a6f7ebbef5157d6be9c3b04b80a0f1602c0",
     "work/monthly_gain_survival264_independent.py": "d54f52ce6749ae1d71e0c8e47f885a84b4c6f9abbcf2853f9995ef7453e8d5cf",
@@ -2534,8 +2537,11 @@
     "work/test_monthly_formation142_runner.py": "fa95674087010abc28d5b4f06cd5e274d1b2baa9dac7914b7141425f643a51eb",
     "work/test_monthly_formation142_selector.py": "84e72bf1c796bda1c31879cb8fc0f510f4d3f0c8e21ab70627afabdc5594fedf",
     "work/test_monthly_forward_guidance132_runner.py": "796feb1751775e8d1b9fe8fd53b0825eed9dda6414bb4b369c1a0f198637829a",
+    "work/test_monthly_gain_concentration265_host.py": "a311ade6a1fe57ce47872d6b9e5670be54a9b8068adb0d573778994779972c19",
+    "work/test_monthly_gain_concentration265_independent.py": "09442340b95114d7a20bf23f6f2f33b45561af09b3c38a729d5e3c49a3150057",
     "work/test_monthly_gain_concentration265_kernel.py": "d6f98aeae52f3f6f6e6749f45417b7c391c1258e3ef59a7f7fd9eeafc8842736",
     "work/test_monthly_gain_concentration265_math_independent.py": "3f6e3ed75df1b9f5c2d9a814db7732a6b387f8c6fc992d61959ba76dca9aa965",
+    "work/test_monthly_gain_concentration265_saved_reader.py": "111954e58b5048805aaf9d3007f3926b29e0291fb8092a327fb3a77f9bee2c00",
     "work/test_monthly_gain_concentration265_selection.py": "bf416af6ec57083b2cc2efc4b7c92346acbe7fdca4fd03f2f27b129c5adb6116",
     "work/test_monthly_gain_survival264_host.py": "11b9fa8d1b18243150d6cd6b24e87ba98f27b52c1df0657c63602c8273f83270",
     "work/test_monthly_gain_survival264_independent.py": "b61e8c88bf6d33cac3cf5a179bd740e5934ae2039841f7a86d035ef2f64fdbb2",
@@ -13046,6 +13052,18 @@
       "sha256": "22e8b6506828e8f2c040efd0bfd4c58b9bbfd7f3f3e63dc7075efbd94945df2b",
       "mode": "0o644"
     },
+    "work/monthly_gain_concentration265_host.py": {
+      "workspace": "research",
+      "path": "work/monthly_gain_concentration265_host.py",
+      "sha256": "9fdbc1d32c5b796730d87d839ffaa8faa28576798457b0e2c27fe3893030113b",
+      "mode": "0o644"
+    },
+    "work/monthly_gain_concentration265_independent.py": {
+      "workspace": "research",
+      "path": "work/monthly_gain_concentration265_independent.py",
+      "sha256": "8657d62a6296c6ad57cb962581c8291261db6ce5d145c42605cf6effb04ba53d",
+      "mode": "0o644"
+    },
     "work/monthly_gain_concentration265_kernel.py": {
       "workspace": "research",
       "path": "work/monthly_gain_concentration265_kernel.py",
@@ -13056,6 +13074,12 @@
       "workspace": "research",
       "path": "work/monthly_gain_concentration265_math_independent.py",
       "sha256": "feb0993633d841b155d705899b7c05d2234a5e65d38205e970acb62607470f5a",
+      "mode": "0o644"
+    },
+    "work/monthly_gain_concentration265_saved_reader.py": {
+      "workspace": "research",
+      "path": "work/monthly_gain_concentration265_saved_reader.py",
+      "sha256": "8990f2e15e423808546da661ae36717a6dd83dd71fee377f918d55599a2decd8",
       "mode": "0o644"
     },
     "work/monthly_gain_concentration265_selection.py": {
@@ -18116,6 +18140,18 @@
       "sha256": "796feb1751775e8d1b9fe8fd53b0825eed9dda6414bb4b369c1a0f198637829a",
       "mode": "0o644"
     },
+    "work/test_monthly_gain_concentration265_host.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_gain_concentration265_host.py",
+      "sha256": "a311ade6a1fe57ce47872d6b9e5670be54a9b8068adb0d573778994779972c19",
+      "mode": "0o644"
+    },
+    "work/test_monthly_gain_concentration265_independent.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_gain_concentration265_independent.py",
+      "sha256": "09442340b95114d7a20bf23f6f2f33b45561af09b3c38a729d5e3c49a3150057",
+      "mode": "0o644"
+    },
     "work/test_monthly_gain_concentration265_kernel.py": {
       "workspace": "research",
       "path": "work/test_monthly_gain_concentration265_kernel.py",
@@ -18126,6 +18162,12 @@
       "workspace": "research",
       "path": "work/test_monthly_gain_concentration265_math_independent.py",
       "sha256": "3f6e3ed75df1b9f5c2d9a814db7732a6b387f8c6fc992d61959ba76dca9aa965",
+      "mode": "0o644"
+    },
+    "work/test_monthly_gain_concentration265_saved_reader.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_gain_concentration265_saved_reader.py",
+      "sha256": "111954e58b5048805aaf9d3007f3926b29e0291fb8092a327fb3a77f9bee2c00",
       "mode": "0o644"
     },
     "work/test_monthly_gain_concentration265_selection.py": {

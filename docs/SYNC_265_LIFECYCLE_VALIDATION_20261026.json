@@ -1,0 +1,66 @@
+{
+  "completed_utc": "2026-10-26T18:57:00.350072+00:00",
+  "base_commit": "ffaf3138949ad2bab1c2af2c68eb8451aae8bf75",
+  "purpose": "Incremental source sync: unregistered experiment-265 lifecycle host, independent validator, saved-result reader and synthetic tests; update experiment-264 formal closure documentation.",
+  "source_export": {
+    "files": 2921,
+    "source_hashes_match": true,
+    "published_hashes_match": true,
+    "modes_match": true,
+    "unchanged_observer_exports": 106,
+    "changed_existing_exported_files": 0,
+    "new_files": [
+      "work/monthly_gain_concentration265_host.py",
+      "work/monthly_gain_concentration265_independent.py",
+      "work/monthly_gain_concentration265_saved_reader.py",
+      "work/test_monthly_gain_concentration265_host.py",
+      "work/test_monthly_gain_concentration265_independent.py",
+      "work/test_monthly_gain_concentration265_saved_reader.py"
+    ],
+    "manifest_sha256": "4cdad199cf602fd3a41e8a696111476446131f3ebd8cd4b4d0cafca355ae120b"
+  },
+  "tests": [
+    {
+      "suite": "base_and_exporter",
+      "tests": 24,
+      "elapsed_seconds": 0.437,
+      "exit_code": 0,
+      "root_terminal_chunk": "ef9cd7",
+      "log_sha256": "27a7ea7899df4323a2397729c5bacae93bbbee80e47532e5fc3a08b6f28be4d7"
+    },
+    {
+      "suite": "gain_concentration265_host_synthetic",
+      "tests": 65,
+      "elapsed_seconds": 24.912,
+      "exit_code": 0,
+      "root_terminal_chunk": "3a7bcf",
+      "log_sha256": "d94d77a20c85778387764b6a1850e82d56060c1e3697108f89f0f69c8f3d1abb"
+    },
+    {
+      "suite": "gain_concentration265_independent_synthetic",
+      "tests": 35,
+      "elapsed_seconds": 12.013,
+      "exit_code": 0,
+      "root_terminal_chunk": "f6fa3b",
+      "log_sha256": "a3330fd1d05cab9996100ae9058a70cd8a0d4805653c1105822eef44af896562"
+    },
+    {
+      "suite": "gain_concentration265_saved_reader_synthetic",
+      "tests": 52,
+      "elapsed_seconds": 5.354,
+      "exit_code": 0,
+      "root_terminal_chunk": "014d29",
+      "log_sha256": "a15f5cdafdc54352ecd8fb939d5320c87f1689bb2b2cf93ae60c53181c91f11a"
+    }
+  ],
+  "total_tests": 176,
+  "experiment264_formally_closed": true,
+  "experiment264_completion_sha256": "5e22a3ed98dc068912d01a87ac8d36133b26d604738715b35a1366cc2095cd89",
+  "experiment265_registered": false,
+  "experiment265_actual_backtest_run": false,
+  "paper_contracts_finalized": false,
+  "candidate_promoted": false,
+  "source_roots_modified_by_sync": false,
+  "live_observers_run": false,
+  "private_data_or_credentials_exported": false
+}

@@ -2,7 +2,8 @@
 
 This snapshot includes the six daily paper observers, four frozen monthly
 observers, historical-data validation tools, and the independent monthly
-research chain through experiment 263. Research sources retain their `outputs/`
+research chain through experiment 264, plus the unregistered experiment-265
+prototype. Research sources retain their `outputs/`
 and `work/` paths. Observer sources come from the separate active local runtime;
 the research workspace's old observer backups are not the publishing source.
 
@@ -30,7 +31,7 @@ not alternative headline definitions. These are repeatedly researched historical
 results using an estimated historical Top32 and an assumed 17-ETF list; they do
 not establish a fully point-in-time universe or independent out-of-sample returns.
 
-The latest completed experiment, `monthly_risk_clock263`, compared current 63-session risk
+The preceding experiment, `monthly_risk_clock263`, compared current 63-session risk
 normalization with a 63-session window ending 42 sessions earlier. The long
 momentum numerator still skips the recent 42 sessions. The current-window control
 exactly reproduced the incumbent. The lagged-window candidate changed 55 months,
@@ -45,7 +46,7 @@ The private completion receipts, market data, derived arrays, model fits, and
 trade exports are excluded from this source snapshot. Publishing this summary
 is not a claim that a fresh checkout can independently reproduce those results.
 
-## Registered experiment 264 source
+## Completed experiment 264 source
 
 This snapshot includes the nine Python source/test files for
 `monthly_gain_survival264` and its registered `PLAN.json`. It explores how long
@@ -60,11 +61,16 @@ result reader and its tests passed another 21 synthetic checks. The registration
 PLAN SHA-256 is
 `fef75a47d4607476c42a1a96e74a44ce7497c707487d2ffe844300d0deaddf84`.
 Actual preparation, first-88-month selection, and later-period diagnostics have
-finished locally. The candidate failed the training admission gates and the
-incumbent was retained. Formal experiment closure is still pending: saved-reader
-V4 rejected a one-ULP difference in the incumbent's diagnostic cumulative cost
-display, although orders, economic metrics, and both zero-cost exports matched.
-The completed research chain therefore still ends at experiment 263. No strategy
+finished locally. The continuous-survival candidate returned 61.05% same-close
+zero-cost CAGR, compared with 56.48% for the endpoint-retention control and
+67.67% for the incumbent. It failed the first-88-month admission gates, so the
+incumbent was retained. Saved-reader V4 initially rejected a one-ULP difference
+in the incumbent's diagnostic cumulative cost display, although orders,
+economic metrics, and both zero-cost exports matched. The additive V5 review
+subsequently passed, and the experiment formally closed after all 21,444
+protected archive members passed verification. The completion receipt SHA-256 is
+`5e22a3ed98dc068912d01a87ac8d36133b26d604738715b35a1366cc2095cd89`.
+The V4 failure and correction remain recorded in private provenance. No strategy
 is promoted by this source sync; the retained headline result remains 67.67% at
 zero transaction cost.
 
@@ -86,16 +92,17 @@ The additive `monthly_gain_survival264_saved_reader_v4.py` corrects the saved
 reader's explicit test-receipt binding to the registered `TESTS_V2.json`.
 The original reader and registered strategy files remain unchanged. Its 30
 synthetic regression checks passed, including the original 21 reader checks.
-The private addendum and receipt are still required for an actual local review;
-publishing this correction does not claim that experiment 264 has completed.
+The private addendum and receipt are required for an actual local review;
+the later V5 review and closure described above provide the completion evidence.
 
 The additive `monthly_gain_survival264_saved_reader_v5.py` addresses that
 post-outcome accounting-display discrepancy. It binds each summary fee exactly
 to its own chronological period-fee sum, retaining the existing bounded
 period-display check and exact checks on other summary fields and exports.
 It adds no aggregate tolerance and leaves frozen V4 and strategy files unchanged.
-Its 44 synthetic checks passed. Actual V5 review and experiment closure have not
-run in this source-sync step; the V4 failure remains part of local evidence.
+Its 44 synthetic checks passed. Actual V5 review and experiment closure also
+passed locally before this source sync; this sync does not rerun those write-once
+phases. The V4 failure remains part of local evidence.
 
 The unregistered experiment-265 prototype compares daily positive-gain
 concentration with concentration across twelve fixed 21-session blocks. Its
@@ -103,8 +110,14 @@ pure kernel has 22 previously passed synthetic tests. This increment adds an
 independent mathematical implementation, metadata source binding, and selection
 integration with 21, 8, and 41 synthetic checks respectively. The integration
 retains the original universe, 52% non-calm core weight, and original support
-rules. No actual experiment-265 features, strategy backtest, registration, or
-promotion are included. Synthetic checks do not establish a return improvement.
+rules. The latest increment adds the lifecycle host, full independent validator,
+saved-result reader, and their tests. Their respective synthetic suites passed
+65, 35, and 52 checks on the exact exported source hashes. The host binds the
+completed experiment-264 receipt and the metadata source contract. Paper
+contracts are still being finalized before registration; they are not published
+as admitted experiment evidence. No actual experiment-265 features, strategy
+backtest, registration, or promotion are included. Synthetic checks do not
+establish a return improvement.
 
 ## Observer versions and account continuity
 
