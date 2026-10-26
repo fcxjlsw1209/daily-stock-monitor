@@ -45,6 +45,22 @@ The private completion receipts, market data, derived arrays, model fits, and
 trade exports are excluded from this source snapshot. Publishing this summary
 is not a claim that a fresh checkout can independently reproduce those results.
 
+## In-progress experiment 264 source
+
+This snapshot also includes nine Python source/test files for
+`monthly_gain_survival264`. They explore how long earlier gains survive before
+a subsequent closing-price breach, compared with an endpoint-retention control.
+They are **unregistered research drafts**, not a completed backtest or an
+approved observer strategy. No experiment-264 return is available.
+
+Synthetic validation covers the producer, independent implementation, source
+snapshot binding and orchestration. Formal registration, final contract review,
+real-input preparation and saved-result accounting remain pending. In
+particular, the saved-result reader must be reconciled with the new snapshot
+work counters before formal use. Local draft contracts and private evidence
+files are intentionally excluded. The completed research chain still ends at
+experiment 263 and the retained headline result remains 67.67% at zero cost.
+
 ## Observer versions and account continuity
 
 `outputs/paired_stock_monitor/run_pair.py` orchestrates all ten independent

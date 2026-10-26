@@ -1434,6 +1434,7 @@
     "work/followthrough166_validate_code.py": "a791c7f668941371c6ef4d321524ecb60b8dd0cc67fff0a2aeeecd3a5b19e3b2",
     "work/forecast_blend211_close_review.py": "fe6340ed0957890557064731f075133991af825acaa928111ff7196117131e71",
     "work/forecast_blend211_code_review.py": "e575146ad0039b720d60a08ea8322bd45c2ed6f585817160716cc81e6dd83381",
+    "work/gain_survival264_sources.py": "2e4c821c1f6caba3ad9366a470a4c61b0740b792947535be0e80e87712054a05",
     "work/identity206_close_review.py": "f86523ad59cb1b2bb8f18d831bd45bf6cfe43d3531232c02bd69592065386c2a",
     "work/identity206_source_review.py": "ace04d246e3e9e6f9958fb6c17b4b4ceb4c18fcf274f31886a29f162b7483fc1",
     "work/identity206_source_review_v2.py": "dda90a4c2790b2ca3eb2e279357be8912ceaacd3b9e84578dd3fc7533a0f2075",
@@ -1685,6 +1686,10 @@
     "work/monthly_forward_guidance132_runner.py": "e7768e7a7094c61c918f96887b04c044d25482070cfafa24735fcd065cb4aa97",
     "work/monthly_forward_guidance_contract_v1.py": "96b9f8f4953e37a413f7e7d345bf4d0d9dc97bafd306864e23af4ededb22b7c9",
     "work/monthly_forward_guidance_factor132.py": "22e8b6506828e8f2c040efd0bfd4c58b9bbfd7f3f3e63dc7075efbd94945df2b",
+    "work/monthly_gain_survival264_host.py": "4e7519b8285470c4cc75926c81c33fc383103ecc4f2a1a4044d1d9fb3db68a3f",
+    "work/monthly_gain_survival264_independent.py": "e28db13d2b1791fe8a31cd09c50b4a694acd28a57ab1fc491db12f395112f133",
+    "work/monthly_gain_survival264_kernel.py": "7537da4f0e39ab658333609d71d111086fe478dcaa5b9a358beedc4045a750fa",
+    "work/monthly_gain_survival264_saved_reader.py": "d1d490a53964a29d0e81b2a932637a58a9874d4347f083eabcb87b4ce46e1d9c",
     "work/monthly_growth_acceleration133_runner.py": "9d6f565c006c541ccf1a8a71794b10b7a69a6ed3827aca40dd8ec672924fbcfe",
     "work/monthly_identity_transfer206_host.py": "00051399f9b00864990b8807fb9bf3306d491ce01042fceddd8ff85f8c1695c6",
     "work/monthly_identity_transfer206_independent.py": "a321b2cd07eb2b19c08f7747842e18a47438d781bed9b474c8ef321ec9f5611e",
@@ -2520,6 +2525,10 @@
     "work/test_monthly_formation142_runner.py": "fa95674087010abc28d5b4f06cd5e274d1b2baa9dac7914b7141425f643a51eb",
     "work/test_monthly_formation142_selector.py": "84e72bf1c796bda1c31879cb8fc0f510f4d3f0c8e21ab70627afabdc5594fedf",
     "work/test_monthly_forward_guidance132_runner.py": "796feb1751775e8d1b9fe8fd53b0825eed9dda6414bb4b369c1a0f198637829a",
+    "work/test_monthly_gain_survival264_host.py": "11b9fa8d1b18243150d6cd6b24e87ba98f27b52c1df0657c63602c8273f83270",
+    "work/test_monthly_gain_survival264_independent.py": "5a7a4788b328ed8cfaced68e1678025f12000edf838cda8a3abc4aa54dd7db04",
+    "work/test_monthly_gain_survival264_kernel.py": "fdc9cf6bb5434ffc9989f197c6b8d594ac2167ef700a9d1c39e0707d1fa62d3a",
+    "work/test_monthly_gain_survival264_saved_reader.py": "5eaf308a22a8bd84ce166034262c7121e3770982cc9fb9c6abfd71c2ad88c76b",
     "work/test_monthly_growth_acceleration_pair_preflight.py": "b5f281ce7d018e9eda77bf60351ac275fdba5e0357afc7c32a7a30667b9726da",
     "work/test_monthly_hd_original_v2_independent_review.py": "742001a754722b7523f3b016c3d0683e8d1d033fea0acbabcb22570f0a9f98dd",
     "work/test_monthly_identity_transfer206_host.py": "c912878b8eaedb769ace56ed2912c36660a44e5524d1a5bf3cea66de7c0ce4e8",
@@ -11493,6 +11502,12 @@
       "sha256": "e575146ad0039b720d60a08ea8322bd45c2ed6f585817160716cc81e6dd83381",
       "mode": "0o644"
     },
+    "work/gain_survival264_sources.py": {
+      "workspace": "research",
+      "path": "work/gain_survival264_sources.py",
+      "sha256": "2e4c821c1f6caba3ad9366a470a4c61b0740b792947535be0e80e87712054a05",
+      "mode": "0o644"
+    },
     "work/identity206_close_review.py": {
       "workspace": "research",
       "path": "work/identity206_close_review.py",
@@ -12997,6 +13012,30 @@
       "workspace": "research",
       "path": "work/monthly_forward_guidance_factor132.py",
       "sha256": "22e8b6506828e8f2c040efd0bfd4c58b9bbfd7f3f3e63dc7075efbd94945df2b",
+      "mode": "0o644"
+    },
+    "work/monthly_gain_survival264_host.py": {
+      "workspace": "research",
+      "path": "work/monthly_gain_survival264_host.py",
+      "sha256": "4e7519b8285470c4cc75926c81c33fc383103ecc4f2a1a4044d1d9fb3db68a3f",
+      "mode": "0o644"
+    },
+    "work/monthly_gain_survival264_independent.py": {
+      "workspace": "research",
+      "path": "work/monthly_gain_survival264_independent.py",
+      "sha256": "e28db13d2b1791fe8a31cd09c50b4a694acd28a57ab1fc491db12f395112f133",
+      "mode": "0o644"
+    },
+    "work/monthly_gain_survival264_kernel.py": {
+      "workspace": "research",
+      "path": "work/monthly_gain_survival264_kernel.py",
+      "sha256": "7537da4f0e39ab658333609d71d111086fe478dcaa5b9a358beedc4045a750fa",
+      "mode": "0o644"
+    },
+    "work/monthly_gain_survival264_saved_reader.py": {
+      "workspace": "research",
+      "path": "work/monthly_gain_survival264_saved_reader.py",
+      "sha256": "d1d490a53964a29d0e81b2a932637a58a9874d4347f083eabcb87b4ce46e1d9c",
       "mode": "0o644"
     },
     "work/monthly_growth_acceleration133_runner.py": {
@@ -18007,6 +18046,30 @@
       "workspace": "research",
       "path": "work/test_monthly_forward_guidance132_runner.py",
       "sha256": "796feb1751775e8d1b9fe8fd53b0825eed9dda6414bb4b369c1a0f198637829a",
+      "mode": "0o644"
+    },
+    "work/test_monthly_gain_survival264_host.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_gain_survival264_host.py",
+      "sha256": "11b9fa8d1b18243150d6cd6b24e87ba98f27b52c1df0657c63602c8273f83270",
+      "mode": "0o644"
+    },
+    "work/test_monthly_gain_survival264_independent.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_gain_survival264_independent.py",
+      "sha256": "5a7a4788b328ed8cfaced68e1678025f12000edf838cda8a3abc4aa54dd7db04",
+      "mode": "0o644"
+    },
+    "work/test_monthly_gain_survival264_kernel.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_gain_survival264_kernel.py",
+      "sha256": "fdc9cf6bb5434ffc9989f197c6b8d594ac2167ef700a9d1c39e0707d1fa62d3a",
+      "mode": "0o644"
+    },
+    "work/test_monthly_gain_survival264_saved_reader.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_gain_survival264_saved_reader.py",
+      "sha256": "5eaf308a22a8bd84ce166034262c7121e3770982cc9fb9c6abfd71c2ad88c76b",
       "mode": "0o644"
     },
     "work/test_monthly_growth_acceleration_pair_preflight.py": {

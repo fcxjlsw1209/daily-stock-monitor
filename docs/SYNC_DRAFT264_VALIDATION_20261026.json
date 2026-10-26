@@ -1,0 +1,70 @@
+{
+  "completed_utc": "2026-10-26T06:13:37.676232+00:00",
+  "base_commit": "b00cd4a700b380d553b6ca200c631fd3d6defcb5",
+  "purpose": "Source-only incremental sync of unregistered experiment-264 draft; no new performance result.",
+  "source_export": {
+    "files": 2901,
+    "work_allowlist_count": 1890,
+    "excluded_local_scripts": 8,
+    "python_syntax_checks": 2610,
+    "source_and_published_hashes_verified": true,
+    "new_source_paths": [
+      "work/gain_survival264_sources.py",
+      "work/monthly_gain_survival264_host.py",
+      "work/monthly_gain_survival264_independent.py",
+      "work/monthly_gain_survival264_kernel.py",
+      "work/monthly_gain_survival264_saved_reader.py",
+      "work/test_monthly_gain_survival264_host.py",
+      "work/test_monthly_gain_survival264_independent.py",
+      "work/test_monthly_gain_survival264_kernel.py",
+      "work/test_monthly_gain_survival264_saved_reader.py"
+    ]
+  },
+  "tests": [
+    {
+      "suite": "base_and_exporter",
+      "tests": 23,
+      "exit_code": 0,
+      "verified_by": "root current tool terminal"
+    },
+    {
+      "suite": "264_saved_selection",
+      "tests": 8,
+      "exit_code": 0,
+      "verified_by": "root current wrapper terminal"
+    },
+    {
+      "suite": "264_kernel_synthetic",
+      "tests": 48,
+      "exit_code": 0,
+      "verified_by": "worker terminal report bound to published source hash"
+    },
+    {
+      "suite": "264_host_synthetic",
+      "tests": 58,
+      "exit_code": 0,
+      "verified_by": "worker terminal report bound to published source hash"
+    },
+    {
+      "suite": "264_independent_self",
+      "tests": 32,
+      "exit_code": 0,
+      "verified_by": "worker terminal report bound to published source hash"
+    },
+    {
+      "suite": "264_independent_bilateral",
+      "tests": 1,
+      "exit_code": 0,
+      "verified_by": "worker terminal report bound to published source hash"
+    }
+  ],
+  "draft_264_status": {
+    "registered": false,
+    "actual_backtest_run": false,
+    "formal_contract_review_pending": true,
+    "saved_reader_snapshot_counter_alignment_pending": true
+  },
+  "live_observers_run": false,
+  "private_data_or_credentials_exported": false,
+  "manifest_sha256": "a290e4fb1b50a1033da8ee664e1abe6e08e5c78f5758dc6ae406dff8c452bbd6"
+}
