@@ -153,6 +153,21 @@ host and final frozen contracts are not yet complete. Private draft contracts,
 progress records, fixtures, and model artifacts remain outside this snapshot.
 Experiment 265's actual preparation is still separate and pending at this sync.
 
+### Draft backup branch — 2026-10-26 20:11 UTC
+
+This branch additionally backs up the in-progress experiment-266 lifecycle host,
+saved-result reader, and host synthetic-test source at the recorded cutoff.
+The reader test file was not yet present. These draft files passed syntax and
+export scanning; their functional tests are not claimed by this backup. The
+base/exporter suite passed 24 tests. Existing 2,930 exports, including 106
+observer files, are unchanged. This branch contains 2,933 exports.
+
+No experiment registration, actual fitting, historical-control parity, new
+returns, or observer promotion follows from publishing these drafts. The
+private contracts, data and generated artifacts remain excluded. The stable
+`main` branch remains at `dbe3209`. See `SYNC_DRAFT266_BACKUP_20261026.json`
+for exact snapshot hashes. Ongoing edits after the cutoff are not included.
+
 ## Observer versions and account continuity
 
 `outputs/paired_stock_monitor/run_pair.py` orchestrates all ten independent

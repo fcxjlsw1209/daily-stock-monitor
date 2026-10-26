@@ -1,0 +1,33 @@
+{
+  "purpose": "Point-in-time backup of unfinished experiment-266 lifecycle code; not a tested release or model registration.",
+  "branch": "backup/research266-draft-20261026",
+  "base_commit": "dbe320980af4d30d234185dc0906b23b0bb10cbc",
+  "snapshot_cutoff_utc": "2026-10-26T20:11:39.103923+00:00",
+  "new_files": {
+    "work/monthly_monotone_tree266_host.py": "b86d91792555f595ef319c4871957e7661531dd99fc47ed68f1ed753b2360fe6",
+    "work/monthly_monotone_tree266_saved_reader.py": "d93e26d3349704077f43bf7fb872a778f028e7787e3887918690217e9ac9a775",
+    "work/test_monthly_monotone_tree266_host.py": "82a7a4c3e20012123c720393c8f4714ba968432096dc657118edd39526016372"
+  },
+  "exported_files": 2933,
+  "unchanged_previous_exports": 2930,
+  "unchanged_observer_exports": 106,
+  "checks": {
+    "python_syntax": "passed",
+    "export_credential_scan": "passed",
+    "published_hashes_and_modes": "passed",
+    "base_exporter_tests": {
+      "tests": 24,
+      "exit_code": 0,
+      "terminal_chunk": "680126",
+      "log_sha256": "8c10f014d0dfa695bf3cc009e7092180e65b891abf88d36a7c6c41e83f84f8a8"
+    }
+  },
+  "draft_functional_tests_claimed": false,
+  "saved_reader_test_file_available_at_cutoff": false,
+  "registered": false,
+  "actual_data_run_claimed": false,
+  "observer_code_or_state_changed": false,
+  "main_branch_changed": false,
+  "private_inputs_artifacts_credentials_exported": false,
+  "source_manifest_sha256": "b49f2b70366fdbf5098000b7cc2585289fb90a4919a1cb7c2f6ddfd26ca2cf69"
+}
