@@ -2,7 +2,8 @@
 
 This snapshot includes the six daily paper observers, four frozen monthly
 observers, historical-data validation tools, and the independent monthly
-research chain through completed experiment 264 and registered experiment 265.
+research chain through completed experiment 264, registered experiment 265,
+and the prospective experiment-266 implementation described below.
 Research sources retain their `outputs/`
 and `work/` paths. Observer sources come from the separate active local runtime;
 the research workspace's old observer backups are not the publishing source.
@@ -122,6 +123,35 @@ Python sources. Actual preparation has started locally; no completed selection,
 return comparison, or promotion is claimed by this snapshot. Private inputs,
 separate contract/review receipts, and generated preparation artifacts remain
 excluded. Synthetic checks and registration do not establish a return improvement.
+
+### Prospective experiment 266 source
+
+This increment adds the monotone weak-tree prototype, its independent validator,
+the first-88-month admission module, a historical-reference comparison helper,
+and their synthetic tests. The experiment
+compares the existing unconstrained weak-market tree adjustment with the same
+model constrained to be nondecreasing in its original long-momentum rank,
+holding the other inputs fixed. It retains the original monthly strategy core
+and treats the tree as a small scoring adjustment. The constraint does not imply
+monotone final portfolio returns or holdings.
+
+The producer, independent-validation, and admission suites passed 48, 31, and
+17 synthetic tests respectively on the exported source hashes. Tree refits use
+the same pinned learning library; they are not an independently implemented
+training algorithm. The separate structure, traversal, timing, selection, and
+accounting checks retain their stated scope.
+
+The reference helper passed another 22 synthetic checks. It compares supplied
+historical models, forecasts, rankings, and orders, enforcing prefix scope and
+bindings to inputs already verified by the caller. It does not load historical
+data, authenticate a caller merely from a `passed` flag, or establish actual
+historical-control parity on its own.
+
+Experiment 266 is still prospective: no registration, actual-data fitting,
+selection, return improvement, or observer promotion is claimed. Its lifecycle
+host and final frozen contracts are not yet complete. Private draft contracts,
+progress records, fixtures, and model artifacts remain outside this snapshot.
+Experiment 265's actual preparation is still separate and pending at this sync.
 
 ## Observer versions and account continuity
 

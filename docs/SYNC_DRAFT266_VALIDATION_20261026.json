@@ -1,0 +1,83 @@
+{
+  "completed_utc": "2026-10-26T19:54:34.681600+00:00",
+  "base_commit": "c6e6ccfaa1821ec9b49b367ccfb76c87c9296823",
+  "purpose": "Publish stable prospective experiment-266 modules and synthetic tests, without claiming actual preparation or improved returns.",
+  "source_export": {
+    "files": 2930,
+    "source_hashes_match": true,
+    "published_hashes_match": true,
+    "modes_match": true,
+    "unchanged_observer_exports": 106,
+    "changed_existing_exported_files": 0,
+    "new_files": [
+      "work/monthly_monotone_tree266_admission.py",
+      "work/monthly_monotone_tree266_independent.py",
+      "work/monthly_monotone_tree266_kernel.py",
+      "work/monthly_monotone_tree266_reference.py",
+      "work/test_monthly_monotone_tree266_admission.py",
+      "work/test_monthly_monotone_tree266_independent.py",
+      "work/test_monthly_monotone_tree266_kernel.py",
+      "work/test_monthly_monotone_tree266_reference.py"
+    ],
+    "new_source_sha256": {
+      "work/monthly_monotone_tree266_admission.py": "1b4199a384ac9ffaa43eb34775dd2c3ae094b743b55a3622ee6ac4f472050baf",
+      "work/monthly_monotone_tree266_independent.py": "7684252a5c5290e7a46298d4e4ef7350ac57274b03a0f4fd7e27935d0dc8b1d6",
+      "work/monthly_monotone_tree266_kernel.py": "dd5e5afb31c836dfb25835b4f1215491049b9015ebf96d0f677b3ca0a27f3c26",
+      "work/monthly_monotone_tree266_reference.py": "495e798b500461855dc6835eb04625bf62ed19c7f8035217f33af6a40f10d9f2",
+      "work/test_monthly_monotone_tree266_admission.py": "446ca2ae17ae7b1604d0748fef2430f150eb64b076d0a417bc9e5c31bc95a634",
+      "work/test_monthly_monotone_tree266_independent.py": "e7e1a55b4001167fe68fef541ea49e862efe2a251506fe13998d88c60440b0ae",
+      "work/test_monthly_monotone_tree266_kernel.py": "e9d708e970dd2787dcb1b2cf4ba9475e3112a76cbc7763146e8df20cb8ca6338",
+      "work/test_monthly_monotone_tree266_reference.py": "76678c41919432319795c622aada37ff98a7928a84314670fc2cf8269be06c5d"
+    },
+    "manifest_sha256": "4b3fce90e7148edb3ab84f4ab4037e34960c19d865576ea710cecdbcdc29ab3b"
+  },
+  "tests_this_sync": [
+    {
+      "suite": "admission",
+      "tests": 17,
+      "exit_code": 0,
+      "root_terminal_chunk": "564d23",
+      "log_sha256": "0c3fe67f9d59ad109e3efced6a6340d3b46aaca6771b6442cb694313a2e9c14d"
+    },
+    {
+      "suite": "kernel",
+      "tests": 48,
+      "exit_code": 0,
+      "root_terminal_chunk": "790985",
+      "log_sha256": "b184285c63ded6e7eebdd52a15b557c357fd565d7abb9bbd0b6a862ad41f41c5"
+    },
+    {
+      "suite": "independent",
+      "tests": 31,
+      "exit_code": 0,
+      "root_terminal_chunk": "85698a",
+      "log_sha256": "b990de87d8c0b5266e5422777524b22af865a9896fe9f7ffeb8f7e8954cd71e9"
+    },
+    {
+      "suite": "base_exporter",
+      "tests": 24,
+      "exit_code": 0,
+      "root_terminal_chunk": "a458a4",
+      "log_sha256": "e750fe9b2987aeaa81a266ac2381a97c69c6238e6dbd722a04bdd5d8fe144fbb"
+    },
+    {
+      "suite": "reference",
+      "tests": 22,
+      "exit_code": 0,
+      "root_terminal_chunk": "d1f0d3",
+      "log_sha256": "afd70885e52f9d91d7cee4fcf09f6aa1beedff59963003b78b95018adbac5aa0"
+    }
+  ],
+  "experiment266": {
+    "registered": false,
+    "actual_data_fits_claimed": false,
+    "actual_return_result_claimed": false,
+    "candidate_promoted": false,
+    "lifecycle_host_complete": false,
+    "private_drafts_excluded": true,
+    "reference_helper_synthetic_only": true
+  },
+  "source_roots_modified_by_sync": false,
+  "live_observers_run": false,
+  "credentials_or_private_data_exported": false
+}

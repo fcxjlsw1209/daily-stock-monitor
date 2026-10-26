@@ -1754,6 +1754,10 @@
     "work/monthly_monotone_path212_host.py": "52dcf755f28244013dbe5d049064512c8e1909c0f0be154eb5b961e43fb20893",
     "work/monthly_monotone_path212_independent.py": "8aa8022ecd18d2ccd2c3724e5d10de4e00c1589cd52dcda6157758467629e06c",
     "work/monthly_monotone_path212_kernel.py": "c3bdb3bdf138ed8389b288d3fa20957ae6f03e1c18b50a0c9b02fb287a80d97d",
+    "work/monthly_monotone_tree266_admission.py": "1b4199a384ac9ffaa43eb34775dd2c3ae094b743b55a3622ee6ac4f472050baf",
+    "work/monthly_monotone_tree266_independent.py": "7684252a5c5290e7a46298d4e4ef7350ac57274b03a0f4fd7e27935d0dc8b1d6",
+    "work/monthly_monotone_tree266_kernel.py": "dd5e5afb31c836dfb25835b4f1215491049b9015ebf96d0f677b3ca0a27f3c26",
+    "work/monthly_monotone_tree266_reference.py": "495e798b500461855dc6835eb04625bf62ed19c7f8035217f33af6a40f10d9f2",
     "work/monthly_nested_trend199_host.py": "e2e08f78b719ad856432f6796a0d7b97aaf71d5cb55801890ed59c78226211fd",
     "work/monthly_nested_trend199_independent.py": "5e8f5c622130465715d564f9ee101550850b2cdbc15c5cc7cf4ee84a1a93afe7",
     "work/monthly_nested_trend199_kernel.py": "861963f7710b5821aa53410f69f7978cb1d6d76eed3c593248a2f9cefa52fb90",
@@ -2601,6 +2605,10 @@
     "work/test_monthly_monotone_path212_host.py": "eb2cddb9138145a0a2c77ceb593fe693c161b4b9c3dc34f395b7c53733e26e63",
     "work/test_monthly_monotone_path212_independent.py": "d0e62ff05f15c045978b74d5717d7bdde3afdd8f1ba0a0608231ada308d0e6c9",
     "work/test_monthly_monotone_path212_kernel.py": "41072d0b3b6a4d558ed92e0f07ca5ce7959f52bd0a9344fe7f673902f6d3d09b",
+    "work/test_monthly_monotone_tree266_admission.py": "446ca2ae17ae7b1604d0748fef2430f150eb64b076d0a417bc9e5c31bc95a634",
+    "work/test_monthly_monotone_tree266_independent.py": "e7e1a55b4001167fe68fef541ea49e862efe2a251506fe13998d88c60440b0ae",
+    "work/test_monthly_monotone_tree266_kernel.py": "e9d708e970dd2787dcb1b2cf4ba9475e3112a76cbc7763146e8df20cb8ca6338",
+    "work/test_monthly_monotone_tree266_reference.py": "76678c41919432319795c622aada37ff98a7928a84314670fc2cf8269be06c5d",
     "work/test_monthly_nested_trend199_host.py": "25c84597002018166fc85cfc1363f4b0428d7c625b71d758f76b408b02e37679",
     "work/test_monthly_nested_trend199_independent.py": "da20f7c618773eb808eb59f10c47cee88027609ac70ec530514ce1e352c1d829",
     "work/test_monthly_nested_trend199_kernel.py": "989099829ccdace1c0b85ef09ec86bc5bbaff1f6b3d8b31546612559fdd12135",
@@ -13443,6 +13451,30 @@
       "sha256": "c3bdb3bdf138ed8389b288d3fa20957ae6f03e1c18b50a0c9b02fb287a80d97d",
       "mode": "0o644"
     },
+    "work/monthly_monotone_tree266_admission.py": {
+      "workspace": "research",
+      "path": "work/monthly_monotone_tree266_admission.py",
+      "sha256": "1b4199a384ac9ffaa43eb34775dd2c3ae094b743b55a3622ee6ac4f472050baf",
+      "mode": "0o644"
+    },
+    "work/monthly_monotone_tree266_independent.py": {
+      "workspace": "research",
+      "path": "work/monthly_monotone_tree266_independent.py",
+      "sha256": "7684252a5c5290e7a46298d4e4ef7350ac57274b03a0f4fd7e27935d0dc8b1d6",
+      "mode": "0o644"
+    },
+    "work/monthly_monotone_tree266_kernel.py": {
+      "workspace": "research",
+      "path": "work/monthly_monotone_tree266_kernel.py",
+      "sha256": "dd5e5afb31c836dfb25835b4f1215491049b9015ebf96d0f677b3ca0a27f3c26",
+      "mode": "0o644"
+    },
+    "work/monthly_monotone_tree266_reference.py": {
+      "workspace": "research",
+      "path": "work/monthly_monotone_tree266_reference.py",
+      "sha256": "495e798b500461855dc6835eb04625bf62ed19c7f8035217f33af6a40f10d9f2",
+      "mode": "0o644"
+    },
     "work/monthly_nested_trend199_host.py": {
       "workspace": "research",
       "path": "work/monthly_nested_trend199_host.py",
@@ -18523,6 +18555,30 @@
       "workspace": "research",
       "path": "work/test_monthly_monotone_path212_kernel.py",
       "sha256": "41072d0b3b6a4d558ed92e0f07ca5ce7959f52bd0a9344fe7f673902f6d3d09b",
+      "mode": "0o644"
+    },
+    "work/test_monthly_monotone_tree266_admission.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_monotone_tree266_admission.py",
+      "sha256": "446ca2ae17ae7b1604d0748fef2430f150eb64b076d0a417bc9e5c31bc95a634",
+      "mode": "0o644"
+    },
+    "work/test_monthly_monotone_tree266_independent.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_monotone_tree266_independent.py",
+      "sha256": "e7e1a55b4001167fe68fef541ea49e862efe2a251506fe13998d88c60440b0ae",
+      "mode": "0o644"
+    },
+    "work/test_monthly_monotone_tree266_kernel.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_monotone_tree266_kernel.py",
+      "sha256": "e9d708e970dd2787dcb1b2cf4ba9475e3112a76cbc7763146e8df20cb8ca6338",
+      "mode": "0o644"
+    },
+    "work/test_monthly_monotone_tree266_reference.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_monotone_tree266_reference.py",
+      "sha256": "76678c41919432319795c622aada37ff98a7928a84314670fc2cf8269be06c5d",
       "mode": "0o644"
     },
     "work/test_monthly_nested_trend199_host.py": {
