@@ -2,8 +2,9 @@
 
 This snapshot includes the six daily paper observers, four frozen monthly
 observers, historical-data validation tools, and the independent monthly
-research chain through completed experiment 264, registered experiment 265,
-and the prospective experiment-266 implementation described below.
+research chain through completed experiment 265, registered experiment 266
+with local replay and saved-result review finished but final closure pending,
+and the unregistered experiment-267 prototype described below.
 Research sources retain their `outputs/`
 and `work/` paths. Observer sources come from the separate active local runtime;
 the research workspace's old observer backups are not the publishing source.
@@ -118,13 +119,14 @@ completed experiment-264 receipt and the metadata source contract. The final
 paper and implementation contracts passed review, and 192 formal synthetic
 checks passed before registration. The registered PLAN SHA-256 is
 `628cd752c6112288cca49fce9d26144e43021a48ca63a5644e4567ed9a6eff48`.
-This increment publishes that PLAN without changing the previously published
-Python sources. Actual preparation has started locally; no completed selection,
-return comparison, or promotion is claimed by this snapshot. Private inputs,
-separate contract/review receipts, and generated preparation artifacts remain
-excluded. Synthetic checks and registration do not establish a return improvement.
+This increment retains that PLAN and the previously published Python sources.
+Actual preparation, selection, diagnostics, saved-result review, and final closure
+have now completed locally. The first-88-month admission gates retained the
+incumbent; no strategy was promoted. The completion receipt SHA-256 is
+`c2505d17ed02db8d177419c56a41fee0f687fe0fc2030f1cf244e10710fb97fa`.
+Private inputs, contract/review receipts, and generated artifacts remain excluded.
 
-### Prospective experiment 266 source
+### Registered experiment 266 source
 
 This increment adds the monotone weak-tree prototype, its independent validator,
 the first-88-month admission module, a historical-reference comparison helper,
@@ -156,12 +158,33 @@ historical-control mappings and accounting exports. Its 60 synthetic tests and
 the host's 35 synthetic tests passed on the exact source hashes published here.
 These tests do not constitute an actual historical replay.
 
-Experiment 266 is still prospective: final frozen contracts and registration are
-pending. No actual-data fitting, selection, return improvement, or observer
-promotion is claimed. Private draft contracts, progress records, fixtures, and
-model artifacts remain outside this snapshot. Experiment 265's actual preparation
-is separate and pending at this sync. See
-[the lifecycle sync validation](SYNC_266_LIFECYCLE_VALIDATION_20261026.json).
+Experiment 266 is now registered; this snapshot adds its original `PLAN.json`
+(SHA-256 `f9e9643c8e3969d1fdd25b47727adf386e1d2e67e4b3b3c885f5f116d0700407`).
+Actual preparation, first-88-month selection, later-period diagnostics, and the
+saved-result review passed locally. The constrained candidate and unconstrained
+control produced identical monthly holdings and about 66.85% same-close,
+zero-cost CAGR, below the retained 67.67% incumbent. The candidate failed the
+admission gates. The final protected-archive closure step is still pending;
+this publication does not run or claim that closure.
+
+Private contracts, progress records, fixtures, models and result exports remain
+outside this snapshot. The earlier
+[lifecycle sync validation](SYNC_266_LIFECYCLE_VALIDATION_20261026.json) records
+its then-prospective source state; it is not the current experiment status.
+
+### Unregistered experiment 267 prototype
+
+Two new caller-input-only Python files implement and test a prospective Ridge
+comparison: learning the original rank-3 versus rank-4 return gap, with all
+pairs among the original top five as a control. They retain the original
+boundary-selector callback and add no file loading or live-account execution.
+The module requires a future caller to authenticate the original scores,
+eligibility, features and adjusted-price endpoints.
+
+All 43 synthetic checks passed on the published hashes. The prototype has not
+been registered or run on actual research data; synthetic tests do not establish
+historical coverage, a return improvement, or a production strategy. See
+[the current source-sync validation](SYNC_267_PROTOTYPE_VALIDATION_20261026.json).
 
 ## Observer versions and account continuity
 

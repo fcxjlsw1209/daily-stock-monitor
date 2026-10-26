@@ -752,6 +752,7 @@
     "outputs/monthly_model_scope70/PLAN.json": "f3e953be1aca4ba8ca78e218d3f034c05ae88d56f588becba5f3be542d0a1d56",
     "outputs/monthly_model_scope70/study.py": "b13619cf253a0d1cab7079b9da88b8df464e9a322836380ae0a039037ba9f711",
     "outputs/monthly_monotone_path212/PLAN.json": "f8d6f427f3b2e7e96dc550ced3f0e5daca9e4a6d439144c18e39d6a2e79abdd3",
+    "outputs/monthly_monotone_tree266/PLAN.json": "f9e9643c8e3969d1fdd25b47727adf386e1d2e67e4b3b3c885f5f116d0700407",
     "outputs/monthly_msft_nvda_same_report_admission_v1/PLAN.json": "7e50c9c94c749d10c9acce74bb2af4765c657e12d5cdb3d0a71505e6300ceba0",
     "outputs/monthly_msft_nvda_same_report_preflight_v1/PLAN.json": "33024f402deb6dbc0c36ea8b2b1219cf6c69036b417a7865b128345e574882b2",
     "outputs/monthly_msft_revenue_basis156/inspect_note_context.py": "625bf09a54d7e5c8538466436a91e4ce2ed195af4745124ec3576ae815b066c2",
@@ -1551,6 +1552,7 @@
     "work/monthly_block_sharpe242_host.py": "06c79540c2bc87f7263932bdf957384971f161f971d9e950f5cc32376f40c2c9",
     "work/monthly_block_sharpe242_independent.py": "d06100f847103e258ff56a4905e3b2b93401d008d6d81a58f78edfb43f07c180",
     "work/monthly_block_sharpe242_kernel.py": "af2e04d922fbed27abeff78862216f03a879f8cfa4e57026160ef44eabfe9d2d",
+    "work/monthly_boundary_pair267_kernel.py": "fa0286f848c3f1dfb1e15df3e5bc69d3625b54cfddfccb13d15a1726dcf8e5a3",
     "work/monthly_breadth_pair202_host.py": "7dd0c0fa76cab0f27d048ad8f43dcda48e328ec612af136e9b6a91bdc8227cbe",
     "work/monthly_breadth_pair202_independent.py": "da54cf664a1c511210c187c0e57dfb434e66bcbe1be799d27223fd72e6cba1d9",
     "work/monthly_breadth_pair202_kernel.py": "7188416e129f84c07abc8bada368af3da1c1b3807e83eaee6a7a95d9b9888862",
@@ -2413,6 +2415,7 @@
     "work/test_monthly_block_sharpe242_host.py": "134eebdfb1449e7c10b264780e776b8d4c0b1326fbddbc50394900ad73e3f9d5",
     "work/test_monthly_block_sharpe242_independent.py": "ad703b3d095fffdb1407f0a8b86759e551286e6b44e10b31f699a1dccf87c25e",
     "work/test_monthly_block_sharpe242_kernel.py": "a0603a85fd7b10f4e66dd9f3b152fb15d24bc376dbeb1bc3916f7ce310912daf",
+    "work/test_monthly_boundary_pair267_kernel.py": "75c567ea95c5309d6b7651255d99fd4e8297ee6e54f1bac3a2d29438bf51f796",
     "work/test_monthly_breadth_pair202_host.py": "48fcec38769bc15b293f37b057864e5370f3af635287b6a0b5873e97e137e7fb",
     "work/test_monthly_breadth_pair202_independent.py": "2aac40f1aeeebe31d55e24484787b5c90e78deade5e9196d1a8ed1911759b138",
     "work/test_monthly_breadth_pair202_kernel.py": "e807313ad032c148c4dc1894369efc50b7fd4c43a293ebebd52054cde8f2ed47",
@@ -7443,6 +7446,12 @@
       "sha256": "f8d6f427f3b2e7e96dc550ced3f0e5daca9e4a6d439144c18e39d6a2e79abdd3",
       "mode": "0o644"
     },
+    "outputs/monthly_monotone_tree266/PLAN.json": {
+      "workspace": "research",
+      "path": "outputs/monthly_monotone_tree266/PLAN.json",
+      "sha256": "f9e9643c8e3969d1fdd25b47727adf386e1d2e67e4b3b3c885f5f116d0700407",
+      "mode": "0o644"
+    },
     "outputs/monthly_msft_nvda_same_report_admission_v1/PLAN.json": {
       "workspace": "research",
       "path": "outputs/monthly_msft_nvda_same_report_admission_v1/PLAN.json",
@@ -12235,6 +12244,12 @@
       "workspace": "research",
       "path": "work/monthly_block_sharpe242_kernel.py",
       "sha256": "af2e04d922fbed27abeff78862216f03a879f8cfa4e57026160ef44eabfe9d2d",
+      "mode": "0o644"
+    },
+    "work/monthly_boundary_pair267_kernel.py": {
+      "workspace": "research",
+      "path": "work/monthly_boundary_pair267_kernel.py",
+      "sha256": "fa0286f848c3f1dfb1e15df3e5bc69d3625b54cfddfccb13d15a1726dcf8e5a3",
       "mode": "0o644"
     },
     "work/monthly_breadth_pair202_host.py": {
@@ -17407,6 +17422,12 @@
       "workspace": "research",
       "path": "work/test_monthly_block_sharpe242_kernel.py",
       "sha256": "a0603a85fd7b10f4e66dd9f3b152fb15d24bc376dbeb1bc3916f7ce310912daf",
+      "mode": "0o644"
+    },
+    "work/test_monthly_boundary_pair267_kernel.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_boundary_pair267_kernel.py",
+      "sha256": "75c567ea95c5309d6b7651255d99fd4e8297ee6e54f1bac3a2d29438bf51f796",
       "mode": "0o644"
     },
     "work/test_monthly_breadth_pair202_host.py": {

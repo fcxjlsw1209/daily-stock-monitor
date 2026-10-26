@@ -1,0 +1,51 @@
+{
+  "purpose": "Publish registered experiment-266 PLAN and unregistered experiment-267 caller-input prototype; do not rerun research or modify observers.",
+  "snapshot_utc": "2026-10-26T21:29:38.559148+00:00",
+  "base_commit": "4657e142fae832fc37d78e669f5912a39e131641",
+  "new_files": {
+    "outputs/monthly_monotone_tree266/PLAN.json": "f9e9643c8e3969d1fdd25b47727adf386e1d2e67e4b3b3c885f5f116d0700407",
+    "work/monthly_boundary_pair267_kernel.py": "fa0286f848c3f1dfb1e15df3e5bc69d3625b54cfddfccb13d15a1726dcf8e5a3",
+    "work/test_monthly_boundary_pair267_kernel.py": "75c567ea95c5309d6b7651255d99fd4e8297ee6e54f1bac3a2d29438bf51f796"
+  },
+  "exported_files": 2937,
+  "unchanged_previous_exports": 2934,
+  "unchanged_observer_exports": 106,
+  "checks": {
+    "base_exporter": {
+      "tests": 24,
+      "exit_code": 0,
+      "session_id": 91061,
+      "terminal_chunk": "244172"
+    },
+    "prototype_synthetic": {
+      "tests": 43,
+      "exit_code": 0,
+      "terminal_chunk": "591b3a",
+      "log_sha256": "64a5c7062dbcccce1f5c5d530ef1aa0270f617fe98f9ebea2cb7eaaab9537074"
+    },
+    "independent_manifest_audit": {
+      "exit_code": 0,
+      "terminal_chunk": "d67da9",
+      "all_source_published_hashes_and_modes_match": true
+    }
+  },
+  "source_checks": {
+    "syntax": "passed",
+    "credential_scan": true,
+    "hashes": "passed",
+    "modes": "passed"
+  },
+  "experiment_266": {
+    "registered": true,
+    "actual_replay_and_saved_reader_passed": true,
+    "final_closure_complete": false
+  },
+  "experiment_267": {
+    "registered": false,
+    "actual_run_claimed": false,
+    "pure_prototype": true
+  },
+  "observer_code_or_state_changed": false,
+  "private_inputs_artifacts_credentials_exported": false,
+  "source_manifest_sha256": "a847aece17e4c4c3983fef0f8c60ea3b64e200b2ba79b32692988627e8ed720e"
+}
