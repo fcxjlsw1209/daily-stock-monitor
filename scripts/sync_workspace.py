@@ -46,6 +46,13 @@ REVIEWED_TEST_URLS = {
 REVIEWED_TEST_VALUES = {
     'test_verify_residual246_vox2014_source.py': {'not-a-secret'},
 }
+# Query rejection fixtures require the exact filename, matched query, and hash
+# of the entire UTF-8 source line (without its newline). Extra literals on the
+# same line invalidate the exception; every other line is scanned normally.
+REVIEWED_QUERY_FIXTURE_LINES = {
+    'collect_form4_source_probe.py': {
+        '?token=x': 'ac02d02e3e99d7b6891cc970bd2ad02162b9daae99e48447bc2db63637f4afe9'},
+}
 # Independently reviewed research permission prose and synthetic leak-detection
 # fixtures. Match the filename, field, and exact UTF-8 literal hash; never relax
 # checks for every authorization field or every test TOKEN.
@@ -158,6 +165,13 @@ def inspect_source(path, content=None):
         raise ValueError(f'Private key marker: {path.name}')
     for match in CREDENTIAL_URL.finditer(text):
         value = match.group(1)
+        expected = REVIEWED_QUERY_FIXTURE_LINES.get(path.name, {}).get(match.group(0))
+        if expected is not None:
+            line_start = text.rfind('\n', 0, match.start()) + 1
+            line_end = text.find('\n', match.end())
+            line = text[line_start:line_end if line_end >= 0 else len(text)]
+            if hashlib.sha256(line.encode('utf-8')).hexdigest() == expected:
+                continue
         # Alpha Vantage publishes this sample key. Restrict the exception to
         # its exact host and query value, not other providers or credentials.
         if match.group(0).lower() in {'?apikey=demo', '&apikey=demo'}:

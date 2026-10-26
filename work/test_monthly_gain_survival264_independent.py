@@ -130,6 +130,17 @@ class SourceTests(unittest.TestCase):
         for n in (0,1):
             out,_=run(args,n,cap=cap);check=verify(args,out,cap,n)
             self.assertEqual(check['original_source_snapshot_price_observations'],0);self.assertEqual(check['original_source_snapshot_hashes'],0)
+    def _snapshot_invalid_missing_replacement(self,replacement):
+        args=copy.deepcopy(self.args);p,m,c,a,r=args;p['adj']=p['adj'].astype(object)
+        p['adj'].iat[0,0]=float('nan');args=refresh(args);receipt,cap=proof(args)
+        ind.validate_source_snapshot(cap,p,m,c,len(m['dates']))
+        p['adj'].iat[0,0]=replacement
+        with patch.object(ind,'measure',side_effect=AssertionError('Invalid snapshot type must precede gain mathematics')):
+            with self.assertRaisesRegex(ValueError,'Snapshot original real nonboolean'):run(args,cap=cap)
+    def test_snapshot_history_nan_cannot_become_NaT(self):
+        self._snapshot_invalid_missing_replacement(pd.NaT)
+    def test_snapshot_history_nan_cannot_become_complex_nan(self):
+        self._snapshot_invalid_missing_replacement(complex(float('nan'),0.))
     def test_consumed_identity_core_tamper(self):
         args=copy.deepcopy(self.args);args[1]['symbols'][2][0]='OTHER'
         with self.assertRaises(ValueError):run(args,cap=self.cap)

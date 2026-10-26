@@ -134,10 +134,11 @@ def source_snapshot(panel,meta,calendar,n):
     for symbol in names:
         values=[]
         for value in frame.loc[index,symbol].tolist():
-            if pd.isna(value):values.append(float('nan'));continue
+            if value is None or value is pd.NA:values.append(float('nan'));continue
             require(isinstance(value,Real) and not isinstance(value,(bool,np.bool_)),'Snapshot original real nonboolean')
-            try:values.append(float(value))
+            try:converted=float(value)
             except (TypeError,ValueError,OverflowError) as exc:raise ValueError('Snapshot original conversion') from exc
+            values.append(float('nan') if math.isnan(converted) else converted)
         columns.append(np.asarray(values,dtype='<f8').tobytes())
     columns=tuple(columns);return dates,names,columns,snapshot_digest(dates,names,columns)
 class _OriginalProof:

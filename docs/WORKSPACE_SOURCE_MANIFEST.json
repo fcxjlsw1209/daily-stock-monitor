@@ -692,6 +692,7 @@
     "outputs/monthly_forecast_blend211/PLAN.json": "8e230176fb49ea40dfafb41d6ebd2be2d66853b7d7b06fc91cb8ee383bba139e",
     "outputs/monthly_formation142/FROZEN.json": "7f0d499d89f44c1d08c0ffd830a2f381b5a1d3f6e469af868620d0952837247a",
     "outputs/monthly_formation142/PLAN.json": "b575682e3b131bf952e1765975da0b1f69d26dedd866c444abc62518bf08ac99",
+    "outputs/monthly_gain_survival264/PLAN.json": "fef75a47d4607476c42a1a96e74a44ce7497c707487d2ffe844300d0deaddf84",
     "outputs/monthly_guidance130/study.py": "f85b961cd7597e4bd0537061b579848c5bd3e2b84d11a41798a85d75b5c3c08a",
     "outputs/monthly_guidance_realization136/PLAN.json": "94605bae8f215153676ccadbbc4871e281fda030b205851b267e5b54fd95f8a9",
     "outputs/monthly_guidance_reset/study.py": "b91b76b87b419d786dde6a9951515850d74e7eb9b6d2810a33bb2282bfa7fc2b",
@@ -1365,6 +1366,7 @@
     "work/cmf200_code_review.py": "b847c45e9cd96b5e022f302fba1365ef536c175dbcde50bf88187d0a5b8714ac",
     "work/cmf200_source_review.py": "1cd0cafb08d92973a556cb32bc1b24548b1c7b9328cd466ffce488947e195d95",
     "work/collect_filing157_tests.py": "319fb77cfc6ee01bee16a2d833d025df03d6964163a9b86be46fcbd8c1862648",
+    "work/collect_form4_source_probe.py": "578f133af690be42c32af30c42add8d86a04f2a34ba981d3aa57e90632445baa",
     "work/collect_monthly_paired_target143_tests.py": "cfe00e728c4f3a152096d04a746a1cac3c44a88fbb9f1439eb5998379b4d48de",
     "work/collect_ownsector238_vox.py": "3d885637e5cf848827550080f1e8906a3a1664aaa1f0f390df63b4881a08bf10",
     "work/collect_residual246_vox2014.py": "52556425440e7dfbd1209f94a8b4bfc728175cb1a4ccb413ce8d4fa701547980",
@@ -1686,10 +1688,10 @@
     "work/monthly_forward_guidance132_runner.py": "e7768e7a7094c61c918f96887b04c044d25482070cfafa24735fcd065cb4aa97",
     "work/monthly_forward_guidance_contract_v1.py": "96b9f8f4953e37a413f7e7d345bf4d0d9dc97bafd306864e23af4ededb22b7c9",
     "work/monthly_forward_guidance_factor132.py": "22e8b6506828e8f2c040efd0bfd4c58b9bbfd7f3f3e63dc7075efbd94945df2b",
-    "work/monthly_gain_survival264_host.py": "4e7519b8285470c4cc75926c81c33fc383103ecc4f2a1a4044d1d9fb3db68a3f",
-    "work/monthly_gain_survival264_independent.py": "e28db13d2b1791fe8a31cd09c50b4a694acd28a57ab1fc491db12f395112f133",
+    "work/monthly_gain_survival264_host.py": "74d6d9c2d678e5dd0b5408aff5a33a6f7ebbef5157d6be9c3b04b80a0f1602c0",
+    "work/monthly_gain_survival264_independent.py": "d54f52ce6749ae1d71e0c8e47f885a84b4c6f9abbcf2853f9995ef7453e8d5cf",
     "work/monthly_gain_survival264_kernel.py": "7537da4f0e39ab658333609d71d111086fe478dcaa5b9a358beedc4045a750fa",
-    "work/monthly_gain_survival264_saved_reader.py": "d1d490a53964a29d0e81b2a932637a58a9874d4347f083eabcb87b4ce46e1d9c",
+    "work/monthly_gain_survival264_saved_reader.py": "e1cb3f142c068762eff25593f1ee9b85e3ab60f08369d1a284cfbf62c7b50cdf",
     "work/monthly_growth_acceleration133_runner.py": "9d6f565c006c541ccf1a8a71794b10b7a69a6ed3827aca40dd8ec672924fbcfe",
     "work/monthly_identity_transfer206_host.py": "00051399f9b00864990b8807fb9bf3306d491ce01042fceddd8ff85f8c1695c6",
     "work/monthly_identity_transfer206_independent.py": "a321b2cd07eb2b19c08f7747842e18a47438d781bed9b474c8ef321ec9f5611e",
@@ -2526,9 +2528,9 @@
     "work/test_monthly_formation142_selector.py": "84e72bf1c796bda1c31879cb8fc0f510f4d3f0c8e21ab70627afabdc5594fedf",
     "work/test_monthly_forward_guidance132_runner.py": "796feb1751775e8d1b9fe8fd53b0825eed9dda6414bb4b369c1a0f198637829a",
     "work/test_monthly_gain_survival264_host.py": "11b9fa8d1b18243150d6cd6b24e87ba98f27b52c1df0657c63602c8273f83270",
-    "work/test_monthly_gain_survival264_independent.py": "5a7a4788b328ed8cfaced68e1678025f12000edf838cda8a3abc4aa54dd7db04",
+    "work/test_monthly_gain_survival264_independent.py": "b61e8c88bf6d33cac3cf5a179bd740e5934ae2039841f7a86d035ef2f64fdbb2",
     "work/test_monthly_gain_survival264_kernel.py": "fdc9cf6bb5434ffc9989f197c6b8d594ac2167ef700a9d1c39e0707d1fa62d3a",
-    "work/test_monthly_gain_survival264_saved_reader.py": "5eaf308a22a8bd84ce166034262c7121e3770982cc9fb9c6abfd71c2ad88c76b",
+    "work/test_monthly_gain_survival264_saved_reader.py": "30246db7ad95143d5655b795eba1642e7d711bdc63d5637500c9b5ca9963438a",
     "work/test_monthly_growth_acceleration_pair_preflight.py": "b5f281ce7d018e9eda77bf60351ac275fdba5e0357afc7c32a7a30667b9726da",
     "work/test_monthly_hd_original_v2_independent_review.py": "742001a754722b7523f3b016c3d0683e8d1d033fea0acbabcb22570f0a9f98dd",
     "work/test_monthly_identity_transfer206_host.py": "c912878b8eaedb769ace56ed2912c36660a44e5524d1a5bf3cea66de7c0ce4e8",
@@ -7050,6 +7052,12 @@
       "sha256": "b575682e3b131bf952e1765975da0b1f69d26dedd866c444abc62518bf08ac99",
       "mode": "0o644"
     },
+    "outputs/monthly_gain_survival264/PLAN.json": {
+      "workspace": "research",
+      "path": "outputs/monthly_gain_survival264/PLAN.json",
+      "sha256": "fef75a47d4607476c42a1a96e74a44ce7497c707487d2ffe844300d0deaddf84",
+      "mode": "0o644"
+    },
     "outputs/monthly_guidance130/study.py": {
       "workspace": "research",
       "path": "outputs/monthly_guidance130/study.py",
@@ -11088,6 +11096,12 @@
       "sha256": "319fb77cfc6ee01bee16a2d833d025df03d6964163a9b86be46fcbd8c1862648",
       "mode": "0o644"
     },
+    "work/collect_form4_source_probe.py": {
+      "workspace": "research",
+      "path": "work/collect_form4_source_probe.py",
+      "sha256": "578f133af690be42c32af30c42add8d86a04f2a34ba981d3aa57e90632445baa",
+      "mode": "0o644"
+    },
     "work/collect_monthly_paired_target143_tests.py": {
       "workspace": "research",
       "path": "work/collect_monthly_paired_target143_tests.py",
@@ -13017,13 +13031,13 @@
     "work/monthly_gain_survival264_host.py": {
       "workspace": "research",
       "path": "work/monthly_gain_survival264_host.py",
-      "sha256": "4e7519b8285470c4cc75926c81c33fc383103ecc4f2a1a4044d1d9fb3db68a3f",
+      "sha256": "74d6d9c2d678e5dd0b5408aff5a33a6f7ebbef5157d6be9c3b04b80a0f1602c0",
       "mode": "0o644"
     },
     "work/monthly_gain_survival264_independent.py": {
       "workspace": "research",
       "path": "work/monthly_gain_survival264_independent.py",
-      "sha256": "e28db13d2b1791fe8a31cd09c50b4a694acd28a57ab1fc491db12f395112f133",
+      "sha256": "d54f52ce6749ae1d71e0c8e47f885a84b4c6f9abbcf2853f9995ef7453e8d5cf",
       "mode": "0o644"
     },
     "work/monthly_gain_survival264_kernel.py": {
@@ -13035,7 +13049,7 @@
     "work/monthly_gain_survival264_saved_reader.py": {
       "workspace": "research",
       "path": "work/monthly_gain_survival264_saved_reader.py",
-      "sha256": "d1d490a53964a29d0e81b2a932637a58a9874d4347f083eabcb87b4ce46e1d9c",
+      "sha256": "e1cb3f142c068762eff25593f1ee9b85e3ab60f08369d1a284cfbf62c7b50cdf",
       "mode": "0o644"
     },
     "work/monthly_growth_acceleration133_runner.py": {
@@ -18057,7 +18071,7 @@
     "work/test_monthly_gain_survival264_independent.py": {
       "workspace": "research",
       "path": "work/test_monthly_gain_survival264_independent.py",
-      "sha256": "5a7a4788b328ed8cfaced68e1678025f12000edf838cda8a3abc4aa54dd7db04",
+      "sha256": "b61e8c88bf6d33cac3cf5a179bd740e5934ae2039841f7a86d035ef2f64fdbb2",
       "mode": "0o644"
     },
     "work/test_monthly_gain_survival264_kernel.py": {
@@ -18069,7 +18083,7 @@
     "work/test_monthly_gain_survival264_saved_reader.py": {
       "workspace": "research",
       "path": "work/test_monthly_gain_survival264_saved_reader.py",
-      "sha256": "5eaf308a22a8bd84ce166034262c7121e3770982cc9fb9c6abfd71c2ad88c76b",
+      "sha256": "30246db7ad95143d5655b795eba1642e7d711bdc63d5637500c9b5ca9963438a",
       "mode": "0o644"
     },
     "work/test_monthly_growth_acceleration_pair_preflight.py": {

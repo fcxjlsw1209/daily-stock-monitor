@@ -1,0 +1,51 @@
+{
+  "completed_utc": "2026-10-26T17:46:18.498139+00:00",
+  "base_commit": "0ca6c98b5811626e81811ae3aba2399eb8de7d72",
+  "purpose": "Incremental source sync of registered experiment 264, saved-result validation fixes and a standalone Form 4 source probe. No new return result.",
+  "source_export": {
+    "files": 2903,
+    "source_hashes_match": true,
+    "published_hashes_match": true,
+    "modes_match": true,
+    "python_syntax_checks": 2611,
+    "publication_adaptations": [
+      "outputs/daily_stock_monitor/test_monitor.py",
+      "outputs/pressure_shadow_monitor/test_monitor.py"
+    ],
+    "manifest_sha256": "dddee67b4f3e136299b31ecbc11ebea4bd8a9083a77f62a845dbebe3d5666f7f"
+  },
+  "tests": [
+    {
+      "suite": "base_and_exporter",
+      "tests": 24,
+      "exit_code": 0,
+      "verified_by": "root current tool terminal",
+      "terminal_chunk_id": "0f2834"
+    },
+    {
+      "suite": "registered264_primary_synthetic",
+      "tests": 141,
+      "passed": true,
+      "verification": "existing passed receipt bound to all seven exact current source hashes; not rerun during sync",
+      "receipt_sha256": "32d65e5fe8adc0f9c350273dceab18485ccfdd3c95b071b9fcc7f43fb4c3b709"
+    },
+    {
+      "suite": "registered264_saved_reader_synthetic",
+      "tests": 21,
+      "passed": true,
+      "verification": "existing passed receipt bound to both exact current source hashes; not rerun during sync",
+      "receipt_sha256": "ef36d16628d40d16fd3651a2d2f2bdf8cfab254db69eaccd50464e4de2d73c71"
+    }
+  ],
+  "registered264": {
+    "plan_sha256": "fef75a47d4607476c42a1a96e74a44ce7497c707487d2ffe844300d0deaddf84",
+    "registered": true,
+    "preparation_complete": false,
+    "returns_published": false,
+    "candidate_promoted": false
+  },
+  "source_scan": "All exporter-selected files scanned before copying; exact filename/query/full-line hash exception for the reviewed synthetic query-rejection fixture only.",
+  "source_roots_modified_by_sync": false,
+  "live_observers_run": false,
+  "private_data_or_credentials_exported": false
+}

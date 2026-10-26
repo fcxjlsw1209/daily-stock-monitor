@@ -23,7 +23,7 @@ PHASE_TERMINALS=OUT/'PHASE_TERMINALS.json'
 SOURCE_SHA='e136a6bc21ec3a65e59cae3d6a28be6514cca471c5e1023e4a6eb88e8516f119'
 PREDECESSOR_SHA='0d602a5083d4bde0fae6b010b5cbd5178813059062ea7b2cef787cc306a64b83'
 NUMERICAL_VERIFICATION=dict(original_core_atol=1e-12,original_core_rtol=0.,canonical_numeric_tolerance=0.,rank_tolerance=0.,selection_tolerance=0.)
-TESTS=ROOT/'work/monthly_gain_survival264_TESTS.json'
+TESTS=ROOT/'work/monthly_gain_survival264_TESTS_V2.json'
 REVIEW=ROOT/'work/monthly_gain_survival264_CODE_REVIEW.json'
 ARMS=('incumbent_local67','endpoint_gain_age_control','continuous_gain_survival_candidate')
 PREFIXES=(0,1,53,88,122)

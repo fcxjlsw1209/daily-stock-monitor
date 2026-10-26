@@ -30,7 +30,7 @@ not alternative headline definitions. These are repeatedly researched historical
 results using an estimated historical Top32 and an assumed 17-ETF list; they do
 not establish a fully point-in-time universe or independent out-of-sample returns.
 
-The latest experiment, `monthly_risk_clock263`, compared current 63-session risk
+The latest completed experiment, `monthly_risk_clock263`, compared current 63-session risk
 normalization with a 63-session window ending 42 sessions earlier. The long
 momentum numerator still skips the recent 42 sessions. The current-window control
 exactly reproduced the incumbent. The lagged-window candidate changed 55 months,
@@ -45,21 +45,38 @@ The private completion receipts, market data, derived arrays, model fits, and
 trade exports are excluded from this source snapshot. Publishing this summary
 is not a claim that a fresh checkout can independently reproduce those results.
 
-## In-progress experiment 264 source
+## Registered experiment 264 source
 
-This snapshot also includes nine Python source/test files for
-`monthly_gain_survival264`. They explore how long earlier gains survive before
-a subsequent closing-price breach, compared with an endpoint-retention control.
-They are **unregistered research drafts**, not a completed backtest or an
-approved observer strategy. No experiment-264 return is available.
+This snapshot includes the nine Python source/test files for
+`monthly_gain_survival264` and its registered `PLAN.json`. It explores how long
+earlier gains survive before a later closing-price breach, compared with an
+endpoint-retention control. The frozen original strategy and observer rules are
+unchanged. The source snapshot includes the source-binding and invalid-value
+validation fixes made before registration, plus the reconciled saved-result
+accounting reader.
 
-Synthetic validation covers the producer, independent implementation, source
-snapshot binding and orchestration. Formal registration, final contract review,
-real-input preparation and saved-result accounting remain pending. In
-particular, the saved-result reader must be reconciled with the new snapshot
-work counters before formal use. Local draft contracts and private evidence
-files are intentionally excluded. The completed research chain still ends at
-experiment 263 and the retained headline result remains 67.67% at zero cost.
+The exact current primary source hashes passed 141 synthetic tests; the saved
+result reader and its tests passed another 21 synthetic checks. The registration
+PLAN SHA-256 is
+`fef75a47d4607476c42a1a96e74a44ce7497c707487d2ffe844300d0deaddf84`.
+At this snapshot, actual input preparation and truncated-history checks are in
+progress; no prepared results or experiment-264 returns have been published.
+The first-88-month admission check and later-period diagnostics have not yet
+completed. No strategy is promoted by this source sync. The completed research
+chain still ends at experiment 263 and the retained headline result remains
+67.67% at zero transaction cost.
+
+Private contracts, validation receipts, inputs and runtime progress files remain
+outside the Git snapshot. The earlier `SYNC_DRAFT264_VALIDATION_20261026.json`
+records the prior unregistered snapshot; it is retained as historical evidence,
+not the status of the current registered source.
+
+The additional `work/collect_form4_source_probe.py` is a separate experimental
+SEC filing-data collector with offline synthetic tests. It requires a configured
+compliant access declaration, stops after access/rate-limit failures, and saves
+provenance separately from offline replays. Its initial preflight made no HTTP
+requests because the required declaration was unavailable. This snapshot does
+not contain downloaded Form 4 data or a strategy based on those filings.
 
 ## Observer versions and account continuity
 

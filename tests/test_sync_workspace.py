@@ -187,6 +187,28 @@ DEMO_URL = "https://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apike
                 with self.subTest(filename=filename), self.assertRaises(ValueError):
                     sync.inspect_source(Path(filename), altered)
 
+    def test_reviewed_query_fixture_requires_exact_file_query_and_full_line(self):
+        filename = Path('collect_form4_source_probe.py')
+        reviewed_line = ("                    raw.replace(b'/files/a.zip', b'/../a.zip'), "
+                         "raw.replace(b'/files/a.zip', b'/a.zip?token=x')):")
+        content = ('def synthetic_test():\n'
+                   '    raw = b"synthetic"\n'
+                   '    for bad in (raw,\n' + reviewed_line + '\n'
+                   '        pass\n').encode('utf-8')
+        sync.inspect_source(filename, content)
+        invalid = [
+            (Path('other.py'), content),
+            (filename, content.replace(b'?token=x', b'?token=changed-value')),
+            (filename, content.replace(b'?token=x', b'?password=x')),
+            (filename, content.replace(reviewed_line.encode(),
+                (reviewed_line + ' # https://example.test/?token=additional-value').encode())),
+            (filename, content + b'URL = "https://example.test/?token=additional-value"\n'),
+            (filename, content + b'PASSWORD = "additional-sensitive-value"\n'),
+        ]
+        for path, altered in invalid:
+            with self.subTest(path=path), self.assertRaises(ValueError):
+                sync.inspect_source(path, altered)
+
     def test_every_candidate_is_checked_before_any_copy(self):
         existing = self.put(self.repo, 'outputs/study/a.py', 'VALUE = "keep"\n')
         self.put(self.research, 'outputs/study/a.py', 'VALUE = "new"\n')
