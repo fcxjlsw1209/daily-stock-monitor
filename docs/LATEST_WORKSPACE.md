@@ -2,8 +2,8 @@
 
 This snapshot includes the six daily paper observers, four frozen monthly
 observers, historical-data validation tools, and the independent monthly
-research chain through experiment 264, plus the unregistered experiment-265
-prototype. Research sources retain their `outputs/`
+research chain through completed experiment 264 and registered experiment 265.
+Research sources retain their `outputs/`
 and `work/` paths. Observer sources come from the separate active local runtime;
 the research workspace's old observer backups are not the publishing source.
 
@@ -86,7 +86,7 @@ provenance separately from offline replays. Its initial preflight made no HTTP
 requests because the required declaration was unavailable. This snapshot does
 not contain downloaded Form 4 data or a strategy based on those filings.
 
-### Incremental reader correction and experiment 265 prototype
+### Incremental reader correction and registered experiment 265
 
 The additive `monthly_gain_survival264_saved_reader_v4.py` corrects the saved
 reader's explicit test-receipt binding to the registered `TESTS_V2.json`.
@@ -104,7 +104,7 @@ Its 44 synthetic checks passed. Actual V5 review and experiment closure also
 passed locally before this source sync; this sync does not rerun those write-once
 phases. The V4 failure remains part of local evidence.
 
-The unregistered experiment-265 prototype compares daily positive-gain
+Experiment 265 compares daily positive-gain
 concentration with concentration across twelve fixed 21-session blocks. Its
 pure kernel has 22 previously passed synthetic tests. This increment adds an
 independent mathematical implementation, metadata source binding, and selection
@@ -113,11 +113,15 @@ retains the original universe, 52% non-calm core weight, and original support
 rules. The latest increment adds the lifecycle host, full independent validator,
 saved-result reader, and their tests. Their respective synthetic suites passed
 65, 35, and 52 checks on the exact exported source hashes. The host binds the
-completed experiment-264 receipt and the metadata source contract. Paper
-contracts are still being finalized before registration; they are not published
-as admitted experiment evidence. No actual experiment-265 features, strategy
-backtest, registration, or promotion are included. Synthetic checks do not
-establish a return improvement.
+completed experiment-264 receipt and the metadata source contract. The final
+paper and implementation contracts passed review, and 192 formal synthetic
+checks passed before registration. The registered PLAN SHA-256 is
+`628cd752c6112288cca49fce9d26144e43021a48ca63a5644e4567ed9a6eff48`.
+This increment publishes that PLAN without changing the previously published
+Python sources. Actual preparation has started locally; no completed selection,
+return comparison, or promotion is claimed by this snapshot. Private inputs,
+separate contract/review receipts, and generated preparation artifacts remain
+excluded. Synthetic checks and registration do not establish a return improvement.
 
 ## Observer versions and account continuity
 

@@ -1,0 +1,43 @@
+{
+  "completed_utc": "2026-10-26T19:31:44.893793+00:00",
+  "base_commit": "594bc4bb6dba6a48add5b9ced7e1a6022745125a",
+  "purpose": "Publish the registered experiment-265 PLAN and current documentation; previously published Python source remains unchanged.",
+  "source_export": {
+    "files": 2922,
+    "source_hashes_match": true,
+    "published_hashes_match": true,
+    "modes_match": true,
+    "unchanged_observer_exports": 106,
+    "changed_existing_exported_files": 0,
+    "new_files": [
+      "outputs/monthly_gain_concentration265/PLAN.json"
+    ],
+    "manifest_sha256": "da130d9675d2903def50247fe5f0d37e450ac4c042f85a4aa8f8c9433b44d527"
+  },
+  "tests_this_sync": {
+    "suite": "base_and_exporter",
+    "tests": 24,
+    "exit_code": 0,
+    "root_terminal_chunk": "444a32",
+    "log_sha256": "e750fe9b2987aeaa81a266ac2381a97c69c6238e6dbd722a04bdd5d8fe144fbb"
+  },
+  "prior_formal_tests": {
+    "tests": 192,
+    "passed": true,
+    "rerun_this_sync": false,
+    "receipt_sha256": "3cb15cc49e2127a8815491b2ea5e68b1435132169dc8edeed57c5a2481cdd6c5",
+    "all_12_bound_source_hashes_match_published_files": true
+  },
+  "experiment265": {
+    "registered": true,
+    "plan_sha256": "628cd752c6112288cca49fce9d26144e43021a48ca63a5644e4567ed9a6eff48",
+    "preparation_started": true,
+    "prepared_completion_present_at_check": false,
+    "completed_selection_claimed": false,
+    "actual_return_result_claimed": false,
+    "candidate_promoted": false
+  },
+  "source_roots_modified_by_sync": false,
+  "live_observers_run": false,
+  "credentials_or_private_data_exported": false
+}
