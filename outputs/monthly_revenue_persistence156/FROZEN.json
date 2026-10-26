@@ -1,0 +1,28 @@
+{
+  "all_diagnostic_orders_frozen": true,
+  "hashes": {
+    "CACHE.json": "39b526d613d9daca28bd8e3c03af5403ca1045b5e6d5b6889a5211aed443f90c",
+    "INDEPENDENT_PREPARE.json": "71cde0326c69f1d6e3b8e37f54cc20935bd0ddab5e2cd497fba390c8e54c0604",
+    "PLAN.json": "e80b6692ae126fc42da37dc3fbb3c859ccc57b559a5aa4ec9618f2340a009bcc",
+    "PRETRAIN_ORDERS.json": "0256fc725919f99de1426fc815b38fa634c827c2533752c32d5304b7642e45f5",
+    "TRAIN_OPEN_TRIALS.json": "d19818e8484d8447fe586f8a224638f351ddd8e5090dd5672afa698273edc558",
+    "TRAIN_TRIALS.json": "b15743611d6c2a97b1aff1cb8494f174ac619fa0f2883486065012e77130fadb",
+    "WALKFORWARD.json": "05363b36bb5b9f96c27b4fcbc7d125925a21b74fd16a7f18acff2229dd515b22"
+  },
+  "pristine_oos": false,
+  "selection": {
+    "admitted": false,
+    "guards_against": {
+      "incumbent_local67": false,
+      "matched_annualized_total_revenue_growth": false,
+      "matched_latest_revenue_growth": false
+    },
+    "mechanism_confirmed": false,
+    "next_open_guards_against": {
+      "incumbent_local67": true,
+      "matched_annualized_total_revenue_growth": false,
+      "matched_latest_revenue_growth": false
+    },
+    "primary": "incumbent_local67"
+  }
+}

@@ -1,0 +1,385 @@
+{
+  "code": {
+    "work/after141_amd_source_extract.py": "868cae81055318b9df934f4bfe2849c4971f861c4b480942139c8c7606ae4766",
+    "work/after149_amzn_extract.py": "f59473e6e5703fa5829100679c0887f5bf3853b52433bdf3b5598e4458378a06",
+    "work/after149_csco_extract.py": "7938b2d668c0f62aab39d75ef29a7f21850572d56c7905b78c1d4d667a1a7e09",
+    "work/after149_source_batch.py": "35b9541097fbb3fc057ca07cfe0283b9d413ff878119917d506bddb1cb94a2ea",
+    "work/test_after149_amzn_extract.py": "a2a43d92d6c51614f4482d4c242a1c2ab6e743c023bb065328bc22f8d4965bd5",
+    "work/test_after149_csco_extract.py": "dbc1c4262ca3060625d06275e047e1d7aa3c9e061d7c4f1801185e7997c766b2",
+    "work/test_after149_source_batch.py": "669778c57c0c709fe970314c5e5a5b4406b965345463f51d986f92957b26d170"
+  },
+  "created_utc": "2026-10-20T17:02:11.898164+00:00",
+  "fields": [
+    "annual_net_income",
+    "current_total_assets",
+    "prior_total_assets"
+  ],
+  "inputs": {
+    "outputs/dynamic_top100/registry_sec/0000858877_facts.json": "f9f6cfb3c04bb8102552f121868831471a474165074ccc7c539f6f80f19d1b99",
+    "outputs/dynamic_top100/registry_sec/0000858877_submissions.json": "73828b4b6957249d5c79353420215ea042930711bd498e6049109e4201ea715e",
+    "outputs/dynamic_top100/registry_sec/0000858877_submissions.provenance.json": "16beae2f506003f453f4ebd311769335eae5c06f98d55d9d9316b31dc0fb6243",
+    "outputs/dynamic_top100/registry_sec/0001018724_submissions.json": "1f5bb6be4033e2378bfa0d14e0d9276a08d8dfb070b263f59ca0e77d68ced058",
+    "outputs/dynamic_top100/registry_sec/0001018724_submissions.provenance.json": "8e45225a3deefe36ced1649e15354a542fdc2f5e54f7c3ff6aa2ac77252d5654",
+    "outputs/dynamic_top100/registry_sec/filing_indexes/CIK0000858877-submissions-001.json": "c2a4cbf8909ddd5be4438d0f559ad47030fc5259bca8d0d5bfaf9ddce8fe7f34",
+    "outputs/dynamic_top100/registry_sec/filing_indexes/CIK0000858877-submissions-001.provenance.json": "76cf8999563e66182c2bfcd3876e196ad115947ae806d2566dc02b2f6e9abf70",
+    "outputs/monthly_earnings_repair/EVENTS.json": "1e027fc8b933af9753241c15a2e0dcc5a32daa13205ba4d74f90b64db6e2e103",
+    "outputs/monthly_earnings_repair/SCOPED_READINESS.json": "89cc0a0284128c827fd9e7b5e15244b952dc61f33ae12812e79e4c3e4e6a554a",
+    "outputs/monthly_earnings_repair/SEC_REVIEW_QUEUE.json": "ebb0a1155c2531a0f7f407ff88acca696e0f2ae35d1ddd761f14d57632ed2f6d",
+    "outputs/monthly_earnings_repair/VALIDATION.json": "60df14ed466951af373b19aec7124dd859aa3877973f31e5ca12c2af36de83c2",
+    "outputs/monthly_earnings_repair/amazon/manifest.json": "d13bee577eb4c065fa634da9ba270c71014d220c40b8d8ed605ff0d7e5350814",
+    "outputs/monthly_earnings_repair/amazon/raw/282500d4b017fe2337ba645a.html": "7c4de2ac38cc5b981d3276db507e1274fa5cd0d1930592d73ad33c03c77ac90d",
+    "outputs/monthly_earnings_repair/amazon/raw/492d668873e8e4be8540dcd9.html": "796ef9c1624c9c28e188d03bf741be82c1bf2c2a03a728d9ed0a074af15d87ab",
+    "outputs/monthly_earnings_repair/amazon/raw/718151cd18bd210e001adf9e.html": "8b5d5dbbc023d04c1c860bcf8b2516b4dbb6f8edd9aefbdf93ad4a4dcad119bb",
+    "outputs/monthly_earnings_repair/amazon/raw/76a68623345c2ca02cf1da27.html": "82fcb38985a85b2effb5f7db401bc1370a44a23296d22f711e2598f757348eb6",
+    "outputs/monthly_earnings_repair/amazon/raw/a4373679aab3d4db0a2b2d3d.html": "dba67200c87c7bdb6e0b47ca59db91cdef5727df7906118d567d20c3edf6bf68",
+    "outputs/monthly_earnings_repair/amazon/raw/b497a5f1b4b2df7f8e259c0d.html": "03ebda4b28d9c73736427ed91b6cb550baa44ac88fcf53406c48da8220eb13d9",
+    "outputs/monthly_earnings_repair/amazon/raw/dd5dc687ffbf1e1eff47e550.html": "0659eb48310fabb6b5a69675ec14fb886f75b0a1af4ed752d65b4bb39ec3790b",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/DISCOVERY.json": "70356127b02dbe9a5eb25e38e7caee2dec1f76c6cf7ea7d4699ebfd1b84c3313",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/JOIN_PENDING.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/PENDING.json": "e1a7ba9e962da8cc8efbf80a5a5d69239e12d6a6997e11d0a7b097dfa273928d",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/events.json": "e36fb354815be1f62a5257196a1ef1fa46b77543a63c007072a581c0eda13cd9",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/1a8acbfe217e6f3adbe8.bin": "592bb146ded12bed258768fc080723cf72aa567e429468104152db139fa0f80a",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/1a8acbfe217e6f3adbe8.meta.json": "fea5966f72b5ce2e969cb2ed87748147c9957c4a051865fb39e71d44df2ea15c",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/2ff3e446f1185176d273.bin": "f650ff7d4a9d76435b5a71a24dc9fd30fa1e6fc3555d6d073b52d2d2816dd136",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/2ff3e446f1185176d273.meta.json": "4e7cb26b7bd5cc55058724f5d057947ffd1c7d02ecaedc3c07754a687c314de9",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/311988db8e50159b3166.bin": "7a7dcea87ff7297c044f2b8a834ad5e76a23ef84b28d04ce50895efe826762ab",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/311988db8e50159b3166.meta.json": "56dbb265fc9376db331d94de701861b14d872b7a0cbba9ada070595c81e922f2",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/383d833d248d4c1b5ea3.bin": "1f65bee64b61ab40d4547f489f4e60a241225990ed97929b6fc55f8622148902",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/383d833d248d4c1b5ea3.meta.json": "dae1902ba7456646cc40ba5f79f10aeb84f9d353c099228b8de313770b2be298",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/4885d4893d6254d2a7c6.bin": "b1f0a13d51eaaabc603692a18256f9aca295636a5a5a20f156235aa7331b5e29",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/4885d4893d6254d2a7c6.meta.json": "94a8eed7c8587ce60e5ce0616e3061fd9736f38b6fd05a472d596f1cae2605a6",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/4b1bb51651ad9cc7816d.bin": "b184be3f64165a87d695f2a77a80a5f48dd086f970be91d0e08fdb35e0b740cc",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/4b1bb51651ad9cc7816d.meta.json": "83f53b09a7cf42b9721542b68d7f9d63c91fceb92ab4da1656005d111f6ee2ee",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/5bd8cad90ba87d22bb10.bin": "9c0e318481be685d10eff872f6393db83e33a249b61646c402d96fe08968e187",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/5bd8cad90ba87d22bb10.meta.json": "20a7020ac3fe98ecd7c9f51105250194676ddef3d9695e33c7ff53dc220f7203",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/61f57a7ccae104f59bff.bin": "3b1a4c437c5ba5b7a3e5931d665c8c43624cadb83d811fa132220751c8d6c8c9",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/61f57a7ccae104f59bff.meta.json": "730c2b0f1e06fc22574b367b60ec89117713f21ecf5776b08fec54c1ab894ab4",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/941060204be285f8edc7.bin": "b726227ea9e4731e221ee9a11ae96d606aec9721edb77bafa6209c3370711939",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/941060204be285f8edc7.meta.json": "266bf2e644386d6d0cb2ca23d59269a8513730e569eee1a403ced32e9a964846",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/99cfec3aaf3b003f8b88.bin": "eecbc4343799220b37b33d425c32912688cbd88b95a1470ea3a5ff475f8454df",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/99cfec3aaf3b003f8b88.meta.json": "7b7b716e3d90137b3aa3aeee76c65d9c520ef5d26ad9d2b8fb9380a5fb020c38",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/a6d255288df87e45bf8c.bin": "248633aadb14e48ecef5fc702d79d14b160333a28ec8119e6c93ee8c8fd6fdec",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/a6d255288df87e45bf8c.meta.json": "3f8b6bb185ad450d156dde272f16d09c2cb34797eab00d18ec5971b0fd165bf8",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/b51cd4d694eb6678a22d.bin": "81f475fbcdd8b6ce535dbeaa5748097265ca792ae09a89dbff44b5c732e66856",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/b51cd4d694eb6678a22d.meta.json": "30c6a4f2186cbbae5aad3eee9be6f568e69b2e4f31e81d99adbe91319338c20e",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/bc1396d350bd53c5cd70.bin": "74ad69844fc5378056fb8b7d7e870f7aeaad1c817bc0a5c4c4a91631bb23b9c7",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/bc1396d350bd53c5cd70.meta.json": "65ff2c37a92db625ed3ed6b9b9f8f5d6829850a05674f7b75f4743b105ede695",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/bc139d44ec131ae588b8.bin": "cc314cbc836d428f1dba7ff1d0a91208a69539633283458f86d9bef79b40ef01",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/bc139d44ec131ae588b8.meta.json": "d6895fc404e1067b9c593d6d3fad30b16b24beb61dd013850473720818732e09",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/c625f3072350da303508.bin": "d163a2f965061b217fd20c1a2480eace97628de31a2842341a27b13f23873e0d",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/c625f3072350da303508.meta.json": "76c6b724b18dfa300b92e87497d20d814ce030062f6ebbd4c1872170af922b92",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/ef52ff714918ce73a7ed.bin": "6ab1fc88dc0d52f6b47259fe30189379617d5c14b7dc33e3af8a726ebcca2b69",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/ef52ff714918ce73a7ed.meta.json": "0319191e25bd58329b0e106be0e0d82f72c9fb6f6ad38c0c395465e1101a0b8d",
+    "outputs/monthly_earnings_repair/warmup/raw/38110f2ba047113b48128e84.html": "e77c243232397a86079f33aa780210a25cc117d148162fc0c2a87aafbff2fea7",
+    "outputs/monthly_earnings_repair/warmup/raw/38110f2ba047113b48128e84.meta.json": "0c8c807f4c27b5538d32707f826e6739a06cef3d664a1971c8b88594fc29327d",
+    "outputs/monthly_earnings_repair/warmup/raw/44b0edd08f33ea0cae6e0626.html": "0969debdcee74eb170ca7eb5fc5e4c7d3247b1ea40de4db37ae5302866f90c96",
+    "outputs/monthly_earnings_repair/warmup/raw/44b0edd08f33ea0cae6e0626.meta.json": "63c568205e1fc3cd4b7fe1004bb4c400171409fd6440b67399f3003a7e65a17c",
+    "outputs/monthly_earnings_repair/warmup/raw/65acab9d0da46fe89db2d6db.html": "76a2fbbaa2c9149e187d083b2a86097d88ecd6e324cc73c07b370602acbad0c2",
+    "outputs/monthly_earnings_repair/warmup/raw/65acab9d0da46fe89db2d6db.meta.json": "73a447e71a0316144e104cd27f8b39693d91c706592d29b3df2e4de5134163f0",
+    "outputs/monthly_financial_coverage_census_v1/CENSUS.json": "de95906ef3d752890d28027a9b52cfd7decc7aeb1bc0f09f2785f1826a3500fc",
+    "outputs/monthly_financial_coverage_census_v1/PLAN.json": "04a019483b0dbdc967113573c36ec46c90f29e6468fe605318314916bc7345a9",
+    "outputs/monthly_forward_guidance_preflight_v1/SESSIONS.json": "c05c15f19bc1f7a3428e456a71199d64f05799ef3c432fa45f7bc485d0ff3cf4",
+    "outputs/monthly_local_linear70/META.json": "3b46968f486e88fa170ac01f120dd5ef74ebd5a56243c6991c5a4fea506076f4",
+    "outputs/monthly_stock_comp_source_admission_v2/ADMISSION.json": "c9189e9e0cb68279acf9a4c74295b0f8e13f07e361917ed7668083e8a93aed31",
+    "outputs/monthly_stock_comp_source_admission_v2/DATASET.json": "219885b9e14d7d383b974f4fd550d09f583031ebab3bffe6f39c10bb131031b1",
+    "work/after141_amd_source_extract.py": "868cae81055318b9df934f4bfe2849c4971f861c4b480942139c8c7606ae4766",
+    "work/after149_amzn_context_probe.py": "d2ca8e371d7a49ab6f27ed1362d92b4eff232fb52b739c874c8979e59fcb7446",
+    "work/after149_amzn_source_context.json": "9217e84bb002089f0d74ad6a43df893ab99c783d7e34b5d0186c186b8eaa1225",
+    "work/after149_batch1_admission_policy.json": "09abd63d0c0e4b904bfa3d00dd002b2fc3f8390e314e87f1c25d1b57320869f4",
+    "work/after149_coverage_extension_concept.json": "60c3afd837cd32b75a70733b70c777084a9c124cf917e8052628947f1cb7d6ee",
+    "work/after149_csco_accounting_context_check.py": "0c60fccdfd7816ab7480c1e7c2bd275b7daceec0a44b4cd53b46b40b0abe06d3",
+    "work/after149_csco_source_context.json": "9cfef42086c7f982b63ec80f36c3c2ca37d997ae14a15a7da2d7b6e231c774a9",
+    "work/after149_csco_source_context_check.py": "da7b85a324e60bc9242f0f81081d236543c5cb788353e0c683ffbffd372f33a4",
+    "work/cashflow_html_repair_v2.py": "fb70dad51f2c4fcb5f79c74827fcadb616ceae89f4965555c9f883a91aa78f15",
+    "work/cashflow_source_preflight_v1.py": "c19b3b76bc2cabed6b4c1e3873be1a76e88e7675178debdc7b063e44afe5fbc9",
+    "work/monthly_financial_census_independent_review.json": "707b6dfd37d0dca3415ef152cab824c585950459d4b22bed3e37416089ad0efe",
+    "work/stock_comp_source_v1.py": "74f1d97435458fddf90a16ac8110d8b6e7e7f66f469abcb7784f03b2f22a65df"
+  },
+  "modules": {
+    "AMZN": "after149_amzn_extract",
+    "CSCO": "after149_csco_extract"
+  },
+  "policy": {
+    "all_universe_retained": "The remaining73-stock scope, unprocessed reports and PDFs remain gaps, not excluded stocks",
+    "assets": "Current and comparative total assets in the same original report, never assembled across later releases",
+    "comparability_holds": [
+      "AMZN FY2019 lease transition",
+      "CSCO FY2019 ASC606 transition",
+      "Any unresolved source/period/value/identity/clock ambiguity"
+    ],
+    "currency": "Retain literal common-dollar evidence; do not infer an ISO currency or perform FX conversion",
+    "current_annual_NI": "Consolidated GAAP net income starting the annual indirect cashflow statement",
+    "known_time": "All fields share the current release next-session availability; early calendar gaps explicitly retained",
+    "latest_event": "This extraction does not select monthly events; eventual use selects latest known before validity and age checks",
+    "no_admission_by_extraction": true,
+    "no_false_missing": "Cashflow/SBC-only classification flags do not automatically invalidate NI/assets",
+    "no_network": true,
+    "no_observer_changes": true,
+    "no_returns": true,
+    "no_scores": true,
+    "prior_hold_preservation": "All existing44 source records and13 prior holds remain unchanged"
+  },
+  "purpose": "Source-only annual NI and same-report asset extraction, no new factor or backtest",
+  "records": [
+    {
+      "context_path": "work/after149_amzn_source_context.json",
+      "event_id": "AMZN_2011-01-27",
+      "fiscal_year": 2010,
+      "receipt_path": "outputs/monthly_earnings_repair/warmup/raw/65acab9d0da46fe89db2d6db.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/warmup/raw/65acab9d0da46fe89db2d6db.html",
+      "source_sha256": "76a2fbbaa2c9149e187d083b2a86097d88ecd6e324cc73c07b370602acbad0c2",
+      "symbol": "AMZN"
+    },
+    {
+      "context_path": "work/after149_amzn_source_context.json",
+      "event_id": "AMZN_2012-01-31",
+      "fiscal_year": 2011,
+      "receipt_path": "outputs/monthly_earnings_repair/warmup/raw/38110f2ba047113b48128e84.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/warmup/raw/38110f2ba047113b48128e84.html",
+      "source_sha256": "e77c243232397a86079f33aa780210a25cc117d148162fc0c2a87aafbff2fea7",
+      "symbol": "AMZN"
+    },
+    {
+      "context_path": "work/after149_amzn_source_context.json",
+      "event_id": "AMZN_2013-01-29",
+      "fiscal_year": 2012,
+      "receipt_path": "outputs/monthly_earnings_repair/warmup/raw/44b0edd08f33ea0cae6e0626.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/warmup/raw/44b0edd08f33ea0cae6e0626.html",
+      "source_sha256": "0969debdcee74eb170ca7eb5fc5e4c7d3247b1ea40de4db37ae5302866f90c96",
+      "symbol": "AMZN"
+    },
+    {
+      "context_path": "work/after149_amzn_source_context.json",
+      "event_id": "AMZN_2015-01-29",
+      "fiscal_year": 2014,
+      "receipt_path": "outputs/monthly_earnings_repair/amazon/manifest.json",
+      "source_path": "outputs/monthly_earnings_repair/amazon/raw/b497a5f1b4b2df7f8e259c0d.html",
+      "source_sha256": "03ebda4b28d9c73736427ed91b6cb550baa44ac88fcf53406c48da8220eb13d9",
+      "symbol": "AMZN"
+    },
+    {
+      "context_path": "work/after149_amzn_source_context.json",
+      "event_id": "AMZN_2017-02-02",
+      "fiscal_year": 2016,
+      "receipt_path": "outputs/monthly_earnings_repair/amazon/manifest.json",
+      "source_path": "outputs/monthly_earnings_repair/amazon/raw/282500d4b017fe2337ba645a.html",
+      "source_sha256": "7c4de2ac38cc5b981d3276db507e1274fa5cd0d1930592d73ad33c03c77ac90d",
+      "symbol": "AMZN"
+    },
+    {
+      "context_path": "work/after149_amzn_source_context.json",
+      "event_id": "AMZN_2018-02-01",
+      "fiscal_year": 2017,
+      "receipt_path": "outputs/monthly_earnings_repair/amazon/manifest.json",
+      "source_path": "outputs/monthly_earnings_repair/amazon/raw/a4373679aab3d4db0a2b2d3d.html",
+      "source_sha256": "dba67200c87c7bdb6e0b47ca59db91cdef5727df7906118d567d20c3edf6bf68",
+      "symbol": "AMZN"
+    },
+    {
+      "context_path": "work/after149_amzn_source_context.json",
+      "event_id": "AMZN_2019-01-31",
+      "fiscal_year": 2018,
+      "receipt_path": "outputs/monthly_earnings_repair/amazon/manifest.json",
+      "source_path": "outputs/monthly_earnings_repair/amazon/raw/492d668873e8e4be8540dcd9.html",
+      "source_sha256": "796ef9c1624c9c28e188d03bf741be82c1bf2c2a03a728d9ed0a074af15d87ab",
+      "symbol": "AMZN"
+    },
+    {
+      "context_path": "work/after149_amzn_source_context.json",
+      "event_id": "AMZN_2020-01-30",
+      "fiscal_year": 2019,
+      "receipt_path": "outputs/monthly_earnings_repair/amazon/manifest.json",
+      "source_path": "outputs/monthly_earnings_repair/amazon/raw/dd5dc687ffbf1e1eff47e550.html",
+      "source_sha256": "0659eb48310fabb6b5a69675ec14fb886f75b0a1af4ed752d65b4bb39ec3790b",
+      "symbol": "AMZN"
+    },
+    {
+      "context_path": "work/after149_amzn_source_context.json",
+      "event_id": "AMZN_2021-02-02",
+      "fiscal_year": 2020,
+      "receipt_path": "outputs/monthly_earnings_repair/amazon/manifest.json",
+      "source_path": "outputs/monthly_earnings_repair/amazon/raw/718151cd18bd210e001adf9e.html",
+      "source_sha256": "8b5d5dbbc023d04c1c860bcf8b2516b4dbb6f8edd9aefbdf93ad4a4dcad119bb",
+      "symbol": "AMZN"
+    },
+    {
+      "context_path": "work/after149_amzn_source_context.json",
+      "event_id": "AMZN_2022-02-03",
+      "fiscal_year": 2021,
+      "receipt_path": "outputs/monthly_earnings_repair/amazon/manifest.json",
+      "source_path": "outputs/monthly_earnings_repair/amazon/raw/76a68623345c2ca02cf1da27.html",
+      "source_sha256": "82fcb38985a85b2effb5f7db401bc1370a44a23296d22f711e2598f757348eb6",
+      "symbol": "AMZN"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2011-08-10",
+      "fiscal_year": 2011,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/61f57a7ccae104f59bff.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/61f57a7ccae104f59bff.bin",
+      "source_sha256": "3b1a4c437c5ba5b7a3e5931d665c8c43624cadb83d811fa132220751c8d6c8c9",
+      "symbol": "CSCO"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2012-08-15",
+      "fiscal_year": 2012,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/bc1396d350bd53c5cd70.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/bc1396d350bd53c5cd70.bin",
+      "source_sha256": "74ad69844fc5378056fb8b7d7e870f7aeaad1c817bc0a5c4c4a91631bb23b9c7",
+      "symbol": "CSCO"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2013-08-14",
+      "fiscal_year": 2013,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/5bd8cad90ba87d22bb10.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/5bd8cad90ba87d22bb10.bin",
+      "source_sha256": "9c0e318481be685d10eff872f6393db83e33a249b61646c402d96fe08968e187",
+      "symbol": "CSCO"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2014-08-13",
+      "fiscal_year": 2014,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/2ff3e446f1185176d273.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/2ff3e446f1185176d273.bin",
+      "source_sha256": "f650ff7d4a9d76435b5a71a24dc9fd30fa1e6fc3555d6d073b52d2d2816dd136",
+      "symbol": "CSCO"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2015-08-12",
+      "fiscal_year": 2015,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/b51cd4d694eb6678a22d.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/b51cd4d694eb6678a22d.bin",
+      "source_sha256": "81f475fbcdd8b6ce535dbeaa5748097265ca792ae09a89dbff44b5c732e66856",
+      "symbol": "CSCO"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2016-08-17",
+      "fiscal_year": 2016,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/383d833d248d4c1b5ea3.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/383d833d248d4c1b5ea3.bin",
+      "source_sha256": "1f65bee64b61ab40d4547f489f4e60a241225990ed97929b6fc55f8622148902",
+      "symbol": "CSCO"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2017-08-16",
+      "fiscal_year": 2017,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/99cfec3aaf3b003f8b88.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/99cfec3aaf3b003f8b88.bin",
+      "source_sha256": "eecbc4343799220b37b33d425c32912688cbd88b95a1470ea3a5ff475f8454df",
+      "symbol": "CSCO"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2018-08-15",
+      "fiscal_year": 2018,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/941060204be285f8edc7.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/941060204be285f8edc7.bin",
+      "source_sha256": "b726227ea9e4731e221ee9a11ae96d606aec9721edb77bafa6209c3370711939",
+      "symbol": "CSCO"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2019-08-14",
+      "fiscal_year": 2019,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/4b1bb51651ad9cc7816d.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/4b1bb51651ad9cc7816d.bin",
+      "source_sha256": "b184be3f64165a87d695f2a77a80a5f48dd086f970be91d0e08fdb35e0b740cc",
+      "symbol": "CSCO"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2020-08-12",
+      "fiscal_year": 2020,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/a6d255288df87e45bf8c.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/a6d255288df87e45bf8c.bin",
+      "source_sha256": "248633aadb14e48ecef5fc702d79d14b160333a28ec8119e6c93ee8c8fd6fdec",
+      "symbol": "CSCO"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2021-08-18",
+      "fiscal_year": 2021,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/c625f3072350da303508.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/c625f3072350da303508.bin",
+      "source_sha256": "d163a2f965061b217fd20c1a2480eace97628de31a2842341a27b13f23873e0d",
+      "symbol": "CSCO"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2022-08-17",
+      "fiscal_year": 2022,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/ef52ff714918ce73a7ed.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/ef52ff714918ce73a7ed.bin",
+      "source_sha256": "6ab1fc88dc0d52f6b47259fe30189379617d5c14b7dc33e3af8a726ebcca2b69",
+      "symbol": "CSCO"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2023-08-16",
+      "fiscal_year": 2023,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/1a8acbfe217e6f3adbe8.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/1a8acbfe217e6f3adbe8.bin",
+      "source_sha256": "592bb146ded12bed258768fc080723cf72aa567e429468104152db139fa0f80a",
+      "symbol": "CSCO"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2024-08-14",
+      "fiscal_year": 2024,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/4885d4893d6254d2a7c6.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/4885d4893d6254d2a7c6.bin",
+      "source_sha256": "b1f0a13d51eaaabc603692a18256f9aca295636a5a5a20f156235aa7331b5e29",
+      "symbol": "CSCO"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2025-08-13",
+      "fiscal_year": 2025,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/311988db8e50159b3166.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/311988db8e50159b3166.bin",
+      "source_sha256": "7a7dcea87ff7297c044f2b8a834ad5e76a23ef84b28d04ce50895efe826762ab",
+      "symbol": "CSCO"
+    },
+    {
+      "context_path": "work/after149_csco_source_context.json",
+      "event_id": "CSCO_2026-08-12",
+      "fiscal_year": 2026,
+      "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/bc139d44ec131ae588b8.meta.json",
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/CSCO/raw/bc139d44ec131ae588b8.bin",
+      "source_sha256": "cc314cbc836d428f1dba7ff1d0a91208a69539633283458f86d9bef79b40ef01",
+      "symbol": "CSCO"
+    }
+  ],
+  "runtime": {
+    "beautifulsoup4": "4.15.0",
+    "python": "3.9.6 (default, Jan  9 2026, 11:03:41) \n[Clang 17.0.0 (clang-1700.6.4.2)]"
+  },
+  "schema_version": 1,
+  "selection": "First alphabetic new issuers with existing reviewed primary HTML context; no return selection",
+  "synthetic_tests": [
+    {
+      "module": "test_after149_source_batch",
+      "output": "----------------------------------------------------------------------\nRan 13 tests in 0.002s\n\nOK\n",
+      "passed": true,
+      "tests": 13
+    },
+    {
+      "module": "test_after149_amzn_extract",
+      "output": "----------------------------------------------------------------------\nRan 36 tests in 0.232s\n\nOK\n",
+      "passed": true,
+      "tests": 36
+    },
+    {
+      "module": "test_after149_csco_extract",
+      "output": "----------------------------------------------------------------------\nRan 35 tests in 0.171s\n\nOK\n",
+      "passed": true,
+      "tests": 35
+    }
+  ]
+}

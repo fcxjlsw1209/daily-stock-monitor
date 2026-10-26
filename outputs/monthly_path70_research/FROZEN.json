@@ -1,0 +1,360 @@
+{
+  "created_at": "2026-10-13T19:09:42.354489+00:00",
+  "selected": {
+    "primary": {
+      "spec": {
+        "base": "incumbent66",
+        "factor": "none",
+        "budget": 0.0,
+        "id": 1
+      },
+      "training": {
+        "cagr": 0.5480613096199933,
+        "sharpe": 1.633215259783524,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 23.13876258089851
+      },
+      "early": {
+        "cagr": 0.468813922656524,
+        "sharpe": 1.4671766986953196,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 4.37095867190192
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": true,
+      "old_strict_admitted": true
+    },
+    "robust": {
+      "spec": {
+        "base": "incumbent66",
+        "factor": "none",
+        "budget": 0.0,
+        "id": 1
+      },
+      "training": {
+        "cagr": 0.5480613096199933,
+        "sharpe": 1.633215259783524,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 23.13876258089851
+      },
+      "early": {
+        "cagr": 0.468813922656524,
+        "sharpe": 1.4671766986953196,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 4.37095867190192
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": true,
+      "old_strict_admitted": true
+    },
+    "original65": {
+      "spec": {
+        "base": "original65",
+        "factor": "none",
+        "budget": 0.0,
+        "id": 0
+      },
+      "training": {
+        "cagr": 0.5349155442763764,
+        "sharpe": 1.6031917771530346,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.684626736023116
+      },
+      "early": {
+        "cagr": 0.44808994995802753,
+        "sharpe": 1.416891036956853,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.047408386340172
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": false,
+      "old_strict_admitted": false
+    },
+    "incumbent66": {
+      "spec": {
+        "base": "incumbent66",
+        "factor": "none",
+        "budget": 0.0,
+        "id": 1
+      },
+      "training": {
+        "cagr": 0.5480613096199933,
+        "sharpe": 1.633215259783524,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 23.13876258089851
+      },
+      "early": {
+        "cagr": 0.468813922656524,
+        "sharpe": 1.4671766986953196,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 4.37095867190192
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": true,
+      "old_strict_admitted": true
+    },
+    "original65__weakest_segment": {
+      "spec": {
+        "base": "original65",
+        "factor": "weakest_segment",
+        "budget": 0.025,
+        "id": 2
+      },
+      "training": {
+        "cagr": 0.488693020077855,
+        "sharpe": 1.496062370940352,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 17.15449306682105
+      },
+      "early": {
+        "cagr": 0.38764908411800336,
+        "sharpe": 1.254681936932808,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 3.1889858221370124
+      },
+      "recent": {
+        "cagr": 0.6543297876017202,
+        "sharpe": 1.8613264864434047,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.3338635740618257
+      },
+      "admitted": false,
+      "old_strict_admitted": false
+    },
+    "original65__balanced_growth": {
+      "spec": {
+        "base": "original65",
+        "factor": "balanced_growth",
+        "budget": 0.025,
+        "id": 5
+      },
+      "training": {
+        "cagr": 0.5032333811762504,
+        "sharpe": 1.5232867092645397,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 18.48670486446426
+      },
+      "early": {
+        "cagr": 0.4012779783220235,
+        "sharpe": 1.2882128125187233,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 3.371880969342227
+      },
+      "recent": {
+        "cagr": 0.6703529565484516,
+        "sharpe": 1.8743408521873408,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4572816600256466
+      },
+      "admitted": false,
+      "old_strict_admitted": false
+    },
+    "original65__worst_segment_downside": {
+      "spec": {
+        "base": "original65",
+        "factor": "worst_segment_downside",
+        "budget": 0.025,
+        "id": 8
+      },
+      "training": {
+        "cagr": 0.47444726306115514,
+        "sharpe": 1.4676588091759177,
+        "max_drawdown": -0.31125995821743624,
+        "total_return": 15.926230493690149
+      },
+      "early": {
+        "cagr": 0.40881799324624346,
+        "sharpe": 1.3071646974729807,
+        "max_drawdown": -0.31125995821743624,
+        "total_return": 3.4756766253498297
+      },
+      "recent": {
+        "cagr": 0.5787354441077062,
+        "sharpe": 1.7114301654436093,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 2.7818260590636754
+      },
+      "admitted": false,
+      "old_strict_admitted": false
+    },
+    "original65__centered_mad_momentum": {
+      "spec": {
+        "base": "original65",
+        "factor": "centered_mad_momentum",
+        "budget": 0.025,
+        "id": 11
+      },
+      "training": {
+        "cagr": 0.5025520979623321,
+        "sharpe": 1.5302269758306961,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 18.422453150128874
+      },
+      "early": {
+        "cagr": 0.4352357667214233,
+        "sharpe": 1.3732445579019636,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 3.8544171729931804
+      },
+      "recent": {
+        "cagr": 0.6095619026005195,
+        "sharpe": 1.7659190942993181,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.0009855885857606
+      },
+      "admitted": false,
+      "old_strict_admitted": false
+    },
+    "incumbent66__weakest_segment": {
+      "spec": {
+        "base": "incumbent66",
+        "factor": "weakest_segment",
+        "budget": 0.025,
+        "id": 14
+      },
+      "training": {
+        "cagr": 0.5032455412890042,
+        "sharpe": 1.5231534222005856,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 18.48785334650175
+      },
+      "early": {
+        "cagr": 0.4085223546926344,
+        "sharpe": 1.3053814692207586,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 3.4715714207021984
+      },
+      "recent": {
+        "cagr": 0.6575084869026706,
+        "sharpe": 1.8483312417151239,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.358166629359456
+      },
+      "admitted": false,
+      "old_strict_admitted": false
+    },
+    "incumbent66__balanced_growth": {
+      "spec": {
+        "base": "incumbent66",
+        "factor": "balanced_growth",
+        "budget": 0.05,
+        "id": 18
+      },
+      "training": {
+        "cagr": 0.48832445128217983,
+        "sharpe": 1.501751464305179,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 17.12177232035499
+      },
+      "early": {
+        "cagr": 0.43100891042397294,
+        "sharpe": 1.3637647994910667,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 3.792216097235083
+      },
+      "recent": {
+        "cagr": 0.5786889321580686,
+        "sharpe": 1.7101338516870412,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 2.7815014917233167
+      },
+      "admitted": false,
+      "old_strict_admitted": false
+    },
+    "incumbent66__worst_segment_downside": {
+      "spec": {
+        "base": "incumbent66",
+        "factor": "worst_segment_downside",
+        "budget": 0.025,
+        "id": 20
+      },
+      "training": {
+        "cagr": 0.4884208574496711,
+        "sharpe": 1.4930726273091157,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 17.130326135315308
+      },
+      "early": {
+        "cagr": 0.41393762460290007,
+        "sharpe": 1.3173577956926157,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 3.547229457506755
+      },
+      "recent": {
+        "cagr": 0.6076442287197625,
+        "sharpe": 1.7576065100449745,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 2.9871148585618568
+      },
+      "admitted": false,
+      "old_strict_admitted": false
+    },
+    "incumbent66__centered_mad_momentum": {
+      "spec": {
+        "base": "incumbent66",
+        "factor": "centered_mad_momentum",
+        "budget": 0.025,
+        "id": 23
+      },
+      "training": {
+        "cagr": 0.5131982082948159,
+        "sharpe": 1.5474979527824666,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 19.447662853096816
+      },
+      "early": {
+        "cagr": 0.43476904885950196,
+        "sharpe": 1.3702935987929472,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 3.847518687807323
+      },
+      "recent": {
+        "cagr": 0.6390351614265728,
+        "sharpe": 1.811324997971501,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.218171021089142
+      },
+      "admitted": false,
+      "old_strict_admitted": false
+    }
+  },
+  "new_admitted": 0,
+  "trials": 26,
+  "hashes": {
+    "PLAN.json": "add6599f5678a84948cf0d019d98f36231d5c16cc39a5df1d45c3777d8bd4442",
+    "GRID.json": "e20e76232a5e6d82b9a3e65be8d370bd79991b3d0567250ea35ecca9d1c8e1e4",
+    "DATA.npz": "eff7046b40a0a75cf4bd48de823ead7dc018e1f561d0a920f47da835ecda5fe5",
+    "META.json": "3b46968f486e88fa170ac01f120dd5ef74ebd5a56243c6991c5a4fea506076f4",
+    "INCUMBENT_POLICY.json": "49026e12235663b0f4ab75f43de421eb3ea84e99e007aa606fa6cf074e9f9789",
+    "FEATURE_AUDIT.json": "7b8d7087c27c98ecc6b0a8eeafe0403489a125b00a2f746808ac4217d4989d2c",
+    "BUDGET_AUDIT.json": "306193e19b35fb14743bd17455d1a8710885836abeaa1b331381882e0074f560",
+    "INPUT_HASHES.json": "46b54cb0ff45a08a2a8797a70fcdf7e571917285e255224e2c75f1e3840cf126",
+    "PROTECTED.json": "200479af0643bc746dad67921330eedb76793f63c1ad5f62d04665626da545e1",
+    "study.py": "5096eb2bebd43878f3322c7807e1a8813d7739cbbe29b632517587f78d091af3",
+    "features.py": "90659640abb4c981ab91f562139bf1fce09308844125c79203b0940e8e8275cc",
+    "incumbent_adapter.py": "5619bfc3512a0aa057e79042256a379360d6baa1bc0c448f2f301b84d6ec3e2b"
+  },
+  "pristine_oos": false,
+  "diagnostics_may_be_unqualified": true,
+  "author_labels_used": false
+}

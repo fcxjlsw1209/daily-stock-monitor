@@ -1,0 +1,722 @@
+[
+  {
+    "id": 0,
+    "base": "original65",
+    "core": "original",
+    "blend": 0.0,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 1,
+    "base": "original65",
+    "core": "original",
+    "blend": 0.0,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 2,
+    "base": "original65",
+    "core": "original",
+    "blend": 0.0,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 3,
+    "base": "original65",
+    "core": "original",
+    "blend": 0.0,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 4,
+    "base": "original65",
+    "core": "original",
+    "blend": 0.0,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 5,
+    "base": "original65",
+    "core": "ordinary_sharpe",
+    "blend": 0.5,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 6,
+    "base": "original65",
+    "core": "ordinary_sharpe",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 7,
+    "base": "original65",
+    "core": "ordinary_sharpe",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 8,
+    "base": "original65",
+    "core": "ordinary_sharpe",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 9,
+    "base": "original65",
+    "core": "ordinary_sharpe",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 10,
+    "base": "original65",
+    "core": "ordinary_sharpe",
+    "blend": 1.0,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 11,
+    "base": "original65",
+    "core": "ordinary_sharpe",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 12,
+    "base": "original65",
+    "core": "ordinary_sharpe",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 13,
+    "base": "original65",
+    "core": "ordinary_sharpe",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 14,
+    "base": "original65",
+    "core": "ordinary_sharpe",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 15,
+    "base": "original65",
+    "core": "hac_sharpe",
+    "blend": 0.5,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 16,
+    "base": "original65",
+    "core": "hac_sharpe",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 17,
+    "base": "original65",
+    "core": "hac_sharpe",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 18,
+    "base": "original65",
+    "core": "hac_sharpe",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 19,
+    "base": "original65",
+    "core": "hac_sharpe",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 20,
+    "base": "original65",
+    "core": "hac_sharpe",
+    "blend": 1.0,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 21,
+    "base": "original65",
+    "core": "hac_sharpe",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 22,
+    "base": "original65",
+    "core": "hac_sharpe",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 23,
+    "base": "original65",
+    "core": "hac_sharpe",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 24,
+    "base": "original65",
+    "core": "hac_sharpe",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 25,
+    "base": "original65",
+    "core": "market_residual_sharpe",
+    "blend": 0.5,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 26,
+    "base": "original65",
+    "core": "market_residual_sharpe",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 27,
+    "base": "original65",
+    "core": "market_residual_sharpe",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 28,
+    "base": "original65",
+    "core": "market_residual_sharpe",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 29,
+    "base": "original65",
+    "core": "market_residual_sharpe",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 30,
+    "base": "original65",
+    "core": "market_residual_sharpe",
+    "blend": 1.0,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 31,
+    "base": "original65",
+    "core": "market_residual_sharpe",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 32,
+    "base": "original65",
+    "core": "market_residual_sharpe",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 33,
+    "base": "original65",
+    "core": "market_residual_sharpe",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 34,
+    "base": "original65",
+    "core": "market_residual_sharpe",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 35,
+    "base": "original65",
+    "core": "rank_residence",
+    "blend": 0.5,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 36,
+    "base": "original65",
+    "core": "rank_residence",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 37,
+    "base": "original65",
+    "core": "rank_residence",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 38,
+    "base": "original65",
+    "core": "rank_residence",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 39,
+    "base": "original65",
+    "core": "rank_residence",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 40,
+    "base": "original65",
+    "core": "rank_residence",
+    "blend": 1.0,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 41,
+    "base": "original65",
+    "core": "rank_residence",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 42,
+    "base": "original65",
+    "core": "rank_residence",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 43,
+    "base": "original65",
+    "core": "rank_residence",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 44,
+    "base": "original65",
+    "core": "rank_residence",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 45,
+    "base": "simple",
+    "core": "original",
+    "blend": 0.0,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 46,
+    "base": "simple",
+    "core": "original",
+    "blend": 0.0,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 47,
+    "base": "simple",
+    "core": "original",
+    "blend": 0.0,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 48,
+    "base": "simple",
+    "core": "original",
+    "blend": 0.0,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 49,
+    "base": "simple",
+    "core": "original",
+    "blend": 0.0,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 50,
+    "base": "simple",
+    "core": "ordinary_sharpe",
+    "blend": 0.5,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 51,
+    "base": "simple",
+    "core": "ordinary_sharpe",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 52,
+    "base": "simple",
+    "core": "ordinary_sharpe",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 53,
+    "base": "simple",
+    "core": "ordinary_sharpe",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 54,
+    "base": "simple",
+    "core": "ordinary_sharpe",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 55,
+    "base": "simple",
+    "core": "ordinary_sharpe",
+    "blend": 1.0,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 56,
+    "base": "simple",
+    "core": "ordinary_sharpe",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 57,
+    "base": "simple",
+    "core": "ordinary_sharpe",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 58,
+    "base": "simple",
+    "core": "ordinary_sharpe",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 59,
+    "base": "simple",
+    "core": "ordinary_sharpe",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 60,
+    "base": "simple",
+    "core": "hac_sharpe",
+    "blend": 0.5,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 61,
+    "base": "simple",
+    "core": "hac_sharpe",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 62,
+    "base": "simple",
+    "core": "hac_sharpe",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 63,
+    "base": "simple",
+    "core": "hac_sharpe",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 64,
+    "base": "simple",
+    "core": "hac_sharpe",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 65,
+    "base": "simple",
+    "core": "hac_sharpe",
+    "blend": 1.0,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 66,
+    "base": "simple",
+    "core": "hac_sharpe",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 67,
+    "base": "simple",
+    "core": "hac_sharpe",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 68,
+    "base": "simple",
+    "core": "hac_sharpe",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 69,
+    "base": "simple",
+    "core": "hac_sharpe",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 70,
+    "base": "simple",
+    "core": "market_residual_sharpe",
+    "blend": 0.5,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 71,
+    "base": "simple",
+    "core": "market_residual_sharpe",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 72,
+    "base": "simple",
+    "core": "market_residual_sharpe",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 73,
+    "base": "simple",
+    "core": "market_residual_sharpe",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 74,
+    "base": "simple",
+    "core": "market_residual_sharpe",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 75,
+    "base": "simple",
+    "core": "market_residual_sharpe",
+    "blend": 1.0,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 76,
+    "base": "simple",
+    "core": "market_residual_sharpe",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 77,
+    "base": "simple",
+    "core": "market_residual_sharpe",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 78,
+    "base": "simple",
+    "core": "market_residual_sharpe",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 79,
+    "base": "simple",
+    "core": "market_residual_sharpe",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 80,
+    "base": "simple",
+    "core": "rank_residence",
+    "blend": 0.5,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 81,
+    "base": "simple",
+    "core": "rank_residence",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 82,
+    "base": "simple",
+    "core": "rank_residence",
+    "blend": 0.5,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 83,
+    "base": "simple",
+    "core": "rank_residence",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 84,
+    "base": "simple",
+    "core": "rank_residence",
+    "blend": 0.5,
+    "arm": "ordinal",
+    "budget": 0.05
+  },
+  {
+    "id": 85,
+    "base": "simple",
+    "core": "rank_residence",
+    "blend": 1.0,
+    "arm": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 86,
+    "base": "simple",
+    "core": "rank_residence",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.025
+  },
+  {
+    "id": 87,
+    "base": "simple",
+    "core": "rank_residence",
+    "blend": 1.0,
+    "arm": "return",
+    "budget": 0.05
+  },
+  {
+    "id": 88,
+    "base": "simple",
+    "core": "rank_residence",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.025
+  },
+  {
+    "id": 89,
+    "base": "simple",
+    "core": "rank_residence",
+    "blend": 1.0,
+    "arm": "ordinal",
+    "budget": 0.05
+  }
+]

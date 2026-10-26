@@ -1,0 +1,28 @@
+{
+  "all_diagnostic_orders_frozen": true,
+  "hashes": {
+    "CACHE.json": "804d6e6cfcbb2fbe0123986abe2ab281a7ace56ebd8bff915840edeeb761f231",
+    "INDEPENDENT_PREPARE.json": "5788a6c85a6055b7783489a52d7188434b2f9d2c34ffc10c72c1c376cc9425e2",
+    "PLAN.json": "6f8aa84dadee4d2499e683ecf93a6e82b09ea4f54ec05df5047ef19b8bafcac4",
+    "PRETRAIN_ORDERS.json": "cdbe2e28657f90f0f3b26fcc325ff0e4f2479d037ca1d4a0aab4a7e54ee8803e",
+    "TRAIN_OPEN_TRIALS.json": "de17e3ea619affaa0489f8887622e8e493ce562c9c75e2f535049bb2ebe653d7",
+    "TRAIN_TRIALS.json": "b56c5dfbe65f33438382823364c0f623e84be40e3fab7d9875ed3d95c708e74b",
+    "WALKFORWARD.json": "c159acdd11df18ece6bde463d06ba264e6119fcd8cbc83b7bd8911ae71eb6d3d"
+  },
+  "pristine_oos": false,
+  "selection": {
+    "admitted": false,
+    "guards_against": {
+      "batch1_earnings": false,
+      "incumbent_local67": false,
+      "original_earnings": false
+    },
+    "mechanism_confirmed": false,
+    "next_open_guards_against": {
+      "batch1_earnings": false,
+      "incumbent_local67": false,
+      "original_earnings": false
+    },
+    "primary": "incumbent_local67"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "hashes": {
+    "CACHE.json": "218f54c6243a7cbee5838fda56d048e63e1fb327c8f5fced92d298c653aab528",
+    "INDEPENDENT_PREPARE.json": "9f8d1672dea15ba16aead7ae0a95c5d0a3f7afc0071d9b8d5c875ff8a347c7d1",
+    "PLAN.json": "45a43dba2eece0ee71e01675baab2a54670950ee45eeb9198406a99f91f2cfa5",
+    "PRETRAIN_ORDERS.json": "14c5fe22fd9c967634c4f4ad49d6251b835c2e33d38f66c33adbc53e0bfb01e1",
+    "SUPPORT_AUDIT.json": "0aaa8720153ea2ec95312b686df667592996dd407c09870a1feda0f8687e755e",
+    "TRAIN_OPEN_TRIALS.json": "fee5692bb296acce79a72c4eec62da8c7192f46bb04422379912f70c6caf5632",
+    "TRAIN_TRIALS.json": "9aaa97acd8ba1785b6527b2fe7b1b1a3b625e69581af63f3b5abfbd638c629ab"
+  },
+  "later34_diagnostic_only": true,
+  "plan_sha256": "45a43dba2eece0ee71e01675baab2a54670950ee45eeb9198406a99f91f2cfa5",
+  "selection": {
+    "admitted": false,
+    "guards": {
+      "vix_control": {
+        "changed_holdings": true,
+        "close": false,
+        "cost_open": false,
+        "source_support": true
+      },
+      "vvix_challenge": {
+        "changed_holdings": false,
+        "close": false,
+        "cost_open": false,
+        "source_support": true
+      }
+    },
+    "later34_used_for_selection": false,
+    "primary": "incumbent_local67",
+    "selection_count": 1
+  },
+  "selection_count": 1
+}

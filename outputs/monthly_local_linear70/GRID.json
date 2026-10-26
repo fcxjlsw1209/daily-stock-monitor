@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "base": "original65",
+    "mode": "none"
+  },
+  {
+    "id": 1,
+    "base": "incumbent66",
+    "mode": "none"
+  },
+  {
+    "id": 2,
+    "base": "incumbent_scope67",
+    "mode": "none"
+  },
+  {
+    "id": 3,
+    "base": "incumbent_scope67",
+    "mode": "local_constant"
+  },
+  {
+    "id": 4,
+    "base": "incumbent_scope67",
+    "mode": "local_linear"
+  }
+]

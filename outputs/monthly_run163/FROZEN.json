@@ -1,0 +1,34 @@
+{
+  "hashes": {
+    "CACHE.json": "80046e3fbe29e27804c0b55d335768b9713585a959829ff006b0bcf39d70ee4c",
+    "INDEPENDENT_PREPARE.json": "a401c65d9de7a1713a9eacb37c0e70b92fff1f123a6f7e4cd28ea0aeb769a782",
+    "PLAN.json": "71230985a767c9c3270b25c9d74ec6ec64ed965cfd07039a06f0a4c5d20b772e",
+    "PRETRAIN_ORDERS.json": "14592f9f8992bcdd76cfad41d452bb3375c5fd31522e186c6f10b5d1e1f779ee",
+    "SUPPORT_AUDIT.json": "96b4397a503c1196eaabb706fe9d0fd8f7a21b18e76946a5efad047eeddfcab7",
+    "TRAIN_OPEN_TRIALS.json": "514c591f7535dfeb28781959892649748196e1ad26b489a6e3ee9083f0dc0d6c",
+    "TRAIN_TRIALS.json": "e0f67707fc17d4d108c906bdb4e19ec4bedcb018c7bd7c7413bf5328b7727041"
+  },
+  "later34_diagnostic_only": true,
+  "plan_sha256": "71230985a767c9c3270b25c9d74ec6ec64ed965cfd07039a06f0a4c5d20b772e",
+  "selection": {
+    "admitted": false,
+    "guards": {
+      "run_negative": {
+        "changed_holdings": true,
+        "close": false,
+        "cost_open": false,
+        "source_support": true
+      },
+      "run_positive": {
+        "changed_holdings": true,
+        "close": false,
+        "cost_open": false,
+        "source_support": true
+      }
+    },
+    "later34_used_for_selection": false,
+    "primary": "incumbent_local67",
+    "selection_count": 1
+  },
+  "selection_count": 1
+}

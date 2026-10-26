@@ -1,0 +1,298 @@
+{
+  "catalog_events": 32,
+  "catalog_ids": [
+    "INTC_2011-01-13",
+    "INTC_2012-01-19",
+    "INTC_2013-01-17",
+    "INTC_2014-01-16",
+    "INTC_2015-01-15",
+    "INTC_2016-01-14",
+    "INTC_2017-01-26",
+    "INTC_2018-01-25",
+    "INTC_2019-01-24",
+    "INTC_2020-01-23",
+    "INTC_2021-01-21",
+    "INTC_2022-01-26",
+    "INTC_2023-01-26",
+    "INTC_2024-01-25",
+    "INTC_2025-01-30",
+    "INTC_2026-01-22",
+    "KLAC_2011-07-28",
+    "KLAC_2012-07-26",
+    "KLAC_2013-07-25",
+    "KLAC_2014-07-24",
+    "KLAC_2015-07-30",
+    "KLAC_2016-07-28",
+    "KLAC_2017-07-27",
+    "KLAC_2018-07-30",
+    "KLAC_2019-08-05",
+    "KLAC_2020-08-03",
+    "KLAC_2021-07-29",
+    "KLAC_2022-07-28",
+    "KLAC_2023-07-27",
+    "KLAC_2024-07-24",
+    "KLAC_2025-07-31",
+    "KLAC_2026-07-28"
+  ],
+  "catalog_ref": {
+    "path": "work/after150_next_source_context.json",
+    "sha256": "e41e1f3126515fdc31786cfccedf89a8f526362cbc0a0d35f77e71a19db07560"
+  },
+  "code": {
+    "work/after141_amd_source_extract.py": "868cae81055318b9df934f4bfe2849c4971f861c4b480942139c8c7606ae4766",
+    "work/after149_amzn_extract.py": "f59473e6e5703fa5829100679c0887f5bf3853b52433bdf3b5598e4458378a06",
+    "work/after149_source_batch.py": "35b9541097fbb3fc057ca07cfe0283b9d413ff878119917d506bddb1cb94a2ea",
+    "work/after150_intc_extract.py": "de260441e2ae08226381fd73df4944df6717ff3b0ef1c255f58939656241af45",
+    "work/after150_klac_extract.py": "93f10b4128953e2e243a12296c8c6c5d00a68c2fbda0db36cabf7c903ce8f91a",
+    "work/after150_source_batch.py": "723dcf87f63df0602aa0f685b731470dcd57714437690f8330a4cf7c71e1d479",
+    "work/test_after150_batch_parser_interface.py": "89e955be69112b0517c693133cccdeb139f7186c27c03424436a680e7403d945",
+    "work/test_after150_intc_extract.py": "c75acdba8aa9df48cba94cda4e8f46c1c0343f19fecb87f48a2abfe74b01ace2",
+    "work/test_after150_klac_extract.py": "9ebacc3ea15de22489150b4947ab44429632109d3d885c71dca2fef60d01d381",
+    "work/test_after150_source_batch.py": "ed1d01ca317756788483782cbb7995db93cccade1e6dd2b1e1ee9f9cb96a479f"
+  },
+  "context": "work/after150_next_source_context.json",
+  "created_utc": "2026-10-20T17:29:37.354156+00:00",
+  "fields": [
+    "annual_net_income",
+    "current_total_assets",
+    "prior_total_assets"
+  ],
+  "inputs": {
+    "outputs/monthly_earnings_repair/batch_technology_industrial/INTC/raw/3b9dddc37faeb6eb7bcd.bin": "7c98306c6745fc6da92d74ac69cc7c4dc86a25d8e6e20d5a0303301b0567e701",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/INTC/raw/3b9dddc37faeb6eb7bcd.meta.json": "2a8b96f4e343302dad13938b0e6ca1d83f93dba212ec3a1323859e2d51fbbcdf",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/INTC/raw/926c048654a09438963c.bin": "26a22bf7d669be7794701b999cf58cd2650797b32834579ccd5092ab6aa66ad5",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/INTC/raw/926c048654a09438963c.meta.json": "bfbfc8390dd0c30ae7cbaf8315e0b7d56065a6a0601fd3f5d009239091665434",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/INTC/raw/fe78f405a83715ce5cf8.bin": "49189848556b92b0c2590085a3bd5995fe1a3f5ae1503376563a10d7001f0286",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/INTC/raw/fe78f405a83715ce5cf8.meta.json": "69e337c066de1195c11b83e8f7af7c200b197087d135b8550a9c4a7df2885642",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/03a098ae122df6bb302b.bin": "044b35caab260007b4a13c97f6ec4713391d0e9e9a483886bf88a37956fcc731",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/03a098ae122df6bb302b.meta.json": "dbef3186ef5743736b7cb89ae3d060f2c0aa97b863f1682f1c52f5c24069eb5b",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/195e8dd03622e1935345.bin": "8580706444730fe8d7ec08ea1f9afb056402e24d6803266e1e3779e3bc0c6fcf",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/195e8dd03622e1935345.meta.json": "6b6329059f2e9becbcfe49ce16ffff60a6c08c8b37a72d084f34c69f428ee32e",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/3de69bcd873b02eea1f2.bin": "63fce9a3c408654f621e0fb6dcfcefdd088a35411e775bd0615de03a640d0836",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/3de69bcd873b02eea1f2.meta.json": "593404d56a829215efcd4501d6b1d33a15821aee328f786c24b6e758701f2b13",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/4e61f5c55c3892fdbaf4.bin": "3986fd90d185dbe22279a49a9ee7d09c04d031b17b20db153a37f8fde58c594b",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/4e61f5c55c3892fdbaf4.meta.json": "552c4d59c08e259bb7127852ab00d1960e9e1f52b53649126abcc53e15f8f827",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/507b345d3fac989dd57e.bin": "15ba2b0d4b3693c1c66dfdbcdc1e48aaf0be7b522dde88c23df4da63f2748a21",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/507b345d3fac989dd57e.meta.json": "7db7ff440620758e403ea81cf2236322f43c54ea9fe6df825c1daa54c7500974",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/8365fe4cf22175982312.bin": "186b0ba14e76684be5abd0b042704540d4b841ac2c8ee45b6b31ed553abd751b",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/8365fe4cf22175982312.meta.json": "acc16a86170268676d55c024c2f3b3ff8161e70251f0c6e14af59dda15ed5225",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/8e08ca505b2738b25282.bin": "ab484a642d19b6866084b8ebbee64099e8858a8bae526783f6aa679efcec7f57",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/8e08ca505b2738b25282.meta.json": "6599371c205b5d5754823054c6b4e066343be5a369d533cbf529c5209b6edb02",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/9adf34d2b598fee0c2f1.bin": "5b12a62a38f1fdc63e353db6c742ed29f39db01816c0677a953a304381da586d",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/9adf34d2b598fee0c2f1.meta.json": "4d45ed1db108e1c9159c7949157b3e5323c10ca4f210ab0d9c1c385f9eb51fdb",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/9b2a42a35008add0e6ed.bin": "025a2ad388aef91ad9b2e792f44099034569dd0e0daaa79a5be47560a2fdd162",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/9b2a42a35008add0e6ed.meta.json": "faf742b8f6132d9c88ec4b07b7984621fb520f8099eb418ff8e1e8d7bff912de",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/9b5324706800a8db103a.bin": "3e166c45d47c6b24bfd636e6cd47e407ad9206ee132d7e369c7aef2754a12687",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/9b5324706800a8db103a.meta.json": "94f79901d8c1408ac5373a3a1aac3f0a2edaefe3674a69cd6c9ffe0306a97d76",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/b2951281eb3771e39678.bin": "615ea782bcffe3ded2e3fe832a95283c5bd8b789107f7a9fc844cd228ccf9ecc",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/b2951281eb3771e39678.meta.json": "807e86ac123b5c53156ae0a8789a60967264a265a3bd2aa9e117da82f9c126ae",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/cde68ebb0ed230e0e515.bin": "a3d41caa037d45db507206dd5cf001d8fe12a779987086290577b657ef3df88e",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/cde68ebb0ed230e0e515.meta.json": "f151dc90230ac3ff4006dc6a51dcb281cec5d3c5b9f7adb846eb4f32fdf6cc89",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/cdfb013a017cadfb8cd0.bin": "b185a5009d94d0fd443e07ac990449bb7d06e4672f1e84bfc4458eb1f9138683",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/cdfb013a017cadfb8cd0.meta.json": "a0133eb1661da24dfd255104a42c553cadc834390b09ba58fcac6c5ace2e08bd",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/d069661b1a59edfda3d5.bin": "331515f800fce67b161eb1731aa5e33f01fd5de81815665dbae4d9ab9ede3cd9",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/d069661b1a59edfda3d5.meta.json": "898a003a6e277700df258d94d803bb4aea5f670ac41e70b87dded2ede992d62c",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/deb8591c8de61585f6f2.bin": "8b4a8fe46f126aac9d6ef0a7cc257777839d67f4155b53f8078d587ef260dd9e",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/deb8591c8de61585f6f2.meta.json": "69309104468131c6192d8e14f6ef30abff5ef7188dd87118f10fbb101752c268",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/f348f241080145dfdafc.bin": "854be25844391f85e4ec41f689068f2ef6d2a15b09ce86dc9e285b6ded6244e2",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/f348f241080145dfdafc.meta.json": "1ecbebfa164e6729c84118c7e06bbde693a2c3f8e02c6f1c496464cd13550815",
+    "outputs/monthly_financial_coverage150/COMPLETION.json": "28546cec6459a8ca73df5b434d06878ca7bb16008fc0e13b1a6b870cee8ffb92",
+    "outputs/monthly_financial_coverage_admission_batch1_v1/ADMISSION.json": "1775006cb493036b8a89c34cedc53cb22d795c61c95498454d278909fac402a5",
+    "outputs/monthly_financial_coverage_admission_batch1_v1/DATASET.json": "b9096e587cc6460b4007fe85cddd6a0ebfbbd211736a31fb899405b5f02fb4f3",
+    "outputs/monthly_financial_coverage_census_v1/CENSUS.json": "de95906ef3d752890d28027a9b52cfd7decc7aeb1bc0f09f2785f1826a3500fc",
+    "outputs/monthly_financial_coverage_census_v1/PLAN.json": "04a019483b0dbdc967113573c36ec46c90f29e6468fe605318314916bc7345a9",
+    "outputs/monthly_forward_guidance_preflight_v1/SESSIONS.json": "c05c15f19bc1f7a3428e456a71199d64f05799ef3c432fa45f7bc485d0ff3cf4",
+    "outputs/monthly_local_linear70/META.json": "3b46968f486e88fa170ac01f120dd5ef74ebd5a56243c6991c5a4fea506076f4",
+    "outputs/monthly_profitability141_sources/DATA_PLAN.json": "214fb91e749d6d6dc54ff4b479e6230a1b4cecac48bcca69a15b017e4110d112",
+    "work/after141_amd_source_extract.py": "868cae81055318b9df934f4bfe2849c4971f861c4b480942139c8c7606ae4766",
+    "work/after149_batch1_admission.py": "4a7f3753e24dba026c562a007ec024e868da1372dfa7ea1d0b23d85f6ced204b",
+    "work/after149_batch1_admission_policy.json": "09abd63d0c0e4b904bfa3d00dd002b2fc3f8390e314e87f1c25d1b57320869f4",
+    "work/after149_batch1_independent_review.json": "8b17270d5b162147b5cbf5336d01794f41222a6484740ff13524404aaa7e671f",
+    "work/after149_coverage_extension_concept.json": "60c3afd837cd32b75a70733b70c777084a9c124cf917e8052628947f1cb7d6ee",
+    "work/after150_batch2_admission_policy.json": "53e46c3909b82755942566b9f9913c3edf05e2806c7cadc1da07fe2322eb2d77",
+    "work/after150_batch2_admission_policy_review.json": "021de274e7c8699cca28d9ba695091c90ee28924aec5de1c98a29d3d3304f030",
+    "work/after150_next_source_context.json": "e41e1f3126515fdc31786cfccedf89a8f526362cbc0a0d35f77e71a19db07560",
+    "work/after150_next_source_context.py": "6216a90bfaef2a49c6a1167a129733e8bbd5542290361f822a14e0ddafae40b2",
+    "work/monthly_financial_census_independent_review.json": "707b6dfd37d0dca3415ef152cab824c585950459d4b22bed3e37416089ad0efe"
+  },
+  "modules": {
+    "INTC": "after150_intc_extract",
+    "KLAC": "after150_klac_extract"
+  },
+  "new_strategy_trials": 0,
+  "no_admission_by_extraction": true,
+  "no_network": true,
+  "no_observer_changes": true,
+  "no_scores_or_returns": true,
+  "policy": "work/after150_batch2_admission_policy.json",
+  "preserve_all_prior_source_holds": true,
+  "preserve_unprocessed_catalog_events": true,
+  "purpose": "Source-only INTC/KLAC annual NI and same-report assets extraction",
+  "records": [
+    {
+      "event_id": "INTC_2018-01-25",
+      "fiscal_year": 2017,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/INTC/raw/3b9dddc37faeb6eb7bcd.bin",
+      "source_sha256": "7c98306c6745fc6da92d74ac69cc7c4dc86a25d8e6e20d5a0303301b0567e701",
+      "symbol": "INTC"
+    },
+    {
+      "event_id": "INTC_2021-01-21",
+      "fiscal_year": 2020,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/INTC/raw/926c048654a09438963c.bin",
+      "source_sha256": "26a22bf7d669be7794701b999cf58cd2650797b32834579ccd5092ab6aa66ad5",
+      "symbol": "INTC"
+    },
+    {
+      "event_id": "INTC_2022-01-26",
+      "fiscal_year": 2021,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/INTC/raw/fe78f405a83715ce5cf8.bin",
+      "source_sha256": "49189848556b92b0c2590085a3bd5995fe1a3f5ae1503376563a10d7001f0286",
+      "symbol": "INTC"
+    },
+    {
+      "event_id": "KLAC_2011-07-28",
+      "fiscal_year": 2011,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/f348f241080145dfdafc.bin",
+      "source_sha256": "854be25844391f85e4ec41f689068f2ef6d2a15b09ce86dc9e285b6ded6244e2",
+      "symbol": "KLAC"
+    },
+    {
+      "event_id": "KLAC_2012-07-26",
+      "fiscal_year": 2012,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/deb8591c8de61585f6f2.bin",
+      "source_sha256": "8b4a8fe46f126aac9d6ef0a7cc257777839d67f4155b53f8078d587ef260dd9e",
+      "symbol": "KLAC"
+    },
+    {
+      "event_id": "KLAC_2013-07-25",
+      "fiscal_year": 2013,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/195e8dd03622e1935345.bin",
+      "source_sha256": "8580706444730fe8d7ec08ea1f9afb056402e24d6803266e1e3779e3bc0c6fcf",
+      "symbol": "KLAC"
+    },
+    {
+      "event_id": "KLAC_2014-07-24",
+      "fiscal_year": 2014,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/3de69bcd873b02eea1f2.bin",
+      "source_sha256": "63fce9a3c408654f621e0fb6dcfcefdd088a35411e775bd0615de03a640d0836",
+      "symbol": "KLAC"
+    },
+    {
+      "event_id": "KLAC_2015-07-30",
+      "fiscal_year": 2015,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/9adf34d2b598fee0c2f1.bin",
+      "source_sha256": "5b12a62a38f1fdc63e353db6c742ed29f39db01816c0677a953a304381da586d",
+      "symbol": "KLAC"
+    },
+    {
+      "event_id": "KLAC_2016-07-28",
+      "fiscal_year": 2016,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/b2951281eb3771e39678.bin",
+      "source_sha256": "615ea782bcffe3ded2e3fe832a95283c5bd8b789107f7a9fc844cd228ccf9ecc",
+      "symbol": "KLAC"
+    },
+    {
+      "event_id": "KLAC_2017-07-27",
+      "fiscal_year": 2017,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/03a098ae122df6bb302b.bin",
+      "source_sha256": "044b35caab260007b4a13c97f6ec4713391d0e9e9a483886bf88a37956fcc731",
+      "symbol": "KLAC"
+    },
+    {
+      "event_id": "KLAC_2018-07-30",
+      "fiscal_year": 2018,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/9b5324706800a8db103a.bin",
+      "source_sha256": "3e166c45d47c6b24bfd636e6cd47e407ad9206ee132d7e369c7aef2754a12687",
+      "symbol": "KLAC"
+    },
+    {
+      "event_id": "KLAC_2019-08-05",
+      "fiscal_year": 2019,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/8e08ca505b2738b25282.bin",
+      "source_sha256": "ab484a642d19b6866084b8ebbee64099e8858a8bae526783f6aa679efcec7f57",
+      "symbol": "KLAC"
+    },
+    {
+      "event_id": "KLAC_2020-08-03",
+      "fiscal_year": 2020,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/d069661b1a59edfda3d5.bin",
+      "source_sha256": "331515f800fce67b161eb1731aa5e33f01fd5de81815665dbae4d9ab9ede3cd9",
+      "symbol": "KLAC"
+    },
+    {
+      "event_id": "KLAC_2021-07-29",
+      "fiscal_year": 2021,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/507b345d3fac989dd57e.bin",
+      "source_sha256": "15ba2b0d4b3693c1c66dfdbcdc1e48aaf0be7b522dde88c23df4da63f2748a21",
+      "symbol": "KLAC"
+    },
+    {
+      "event_id": "KLAC_2022-07-28",
+      "fiscal_year": 2022,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/cde68ebb0ed230e0e515.bin",
+      "source_sha256": "a3d41caa037d45db507206dd5cf001d8fe12a779987086290577b657ef3df88e",
+      "symbol": "KLAC"
+    },
+    {
+      "event_id": "KLAC_2023-07-27",
+      "fiscal_year": 2023,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/9b2a42a35008add0e6ed.bin",
+      "source_sha256": "025a2ad388aef91ad9b2e792f44099034569dd0e0daaa79a5be47560a2fdd162",
+      "symbol": "KLAC"
+    },
+    {
+      "event_id": "KLAC_2024-07-24",
+      "fiscal_year": 2024,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/4e61f5c55c3892fdbaf4.bin",
+      "source_sha256": "3986fd90d185dbe22279a49a9ee7d09c04d031b17b20db153a37f8fde58c594b",
+      "symbol": "KLAC"
+    },
+    {
+      "event_id": "KLAC_2025-07-31",
+      "fiscal_year": 2025,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/cdfb013a017cadfb8cd0.bin",
+      "source_sha256": "b185a5009d94d0fd443e07ac990449bb7d06e4672f1e84bfc4458eb1f9138683",
+      "symbol": "KLAC"
+    },
+    {
+      "event_id": "KLAC_2026-07-28",
+      "fiscal_year": 2026,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/KLAC/raw/8365fe4cf22175982312.bin",
+      "source_sha256": "186b0ba14e76684be5abd0b042704540d4b841ac2c8ee45b6b31ed553abd751b",
+      "symbol": "KLAC"
+    }
+  ],
+  "runtime": {
+    "beautifulsoup4": "4.15.0",
+    "python": "3.9.6 (default, Jan  9 2026, 11:03:41) \n[Clang 17.0.0 (clang-1700.6.4.2)]"
+  },
+  "schema_version": 1,
+  "selection": "Next alphabetic existing-HTML issuers; no holdings/return-based selection",
+  "synthetic_tests": [
+    {
+      "module": "test_after150_source_batch",
+      "output": "----------------------------------------------------------------------\nRan 17 tests in 0.005s\n\nOK\n",
+      "passed": true,
+      "tests": 17
+    },
+    {
+      "module": "test_after150_batch_parser_interface",
+      "output": "----------------------------------------------------------------------\nRan 11 tests in 0.301s\n\nOK\n",
+      "passed": true,
+      "tests": 11
+    },
+    {
+      "module": "test_after150_intc_extract",
+      "output": "----------------------------------------------------------------------\nRan 41 tests in 0.329s\n\nOK\n",
+      "passed": true,
+      "tests": 41
+    },
+    {
+      "module": "test_after150_klac_extract",
+      "output": "----------------------------------------------------------------------\nRan 60 tests in 1.145s\n\nOK\n",
+      "passed": true,
+      "tests": 60
+    }
+  ]
+}

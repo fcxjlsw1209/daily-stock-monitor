@@ -1,0 +1,26 @@
+{
+  "all_diagnostic_orders_frozen": true,
+  "hashes": {
+    "CACHE.json": "8fdf060f096883f810a6dc840a0a3046d46435a6710610f6f74ef966c0f31357",
+    "INDEPENDENT_PREPARE.json": "2631ffb276f6fdf0d9a18d50e55a2c31e6390db34efbdb099fedb74b38ad6eb4",
+    "PLAN.json": "3574e88c562557961ba49ddd37ddd98192a2a4a8b195029b2c31a189fb7a37d6",
+    "PRETRAIN_ORDERS.json": "b0dfe87f691e0a5041a6f9e40279eb0678bc76d38abcd10a48160901fe520274",
+    "TRAIN_OPEN_TRIALS.json": "5d74b69fac82d3927dc89359100db0505357f5ed7896a702b3ac8677d7444fbf",
+    "TRAIN_TRIALS.json": "5b4098f2f4cb946f045793f5f6df3380848581375b18486c9a34a76a01b7848a",
+    "WALKFORWARD.json": "7533b9d4da5986e16151905ef7b97d1a8f7de90ad7d8c8380c3c87a7f0e22ae7"
+  },
+  "pristine_oos": false,
+  "selection": {
+    "admitted": false,
+    "guards_against": {
+      "event_frequency_control": true,
+      "incumbent_local67": false
+    },
+    "mechanism_confirmed": false,
+    "next_open_guards_against": {
+      "event_frequency_control": true,
+      "incumbent_local67": false
+    },
+    "primary": "incumbent_local67"
+  }
+}

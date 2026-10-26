@@ -1,0 +1,33 @@
+{
+  "hashes": {
+    "CACHE.json": "5df12a215b80040a474578457a184160cbeb4c22a43296dddd34c233d8b8e594",
+    "INDEPENDENT_PREPARE.json": "fe8fa56bb012ba2efdb7f631965ed76981fa9380446e291dc2099dbfe648eecc",
+    "PLAN.json": "973d1e86324c254d2dab0803fe4e756731a383c18f8e297dff901044686d3092",
+    "PRETRAIN_ORDERS.json": "b8787891f7329d085ee05291444ead633828e0102887905d7a04028321cc4019",
+    "SUPPORT_AUDIT.json": "7dc382b9e2d1c6662f387d54b976a1a3aac459b886a7dbf9baa768e7a09aa554",
+    "TRAIN_OPEN_TRIALS.json": "997297d7f0d3fb13b8dcf34177e7429fa7fda6a5eef4f7c6fdca76816f460b69",
+    "TRAIN_TRIALS.json": "7179502e45794a1bde74857d9ac5db5b15f9da5edd8ef668ab89ab42749b158b"
+  },
+  "later34_diagnostic_only": true,
+  "plan_sha256": "973d1e86324c254d2dab0803fe4e756731a383c18f8e297dff901044686d3092",
+  "selection": {
+    "admitted": false,
+    "guards": {
+      "activity_risk": {
+        "changed_holdings": true,
+        "close": false,
+        "close_vs_control": false,
+        "cost_open": false,
+        "cost_open_vs_control": false,
+        "source_support": true
+      },
+      "variance_control": {
+        "promotable": false
+      }
+    },
+    "later34_used_for_selection": false,
+    "primary": "incumbent_local67",
+    "selection_count": 1
+  },
+  "selection_count": 1
+}

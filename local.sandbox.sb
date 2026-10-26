@@ -1,0 +1,5 @@
+(version 1)
+(allow default)
+(deny network*)
+(deny file-read* file-write* (subpath "/Users/shiweili/Library/CloudStorage"))
+(deny file-write* (regex #"/Users/shiweili/code/monthly-stock-research/outputs/[^/]*_monitor(/|$)"))

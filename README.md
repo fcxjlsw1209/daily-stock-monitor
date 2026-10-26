@@ -1,36 +1,26 @@
 # Stock Signal Monitor
 
-**2026-10-11 更新：** 最新六个日观察账户、四个月观察账户及研究代码位于
-`outputs/`；统一入口为 `outputs/paired_stock_monitor/run_pair.py`。
-部署前请读 [当前代码、版本与数据依赖](docs/LATEST_WORKSPACE.md)。本仓库不含私有行情
-缓存、作者交易记录或现有模拟账本。下面的 `stock-monitor` 安装说明仍对应早期单账户 CLI。
+**2026-10-26 更新：** 六个日观察账户、四个月观察账户、独立月策略研究源码与测试已同步。
+研究代码保留 `outputs/`、`work/` 相对目录；运行说明见 [当前版本与数据依赖](docs/LATEST_WORKSPACE.md)。
 
-最新研究：[日级回撤事件用于月策略边界选股](docs/MONTHLY_EPISODE_RESEARCH.md)。
+## 当前观察与研究入口
 
-当前定时运行入口是三账户收盘监控：基准、量价压力影子、抗跌性影子。只做独立模拟，不连接券商。旧版 `stock-monitor` CLI 保留，仍是单账户盘前版本；它不会运行以下三账户流程。
-
-## 当前三账户入口
-
-安装依赖后，从仓库根目录执行：
+在已恢复对应私有数据、账本、冻结指纹与本地 Python 环境的工作区：
 
 ```sh
-python -m pip install .
-python outputs/paired_stock_monitor/run_pair.py --phase auto
-python -m unittest discover -s outputs/paired_stock_monitor -p 'test_*.py' -v
+./run_observer.sh --phase auto
+./run_local.sh work/monthly_risk_clock263_host.py --help
 ```
 
-- 收盘数据完整后冻结下一交易日计划，下一开盘价代理成交，日线完整后核对；重复运行不重复入账。
-- 三账户共用同一不可变快照；Yahoo缺失时尝试经验证的已有快照或StockAnalysis备用数据，无法确认则停止新建议。
-- 基准 `r12_cmf_rebound_v1`；压力影子 `r12_cmf_pressure_shadow_v1`；抗跌影子 `r12_cmf_resilience_shadow_v1`。第三账户在基准入围股票内加入10%下跌日beta残差抗跌排序，R12–1保持30%。
-- 各自10万美元，每只预算10%、最多5只、每行业2只，双边成本0.10%，guarded10退出。
-- 第三账户起点2026-09-28；同期统计从该日开始，收益包含原账户继承持仓，胜率仅计同期新入场平仓交易。60个共同完整交易日且各100笔此类平仓才做初步评估。
-- 统一摘要在 `outputs/paired_stock_monitor/COMPARISON.md`，各账户独立SQLite账本和CSV位于自己的目录；行情缓存为 `work/stock_monitor_cache/`。这些运行数据不提交。
+- 观察器运行六个独立日策略账户和四个月策略账户，无券商连接。
+- 日账户使用已授权的 `causal_replay_v3` 顺序补算：每个交易日只用前一交易日及更早信息，保留真实计算时间和行情版本。补算记录不称纯前向样本外。
+- 月观察账户各自沿用冻结规则；研究不会自动更改账户或将候选上线。
+- 研究回放在本地离线沙箱中运行，禁止读取 OneDrive 或联网下载。
+- 同收盘、零成本历史研究最佳年化 **67.67%**（2016-08-17 至 2026-09-24），Sharpe **1.735**。70% 目标尚未达到，结果经过多轮历史探索，不是未来收益保证或独立样本外成绩。
 
-本仓库同步运行代码及冻结配置，**不含现有账户账本或历史行情**。全新克隆不会恢复已有模拟成绩，也不会获得任何历史补记授权。新使用者应在首次运行前把三个配置的 `paper_start` 设为同一未来NYSE交易日；账户初始化后不要修改代码或配置来绕过指纹检查。已有账户升级需另行审核迁移，不能删除账本重建历史。
+本仓库发布代码和显式选定的配置，**不含行情、特征/预测缓存、拟合产物、作者交易记录或现有模拟账本**。全新克隆不能恢复已有账户或直接复现全部历史结果；必须另行恢复匹配的私有数据与证据。不要删除账本、重写冻结计划或绕过指纹检查。
 
-目前源码目录结构用于保持现有策略指纹与相对依赖一致；`outputs/factor_research` 和 `outputs/swing_research` 是运行时因子依赖，其中独立研究入口所需历史数据库未发布。不要把旧CLI和新入口当作相同执行版本。
-
-完整执行约定：[三账户规则](outputs/paired_stock_monitor/RULES.md)、[第三账户规则](outputs/resilience_shadow_monitor/RULES.md)。调度仍需在本机配置，本仓库不安装定时任务。
+`stock-monitor` 是保留的旧单账户 CLI，不等于当前统一观察器。后面的旧 CLI 文档描述其独立行为。
 
 ## 独立离线研究
 

@@ -1,0 +1,28 @@
+{
+  "all_diagnostic_orders_frozen": true,
+  "hashes": {
+    "CACHE.json": "225a35f3a297720e5be7d0d63d1c9a8734038a4bd9a6fcfb476289be34770a04",
+    "INDEPENDENT_PREPARE.json": "2208525683f25f5f762463843aba1134d463cd5618712a9c21dc12c666b4c59a",
+    "PLAN.json": "43adc171b3ee82cd952544b75db63fffaf5b87bd25b96a03e709fd2ff22356db",
+    "PRETRAIN_ORDERS.json": "6b837f122aae7f46341bad0158280874be55632607b08a735043238e07342204",
+    "TRAIN_OPEN_TRIALS.json": "829ff33d16edeea7d2a3e27d7a81c5dd05f4ca1d763d038865e36a46b90bdd72",
+    "TRAIN_TRIALS.json": "63ed9642571f2084c3afb81e30d7e61dfd8d0d71635a4a3aecc5c696abf6cefd",
+    "WALKFORWARD.json": "9ff5eaeaed90f6847548237a069be7cb1d976f47d5e921f2c0c1aa803d7e2094"
+  },
+  "pristine_oos": false,
+  "selection": {
+    "admitted": false,
+    "guards_against": {
+      "filing_window_density": true,
+      "incumbent_local67": false,
+      "whole_formation_beta_residual_momentum": true
+    },
+    "mechanism_confirmed": false,
+    "next_open_guards_against": {
+      "filing_window_density": false,
+      "incumbent_local67": false,
+      "whole_formation_beta_residual_momentum": true
+    },
+    "primary": "incumbent_local67"
+  }
+}

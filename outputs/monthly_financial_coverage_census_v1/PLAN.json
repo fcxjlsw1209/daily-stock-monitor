@@ -1,0 +1,59 @@
+{
+  "code": {
+    "work/monthly_financial_coverage_census.py": "7a1fc711c1e68cfa9fae91f8e41d80780f8f7c524f618f2652d191632eb25b9a",
+    "work/test_monthly_financial_coverage_census.py": "e0e7fb538922e26fb5b1c666e06ce1c7154f0d88bbfb28c577da6dcc44d39858"
+  },
+  "created_utc": "2026-10-20T15:40:17.636951+00:00",
+  "inputs": {
+    "admitted_financial_sources": {
+      "path": "outputs/monthly_stock_comp_source_admission_v2/DATASET.json",
+      "sha256": "219885b9e14d7d383b974f4fd550d09f583031ebab3bffe6f39c10bb131031b1"
+    },
+    "companyfacts_inventory": {
+      "path": "work/profitability141_migrated_cache_inventory_complete_20261019T202336581108Z.json",
+      "sha256": "22a14e629a95558a1b1c3943312c6e6b7fffdf6ac1af33d8087374b7f4da30fa"
+    },
+    "event_scope": {
+      "path": "outputs/monthly_earnings_repair/SCOPED_READINESS.json",
+      "sha256": "89cc0a0284128c827fd9e7b5e15244b952dc61f33ae12812e79e4c3e4e6a554a"
+    },
+    "event_validation": {
+      "path": "outputs/monthly_earnings_repair/VALIDATION.json",
+      "sha256": "60df14ed466951af373b19aec7124dd859aa3877973f31e5ca12c2af36de83c2"
+    },
+    "events": {
+      "path": "outputs/monthly_earnings_repair/EVENTS.json",
+      "sha256": "1e027fc8b933af9753241c15a2e0dcc5a32daa13205ba4d74f90b64db6e2e103"
+    },
+    "identity_leads": {
+      "path": "outputs/monthly_profitability141_sources/DATA_PLAN.json",
+      "sha256": "214fb91e749d6d6dc54ff4b479e6230a1b4cecac48bcca69a15b017e4110d112"
+    },
+    "universe": {
+      "path": "outputs/monthly_local_linear70/META.json",
+      "sha256": "3b46968f486e88fa170ac01f120dd5ef74ebd5a56243c6991c5a4fea506076f4"
+    }
+  },
+  "policy": {
+    "age_for_coverage_leads_days": 550,
+    "age_measured_from": "official_actual_period_end",
+    "body_checks": "Seven broad text-presence checks, no values or financial context admitted",
+    "companyfacts": "Cached metadata locator only; never accounting source or financial admission",
+    "no_cloud": true,
+    "no_network": true,
+    "no_observer_changes": true,
+    "no_returns": true,
+    "no_scores": true,
+    "source_errors": "Retain explicit gaps and proceed with census; not with trading",
+    "unavailable_latest": "Report latest fiscal-quarter4 metadata first; never bypass invalid latest"
+  },
+  "purpose": "All-candidate source feasibility; zero financial admission or strategy trials",
+  "schema_version": 1,
+  "scope": {
+    "annual_lead": "Existing fiscal_quarter=4 metadata; verify original text later",
+    "inherited_cik_links": "Locators only; no historical identity admission",
+    "no_holdings_or_return_selection": true,
+    "stock_compensation_source": "Existing final admission preserved, including all holds",
+    "universe": "All stocks in all122 original candidate panels before ranking"
+  }
+}

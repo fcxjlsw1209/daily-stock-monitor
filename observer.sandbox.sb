@@ -1,0 +1,12 @@
+(version 1)
+(allow default)
+; Frozen code/imports may be read locally, but writes belong to this runtime.
+(deny file-write*)
+(allow file-write* (subpath (param "OBSERVER_ROOT")) (literal "/dev/null"))
+; Observe may download public quotes; research has its own offline sandbox.
+(deny network*)
+(allow network-outbound)
+; Cover standard provider roots, including differently cased spellings.
+(deny file-read* file-write*
+  (subpath "/Users/shiweili/Library/CloudStorage")
+  (regex #"/([Cc][Ll][Oo][Uu][Dd][Ss][Tt][Oo][Rr][Aa][Gg][Ee]|[Oo][Nn][Ee][Dd][Rr][Ii][Vv][Ee][^/]*)(/|$)"))

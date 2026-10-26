@@ -1,0 +1,493 @@
+"""Synthetic host wiring checks; no market arrays or model fitting."""
+from pathlib import Path
+from types import SimpleNamespace
+import copy
+import importlib.util
+import tempfile
+import unittest
+from unittest.mock import Mock, patch
+
+import numpy as np
+import pandas as pd
+
+
+P = Path(__file__).resolve().parent
+_spec = importlib.util.spec_from_file_location('tested_asset_peer213_host', P/'monthly_asset_peer213_host.py')
+h = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(h)
+
+
+def rank(raw, use):
+    result = np.zeros(raw.shape, float)
+    for i in range(len(raw)):
+        values = pd.Series(raw[i, use[i]])
+        result[i, use[i]] = values.rank(method='average', pct=True).to_numpy()-.5
+    return result
+
+
+def fixture():
+    shape = (6, 6)
+    source = np.tile(np.array([0., 2., 1., 5., 3., 4.]), (shape[0], 1))
+    old = np.tile(np.array([1., 0., 5., 3., 2., 4.]), (shape[0], 1))
+    use = np.ones(shape, bool); use[:, -1] = False
+    a = dict(baseline=np.tile([.25, .02, -.1, .13, -.05, .07], (6, 1)),
+        eligible=use, forecast_available=np.ones(shape, bool), model_available=np.ones(shape, bool),
+        raw_source_log=source, raw_local_linear=old, raw_local_constant=old.copy(),
+        rank_log_excess=rank(source, use),
+        state_weak_narrow=np.array([True, True, False, False, False, True]),
+        state_calm10=np.array([False, True, True, False, True, False]),
+        extension_available=np.ones(shape, bool), effects=np.zeros((6, 6, 2)))
+    a['extension_available'][2, 1] = False
+    a['extension_available'][4] = False
+    f = dict(raw=dict(candidate=np.tile(np.arange(6., 0., -1.), (6, 1)).reshape(-1),
+                      control=((source+old)/2.).reshape(-1)), available=np.ones(shape, bool).reshape(-1))
+    meta = dict(dates=['synthetic-%d' % i for i in range(6)], symbols=[list('ABCDEF') for _ in range(6)])
+    return a, meta, f
+
+
+class SyntheticStudy:
+    """A deterministic ranker/selector double with observable adapter calls."""
+    ARMS = ('local_constant', 'local_linear')
+
+    def __init__(self):
+        self.ep = SimpleNamespace(select_boundary=Mock(side_effect=self.boundary))
+        frozen=h.module('asset_peer213_synthetic_adapter',h.ROOT/'outputs/monthly_path70_research/incumbent_adapter.py')
+        self.adapter = SimpleNamespace(score_and_choose=Mock(side_effect=self.choose_adapter),_state=frozen._state,_matrix=frozen._matrix)
+        self.rp = SimpleNamespace(make_orders=self.make_orders)
+
+    @staticmethod
+    def configs():
+        return [dict(id=i) for i in range(5)]
+
+    @staticmethod
+    def original_rank_inputs(a, n):
+        return a['rank_log_excess'][:n].copy(), a['forecast_available'][:n] & a['eligible'][:n]
+
+    def ranked_forecasts(self, values, available, a, n):
+        use = self.original_rank_inputs(a, n)[1]
+        result = {key:a['rank_log_excess'][:n].copy() for key in self.ARMS}
+        ready = np.array([bool(use[i].any() and available[i, use[i]].all() and
+            all(np.isfinite(values[key][i, use[i]]).all() for key in self.ARMS)) for i in range(n)], bool)
+        for key in self.ARMS:
+            if np.isinf(values[key][:n]).any():
+                raise FloatingPointError('Infinite synthetic forecast')
+            for i in np.flatnonzero(ready):
+                result[key][i, use[i]] = pd.Series(values[key][i, use[i]]).rank(
+                    method='average', pct=True).to_numpy()-.5
+        return result, ready
+
+    def modified_pre_score(self, spec, a, n):
+        assert spec == dict(id=4)
+        old = rank(a['raw_local_linear'], a['eligible'] & a['forecast_available'])
+        coef = .25*(.05*a['state_weak_narrow'][:, None]+.01*
+            (a['state_calm10'] & ~a['state_weak_narrow'])[:, None]*a['extension_available'])
+        # Existing global-model contribution is deliberately large and distinct.
+        return a['baseline']+.07*a['rank_log_excess']+coef*(old-a['rank_log_excess'])
+
+    @staticmethod
+    def boundary(pre, a, meta, n):
+        result = []
+        for i in range(n):
+            ids = np.flatnonzero(a['eligible'][i])
+            ids = sorted(ids, key=lambda j:(-pre[i, j], j))
+            chosen = ids[:3] if len(ids) >= 2 else []
+            result.append([meta['symbols'][i][j] for j in chosen])
+        return result, pre[:n].copy()
+
+    def choices(self, spec, a, meta, n, *, policy):
+        return self.boundary(self.modified_pre_score(spec, a, n), a, meta, n)
+
+    @staticmethod
+    def make_orders(choices, scores, meta):
+        return [dict(date=meta['dates'][i], symbols=ss, scores=scores[i].tolist())
+                for i, ss in enumerate(choices)]
+
+    def choose_adapter(self, base, weight, residual, a, meta, n, *, pre_score,
+                       effects, episode_policy, boundary_selector):
+        assert base == 'incumbent66' and weight == 0.
+        assert residual.shape == a['baseline'].shape and np.isnan(residual).all()
+        assert effects is a['effects']
+        assert boundary_selector is self.ep.select_boundary
+        return boundary_selector(pre_score, a, meta, n)
+
+
+class RankSlotTests(unittest.TestCase):
+    def test_exact_regime_coefficients_and_partial_first_event(self):
+        a, meta, forecast = fixture(); s = SyntheticStudy()
+        ranks, deltas = h.rank_and_delta(s, a, forecast, 6)
+        use = a['eligible'] & a['forecast_available']; old = rank(a['raw_local_linear'], use)
+        coefficient = np.zeros(a['baseline'].shape)
+        coefficient[1, :] = .0125
+        coefficient[2, :] = .0025; coefficient[2, 1] = 0.
+        coefficient[5, :] = .0125
+        for name in h.NAMES[1:]:
+            want_rank = rank(forecast['raw'][h.RAW[name]].reshape(a['baseline'].shape), use)
+            np.testing.assert_array_equal(ranks[name], want_rank)
+            want_delta = coefficient*(want_rank-old); want_delta[~use] = 0.
+            np.testing.assert_array_equal(deltas[name], want_delta)
+            np.testing.assert_array_equal(deltas[name][0], np.zeros(6))
+            np.testing.assert_array_equal(deltas[name][3:5], np.zeros((2, 6)))
+        self.assertTrue(np.any(deltas[h.NAMES[1]][1] != 0.))
+        self.assertTrue(np.any(deltas[h.NAMES[1]][2] != 0.))
+
+    def test_ineligible_and_unavailable_rows_do_not_gain_delta(self):
+        a, meta, forecast = fixture(); s = SyntheticStudy()
+        forecast['available'].reshape(6, 6)[1, 0] = False
+        forecast['raw']['candidate'].reshape(6, 6)[5, 1] = np.nan
+        _, deltas = h.rank_and_delta(s, a, forecast, 6)
+        for name in h.NAMES[1:]:
+            np.testing.assert_array_equal(deltas[name][1], np.zeros(6))
+            np.testing.assert_array_equal(deltas[name][:, -1], np.zeros(6))
+        for name in h.NAMES[1:]:np.testing.assert_array_equal(deltas[name][5], np.zeros(6))
+
+    def test_identical_old_raw_preserves_every_pre_score_and_order(self):
+        a, meta, forecast = fixture(); s = SyntheticStudy()
+        for key in forecast['raw']:
+            forecast['raw'][key] = a['raw_local_linear'].reshape(-1).copy()
+        before = s.modified_pre_score(s.configs()[4], a, 6)
+        policy = dict(synthetic=True)
+        with patch.object(h, 'read', return_value=policy):
+            orders, ranks, deltas = h.decisions(s, a, meta, forecast, 6)
+        for name in h.NAMES[1:]:
+            np.testing.assert_array_equal(deltas[name], np.zeros((6, 6)))
+            self.assertEqual(orders[name], orders[h.NAMES[0]])
+        for call in s.adapter.score_and_choose.call_args_list:
+            self.assertEqual(call.kwargs['pre_score'].tobytes(), before.tobytes())
+
+    def test_replaces_local_quarter_preserves_global_and_runs_episode_once(self):
+        a, meta, forecast = fixture(); s = SyntheticStudy(); policy = dict(synthetic=True)
+        original_pre = s.modified_pre_score(s.configs()[4], a, 6)
+        with patch.object(h, 'read', return_value=policy) as reader:
+            orders, ranks, deltas = h.decisions(s, a, meta, forecast, 6)
+        reader.assert_called_once_with(h.LOCAL/'INCUMBENT_POLICY.json')
+        self.assertEqual(s.adapter.score_and_choose.call_count, 2)
+        self.assertEqual(s.ep.select_boundary.call_count, 2)
+        for name, call in zip(h.NAMES[1:], s.adapter.score_and_choose.call_args_list):
+            expected = original_pre.copy(); changed = deltas[name] != 0.
+            expected[changed] += deltas[name][changed]
+            self.assertEqual(call.kwargs['pre_score'].tobytes(), expected.tobytes())
+            np.testing.assert_array_equal(call.kwargs['effects'], a['effects'])
+            self.assertIs(call.kwargs['episode_policy'], policy)
+            # A whole-model replacement would move the large .07 global slot;
+            # this test instead verifies only the existing local-quarter delta.
+            np.testing.assert_array_equal(call.kwargs['pre_score'][0], original_pre[0])
+        self.assertEqual(set(orders), set(h.NAMES))
+
+    def test_every_small_prefix_and_poisoned_future_and_no_input_mutation(self):
+        a, meta, forecast = fixture(); before_a = copy.deepcopy(a); before_f = copy.deepcopy(forecast)
+        with patch.object(h, 'read', return_value={'synthetic':True}):
+            all_orders, all_ranks, all_deltas = h.decisions(SyntheticStudy(), a, meta, forecast, 6)
+            for n in range(7):
+                orders, ranks, deltas = h.decisions(SyntheticStudy(), a, meta, forecast, n)
+                for name in h.NAMES:
+                    self.assertEqual(orders[name], all_orders[name][:n])
+                for name in h.NAMES[1:]:
+                    np.testing.assert_array_equal(ranks[name], all_ranks[name][:n])
+                    np.testing.assert_array_equal(deltas[name], all_deltas[name][:n])
+            for n in (1, 3, 5):
+                poison = copy.deepcopy(forecast)
+                for values in poison['raw'].values():
+                    values.reshape(6, 6)[n:] = np.inf
+                orders, ranks, deltas = h.decisions(SyntheticStudy(), a, meta, poison, n)
+                for name in h.NAMES:
+                    self.assertEqual(orders[name], all_orders[name][:n])
+        for key, value in a.items():
+            np.testing.assert_array_equal(value, before_a[key])
+        for key, value in forecast['raw'].items():
+            np.testing.assert_array_equal(value, before_f['raw'][key])
+        np.testing.assert_array_equal(forecast['available'], before_f['available'])
+
+
+def selection_fixture():
+    metric = {era:dict(cagr=.5, sharpe=1.5, max_drawdown=-.3) for era in ('training','early','recent')}
+    metrics = {name:{path:copy.deepcopy(metric) for path in ('same_close_zero','next_open_cost')}
+               for name in h.NAMES}
+    orders = {name:[dict(symbols=['A','B','C']) for _ in range(122)] for name in h.NAMES}
+    for path in metrics[h.NAMES[1]]:
+        metrics[h.NAMES[1]][path]['training']['cagr'] += .01
+    for i in (1, 2, 53):
+        orders[h.NAMES[1]][i]['symbols'] = ['A','B','D']
+    return metrics, orders
+
+
+class BindingAndSelectionTests(unittest.TestCase):
+    def test_bind_adds_or_accepts_exact_digest_and_rejects_conflict(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)/'synthetic-source'; path.write_bytes(b'synthetic only\n')
+            pins = {}; h.bind(pins, path)
+            self.assertEqual(pins, {str(path):h.sha(path)})
+            h.bind(pins, path)
+            old = dict(pins); path.write_bytes(b'changed synthetic\n')
+            with self.assertRaisesRegex(ValueError, 'Conflicting inherited'):
+                h.bind(pins, path)
+            self.assertEqual(pins, old)
+
+    def test_selection_ignores_later_orders_and_extra_report_only_metrics(self):
+        metrics, orders = selection_fixture()
+        result = h.select_first88(metrics, orders)
+        self.assertEqual(result['primary'], h.NAMES[1])
+        for name in h.NAMES:
+            metrics[name]['later34'] = dict(cagr=1000. if name != h.NAMES[1] else -1.)
+            metrics[name]['full122'] = dict(cagr=1000. if name != h.NAMES[1] else -1.)
+            for i in range(88, 122):
+                orders[name][i]['symbols'] = [name+str(i)]
+        self.assertEqual(h.select_first88(metrics, orders), result)
+
+    def test_half_cannot_be_promoted_and_candidate_must_clear_both_controls(self):
+        metrics, orders = selection_fixture()
+        metrics[h.NAMES[2]]['same_close_zero']['training']['cagr'] = 2.
+        result = h.select_first88(metrics, orders)
+        self.assertEqual(result['primary'], h.NAMES[0])
+        self.assertFalse(result['guards']['close_vs_all_peer_control'])
+        metrics, orders = selection_fixture()
+        metrics[h.NAMES[2]]['next_open_cost']['training']['cagr'] = 2.
+        result = h.select_first88(metrics, orders)
+        self.assertEqual(result['primary'], h.NAMES[0])
+        self.assertFalse(result['guards']['open_vs_all_peer_control'])
+
+    def test_first88_changed_set_support_cannot_come_from_later34(self):
+        metrics, orders = selection_fixture()
+        for i in (1, 2, 53):
+            orders[h.NAMES[1]][i]['symbols'] = ['C','B','A']
+        for i in (90, 100, 110):
+            orders[h.NAMES[1]][i]['symbols'] = ['A','B','D']
+        result = h.select_first88(metrics, orders)
+        self.assertEqual(result['changed_months'], [])
+        self.assertEqual(result['primary'], h.NAMES[0])
+        self.assertFalse(result['guards']['changed_support'])
+
+
+
+
+class PrefixAndContractTests(unittest.TestCase):
+    def test_paired_missing_returns_incumbent_ranks_on_both_arms(self):
+        a,m,f=fixture();s=SyntheticStudy();f['raw']['candidate'][7]=np.nan
+        ranks,deltas=h.rank_and_delta(s,a,f,6);old=rank(a['raw_local_linear'],a['eligible']&a['forecast_available'])
+        for arm in h.RAW:
+            np.testing.assert_array_equal(ranks[arm][1],old[1]);np.testing.assert_array_equal(deltas[arm][1],np.zeros(6))
+    def test_future_object_state_and_forecasts_are_not_consumed(self):
+        a,m,f=fixture();expected=h.rank_and_delta(SyntheticStudy(),a,f,6)
+        for n in range(7):
+            aa,ff=copy.deepcopy(a),copy.deepcopy(f)
+            for key in ('eligible','forecast_available','model_available','extension_available','state_calm10','state_weak_narrow'):
+                aa[key]=aa[key].astype(object);aa[key][n:]='future poison'
+            for key in ff['raw']:
+                ff['raw'][key]=ff['raw'][key].astype(object);ff['raw'][key][n*6:]='future poison'
+            got=h.rank_and_delta(SyntheticStudy(),aa,ff,n)
+            for i in (0,1):
+                for arm in h.RAW:np.testing.assert_array_equal(got[i][arm],expected[i][arm][:n])
+    def test_nonboolean_consumed_states_fail(self):
+        for key in ('eligible','forecast_available','model_available','extension_available','state_calm10','state_weak_narrow'):
+            a,m,f=fixture();a[key]=a[key].astype(object);a[key][1]=1
+            with self.subTest(key=key),self.assertRaises(ValueError):h.rank_and_delta(SyntheticStudy(),a,f,2)
+    def test_model_inputs_remove_future_labels_and_queries_before_numeric_use(self):
+        dates=np.array(['2018-11-30','2018-11-30','2018-12-31','2018-12-31','2019-11-29','2019-11-29'],dtype='datetime64[D]')
+        ends=np.array(['2018-12-31']*2+['2019-01-31']*2+['2019-12-31']*2,dtype='datetime64[D]')
+        tm=dict(dates=['2018-11-30','2018-12-31','2019-11-29'],ends=['2018-12-31','2019-01-31','2019-12-31'],symbols=[['A','B']]*3)
+        m=dict(dates=['2019-01-31','2020-01-31'],symbols=[['A','B']]*2)
+        train=dict(dates=dates,ends=ends,train_plain=np.zeros((6,10),object),common_good=np.ones(6,bool),
+            event_dates=np.array(['2019-01-31']*2+['2020-01-31']*2,dtype='datetime64[D]'),event_plain=np.zeros((4,10),object))
+        train.update({'target_'+key:np.zeros(6,object) for key in h.TARGETS})
+        a=dict(baseline=np.zeros((2,2)),eligible=np.ones((2,2),bool))
+        train['train_plain'][2:]='future poison';train['event_plain'][2:]='future poison'
+        for key in h.TARGETS:train['target_'+key][2:]='future poison'
+        got=h.model_inputs(train,dict(monthly=m,training=tm),a,1)
+        self.assertEqual(got[0].shape,(2,));self.assertEqual(got[8].shape,(2,10))
+        self.assertEqual(got[1].max(),np.datetime64('2018-12-31'));self.assertTrue(np.isfinite(got[3].astype(float)).all())
+        empty=h.model_inputs(train,dict(monthly=m,training=tm),a,0)
+        self.assertEqual(empty[0].shape,(0,));self.assertEqual(empty[8].shape,(0,10))
+    def test_candidate_must_change_vs_control_in_both_training_eras(self):
+        metrics,orders=selection_fixture();orders[h.NAMES[2]]=copy.deepcopy(orders[h.NAMES[1]])
+        selection=h.select_first88(metrics,orders)
+        self.assertFalse(selection['admitted']);self.assertFalse(selection['guards']['changed_support_vs_control'])
+    def test_exact_38_results_manifest(self):
+        good={name:'synthetic' for name in h.RESULT_FILES};self.assertEqual(len(good),38);h.require_result_manifest(good)
+        for kind in ('missing','extra','completion'):
+            bad=dict(good)
+            if kind=='missing':bad.pop(next(iter(bad)))
+            else:bad['COMPLETION.json' if kind=='completion' else 'EXTRA.json']='bad'
+            with self.subTest(kind=kind),self.assertRaises(ValueError):h.require_result_manifest(bad)
+    def test_only_exact_registered_external_runtime_allowed(self):
+        runtime,digest=next(iter(h.EXTERNAL_RUNTIME.items()))
+        with patch.object(h,'sha',return_value=digest),patch.object(Path,'is_file',return_value=True):
+            h.verify({runtime:digest})
+            for path,value in ((runtime,'wrong'),('/Library/Developer/CommandLineTools/other.py',digest),('/tmp/other.py',digest)):
+                with self.subTest(path=path,value=value),self.assertRaises(ValueError):h.verify({path:value})
+    def test_mutable_central_cannot_be_persistent_pin(self):
+        with patch.object(h,'sha',return_value='synthetic'):
+            with self.assertRaisesRegex(ValueError,'Mutable central'):h.verify({str(h.CENTRAL):'synthetic'})
+    def test_test_receipt_is_write_once(self):
+        with tempfile.TemporaryDirectory() as directory:
+            receipt=Path(directory)/'receipt.json';receipt.write_text('keep')
+            empty=SimpleNamespace()
+            with patch.object(h,'TEST_RECEIPT',receipt),patch.object(h,'module',return_value=empty):
+                with self.assertRaisesRegex(ValueError,'write-once'):h.tests()
+            self.assertEqual(receipt.read_text(),'keep')
+    def test_central_compare_and_swap_rejects_concurrent_change(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/'state.json';path.write_bytes(b'changed')
+            with patch.object(h,'CENTRAL',path):
+                with self.assertRaisesRegex(ValueError,'Concurrent central'):h.commit_state(b'prior',{},'test')
+            self.assertEqual(path.read_bytes(),b'changed')
+
+
+class ReceiptTests(unittest.TestCase):
+    @staticmethod
+    def model_receipt():
+        counts={key:0 for key in h.MODEL_COUNT_FIELDS};counts.update(annual_pooled_log_refits=1,actual_regression_solves=1,cached_forecast_rows=2)
+        available=np.zeros(5978,bool);available[:2]=True
+        raw={key:np.where(available,0.,np.nan) for key in h.RAW_KEYS}
+        forecast=dict(raw=raw,available=available,local_available=np.zeros(5978,bool),audit=dict(annual=[{'prediction_rows':2}]+[{'prediction_rows':0} for _ in range(10)],local=[{'status':'insufficient_own_history','peer_months':[]} for _ in range(2)],counts=counts,cached_reference_used=True,source_four_target_refits=0,local_linear_refits=0,correction_accounting=h.CORRECTION_ACCOUNTING))
+        receipt=dict.fromkeys(h.MODEL_FLAGS,True)
+        receipt.update(atol=1e-12,computes_returns=False,residuals_are_mature_in_sample=True,residuals_are_oof=False,
+            annual_cohorts=11,local_queries=2,independent_pooled_fits=1,counts=dict(counts),cached_reference_used=True,source_four_target_refits=0,local_linear_refits=0,correction_accounting=h.CORRECTION_ACCOUNTING)
+        return receipt,forecast
+    def test_model_flags_are_exact_boolean_and_counts_bound(self):
+        receipt,forecast=self.model_receipt();h.require_model_audit(receipt,forecast)
+        for key in h.MODEL_FLAGS:
+            for value in (False,1,None):
+                bad=copy.deepcopy(receipt);bad[key]=value
+                with self.subTest(key=key,value=value),self.assertRaises(ValueError):h.require_model_audit(bad,forecast)
+        for key in h.MODEL_COUNT_FIELDS:
+            bad=copy.deepcopy(receipt);bad['counts'][key]+=1
+            with self.subTest(key=key),self.assertRaises(ValueError):h.require_model_audit(bad,forecast)
+    def test_model_schema_counts_and_scope_not_weakened(self):
+        receipt,forecast=self.model_receipt()
+        for key,value in (('computes_returns',True),('residuals_are_oof',True),('atol',1e-10),('annual_cohorts',10),('local_queries',3)):
+            bad=dict(receipt);bad[key]=value
+            with self.subTest(key=key),self.assertRaises(ValueError):h.require_model_audit(bad,forecast)
+        bad=copy.deepcopy(forecast);bad['audit']['counts'].pop('actual_regression_solves')
+        with self.assertRaises(ValueError):h.require_model_audit(receipt,bad)
+    def test_slot_requires_pair_flags_matching_ready_and_changes(self):
+        delta={key:np.zeros((122,49)) for key in h.RAW}
+        receipt=dict.fromkeys(h.SLOT_FLAGS,True)
+        receipt.update(ready_rows={key:122 for key in h.RAW},changed_cells={key:0 for key in h.RAW})
+        h.require_slot_audit(receipt,delta)
+        for key in h.SLOT_FLAGS:
+            bad=copy.deepcopy(receipt);bad[key]=False
+            with self.subTest(key=key),self.assertRaises(ValueError):h.require_slot_audit(bad,delta)
+        bad=copy.deepcopy(receipt);bad['ready_rows'][h.NAMES[1]]=121
+        with self.assertRaises(ValueError):h.require_slot_audit(bad,delta)
+    def test_source_review_binds_context_scope_and_pins(self):
+        review=dict(passed=True,context_sha256=h.CONTEXT_SHA,evidence_sha256={},coverage_sha256=h.COVERAGE_SHA,raw_source_hashes={'raw':'digest'},source_sha256={'work/fake':'pin'},immutable_source_files=1,prior_saved_training_rows=8820,prior_saved_query_rows=5978,prior_saved_feature_count=10,prior_parity_receipt_reverified=True,strict_pit=False)
+        review.update({key:False for key in ('actual_features_computed','actual_model_fits_computed','actual_orders_computed','actual_returns_computed','actual_source_arrays_loaded','new_data_acquired')})
+        review.update({key:True for key in ('cached_forecasts_are_prior_annual_asof_replays','not_realtime_archival_vintages','numeric_type_support_not_yet_computed','unchanged_source_bytes_reverified')})
+        with patch.object(h,'sha',return_value=h.SOURCE_REVIEW_SHA),patch.object(h,'read',return_value=review),patch.object(h,'bind'),patch.object(h,'verify'),patch.object(h,'cached_source_binding',return_value={'input_sha256':{}}):
+            result=h.model_source_binding({'raw':'digest'});self.assertFalse(result['new_labels'])
+            review['actual_model_fits_computed']=True
+            with self.assertRaises(ValueError):h.model_source_binding({'raw':'digest'})
+    def test_first88_freeze_binds_all_prerequisites(self):
+        metrics,orders=selection_fixture();selection=h.select_first88(metrics,orders)
+        frozen=dict(plan_sha256='plan',orders_sha256='digest',training_sha256='digest',prepared_sha256='digest',selection=selection)
+        def read(path):return frozen if path.name=='FROZEN.json' else metrics
+        with patch.object(h,'sha',return_value='digest'),patch.object(h,'read',side_effect=read):
+            self.assertEqual(h.frozen_selection('plan',orders),frozen)
+            frozen['prepared_sha256']='changed'
+            with self.assertRaises(ValueError):h.frozen_selection('plan',orders)
+
+
+class PhaseGateTests(unittest.TestCase):
+    def test_prepare_gate_precedes_model_or_data_loading(self):
+        with patch.object(h,'gate',side_effect=ValueError('unregistered')),patch.object(h,'local') as loader:
+            with self.assertRaisesRegex(ValueError,'unregistered'):h.prepare('bad')
+            loader.assert_not_called()
+    def test_prepared_manifest_is_exact_before_opening_arrays(self):
+        receipt=dict(status='COMPLETE',plan_sha256='plan',artifacts_sha256={name:'digest' for name in h.PREPARED_FILES})
+        for change in ('missing','extra'):
+            bad=copy.deepcopy(receipt)
+            if change=='missing':bad['artifacts_sha256'].pop(next(iter(bad['artifacts_sha256'])))
+            else:bad['artifacts_sha256']['COMPLETION.json']='extra'
+            with patch.object(h,'gate'),patch.object(h,'read',return_value=bad),patch.object(h.ev,'load_arrays') as loader:
+                with self.subTest(change=change),self.assertRaises(ValueError):h.prepared('plan')
+                loader.assert_not_called()
+    def test_code_review_requires_no_actual_fits_and_nonempty_immutable_inputs(self):
+        files=[h.ROOT/'work'/('synthetic'+str(i)) for i in range(6)]
+        receipt=dict(passed=True,unresolved_blockers=[],context_sha256=h.CONTEXT_SHA,code_sha256={str(p.relative_to(h.ROOT)):'digest' for p in files},input_sha256={'work/fake':'digest'})
+        for key in ('actual_features_computed','actual_model_fits_computed','actual_portfolio_returns_computed','production_files_modified','strategy_registered_by_reviewer'):receipt[key]=False
+        with patch.object(h,'code_files',return_value=files),patch.object(h,'read',return_value=receipt),patch.object(h,'sha',return_value='digest'),patch.object(h,'bind'),patch.object(h,'verify'):
+            h.code_review_binding();receipt['context_sha256']='wrong'
+            with self.assertRaises(ValueError):h.code_review_binding()
+            receipt['context_sha256']=h.CONTEXT_SHA;receipt['actual_model_fits_computed']=True
+            with self.assertRaises(ValueError):h.code_review_binding()
+            receipt['actual_model_fits_computed']=False;receipt['input_sha256']={}
+            with self.assertRaises(ValueError):h.code_review_binding()
+
+
+
+class CachedControlTests(unittest.TestCase):
+    @staticmethod
+    def cache_from(a,f):
+        cache={key:np.asarray(a[key]).reshape(-1).copy() for key in ('raw_source_log','raw_local_linear','raw_local_constant')}
+        cache.update(raw_candidate=f['raw']['control'].copy(),raw_control=cache['raw_local_constant'].copy(),
+            available=a['model_available'].reshape(-1).copy(),local_available=np.zeros(a['model_available'].size,bool))
+        return cache
+
+    def test_cached_source_shape_identity_and_future_prefix(self):
+        a,m,f=fixture();a['local_available']=np.zeros((6,6),bool);cache=self.cache_from(a,f)
+        self.assertTrue(h.require_cached_vectors(cache,a))
+        for n in range(7):
+            small=h.cached_prefix(cache,6,6,n)
+            for key in cache:np.testing.assert_array_equal(small[key],cache[key][:6*n])
+        for field in ('raw_source_log','raw_local_linear','raw_local_constant','available','local_available'):
+            bad=copy.deepcopy(cache);bad[field][1]=not bad[field][1] if bad[field].dtype==bool else bad[field][1]+.1
+            with self.subTest(field=field),self.assertRaises((AssertionError,ValueError)):h.require_cached_vectors(bad,a)
+        for bad in ({},dict(cache,extra=np.zeros(36))):
+            with self.assertRaises(ValueError):h.cached_prefix(bad,6,6,1)
+        self.assertEqual(h.cached_prefix(cache,6,6,0)['raw_candidate'].shape,(0,))
+
+    def test_control_parity_is_old_candidate_not_old_control(self):
+        a,m,f=fixture();cache=self.cache_from(a,f)
+        f['raw'].update({key:cache['raw_'+key].copy() for key in h.RAW_KEYS[:3]});f['local_available']=cache['local_available'].copy()
+        with patch.object(h,'read',return_value={'synthetic':True}):orders,ranks,deltas=h.decisions(SyntheticStudy(),a,m,f,6)
+        oldr={'rank_peer_residual_transfer':ranks[h.NAMES[2]].copy(),'delta_peer_residual_transfer':deltas[h.NAMES[2]].copy()}
+        oldo={'peer_residual_transfer':copy.deepcopy(orders[h.NAMES[2]])}
+        check=h.require_control_parity(f,cache,ranks,deltas,orders,oldr,oldo);self.assertTrue(check['control_orders_exact'])
+        for field in ('raw','rank','delta','orders'):
+            ff,rr,dd,oo=copy.deepcopy(f),copy.deepcopy(ranks),copy.deepcopy(deltas),copy.deepcopy(orders)
+            if field=='raw':ff['raw']['control']=cache['raw_control'].copy()
+            elif field=='rank':rr[h.NAMES[2]][1,0]+=.01
+            elif field=='delta':dd[h.NAMES[2]][1,0]+=.01
+            else:oo[h.NAMES[2]][1]['symbols']=['WRONG']
+            with self.subTest(field=field),self.assertRaises((AssertionError,ValueError)):h.require_control_parity(ff,cache,rr,dd,oo,oldr,oldo)
+
+    def test_type_diagnostics_are_descriptive_and_preserve_fallback_rank_distinction(self):
+        a,m,f=fixture();m['etfs']=['E','F']
+        f['raw']['candidate'][1]=f['raw']['control'][1]
+        f['audit']={'local':[dict(event_row=i,symbol=m['symbols'][i//6][i%6],asset_type='etf' if i%6>=4 else 'stock',
+            status=('same_type_supported','same_type_missing_month','insufficient_own_history')[i%3]) for i in range(36)]}
+        with patch.object(h,'read',return_value={'synthetic':True}):orders,ranks,_=h.decisions(SyntheticStudy(),a,m,f,6)
+        check=h.transfer_diagnostics(m,f,ranks,orders,a)
+        self.assertTrue(check['descriptive_only']);self.assertFalse(check['used_for_selection'])
+        self.assertEqual(check['by_asset_type']['stock']['available_queries'],24)
+        self.assertEqual(check['by_asset_type']['etf']['available_queries'],12)
+        self.assertEqual(sum(v['same_type_fallback_queries'] for v in check['by_asset_type'].values()),12)
+        self.assertEqual(set(check['holding_changes']),{'candidate_vs_incumbent','control_vs_incumbent','candidate_vs_control'})
+        self.assertEqual(f['raw']['candidate'][1],f['raw']['control'][1])
+        self.assertNotEqual(ranks[h.NAMES[1]][0,1],ranks[h.NAMES[2]][0,1])
+
+    def test_real_synthetic_model_receipt_matches_host_contract(self):
+        import monthly_asset_peer213_model as producer
+        import monthly_asset_peer213_independent as oracle
+        from test_monthly_asset_peer213_model import fixture as inputs,cached,ETFS
+        from test_monthly_asset_peer213_independent import packed
+        args=inputs();cache=cached(args);forecast=producer.annual_forecasts(*args,etfs=ETFS,cached_reference=cache)
+        train,meta,a=packed(args,cache);meta['monthly']['etfs']=list(ETFS)
+        check=oracle.check_prepare(train,meta,a,forecast,cache)
+        h.require_model_audit(check,forecast,expected_rows=len(args[6]),expected_years=len(np.unique(args[6].astype('datetime64[Y]'))))
+        self.assertEqual(h.MODEL_FLAGS,oracle.PREPARE_FLAGS);self.assertEqual(h.MODEL_COUNT_FIELDS,oracle.COUNT_FIELDS)
+        self.assertEqual(check['source_four_target_refits'],0);self.assertEqual(check['local_linear_refits'],0)
+        self.assertFalse(np.array_equal(forecast['raw']['control'],forecast['raw']['local_constant']))
+
+    def test_fixed_metadata_sources_context_and_predecessor(self):
+        contract=h.contract();self.assertEqual(contract['arms'],list(h.NAMES));self.assertEqual(contract['execution_paths'],9)
+        raw=h.read(h.LOCAL/'PLAN.json')['raw_source_hashes'];binding=h.model_source_binding(raw)
+        self.assertEqual(binding['sha256'],h.SOURCE_REVIEW_SHA)
+        self.assertEqual(binding['cached_reference']['etfs'],h.read(h.LOCAL/'META.json')['etfs'])
+        self.assertTrue(binding['cached_reference']['annual_pooled_log_refit_required'])
+        state={'completed':[{'completion':{'path':str(h.PRIOR/'COMPLETION.json'),'sha256':h.PRIOR_EXPECTED['COMPLETION.json']}}]}
+        self.assertEqual(h.predecessor_binding(state)['directory'],'monthly_monotone_path212')
+        rows=[dict(trials=1,directory='old') for _ in range(210)];rows[0]['trials']=938;rows[-1]['directory']=h.PRIOR.name
+        h.state_check(dict(completed=rows,best_training_selected_candidate={'directory':'monthly_local_linear70'}))
+
+
+if __name__=='__main__':unittest.main()

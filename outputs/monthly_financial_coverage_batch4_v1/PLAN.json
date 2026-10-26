@@ -1,0 +1,813 @@
+{
+  "catalog_events": 23,
+  "catalog_ids": [
+    "MU_2019-09-26",
+    "MU_2020-09-29",
+    "MU_2021-09-28",
+    "MU_2022-09-29",
+    "MU_2023-09-27",
+    "MU_2024-09-25",
+    "MU_2025-09-23",
+    "PEP_2011-02-10",
+    "PEP_2012-02-09",
+    "PEP_2013-02-14",
+    "PEP_2014-02-13",
+    "PEP_2015-02-11",
+    "PEP_2016-02-11",
+    "PEP_2017-02-15",
+    "PEP_2018-02-13",
+    "PEP_2019-02-15",
+    "PEP_2020-02-13",
+    "PEP_2021-02-11",
+    "PEP_2022-02-10",
+    "PEP_2023-02-09",
+    "PEP_2024-02-09",
+    "PEP_2025-02-04",
+    "PEP_2026-02-03"
+  ],
+  "catalog_metadata": [
+    {
+      "available_session": "2019-09-27",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "linked_statement_attachment_or_unhandled_layout_not_reviewed",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "unique_same_report_annual_NI_assets_date_pair_not_established"
+      ],
+      "context_status": "current_page_formal_pair_unresolved",
+      "event_id": "MU_2019-09-26",
+      "fiscal_year": 2019,
+      "official_actual_period_end": "2019-08-29",
+      "original_report_bytes_verified": true,
+      "publication_date": "2019-09-26",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/761c3cee8bce4662290f.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/761c3cee8bce4662290f.meta.json",
+        "receipt_sha256": "cab29d84262c180b6dff2297ab466cfe64eb27a013e98ac404eed3665ffe0c90",
+        "sha256": "a4bd751e43640ff2982946ae30a22900b20254296baace5ab559133fbd77df2b",
+        "url": "https://micron.gcs-web.com/news-releases/news-release-details/micron-technology-inc-reports-results-fourth-quarter-and-full-1"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "MU"
+    },
+    {
+      "available_session": "2020-09-30",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "unit_or_currency_context_unresolved"
+      ],
+      "context_status": "current_page_formal_pair_unresolved",
+      "event_id": "MU_2020-09-29",
+      "fiscal_year": 2020,
+      "official_actual_period_end": "2020-09-03",
+      "original_report_bytes_verified": true,
+      "publication_date": "2020-09-29",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/99cf240e74ab1c1a49db.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/99cf240e74ab1c1a49db.meta.json",
+        "receipt_sha256": "1ad22b87cd612ebb4e2783c2f25f071aec8a31f24f622c43ec66a1cdf0148fc8",
+        "sha256": "59e41c6d7eed0624cd8ecc2d36031f101334553761e229185163b5a1fd26861c",
+        "url": "https://micron.gcs-web.com/news-releases/news-release-details/micron-technology-inc-reports-results-fourth-quarter-and-full-2"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "MU"
+    },
+    {
+      "available_session": "2021-09-29",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "unit_or_currency_context_unresolved"
+      ],
+      "context_status": "current_page_formal_pair_unresolved",
+      "event_id": "MU_2021-09-28",
+      "fiscal_year": 2021,
+      "official_actual_period_end": "2021-09-02",
+      "original_report_bytes_verified": true,
+      "publication_date": "2021-09-28",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/52cba357f0b67e186fa4.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/52cba357f0b67e186fa4.meta.json",
+        "receipt_sha256": "07c98f9ced2e97f6b49a15013cd9a1795709ad600139320a858994fa6e705b7e",
+        "sha256": "4f8a70699a264550be99d68a7edba38265bfc7f72585f1f8be5aad48de16e85b",
+        "url": "https://micron.gcs-web.com/news-releases/news-release-details/micron-technology-inc-reports-results-fourth-quarter-and-full-4"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "MU"
+    },
+    {
+      "available_session": "2022-09-30",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "unit_or_currency_context_unresolved"
+      ],
+      "context_status": "current_page_formal_pair_unresolved",
+      "event_id": "MU_2022-09-29",
+      "fiscal_year": 2022,
+      "official_actual_period_end": "2022-09-01",
+      "original_report_bytes_verified": true,
+      "publication_date": "2022-09-29",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/3146ddc1f71edf964f21.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/3146ddc1f71edf964f21.meta.json",
+        "receipt_sha256": "eb6730e2f40b3808027ac627d1881198dd48bb7933e207da6929a7ffd53db61f",
+        "sha256": "90f24f81f94028effc8523b5fb4bdafa0f0d3b005e2a217a63bd74ecb286bfdb",
+        "url": "https://micron.gcs-web.com/news-releases/news-release-details/micron-technology-inc-reports-results-fourth-quarter-and-full-5"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "MU"
+    },
+    {
+      "available_session": "2023-09-28",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "unit_or_currency_context_unresolved"
+      ],
+      "context_status": "current_page_formal_pair_unresolved",
+      "event_id": "MU_2023-09-27",
+      "fiscal_year": 2023,
+      "official_actual_period_end": "2023-08-31",
+      "original_report_bytes_verified": true,
+      "publication_date": "2023-09-27",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/b9c7d37cf50e7bcc3f4a.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/b9c7d37cf50e7bcc3f4a.meta.json",
+        "receipt_sha256": "80c2ecd5b8682bbe924d25548c50022efcbcf8c8338c14dd7a0aaa478b9b742a",
+        "sha256": "92598f5f554863082072cd953f0a2763d77eae10e9a2c364cdc269b3c1ba7426",
+        "url": "https://micron.gcs-web.com/news-releases/news-release-details/micron-technology-inc-reports-results-fourth-quarter-and-full-6"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "MU"
+    },
+    {
+      "available_session": "2024-09-26",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "proposed_annual_start_boundary_assumption_not_yet_approved"
+      ],
+      "context_status": "standard_HTML_annual_header_context_located_not_admitted",
+      "event_id": "MU_2024-09-25",
+      "fiscal_year": 2024,
+      "official_actual_period_end": "2024-08-29",
+      "original_report_bytes_verified": true,
+      "publication_date": "2024-09-25",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/3cc92455767d37a205c4.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/3cc92455767d37a205c4.meta.json",
+        "receipt_sha256": "89f4c015a7943d63c57e34de872e42c8552cfd92e2ec633c5d327cde60e2a5fc",
+        "sha256": "8e0dd76084ad1c7c64981b66e1c8292a10d215d716e10137828757aa9016244d",
+        "url": "https://micron.gcs-web.com/news-releases/news-release-details/micron-technology-inc-reports-results-fourth-quarter-and-full-7"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "MU"
+    },
+    {
+      "available_session": "2025-09-24",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "proposed_annual_start_boundary_assumption_not_yet_approved"
+      ],
+      "context_status": "standard_HTML_annual_header_context_located_not_admitted",
+      "event_id": "MU_2025-09-23",
+      "fiscal_year": 2025,
+      "official_actual_period_end": "2025-08-28",
+      "original_report_bytes_verified": true,
+      "publication_date": "2025-09-23",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/1b794ff3105752962fd7.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/1b794ff3105752962fd7.meta.json",
+        "receipt_sha256": "cea1c1d9d20f98ee7049554c7d58f5f291ad4e74ff98f93f225a4105c80ef1bc",
+        "sha256": "bcbd7bc05370b7327a52fb3d5b3d928fc3a63a066b125d1917d865d3e2f13e1d",
+        "url": "https://micron.gcs-web.com/news-releases/news-release-details/micron-technology-inc-reports-results-fourth-quarter-and-full-8"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "MU"
+    },
+    {
+      "available_session": "2011-02-11",
+      "available_session_verified": false,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "proposed_annual_start_boundary_assumption_not_yet_approved",
+        "publication_outside_pinned_calendar_range"
+      ],
+      "context_status": "standard_HTML_annual_header_context_located_not_admitted",
+      "event_id": "PEP_2011-02-10",
+      "fiscal_year": 2010,
+      "official_actual_period_end": "2010-12-25",
+      "original_report_bytes_verified": true,
+      "publication_date": "2011-02-10",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/fa110182d6804e1939bc4080.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/fa110182d6804e1939bc4080.json",
+        "receipt_sha256": "ae7fe8e4c68ac3351511b8eaca2c5258c1f30b3e0ac96a4415b9f78c69fbda19",
+        "sha256": "50c20f4f7a2534e13b91ea8c68529fe5c417f0252c0c82c53a16407b58e8f02a",
+        "url": "https://pepsico.mediaroom.com/index.php?item=408&s=43"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "PEP"
+    },
+    {
+      "available_session": "2012-02-10",
+      "available_session_verified": false,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "proposed_annual_start_boundary_assumption_not_yet_approved",
+        "publication_outside_pinned_calendar_range"
+      ],
+      "context_status": "standard_HTML_annual_header_context_located_not_admitted",
+      "event_id": "PEP_2012-02-09",
+      "fiscal_year": 2011,
+      "official_actual_period_end": "2011-12-31",
+      "original_report_bytes_verified": true,
+      "publication_date": "2012-02-09",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/9cfb657fe8e1e60be2784f72.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/9cfb657fe8e1e60be2784f72.json",
+        "receipt_sha256": "b38d340fb915ab39ce6aa0afe75e6e242065a7ee193d16194ed0c994bcda7bd5",
+        "sha256": "c0a1771fbcd883c0faefd93b09a21c21b25ca0d3d8e4effde1e19176a33f31e8",
+        "url": "https://www.prnewswire.com/news-releases/pepsico-reports-fourth-quarter-and-full-year-2011-results-139000924.html"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "PEP"
+    },
+    {
+      "available_session": "2013-02-15",
+      "available_session_verified": false,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "proposed_annual_start_boundary_assumption_not_yet_approved",
+        "publication_outside_pinned_calendar_range"
+      ],
+      "context_status": "standard_HTML_annual_header_context_located_not_admitted",
+      "event_id": "PEP_2013-02-14",
+      "fiscal_year": 2012,
+      "official_actual_period_end": "2012-12-29",
+      "original_report_bytes_verified": true,
+      "publication_date": "2013-02-14",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/ec009ecadce02d5e9c83b856.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/ec009ecadce02d5e9c83b856.json",
+        "receipt_sha256": "6cbd3e10abd6142530e39eed690ecc8422c2c2d80d06759500069245a1e79aea",
+        "sha256": "5de4bbc14c0e8f9c3aab33a55b2fa0292720e3b4d49a8ef4eb4788b7cce89bb7",
+        "url": "https://www.prnewswire.com/news-releases/pepsico-reports-fourth-quarter-and-full-year-2012-results-191182141.html"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "PEP"
+    },
+    {
+      "available_session": "2014-02-14",
+      "available_session_verified": false,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "proposed_annual_start_boundary_assumption_not_yet_approved",
+        "publication_outside_pinned_calendar_range"
+      ],
+      "context_status": "standard_HTML_annual_header_context_located_not_admitted",
+      "event_id": "PEP_2014-02-13",
+      "fiscal_year": 2013,
+      "official_actual_period_end": "2013-12-28",
+      "original_report_bytes_verified": true,
+      "publication_date": "2014-02-13",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/5006d300131af00029941351.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/5006d300131af00029941351.json",
+        "receipt_sha256": "7c41f6d7cff17e06bcdd38c0db24288e6fc811dc81a9ed2d87a87b431c3295eb",
+        "sha256": "af2a1585ec8abc11c2f5c6440722313d337c57da8e3785e10f702e72a7ce01d8",
+        "url": "https://www.prnewswire.com/news-releases/pepsico-achieves-2013-financial-targets-and-announces-increase-of-35-in-cash-returns-to-shareholders-for-2014-245348521.html"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "PEP"
+    },
+    {
+      "available_session": "2015-02-12",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "proposed_annual_start_boundary_assumption_not_yet_approved"
+      ],
+      "context_status": "standard_HTML_annual_header_context_located_not_admitted",
+      "event_id": "PEP_2015-02-11",
+      "fiscal_year": 2014,
+      "official_actual_period_end": "2014-12-27",
+      "original_report_bytes_verified": true,
+      "publication_date": "2015-02-11",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/5877c8b270876b6445bed6c5.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/5877c8b270876b6445bed6c5.json",
+        "receipt_sha256": "5c4d80b0d18e1fed6deafe842744a23358450d98df77c2089b680625141c43f5",
+        "sha256": "e99443c64c3c1bc9cbf62f602c5b44808e7fd3329960baeaa8a7f95dde4bd1f5",
+        "url": "https://www.prnewswire.com/news-releases/pepsico-reports-fourth-quarter-and-full-year-2014-results-291505161.html"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "PEP"
+    },
+    {
+      "available_session": "2016-02-12",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "proposed_annual_start_boundary_assumption_not_yet_approved"
+      ],
+      "context_status": "standard_HTML_annual_header_context_located_not_admitted",
+      "event_id": "PEP_2016-02-11",
+      "fiscal_year": 2015,
+      "official_actual_period_end": "2015-12-26",
+      "original_report_bytes_verified": true,
+      "publication_date": "2016-02-11",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/a575ba61ac2d9b85eb94d455.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/a575ba61ac2d9b85eb94d455.json",
+        "receipt_sha256": "c2138f4f8f04f6bf02b9ee603deaca8446f764f0362947394efe49df288f9600",
+        "sha256": "b24fb4cdd12e58c42549a2491bf7368ab96dbe3bd9f8fb41559933984f406902",
+        "url": "https://www.prnewswire.com/news-releases/pepsico-reports-fourth-quarter-and-full-year-2015-results-300218736.html"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "PEP"
+    },
+    {
+      "available_session": "2017-02-16",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "proposed_annual_start_boundary_assumption_not_yet_approved"
+      ],
+      "context_status": "standard_HTML_annual_header_context_located_not_admitted",
+      "event_id": "PEP_2017-02-15",
+      "fiscal_year": 2016,
+      "official_actual_period_end": "2016-12-31",
+      "original_report_bytes_verified": true,
+      "publication_date": "2017-02-15",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/5fd82c9dc25b1a805bcf8569.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/5fd82c9dc25b1a805bcf8569.json",
+        "receipt_sha256": "2c86ed01dce373bae643dfa2411114e07cf94bcb820ba82391ba4b3ac76903c7",
+        "sha256": "8f979431d3d2e7e33395279837c21526731379a2911d6fffa5bf1ebfbd2d9189",
+        "url": "https://www.prnewswire.com/news-releases/pepsico-reports-fourth-quarter-and-full-year-2016-results-provides-2017-financial-outlook-300407820.html"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "PEP"
+    },
+    {
+      "available_session": "2018-02-14",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "linked_statement_attachment_or_unhandled_layout_not_reviewed",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "unique_same_report_annual_NI_assets_date_pair_not_established"
+      ],
+      "context_status": "current_page_formal_pair_unresolved",
+      "event_id": "PEP_2018-02-13",
+      "fiscal_year": 2017,
+      "official_actual_period_end": "2017-12-30",
+      "original_report_bytes_verified": true,
+      "publication_date": "2018-02-13",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/1690dd325a28159c7fd6b2da.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/1690dd325a28159c7fd6b2da.json",
+        "receipt_sha256": "80fcb9e101d1330071e30b9e10cd746f1b7c1498431620bc8a0dcd9518cfdde1",
+        "sha256": "b706b73a186f06404c0e16ea7b1ea3f40a8e56b8e75f0da459247e74f04f9223",
+        "url": "https://www.prnewswire.com/news-releases/pepsico-reports-fourth-quarter-and-full-year-2017-results-300597790.html"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "PEP"
+    },
+    {
+      "available_session": "2019-02-19",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "linked_statement_attachment_or_unhandled_layout_not_reviewed",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "unique_same_report_annual_NI_assets_date_pair_not_established"
+      ],
+      "context_status": "current_page_formal_pair_unresolved",
+      "event_id": "PEP_2019-02-15",
+      "fiscal_year": 2018,
+      "official_actual_period_end": "2018-12-29",
+      "original_report_bytes_verified": true,
+      "publication_date": "2019-02-15",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/09fa6fb6f8fa1a8fd7753f77.bin",
+        "receipt_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/09fa6fb6f8fa1a8fd7753f77.json",
+        "receipt_sha256": "8579eb33d4e67dfed2cb201a14b2baead9892f7577c90fbc8f96ab87bf031864",
+        "sha256": "4e173c4e626d45603887418b86fe9c58ce2aec4143e7f4b52885913c7896bc5f",
+        "url": "https://www.prnewswire.com/news-releases/pepsico-reports-fourth-quarter-and-full-year-2018-results-300796501.html"
+      },
+      "source_kind": "HTML_original",
+      "symbol": "PEP"
+    },
+    {
+      "available_session": "2020-02-14",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "original_report_bytes_and_receipt_not_in_this_catalog_entry",
+        "report_local_identity_not_verified"
+      ],
+      "context_status": "index_only_original_report_not_available_in_entry",
+      "event_id": "PEP_2020-02-13",
+      "fiscal_year": 2019,
+      "official_actual_period_end": "2019-12-28",
+      "original_report_bytes_verified": false,
+      "publication_date": "2020-02-13",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/warmup/pep_supplement/INDEXED_PDF_OBSERVATIONS.json",
+        "receipt_path": null,
+        "receipt_sha256": null,
+        "sha256": "343cbbaad471991e177938ca10620f850a37c11ebfaef35afbcc72f1014cf2e1",
+        "url": "https://investor.pepsico.com/docs/pepsico-5v9wci20/media/Files/investors/q4-2019-earnings-release.pdf"
+      },
+      "source_kind": "index_observation_not_original_report",
+      "symbol": "PEP"
+    },
+    {
+      "available_session": "2021-02-12",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "original_report_bytes_and_receipt_not_in_this_catalog_entry",
+        "report_local_identity_not_verified"
+      ],
+      "context_status": "index_only_original_report_not_available_in_entry",
+      "event_id": "PEP_2021-02-11",
+      "fiscal_year": 2020,
+      "official_actual_period_end": "2020-12-26",
+      "original_report_bytes_verified": false,
+      "publication_date": "2021-02-11",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/warmup/pep_supplement/INDEXED_PDF_OBSERVATIONS.json",
+        "receipt_path": null,
+        "receipt_sha256": null,
+        "sha256": "343cbbaad471991e177938ca10620f850a37c11ebfaef35afbcc72f1014cf2e1",
+        "url": "https://investor.pepsico.com/docs/pepsico-5v9wci20/media/Files/investors/q4-2020-earnings-release.pdf"
+      },
+      "source_kind": "index_observation_not_original_report",
+      "symbol": "PEP"
+    },
+    {
+      "available_session": "2022-02-11",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "original_report_bytes_and_receipt_not_in_this_catalog_entry",
+        "report_local_identity_not_verified"
+      ],
+      "context_status": "index_only_original_report_not_available_in_entry",
+      "event_id": "PEP_2022-02-10",
+      "fiscal_year": 2021,
+      "official_actual_period_end": "2021-12-25",
+      "original_report_bytes_verified": false,
+      "publication_date": "2022-02-10",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/warmup/pep_supplement/INDEXED_PDF_OBSERVATIONS.json",
+        "receipt_path": null,
+        "receipt_sha256": null,
+        "sha256": "343cbbaad471991e177938ca10620f850a37c11ebfaef35afbcc72f1014cf2e1",
+        "url": "https://investor.pepsico.com/docs/pepsico-5v9wci20/media/Files/investors/q4-2021-earnings-release.pdf"
+      },
+      "source_kind": "index_observation_not_original_report",
+      "symbol": "PEP"
+    },
+    {
+      "available_session": "2023-02-10",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "original_report_bytes_and_receipt_not_in_this_catalog_entry",
+        "report_local_identity_not_verified"
+      ],
+      "context_status": "index_only_original_report_not_available_in_entry",
+      "event_id": "PEP_2023-02-09",
+      "fiscal_year": 2022,
+      "official_actual_period_end": "2022-12-31",
+      "original_report_bytes_verified": false,
+      "publication_date": "2023-02-09",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/warmup/pep_supplement/INDEXED_PDF_OBSERVATIONS.json",
+        "receipt_path": null,
+        "receipt_sha256": null,
+        "sha256": "343cbbaad471991e177938ca10620f850a37c11ebfaef35afbcc72f1014cf2e1",
+        "url": "https://investor.pepsico.com/docs/pepsico-5v9wci20/media/Files/investors/q4-2022-earnings-release.pdf"
+      },
+      "source_kind": "index_observation_not_original_report",
+      "symbol": "PEP"
+    },
+    {
+      "available_session": "2024-02-12",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "original_report_bytes_and_receipt_not_in_this_catalog_entry",
+        "report_local_identity_not_verified"
+      ],
+      "context_status": "index_only_original_report_not_available_in_entry",
+      "event_id": "PEP_2024-02-09",
+      "fiscal_year": 2023,
+      "official_actual_period_end": "2023-12-30",
+      "original_report_bytes_verified": false,
+      "publication_date": "2024-02-09",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/warmup/pep_supplement/INDEXED_PDF_OBSERVATIONS.json",
+        "receipt_path": null,
+        "receipt_sha256": null,
+        "sha256": "343cbbaad471991e177938ca10620f850a37c11ebfaef35afbcc72f1014cf2e1",
+        "url": "https://investor.pepsico.com/docs/pepsico-5v9wci20/media/Files/investors/q4-2023-earnings-release.pdf"
+      },
+      "source_kind": "index_observation_not_original_report",
+      "symbol": "PEP"
+    },
+    {
+      "available_session": "2025-02-05",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "original_report_bytes_and_receipt_not_in_this_catalog_entry",
+        "report_local_identity_not_verified"
+      ],
+      "context_status": "index_only_original_report_not_available_in_entry",
+      "event_id": "PEP_2025-02-04",
+      "fiscal_year": 2024,
+      "official_actual_period_end": "2024-12-28",
+      "original_report_bytes_verified": false,
+      "publication_date": "2025-02-04",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/batch_financial_consumer/PEP/indexed_recent_results.json",
+        "receipt_path": "outputs/monthly_earnings_repair/batch_financial_consumer/PEP/indexed_recent_results.json.meta.json",
+        "receipt_sha256": "056e2801a1b1ef43dfa0a0e5da53730c6d59496af2454f5095eac5580b03309c",
+        "sha256": "83424cef7c2a13ca319600fbc6547a6b28e26189f31e5fadce450a4bac39aa65",
+        "url": "https://investor.pepsico.com/docs/default-source/investors/q4-2024/q4-2024-earnings-release_tgzvps60bh39qrbu.pdf"
+      },
+      "source_kind": "index_observation_not_original_report",
+      "symbol": "PEP"
+    },
+    {
+      "available_session": "2026-02-04",
+      "available_session_verified": true,
+      "context_holds": [
+        "accounting_notes_require_field_specific_independent_review",
+        "currency_ISO_and_first_public_version_not_certified",
+        "monetary_cells_and_sign_geometry_not_yet_independently_verified",
+        "original_report_bytes_and_receipt_not_in_this_catalog_entry",
+        "report_local_identity_not_verified"
+      ],
+      "context_status": "index_only_original_report_not_available_in_entry",
+      "event_id": "PEP_2026-02-03",
+      "fiscal_year": 2025,
+      "official_actual_period_end": "2025-12-27",
+      "original_report_bytes_verified": false,
+      "publication_date": "2026-02-03",
+      "source": {
+        "path": "outputs/monthly_earnings_repair/batch_financial_consumer/PEP/indexed_recent_results.json",
+        "receipt_path": "outputs/monthly_earnings_repair/batch_financial_consumer/PEP/indexed_recent_results.json.meta.json",
+        "receipt_sha256": "056e2801a1b1ef43dfa0a0e5da53730c6d59496af2454f5095eac5580b03309c",
+        "sha256": "83424cef7c2a13ca319600fbc6547a6b28e26189f31e5fadce450a4bac39aa65",
+        "url": "https://investor.pepsico.com/docs/pepsico-5v9wci20/media/Files/investors/q4-2025-earnings-release.pdf"
+      },
+      "source_kind": "index_observation_not_original_report",
+      "symbol": "PEP"
+    }
+  ],
+  "catalog_ref": {
+    "path": "work/after152_next_source_context.json",
+    "sha256": "f48acb7e7e57d1212b03bcf435b510dd75670f334a3bc228ceacb22ce65bfea7"
+  },
+  "code": {
+    "work/after141_amd_source_extract.py": "868cae81055318b9df934f4bfe2849c4971f861c4b480942139c8c7606ae4766",
+    "work/after149_amzn_extract.py": "f59473e6e5703fa5829100679c0887f5bf3853b52433bdf3b5598e4458378a06",
+    "work/after149_source_batch.py": "35b9541097fbb3fc057ca07cfe0283b9d413ff878119917d506bddb1cb94a2ea",
+    "work/after152_mu_extract.py": "b17125ee9e33566dbbe7ad163b983c87980368942b0154d20f89a24621533081",
+    "work/after152_pep_extract.py": "9341c0bb06c7010702d478eb7e2104dde92a59910de534eac9c564a8f4eadca7",
+    "work/after152_source_batch.py": "bcc3574f7927c0a165ef42a5b9d99e4cbf33be9bf8dc1e6106d81582662c447c",
+    "work/test_after152_mu_extract.py": "3a33ee77970574229308be9b73ac11b76cda2abfe6026ae5cff3279f6cccced4",
+    "work/test_after152_pep_extract.py": "c7342b3ff2e74ae2a860f8f89d01334e6af60bd8100cdbdfd2c85de3475e002f",
+    "work/test_after152_source_batch.py": "a85e3df1469dc60d190f653a144145aea43a7607b88dce4c55c6b73d2e90dd51"
+  },
+  "context": "work/after152_next_source_context.json",
+  "created_utc": "2026-10-20T18:20:48.543905+00:00",
+  "fields": [
+    "annual_net_income",
+    "current_total_assets",
+    "prior_total_assets"
+  ],
+  "inputs": {
+    "outputs/monthly_earnings_repair/batch_financial_consumer/PEP/indexed_recent_results.json": "83424cef7c2a13ca319600fbc6547a6b28e26189f31e5fadce450a4bac39aa65",
+    "outputs/monthly_earnings_repair/batch_financial_consumer/PEP/indexed_recent_results.json.meta.json": "056e2801a1b1ef43dfa0a0e5da53730c6d59496af2454f5095eac5580b03309c",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/1b794ff3105752962fd7.bin": "bcbd7bc05370b7327a52fb3d5b3d928fc3a63a066b125d1917d865d3e2f13e1d",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/1b794ff3105752962fd7.meta.json": "cea1c1d9d20f98ee7049554c7d58f5f291ad4e74ff98f93f225a4105c80ef1bc",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/3146ddc1f71edf964f21.bin": "90f24f81f94028effc8523b5fb4bdafa0f0d3b005e2a217a63bd74ecb286bfdb",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/3146ddc1f71edf964f21.meta.json": "eb6730e2f40b3808027ac627d1881198dd48bb7933e207da6929a7ffd53db61f",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/3cc92455767d37a205c4.bin": "8e0dd76084ad1c7c64981b66e1c8292a10d215d716e10137828757aa9016244d",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/3cc92455767d37a205c4.meta.json": "89f4c015a7943d63c57e34de872e42c8552cfd92e2ec633c5d327cde60e2a5fc",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/52cba357f0b67e186fa4.bin": "4f8a70699a264550be99d68a7edba38265bfc7f72585f1f8be5aad48de16e85b",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/52cba357f0b67e186fa4.meta.json": "07c98f9ced2e97f6b49a15013cd9a1795709ad600139320a858994fa6e705b7e",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/761c3cee8bce4662290f.bin": "a4bd751e43640ff2982946ae30a22900b20254296baace5ab559133fbd77df2b",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/761c3cee8bce4662290f.meta.json": "cab29d84262c180b6dff2297ab466cfe64eb27a013e98ac404eed3665ffe0c90",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/99cf240e74ab1c1a49db.bin": "59e41c6d7eed0624cd8ecc2d36031f101334553761e229185163b5a1fd26861c",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/99cf240e74ab1c1a49db.meta.json": "1ad22b87cd612ebb4e2783c2f25f071aec8a31f24f622c43ec66a1cdf0148fc8",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/b9c7d37cf50e7bcc3f4a.bin": "92598f5f554863082072cd953f0a2763d77eae10e9a2c364cdc269b3c1ba7426",
+    "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/b9c7d37cf50e7bcc3f4a.meta.json": "80c2ecd5b8682bbe924d25548c50022efcbcf8c8338c14dd7a0aaa478b9b742a",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/INDEXED_PDF_OBSERVATIONS.json": "343cbbaad471991e177938ca10620f850a37c11ebfaef35afbcc72f1014cf2e1",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/09fa6fb6f8fa1a8fd7753f77.bin": "4e173c4e626d45603887418b86fe9c58ce2aec4143e7f4b52885913c7896bc5f",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/09fa6fb6f8fa1a8fd7753f77.json": "8579eb33d4e67dfed2cb201a14b2baead9892f7577c90fbc8f96ab87bf031864",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/1690dd325a28159c7fd6b2da.bin": "b706b73a186f06404c0e16ea7b1ea3f40a8e56b8e75f0da459247e74f04f9223",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/1690dd325a28159c7fd6b2da.json": "80fcb9e101d1330071e30b9e10cd746f1b7c1498431620bc8a0dcd9518cfdde1",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/5006d300131af00029941351.bin": "af2a1585ec8abc11c2f5c6440722313d337c57da8e3785e10f702e72a7ce01d8",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/5006d300131af00029941351.json": "7c41f6d7cff17e06bcdd38c0db24288e6fc811dc81a9ed2d87a87b431c3295eb",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/5877c8b270876b6445bed6c5.bin": "e99443c64c3c1bc9cbf62f602c5b44808e7fd3329960baeaa8a7f95dde4bd1f5",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/5877c8b270876b6445bed6c5.json": "5c4d80b0d18e1fed6deafe842744a23358450d98df77c2089b680625141c43f5",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/5fd82c9dc25b1a805bcf8569.bin": "8f979431d3d2e7e33395279837c21526731379a2911d6fffa5bf1ebfbd2d9189",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/5fd82c9dc25b1a805bcf8569.json": "2c86ed01dce373bae643dfa2411114e07cf94bcb820ba82391ba4b3ac76903c7",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/9cfb657fe8e1e60be2784f72.bin": "c0a1771fbcd883c0faefd93b09a21c21b25ca0d3d8e4effde1e19176a33f31e8",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/9cfb657fe8e1e60be2784f72.json": "b38d340fb915ab39ce6aa0afe75e6e242065a7ee193d16194ed0c994bcda7bd5",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/a575ba61ac2d9b85eb94d455.bin": "b24fb4cdd12e58c42549a2491bf7368ab96dbe3bd9f8fb41559933984f406902",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/a575ba61ac2d9b85eb94d455.json": "c2138f4f8f04f6bf02b9ee603deaca8446f764f0362947394efe49df288f9600",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/ec009ecadce02d5e9c83b856.bin": "5de4bbc14c0e8f9c3aab33a55b2fa0292720e3b4d49a8ef4eb4788b7cce89bb7",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/ec009ecadce02d5e9c83b856.json": "6cbd3e10abd6142530e39eed690ecc8422c2c2d80d06759500069245a1e79aea",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/fa110182d6804e1939bc4080.bin": "50c20f4f7a2534e13b91ea8c68529fe5c417f0252c0c82c53a16407b58e8f02a",
+    "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/fa110182d6804e1939bc4080.json": "ae7fe8e4c68ac3351511b8eaca2c5258c1f30b3e0ac96a4415b9f78c69fbda19",
+    "outputs/monthly_financial_coverage152/COMPLETION.json": "7b9925053304e38b94e8ad386e0dc74f7d220a26b9884bb3f99e189365e23016",
+    "outputs/monthly_financial_coverage_admission_batch3_v1/ADMISSION.json": "a0e92b88847bf0a71670d0b1fca9ece6d633b0ffceecc9cab0bb5765774118e6",
+    "outputs/monthly_financial_coverage_admission_batch3_v1/DATASET.json": "7a74e1d529ea0f2c36d73dead551582cb6dc157373dec6369ecd6576b5e6c719",
+    "outputs/monthly_financial_coverage_admission_batch3_v1/MANIFEST.json": "04f4e7884b3154cbc7504ff195201c566159b14e828cd1b327d3315961dff2af",
+    "outputs/monthly_financial_coverage_census_v1/CENSUS.json": "de95906ef3d752890d28027a9b52cfd7decc7aeb1bc0f09f2785f1826a3500fc",
+    "outputs/monthly_forward_guidance_preflight_v1/SESSIONS.json": "c05c15f19bc1f7a3428e456a71199d64f05799ef3c432fa45f7bc485d0ff3cf4",
+    "work/after141_amd_source_extract.py": "868cae81055318b9df934f4bfe2849c4971f861c4b480942139c8c7606ae4766",
+    "work/after149_amzn_extract.py": "f59473e6e5703fa5829100679c0887f5bf3853b52433bdf3b5598e4458378a06",
+    "work/after149_batch1_admission.py": "4a7f3753e24dba026c562a007ec024e868da1372dfa7ea1d0b23d85f6ced204b",
+    "work/after149_coverage_extension_concept.json": "60c3afd837cd32b75a70733b70c777084a9c124cf917e8052628947f1cb7d6ee",
+    "work/after150_next_source_context.py": "6216a90bfaef2a49c6a1167a129733e8bbd5542290361f822a14e0ddafae40b2",
+    "work/after151_next_source_context.py": "2cd3ad8f7a898bb66b709a88190a06d519df6fe237a811b42c029c9fdcb97ba5",
+    "work/after152_batch4_admission_policy.json": "c71b7dacfa9446754fa8b876a8dc2a7e4fe5caded5df785a256c4bbef7999093",
+    "work/after152_mu_extract.py": "b17125ee9e33566dbbe7ad163b983c87980368942b0154d20f89a24621533081",
+    "work/after152_next_source_context.json": "f48acb7e7e57d1212b03bcf435b510dd75670f334a3bc228ceacb22ce65bfea7",
+    "work/after152_next_source_context.py": "10524f6cee1f4b41cee68468c09ddded453fd349e8d57bbb0370327f67a0c30a",
+    "work/after152_next_source_feasibility.json": "c79d523697ecbb570ac99a2ecddeebc998db6ab77c92cd23697cf70596c5b468",
+    "work/after152_next_source_feasibility.py": "161e0d53c0a3b8067b32869a2c0b84603e3d9ece607b65bee8a4b0dfcf21c198",
+    "work/after152_parser_independent_review.json": "449df1bbbea1739cb4250b8b3363465b24b43b2f7f1aa3914d8aaa96dd87e071",
+    "work/after152_parser_review_receipt.py": "2df19a3f1d87f36adc1025daa24c8b978620d2d430eb170831f4e8615a48e0d0",
+    "work/after152_pep_extract.py": "9341c0bb06c7010702d478eb7e2104dde92a59910de534eac9c564a8f4eadca7",
+    "work/test_after152_mu_extract.py": "3a33ee77970574229308be9b73ac11b76cda2abfe6026ae5cff3279f6cccced4",
+    "work/test_after152_next_source_context.py": "b04c5805e6e749486e1325ab9dd90e6e975f58894f22313d9b7ee4ca93cc3479",
+    "work/test_after152_pep_extract.py": "c7342b3ff2e74ae2a860f8f89d01334e6af60bd8100cdbdfd2c85de3475e002f"
+  },
+  "modules": {
+    "MU": "after152_mu_extract",
+    "PEP": "after152_pep_extract"
+  },
+  "new_strategy_trials": 0,
+  "no_admission_by_extraction": true,
+  "no_network": true,
+  "no_observer_changes": true,
+  "no_scores_or_returns": true,
+  "parser_review": {
+    "path": "work/after152_parser_independent_review.json",
+    "sha256": "449df1bbbea1739cb4250b8b3363465b24b43b2f7f1aa3914d8aaa96dd87e071"
+  },
+  "policy": "work/after152_batch4_admission_policy.json",
+  "predecessor": {
+    "path": "outputs/monthly_financial_coverage152/COMPLETION.json",
+    "sha256": "7b9925053304e38b94e8ad386e0dc74f7d220a26b9884bb3f99e189365e23016"
+  },
+  "preserve_all_prior_source_holds": true,
+  "preserve_unprocessed_catalog_events": true,
+  "purpose": "Source-only MU/PEP annual NI and same-report annual total assets",
+  "records": [
+    {
+      "event_id": "MU_2024-09-25",
+      "fiscal_year": 2024,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/3cc92455767d37a205c4.bin",
+      "source_sha256": "8e0dd76084ad1c7c64981b66e1c8292a10d215d716e10137828757aa9016244d",
+      "symbol": "MU"
+    },
+    {
+      "event_id": "MU_2025-09-23",
+      "fiscal_year": 2025,
+      "source_path": "outputs/monthly_earnings_repair/batch_technology_industrial/MU/raw/1b794ff3105752962fd7.bin",
+      "source_sha256": "bcbd7bc05370b7327a52fb3d5b3d928fc3a63a066b125d1917d865d3e2f13e1d",
+      "symbol": "MU"
+    },
+    {
+      "event_id": "PEP_2011-02-10",
+      "fiscal_year": 2010,
+      "source_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/fa110182d6804e1939bc4080.bin",
+      "source_sha256": "50c20f4f7a2534e13b91ea8c68529fe5c417f0252c0c82c53a16407b58e8f02a",
+      "symbol": "PEP"
+    },
+    {
+      "event_id": "PEP_2012-02-09",
+      "fiscal_year": 2011,
+      "source_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/9cfb657fe8e1e60be2784f72.bin",
+      "source_sha256": "c0a1771fbcd883c0faefd93b09a21c21b25ca0d3d8e4effde1e19176a33f31e8",
+      "symbol": "PEP"
+    },
+    {
+      "event_id": "PEP_2013-02-14",
+      "fiscal_year": 2012,
+      "source_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/ec009ecadce02d5e9c83b856.bin",
+      "source_sha256": "5de4bbc14c0e8f9c3aab33a55b2fa0292720e3b4d49a8ef4eb4788b7cce89bb7",
+      "symbol": "PEP"
+    },
+    {
+      "event_id": "PEP_2014-02-13",
+      "fiscal_year": 2013,
+      "source_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/5006d300131af00029941351.bin",
+      "source_sha256": "af2a1585ec8abc11c2f5c6440722313d337c57da8e3785e10f702e72a7ce01d8",
+      "symbol": "PEP"
+    },
+    {
+      "event_id": "PEP_2015-02-11",
+      "fiscal_year": 2014,
+      "source_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/5877c8b270876b6445bed6c5.bin",
+      "source_sha256": "e99443c64c3c1bc9cbf62f602c5b44808e7fd3329960baeaa8a7f95dde4bd1f5",
+      "symbol": "PEP"
+    },
+    {
+      "event_id": "PEP_2016-02-11",
+      "fiscal_year": 2015,
+      "source_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/a575ba61ac2d9b85eb94d455.bin",
+      "source_sha256": "b24fb4cdd12e58c42549a2491bf7368ab96dbe3bd9f8fb41559933984f406902",
+      "symbol": "PEP"
+    },
+    {
+      "event_id": "PEP_2017-02-15",
+      "fiscal_year": 2016,
+      "source_path": "outputs/monthly_earnings_repair/warmup/pep_supplement/raw/5fd82c9dc25b1a805bcf8569.bin",
+      "source_sha256": "8f979431d3d2e7e33395279837c21526731379a2911d6fffa5bf1ebfbd2d9189",
+      "symbol": "PEP"
+    }
+  ],
+  "runtime": {
+    "beautifulsoup4": "4.15.0",
+    "python": "3.9.6 (default, Jan  9 2026, 11:03:41) \n[Clang 17.0.0 (clang-1700.6.4.2)]"
+  },
+  "schema_version": 1,
+  "synthetic_tests": [
+    {
+      "module": "test_after152_source_batch",
+      "output": "----------------------------------------------------------------------\nRan 18 tests in 2.339s\n\nOK\n",
+      "passed": true,
+      "tests": 18
+    },
+    {
+      "module": "test_after152_mu_extract",
+      "output": "----------------------------------------------------------------------\nRan 32 tests in 1.110s\n\nOK\n",
+      "passed": true,
+      "tests": 32
+    },
+    {
+      "module": "test_after152_pep_extract",
+      "output": "----------------------------------------------------------------------\nRan 34 tests in 1.157s\n\nOK\n",
+      "passed": true,
+      "tests": 34
+    }
+  ]
+}

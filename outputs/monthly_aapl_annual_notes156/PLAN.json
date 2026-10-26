@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-20T19:53:13.150263+00:00",
+  "purpose": "Original annual-note source collection only; no accounting or strategy admission",
+  "catalog_sha256": "e89635068cd46772d1d3859ce2bc839fab781630787943a1874f258fa354e7a9",
+  "catalog_provenance_path": "outputs/dynamic_top100/registry_sec/0000320193_submissions.provenance.json",
+  "catalog_provenance_sha256": "75d3dc10125bed9fd2b015e9ab1ac94a0e35f3c5ca6c86d05517fe5898ba08d5",
+  "catalog_receipt_limitation": "Existing submissions receipt records source URL, retrieval time and digest but no HTTP status.",
+  "acceptance_time_limitation": "Acceptance times are unmodified catalog strings, not independently certified historical availability.",
+  "request_policy": {
+    "minimum_start_interval_seconds": 1.1,
+    "user_agent": "MonthlyStockResearch/1.0 (automated public historical filing verification)",
+    "timeout_seconds": 45,
+    "maximum_requests": 10,
+    "retry_count": 0,
+    "on_http_429": "Save response and Retry-After then stop this source; no same-run retry",
+    "on_http_403": "Save response then stop this source; no alternate endpoint or evasion",
+    "reuse": "Only already saved receipt with exact target URL and matching raw SHA is reused"
+  },
+  "targets": [
+    {
+      "form": "10-K",
+      "reportDate": "2019-09-28",
+      "filingDate": "2019-10-31",
+      "acceptanceDateTime": "2019-10-31T02:12:36.000Z",
+      "accessionNumber": "0000320193-19-000119",
+      "primaryDocument": "a10-k20199282019.htm",
+      "fiscal_year": 2019,
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019319000119/a10-k20199282019.htm",
+      "catalog_path": "outputs/dynamic_top100/registry_sec/0000320193_submissions.json",
+      "catalog_sha256": "e89635068cd46772d1d3859ce2bc839fab781630787943a1874f258fa354e7a9"
+    },
+    {
+      "form": "10-K",
+      "reportDate": "2016-09-24",
+      "filingDate": "2016-10-26",
+      "acceptanceDateTime": "2016-10-27T00:42:16.000Z",
+      "accessionNumber": "0001628280-16-020309",
+      "primaryDocument": "a201610-k9242016.htm",
+      "fiscal_year": 2016,
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000162828016020309/a201610-k9242016.htm",
+      "catalog_path": "outputs/dynamic_top100/registry_sec/0000320193_submissions.json",
+      "catalog_sha256": "e89635068cd46772d1d3859ce2bc839fab781630787943a1874f258fa354e7a9"
+    },
+    {
+      "form": "10-K",
+      "reportDate": "2017-09-30",
+      "filingDate": "2017-11-03",
+      "acceptanceDateTime": "2017-11-03T16:01:37.000Z",
+      "accessionNumber": "0000320193-17-000070",
+      "primaryDocument": "a10-k20179302017.htm",
+      "fiscal_year": 2017,
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019317000070/a10-k20179302017.htm",
+      "catalog_path": "outputs/dynamic_top100/registry_sec/0000320193_submissions.json",
+      "catalog_sha256": "e89635068cd46772d1d3859ce2bc839fab781630787943a1874f258fa354e7a9"
+    },
+    {
+      "form": "10-K",
+      "reportDate": "2018-09-29",
+      "filingDate": "2018-11-05",
+      "acceptanceDateTime": "2018-11-05T18:01:40.000Z",
+      "accessionNumber": "0000320193-18-000145",
+      "primaryDocument": "a10-k20189292018.htm",
+      "fiscal_year": 2018,
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019318000145/a10-k20189292018.htm",
+      "catalog_path": "outputs/dynamic_top100/registry_sec/0000320193_submissions.json",
+      "catalog_sha256": "e89635068cd46772d1d3859ce2bc839fab781630787943a1874f258fa354e7a9"
+    },
+    {
+      "form": "10-K",
+      "reportDate": "2020-09-26",
+      "filingDate": "2020-10-30",
+      "acceptanceDateTime": "2020-10-30T02:06:25.000Z",
+      "accessionNumber": "0000320193-20-000096",
+      "primaryDocument": "aapl-20200926.htm",
+      "fiscal_year": 2020,
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019320000096/aapl-20200926.htm",
+      "catalog_path": "outputs/dynamic_top100/registry_sec/0000320193_submissions.json",
+      "catalog_sha256": "e89635068cd46772d1d3859ce2bc839fab781630787943a1874f258fa354e7a9"
+    },
+    {
+      "form": "10-K",
+      "reportDate": "2021-09-25",
+      "filingDate": "2021-10-29",
+      "acceptanceDateTime": "2021-10-29T02:04:28.000Z",
+      "accessionNumber": "0000320193-21-000105",
+      "primaryDocument": "aapl-20210925.htm",
+      "fiscal_year": 2021,
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+      "catalog_path": "outputs/dynamic_top100/registry_sec/0000320193_submissions.json",
+      "catalog_sha256": "e89635068cd46772d1d3859ce2bc839fab781630787943a1874f258fa354e7a9"
+    },
+    {
+      "form": "10-K",
+      "reportDate": "2022-09-24",
+      "filingDate": "2022-10-28",
+      "acceptanceDateTime": "2022-10-28T02:01:14.000Z",
+      "accessionNumber": "0000320193-22-000108",
+      "primaryDocument": "aapl-20220924.htm",
+      "fiscal_year": 2022,
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+      "catalog_path": "outputs/dynamic_top100/registry_sec/0000320193_submissions.json",
+      "catalog_sha256": "e89635068cd46772d1d3859ce2bc839fab781630787943a1874f258fa354e7a9"
+    },
+    {
+      "form": "10-K",
+      "reportDate": "2023-09-30",
+      "filingDate": "2023-11-03",
+      "acceptanceDateTime": "2023-11-03T02:08:27.000Z",
+      "accessionNumber": "0000320193-23-000106",
+      "primaryDocument": "aapl-20230930.htm",
+      "fiscal_year": 2023,
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+      "catalog_path": "outputs/dynamic_top100/registry_sec/0000320193_submissions.json",
+      "catalog_sha256": "e89635068cd46772d1d3859ce2bc839fab781630787943a1874f258fa354e7a9"
+    },
+    {
+      "form": "10-K",
+      "reportDate": "2024-09-28",
+      "filingDate": "2024-11-01",
+      "acceptanceDateTime": "2024-11-01T14:01:36.000Z",
+      "accessionNumber": "0000320193-24-000123",
+      "primaryDocument": "aapl-20240928.htm",
+      "fiscal_year": 2024,
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+      "catalog_path": "outputs/dynamic_top100/registry_sec/0000320193_submissions.json",
+      "catalog_sha256": "e89635068cd46772d1d3859ce2bc839fab781630787943a1874f258fa354e7a9"
+    },
+    {
+      "form": "10-K",
+      "reportDate": "2025-09-27",
+      "filingDate": "2025-10-31",
+      "acceptanceDateTime": "2025-10-31T14:01:26.000Z",
+      "accessionNumber": "0000320193-25-000079",
+      "primaryDocument": "aapl-20250927.htm",
+      "fiscal_year": 2025,
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "catalog_path": "outputs/dynamic_top100/registry_sec/0000320193_submissions.json",
+      "catalog_sha256": "e89635068cd46772d1d3859ce2bc839fab781630787943a1874f258fa354e7a9"
+    }
+  ]
+}

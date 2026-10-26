@@ -19,8 +19,9 @@ status.json
 last_error.json
 DAILY_STATUS.md
 
-# Three-account runtime: publish source/config only, never local state.
-work/
+# Observer runtime: publish source/config only, never local state.
+work/*
+!work/*.py
 outputs/**/comparison.json
 outputs/**/COMPARISON.md
 outputs/**/retrospective_*.json

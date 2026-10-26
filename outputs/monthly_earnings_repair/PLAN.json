@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-10-12T20:13:58.184153+00:00",
+  "scope": "Repair historical earnings semantics and build source-verified reusable events, no strategy selection or new backtest.",
+  "assumptions": [
+    "Dates-only are not exact timestamps. Conservative known-by policy is separate from publication timestamp.",
+    "Fiscal-period provider labels are not actual issuer fiscal ends; preserve both.",
+    "Use observed post-availability price/volume response, not historical analyst-consensus EPS surprise.",
+    "Historical current archive is not an immutable contemporaneous feed. Timestamp/date evidence supports conservative availability, not globally first release.",
+    "ETF corporate events are not applicable; incomplete equity history remains missing, never zero.",
+    "Unknown events must not alter original eligible pool or be advertised as full-universe ready."
+  ],
+  "sources": [
+    "official issuer original releases",
+    "existing AV hints cache read-only",
+    "existing Yahoo historical-date hints read-only"
+  ],
+  "no_changes": [
+    "old frozen results",
+    "observer accounts",
+    "ledgers",
+    "rules",
+    "weights"
+  ],
+  "source_stops": {
+    "Alpha Vantage": "2026-10-12 existing rate-limit body; 0 requests this task",
+    "Yahoo Finance": "2026-10-12 first probe429; no further Yahoo requests today",
+    "TSMC direct website": "403; no further direct requests this task, public indexed release may be read"
+  },
+  "next_work": [
+    "normalize official events",
+    "audit cached and collected source checksums",
+    "reconcile AV fiscal labels",
+    "compute historical membership coverage and missing list",
+    "exercise PIT reaction calculations with actual cached bars",
+    "run timing tests and preserve old files"
+  ]
+}

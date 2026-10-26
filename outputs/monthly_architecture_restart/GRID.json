@@ -1,0 +1,882 @@
+[
+  {
+    "id": 0,
+    "architecture": {
+      "id": 0,
+      "family": "raw",
+      "normalization": "all"
+    },
+    "arm": "none",
+    "hand_budget": 0.0,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 1,
+    "architecture": {
+      "id": 0,
+      "family": "raw",
+      "normalization": "all"
+    },
+    "arm": "hand",
+    "hand_budget": 0.05,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 2,
+    "architecture": {
+      "id": 0,
+      "family": "raw",
+      "normalization": "all"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 3,
+    "architecture": {
+      "id": 0,
+      "family": "raw",
+      "normalization": "all"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 4,
+    "architecture": {
+      "id": 0,
+      "family": "raw",
+      "normalization": "all"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 5,
+    "architecture": {
+      "id": 0,
+      "family": "raw",
+      "normalization": "all"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 6,
+    "architecture": {
+      "id": 0,
+      "family": "raw",
+      "normalization": "all"
+    },
+    "arm": "direct",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 7,
+    "architecture": {
+      "id": 0,
+      "family": "raw",
+      "normalization": "all"
+    },
+    "arm": "residual",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 8,
+    "architecture": {
+      "id": 1,
+      "family": "raw",
+      "normalization": "eligible"
+    },
+    "arm": "none",
+    "hand_budget": 0.0,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 9,
+    "architecture": {
+      "id": 1,
+      "family": "raw",
+      "normalization": "eligible"
+    },
+    "arm": "hand",
+    "hand_budget": 0.05,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 10,
+    "architecture": {
+      "id": 1,
+      "family": "raw",
+      "normalization": "eligible"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 11,
+    "architecture": {
+      "id": 1,
+      "family": "raw",
+      "normalization": "eligible"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 12,
+    "architecture": {
+      "id": 1,
+      "family": "raw",
+      "normalization": "eligible"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 13,
+    "architecture": {
+      "id": 1,
+      "family": "raw",
+      "normalization": "eligible"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 14,
+    "architecture": {
+      "id": 1,
+      "family": "raw",
+      "normalization": "eligible"
+    },
+    "arm": "direct",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 15,
+    "architecture": {
+      "id": 1,
+      "family": "raw",
+      "normalization": "eligible"
+    },
+    "arm": "residual",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 16,
+    "architecture": {
+      "id": 2,
+      "family": "aligned_sharpe",
+      "normalization": "all"
+    },
+    "arm": "none",
+    "hand_budget": 0.0,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 17,
+    "architecture": {
+      "id": 2,
+      "family": "aligned_sharpe",
+      "normalization": "all"
+    },
+    "arm": "hand",
+    "hand_budget": 0.05,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 18,
+    "architecture": {
+      "id": 2,
+      "family": "aligned_sharpe",
+      "normalization": "all"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 19,
+    "architecture": {
+      "id": 2,
+      "family": "aligned_sharpe",
+      "normalization": "all"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 20,
+    "architecture": {
+      "id": 2,
+      "family": "aligned_sharpe",
+      "normalization": "all"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 21,
+    "architecture": {
+      "id": 2,
+      "family": "aligned_sharpe",
+      "normalization": "all"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 22,
+    "architecture": {
+      "id": 2,
+      "family": "aligned_sharpe",
+      "normalization": "all"
+    },
+    "arm": "direct",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 23,
+    "architecture": {
+      "id": 2,
+      "family": "aligned_sharpe",
+      "normalization": "all"
+    },
+    "arm": "residual",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 24,
+    "architecture": {
+      "id": 3,
+      "family": "aligned_sharpe",
+      "normalization": "eligible"
+    },
+    "arm": "none",
+    "hand_budget": 0.0,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 25,
+    "architecture": {
+      "id": 3,
+      "family": "aligned_sharpe",
+      "normalization": "eligible"
+    },
+    "arm": "hand",
+    "hand_budget": 0.05,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 26,
+    "architecture": {
+      "id": 3,
+      "family": "aligned_sharpe",
+      "normalization": "eligible"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 27,
+    "architecture": {
+      "id": 3,
+      "family": "aligned_sharpe",
+      "normalization": "eligible"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 28,
+    "architecture": {
+      "id": 3,
+      "family": "aligned_sharpe",
+      "normalization": "eligible"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 29,
+    "architecture": {
+      "id": 3,
+      "family": "aligned_sharpe",
+      "normalization": "eligible"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 30,
+    "architecture": {
+      "id": 3,
+      "family": "aligned_sharpe",
+      "normalization": "eligible"
+    },
+    "arm": "direct",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 31,
+    "architecture": {
+      "id": 3,
+      "family": "aligned_sharpe",
+      "normalization": "eligible"
+    },
+    "arm": "residual",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 32,
+    "architecture": {
+      "id": 4,
+      "family": "raw_vol",
+      "normalization": "all"
+    },
+    "arm": "none",
+    "hand_budget": 0.0,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 33,
+    "architecture": {
+      "id": 4,
+      "family": "raw_vol",
+      "normalization": "all"
+    },
+    "arm": "hand",
+    "hand_budget": 0.05,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 34,
+    "architecture": {
+      "id": 4,
+      "family": "raw_vol",
+      "normalization": "all"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 35,
+    "architecture": {
+      "id": 4,
+      "family": "raw_vol",
+      "normalization": "all"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 36,
+    "architecture": {
+      "id": 4,
+      "family": "raw_vol",
+      "normalization": "all"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 37,
+    "architecture": {
+      "id": 4,
+      "family": "raw_vol",
+      "normalization": "all"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 38,
+    "architecture": {
+      "id": 4,
+      "family": "raw_vol",
+      "normalization": "all"
+    },
+    "arm": "direct",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 39,
+    "architecture": {
+      "id": 4,
+      "family": "raw_vol",
+      "normalization": "all"
+    },
+    "arm": "residual",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 40,
+    "architecture": {
+      "id": 5,
+      "family": "raw_vol",
+      "normalization": "eligible"
+    },
+    "arm": "none",
+    "hand_budget": 0.0,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 41,
+    "architecture": {
+      "id": 5,
+      "family": "raw_vol",
+      "normalization": "eligible"
+    },
+    "arm": "hand",
+    "hand_budget": 0.05,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 42,
+    "architecture": {
+      "id": 5,
+      "family": "raw_vol",
+      "normalization": "eligible"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 43,
+    "architecture": {
+      "id": 5,
+      "family": "raw_vol",
+      "normalization": "eligible"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 44,
+    "architecture": {
+      "id": 5,
+      "family": "raw_vol",
+      "normalization": "eligible"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 45,
+    "architecture": {
+      "id": 5,
+      "family": "raw_vol",
+      "normalization": "eligible"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 46,
+    "architecture": {
+      "id": 5,
+      "family": "raw_vol",
+      "normalization": "eligible"
+    },
+    "arm": "direct",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 47,
+    "architecture": {
+      "id": 5,
+      "family": "raw_vol",
+      "normalization": "eligible"
+    },
+    "arm": "residual",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 48,
+    "architecture": {
+      "id": 6,
+      "family": "raw_sector",
+      "normalization": "all"
+    },
+    "arm": "none",
+    "hand_budget": 0.0,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 49,
+    "architecture": {
+      "id": 6,
+      "family": "raw_sector",
+      "normalization": "all"
+    },
+    "arm": "hand",
+    "hand_budget": 0.05,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 50,
+    "architecture": {
+      "id": 6,
+      "family": "raw_sector",
+      "normalization": "all"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 51,
+    "architecture": {
+      "id": 6,
+      "family": "raw_sector",
+      "normalization": "all"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 52,
+    "architecture": {
+      "id": 6,
+      "family": "raw_sector",
+      "normalization": "all"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 53,
+    "architecture": {
+      "id": 6,
+      "family": "raw_sector",
+      "normalization": "all"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 54,
+    "architecture": {
+      "id": 6,
+      "family": "raw_sector",
+      "normalization": "all"
+    },
+    "arm": "direct",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 55,
+    "architecture": {
+      "id": 6,
+      "family": "raw_sector",
+      "normalization": "all"
+    },
+    "arm": "residual",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 56,
+    "architecture": {
+      "id": 7,
+      "family": "raw_sector",
+      "normalization": "eligible"
+    },
+    "arm": "none",
+    "hand_budget": 0.0,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 57,
+    "architecture": {
+      "id": 7,
+      "family": "raw_sector",
+      "normalization": "eligible"
+    },
+    "arm": "hand",
+    "hand_budget": 0.05,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 58,
+    "architecture": {
+      "id": 7,
+      "family": "raw_sector",
+      "normalization": "eligible"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 59,
+    "architecture": {
+      "id": 7,
+      "family": "raw_sector",
+      "normalization": "eligible"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 60,
+    "architecture": {
+      "id": 7,
+      "family": "raw_sector",
+      "normalization": "eligible"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 61,
+    "architecture": {
+      "id": 7,
+      "family": "raw_sector",
+      "normalization": "eligible"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 62,
+    "architecture": {
+      "id": 7,
+      "family": "raw_sector",
+      "normalization": "eligible"
+    },
+    "arm": "direct",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 63,
+    "architecture": {
+      "id": 7,
+      "family": "raw_sector",
+      "normalization": "eligible"
+    },
+    "arm": "residual",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 64,
+    "architecture": {
+      "id": 8,
+      "family": "recent_risk",
+      "normalization": "all"
+    },
+    "arm": "none",
+    "hand_budget": 0.0,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 65,
+    "architecture": {
+      "id": 8,
+      "family": "recent_risk",
+      "normalization": "all"
+    },
+    "arm": "hand",
+    "hand_budget": 0.05,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 66,
+    "architecture": {
+      "id": 8,
+      "family": "recent_risk",
+      "normalization": "all"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 67,
+    "architecture": {
+      "id": 8,
+      "family": "recent_risk",
+      "normalization": "all"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 68,
+    "architecture": {
+      "id": 8,
+      "family": "recent_risk",
+      "normalization": "all"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 69,
+    "architecture": {
+      "id": 8,
+      "family": "recent_risk",
+      "normalization": "all"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 70,
+    "architecture": {
+      "id": 8,
+      "family": "recent_risk",
+      "normalization": "all"
+    },
+    "arm": "direct",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 71,
+    "architecture": {
+      "id": 8,
+      "family": "recent_risk",
+      "normalization": "all"
+    },
+    "arm": "residual",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 72,
+    "architecture": {
+      "id": 9,
+      "family": "recent_risk",
+      "normalization": "eligible"
+    },
+    "arm": "none",
+    "hand_budget": 0.0,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 73,
+    "architecture": {
+      "id": 9,
+      "family": "recent_risk",
+      "normalization": "eligible"
+    },
+    "arm": "hand",
+    "hand_budget": 0.05,
+    "ml_budget": 0.0
+  },
+  {
+    "id": 74,
+    "architecture": {
+      "id": 9,
+      "family": "recent_risk",
+      "normalization": "eligible"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 75,
+    "architecture": {
+      "id": 9,
+      "family": "recent_risk",
+      "normalization": "eligible"
+    },
+    "arm": "direct",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 76,
+    "architecture": {
+      "id": 9,
+      "family": "recent_risk",
+      "normalization": "eligible"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 77,
+    "architecture": {
+      "id": 9,
+      "family": "recent_risk",
+      "normalization": "eligible"
+    },
+    "arm": "residual",
+    "hand_budget": 0.0,
+    "ml_budget": 0.1
+  },
+  {
+    "id": 78,
+    "architecture": {
+      "id": 9,
+      "family": "recent_risk",
+      "normalization": "eligible"
+    },
+    "arm": "direct",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  },
+  {
+    "id": 79,
+    "architecture": {
+      "id": 9,
+      "family": "recent_risk",
+      "normalization": "eligible"
+    },
+    "arm": "residual",
+    "hand_budget": 0.05,
+    "ml_budget": 0.05
+  }
+]

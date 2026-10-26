@@ -1,0 +1,147 @@
+{
+  "admission_permitted": false,
+  "binding_path": "work/cashflow_source_union_v1_bindings.json",
+  "binding_sha256": "88308f4cf4ac5ddaf001be4aec5ab470c01e9cb7d6126058e2f16a97ca282395",
+  "created_utc": "2026-10-20T05:39:30.875616+00:00",
+  "event_ids": [
+    "AAPL:FY2016:2016-10-25",
+    "AAPL:FY2017:2017-11-02",
+    "AAPL:FY2018:2018-11-01",
+    "AAPL:FY2019:2019-10-30",
+    "AAPL:FY2020:2020-10-29",
+    "AAPL:FY2021:2021-10-28",
+    "AAPL:FY2022:2022-10-27",
+    "AAPL:FY2023:2023-11-02",
+    "AAPL:FY2024:2024-10-31",
+    "AAPL:FY2025:2025-10-30",
+    "AMD:FY2015:2016-01-19",
+    "AMD:FY2016:2017-01-31",
+    "AMD:FY2017:2018-01-30",
+    "AMD:FY2018:2019-01-29",
+    "AMD:FY2020:2021-01-26",
+    "AMD:FY2021:2022-02-01",
+    "AMD:FY2022:2023-01-31",
+    "AMD:FY2023:2024-01-30",
+    "AMD:FY2024:2025-02-04",
+    "AMD:FY2025:2026-02-03",
+    "MSFT:FY2015:2015-07-21",
+    "MSFT:FY2016:2016-07-19",
+    "MSFT:FY2017:2017-07-20",
+    "MSFT:FY2018:2018-07-19",
+    "MSFT:FY2019:2019-07-18",
+    "MSFT:FY2020:2020-07-22",
+    "MSFT:FY2021:2021-07-27",
+    "MSFT:FY2022:2022-07-26",
+    "MSFT:FY2023:2023-07-25",
+    "MSFT:FY2024:2024-07-30",
+    "MSFT:FY2025:2025-07-30",
+    "MSFT:FY2026:2026-07-29",
+    "NVDA:FY2015:2015-02-11",
+    "NVDA:FY2016:2016-02-17",
+    "NVDA:FY2017:2017-02-09",
+    "NVDA:FY2018:2018-02-08",
+    "NVDA:FY2019:2019-02-14",
+    "NVDA:FY2020:2020-02-13",
+    "NVDA:FY2021:2021-02-24",
+    "NVDA:FY2022:2022-02-16",
+    "NVDA:FY2023:2023-02-22",
+    "NVDA:FY2024:2024-02-21",
+    "NVDA:FY2025:2025-02-26",
+    "NVDA:FY2026:2026-02-25"
+  ],
+  "expected_events": 44,
+  "expected_existing_cells": 157,
+  "expected_positions": 264,
+  "financial_calculations_permitted": false,
+  "network_requests_permitted": false,
+  "policy": {
+    "accounting": "Raw field presence is not eligibility. Preserve all 44 accounting events, complete findings, six inherited event exclusions and unresolved comparisons.",
+    "binding_document": {
+      "accounting_review": {
+        "path": "work/cashflow_accounting_review_v1.json",
+        "sha256": "<64hex>"
+      },
+      "admission_authorized": false,
+      "producers": {
+        "html": {
+          "directory": "<versioned-output-directory>",
+          "independent_reviews": [
+            {
+              "path": "<local-relative-review.json>",
+              "sha256": "<64hex>"
+            }
+          ],
+          "manifest_sha256": "<64hex>",
+          "plan_sha256": "<64hex>"
+        },
+        "pdf": {
+          "directory": "<versioned-output-directory>",
+          "independent_reviews": [
+            {
+              "path": "<local-relative-review.json>",
+              "sha256": "<64hex>"
+            }
+          ],
+          "manifest_sha256": "<64hex>",
+          "plan_sha256": "<64hex>"
+        }
+      },
+      "schema_version": 1,
+      "source_union_authorized": true,
+      "stage": "reviewed_source_union_inputs"
+    },
+    "conservation": "Existing decimal monetary values exactly equal, with unchanged scale, literal/ISO currency, source, period and availability. Original v1 cell records retained in distinct provenance.",
+    "events": 44,
+    "html_events": 34,
+    "pdf_events": 10,
+    "positions": 264,
+    "preservation": "Producer event deep equality after removing exactly union_provenance and required_field_completeness. All producer flags/gaps remain untouched; baseline/accounting/independent reviews are separate provenance.",
+    "preserved_v1_nonnull_cells": 157,
+    "prohibitions": [
+      "No source extraction",
+      "No sums or ratios",
+      "No signs/ranks/factors",
+      "No model or return calculations",
+      "No data or strategy admission"
+    ],
+    "required_positions": [
+      "current.operating_cash_flow",
+      "current.net_income",
+      "current.total_assets",
+      "comparison.total_assets"
+    ],
+    "schema_version": 1,
+    "selection": "Fixed disjoint producer partition; never first-match, fallback or cross-source selection. Null stays null, except an existing v1 non-null becoming null fails the entire build.",
+    "stage": "source_only_union_not_admission"
+  },
+  "reviewed_draft_sha256": "9004933f09e5589a140109e1c4124bcc4d41a36c945f2e0761c03a5cc05635a6",
+  "runtime": "3.9.6 (default, Jan  9 2026, 11:03:41) \n[Clang 17.0.0 (clang-1700.6.4.2)]",
+  "schema_version": 1,
+  "source_code_hashes": {
+    "work/cashflow_source_union_v1.py": "25bbddf669bdc37ff8a4a83e72d6e9a9033018de6fe4516d7cec6a45bd29b57b",
+    "work/test_cashflow_source_union_v1.py": "6c9ce6ece312223df987177a1ef54d6ad725b18f4cb6b9e2bc67e97e8c621459"
+  },
+  "source_hashes": {
+    "outputs/monthly_cashflow_html_repair_v2/AUDIT.json": "4afca939839fb5769f2c84aab801980aa7854f0936e03a01ec279e19d8810e75",
+    "outputs/monthly_cashflow_html_repair_v2/MANIFEST.json": "394a036a7b5cd43b5490bad9f7f38dea3a3c3908ebb4a45efa0d14cdade36013",
+    "outputs/monthly_cashflow_html_repair_v2/PLAN.json": "0c39bd0aee46b28fb6175a0abfb5dedf39ea1804378f318883af37857296a3c3",
+    "outputs/monthly_cashflow_html_repair_v2/RAW_FACTS.json": "97bd1964cdbcf0b84418db2e756ae568e0ec32d4432b7b4567f627d10d933fca",
+    "outputs/monthly_cashflow_pdf_repair_v4/AUDIT.json": "659666af1c13df417f104b4141d621a6c5aee49d0fd2ee306121c0700b1df4f6",
+    "outputs/monthly_cashflow_pdf_repair_v4/INDEPENDENT_VISUAL_CHECK.json": "a2f992f228d79ae4ece56ce657d07c0b8c44e5a82f1db1cafd2d7f3e4e164ebe",
+    "outputs/monthly_cashflow_pdf_repair_v4/MANIFEST.json": "df06ba47195bef6e53cfed6c9414ee8e262d79e7807f9f721bf0f2d752240c1c",
+    "outputs/monthly_cashflow_pdf_repair_v4/PLAN.json": "6acd731fb3bcbcbaf0cf5c219c6bc5abaccd45fe7be85b95f79ce25ce707df11",
+    "outputs/monthly_cashflow_pdf_repair_v4/RAW_FACTS.json": "98243993ef5b0e49a5518e0a30ce145cec0db8be1d7495182040d564918bb0a5",
+    "outputs/monthly_cashflow_source_preflight_v1/AUDIT.json": "43e908b15cf4ceb5fdfce700d74c6ff3788b906cff8f485c8c5e55026161c143",
+    "outputs/monthly_cashflow_source_preflight_v1/MANIFEST.json": "ee636a289dab86fe4758b60f0073bbad5be2ecd327f2cce552235719ec10a068",
+    "outputs/monthly_cashflow_source_preflight_v1/PLAN.json": "4161a752cfac3039ea733b000cab647b8c77c48562ef6f497d109aefc7be1472",
+    "outputs/monthly_cashflow_source_preflight_v1/RAW_FACTS.json": "4f6d6e694195a4986f911f7ba1defc24efc515b49aa510b5c4be61df78c45c87",
+    "outputs/monthly_cashflow_source_union_v1/PLAN_DRAFT.json": "9004933f09e5589a140109e1c4124bcc4d41a36c945f2e0761c03a5cc05635a6",
+    "outputs/monthly_cashflow_source_union_v1/TESTS.json": "be98a0a6bff92df0cf92f262e5bbb261af14e412306ddaae5b4214166037f8aa",
+    "work/cashflow_accounting_review_v1.json": "ec6d74579b43c7cb8f6fda0c9c4855684ee4e16f334add46836c5854ceaebf9b",
+    "work/cashflow_html_repair_v2_actual_review.json": "7319711e9f62ea028338620211627750de62b2793f1edcd08d736ac6d732f7f4",
+    "work/cashflow_source_preflight_v1.py": "c19b3b76bc2cabed6b4c1e3873be1a76e88e7675178debdc7b063e44afe5fbc9",
+    "work/cashflow_source_union_v1_bindings.json": "88308f4cf4ac5ddaf001be4aec5ab470c01e9cb7d6126058e2f16a97ca282395",
+    "work/same_report144_admission.py": "afb62d9286327d9849d9c42ca579c4566cbdc3bfdf7bcdc2274bfd8b30fd41c1"
+  },
+  "stage": "frozen_cashflow_source_union_plan"
+}

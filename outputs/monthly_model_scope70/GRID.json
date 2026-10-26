@@ -1,0 +1,56 @@
+[
+  {
+    "id": 0,
+    "base": "original65",
+    "scope": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 1,
+    "base": "incumbent66",
+    "scope": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 2,
+    "base": "incumbent67",
+    "scope": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 3,
+    "base": "incumbent67",
+    "scope": "calm_nonweak",
+    "budget": 0.01
+  },
+  {
+    "id": 4,
+    "base": "incumbent67",
+    "scope": "calm_nonweak",
+    "budget": 0.025
+  },
+  {
+    "id": 5,
+    "base": "incumbent67",
+    "scope": "calm_nonweak",
+    "budget": 0.05
+  },
+  {
+    "id": 6,
+    "base": "incumbent67",
+    "scope": "nonweak",
+    "budget": 0.01
+  },
+  {
+    "id": 7,
+    "base": "incumbent67",
+    "scope": "nonweak",
+    "budget": 0.025
+  },
+  {
+    "id": 8,
+    "base": "incumbent67",
+    "scope": "nonweak",
+    "budget": 0.05
+  }
+]

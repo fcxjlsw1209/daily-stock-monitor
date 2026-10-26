@@ -1,0 +1,327 @@
+{
+  "created_at": "2026-10-13T20:07:03.524812+00:00",
+  "selected": {
+    "primary": {
+      "spec": {
+        "id": 5,
+        "base": "incumbent66",
+        "target": "log_excess",
+        "blend": 1.0
+      },
+      "training": {
+        "cagr": 0.5609000988887825,
+        "sharpe": 1.658891577653053,
+        "max_drawdown": -0.31125995821743613,
+        "total_return": 24.635865953025952
+      },
+      "early": {
+        "cagr": 0.4773036354987903,
+        "sharpe": 1.4899390952300458,
+        "max_drawdown": -0.31125995821743613,
+        "total_return": 4.508025736643408
+      },
+      "recent": {
+        "cagr": 0.6953352334534815,
+        "sharpe": 1.9033689758817693,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.654274903342854
+      },
+      "admitted": true
+    },
+    "original65": {
+      "spec": {
+        "id": 0,
+        "base": "original65",
+        "target": "none",
+        "blend": 0.0
+      },
+      "training": {
+        "cagr": 0.5349155442763764,
+        "sharpe": 1.6031917771530346,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.684626736023116
+      },
+      "early": {
+        "cagr": 0.44808994995802753,
+        "sharpe": 1.416891036956853,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.047408386340172
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": false
+    },
+    "incumbent66": {
+      "spec": {
+        "id": 1,
+        "base": "incumbent66",
+        "target": "none",
+        "blend": 0.0
+      },
+      "training": {
+        "cagr": 0.5480613096199933,
+        "sharpe": 1.633215259783524,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 23.13876258089851
+      },
+      "early": {
+        "cagr": 0.468813922656524,
+        "sharpe": 1.4671766986953196,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 4.37095867190192
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": true
+    },
+    "simple_excess_blend50": {
+      "spec": {
+        "id": 2,
+        "base": "incumbent66",
+        "target": "simple_excess",
+        "blend": 0.5
+      },
+      "training": {
+        "cagr": 0.549059970231319,
+        "sharpe": 1.6376503411308423,
+        "max_drawdown": -0.31125995821743624,
+        "total_return": 23.252443857606114
+      },
+      "early": {
+        "cagr": 0.47039309604379764,
+        "sharpe": 1.4742308537633313,
+        "max_drawdown": -0.31125995821743624,
+        "total_return": 4.396253151555514
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.8755744262818075,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": true
+    },
+    "simple_excess_blend100": {
+      "spec": {
+        "id": 3,
+        "base": "incumbent66",
+        "target": "simple_excess",
+        "blend": 1.0
+      },
+      "training": {
+        "cagr": 0.5565139417290665,
+        "sharpe": 1.649624425505236,
+        "max_drawdown": -0.31125995821743613,
+        "total_return": 24.115645615369615
+      },
+      "early": {
+        "cagr": 0.4703930960437974,
+        "sharpe": 1.4742308537633313,
+        "max_drawdown": -0.31125995821743613,
+        "total_return": 4.39625315155551
+      },
+      "recent": {
+        "cagr": 0.6953352334534815,
+        "sharpe": 1.9033689758817693,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.654274903342854
+      },
+      "admitted": true
+    },
+    "log_excess_blend50": {
+      "spec": {
+        "id": 4,
+        "base": "incumbent66",
+        "target": "log_excess",
+        "blend": 0.5
+      },
+      "training": {
+        "cagr": 0.549059970231319,
+        "sharpe": 1.6376503411308423,
+        "max_drawdown": -0.31125995821743624,
+        "total_return": 23.252443857606114
+      },
+      "early": {
+        "cagr": 0.47039309604379764,
+        "sharpe": 1.4742308537633313,
+        "max_drawdown": -0.31125995821743624,
+        "total_return": 4.396253151555514
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.8755744262818075,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": true
+    },
+    "log_excess_blend100": {
+      "spec": {
+        "id": 5,
+        "base": "incumbent66",
+        "target": "log_excess",
+        "blend": 1.0
+      },
+      "training": {
+        "cagr": 0.5609000988887825,
+        "sharpe": 1.658891577653053,
+        "max_drawdown": -0.31125995821743613,
+        "total_return": 24.635865953025952
+      },
+      "early": {
+        "cagr": 0.4773036354987903,
+        "sharpe": 1.4899390952300458,
+        "max_drawdown": -0.31125995821743613,
+        "total_return": 4.508025736643408
+      },
+      "recent": {
+        "cagr": 0.6953352334534815,
+        "sharpe": 1.9033689758817693,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.654274903342854
+      },
+      "admitted": true
+    },
+    "vol_scaled_blend50": {
+      "spec": {
+        "id": 6,
+        "base": "incumbent66",
+        "target": "vol_scaled",
+        "blend": 0.5
+      },
+      "training": {
+        "cagr": 0.549059970231319,
+        "sharpe": 1.6376503411308423,
+        "max_drawdown": -0.31125995821743613,
+        "total_return": 23.252443857606114
+      },
+      "early": {
+        "cagr": 0.47039309604379764,
+        "sharpe": 1.4742308537633313,
+        "max_drawdown": -0.31125995821743613,
+        "total_return": 4.396253151555514
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.8755744262818075,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": true
+    },
+    "vol_scaled_blend100": {
+      "spec": {
+        "id": 7,
+        "base": "incumbent66",
+        "target": "vol_scaled",
+        "blend": 1.0
+      },
+      "training": {
+        "cagr": 0.5565139417290668,
+        "sharpe": 1.649624425505236,
+        "max_drawdown": -0.31125995821743613,
+        "total_return": 24.11564561536962
+      },
+      "early": {
+        "cagr": 0.47039309604379764,
+        "sharpe": 1.4742308537633313,
+        "max_drawdown": -0.31125995821743613,
+        "total_return": 4.396253151555514
+      },
+      "recent": {
+        "cagr": 0.6953352334534812,
+        "sharpe": 1.9033689758817693,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.654274903342852
+      },
+      "admitted": true
+    },
+    "loss_utility_blend50": {
+      "spec": {
+        "id": 8,
+        "base": "incumbent66",
+        "target": "loss_utility",
+        "blend": 0.5
+      },
+      "training": {
+        "cagr": 0.5565139417290668,
+        "sharpe": 1.649624425505236,
+        "max_drawdown": -0.31125995821743613,
+        "total_return": 24.115645615369623
+      },
+      "early": {
+        "cagr": 0.47039309604379764,
+        "sharpe": 1.4742308537633313,
+        "max_drawdown": -0.31125995821743613,
+        "total_return": 4.396253151555514
+      },
+      "recent": {
+        "cagr": 0.6953352334534815,
+        "sharpe": 1.9033689758817693,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.654274903342854
+      },
+      "admitted": true
+    },
+    "loss_utility_blend100": {
+      "spec": {
+        "id": 9,
+        "base": "incumbent66",
+        "target": "loss_utility",
+        "blend": 1.0
+      },
+      "training": {
+        "cagr": 0.5609000988887825,
+        "sharpe": 1.6588915776530528,
+        "max_drawdown": -0.31125995821743613,
+        "total_return": 24.635865953025952
+      },
+      "early": {
+        "cagr": 0.4773036354987903,
+        "sharpe": 1.4899390952300462,
+        "max_drawdown": -0.31125995821743613,
+        "total_return": 4.508025736643408
+      },
+      "recent": {
+        "cagr": 0.6953352334534812,
+        "sharpe": 1.9033689758817693,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.654274903342852
+      },
+      "admitted": true
+    }
+  },
+  "trials": 10,
+  "new_admitted": 8,
+  "primary_source": "log_excess",
+  "hashes": {
+    "PLAN.json": "ab9fac077e12c15cde259dd648dec18c5c6133195b38479240693050c1c47e39",
+    "GRID.json": "569530318b996555156acc86e4a8fa429049c4349013730afebc74c349d04f36",
+    "DATA.npz": "81cc9b3b4a21deeb89f04b5c5cc9d6babdbb7829c2bbb56a24df8aa987ee9267",
+    "TRAIN_INPUTS.npz": "2dc52c615e381478f82d32704e60b6b86f76768416700809c34b4a4eb0d93122",
+    "META.json": "3b46968f486e88fa170ac01f120dd5ef74ebd5a56243c6991c5a4fea506076f4",
+    "INCUMBENT_POLICY.json": "49026e12235663b0f4ab75f43de421eb3ea84e99e007aa606fa6cf074e9f9789",
+    "LABEL_AUDIT.json": "4aa62e5bc1110f19811b42d298e691022a1819d2eb07741e344f78ab4b84ebe4",
+    "MODEL_AUDIT.json": "975cd673c6bb8a6d0f0378989fedf41a9bf33ca8b7345db85c640f9a66faafc5",
+    "PREPARE_VALIDATION.json": "bd0049c6b2b4e540c916085c18f72690ab7a58a5812e004a288b1c8288eebd5a",
+    "INPUT_HASHES.json": "de6b1a42e112bebb1cce5707bfc1e72f8e349a4622b6de7c71d32f656a4ea07c",
+    "CACHE_HASHES.json": "7a131fbfdad40b5cd92c4905e9e1019044c548ab05f486b8b19a5e1545201608",
+    "PROTECTED.json": "719c98a56a168d617c5aa21f626153e2cb04a0f1908710801f28cd4130453584",
+    "study.py": "7a88b1489c3add0fb0c0942fd379dda3d25a4e19fa162fdb7d09ffe2a8da06c4",
+    "model.py": "e0a67648920f06bb7516d5914907ee237cac2fe4a3c5316940d54f21e7de9832",
+    "labels.py": "54662ea980b03e6088afa63318321da1316fd03cde1a72edffb33d4d2a26e618"
+  },
+  "pristine_oos": false,
+  "author_labels_used": false,
+  "diagnostics_may_be_unqualified": true,
+  "all8_diagnostics_frozen": true,
+  "cagr_tie_tolerance": 1e-12
+}

@@ -1,0 +1,1445 @@
+{
+  "created_at": "2026-10-12T19:10:06.123512+00:00",
+  "selected": {
+    "primary": {
+      "spec": {
+        "id": 2,
+        "base": "original65",
+        "core": "original",
+        "blend": 0.0,
+        "arm": "return",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.5354075017178692,
+        "sharpe": 1.6044694309962702,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 21.73765113392436
+      },
+      "early": {
+        "cagr": 0.44995299588657445,
+        "sharpe": 1.4220215613729061,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 4.075863621311598
+      },
+      "recent": {
+        "cagr": 0.6732145548691515,
+        "sharpe": 1.8709083131431261,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.479563051784468
+      },
+      "admitted": true
+    },
+    "original65": {
+      "spec": {
+        "id": 0,
+        "base": "original65",
+        "core": "original",
+        "blend": 0.0,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.5349155442763764,
+        "sharpe": 1.6031917771530346,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.684626736023116
+      },
+      "early": {
+        "cagr": 0.44808994995802753,
+        "sharpe": 1.416891036956853,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.047408386340172
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": true
+    },
+    "simple": {
+      "spec": {
+        "id": 45,
+        "base": "simple",
+        "core": "original",
+        "blend": 0.0,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.26553411815423433,
+        "sharpe": 0.9045395345165506,
+        "max_drawdown": -0.3811673741293322,
+        "total_return": 4.560622433966353
+      },
+      "early": {
+        "cagr": 0.33754085912445975,
+        "sharpe": 1.1271329053890147,
+        "max_drawdown": -0.2930350119017284,
+        "total_return": 2.566725726855218
+      },
+      "recent": {
+        "cagr": 0.1646661972376664,
+        "sharpe": 0.6172748826125392,
+        "max_drawdown": -0.38116737412933255,
+        "total_return": 0.5590272030446082
+      },
+      "admitted": false
+    },
+    "original65_original_noML": {
+      "spec": {
+        "id": 0,
+        "base": "original65",
+        "core": "original",
+        "blend": 0.0,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.5349155442763764,
+        "sharpe": 1.6031917771530346,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.684626736023116
+      },
+      "early": {
+        "cagr": 0.44808994995802753,
+        "sharpe": 1.416891036956853,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.047408386340172
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": true
+    },
+    "original65_original_ordinal": {
+      "spec": {
+        "id": 3,
+        "base": "original65",
+        "core": "original",
+        "blend": 0.0,
+        "arm": "ordinal",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.5036080082164083,
+        "sharpe": 1.5269879434990343,
+        "max_drawdown": -0.31125995821743657,
+        "total_return": 18.52211396152662
+      },
+      "early": {
+        "cagr": 0.43986411299110606,
+        "sharpe": 1.3744773425128876,
+        "max_drawdown": -0.31125995821743657,
+        "total_return": 3.923238725964387
+      },
+      "recent": {
+        "cagr": 0.6046192407221551,
+        "sharpe": 1.7585461407265661,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 2.9652990740770044
+      },
+      "admitted": false
+    },
+    "original65_original_return": {
+      "spec": {
+        "id": 1,
+        "base": "original65",
+        "core": "original",
+        "blend": 0.0,
+        "arm": "return",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.5332060818237678,
+        "sharpe": 1.59990751273592,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 21.50120512499983
+      },
+      "early": {
+        "cagr": 0.4454036815551037,
+        "sharpe": 1.4112570727446856,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 4.006596439620117
+      },
+      "recent": {
+        "cagr": 0.6751035896184101,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.494311733802771
+      },
+      "admitted": false
+    },
+    "original65_original_matched_noML": {
+      "spec": {
+        "id": 0,
+        "base": "original65",
+        "core": "original",
+        "blend": 0.0,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.5349155442763764,
+        "sharpe": 1.6031917771530346,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.684626736023116
+      },
+      "early": {
+        "cagr": 0.44808994995802753,
+        "sharpe": 1.416891036956853,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.047408386340172
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": true
+    },
+    "original65_ordinary_sharpe_noML": {
+      "spec": {
+        "id": 5,
+        "base": "original65",
+        "core": "ordinary_sharpe",
+        "blend": 0.5,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.4403300293096233,
+        "sharpe": 1.3941734251416174,
+        "max_drawdown": -0.3160587598853718,
+        "total_return": 13.272044515369021
+      },
+      "early": {
+        "cagr": 0.3935643935411708,
+        "sharpe": 1.3018836594906211,
+        "max_drawdown": -0.3160587598853718,
+        "total_return": 3.267627242014145
+      },
+      "recent": {
+        "cagr": 0.5134844008446287,
+        "sharpe": 1.5262136565509719,
+        "max_drawdown": -0.23846264107393333,
+        "total_return": 2.3442575243833232
+      },
+      "admitted": false
+    },
+    "original65_ordinary_sharpe_ordinal": {
+      "spec": {
+        "id": 9,
+        "base": "original65",
+        "core": "ordinary_sharpe",
+        "blend": 0.5,
+        "arm": "ordinal",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.48057546957100494,
+        "sharpe": 1.4945818773419475,
+        "max_drawdown": -0.30336225195421884,
+        "total_return": 16.445514918552156
+      },
+      "early": {
+        "cagr": 0.44343541490721017,
+        "sharpe": 1.4356817210004533,
+        "max_drawdown": -0.30336225195421884,
+        "total_return": 3.976854884231013
+      },
+      "recent": {
+        "cagr": 0.538121733652567,
+        "sharpe": 1.5785315080545552,
+        "max_drawdown": -0.23846264107393333,
+        "total_return": 2.505329233895819
+      },
+      "admitted": false
+    },
+    "original65_ordinary_sharpe_return": {
+      "spec": {
+        "id": 7,
+        "base": "original65",
+        "core": "ordinary_sharpe",
+        "blend": 0.5,
+        "arm": "return",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.46125777728344386,
+        "sharpe": 1.4384616449696805,
+        "max_drawdown": -0.316058759885372,
+        "total_return": 14.853639620681703
+      },
+      "early": {
+        "cagr": 0.420395570284988,
+        "sharpe": 1.3618012799586323,
+        "max_drawdown": -0.316058759885372,
+        "total_return": 3.638741563259389
+      },
+      "recent": {
+        "cagr": 0.5248063849999773,
+        "sharpe": 1.5484418926167947,
+        "max_drawdown": -0.23846264107393333,
+        "total_return": 2.417659596785604
+      },
+      "admitted": false
+    },
+    "original65_ordinary_sharpe_matched_noML": {
+      "spec": {
+        "id": 5,
+        "base": "original65",
+        "core": "ordinary_sharpe",
+        "blend": 0.5,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.4403300293096233,
+        "sharpe": 1.3941734251416174,
+        "max_drawdown": -0.3160587598853718,
+        "total_return": 13.272044515369021
+      },
+      "early": {
+        "cagr": 0.3935643935411708,
+        "sharpe": 1.3018836594906211,
+        "max_drawdown": -0.3160587598853718,
+        "total_return": 3.267627242014145
+      },
+      "recent": {
+        "cagr": 0.5134844008446287,
+        "sharpe": 1.5262136565509719,
+        "max_drawdown": -0.23846264107393333,
+        "total_return": 2.3442575243833232
+      },
+      "admitted": false
+    },
+    "original65_hac_sharpe_noML": {
+      "spec": {
+        "id": 15,
+        "base": "original65",
+        "core": "hac_sharpe",
+        "blend": 0.5,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.4728170322865115,
+        "sharpe": 1.4563457458670463,
+        "max_drawdown": -0.2900810128397677,
+        "total_return": 15.790356957747317
+      },
+      "early": {
+        "cagr": 0.4280972421440159,
+        "sharpe": 1.3751961900892364,
+        "max_drawdown": -0.2900810128397677,
+        "total_return": 3.749727796448565
+      },
+      "recent": {
+        "cagr": 0.5425807574754935,
+        "sharpe": 1.5723205863500167,
+        "max_drawdown": -0.2644320151956415,
+        "total_return": 2.535014568687839
+      },
+      "admitted": false
+    },
+    "original65_hac_sharpe_ordinal": {
+      "spec": {
+        "id": 19,
+        "base": "original65",
+        "core": "hac_sharpe",
+        "blend": 0.5,
+        "arm": "ordinal",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.4869447581414761,
+        "sharpe": 1.4870829567625892,
+        "max_drawdown": -0.29008101283976784,
+        "total_return": 16.99973741247304
+      },
+      "early": {
+        "cagr": 0.4386925111479616,
+        "sharpe": 1.4015390585972618,
+        "max_drawdown": -0.29008101283976784,
+        "total_return": 3.9057468197304974
+      },
+      "recent": {
+        "cagr": 0.5624228300847336,
+        "sharpe": 1.6089917976957118,
+        "max_drawdown": -0.2644320151956415,
+        "total_return": 2.6691125885419944
+      },
+      "admitted": false
+    },
+    "original65_hac_sharpe_return": {
+      "spec": {
+        "id": 17,
+        "base": "original65",
+        "core": "hac_sharpe",
+        "blend": 0.5,
+        "arm": "return",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.48248688269270223,
+        "sharpe": 1.4788179413520641,
+        "max_drawdown": -0.29008101283976795,
+        "total_return": 16.61026812493791
+      },
+      "early": {
+        "cagr": 0.43611556141285224,
+        "sharpe": 1.3971522851318108,
+        "max_drawdown": -0.29008101283976795,
+        "total_return": 3.867441871702888
+      },
+      "recent": {
+        "cagr": 0.5549127955912105,
+        "sharpe": 1.5952051811661698,
+        "max_drawdown": -0.2644320151956415,
+        "total_return": 2.6179719427808847
+      },
+      "admitted": false
+    },
+    "original65_hac_sharpe_matched_noML": {
+      "spec": {
+        "id": 15,
+        "base": "original65",
+        "core": "hac_sharpe",
+        "blend": 0.5,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.4728170322865115,
+        "sharpe": 1.4563457458670463,
+        "max_drawdown": -0.2900810128397677,
+        "total_return": 15.790356957747317
+      },
+      "early": {
+        "cagr": 0.4280972421440159,
+        "sharpe": 1.3751961900892364,
+        "max_drawdown": -0.2900810128397677,
+        "total_return": 3.749727796448565
+      },
+      "recent": {
+        "cagr": 0.5425807574754935,
+        "sharpe": 1.5723205863500167,
+        "max_drawdown": -0.2644320151956415,
+        "total_return": 2.535014568687839
+      },
+      "admitted": false
+    },
+    "original65_hac_sharpe_matched_ordinary": {
+      "spec": {
+        "id": 5,
+        "base": "original65",
+        "core": "ordinary_sharpe",
+        "blend": 0.5,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.4403300293096233,
+        "sharpe": 1.3941734251416174,
+        "max_drawdown": -0.3160587598853718,
+        "total_return": 13.272044515369021
+      },
+      "early": {
+        "cagr": 0.3935643935411708,
+        "sharpe": 1.3018836594906211,
+        "max_drawdown": -0.3160587598853718,
+        "total_return": 3.267627242014145
+      },
+      "recent": {
+        "cagr": 0.5134844008446287,
+        "sharpe": 1.5262136565509719,
+        "max_drawdown": -0.23846264107393333,
+        "total_return": 2.3442575243833232
+      },
+      "admitted": false
+    },
+    "original65_market_residual_sharpe_noML": {
+      "spec": {
+        "id": 25,
+        "base": "original65",
+        "core": "market_residual_sharpe",
+        "blend": 0.5,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.4468376156840135,
+        "sharpe": 1.4147187842896278,
+        "max_drawdown": -0.2902572170102864,
+        "total_return": 13.748562949094369
+      },
+      "early": {
+        "cagr": 0.39470701115448015,
+        "sharpe": 1.3139492730871494,
+        "max_drawdown": -0.2902572170102864,
+        "total_return": 3.2829481455734664
+      },
+      "recent": {
+        "cagr": 0.5287623561411114,
+        "sharpe": 1.5579151527069293,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 2.4435539371022728
+      },
+      "admitted": false
+    },
+    "original65_market_residual_sharpe_ordinal": {
+      "spec": {
+        "id": 28,
+        "base": "original65",
+        "core": "market_residual_sharpe",
+        "blend": 0.5,
+        "arm": "ordinal",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.45105564046197966,
+        "sharpe": 1.4236667284775635,
+        "max_drawdown": -0.2902572170102864,
+        "total_return": 14.064706217431809
+      },
+      "early": {
+        "cagr": 0.414969605214341,
+        "sharpe": 1.3621273577080573,
+        "max_drawdown": -0.2902572170102864,
+        "total_return": 3.5617588091686683
+      },
+      "recent": {
+        "cagr": 0.5069532412272484,
+        "sharpe": 1.5114553328332676,
+        "max_drawdown": -0.26943979580801947,
+        "total_return": 2.302389899955538
+      },
+      "admitted": false
+    },
+    "original65_market_residual_sharpe_return": {
+      "spec": {
+        "id": 26,
+        "base": "original65",
+        "core": "market_residual_sharpe",
+        "blend": 0.5,
+        "arm": "return",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.4594163553636885,
+        "sharpe": 1.442884603788609,
+        "max_drawdown": -0.2902572170102865,
+        "total_return": 14.708662507423703
+      },
+      "early": {
+        "cagr": 0.414969605214341,
+        "sharpe": 1.3621273577080575,
+        "max_drawdown": -0.2902572170102865,
+        "total_return": 3.5617588091686683
+      },
+      "recent": {
+        "cagr": 0.5287623561411114,
+        "sharpe": 1.5579151527069293,
+        "max_drawdown": -0.26943979580801947,
+        "total_return": 2.4435539371022728
+      },
+      "admitted": false
+    },
+    "original65_market_residual_sharpe_matched_noML": {
+      "spec": {
+        "id": 25,
+        "base": "original65",
+        "core": "market_residual_sharpe",
+        "blend": 0.5,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.4468376156840135,
+        "sharpe": 1.4147187842896278,
+        "max_drawdown": -0.2902572170102864,
+        "total_return": 13.748562949094369
+      },
+      "early": {
+        "cagr": 0.39470701115448015,
+        "sharpe": 1.3139492730871494,
+        "max_drawdown": -0.2902572170102864,
+        "total_return": 3.2829481455734664
+      },
+      "recent": {
+        "cagr": 0.5287623561411114,
+        "sharpe": 1.5579151527069293,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 2.4435539371022728
+      },
+      "admitted": false
+    },
+    "original65_market_residual_sharpe_matched_ordinary": {
+      "spec": {
+        "id": 5,
+        "base": "original65",
+        "core": "ordinary_sharpe",
+        "blend": 0.5,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.4403300293096233,
+        "sharpe": 1.3941734251416174,
+        "max_drawdown": -0.3160587598853718,
+        "total_return": 13.272044515369021
+      },
+      "early": {
+        "cagr": 0.3935643935411708,
+        "sharpe": 1.3018836594906211,
+        "max_drawdown": -0.3160587598853718,
+        "total_return": 3.267627242014145
+      },
+      "recent": {
+        "cagr": 0.5134844008446287,
+        "sharpe": 1.5262136565509719,
+        "max_drawdown": -0.23846264107393333,
+        "total_return": 2.3442575243833232
+      },
+      "admitted": false
+    },
+    "original65_rank_residence_noML": {
+      "spec": {
+        "id": 35,
+        "base": "original65",
+        "core": "rank_residence",
+        "blend": 0.5,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.4953506327347006,
+        "sharpe": 1.4746513118270344,
+        "max_drawdown": -0.2911359097416919,
+        "total_return": 17.754381090891496
+      },
+      "early": {
+        "cagr": 0.5219119292884746,
+        "sharpe": 1.5715712012060032,
+        "max_drawdown": -0.2911359097416919,
+        "total_return": 5.273166005446595
+      },
+      "recent": {
+        "cagr": 0.4563512358946331,
+        "sharpe": 1.3410770665482752,
+        "max_drawdown": -0.23846264107393356,
+        "total_return": 1.9896197668941453
+      },
+      "admitted": false
+    },
+    "original65_rank_residence_ordinal": {
+      "spec": {
+        "id": 39,
+        "base": "original65",
+        "core": "rank_residence",
+        "blend": 0.5,
+        "arm": "ordinal",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.5159603181977854,
+        "sharpe": 1.5279527119621512,
+        "max_drawdown": -0.2911359097416921,
+        "total_return": 19.721154865779283
+      },
+      "early": {
+        "cagr": 0.5249830444204289,
+        "sharpe": 1.583966296689586,
+        "max_drawdown": -0.2911359097416921,
+        "total_return": 5.328704560019693
+      },
+      "recent": {
+        "cagr": 0.5025178450349443,
+        "sharpe": 1.4505890061395517,
+        "max_drawdown": -0.23846264107393356,
+        "total_return": 2.27415423950755
+      },
+      "admitted": false
+    },
+    "original65_rank_residence_return": {
+      "spec": {
+        "id": 37,
+        "base": "original65",
+        "core": "rank_residence",
+        "blend": 0.5,
+        "arm": "return",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.4995468818499169,
+        "sharpe": 1.5010548772924046,
+        "max_drawdown": -0.2911359097416919,
+        "total_return": 18.141208044540612
+      },
+      "early": {
+        "cagr": 0.5321998136079953,
+        "sharpe": 1.6285900160850375,
+        "max_drawdown": -0.2911359097416919,
+        "total_return": 5.46070669223366
+      },
+      "recent": {
+        "cagr": 0.45183820236277383,
+        "sharpe": 1.331363688888697,
+        "max_drawdown": -0.23846264107393356,
+        "total_return": 1.96271119497655
+      },
+      "admitted": false
+    },
+    "original65_rank_residence_matched_noML": {
+      "spec": {
+        "id": 35,
+        "base": "original65",
+        "core": "rank_residence",
+        "blend": 0.5,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.4953506327347006,
+        "sharpe": 1.4746513118270344,
+        "max_drawdown": -0.2911359097416919,
+        "total_return": 17.754381090891496
+      },
+      "early": {
+        "cagr": 0.5219119292884746,
+        "sharpe": 1.5715712012060032,
+        "max_drawdown": -0.2911359097416919,
+        "total_return": 5.273166005446595
+      },
+      "recent": {
+        "cagr": 0.4563512358946331,
+        "sharpe": 1.3410770665482752,
+        "max_drawdown": -0.23846264107393356,
+        "total_return": 1.9896197668941453
+      },
+      "admitted": false
+    },
+    "original65_rank_residence_matched_ordinary": {
+      "spec": {
+        "id": 5,
+        "base": "original65",
+        "core": "ordinary_sharpe",
+        "blend": 0.5,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.4403300293096233,
+        "sharpe": 1.3941734251416174,
+        "max_drawdown": -0.3160587598853718,
+        "total_return": 13.272044515369021
+      },
+      "early": {
+        "cagr": 0.3935643935411708,
+        "sharpe": 1.3018836594906211,
+        "max_drawdown": -0.3160587598853718,
+        "total_return": 3.267627242014145
+      },
+      "recent": {
+        "cagr": 0.5134844008446287,
+        "sharpe": 1.5262136565509719,
+        "max_drawdown": -0.23846264107393333,
+        "total_return": 2.3442575243833232
+      },
+      "admitted": false
+    },
+    "simple_original_noML": {
+      "spec": {
+        "id": 45,
+        "base": "simple",
+        "core": "original",
+        "blend": 0.0,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.26553411815423433,
+        "sharpe": 0.9045395345165506,
+        "max_drawdown": -0.3811673741293322,
+        "total_return": 4.560622433966353
+      },
+      "early": {
+        "cagr": 0.33754085912445975,
+        "sharpe": 1.1271329053890147,
+        "max_drawdown": -0.2930350119017284,
+        "total_return": 2.566725726855218
+      },
+      "recent": {
+        "cagr": 0.1646661972376664,
+        "sharpe": 0.6172748826125392,
+        "max_drawdown": -0.38116737412933255,
+        "total_return": 0.5590272030446082
+      },
+      "admitted": false
+    },
+    "simple_original_ordinal": {
+      "spec": {
+        "id": 49,
+        "base": "simple",
+        "core": "original",
+        "blend": 0.0,
+        "arm": "ordinal",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.2694699124562707,
+        "sharpe": 0.9108965904162449,
+        "max_drawdown": -0.3811673741293322,
+        "total_return": 4.687853396518589
+      },
+      "early": {
+        "cagr": 0.34575176156467036,
+        "sharpe": 1.147012245536593,
+        "max_drawdown": -0.2930350119017283,
+        "total_return": 2.6634579652412893
+      },
+      "recent": {
+        "cagr": 0.16301355582206645,
+        "sharpe": 0.6099649962383242,
+        "max_drawdown": -0.38116737412933255,
+        "total_return": 0.5525914178583924
+      },
+      "admitted": false
+    },
+    "simple_original_return": {
+      "spec": {
+        "id": 47,
+        "base": "simple",
+        "core": "original",
+        "blend": 0.0,
+        "arm": "return",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.2682256648935424,
+        "sharpe": 0.9079626108115996,
+        "max_drawdown": -0.3811673741293323,
+        "total_return": 4.647362366694188
+      },
+      "early": {
+        "cagr": 0.3474126524380279,
+        "sharpe": 1.1506933332361187,
+        "max_drawdown": -0.2930350119017284,
+        "total_return": 2.6832684320634472
+      },
+      "recent": {
+        "cagr": 0.15801901488209813,
+        "sharpe": 0.5977757111585162,
+        "max_drawdown": -0.38116737412933255,
+        "total_return": 0.5332475682556794
+      },
+      "admitted": false
+    },
+    "simple_original_matched_noML": {
+      "spec": {
+        "id": 45,
+        "base": "simple",
+        "core": "original",
+        "blend": 0.0,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.26553411815423433,
+        "sharpe": 0.9045395345165506,
+        "max_drawdown": -0.3811673741293322,
+        "total_return": 4.560622433966353
+      },
+      "early": {
+        "cagr": 0.33754085912445975,
+        "sharpe": 1.1271329053890147,
+        "max_drawdown": -0.2930350119017284,
+        "total_return": 2.566725726855218
+      },
+      "recent": {
+        "cagr": 0.1646661972376664,
+        "sharpe": 0.6172748826125392,
+        "max_drawdown": -0.38116737412933255,
+        "total_return": 0.5590272030446082
+      },
+      "admitted": false
+    },
+    "simple_ordinary_sharpe_noML": {
+      "spec": {
+        "id": 55,
+        "base": "simple",
+        "core": "ordinary_sharpe",
+        "blend": 1.0,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.24228319787167663,
+        "sharpe": 0.8750966398961595,
+        "max_drawdown": -0.29248446484865476,
+        "total_return": 3.857926176742362
+      },
+      "early": {
+        "cagr": 0.3443735463440487,
+        "sharpe": 1.173332911981697,
+        "max_drawdown": -0.27049836289031737,
+        "total_return": 2.6470816237544015
+      },
+      "recent": {
+        "cagr": 0.1034161976788095,
+        "sharpe": 0.46912992738952597,
+        "max_drawdown": -0.2924844648486541,
+        "total_return": 0.33200368894992804
+      },
+      "admitted": false
+    },
+    "simple_ordinary_sharpe_ordinal": {
+      "spec": {
+        "id": 54,
+        "base": "simple",
+        "core": "ordinary_sharpe",
+        "blend": 0.5,
+        "arm": "ordinal",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.24593529267666137,
+        "sharpe": 0.874839177556238,
+        "max_drawdown": -0.2729148148356164,
+        "total_return": 3.962941021440076
+      },
+      "early": {
+        "cagr": 0.30363065886830065,
+        "sharpe": 1.0510407771647514,
+        "max_drawdown": -0.2729148148356164,
+        "total_return": 2.187910646642505
+      },
+      "recent": {
+        "cagr": 0.16409492196802056,
+        "sharpe": 0.6340493814850798,
+        "max_drawdown": -0.26979484860219016,
+        "total_return": 0.5568005416547752
+      },
+      "admitted": false
+    },
+    "simple_ordinary_sharpe_return": {
+      "spec": {
+        "id": 52,
+        "base": "simple",
+        "core": "ordinary_sharpe",
+        "blend": 0.5,
+        "arm": "return",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.24929328143585905,
+        "sharpe": 0.8842004952692857,
+        "max_drawdown": -0.2729148148356163,
+        "total_return": 4.061221420799672
+      },
+      "early": {
+        "cagr": 0.3066647694195104,
+        "sharpe": 1.060651894473557,
+        "max_drawdown": -0.2729148148356163,
+        "total_return": 2.22048012403277
+      },
+      "recent": {
+        "cagr": 0.1678751336355715,
+        "sharpe": 0.643929760208664,
+        "max_drawdown": -0.26979484860219016,
+        "total_return": 0.571573562286692
+      },
+      "admitted": false
+    },
+    "simple_ordinary_sharpe_matched_noML": {
+      "spec": {
+        "id": 50,
+        "base": "simple",
+        "core": "ordinary_sharpe",
+        "blend": 0.5,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.2374297419238076,
+        "sharpe": 0.8533963920500536,
+        "max_drawdown": -0.28435366192417155,
+        "total_return": 3.7213369415766095
+      },
+      "early": {
+        "cagr": 0.30121640216658685,
+        "sharpe": 1.0471870559109915,
+        "max_drawdown": -0.2729148148356164,
+        "total_return": 2.1621769434169598
+      },
+      "recent": {
+        "cagr": 0.1475102300021225,
+        "sharpe": 0.589318094781815,
+        "max_drawdown": -0.28435366192417144,
+        "total_return": 0.4930653869339956
+      },
+      "admitted": false
+    },
+    "simple_hac_sharpe_noML": {
+      "spec": {
+        "id": 65,
+        "base": "simple",
+        "core": "hac_sharpe",
+        "blend": 1.0,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.24403158658606072,
+        "sharpe": 0.894929805597434,
+        "max_drawdown": -0.29290071077001345,
+        "total_return": 3.9079588060919512
+      },
+      "early": {
+        "cagr": 0.3341266887087362,
+        "sharpe": 1.151497869624843,
+        "max_drawdown": -0.2922192027085949,
+        "total_return": 2.5270886221342193
+      },
+      "recent": {
+        "cagr": 0.12009374305943243,
+        "sharpe": 0.527959357869944,
+        "max_drawdown": -0.292900710770014,
+        "total_return": 0.3915042495082468
+      },
+      "admitted": false
+    },
+    "simple_hac_sharpe_ordinal": {
+      "spec": {
+        "id": 68,
+        "base": "simple",
+        "core": "hac_sharpe",
+        "blend": 1.0,
+        "arm": "ordinal",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.2418740444186771,
+        "sharpe": 0.8882623252041285,
+        "max_drawdown": -0.2929007107700138,
+        "total_return": 3.846281415726401
+      },
+      "early": {
+        "cagr": 0.33433519997870254,
+        "sharpe": 1.1480694925024577,
+        "max_drawdown": -0.2922192027085946,
+        "total_return": 2.52949956487195
+      },
+      "recent": {
+        "cagr": 0.11498018627721662,
+        "sharpe": 0.5134452575141533,
+        "max_drawdown": -0.29290071077001434,
+        "total_return": 0.37307891009818706
+      },
+      "admitted": false
+    },
+    "simple_hac_sharpe_return": {
+      "spec": {
+        "id": 66,
+        "base": "simple",
+        "core": "hac_sharpe",
+        "blend": 1.0,
+        "arm": "return",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.2397369957274189,
+        "sharpe": 0.8823334312298188,
+        "max_drawdown": -0.29290071077001345,
+        "total_return": 3.785850233375493
+      },
+      "early": {
+        "cagr": 0.33051142180124904,
+        "sharpe": 1.137999495630957,
+        "max_drawdown": -0.2922192027085948,
+        "total_return": 2.4854881232086314
+      },
+      "recent": {
+        "cagr": 0.1149801862772164,
+        "sharpe": 0.5134452575141528,
+        "max_drawdown": -0.29290071077001434,
+        "total_return": 0.37307891009818617
+      },
+      "admitted": false
+    },
+    "simple_hac_sharpe_matched_noML": {
+      "spec": {
+        "id": 65,
+        "base": "simple",
+        "core": "hac_sharpe",
+        "blend": 1.0,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.24403158658606072,
+        "sharpe": 0.894929805597434,
+        "max_drawdown": -0.29290071077001345,
+        "total_return": 3.9079588060919512
+      },
+      "early": {
+        "cagr": 0.3341266887087362,
+        "sharpe": 1.151497869624843,
+        "max_drawdown": -0.2922192027085949,
+        "total_return": 2.5270886221342193
+      },
+      "recent": {
+        "cagr": 0.12009374305943243,
+        "sharpe": 0.527959357869944,
+        "max_drawdown": -0.292900710770014,
+        "total_return": 0.3915042495082468
+      },
+      "admitted": false
+    },
+    "simple_hac_sharpe_matched_ordinary": {
+      "spec": {
+        "id": 55,
+        "base": "simple",
+        "core": "ordinary_sharpe",
+        "blend": 1.0,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.24228319787167663,
+        "sharpe": 0.8750966398961595,
+        "max_drawdown": -0.29248446484865476,
+        "total_return": 3.857926176742362
+      },
+      "early": {
+        "cagr": 0.3443735463440487,
+        "sharpe": 1.173332911981697,
+        "max_drawdown": -0.27049836289031737,
+        "total_return": 2.6470816237544015
+      },
+      "recent": {
+        "cagr": 0.1034161976788095,
+        "sharpe": 0.46912992738952597,
+        "max_drawdown": -0.2924844648486541,
+        "total_return": 0.33200368894992804
+      },
+      "admitted": false
+    },
+    "simple_market_residual_sharpe_noML": {
+      "spec": {
+        "id": 70,
+        "base": "simple",
+        "core": "market_residual_sharpe",
+        "blend": 0.5,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.26266346383992434,
+        "sharpe": 0.9158818455189014,
+        "max_drawdown": -0.2979868556301226,
+        "total_return": 4.469379483186884
+      },
+      "early": {
+        "cagr": 0.356147487299473,
+        "sharpe": 1.1811202750869998,
+        "max_drawdown": -0.2979868556301226,
+        "total_return": 2.7888180795359725
+      },
+      "recent": {
+        "cagr": 0.13430408484631462,
+        "sharpe": 0.5522935407973475,
+        "max_drawdown": -0.26979484860219016,
+        "total_return": 0.4435582201024406
+      },
+      "admitted": false
+    },
+    "simple_market_residual_sharpe_ordinal": {
+      "spec": {
+        "id": 73,
+        "base": "simple",
+        "core": "market_residual_sharpe",
+        "blend": 0.5,
+        "arm": "ordinal",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.26125079316312894,
+        "sharpe": 0.9139226255352522,
+        "max_drawdown": -0.2979868556301234,
+        "total_return": 4.424954402960254
+      },
+      "early": {
+        "cagr": 0.3675720629479917,
+        "sharpe": 1.2130341717192958,
+        "max_drawdown": -0.2979868556301234,
+        "total_return": 2.9303736566700374
+      },
+      "recent": {
+        "cagr": 0.11697966269438886,
+        "sharpe": 0.5047394716747978,
+        "max_drawdown": -0.28716965451147414,
+        "total_return": 0.3802642895679489
+      },
+      "admitted": false
+    },
+    "simple_market_residual_sharpe_return": {
+      "spec": {
+        "id": 71,
+        "base": "simple",
+        "core": "market_residual_sharpe",
+        "blend": 0.5,
+        "arm": "return",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.2607091970710531,
+        "sharpe": 0.91200916936727,
+        "max_drawdown": -0.2979868556301226,
+        "total_return": 4.408005262614928
+      },
+      "early": {
+        "cagr": 0.36364499455337573,
+        "sharpe": 1.202398447863324,
+        "max_drawdown": -0.2979868556301226,
+        "total_return": 2.881263367538285
+      },
+      "recent": {
+        "cagr": 0.12060687510950352,
+        "sharpe": 0.5146932668961576,
+        "max_drawdown": -0.28716965451147414,
+        "total_return": 0.39336209643639375
+      },
+      "admitted": false
+    },
+    "simple_market_residual_sharpe_matched_noML": {
+      "spec": {
+        "id": 70,
+        "base": "simple",
+        "core": "market_residual_sharpe",
+        "blend": 0.5,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.26266346383992434,
+        "sharpe": 0.9158818455189014,
+        "max_drawdown": -0.2979868556301226,
+        "total_return": 4.469379483186884
+      },
+      "early": {
+        "cagr": 0.356147487299473,
+        "sharpe": 1.1811202750869998,
+        "max_drawdown": -0.2979868556301226,
+        "total_return": 2.7888180795359725
+      },
+      "recent": {
+        "cagr": 0.13430408484631462,
+        "sharpe": 0.5522935407973475,
+        "max_drawdown": -0.26979484860219016,
+        "total_return": 0.4435582201024406
+      },
+      "admitted": false
+    },
+    "simple_market_residual_sharpe_matched_ordinary": {
+      "spec": {
+        "id": 50,
+        "base": "simple",
+        "core": "ordinary_sharpe",
+        "blend": 0.5,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.2374297419238076,
+        "sharpe": 0.8533963920500536,
+        "max_drawdown": -0.28435366192417155,
+        "total_return": 3.7213369415766095
+      },
+      "early": {
+        "cagr": 0.30121640216658685,
+        "sharpe": 1.0471870559109915,
+        "max_drawdown": -0.2729148148356164,
+        "total_return": 2.1621769434169598
+      },
+      "recent": {
+        "cagr": 0.1475102300021225,
+        "sharpe": 0.589318094781815,
+        "max_drawdown": -0.28435366192417144,
+        "total_return": 0.4930653869339956
+      },
+      "admitted": false
+    },
+    "simple_rank_residence_noML": {
+      "spec": {
+        "id": 85,
+        "base": "simple",
+        "core": "rank_residence",
+        "blend": 1.0,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.31861925111326594,
+        "sharpe": 1.0362844449471784,
+        "max_drawdown": -0.34530883392802914,
+        "total_return": 6.5013330734748145
+      },
+      "early": {
+        "cagr": 0.45856781620453635,
+        "sharpe": 1.4080648131940725,
+        "max_drawdown": -0.34530883392802914,
+        "total_return": 4.209054811362699
+      },
+      "recent": {
+        "cagr": 0.1333587916726957,
+        "sharpe": 0.5407117252553871,
+        "max_drawdown": -0.3396396462111839,
+        "total_return": 0.4400564680394434
+      },
+      "admitted": false
+    },
+    "simple_rank_residence_ordinal": {
+      "spec": {
+        "id": 89,
+        "base": "simple",
+        "core": "rank_residence",
+        "blend": 1.0,
+        "arm": "ordinal",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.3050636319025748,
+        "sharpe": 1.002923485700754,
+        "max_drawdown": -0.34530883392802914,
+        "total_return": 5.957333404169968
+      },
+      "early": {
+        "cagr": 0.43508401287255105,
+        "sharpe": 1.3532637934044722,
+        "max_drawdown": -0.34530883392802914,
+        "total_return": 3.8521732924152046
+      },
+      "recent": {
+        "cagr": 0.13168214596037187,
+        "sharpe": 0.5361441149355761,
+        "max_drawdown": -0.33963964621118437,
+        "total_return": 0.43385921831058827
+      },
+      "admitted": false
+    },
+    "simple_rank_residence_return": {
+      "spec": {
+        "id": 87,
+        "base": "simple",
+        "core": "rank_residence",
+        "blend": 1.0,
+        "arm": "return",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.3025715100079891,
+        "sharpe": 0.9971283514516114,
+        "max_drawdown": -0.34530883392802914,
+        "total_return": 5.861119341121308
+      },
+      "early": {
+        "cagr": 0.43757866342831453,
+        "sharpe": 1.3583093384887854,
+        "max_drawdown": -0.34530883392802914,
+        "total_return": 3.889161662625506
+      },
+      "recent": {
+        "cagr": 0.12335301742592741,
+        "sharpe": 0.5144570879214372,
+        "max_drawdown": -0.3396396462111839,
+        "total_return": 0.40333247590689947
+      },
+      "admitted": false
+    },
+    "simple_rank_residence_matched_noML": {
+      "spec": {
+        "id": 85,
+        "base": "simple",
+        "core": "rank_residence",
+        "blend": 1.0,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.31861925111326594,
+        "sharpe": 1.0362844449471784,
+        "max_drawdown": -0.34530883392802914,
+        "total_return": 6.5013330734748145
+      },
+      "early": {
+        "cagr": 0.45856781620453635,
+        "sharpe": 1.4080648131940725,
+        "max_drawdown": -0.34530883392802914,
+        "total_return": 4.209054811362699
+      },
+      "recent": {
+        "cagr": 0.1333587916726957,
+        "sharpe": 0.5407117252553871,
+        "max_drawdown": -0.3396396462111839,
+        "total_return": 0.4400564680394434
+      },
+      "admitted": false
+    },
+    "simple_rank_residence_matched_ordinary": {
+      "spec": {
+        "id": 55,
+        "base": "simple",
+        "core": "ordinary_sharpe",
+        "blend": 1.0,
+        "arm": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.24228319787167663,
+        "sharpe": 0.8750966398961595,
+        "max_drawdown": -0.29248446484865476,
+        "total_return": 3.857926176742362
+      },
+      "early": {
+        "cagr": 0.3443735463440487,
+        "sharpe": 1.173332911981697,
+        "max_drawdown": -0.27049836289031737,
+        "total_return": 2.6470816237544015
+      },
+      "recent": {
+        "cagr": 0.1034161976788095,
+        "sharpe": 0.46912992738952597,
+        "max_drawdown": -0.2924844648486541,
+        "total_return": 0.33200368894992804
+      },
+      "admitted": false
+    }
+  },
+  "trials": 90,
+  "admitted_noncontrols": 1,
+  "hashes": {
+    "PLAN.json": "6130b01f4d278becbb97f9459461380b9cd5b7da60aacc8cb64de5aa2b13dee0",
+    "GRID.json": "137c3dea8142d626a9a477592e7b972d99a2cb1903544636704fe6056b45b508",
+    "DATA.npz": "e157d96879b4d5f6772eb897e114a31abd1fccdca98ec0f8088f6e98a715b677",
+    "META.json": "730cea9f8f58232ad7e9a81ad5e59afa267eb0c0edabce686215c220d9de1765",
+    "FORECASTS.npz": "7afe5256618b08884c3b932ff19b5ac9c52c716c380319a3785f341d25712d5c",
+    "INPUT_HASHES.json": "dc0d0198b4142a60aab496bceb72eee5afa7b51f436b8e15d2122e21cb888c2d",
+    "FEATURE_AUDIT.json": "36a9686d10385d3b271608652da8bb7eeff15aabd25c02f249439f3406185285",
+    "TARGET_AUDIT.json": "22eba052cb3e9f35777ba7284731d00aa75bab3854e3c486dd0d83e8185cc781",
+    "FORECAST_AUDIT.json": "42a0fb12764d686cec798330464b143a68210d82e21398a7622db0e84a66b1a0",
+    "study.py": "82b535d2afb0e1f615ae2f0ce00a84987fbaec1150921ef779fdd9d0aca199f9",
+    "core_features.py": "872f145b4bcd593ae802abff9bde3519bed6d8439af171f68ac2500cf8395b1f",
+    "residence.py": "d8203066189af34a252151d8a66e2409cd2d97d197acebaf4b63f89af26172ad",
+    "ordinal_model.py": "4a8cd20e0be109c1e4f8175b5cb182941090dda3025703ac7870ebc1391abce3"
+  },
+  "author_labels_used": false,
+  "diagnostics_may_be_unqualified": true
+}

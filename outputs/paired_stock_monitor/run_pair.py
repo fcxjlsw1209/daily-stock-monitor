@@ -11,7 +11,9 @@ CORE_ACCOUNTS=dict(ACCOUNTS)
 ACCOUNTS.update({'accel':P.parent/'accel_shadow_monitor','high52':P.parent/'high52_shadow_monitor','accel40':P.parent/'accel40_shadow_monitor'})
 
 def invoke(folder,args):
-    proc=subprocess.run([sys.executable,str(P/'evening_adapter.py'),'--account',str(folder),*args],cwd=ROOT,text=True,capture_output=True)
+    from execution_registry import active_account_paths
+    route=active_account_paths(folder)
+    proc=subprocess.run([sys.executable,str(route['adapter']),'--account',str(folder),*args],cwd=ROOT,text=True,capture_output=True)
     try:report=json.loads(proc.stdout)
     except Exception:raise RuntimeError(f'{folder.name}: invalid response; exit={proc.returncode}; {proc.stderr[-1000:]}')
     if proc.returncode or report.get('status')=='ERROR_NO_NEW_PLAN':raise RuntimeError(f'{folder.name}: {report}')
@@ -24,7 +26,8 @@ def observe_monthly(folder="monthly_buffer5_monitor"):
         result=json.loads(proc.stdout)
         if proc.returncode and result.get('status')!='ERROR_NO_NEW_PLAN':
             raise ValueError('Nonzero monthly observer exit')
-        return result
+        from monthly_status import enrich_monthly_status
+        return enrich_monthly_status(result,P.parent/folder)
     except Exception:
         return {'status':'ERROR_NO_NEW_PLAN','reason':f'Monthly observer failed; exit={proc.returncode}; {proc.stderr[-500:]}','plan':None}
 
@@ -44,14 +47,14 @@ def publish(reports,monthly=None,monthly_regime=None,monthly_industry=None,month
     from qqq_benchmark import summarize as summarize_qqq
     out['qqq_buy_hold']=summarize_qqq(ROOT/'work/stock_monitor_cache'/a['snapshot_id'],a['data_as_of'])
     names=list(reports);labels={'baseline':'基准','shadow':'压力影子','resilience':'抗跌影子','accel':'动量加速20日','high52':'52周高点20日','accel40':'动量40/10 20日'}
-    lines=['# 六策略独立模拟每日比较','',f"生成时间：{out['generated_utc']}；行情截至：{a['data_as_of']}。",'', '独立模拟账户，包含已授权补记；不是实盘或纯样本外绩效。账户启用日期不同，全历史收益不可直接比较。','', '|项目|'+'|'.join(labels[n] for n in names)+'|','|---|'+'---:|'*len(names)]
+    lines=['# 六策略独立模拟每日比较','',f"生成时间：{out['generated_utc']}；行情截至：{a['data_as_of']}。",'', '独立模拟账户，按冻结规则连续跟踪，包含已授权的漏跑日顺序补算；不是实盘或纯样本外绩效。账户启用日期不同，全历史收益不可直接比较。','', '|项目|'+'|'.join(labels[n] for n in names)+'|','|---|'+'---:|'*len(names)]
     if out.get('universe_migration',{}).get('paper_migration_complete') is False:
         lines[1:1]=['', '**股票池说明：以下仍是2026-09-18固定Top100旧版本。每日当期Top100迁移等待可验证数据，尚未生效。**', '']
     def win(st):return '尚无数据' if st['win_rate'] is None else f"{st['win_rate']:.2%}"
-    fields=[('运行状态',lambda r:r['status']),('账本截至',lambda r:r['statistics']['as_of'] or '尚未开始'),('净值',lambda r:f"${r['statistics']['equity']:,.2f}"),('累计净收益',lambda r:f"{r['statistics']['cumulative_return']:.2%}"),('已平仓笔数',lambda r:str(r['statistics']['closed_trades'])),('净胜率',lambda r:win(r['statistics'])),('已实现盈亏',lambda r:f"${r['statistics']['realized_pnl']:,.2f}"),('未实现盈亏',lambda r:f"${r['statistics']['unrealized_pnl']:,.2f}"),('最大日终回撤',lambda r:f"{-r['statistics']['max_close_drawdown']:.2%}"),('持仓数',lambda r:str(r['statistics']['open_positions'])),('错过交易日',lambda r:str(r['statistics']['missed_sessions']))]
+    fields=[('运行状态',lambda r:r['status']),('账本截至',lambda r:r['statistics']['as_of'] or '尚未开始'),('净值',lambda r:f"${r['statistics']['equity']:,.2f}"),('累计净收益',lambda r:f"{r['statistics']['cumulative_return']:.2%}"),('已平仓笔数',lambda r:str(r['statistics']['closed_trades'])),('净胜率',lambda r:win(r['statistics'])),('已实现盈亏',lambda r:f"${r['statistics']['realized_pnl']:,.2f}"),('未实现盈亏',lambda r:f"${r['statistics']['unrealized_pnl']:,.2f}"),('最大日终回撤',lambda r:f"{-r['statistics']['max_close_drawdown']:.2%}"),('持仓数',lambda r:str(r['statistics']['open_positions'])),('未补齐交易日',lambda r:str(r['statistics']['missed_sessions'])),('已补算交易日',lambda r:str(r['statistics'].get('replayed_sessions',0)))]
     for label,fmt in fields:lines.append('|'+label+'|'+'|'.join(fmt(reports[n]) for n in names)+'|')
     lines.extend(['',f"影子相对基准累计收益差：{out['shadow_minus_baseline_return_pp']:+.2f}个百分点。",''])
-    cohort=out['cohort'];lines += ['','## 共同观察区间',f"起点：{cohort['start']}；共同完整交易日：{cohort['common_complete_days']}；达到初步评估门槛：{cohort['initial_review_ready']}。",'收益含继承持仓影响；胜率仅计共同起点后入场的已平仓交易。','', '|账户|同期收益|同期最大回撤|新入场后已平仓|净胜率|继承持仓平仓|','|---|---:|---:|---:|---:|---:|']
+    cohort=out['cohort'];lines += ['','## 共同观察区间',f"起点：{cohort['start']}；共同完整交易日：{cohort['common_complete_days']}（仅事前计划）；共同补算日：{cohort.get('common_replayed_days',0)}；达到初步评估门槛：{cohort['initial_review_ready']}。",'收益含继承持仓影响；胜率仅计共同起点后入场的已平仓交易。','', '|账户|同期收益|同期最大回撤|新入场后已平仓|净胜率|继承持仓平仓|','|---|---:|---:|---:|---:|---:|']
     for name,c in cohort['accounts'].items():
         rate='尚无数据' if c['win_rate'] is None else f"{c['win_rate']:.2%}"
         lines.append(f"|{labels[name]}|{c['return']:.2%}|{-c['max_drawdown']:.2%}|{c['closed_trades']}|{rate}|{c['inherited_closed_trades']}|")
@@ -68,6 +71,16 @@ def publish(reports,monthly=None,monthly_regime=None,monthly_industry=None,month
             lines.append(f"|{labels[name]}|{c['return']:.3%}|{-c['max_drawdown']:.3%}|{c['closed_trades']}|{rate}|")
     for name,r in reports.items():
         lines += [f'## {name}', '', '盘前计划（无计划不等于无入围股票）：','```json',json.dumps(r.get('plan'),ensure_ascii=False,indent=2),'```','', '事后重算（不计入前向账本）：','```json',json.dumps(r.get('retrospective_plan'),ensure_ascii=False,indent=2),'```','', '当前持仓：','```json',json.dumps(r['statistics']['positions'],ensure_ascii=False,indent=2),'```','']
+    lines += ['## 月观察执行与数据状态', '', '未到首次信号日与数据更新成功是不同状态。以下现金仅在只读账本核验未发生交易后展示；未补造日终账本。', '', '|账户|今日需交易|首次信号|首次执行|现金|数据状态|', '|---|---|---|---|---:|---|']
+    monthly_labels={'buffer5':'前五名保留','regime':'市场状态','industry':'行业修正','stability':'稳定性'}
+    for name,r in out['monthly_observations'].items():
+        if r is None:continue
+        due='无需（尚未到首次信号）' if r.get('no_trade_due_today') is True else '以账户原始状态为准'
+        cash=f"${r['cash']:,.2f}" if r.get('execution_ledger_audit',{}).get('untouched_cash_verified') else '未核实'
+        lines.append(f"|{monthly_labels[name]}|{due}|{r.get('first_signal_date','未核实')}|{r.get('first_execution_date','未核实')}|{cash}|{r.get('data_health',r.get('status'))}；截至{r.get('data_as_of','未知')}|")
+    for name,r in reports.items():
+        for revision in r.get('verified_entry_price_revisions',[]):
+            lines += ['', f"报价修订已核实：{labels[name]} {revision['symbol']} 的 {revision['entry_date']} 开盘报价由 ${revision['recorded_entry_price']:.2f} 修订至 ${revision['accepted_provider_open']:.2f}。原模拟成交价、股数和历史记录保留；该核验仅解除已知修订的计划阻塞。"]
     if monthly is not None:
         lines += ['## 月策略独立观察：差额调仓＋前五名保留','',
                   '动态历史指数并集内Top32＋17 ETF，数据与原六账户不同，独立展示，不合并买单或收益。',

@@ -1,0 +1,158 @@
+[
+  {
+    "base": "original65",
+    "factor": "none",
+    "budget": 0.0,
+    "id": 0
+  },
+  {
+    "base": "incumbent66",
+    "factor": "none",
+    "budget": 0.0,
+    "id": 1
+  },
+  {
+    "base": "original65",
+    "factor": "weakest_segment",
+    "budget": 0.025,
+    "id": 2
+  },
+  {
+    "base": "original65",
+    "factor": "weakest_segment",
+    "budget": 0.05,
+    "id": 3
+  },
+  {
+    "base": "original65",
+    "factor": "weakest_segment",
+    "budget": 0.1,
+    "id": 4
+  },
+  {
+    "base": "original65",
+    "factor": "balanced_growth",
+    "budget": 0.025,
+    "id": 5
+  },
+  {
+    "base": "original65",
+    "factor": "balanced_growth",
+    "budget": 0.05,
+    "id": 6
+  },
+  {
+    "base": "original65",
+    "factor": "balanced_growth",
+    "budget": 0.1,
+    "id": 7
+  },
+  {
+    "base": "original65",
+    "factor": "worst_segment_downside",
+    "budget": 0.025,
+    "id": 8
+  },
+  {
+    "base": "original65",
+    "factor": "worst_segment_downside",
+    "budget": 0.05,
+    "id": 9
+  },
+  {
+    "base": "original65",
+    "factor": "worst_segment_downside",
+    "budget": 0.1,
+    "id": 10
+  },
+  {
+    "base": "original65",
+    "factor": "centered_mad_momentum",
+    "budget": 0.025,
+    "id": 11
+  },
+  {
+    "base": "original65",
+    "factor": "centered_mad_momentum",
+    "budget": 0.05,
+    "id": 12
+  },
+  {
+    "base": "original65",
+    "factor": "centered_mad_momentum",
+    "budget": 0.1,
+    "id": 13
+  },
+  {
+    "base": "incumbent66",
+    "factor": "weakest_segment",
+    "budget": 0.025,
+    "id": 14
+  },
+  {
+    "base": "incumbent66",
+    "factor": "weakest_segment",
+    "budget": 0.05,
+    "id": 15
+  },
+  {
+    "base": "incumbent66",
+    "factor": "weakest_segment",
+    "budget": 0.1,
+    "id": 16
+  },
+  {
+    "base": "incumbent66",
+    "factor": "balanced_growth",
+    "budget": 0.025,
+    "id": 17
+  },
+  {
+    "base": "incumbent66",
+    "factor": "balanced_growth",
+    "budget": 0.05,
+    "id": 18
+  },
+  {
+    "base": "incumbent66",
+    "factor": "balanced_growth",
+    "budget": 0.1,
+    "id": 19
+  },
+  {
+    "base": "incumbent66",
+    "factor": "worst_segment_downside",
+    "budget": 0.025,
+    "id": 20
+  },
+  {
+    "base": "incumbent66",
+    "factor": "worst_segment_downside",
+    "budget": 0.05,
+    "id": 21
+  },
+  {
+    "base": "incumbent66",
+    "factor": "worst_segment_downside",
+    "budget": 0.1,
+    "id": 22
+  },
+  {
+    "base": "incumbent66",
+    "factor": "centered_mad_momentum",
+    "budget": 0.025,
+    "id": 23
+  },
+  {
+    "base": "incumbent66",
+    "factor": "centered_mad_momentum",
+    "budget": 0.05,
+    "id": 24
+  },
+  {
+    "base": "incumbent66",
+    "factor": "centered_mad_momentum",
+    "budget": 0.1,
+    "id": 25
+  }
+]

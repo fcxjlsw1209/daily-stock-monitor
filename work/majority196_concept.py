@@ -1,0 +1,31 @@
+"""Prospective196 specification; metadata only, no actual signal or return work."""
+from pathlib import Path
+from datetime import datetime,timezone
+import json,hashlib
+ROOT=Path(__file__).resolve().parents[1]
+def read(p):return json.loads(p.read_text())
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def pin(p,h=None):
+ d=sha(p);assert h is None or d==h;return d
+s=read(ROOT/'outputs/monthly_target70_research/CONTINUATION_STATUS.json')
+assert s['current']=='monthly_volume_cluster195' and not s['registered_queue'] and len(s['completed'])==193 and sum(x['trials'] for x in s['completed'])==1096
+old=ROOT/'outputs/monthly_volume_cluster195'
+assert pin(old/'COMPLETION.json','a5192918944fd2b6d92ab4d88805b2223de188e46e953de6cd2dd1e8fe0e502c')
+pre=ROOT/'work/after195_pairwise_majority_preflight.json';pin(pre,'0f5e023585ee7fde4c523cc7a46681217974acbab25caf0b484de3f7e6553ceb')
+p=ROOT/'work/monthly_pairwise_majority196_context.json';assert not p.exists()
+r=dict(created_utc=datetime.now(timezone.utc).isoformat(),round=196,name='monthly_pairwise_majority196',status='PROSPECTIVE_DEFINITION_PENDING_SOURCE_AND_CODE_ADMISSION',registered=False,previous_goal_turn_classification='progress',previous_evidence='195 completed/rejected; full64.06% clustering and65.48% frequency versus67.67% incumbent; no observer change.',
+ hypothesis='Within the unchanged dominant long-momentum framework, opponent-specific majority of disjoint monthly relative wins may select more broadly repeatable leadership than pooling all relative wins. It is permutation-invariant across blocks, not consecutiveness.',
+ novelty_scope='Distinct candidate aggregation within extensively explored persistence/rank families; overlap with192 own-sector recurrence,161 rank migration and earlier supervised pair comparisons is explicit. Four missing old originals leave exhaustive coverage UNKNOWN.',
+ arms=['incumbent_local67','tournament_majority','tournament_balance_control'],candidate='tournament_majority',control_nonpromotable='tournament_balance_control',
+ formation=dict(earliest_offset=294,latest_offset=42,price_count=253,blocks=12,block_sessions=21,endpoints='t-294+21*k for k=0..12',universe='Original49 event candidates including17 ETFs. C contains all candidates whose253 stored adjusted closes are numeric finite strictly positive on every official session. No trading-eligibility filter or pair-specific deletion.',
+ comparison='For each unordered pair i,j and block k compare P_i,end*P_j,start against P_j,end*P_i,start exactly as rational values of the stored binary64 endpoints. No rounded gross-ratio division, epsilon ties or float product overflow. s_i,j,k is +1/0/-1; opposite sign for j,i.',
+ pair_margin='M_i,j=sum of12 block signs; diagonal0.',candidate='Q_i=sum_j!=i sign(M_i,j)/(n-1)',control='F_i=sum_j!=i M_i,j/(12*(n-1))',
+ support='Both raw features share validity:253 valid prices AND n>=2. With n<2 all feature values unavailable; source-availability separately retained. Missing features receive neutral rank and no correction. No fill, imputation, clipping or newly inferred masks.',
+ ranks='Higher raw values preferred, centered average-tie zero-based percentile rank0/(n-1)-.5 within the common valid original event universe. Missing ranks0; initial partial-row raw features still computed, but its score delta is0.'),
+ integration=dict(dose=.01,max_absolute_delta=.005,position='Add dose times centered rank to the complete original Local67 pre-score before exactly one unchanged episode selector.',core_weights_unchanged=True,original27_arrays_unchanged=True,eligibility_unchanged=True,no_model_fit=True,no_parameter_search=True),
+ evaluation=dict(period=['2016-08-17','2026-09-24'],training_months=88,later_months=34,executions=['same_close_zero','next_open_zero','next_open_5bp_each_side'],gates='Same195 first88 gates: >=0.5pp sameclose CAGR gain vs incumbent, nextopencost noninferior; noninferior against balance control both paths; Sharpe>=reference-.05, MDD>=reference-.03, early53/recent35 CAGR>=reference-.025; at least3 changed holding sets including>=1early and>=1recent against each reference. Later34 cannot select.',independent_verification='5978 cells, exact pair-margin matrices and counts; truncated-source prefixes0/1/53/88/122; all123 order prefixes; original27 arrays/orders parity;9 execution paths45slices;21444 protected files.'),
+ accounting=dict(predictive_model_fits=0,valid_price_observations='253 times source-available cells; reused observations, not independent samples.',block_comparisons='12 times sum across events of n*(n-1)//2, n is source-available universe size.',pair_majority_decisions='sum n*(n-1)//2; each unordered pair counted once.',counts_scope='Main pass only; independent/prefix verification reruns excluded.'),
+ limitations=['Repeatedly reused research sample; later34 is not pristine OOS.','Inherited estimatedTop32+theme17, retrospective provider/class/action conventions are not certified full-US historical membership or original-public data vintage.','Current signal-date candidates are compared over past blocks; this does not claim those candidates were eligible in each old block.','Tiny and large relative wins count alike;7-5 and12-0 pair victories count alike. Majority relations can cycle.','No chronological persistence inference; ordering12 blocks differently leaves both features unchanged. Shared opponents and market/sector exposures make comparisons dependent, not independent evidence.','Exact rational arithmetic operates on stored binary64 values; it cannot undo prior vendor rounding or data revisions.','One fixed small correction is a research hypothesis, not a recovered author parameter; sameclose idealized, nextopen/cost separately verified.'],
+ actual_new_feature_evaluations=0,actual_new_orders=0,actual_new_returns=0,evidence_sha256={str(x.relative_to(ROOT)):sha(x) for x in [pre,ROOT/'work/after195_pairwise_majority_preflight.py',old/'RESEARCH_REVIEW.json',old/'COMPLETION.json',ROOT/'work/monthly_volume_cluster195_host.py']},execution_gate='Source review, synthetic tests and independent code review must pass before hash-boundPLAN; no actual features/orders/returns before registration.')
+with p.open('x') as f:json.dump(r,f,ensure_ascii=False,indent=2,allow_nan=False);f.write('\n')
+print(json.dumps(dict(path=str(p),sha256=sha(p))))

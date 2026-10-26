@@ -1,0 +1,501 @@
+{
+  "created_utc": "2026-10-12T05:55:23.752514+00:00",
+  "selected": {
+    "primary": {
+      "spec": {
+        "id": 70,
+        "architecture": {
+          "id": 8,
+          "family": "recent_risk",
+          "normalization": "all"
+        },
+        "arm": "direct",
+        "hand_budget": 0.05,
+        "ml_budget": 0.05
+      },
+      "training": {
+        "cagr": 0.24636823918641526,
+        "sharpe": 0.9510007646761461,
+        "max_drawdown": -0.3062470195970046,
+        "total_return": 3.9755191419542735
+      },
+      "early": {
+        "cagr": 0.2858659087378945,
+        "sharpe": 1.084468704942908,
+        "max_drawdown": -0.3062470195970046,
+        "total_return": 2.0022807051711933
+      },
+      "recent": {
+        "cagr": 0.18934999722142232,
+        "sharpe": 0.7613340753665232,
+        "max_drawdown": -0.26943979580801947,
+        "total_return": 0.6572464837762644
+      },
+      "robust": 0.7613340753665232
+    },
+    "robust": {
+      "spec": {
+        "id": 70,
+        "architecture": {
+          "id": 8,
+          "family": "recent_risk",
+          "normalization": "all"
+        },
+        "arm": "direct",
+        "hand_budget": 0.05,
+        "ml_budget": 0.05
+      },
+      "training": {
+        "cagr": 0.24636823918641526,
+        "sharpe": 0.9510007646761461,
+        "max_drawdown": -0.3062470195970046,
+        "total_return": 3.9755191419542735
+      },
+      "early": {
+        "cagr": 0.2858659087378945,
+        "sharpe": 1.084468704942908,
+        "max_drawdown": -0.3062470195970046,
+        "total_return": 2.0022807051711933
+      },
+      "recent": {
+        "cagr": 0.18934999722142232,
+        "sharpe": 0.7613340753665232,
+        "max_drawdown": -0.26943979580801947,
+        "total_return": 0.6572464837762644
+      },
+      "robust": 0.7613340753665232
+    },
+    "best_none": {
+      "spec": {
+        "id": 64,
+        "architecture": {
+          "id": 8,
+          "family": "recent_risk",
+          "normalization": "all"
+        },
+        "arm": "none",
+        "hand_budget": 0.0,
+        "ml_budget": 0.0
+      },
+      "training": {
+        "cagr": 0.24014017122767228,
+        "sharpe": 0.9349179101480048,
+        "max_drawdown": -0.3021832463918088,
+        "total_return": 3.797201155631047
+      },
+      "early": {
+        "cagr": 0.28066433114674605,
+        "sharpe": 1.0631363726548804,
+        "max_drawdown": -0.3021832463918088,
+        "total_return": 1.9495393452561567
+      },
+      "recent": {
+        "cagr": 0.1817098179083625,
+        "sharpe": 0.7472682581915283,
+        "max_drawdown": -0.2437886089854372,
+        "total_return": 0.6264238561002924
+      },
+      "robust": 0.7472682581915283
+    },
+    "best_hand": {
+      "spec": {
+        "id": 73,
+        "architecture": {
+          "id": 9,
+          "family": "recent_risk",
+          "normalization": "eligible"
+        },
+        "arm": "hand",
+        "hand_budget": 0.05,
+        "ml_budget": 0.0
+      },
+      "training": {
+        "cagr": 0.23584444276863348,
+        "sharpe": 0.9165978566384375,
+        "max_drawdown": -0.3021832463918088,
+        "total_return": 3.6774463866466336
+      },
+      "early": {
+        "cagr": 0.28066433114674605,
+        "sharpe": 1.0631363726548804,
+        "max_drawdown": -0.3021832463918088,
+        "total_return": 1.9495393452561567
+      },
+      "recent": {
+        "cagr": 0.17149923943304968,
+        "sharpe": 0.7068135296481546,
+        "max_drawdown": -0.26943979580801947,
+        "total_return": 0.585822679114127
+      },
+      "robust": 0.7068135296481546
+    },
+    "best_direct": {
+      "spec": {
+        "id": 70,
+        "architecture": {
+          "id": 8,
+          "family": "recent_risk",
+          "normalization": "all"
+        },
+        "arm": "direct",
+        "hand_budget": 0.05,
+        "ml_budget": 0.05
+      },
+      "training": {
+        "cagr": 0.24636823918641526,
+        "sharpe": 0.9510007646761461,
+        "max_drawdown": -0.3062470195970046,
+        "total_return": 3.9755191419542735
+      },
+      "early": {
+        "cagr": 0.2858659087378945,
+        "sharpe": 1.084468704942908,
+        "max_drawdown": -0.3062470195970046,
+        "total_return": 2.0022807051711933
+      },
+      "recent": {
+        "cagr": 0.18934999722142232,
+        "sharpe": 0.7613340753665232,
+        "max_drawdown": -0.26943979580801947,
+        "total_return": 0.6572464837762644
+      },
+      "robust": 0.7613340753665232
+    },
+    "best_residual": {
+      "spec": {
+        "id": 71,
+        "architecture": {
+          "id": 8,
+          "family": "recent_risk",
+          "normalization": "all"
+        },
+        "arm": "residual",
+        "hand_budget": 0.05,
+        "ml_budget": 0.05
+      },
+      "training": {
+        "cagr": 0.24636823918641526,
+        "sharpe": 0.9510007646761461,
+        "max_drawdown": -0.3062470195970046,
+        "total_return": 3.9755191419542735
+      },
+      "early": {
+        "cagr": 0.2858659087378945,
+        "sharpe": 1.084468704942908,
+        "max_drawdown": -0.3062470195970046,
+        "total_return": 2.0022807051711933
+      },
+      "recent": {
+        "cagr": 0.18934999722142232,
+        "sharpe": 0.7613340753665232,
+        "max_drawdown": -0.26943979580801947,
+        "total_return": 0.6572464837762644
+      },
+      "robust": 0.7613340753665232
+    },
+    "simple_raw": {
+      "spec": {
+        "id": 0,
+        "architecture": {
+          "id": 0,
+          "family": "raw",
+          "normalization": "all"
+        },
+        "arm": "none",
+        "hand_budget": 0.0,
+        "ml_budget": 0.0
+      },
+      "training": {
+        "cagr": 0.2579788577574489,
+        "sharpe": 0.9088273298897651,
+        "max_drawdown": -0.32304595485089427,
+        "total_return": 4.323253717580977
+      },
+      "early": {
+        "cagr": 0.38179968110606666,
+        "sharpe": 1.2626650030463786,
+        "max_drawdown": -0.2698767450710605,
+        "total_return": 3.112324419166849
+      },
+      "recent": {
+        "cagr": 0.09264077644982294,
+        "sharpe": 0.43570032266547487,
+        "max_drawdown": -0.32304595485089393,
+        "total_return": 0.29446346518046984
+      },
+      "robust": 0.43570032266547487
+    },
+    "simple_aligned_sharpe": {
+      "spec": {
+        "id": 16,
+        "architecture": {
+          "id": 2,
+          "family": "aligned_sharpe",
+          "normalization": "all"
+        },
+        "arm": "none",
+        "hand_budget": 0.0,
+        "ml_budget": 0.0
+      },
+      "training": {
+        "cagr": 0.1443080735792286,
+        "sharpe": 0.6304324160880133,
+        "max_drawdown": -0.3733303896432013,
+        "total_return": 1.6700468402683168
+      },
+      "early": {
+        "cagr": 0.2576123771648873,
+        "sharpe": 0.9828185056678652,
+        "max_drawdown": -0.2857415718942863,
+        "total_return": 1.724345434393352
+      },
+      "recent": {
+        "cagr": -0.0068870081820822104,
+        "sharpe": 0.11377487600791603,
+        "max_drawdown": -0.3733303896432004,
+        "total_return": -0.019930877134573977
+      },
+      "robust": 0.11377487600791603
+    },
+    "simple_raw_vol": {
+      "spec": {
+        "id": 32,
+        "architecture": {
+          "id": 4,
+          "family": "raw_vol",
+          "normalization": "all"
+        },
+        "arm": "none",
+        "hand_budget": 0.0,
+        "ml_budget": 0.0
+      },
+      "training": {
+        "cagr": 0.26553411815423433,
+        "sharpe": 0.9045395345165506,
+        "max_drawdown": -0.3811673741293322,
+        "total_return": 4.560622433966353
+      },
+      "early": {
+        "cagr": 0.33754085912445975,
+        "sharpe": 1.1271329053890147,
+        "max_drawdown": -0.2930350119017284,
+        "total_return": 2.566725726855218
+      },
+      "recent": {
+        "cagr": 0.1646661972376664,
+        "sharpe": 0.6172748826125392,
+        "max_drawdown": -0.38116737412933255,
+        "total_return": 0.5590272030446082
+      },
+      "robust": 0.6172748826125392
+    },
+    "simple_raw_sector": {
+      "spec": {
+        "id": 48,
+        "architecture": {
+          "id": 6,
+          "family": "raw_sector",
+          "normalization": "all"
+        },
+        "arm": "none",
+        "hand_budget": 0.0,
+        "ml_budget": 0.0
+      },
+      "training": {
+        "cagr": 0.14746112581514836,
+        "sharpe": 0.6339075789350667,
+        "max_drawdown": -0.4035303392473062,
+        "total_return": 1.7241139900274254
+      },
+      "early": {
+        "cagr": 0.24004691309662185,
+        "sharpe": 0.9295486141630022,
+        "max_drawdown": -0.316058759885372,
+        "total_return": 1.561841871179182
+      },
+      "recent": {
+        "cagr": 0.021306525263362852,
+        "sharpe": 0.2175034512269368,
+        "max_drawdown": -0.40353033924730675,
+        "total_return": 0.06334197308342748
+      },
+      "robust": 0.2175034512269368
+    },
+    "simple_recent_risk": {
+      "spec": {
+        "id": 64,
+        "architecture": {
+          "id": 8,
+          "family": "recent_risk",
+          "normalization": "all"
+        },
+        "arm": "none",
+        "hand_budget": 0.0,
+        "ml_budget": 0.0
+      },
+      "training": {
+        "cagr": 0.24014017122767228,
+        "sharpe": 0.9349179101480048,
+        "max_drawdown": -0.3021832463918088,
+        "total_return": 3.797201155631047
+      },
+      "early": {
+        "cagr": 0.28066433114674605,
+        "sharpe": 1.0631363726548804,
+        "max_drawdown": -0.3021832463918088,
+        "total_return": 1.9495393452561567
+      },
+      "recent": {
+        "cagr": 0.1817098179083625,
+        "sharpe": 0.7472682581915283,
+        "max_drawdown": -0.2437886089854372,
+        "total_return": 0.6264238561002924
+      },
+      "robust": 0.7472682581915283
+    },
+    "paired_none": {
+      "spec": {
+        "id": 64,
+        "architecture": {
+          "id": 8,
+          "family": "recent_risk",
+          "normalization": "all"
+        },
+        "arm": "none",
+        "hand_budget": 0.0,
+        "ml_budget": 0.0
+      },
+      "training": {
+        "cagr": 0.24014017122767228,
+        "sharpe": 0.9349179101480048,
+        "max_drawdown": -0.3021832463918088,
+        "total_return": 3.797201155631047
+      },
+      "early": {
+        "cagr": 0.28066433114674605,
+        "sharpe": 1.0631363726548804,
+        "max_drawdown": -0.3021832463918088,
+        "total_return": 1.9495393452561567
+      },
+      "recent": {
+        "cagr": 0.1817098179083625,
+        "sharpe": 0.7472682581915283,
+        "max_drawdown": -0.2437886089854372,
+        "total_return": 0.6264238561002924
+      },
+      "robust": 0.7472682581915283
+    },
+    "paired_hand": {
+      "spec": {
+        "id": 65,
+        "architecture": {
+          "id": 8,
+          "family": "recent_risk",
+          "normalization": "all"
+        },
+        "arm": "hand",
+        "hand_budget": 0.05,
+        "ml_budget": 0.0
+      },
+      "training": {
+        "cagr": 0.23521544950132833,
+        "sharpe": 0.916854601021647,
+        "max_drawdown": -0.3021832463918088,
+        "total_return": 3.660129892636612
+      },
+      "early": {
+        "cagr": 0.2795784461905697,
+        "sharpe": 1.0645237060497985,
+        "max_drawdown": -0.3021832463918088,
+        "total_return": 1.938619780138259
+      },
+      "recent": {
+        "cagr": 0.17149923943304968,
+        "sharpe": 0.7068135296481545,
+        "max_drawdown": -0.26943979580801947,
+        "total_return": 0.585822679114127
+      },
+      "robust": 0.7068135296481545
+    },
+    "paired_direct": {
+      "spec": {
+        "id": 70,
+        "architecture": {
+          "id": 8,
+          "family": "recent_risk",
+          "normalization": "all"
+        },
+        "arm": "direct",
+        "hand_budget": 0.05,
+        "ml_budget": 0.05
+      },
+      "training": {
+        "cagr": 0.24636823918641526,
+        "sharpe": 0.9510007646761461,
+        "max_drawdown": -0.3062470195970046,
+        "total_return": 3.9755191419542735
+      },
+      "early": {
+        "cagr": 0.2858659087378945,
+        "sharpe": 1.084468704942908,
+        "max_drawdown": -0.3062470195970046,
+        "total_return": 2.0022807051711933
+      },
+      "recent": {
+        "cagr": 0.18934999722142232,
+        "sharpe": 0.7613340753665232,
+        "max_drawdown": -0.26943979580801947,
+        "total_return": 0.6572464837762644
+      },
+      "robust": 0.7613340753665232
+    },
+    "paired_residual": {
+      "spec": {
+        "id": 71,
+        "architecture": {
+          "id": 8,
+          "family": "recent_risk",
+          "normalization": "all"
+        },
+        "arm": "residual",
+        "hand_budget": 0.05,
+        "ml_budget": 0.05
+      },
+      "training": {
+        "cagr": 0.24636823918641526,
+        "sharpe": 0.9510007646761461,
+        "max_drawdown": -0.3062470195970046,
+        "total_return": 3.9755191419542735
+      },
+      "early": {
+        "cagr": 0.2858659087378945,
+        "sharpe": 1.084468704942908,
+        "max_drawdown": -0.3062470195970046,
+        "total_return": 2.0022807051711933
+      },
+      "recent": {
+        "cagr": 0.18934999722142232,
+        "sharpe": 0.7613340753665232,
+        "max_drawdown": -0.26943979580801947,
+        "total_return": 0.6572464837762644
+      },
+      "robust": 0.7613340753665232
+    }
+  },
+  "primary_admitted": false,
+  "status": "no_admissible_descriptive_robust_only",
+  "trials": 80,
+  "admissible": 0,
+  "hashes": {
+    "PLAN.json": "9ea69fd7d7d5c4ffa0715cdf078f5c8f681896651cc9f0fb24518e9dd396704b",
+    "GRID.json": "d8e69b97f3ecd6602bc7d05bd1a328d367349089a2fa09b39ab39b68fb044368",
+    "DATA.npz": "eb66e204dc04f014fd35045b25d7298acffa399f87fd56bd1376f6554d8c1312",
+    "META.json": "aa317ff64b11bdfb274ebaa40771de6755afc2e562e8d8e7e2bce68bc9e7b98e",
+    "INPUT_HASHES.json": "6d1b2e52eef6f576383f403e59544632432555b450b0f49f777dbf86556a8dec",
+    "FORECASTS.npz": "70fb8187ed46d69d8e32fe112f1cdc166dac9e933a154a17807e31eaabf92558",
+    "FORECAST_AUDIT.json": "f46ce709cb5ab50c54407a04838be9ac7cc64931cbec4abba9e858d72a0ab643",
+    "study.py": "d77e9bee28f82a9c6a20797f2d35c68f92e8a55307854d2ad8d59d080eafac25",
+    "residual_model.py": "ea294b9a0a1e9493799f1014dcec464effa93dce70f44fb5de53a604cd832886"
+  },
+  "author_labels_used": false
+}

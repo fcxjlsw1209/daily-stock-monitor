@@ -1,87 +1,145 @@
-# Current workspace code — 2026-10-11
+# Current workspace source — 2026-10-26
 
-The `outputs/` tree preserves the research workspace's relative paths. It now
-contains six daily paper accounts, four separately registered monthly observers,
-data preparation/audit tools, and the monthly research chain. Source hashes are
-listed in `WORKSPACE_SOURCE_MANIFEST.json`; the exporter never uploads market
-data, credentials, paper ledgers, saved orders, or the author's supplied ledger.
+This snapshot includes the six daily paper observers, four frozen monthly
+observers, historical-data validation tools, and the independent monthly
+research chain through experiment 263. Research sources retain their `outputs/`
+and `work/` paths. Observer sources come from the separate active local runtime;
+the research workspace's old observer backups are not the publishing source.
 
-## Versions
+`WORKSPACE_SOURCE_MANIFEST.json` records every exported file's source label,
+relative path, mode, source SHA-256, and published SHA-256. The only source
+adaptations are the existing private-fixture guards in two historical tests.
+`WORK_SOURCE_ALLOWLIST.json` lists reviewed top-level Python sources and eight
+excluded local recovery/operational scripts. Neither manifest embeds credentials
+or local absolute source-root provenance.
 
-`outputs/paired_stock_monitor/run_pair.py --phase auto` is the current orchestrator.
-It runs the six daily accounts and the buffer5, regime, industry, and stability
-monthly observers. `stock-monitor` remains the earlier standalone daily CLI;
-it is not an alias for the newer multi-account orchestrator.
+## Current research result
 
-The stability monthly observer is the registered 65.34% historical CAGR research
-rule, with its first prospective signal on 2026-10-30 and first planned execution
-on 2026-11-02. The 66.10% candidate in `monthly_state_rank_research` remains
-research-only. These figures refer to 2016-08-17–2026-09-24 idealized same-close,
-zero-cost historical replay, not promised or prospective returns. Its next-open
-replay with 0.05% cost per side was 63.17%. The archived universe is an estimated
-historical Top32 plus an assumed 17-ETF list; repeated research is not pristine
-out-of-sample evidence.
+The best retained research candidate is `monthly_local_linear70`. The following
+figures cover **2016-08-17–2026-09-24** and use the same fixed candidate:
 
-The subsequent [daily-episode-memory experiment](MONTHLY_EPISODE_RESEARCH.md)
-reached 66.36% on the same full-period idealized basis. Its entire incremental
-benefit came from one 2016 month, so it also remains research-only. Neither
-research result replaces the registered stability account.
+| Execution convention | CAGR | Sharpe | Maximum drawdown |
+| --- | ---: | ---: | ---: |
+| Same close, **zero transaction cost** | **67.67%** | **1.735** | −31.26% |
+| Next open, zero transaction cost | 65.74% | 1.700 | −32.44% |
+| Next open, 0.05% per side | 64.80% | 1.682 | −32.51% |
+
+The 70% research target refers to the first row. The 67.67% number does **not**
+include transaction costs. The other rows are execution-sensitivity diagnostics,
+not alternative headline definitions. These are repeatedly researched historical
+results using an estimated historical Top32 and an assumed 17-ETF list; they do
+not establish a fully point-in-time universe or independent out-of-sample returns.
+
+The latest experiment, `monthly_risk_clock263`, compared current 63-session risk
+normalization with a 63-session window ending 42 sessions earlier. The long
+momentum numerator still skips the recent 42 sessions. The current-window control
+exactly reproduced the incumbent. The lagged-window candidate changed 55 months,
+returned 55.28% same-close zero-cost CAGR (Sharpe 1.534, drawdown −32.23%), and
+failed the first-88-month admission gates. Later-34/full-period results were
+reported as diagnostics. No candidate was promoted into an observer.
+
+Experiment 263 completed with 120 formal tests, independent accounting checks
+for nine execution paths, and a protected-archive check. The local closure receipt
+SHA-256 is `0d602a5083d4bde0fae6b010b5cbd5178813059062ea7b2cef787cc306a64b83`.
+The private completion receipts, market data, derived arrays, model fits, and
+trade exports are excluded from this source snapshot. Publishing this summary
+is not a claim that a fresh checkout can independently reproduce those results.
+
+## Observer versions and account continuity
+
+`outputs/paired_stock_monitor/run_pair.py` orchestrates all ten independent
+accounts. Use the launcher rather than calling individual `monitor.py` scripts.
+The old `stock-monitor` package CLI is retained separately; it is not an alias
+for the current multi-account runtime.
+
+The daily accounts use the authorized `causal_replay_v3` execution branch.
+Missed sessions are simulated sequentially using only the preceding session's
+information for decisions, that session's opening prices and fixed costs for
+fills, and closing prices for valuation. Records retain the actual computation
+time and historical data vintage. Catch-up days do not count as genuinely
+preplanned forward evaluation days. The v2 archive and existing v3 entries are
+preserved, and repeated execution must not duplicate fills.
+
+The four monthly observers retain their separately frozen rules. The stability
+observer remains the 65.34% historical research rule, not the newer 67.67%
+candidate. Account registration is not a fill; missing current pool/price inputs
+must block plans. Research and observed account performance are separate.
 
 ## Running without Codex
 
-These are ordinary Python scripts, not an LLM service. Python 3.9+ and the pinned
-base dependencies in `pyproject.toml` are required. Some research additionally
-uses SciPy, scikit-learn, plotting and data-format packages; see its imports and
-the optional research requirements. The current orchestrator uses `fcntl`, so
-macOS/Linux is the supported runtime.
+The code runs as ordinary Python. The migrated research runtime is pinned to
+Python 3.9.6, NumPy 2.0.2, and pandas 2.3.3; individual frozen experiments also
+check exact runtime and input digests. Base package dependencies are in
+`pyproject.toml`, with additional research packages in
+`requirements-research.txt`. These files alone do not restore the private data
+bundle or every historical experiment's dependencies.
 
-From a **prepared workspace with its private data restored**, use:
-
-```sh
-python outputs/paired_stock_monitor/run_pair.py --phase auto
-```
-
-A clean checkout alone is **not** a complete unattended deployment. In particular:
-
-- Monthly `inputs.py` reads audited local price and membership archives; it does
-  not download a fresh Top32 automatically. Stale/missing inputs must block new
-  plans. Historical manifests can contain absolute source paths and must be
-  supplied/reconciled on migration; never disable their hash checks.
-- Preserve the existing SQLite ledgers, immutable plans and account fingerprints
-  separately and back them up. Do not initialize replacement ledgers as if they
-  were the original accounts or run two schedulers against the same account.
-- Use a system scheduler and a separate notification channel. Neither is
-  installed by cloning this repository. Local execution needs an awake computer;
-  a server needs persistent storage, network access and operational monitoring.
-- Existing observer configurations document specific registered accounts and
-  dates. They are not generic templates for retrospectively creating trades.
-- Research `FROZEN.json` files require excluded input hashes, fitted forecasts,
-  feature caches and historical pool evidence. Restore those artifacts before
-  replay; do not advertise source-only checkout as independently reproduced.
-
-No broker is connected and no real orders are submitted.
-
-## Validation without private history
-
-Run each suite in a separate Python process because the archived scripts use
-short local module names such as `strategy` and `engine`:
+From a **prepared local research workspace** with its matching inputs restored:
 
 ```sh
-python -m unittest discover -s tests -v
-python -m unittest discover -s outputs/paired_stock_monitor -p 'test_*.py' -v
-cd outputs/monthly_stability_monitor
-python -m unittest test_observe.LedgerTests -v
+./run_local.sh work/monthly_risk_clock263_host.py --help
 ```
 
-Full historical parity suites additionally require the private data bundle.
+The research wrapper uses `work/venv/bin/python` and macOS `sandbox-exec`, denies
+network and CloudStorage access, and protects observer directories. Historical
+root strings are translated in memory; frozen source/configuration bytes are
+not rewritten. Some archived source and sandbox paths remain machine-specific.
+This is a byte-preserving source archive, not a portable deployment installer.
+Do not disable hash or sandbox checks to make a replay run.
 
-## Syncing future research
+From the **separate prepared observer runtime**:
 
 ```sh
-python scripts/sync_workspace.py /absolute/path/to/research/workspace
+OBSERVER_PYTHON=/absolute/path/to/prepared/venv/bin/python ./run_observer.sh --phase auto
 ```
 
-The exporter uses a source/metadata allowlist, checks suspicious credential
-literals, records hashes, and never deletes unrelated repository files. Review
-the diff and run relevant tests before committing. Exporting source does not
-promote any research candidate into a paper observer.
+The observer wrapper permits public quote downloads but denies CloudStorage
+fallback. Its default interpreter path is machine-specific; use the explicit
+existing interpreter override when preparing another runtime. Preserve matching
+activation/execution-policy files, migration receipts, ledgers, immutable plans,
+and account fingerprints outside Git. Their personal runtime copies are not
+published here. Do not initialize replacements as if they were existing accounts
+or run two schedulers against the same ledgers. No broker is connected.
+
+A scheduler, notification channel, fresh market-data access, and the private
+historical input bundle are not installed by cloning this repository. Separate
+public-source collection from offline research replay and retain provenance.
+
+## Source-only checks
+
+Use the prepared interpreter and run suites in separate processes, because the
+archived scripts use short local module names such as `strategy` and `engine`:
+
+```sh
+python -B -m unittest discover -s tests -v
+TMPDIR=/private/tmp python -B -m unittest discover -s outputs/paired_stock_monitor -p 'test_*.py' -v
+```
+
+On macOS, use the canonical `/private/tmp` temporary path for the observer
+fixtures: an unresolved `/var` alias correctly trips the registry alias guard.
+The initial default-temp run hit five fixture-path failures; rerunning with the
+canonical temporary directory passed all 101 observer tests without changing
+frozen source. The base/exporter suite passed 23 tests.
+
+The exporter tests use temporary synthetic fixtures. Full historical parity
+suites additionally need the excluded input bundle; missing data must remain an
+explicit failure or documented fixture skip, never synthesized inputs.
+
+## Updating this source snapshot
+
+After reviewing changes to the explicit work-source list:
+
+```sh
+python -B scripts/sync_workspace.py /absolute/path/to/research/workspace \
+  --observer-workspace /absolute/path/to/observer/runtime \
+  --include-work-source \
+  --work-source-manifest docs/WORK_SOURCE_ALLOWLIST.json \
+  --include-local-launchers
+```
+
+The exporter scans all selected files and validates source/destination paths
+before writing. It excludes raw/vendor data, environments, caches, credentials,
+ledgers, saved trade plans, the author's supplied ledger, generated forecasts,
+model fits, and unlisted work files. It does not delete unrelated repository
+files or promote research candidates. Review the diff, secret-scan findings,
+and tests before committing or pushing.

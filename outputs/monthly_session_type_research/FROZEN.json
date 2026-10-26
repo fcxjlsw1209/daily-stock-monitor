@@ -1,0 +1,515 @@
+{
+  "created_at": "2026-10-12T17:41:02.668911+00:00",
+  "selected": {
+    "primary": {
+      "spec": {
+        "id": 15,
+        "base": "original65",
+        "family": "type",
+        "key": "plain_partial_10",
+        "budget": 0.025,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.5377333927686565,
+        "sharpe": 1.6087694634222456,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.98979189674131
+      },
+      "early": {
+        "cagr": 0.45252230064585053,
+        "sharpe": 1.4264078843604375,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.115308696508459
+      },
+      "recent": {
+        "cagr": 0.6751035896184101,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.494311733802771
+      },
+      "admitted": true
+    },
+    "original65": {
+      "spec": {
+        "id": 0,
+        "base": "original65",
+        "family": "control",
+        "key": "none",
+        "budget": 0.0,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.5349155442763764,
+        "sharpe": 1.6031917771530346,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.684626736023116
+      },
+      "early": {
+        "cagr": 0.44808994995802753,
+        "sharpe": 1.416891036956853,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.047408386340172
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": true
+    },
+    "simple": {
+      "spec": {
+        "id": 27,
+        "base": "simple",
+        "family": "control",
+        "key": "none",
+        "budget": 0.0,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.26553411815423433,
+        "sharpe": 0.9045395345165506,
+        "max_drawdown": -0.3811673741293322,
+        "total_return": 4.560622433966353
+      },
+      "early": {
+        "cagr": 0.33754085912445975,
+        "sharpe": 1.1271329053890147,
+        "max_drawdown": -0.2930350119017284,
+        "total_return": 2.566725726855218
+      },
+      "recent": {
+        "cagr": 0.1646661972376664,
+        "sharpe": 0.6172748826125392,
+        "max_drawdown": -0.38116737412933255,
+        "total_return": 0.5590272030446082
+      },
+      "admitted": false
+    },
+    "original65_session": {
+      "spec": {
+        "id": 3,
+        "base": "original65",
+        "family": "session",
+        "key": "session_log_spread",
+        "budget": 0.025,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.5116641762766867,
+        "sharpe": 1.5446268412934634,
+        "max_drawdown": -0.31125995821743624,
+        "total_return": 19.297119206792377
+      },
+      "early": {
+        "cagr": 0.45116243048292537,
+        "sharpe": 1.404532583768055,
+        "max_drawdown": -0.31125995821743624,
+        "total_return": 4.094402046148576
+      },
+      "recent": {
+        "cagr": 0.6072407530711152,
+        "sharpe": 1.7551163217691863,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 2.984200505363973
+      },
+      "admitted": false
+    },
+    "original65_type": {
+      "spec": {
+        "id": 15,
+        "base": "original65",
+        "family": "type",
+        "key": "plain_partial_10",
+        "budget": 0.025,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.5377333927686565,
+        "sharpe": 1.6087694634222456,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.98979189674131
+      },
+      "early": {
+        "cagr": 0.45252230064585053,
+        "sharpe": 1.4264078843604375,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.115308696508459
+      },
+      "recent": {
+        "cagr": 0.6751035896184101,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.494311733802771
+      },
+      "admitted": true
+    },
+    "original65_pair": {
+      "spec": {
+        "id": 23,
+        "base": "original65",
+        "family": "pair",
+        "key": "state_pairwise",
+        "budget": 0.025,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.5355428912963713,
+        "sharpe": 1.6040669767650175,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 21.75226250938171
+      },
+      "early": {
+        "cagr": 0.44907627027044206,
+        "sharpe": 1.4184737057196246,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 4.062457581270257
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": true
+    },
+    "simple_session": {
+      "spec": {
+        "id": 31,
+        "base": "simple",
+        "family": "session",
+        "key": "session_log_spread",
+        "budget": 0.075,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.3066100806585075,
+        "sharpe": 1.0027374670529128,
+        "max_drawdown": -0.3511448849434755,
+        "total_return": 6.017620996446807
+      },
+      "early": {
+        "cagr": 0.41626230523108965,
+        "sharpe": 1.3207698823340839,
+        "max_drawdown": -0.29303501190172876,
+        "total_return": 3.5800093431306195
+      },
+      "recent": {
+        "cagr": 0.15775475748936008,
+        "sharpe": 0.5970912702793483,
+        "max_drawdown": -0.3511448849434753,
+        "total_return": 0.5322285328898453
+      },
+      "admitted": false
+    },
+    "simple_type": {
+      "spec": {
+        "id": 47,
+        "base": "simple",
+        "family": "type",
+        "key": "plain_independent",
+        "budget": 0.075,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.2837603510038409,
+        "sharpe": 0.945685332211271,
+        "max_drawdown": -0.38116737412933255,
+        "total_return": 5.171170303309218
+      },
+      "early": {
+        "cagr": 0.3750255930498836,
+        "sharpe": 1.2170321150345502,
+        "max_drawdown": -0.2915411332601521,
+        "total_return": 3.0249014125813574
+      },
+      "recent": {
+        "cagr": 0.15801901488209813,
+        "sharpe": 0.5977757111585161,
+        "max_drawdown": -0.38116737412933255,
+        "total_return": 0.5332475682556794
+      },
+      "admitted": false
+    },
+    "simple_pair": {
+      "spec": {
+        "id": 51,
+        "base": "simple",
+        "family": "pair",
+        "key": "state_pairwise",
+        "budget": 0.075,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.27804682916918066,
+        "sharpe": 0.9313488339637891,
+        "max_drawdown": -0.38116737412933244,
+        "total_return": 4.9738455324767274
+      },
+      "early": {
+        "cagr": 0.36484375964910853,
+        "sharpe": 1.1913602859981094,
+        "max_drawdown": -0.29303501190172876,
+        "total_return": 2.8962041461268804
+      },
+      "recent": {
+        "cagr": 0.15801901488209813,
+        "sharpe": 0.5977757111585165,
+        "max_drawdown": -0.38116737412933255,
+        "total_return": 0.5332475682556799
+      },
+      "admitted": false
+    },
+    "matched_type_plain_pooled": {
+      "spec": {
+        "id": 13,
+        "base": "original65",
+        "family": "type",
+        "key": "plain_pooled",
+        "budget": 0.025,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.5332060818237678,
+        "sharpe": 1.59990751273592,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 21.50120512499983
+      },
+      "early": {
+        "cagr": 0.4454036815551037,
+        "sharpe": 1.4112570727446856,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 4.006596439620117
+      },
+      "recent": {
+        "cagr": 0.6751035896184101,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.494311733802771
+      },
+      "admitted": false
+    },
+    "matched_type_plain_partial_10": {
+      "spec": {
+        "id": 15,
+        "base": "original65",
+        "family": "type",
+        "key": "plain_partial_10",
+        "budget": 0.025,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.5377333927686565,
+        "sharpe": 1.6087694634222456,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.98979189674131
+      },
+      "early": {
+        "cagr": 0.45252230064585053,
+        "sharpe": 1.4264078843604375,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.115308696508459
+      },
+      "recent": {
+        "cagr": 0.6751035896184101,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.494311733802771
+      },
+      "admitted": true
+    },
+    "matched_type_plain_partial_100": {
+      "spec": {
+        "id": 17,
+        "base": "original65",
+        "family": "type",
+        "key": "plain_partial_100",
+        "budget": 0.025,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.5355428912963713,
+        "sharpe": 1.6040669767650175,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 21.752262509381712
+      },
+      "early": {
+        "cagr": 0.44907627027044206,
+        "sharpe": 1.4184737057196246,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 4.062457581270257
+      },
+      "recent": {
+        "cagr": 0.6751035896184101,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.494311733802771
+      },
+      "admitted": true
+    },
+    "matched_type_plain_independent": {
+      "spec": {
+        "id": 19,
+        "base": "original65",
+        "family": "type",
+        "key": "plain_independent",
+        "budget": 0.025,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.5377333927686565,
+        "sharpe": 1.6087694634222454,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.98979189674131
+      },
+      "early": {
+        "cagr": 0.45252230064585053,
+        "sharpe": 1.4264078843604375,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.115308696508459
+      },
+      "recent": {
+        "cagr": 0.6751035896184101,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.494311733802771
+      },
+      "admitted": true
+    },
+    "matched_pair_plain_pooled": {
+      "spec": {
+        "id": 13,
+        "base": "original65",
+        "family": "type",
+        "key": "plain_pooled",
+        "budget": 0.025,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.5332060818237678,
+        "sharpe": 1.59990751273592,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 21.50120512499983
+      },
+      "early": {
+        "cagr": 0.4454036815551037,
+        "sharpe": 1.4112570727446856,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 4.006596439620117
+      },
+      "recent": {
+        "cagr": 0.6751035896184101,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.494311733802771
+      },
+      "admitted": false
+    },
+    "matched_pair_plain_pairwise": {
+      "spec": {
+        "id": 21,
+        "base": "original65",
+        "family": "pair",
+        "key": "plain_pairwise",
+        "budget": 0.025,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.5332060818237678,
+        "sharpe": 1.59990751273592,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 21.50120512499983
+      },
+      "early": {
+        "cagr": 0.4454036815551037,
+        "sharpe": 1.4112570727446856,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 4.006596439620117
+      },
+      "recent": {
+        "cagr": 0.6751035896184101,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.494311733802771
+      },
+      "admitted": false
+    },
+    "matched_pair_state_pairwise": {
+      "spec": {
+        "id": 23,
+        "base": "original65",
+        "family": "pair",
+        "key": "state_pairwise",
+        "budget": 0.025,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.5355428912963713,
+        "sharpe": 1.6040669767650175,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 21.75226250938171
+      },
+      "early": {
+        "cagr": 0.44907627027044206,
+        "sharpe": 1.4184737057196246,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 4.062457581270257
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": true
+    },
+    "matched_pair_state_pooled": {
+      "spec": {
+        "id": 25,
+        "base": "original65",
+        "family": "pair",
+        "key": "state_pooled",
+        "budget": 0.025,
+        "direction": 1
+      },
+      "training": {
+        "cagr": 0.5271276861860474,
+        "sharpe": 1.5906619799696962,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 20.859329667444584
+      },
+      "early": {
+        "cagr": 0.44907627027044206,
+        "sharpe": 1.4184737057196246,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 4.062457581270257
+      },
+      "recent": {
+        "cagr": 0.6522392075239887,
+        "sharpe": 1.8447937380373576,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.317928459947648
+      },
+      "admitted": false
+    }
+  },
+  "new_admitted": 5,
+  "trials": 54,
+  "hashes": {
+    "PLAN.json": "5ac6b25f8e77421d70088e2ce2bcc10c00969ad05cec20b1371cf4d2e08c88a5",
+    "GRID.json": "c8702a1d3a36559f5db86d85dd0975c0608164550fd65e6f83c3a2f8041b31a6",
+    "DATA.npz": "c42446dd77a2b2e3eea93766fbf8d0ff3a42a72e04e1077146732a7bbd5b640b",
+    "META.json": "aa317ff64b11bdfb274ebaa40771de6755afc2e562e8d8e7e2bce68bc9e7b98e",
+    "INPUT_HASHES.json": "1eb61f357cef8692c1d8442be663a738b5fe15b420727832dfba88ab00ea942f",
+    "FORECASTS.npz": "883a24ed178cd314253d9ac44e9af635d0d6aaed9b75c57b645f61405278edf0",
+    "FORECAST_AUDIT.json": "162e6c233cf3f969c998765aed550de7ea807dd10707ebc9c8d5180001ec4903",
+    "FORECAST_INPUT_HASHES.json": "68a97ca8737817d70cb1de0f416b1d7edae58ba04a2b06a4c29eee0af574de32",
+    "study.py": "38f5b7fb758bd53b9619e00670137dace66c83c7a413128d3b48ece9adc938f7",
+    "models.py": "4950954f08cbc0d1ca2af82cc674bbf58225b4770bca7c71a5445ced3d93d461",
+    "session_features.py": "7b93aaa83fb1b038865ff67ac24d021ebee13d3d2fb70da48557e63104a0f0e6"
+  },
+  "diagnostics_may_be_unqualified": true,
+  "author_labels_used": false
+}

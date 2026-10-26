@@ -1,0 +1,33 @@
+{
+  "hashes": {
+    "CACHE.json": "df09b68ef215bb482110ac80356db490891246e871460b6639a374b98e1ee86a",
+    "INDEPENDENT_PREPARE.json": "8999538e1e9ac3c1874a7f1b94729783abe857312eb8b0950a0f8698ea6838f6",
+    "PLAN.json": "807bffe7ae4c1e758e516613b15ff36a71703d3ae2e2a7761a756cb3909f5501",
+    "PRETRAIN_ORDERS.json": "892d5339b7ddd375c9ba1c490879dad5b2fa27311b2141913b213e5b4c69ef2e",
+    "SUPPORT_AUDIT.json": "dee7b765f2e4248a5389438db1d2a4829cec5ecc11d82c7d57dc7e98cf480144",
+    "TRAIN_OPEN_TRIALS.json": "07a51783f9a7b177ee7ad895509324c24bd1d4c4ad5dee2b845ba7437a59b3c7",
+    "TRAIN_TRIALS.json": "870e1cb0e07a9e0097d4a68dcce70491cc3352e953d9651c5bf816841a7ac843"
+  },
+  "later34_diagnostic_only": true,
+  "plan_sha256": "807bffe7ae4c1e758e516613b15ff36a71703d3ae2e2a7761a756cb3909f5501",
+  "selection": {
+    "admitted": false,
+    "guards": {
+      "sector_additive_control": {
+        "promotable": false
+      },
+      "sector_volume_diffusion": {
+        "changed_holdings": true,
+        "close": false,
+        "close_vs_control": false,
+        "cost_open": false,
+        "cost_open_vs_control": false,
+        "source_support": true
+      }
+    },
+    "later34_used_for_selection": false,
+    "primary": "incumbent_local67",
+    "selection_count": 1
+  },
+  "selection_count": 1
+}

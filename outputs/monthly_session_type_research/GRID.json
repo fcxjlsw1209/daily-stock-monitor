@@ -1,0 +1,434 @@
+[
+  {
+    "id": 0,
+    "base": "original65",
+    "family": "control",
+    "key": "none",
+    "budget": 0.0,
+    "direction": 1
+  },
+  {
+    "id": 1,
+    "base": "original65",
+    "family": "session",
+    "key": "session_log_spread",
+    "budget": 0.025,
+    "direction": -1
+  },
+  {
+    "id": 2,
+    "base": "original65",
+    "family": "session",
+    "key": "session_log_spread",
+    "budget": 0.075,
+    "direction": -1
+  },
+  {
+    "id": 3,
+    "base": "original65",
+    "family": "session",
+    "key": "session_log_spread",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 4,
+    "base": "original65",
+    "family": "session",
+    "key": "session_log_spread",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 5,
+    "base": "original65",
+    "family": "session",
+    "key": "overnight_sign_mean",
+    "budget": 0.025,
+    "direction": -1
+  },
+  {
+    "id": 6,
+    "base": "original65",
+    "family": "session",
+    "key": "overnight_sign_mean",
+    "budget": 0.075,
+    "direction": -1
+  },
+  {
+    "id": 7,
+    "base": "original65",
+    "family": "session",
+    "key": "overnight_sign_mean",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 8,
+    "base": "original65",
+    "family": "session",
+    "key": "overnight_sign_mean",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 9,
+    "base": "original65",
+    "family": "session",
+    "key": "intraday_sign_mean",
+    "budget": 0.025,
+    "direction": -1
+  },
+  {
+    "id": 10,
+    "base": "original65",
+    "family": "session",
+    "key": "intraday_sign_mean",
+    "budget": 0.075,
+    "direction": -1
+  },
+  {
+    "id": 11,
+    "base": "original65",
+    "family": "session",
+    "key": "intraday_sign_mean",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 12,
+    "base": "original65",
+    "family": "session",
+    "key": "intraday_sign_mean",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 13,
+    "base": "original65",
+    "family": "type",
+    "key": "plain_pooled",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 14,
+    "base": "original65",
+    "family": "type",
+    "key": "plain_pooled",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 15,
+    "base": "original65",
+    "family": "type",
+    "key": "plain_partial_10",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 16,
+    "base": "original65",
+    "family": "type",
+    "key": "plain_partial_10",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 17,
+    "base": "original65",
+    "family": "type",
+    "key": "plain_partial_100",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 18,
+    "base": "original65",
+    "family": "type",
+    "key": "plain_partial_100",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 19,
+    "base": "original65",
+    "family": "type",
+    "key": "plain_independent",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 20,
+    "base": "original65",
+    "family": "type",
+    "key": "plain_independent",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 21,
+    "base": "original65",
+    "family": "pair",
+    "key": "plain_pairwise",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 22,
+    "base": "original65",
+    "family": "pair",
+    "key": "plain_pairwise",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 23,
+    "base": "original65",
+    "family": "pair",
+    "key": "state_pairwise",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 24,
+    "base": "original65",
+    "family": "pair",
+    "key": "state_pairwise",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 25,
+    "base": "original65",
+    "family": "pair",
+    "key": "state_pooled",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 26,
+    "base": "original65",
+    "family": "pair",
+    "key": "state_pooled",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 27,
+    "base": "simple",
+    "family": "control",
+    "key": "none",
+    "budget": 0.0,
+    "direction": 1
+  },
+  {
+    "id": 28,
+    "base": "simple",
+    "family": "session",
+    "key": "session_log_spread",
+    "budget": 0.025,
+    "direction": -1
+  },
+  {
+    "id": 29,
+    "base": "simple",
+    "family": "session",
+    "key": "session_log_spread",
+    "budget": 0.075,
+    "direction": -1
+  },
+  {
+    "id": 30,
+    "base": "simple",
+    "family": "session",
+    "key": "session_log_spread",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 31,
+    "base": "simple",
+    "family": "session",
+    "key": "session_log_spread",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 32,
+    "base": "simple",
+    "family": "session",
+    "key": "overnight_sign_mean",
+    "budget": 0.025,
+    "direction": -1
+  },
+  {
+    "id": 33,
+    "base": "simple",
+    "family": "session",
+    "key": "overnight_sign_mean",
+    "budget": 0.075,
+    "direction": -1
+  },
+  {
+    "id": 34,
+    "base": "simple",
+    "family": "session",
+    "key": "overnight_sign_mean",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 35,
+    "base": "simple",
+    "family": "session",
+    "key": "overnight_sign_mean",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 36,
+    "base": "simple",
+    "family": "session",
+    "key": "intraday_sign_mean",
+    "budget": 0.025,
+    "direction": -1
+  },
+  {
+    "id": 37,
+    "base": "simple",
+    "family": "session",
+    "key": "intraday_sign_mean",
+    "budget": 0.075,
+    "direction": -1
+  },
+  {
+    "id": 38,
+    "base": "simple",
+    "family": "session",
+    "key": "intraday_sign_mean",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 39,
+    "base": "simple",
+    "family": "session",
+    "key": "intraday_sign_mean",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 40,
+    "base": "simple",
+    "family": "type",
+    "key": "plain_pooled",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 41,
+    "base": "simple",
+    "family": "type",
+    "key": "plain_pooled",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 42,
+    "base": "simple",
+    "family": "type",
+    "key": "plain_partial_10",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 43,
+    "base": "simple",
+    "family": "type",
+    "key": "plain_partial_10",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 44,
+    "base": "simple",
+    "family": "type",
+    "key": "plain_partial_100",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 45,
+    "base": "simple",
+    "family": "type",
+    "key": "plain_partial_100",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 46,
+    "base": "simple",
+    "family": "type",
+    "key": "plain_independent",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 47,
+    "base": "simple",
+    "family": "type",
+    "key": "plain_independent",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 48,
+    "base": "simple",
+    "family": "pair",
+    "key": "plain_pairwise",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 49,
+    "base": "simple",
+    "family": "pair",
+    "key": "plain_pairwise",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 50,
+    "base": "simple",
+    "family": "pair",
+    "key": "state_pairwise",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 51,
+    "base": "simple",
+    "family": "pair",
+    "key": "state_pairwise",
+    "budget": 0.075,
+    "direction": 1
+  },
+  {
+    "id": 52,
+    "base": "simple",
+    "family": "pair",
+    "key": "state_pooled",
+    "budget": 0.025,
+    "direction": 1
+  },
+  {
+    "id": 53,
+    "base": "simple",
+    "family": "pair",
+    "key": "state_pooled",
+    "budget": 0.075,
+    "direction": 1
+  }
+]

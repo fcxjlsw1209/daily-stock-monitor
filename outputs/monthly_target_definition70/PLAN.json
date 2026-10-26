@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-10-13T20:06:56.602976+00:00",
+  "objective": "Ten fixed development-research configurations toward70%; no guaranteed return or pristineOOS claim.",
+  "grid": [
+    {
+      "id": 0,
+      "base": "original65",
+      "target": "none",
+      "blend": 0.0
+    },
+    {
+      "id": 1,
+      "base": "incumbent66",
+      "target": "none",
+      "blend": 0.0
+    },
+    {
+      "id": 2,
+      "base": "incumbent66",
+      "target": "simple_excess",
+      "blend": 0.5
+    },
+    {
+      "id": 3,
+      "base": "incumbent66",
+      "target": "simple_excess",
+      "blend": 1.0
+    },
+    {
+      "id": 4,
+      "base": "incumbent66",
+      "target": "log_excess",
+      "blend": 0.5
+    },
+    {
+      "id": 5,
+      "base": "incumbent66",
+      "target": "log_excess",
+      "blend": 1.0
+    },
+    {
+      "id": 6,
+      "base": "incumbent66",
+      "target": "vol_scaled",
+      "blend": 0.5
+    },
+    {
+      "id": 7,
+      "base": "incumbent66",
+      "target": "vol_scaled",
+      "blend": 1.0
+    },
+    {
+      "id": 8,
+      "base": "incumbent66",
+      "target": "loss_utility",
+      "blend": 0.5
+    },
+    {
+      "id": 9,
+      "base": "incumbent66",
+      "target": "loss_utility",
+      "blend": 1.0
+    }
+  ],
+  "fixed": "Same122 monthly periods2016-08-17..2026-09-24, estimatedhistoricalTop32+assumedETF17, original eligibility and skip42 longcore50/52percent; original monthly exits and fixed adjusted units; longonly3equal/2half/<2cash. No new pool filters, author labels, intramonth trading or date stitching.",
+  "cohort": "Cached original monthly plain10 features, training dates/ends/order/train_eligible/train_good from earnings DATA. Intersect positivefinite asset+SPY endpoints,64 positivefinite past prices for63daily sampleSTD>0,finiteX and all4transforms. Samecohort for allarms; at least2 names permonth or entiremonth excluded. Originalcached fullpathgood retained; no current trading eligibility depends on future label validity.",
+  "targets": "r=assetEnd/assetSignal-1,b=SPYEnd/SPYSignal-1,e=r-b,v=std(ddof1,last63simpledailyreturns throughsignal). T1 clip(e,-1,1);T2 clip(log1p(r)-log1p(b),-1,1);T3 clip(e/(v*sqrt21),-5,5);T4 clip(e-.5*max(0,-r),-1,1). Clip first,then subtract each target same-month common-cohort mean. Continuous training targets,never target ranks. Endpoint loss differs from previous pathworstloss utility.",
+  "model": "Annual precedingDec31 cutoff, previous5calendar years signal dates with lowerbound exclusive; allends<=cutoff. Ridgealpha10,12monthhalf-life,equal aggregate month weight thenage decay normalizedtorowcount,minimum18months; training-onlyfeature standardization. Fourarms sameX/rows/weights/scaler/availability,no tuning. Predict only signal-timeeligible finiteeventX; coldstartNaN.",
+  "rank": "Only predictions ranked within signal-timeeligible and available names by exact old pandasrank(pct=True).fillna(.5)-.5 semantics. Ineligible/unavailable cells fallback exactoldml4. No new target-based eligibility or future-based rank membership.",
+  "slot": "Use actual original66 pre-episode score. delta=.05*originalweak_narrow*blend*(newrank-oldml4),blend .5or1. Missing/invalid newforecast gives exactdelta0. Oldcalm residual.025 unchanged, originalsupport/core/states unchanged. Keep actual frozenepisode model2 level budget.05 ceiling5 gap.02; top2 andcandidate3..5within.02 determined by modifiedpre,not globallyreranked postscore.",
+  "budget": "Replace only oldweakML .05 slot by convexrankblend; core50/52percent and original auxiliary coefficients unchanged. Originalprior+episode correction budgets<=.10,no additional MLslot. Effective replacement never exceeds .05; absdelta<=.05*blend. Both controls require exactscore and ordersparity.",
+  "comparison": "Oldml4 is weekly84-feature downside_rank Ridge:21sessionexcess-.5pathadverseloss targetrank,alpha10,half12. Newmodels are monthlyplain10 andcontinuous calendar-month targets. Difference versusinc66 also changes cadence/features/labelshape; only thefournewarms internally isolate targetdefinition.",
+  "selection": "First88 ending2023-11-30. Fixed local guards:trainCAGR>=inc66-1e-12,Sharpe>=inc66-.05,DD>=inc66-.03,early53/recent35CAGR each>=inc66-.025. HighesttrainCAGR amonginc66 andadmitted8candidates; candidateswithin1e-12ofmaximumareatietakeslowerIDandretainsinc66whenincluded. Original65 comparatoronly. Freeze all8 diagnostics regardlessadmission beforelater34. Prefix36/60/76 diagnostics use sameformula.",
+  "procedure": "initialize,prepare,train/freeze,evaluate. Prepared allannual forecasts are PIT; selection sees onlyfirst88 returns. Hashverifiedfreeze beforelater34. Sameclosezero primary,identicalorders nextopenzero/5bp eachside,independentfixedunitreplay,originalcontrolsparity. No new variants afterevaluation.",
+  "protection": "Copy the previouslyverified incumbentearnings PROTECTED unchanged and hash its source. Source/input/cache/frozen hashes checked for phases; fullprotected-tree verification occurs once at end ofevaluate. No oldfiles,observer,account,ledger,plan,fingerprint,automation or sourcedata changes.",
+  "limitations": "Previouslyresearchedhistory isdevelopment,notpristineOOS; proxyuniverse and samefinalclose signal/fill idealization remain. No authorformula recovery claim.",
+  "hashes": {
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_2016_extension/extend.py": "c7a8f66d63ec230127ff67b9499900798521a601715e60325da15ce30b35857e",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_2016_extension/optimize.py": "a97e710de148e081b1083b773aa99bb342c0e4d66b268f69cfd973181bb9ef36",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_adaptive_core/adaptive.py": "75ff039255c1ce45b9bab5d75c5730b3c2312c6dcb0cd8376a23b45a663192b0",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_architecture_restart/residual_model.py": "ea294b9a0a1e9493799f1014dcec464effa93dce70f44fb5de53a604cd832886",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_architecture_restart/study.py": "d77e9bee28f82a9c6a20797f2d35c68f92e8a55307854d2ad8d59d080eafac25",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_blend_optimization/blend_research.py": "f1e3d5c095fa55dcc001d9ae9159012954791a5de9ff5e8c88ded1b67366c626",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_boundary_refinement/boundary_research.py": "c0dfde007618240fd5e8cc883d208fdc8b128c724ec6271c99e08aacaacdfa68",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_causal_ridge/ridge_study.py": "b4a2f1186f61ae974137945f7b965dd4bd17460d4ca054f2afb01d00111013f9",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_company_context/context_research.py": "271fdb223f66a0d890d015073cb2b49664f94eaab9a86ca11742dad29e835f7c",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_conditional_retention/policy_study.py": "373ad8fbcb445020b48f491b380c9b5af1878e7844d6e903285d44f541862331",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_core_expansion/ordinal_model.py": "4a8cd20e0be109c1e4f8175b5cb182941090dda3025703ac7870ebc1391abce3",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_core_expansion/study.py": "82b535d2afb0e1f615ae2f0ce00a84987fbaec1150921ef779fdd9d0aca199f9",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_daily_episodes/episodes.py": "8ae91e55e0d662cb6dee9cba6d1422aa3713b779976de69b4560194d311ae16a",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_decision_audit/audit.py": "50ea2c2f882d3862bf1f2cb07b0759607d4260eb5a5058c6378ba0fd333541ac",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_earnings_factor_research/study.py": "a24a26a1086501ce7525174478a11a5d8e400b5fd79424cb9399a344f064fcc2",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_earnings_repair/research_calendar.py": "112249b503050b54f62152aa5e15bcde066d4ee30735687c79f1a06a1c61474a",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_exact35/exact35.py": "6f6e5367ea758641d1f8dcc87c386a673b8c948bfda4dfb44f40d2a6604352c2",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_factor_search_v2/validate.py": "b5c6bbbfa5f4db0821f6b0dacb33a43c974cceb8a150578803eef73132cd30e4",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_guidance_tweaks/tweaks.py": "0664f5b7de4f5141fab7e11cba70f4f616aec44b1bb400703a127ed4da6a35a3",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_industry_refinement/refine.py": "a6242c3b27e2a647252fdb47739bb18a1cc636b0f4b4ebe5744c68c8391243f5",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_market_phase_research/study.py": "d2a12f2e5fbd757c16935f7faebdaebb76dcee4527641e3da6b5fbb6a3953916",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_multilayer_reconstruction/research.py": "4abec311bfb77eee072479106dbb9f7b375d03d5f287eaf0d7dc9b46df26a798",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_open_hypotheses/open_inverse.py": "8d2f43d4ec3690ebc313174586311ce9d159dee48b0643d2012e65a8c31a546b",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_opportunity_alignment/study.py": "f843ba3ede036df427c34e358cc02899a649d5eda655e54aeff0041b4c07fbb5",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_ordered_inverse/ordered_study.py": "de572db05dca3bb50157ad195a29af1249e82fa08c7f5f004fa774aba24beb0a",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_ordered_listwise/experiment.py": "06e4b1782125d2d608b6f72cb1aabdbfe523b566dba9efd9bef86c4495889479",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_path70_research/incumbent_adapter.py": "5619bfc3512a0aa057e79042256a379360d6baa1bc0c448f2f301b84d6ec3e2b",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_pattern_recheck/patterns.py": "f23bd79a8e72597b236347df5e84817ea381dd69c68fb4709b60595b03112fd3",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_quality_research/explore.py": "5af173a8d6a659153278eedc4e38bc2c95f18dee5b10ac4d67cf44bdeb1ddfde",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_return_priority/return_priority.py": "09cc769235534104321af69b81149e3cf545f57acd503bdeab624f6b68d03fd3",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_score_architecture/architecture.py": "bce8c42d1a87a94db5765f477d169b9e905e7aab05b9e47ebc3aaca06b95cfc6",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_session_type_research/study.py": "38f5b7fb758bd53b9619e00670137dace66c83c7a413128d3b48ece9adc938f7",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_stability_monitor/inputs.py": "dd97fb4a9f7b2102d2c7f497825526a484628fa86ee9891312bfb5abad7c8ded",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_stability_research/local_refine.py": "5207909c5e777b1918676942a130e8be62a7a90a6bea1469938cae9aedcab949",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_stability_research/stability.py": "2d22b1bcef8925c8f98d6778142968f2ee3e2f0847c46caf2aea8c6de2b72ad4",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_state_rank_research/state_rank.py": "53866e5ffcb06146f73bb409747df4bb6f5b7864c1bfe0edebb639d551aa4c6d",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_strict_relative/strict_study.py": "ddb11c0149e920de2952daba515ce28625a56df1f5c1039d4b9920c6d58d02c6",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_style_inverse/style_study.py": "64fafcd93866d967261c06351f5899954cd63b77a2c6c5dbbf479ddc93bc7bb8",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_target_definition70/labels.py": "54662ea980b03e6088afa63318321da1316fd03cde1a72edffb33d4d2a26e618",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_target_definition70/model.py": "e0a67648920f06bb7516d5914907ee237cac2fe4a3c5316940d54f21e7de9832",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_target_definition70/study.py": "7a88b1489c3add0fb0c0942fd379dda3d25a4e19fa162fdb7d09ffe2a8da06c4",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_top35_extension/run.py": "27fec3155c17668294cee0b8aa7a20d29ab92ae24aa5df67da3da8b93bd4b18c",
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_trend_evidence_research/study.py": "fe96933ba2d59f016ad1fa5450b563729df33aff3e977eb6c64ca4f522e71ba3"
+  },
+  "protection_source": {
+    "/Users/shiweili/Library/CloudStorage/OneDrive-RokuInc/Documents/Codex/2026-09-18/5-grand-hyatt-fukuoka-5-14/outputs/monthly_incumbent_earnings70/PROTECTED.json": "719c98a56a168d617c5aa21f626153e2cb04a0f1908710801f28cd4130453584"
+  }
+}

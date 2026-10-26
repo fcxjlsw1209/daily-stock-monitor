@@ -1,0 +1,414 @@
+"""Independent round145 annual profitability reconstruction.
+
+Actual market cache access occurs only in explicitly invoked audit(). Exact Fraction division is independent of the producer's Decimal cross-products.
+"""
+from pathlib import Path
+from datetime import date, timedelta
+from decimal import Decimal
+from fractions import Fraction
+import argparse
+import ast
+import hashlib
+import importlib.util
+import json
+import math
+import re
+import sys
+import numpy as np
+import pandas as pd
+import monthly_latent_state134_prepare_review as old
+
+ROOT=Path(__file__).resolve().parents[1]
+STUDY='outputs/monthly_same_report145'
+LOCAL=old.LOCAL
+PROPOSAL_SHA='0e6fa70e1406234b4957a5b996f6a4551e28c6a4cf988f10d823a171231061b2'
+CALENDAR_SHA='4b8f32ad8a555d6537d7cf3bd0f831e64fbb2de26d033c8daaf68590fcd4a6ea'
+NAMES=('incumbent_local67','expanded_same_report_gross_growth','expanded_same_report_profitability')
+INPUTS=('proposal','meta','policy','original_orders','prices','sessions','protected_manifest','admitted_dataset','source_admission','reference144_plan','reference144_orders','reference144_training_open')
+CHECKS=('original27_arrays_byte_identical','all_features_independently_reconstructed',
+        'all_three_score_matrices_and_ordered_choices_independently_verified',
+        'one_episode_and_prefix_isolation_verified','zero_and_missing_exact_fallback')
+EXTRA=('gross_profit_growth_sign','gross_profitability_improvement_sign','common_available')
+CACHE_FILES=('DATA.npz','SCORES.npz','META.json','FEATURE_AUDIT.json','PRETRAIN_ORDERS.json','PRICE_PARITY.json')
+ATOL=1e-12
+require=old.require
+
+
+def source_files(root=None):
+    root=ROOT if root is None else Path(root).resolve()
+    return sorted(set([root/'work/monthly_same_report145_prepare_review.py',
+                       root/'work/test_monthly_same_report145_prepare_review.py',
+                       root/'outputs/monthly_path70_research/incumbent_adapter.py']+old.source_files(root)))
+
+
+def canonical_axis(values):
+    axis=pd.DatetimeIndex(values)
+    require(not axis.hasnans and axis.tz is None and axis.is_unique and axis.is_monotonic_increasing
+            and axis.equals(axis.normalize()),'Ordered canonical daily axes')
+    return axis
+
+
+def parse_day(value):
+    require(type(value) is str, 'Explicit ISO date')
+    out=date.fromisoformat(value)
+    require(out.isoformat()==value,'Canonical ISO date')
+    return out
+
+
+def exact_amount(value):
+    require(isinstance(value,dict),'Value-scale pair')
+    entries=[]
+    for name in ('value','scale'):
+        raw=value[name]
+        require(type(raw) is str and raw and raw.strip()==raw,'Explicit decimal string')
+        number=Decimal(raw)
+        require(number.is_finite(),'Finite amount')
+        entries.append(Fraction(number))
+    require(entries[1]>0,'Positive scale')
+    return entries[0]*entries[1]
+
+
+def valid_event(event,identity_day):
+    try:
+        require(event.get('admitted') is True and event.get('method')=='same_current_release_annual_comparison','Admitted same-report event')
+        require(all(type(event.get(k)) is str and event[k] and event[k].strip()==event[k]
+                    for k in ('issuer_id','security_id','symbol','currency_key')),'Identity and currency')
+        require(event['security_id']==event['symbol'] and event['currency_key']=='same-report-dollar:'+event['event_id'],'Event scoped identity and currency')
+        available=parse_day(event['available_from']);released=parse_day(event['release_date'])
+        require(released<available,'Current release before availability')
+        require(parse_day(event['identity_valid_from'])==available<=identity_day,'Identity start date');parse_day(event['identity_valid_through'])
+        require(isinstance(event.get('same_report'),dict)and set(event['same_report'])=={'current','comparison'},'Same current report columns')
+        pair=[]
+        for role in ('current','comparison'):
+            period=event['same_report'][role]
+            start,end=[parse_day(period[k])for k in ('period_start','period_end')]
+            length=(end-start).days+1
+            require(type(period.get('days_inclusive')) is int and period['days_inclusive']==length and 330<=length<=400,'Annual duration')
+            require(end<available and all(period[k].get('currency_literal')=='$'for k in ('gross_profit','assets')),'Annual chronology/currency')
+            gross,assets=exact_amount(period['gross_profit']),exact_amount(period['assets']);require(assets>0,'Positive assets')
+            pair.append(dict(start=start,end=end,days=length,gross=gross,assets=assets))
+        cur,prev=pair
+        return cur,prev
+    except (KeyError,TypeError,ValueError,ArithmeticError):return None
+
+
+def newest(events):
+    if not events:return None
+    ordered=sorted(events,key=lambda x:x['available_from'],reverse=True)
+    if len(ordered)>1 and ordered[0]['available_from']==ordered[1]['available_from']:return None
+    return ordered[0]
+
+
+def cell_oracle(events,signal):
+    day=parse_day(signal);seen={}
+    out=dict(available=False,current_event_id=None,prior_event_id=None,
+             current_available_from=None,prior_available_from=None,
+             current_period_end=None,prior_period_end=None,
+             current_days=None,prior_days=None,currency_key=None,
+             method='same_current_release_annual_comparison',
+             gross_profit_growth_sign=None,gross_profitability_improvement_sign=None)
+    require(type(events) is list,'Event list')
+    for event in events:
+        require(isinstance(event,dict) and type(event.get('event_id')) is str and event['event_id'].strip()==event['event_id'] and bool(event['event_id']),'Event identifier')
+        if parse_day(event['available_from'])>day:continue
+        if event['event_id'] in seen and seen[event['event_id']]!=event:return out
+        seen[event['event_id']]=event
+    current=newest(list(seen.values()))
+    if current is None:return out
+    out.update(current_event_id=current['event_id'],prior_event_id=current['event_id'],
+               current_available_from=current['available_from'],prior_available_from=current['available_from'])
+    pair=valid_event(current,day)
+    if pair is None:return out
+    cur,prev=pair
+    out.update(current_period_end=cur['end'].isoformat(),prior_period_end=prev['end'].isoformat(),
+               current_days=cur['days'],prior_days=prev['days'],currency_key=current['currency_key'])
+    if parse_day(current['identity_valid_through'])!=cur['end']+timedelta(days=550) or day>parse_day(current['identity_valid_through']) or cur['end']>parse_day(current['release_date']) or prev['end']+timedelta(days=1)!=cur['start'] or not 330<=(cur['end']-prev['end']).days<=400 or not 0<=(day-cur['end']).days<=550:return out
+    g0,g1=prev['gross']/prev['days'],cur['gross']/cur['days']
+    p0,p1=g0/prev['assets'],g1/cur['assets']
+    out.update(available=True,gross_profit_growth_sign=float((g1>g0)-(g1<g0))/2,
+               gross_profitability_improvement_sign=float((p1>p0)-(p1<p0))/2)
+    return out
+
+
+def features_oracle(meta,dataset):
+    require(type(dataset.get('schema_version')) is int and dataset['schema_version']==1 and isinstance(dataset.get('events'),list) and dataset.get('method')=='same_current_release_annual_comparison','Dataset schema')
+    dates=canonical_axis(meta['dates']);require(len(dates)==len(meta['symbols']),'Signal axes')
+    etfs=meta['etfs'];require(len(etfs)==len(set(etfs))==17,'Original17 ETFs')
+    grouped={}
+    for event in dataset['events']:
+        require(isinstance(event,dict)and type(event.get('symbol'))is str and bool(event['symbol']),'Event symbol')
+        grouped.setdefault(event['symbol'],[]).append(event)
+    shape=(len(dates),49);a={k:np.full(shape,np.nan) for k in EXTRA[:-1]};a[EXTRA[-1]]=np.zeros(shape,bool);cells=[]
+    for i,(day,names) in enumerate(zip(dates,meta['symbols'])):
+        require(len(names)==len(set(names))==49 and set(etfs)<=set(names),'Original49 candidates')
+        for j,symbol in enumerate(names):
+            value=cell_oracle([] if symbol in etfs else grouped.get(symbol,[]),str(day.date()))
+            value.update(signal_index=i,pool_index=j,signal_date=str(day.date()),symbol=symbol)
+            cells.append(value)
+            if value['available']:
+                a[EXTRA[-1]][i,j]=True
+                for key in EXTRA[:-1]:a[key][i,j]=value[key]
+    return dict(arrays=a,cells=cells)
+
+
+def verify_audit(saved,expected,*,dataset_sha=None,admission_sha=None):
+    require(type(saved.get('new_model_fits')) is int and saved['new_model_fits']==0 and saved.get('returns_or_nav_computed') is False,'No new fits or returns')
+    if dataset_sha is not None or admission_sha is not None:
+        require(bool(dataset_sha) and bool(admission_sha),'Both source audit bindings required')
+        require(saved.get('admitted_dataset_sha256')==dataset_sha and
+                saved.get('source_admission_sha256')==admission_sha,'Feature audit source bindings')
+    require(saved.get('original_arrays_unchanged') is True and saved.get('original_auxiliary_states_and_core_coefficients_preserved') is True,'Original state preserved')
+    require(saved.get('latest_event_before_validity_filter') is True and saved.get('same_current_release_for_both_periods')is True,'Chronology before validity')
+    require(saved.get('common_available_cells')==int(expected['arrays']['common_available'].sum()),'Common count')
+    require(saved.get('original_months')==len(expected['cells'])//49 and saved.get('original_width')==49,'Audit axes')
+    require(len(saved.get('cells',[]))==len(expected['cells']),'Every cell audited')
+    for observed,wanted in zip(saved['cells'],expected['cells']):
+        for key,value in wanted.items():
+            require(type(observed.get(key)) is type(value) and observed[key]==value,'Independent cell mismatch: '+key)
+        if wanted['available']:require(observed.get('reason')=='available','Valid reason')
+
+
+def score_oracle(a,meta,nonfit_hand,delay_hand,n=None):
+    h=old.original_helper();x=h.original_prefix(a,meta,n);n=x['n'];shape=x['core'].shape
+    hands=[np.asarray(hand)[:n]for hand in (nonfit_hand,delay_hand)]
+    for hand in hands:
+        require(hand.shape==shape and hand.dtype.kind in 'fiu'and not np.isinf(hand).any(),'Hand shape/type')
+        require((np.abs(hand[np.isfinite(hand)])<=.5).all(),'Bounded hand')
+        for i,names in enumerate(meta['symbols'][:n]):
+            require(all(not np.isfinite(hand[i,j])for j,s in enumerate(names)if s in meta['etfs']),'No ETF feature')
+    require(np.array_equal(np.isfinite(hands[0]),np.isfinite(hands[1])),'Matched hand mask')
+    scores={};choices={};deltas={}
+    for k,name in enumerate(NAMES):
+        pre=x['local'].copy();delta=np.zeros(shape)
+        if k:
+            hand=hands[k-1]
+            for i in range(n):
+                for j in range(shape[1]):
+                    if not x['eligible'][i,j]or not np.isfinite(hand[i,j])or hand[i,j]==0.:continue
+                    s=x['support'][i,j];delta[i,j]=.025*(min(.5,max(-.5,s+float(hand[i,j])))-s)
+            require((np.abs(delta)<=.0125+1e-12).all(),'Small correction bound')
+            pre[delta!=0.]+=delta[delta!=0.]
+        c,s,_=h.episode(pre,x);scores[name]=s;choices[name]=c;deltas[name]=delta
+    return scores,choices,deltas
+
+
+def compare(actual,expected,path=''):
+    if isinstance(expected,dict):
+        require(isinstance(actual,dict)and set(actual)==set(expected),'Schema '+path)
+        for key in expected:compare(actual[key],expected[key],path+'/'+key)
+    elif isinstance(expected,list):
+        require(isinstance(actual,list)and len(actual)==len(expected),'List '+path)
+        for i,(a,b)in enumerate(zip(actual,expected)):compare(a,b,path+'/'+str(i))
+    elif type(expected)is float:
+        require(type(actual)in (float,int)and math.isfinite(actual)and math.isclose(actual,expected,abs_tol=ATOL,rel_tol=1e-12 if path.endswith("condition") else 0),'Numeric '+path)
+    else:require(type(actual)is type(expected)and actual==expected,'Discrete '+path)
+
+
+def verify_admission(reader,plan,pins):
+    refs=plan['inputs'];receipt=reader.json(refs['source_admission']['path'])
+    require(receipt.get('stage')=='conditional_union_source_admission' and receipt.get('passed')is True,'Conditional union admission required')
+    checks=('complete_packages_preserved','unique_event_ids','disjoint_issuer_sets','rejected_events_preserved','availability_unmodified','original_package_hashes_verified')
+    require(set(receipt.get('checks',{}))==set(checks) and all(v is True for v in receipt['checks'].values()),'Complete union source checks')
+    require(receipt.get('data_sha256')==refs['admitted_dataset']['sha256']==reader.sha(refs['admitted_dataset']['path']),'Admission input binding dataset')
+    closure=reader.verify(plan['fundamental_source_hashes'])
+    require(all(pins.get(k)==v for k,v in closure.items()),'Exact admitted source closure')
+    def verify_receipt(item):
+        for key in ('financial_calculations','model_fits','ranks_computed','returns_computed','network_requests'):
+            require(type(item.get(key))is int and item[key]==0,'Admission must precede factors/returns: '+key)
+        for key in ('first_public_version_verified','complete_correction_history_verified','certified_daily_security_master'):
+            require(item.get(key)is False,'No source certification: '+key)
+        for key in ('source_hashes','source_code_hashes'):
+            evidence=reader.verify(item[key])
+            require(all(closure.get(k)==v for k,v in evidence.items()),'Complete evidence closure')
+        require(closure.get(str(reader.path(refs['sessions']['path'])))==refs['sessions']['sha256'],'Shared source calendar binding')
+    verify_receipt(receipt)
+    require(set(receipt.get('packages',{}))=={'aapl_amd','msft_nvda'},'Both complete source packages')
+    census={'aapl_amd':({'AAPL','AMD'},20), 'msft_nvda':({'MSFT','NVDA'},24)}
+    source_checks={
+        'aapl_amd':('all_eighty_values_and_scales_preserved','all_twenty_events_preserved','causal_identity_windows','four_rejection_sentinels_retained','latest_invalid_blocks_fallback','missing_AMD2019_not_fabricated','old_measurement_definition_not_merged','same_current_release_four_cells','strict_next_session_availability','two_annual_periods_checked'),
+        'msft_nvda':('all24_events_preserved','all96_cells_independently_verified','both_FY2015_rejections_retained','accounting_flags_resolved_only_by_evidence','same_current_release_four_cells','strict_next_session_availability','causal_identity_windows','latest_invalid_blocks_fallback')}
+    merged={}
+    for name,(symbols,count)in census.items():
+        ref=receipt['packages'][name]
+        require(set(ref)=={'data_path','data_sha256','audit_path','audit_sha256'},'Exact source package references')
+        for k in('data','audit'):
+            path=reader.path(ref[k+'_path'])
+            require(reader.sha(path)==ref[k+'_sha256']==closure.get(str(path)),'Source package digest')
+        data=reader.json(ref['data_path']);audit=reader.json(ref['audit_path'])
+        require(audit.get('stage')=='conditional_source_admission' and audit.get('passed')is True and audit.get('data_sha256')==ref['data_sha256'],'Underlying source admission')
+        require(set(audit.get('checks',{}))==set(source_checks[name]) and all(v is True for v in audit['checks'].values()),'Underlying exact source checks')
+        verify_receipt(audit)
+        directory=reader.path(ref['audit_path']).parent
+        for key,file in(('plan_sha256','PLAN.json'),('policy_sha256','POLICY.json')):
+            require(audit.get(key)==reader.sha(directory/file)==closure.get(str(directory/file)),'Exact source plan/policy binding')
+        for file in('DATA.json','AUDIT.json','PLAN.json','POLICY.json','MANIFEST.json','TESTS.json'):
+            path=directory/file;require(closure.get(str(path))==reader.sha(path),'Required source artifact '+file)
+        require(data.get('method')=='same_current_release_annual_comparison' and len(data.get('events',[]))==count,'Complete package event census')
+        require({e.get('symbol')for e in data['events']}==symbols,'Exact package issuer census')
+        for event in data['events']:
+            eid=event['event_id'];require(eid not in merged,'Unique union event identifiers');merged[eid]=event
+    directory=reader.path(refs['source_admission']['path']).parent
+    require(receipt.get('plan_sha256')==reader.sha(directory/'PLAN.json')==closure.get(str(directory/'PLAN.json')),'Exact union plan binding')
+    for file in('DATA.json','AUDIT.json','PLAN.json','MANIFEST.json','TESTS.json'):
+        path=directory/file;require(closure.get(str(path))==reader.sha(path),'Required union source artifact '+file)
+    union=reader.json(refs['admitted_dataset']['path'])
+    require(union.get('method')=='same_current_release_annual_comparison' and len(union.get('events',[]))==44,'Complete union event census')
+    actual={}
+    for event in union['events']:
+        require(event['event_id']not in actual,'Duplicate union event');actual[event['event_id']]=event
+    require(actual==merged,'Exact package preservation including all rejected events')
+    manifest=reader.json(directory/'MANIFEST.json')
+    require(manifest==dict(plan_sha256=receipt['plan_sha256'],data_sha256=receipt['data_sha256'],audit_sha256=reader.sha(refs['source_admission']['path'])),'Union manifest internal bindings')
+    return receipt
+
+
+def verify_proposal_bindings(reader,plan):
+    proposal=reader.json(plan['inputs']['proposal']['path'])
+    require(reader.sha(plan['inputs']['proposal']['path'])==PROPOSAL_SHA,'Exact final proposal')
+    source=proposal['sources'];directory=reader.path(source['directory'])
+    require(reader.path(plan['inputs']['admitted_dataset']['path'])==directory/'DATA.json' and reader.path(plan['inputs']['source_admission']['path'])==directory/'AUDIT.json','Proposal source paths')
+    require(plan['inputs']['admitted_dataset']['sha256']==source['dataset_sha256'] and plan['inputs']['source_admission']['sha256']==source['audit_sha256'],'Proposal source digests')
+    require(set(source['hashes'])=={'DATA.json','AUDIT.json','PLAN.json','MANIFEST.json'},'Proposal union artifacts')
+    reader.verify(source['hashes'],directory)
+    require(plan['reference144_hashes']==proposal['reference144']['hashes'],'Proposal fixed144 reference digests')
+    require(reader.json(plan['inputs']['source_admission']['path'])['packages']==source['packages'],'Proposal source package references')
+    return proposal
+
+
+def verify_reference(reader,plan,pins):
+    names=('incumbent_local67','same_report_gross_growth','same_report_profitability')
+    refs=plan['inputs'];hashes=plan['reference144_hashes']
+    require(set(hashes)=={'PLAN.json','PRETRAIN_ORDERS.json','TRAIN_OPEN_TRIALS.json'},'Exact fixed144 reference hashes')
+    for key,file in(('reference144_plan','PLAN.json'),('reference144_orders','PRETRAIN_ORDERS.json'),('reference144_training_open','TRAIN_OPEN_TRIALS.json')):
+        path=reader.path(refs[key]['path'])
+        require(path==reader.path('outputs/monthly_same_report144/'+file),'Fixed144 original reference path')
+        require(hashes[file]==refs[key]['sha256']==reader.sha(path)==pins.get(str(path)),'Fixed144 reference digest')
+    previous=reader.json(refs['reference144_plan']['path'])
+    require(previous.get('round')==144 and previous.get('status')=='REGISTERED' and previous.get('arms')==list(names),'Registered fixed144 reference')
+    orders=reader.json(refs['reference144_orders']['path']);rows=reader.json(refs['reference144_training_open']['path'])
+    require(set(orders)==set(names) and all(len(orders[k])==122 for k in names),'All fixed144 reference orders')
+    require([row.get('name')for row in rows]==list(names),'All fixed144 reference training arms')
+    return orders,rows[2]
+
+
+
+def audit(root,plan_path,plan_sha):
+    require(re.fullmatch('[0-9a-f]{64}',plan_sha) is not None,'Explicit PLAN SHA')
+    r=old.Reader(root);p=r.path(STUDY);require(r.path(plan_path)==p/'PLAN.json','Dedicated PLAN')
+    require(r.sha(plan_path)==plan_sha,'PLAN SHA');plan=r.json(plan_path)
+    require(plan.get('round')==145 and plan.get('status')=='REGISTERED' and plan.get('arms')==list(NAMES)
+            and plan.get('primary_challenger')==NAMES[2],'Round145 policy')
+    require(r.path(plan['output_directory'])==p,'Output directory')
+    require(plan['runtime']==dict(python=sys.version,numpy=np.__version__,pandas=pd.__version__),'Runtime')
+    require(not any((p/x).exists() for x in ('TRAIN_TRIALS.json','FROZEN.json','RESULTS.json')),'Before outcome stages')
+    pins=r.verify(plan['hashes']);require(set(plan['inputs'])==set(INPUTS),'Named inputs')
+    inputs={}
+    for key,ref in plan['inputs'].items():
+        path=r.path(ref['path']);require(r.sha(path)==ref['sha256']==pins.get(str(path)),'Bound input '+key);inputs[key]=path
+    require(r.sha(inputs['proposal'])==PROPOSAL_SHA,'Final proposal')
+    verify_proposal_bindings(r,plan)
+    require(all(type(plan.get(k)) is int and plan[k]==0 for k in ('actual_model_fits_before_registration',
+        'actual_feature_calculations_before_registration','actual_returns_before_registration')),'Prospective registration')
+    require(plan['tolerances'].get('feature_atol')==ATOL and plan['tolerances'].get('feature_rtol')==0
+            and plan['tolerances'].get('scores_atol')==ATOL and plan['tolerances'].get('scores_rtol')==0,'Frozen tolerances')
+    sources={str(f):r.sha(f) for f in source_files(root)}
+    require(r.verify(plan['independent_prepare_source_hashes'])==sources and all(pins.get(k)==v for k,v in sources.items()),'Independent closure')
+    oldplan=r.json(LOCAL+'/PLAN.json');raw=r.verify(plan['raw_source_hashes'])
+    require(raw==r.verify(oldplan['raw_source_hashes']) and len(raw)==64 and all(pins.get(k)==v for k,v in raw.items()),'Raw64 source identity')
+    oldcache=r.verify(r.json(LOCAL+'/CACHE_HASHES.json'),r.path(LOCAL))
+    require(all(pins.get(k)==v for k,v in oldcache.items()),'Original cache artifacts')
+    for key,file in [('meta','META.json'),('policy','INCUMBENT_POLICY.json'),('original_orders','local_linear_ORDERS.json')]:
+        require(inputs[key]==r.path(LOCAL+'/'+file),'Original wiring '+key)
+    require(inputs['prices']==r.path(old.PRICES),'Original price input')
+    h=old.original_helper();policy=r.json(inputs['policy']);require(all(policy.get(k)==v for k,v in h.POLICY.items()),'Frozen episode')
+    cache=r.json(p/'CACHE.json');require(set(cache)==set(CACHE_FILES),'Six cache outputs');r.verify(cache,p)
+    meta=r.json(p/'META.json');require(meta==r.json(inputs['meta']),'Exact metadata')
+    require(len(meta['dates'])==len(meta['symbols'])==122 and meta['train_months']==88 and meta['early_months']==53
+            and len(meta['etfs'])==17 and all(len(x)==49 for x in meta['symbols']),'Original122x49')
+    original=r.npz(LOCAL+'/DATA.npz');a=r.npz(p/'DATA.npz')
+    require(len(original)==27 and set(a)==set(original)|set(EXTRA),'30 array schema')
+    for key,value in original.items():
+        require(a[key].shape==value.shape and a[key].dtype==value.dtype and a[key].tobytes()==value.tobytes(),'Original array bytes '+key)
+    require(r.sha(old.LOADER)==old.LOADER_SHA,'Raw loader code')
+    spec=importlib.util.spec_from_file_location('same_report145_raw_loader',r.path(old.LOADER))
+    loader=importlib.util.module_from_spec(spec);spec.loader.exec_module(loader)
+    panel,info=loader.load_panel(meta['etfs']);used=dict(info['source_hashes']);used[str(r.path(old.LOADER))]=old.LOADER_SHA
+    require({str(r.path(k)):v for k,v in used.items()}==raw,'Actually consumed raw sources');r.verify(used)
+    prices=r.npz(inputs['prices']);require(set(prices)=={'dates','symbols','close','opening'},'Price cache schema')
+    parity=old.price_parity(panel,prices);old.compare(r.json(p/'PRICE_PARITY.json'),parity,'PRICE_PARITY')
+    calendar_path=inputs['sessions'].parent/'CALENDAR_PLAN.json';require(r.sha(calendar_path)==CALENDAR_SHA,'Calendar plan hash')
+    calendar_plan=r.json(calendar_path);calendar_bindings=r.verify(calendar_plan['bindings'])
+    require(all(pins.get(k)==v for k,v in calendar_bindings.items()),'Calendar source closure')
+    require(calendar_plan['start']=='2015-01-01' and calendar_plan['end']=='2027-12-31','Calendar coverage')
+    sessions=old.official_sessions(r,calendar_plan['end']);sessions=sessions[sessions>=calendar_plan['start']]
+    saved_sessions=r.json(inputs['sessions'])
+    require(saved_sessions['plan_sha256']==CALENDAR_SHA and saved_sessions['sessions']==[str(d.date()) for d in sessions],'All official sessions and overlay')
+    admission=verify_admission(r,plan,pins);dataset=r.json(inputs['admitted_dataset'])
+    reference_orders,reference_training=verify_reference(r,plan,pins)
+    expected=features_oracle(meta,dataset)
+    verify_audit(r.json(p/'FEATURE_AUDIT.json'),expected,
+                 dataset_sha=r.sha(inputs['admitted_dataset']),admission_sha=r.sha(inputs['source_admission']))
+    for key in EXTRA:
+        require(a[key].shape==(122,49) and a[key].dtype==expected['arrays'][key].dtype,'Feature schema '+key)
+        np.testing.assert_array_equal(a[key],expected['arrays'][key])
+    beta=expected['arrays'][EXTRA[0]];rho=expected['arrays'][EXTRA[1]]
+    scores,choices,deltas=score_oracle(a,meta,beta,rho)
+    saved_scores=r.npz(p/'SCORES.npz');saved_orders=r.json(p/'PRETRAIN_ORDERS.json')
+    require(set(saved_scores)==set(saved_orders)==set(NAMES),'Three output arms')
+    for name in NAMES:
+        wanted=[dict(date=day,signal_date=day,end=meta['ends'][i],symbols=[meta['symbols'][i][j] for j in choice],
+            scores=[float(scores[name][i,j]) for j in choice]) for i,(day,choice) in enumerate(zip(meta['dates'],choices[name]))]
+        compare(saved_orders[name],wanted,'orders/'+name)
+        np.testing.assert_allclose(saved_scores[name],scores[name],rtol=0,atol=ATOL)
+    old_dataset=dict(dataset,events=[e for e in dataset['events'] if e['symbol']in ('AAPL','AMD')])
+    old_feature=features_oracle(meta,old_dataset)
+    oscores,ochoices,_=score_oracle(a,meta,old_feature['arrays'][EXTRA[0]],old_feature['arrays'][EXTRA[1]])
+    for name,old_name in zip(NAMES,('incumbent_local67','same_report_gross_growth','same_report_profitability')):
+        wanted=[dict(date=day,signal_date=day,end=meta['ends'][i],symbols=[meta['symbols'][i][j] for j in choice],
+            scores=[float(oscores[name][i,j])for j in choice])for i,(day,choice)in enumerate(zip(meta['dates'],ochoices[name]))]
+        compare(reference_orders[old_name],wanted,'fixed144/orders/'+old_name)
+    require(r.json(p/'FEATURE_AUDIT.json').get('fixed144_orders_reproduced_without_new_sources')is True,'Fixed144 fallback claim')
+    h.assert_exact_tree(saved_orders[NAMES[0]],r.json(inputs['original_orders']))
+    require(saved_scores[NAMES[0]].tobytes()==scores[NAMES[0]].tobytes(),'Baseline score bytes')
+    for n in range(len(meta['dates'])+1):
+        subset=dict(meta,dates=meta['dates'][:n],symbols=meta['symbols'][:n])
+        historical=dict(dataset,events=[e for e in dataset['events'] if n and e['available_from']<=meta['dates'][n-1]])
+        prefix=features_oracle(subset,historical)
+        compare(prefix['cells'],expected['cells'][:n*49],'Source prefix')
+        for key in EXTRA:np.testing.assert_array_equal(prefix['arrays'][key],expected['arrays'][key][:n])
+        ss,cc,_=score_oracle(a,meta,prefix['arrays'][EXTRA[0]],prefix['arrays'][EXTRA[1]],n)
+        for name in NAMES:require(cc[name]==choices[name][:n] and ss[name].tobytes()==scores[name][:n].tobytes(),'Score/choices prefix')
+    for fill in (np.nan,0.):
+        hand=np.full((122,49),np.nan)
+        for i,names in enumerate(meta['symbols']):
+            for j,symbol in enumerate(names):
+                if symbol not in meta['etfs']:hand[i,j]=fill
+        ss,cc,_=score_oracle(a,meta,hand,hand)
+        for name in NAMES[1:]:require(ss[name].tobytes()==scores[NAMES[0]].tobytes() and cc[name]==choices[NAMES[0]],'Missing/zero exact fallback')
+    required={str(p/x):r.sha(p/x) for x in (*CACHE_FILES,'PLAN.json','CACHE.json')};allowed=dict(pins,**required)
+    for key,value in list(r.seen.items()):require(r.sha(key)==value and allowed.get(key)==value,'Unbound consumed artifact '+key)
+    valid=expected['arrays']['common_available']
+    errors={key:float(np.max(np.abs(a[key][valid]-expected['arrays'][key][valid]))) if valid.any() else 0. for key in EXTRA[:2]}
+    return dict(schema_version=1,passed=True,stage='prepare',plan_sha256=plan_sha,cache_sha256=r.sha(p/'CACHE.json'),
+        orders_sha256=r.sha(p/'PRETRAIN_ORDERS.json'),**{k:True for k in CHECKS},source_hashes=sources,artifact_hashes=dict(r.seen),
+        producer_modules_imported=False,returns_or_nav_computed=False,monthly_label_models_fit=0,new_model_fits=0,
+        orders_checked=366,source_cells_checked=5978,stock_cells_checked=3904,available_stock_cells=int(valid.sum()),
+        max_feature_errors=errors,max_score_error=max(float(np.max(np.abs(saved_scores[k]-scores[k]))) for k in NAMES),
+        raw_prices_independently_verified=True,calendar_overlay_independently_verified=True,price_parity=parity,
+        source_admission_bound=True,source_union_preservation_verified=True,fixed144_reference_verified=True,common_availability_verified=True,admitted_report_pairs_independently_reconstructed=True,same_report_comparatives_independently_verified=True,all_signal_prefixes_verified=True,exact_fraction_signs=True,
+        exact_zero_and_missing_baseline=True,
+        limitations=['Independent Fraction division verifies Decimal cross-product signs; limited AAPL/AMD/MSFT/NVDA current-retrieval same-report comparatives are not certified first-public versions.',
+            'No monthly prediction models or strategy returns computed; inherited proxy-universe and price-vintage limitations remain.'])
+
+
+def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--plan-sha',required=True)
+    parser.add_argument('--plan',type=Path,default=ROOT/STUDY/'PLAN.json');parser.add_argument('--prepare-complete',action='store_true')
+    parser.add_argument('--output',type=Path,default=ROOT/STUDY/'INDEPENDENT_PREPARE.json');args=parser.parse_args()
+    require(args.prepare_complete,'Run only after registered preparation')
+    result=audit(ROOT,args.plan,args.plan_sha)
+    with args.output.open('x') as stream:json.dump(result,stream,sort_keys=True,indent=2,allow_nan=False);stream.write('\n')
+    print(json.dumps(dict(passed=True,output=str(args.output),sha256=hashlib.sha256(args.output.read_bytes()).hexdigest())))
+
+
+if __name__=='__main__':main()

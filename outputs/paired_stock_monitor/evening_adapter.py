@@ -16,7 +16,7 @@ def run(folder,phase,refresh,snapshot):
     from market_data import load_snapshot,CACHE
     cfg=json.loads((folder/'config.json').read_text())
     db=m.connect();m.init(db,cfg)
-    digest=hashlib.sha256(Path(__file__).read_bytes()+(P/'reconciliation_v2.py').read_bytes()+(P/'snapshot_guard.py').read_bytes()+(P/'secondary_prices.py').read_bytes()).hexdigest()
+    digest=hashlib.sha256(Path(__file__).read_bytes()+(P/'reconciliation_v2.py').read_bytes()+(P/'snapshot_guard.py').read_bytes()+(P/'secondary_prices.py').read_bytes()+(P/'price_revision_guard.py').read_bytes()).hexdigest()
     row=db.execute("SELECT value FROM meta WHERE key='evening_adapter_v2_hash'").fetchone()
     if row and row[0]!=digest:raise RuntimeError('Execution adapter changed; explicit migration required')
     if not row:
@@ -43,15 +43,18 @@ def run(folder,phase,refresh,snapshot):
     data,raw,frames,manifest=load_snapshot(snap)
     db=m.connect();m.init(db,cfg);state=m.latest_state(db)
     report['phase']='evening_v2';report['execution_version']='evening_v2';report['target_session']=str(target.date())
+    from price_revision_guard import validate_entry_basis
+    verified_revisions=[]
+    for symbol,position in state['positions'].items():
+        revision=validate_entry_basis(db,symbol,position,frames[symbol],manifest)
+        if revision is not None:verified_revisions.append(revision)
+    report['verified_entry_price_revisions']=verified_revisions
     old=db.execute('SELECT payload FROM plans WHERE session=?',(str(target.date()),)).fetchone()
     if old:
         report['plan']=json.loads(old[0]);report['status']='existing_immutable_plan'
         report['plan_origin']=report['plan'].get('origin','prospective')
     elif target<pd.Timestamp(cfg['paper_start']):report['status']='paper_start_pending'
     else:
-        for symbol,position in state['positions'].items():
-            if abs(float(data.opening.at[pd.Timestamp(position['entry_date']),symbol])/position['entry_price']-1)>.001:
-                raise RuntimeError('Unprocessed corporate action or price revision: '+symbol)
         f=m.features(data,raw)
         decision=m.plan(state,target,calendar.index,data.close,f['ma5'],f['atr'],f['masks'][cfg['admission']],f['score'],cfg['sectors'],cfg)
         decision.update(strategy_version=cfg['version'],data_as_of=manifest['as_of'],cost_bps=cfg['cost_bps'],fill_model='next_session_open_proxy_not_actual_broker_fill')

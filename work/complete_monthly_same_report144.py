@@ -1,0 +1,589 @@
+"""Close round144 from verified metadata and bytes; never computes market returns.
+
+Root remains the sole continuation-state writer. A completed report is published
+exclusively, before the checked atomic state update. Resume only by its exact SHA.
+"""
+from pathlib import Path
+from datetime import datetime, timezone
+from copy import deepcopy
+import argparse
+import hashlib
+import json
+import math
+import os
+import re
+import stat
+import tempfile
+
+ROOT = Path(__file__).resolve().parents[1]
+EXPERIMENT = 'monthly_same_report144'
+STATE = 'outputs/monthly_target70_research/CONTINUATION_STATUS.json'
+NAMES = ('incumbent_local67', 'same_report_gross_growth', 'same_report_profitability')
+MODES = ('same_close', 'next_open_zero', 'next_open_cost')
+PROPOSAL_SHA = '508c8534ae0ad253845453360f518e69cce487bd827e46a7793fb56180411d0a'
+PROTECTED_SHA = '89e82ac5cbec3b998f1d8aab93f1f8fd7c5e19522321b2dd1da2f88dfff922cb'
+PROTECTED_COUNT = 21444
+CACHE = ('DATA.npz', 'SCORES.npz', 'META.json', 'FEATURE_AUDIT.json',
+         'PRETRAIN_ORDERS.json', 'PRICE_PARITY.json')
+FROZEN = ('PLAN.json', 'CACHE.json', 'PRETRAIN_ORDERS.json', 'TRAIN_TRIALS.json', 'TRAIN_OPEN_TRIALS.json',
+          'WALKFORWARD.json', 'INDEPENDENT_PREPARE.json')
+PREPARE_CHECKS = ('original27_arrays_byte_identical', 'all_features_independently_reconstructed',
+    'all_three_score_matrices_and_ordered_choices_independently_verified',
+    'one_episode_and_prefix_isolation_verified', 'zero_and_missing_exact_fallback',
+    'raw_prices_independently_verified', 'calendar_overlay_independently_verified',
+    'all_signal_prefixes_verified', 'source_admission_bound', 'common_availability_verified',
+    'same_report_comparatives_independently_verified', 'admitted_report_pairs_independently_reconstructed', 'exact_fraction_signs')
+OUTCOME_CHECKS = ('daily_nav_trades_holdings_metrics_slices', 'first88_and_three_fold_selection_verified',
+    'annual_partial_flags_verified', 'monthly_difference_and_attribution_verified',
+    'first88_causal_replay_verified', 'zero_model_fit_count_verified', 'all_changed_months_reported',
+    'diagnostic_start_marker_verified', 'baseline_local67_full_orders_unchanged',
+    'source_admission_bound', 'common_availability_verified', 'first88_dual_execution_selection_verified')
+SUITE_NAMES = ('factor', 'runner', 'prepare_review', 'outcome_review', 'registration', 'completion')
+SUITE_SOURCES = {name: ('test_register_monthly_same_report144.py' if name == 'registration' else
+    'test_complete_monthly_same_report144.py' if name == 'completion' else
+    'test_monthly_same_report144_'+name+'.py') for name in SUITE_NAMES}
+SUITE_SOURCES['source_admission'] = 'test_same_report144_admission.py'
+
+
+def require(ok, message):
+    if not ok:
+        raise ValueError(message)
+
+
+def digest(value):
+    return isinstance(value, str) and re.fullmatch('[0-9a-f]{64}', value) is not None
+
+
+def sha(path):
+    value = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for part in iter(lambda: stream.read(1024 * 1024), b''):
+            value.update(part)
+    return value.hexdigest()
+
+
+def decode(raw):
+    def pairs(items):
+        result = {}
+        for key, value in items:
+            require(key not in result, 'Duplicate JSON key')
+            result[key] = value
+        return result
+    def bad(value):
+        raise ValueError('Nonfinite JSON token: ' + value)
+    return json.loads(raw, object_pairs_hook=pairs, parse_constant=bad)
+
+
+def encoded(value):
+    return (json.dumps(value, indent=2, sort_keys=True, ensure_ascii=False, allow_nan=False)+'\n').encode()
+
+
+class Reader:
+    def __init__(self, root):
+        self.root = Path(root).resolve()
+        self.seen = {}
+
+    def path(self, value):
+        path = Path(value)
+        require(not any(x in str(path) for x in ('CloudStorage', 'OneDrive')), 'Cloud path forbidden')
+        absolute = path if path.is_absolute() else self.root/path
+        resolved = absolute.resolve()
+        require(not any(x in str(resolved) for x in ('CloudStorage', 'OneDrive')), 'Cloud target forbidden')
+        require(path.is_absolute() or resolved.is_relative_to(self.root), 'Relative path escapes root')
+        return resolved
+
+    def note(self, path, value):
+        key = str(path)
+        require(key not in self.seen or self.seen[key] == value, 'Input changed during closure: '+key)
+        self.seen[key] = value
+        return value
+
+    def hash(self, value):
+        path = self.path(value)
+        return self.note(path, sha(path))
+
+    def read(self, value):
+        path = self.path(value)
+        raw = path.read_bytes()
+        self.note(path, hashlib.sha256(raw).hexdigest())
+        return decode(raw)
+
+    def verify(self, mapping, base=None):
+        require(isinstance(mapping, dict) and bool(mapping), 'Nonempty hash map required')
+        result = {}
+        for value, expected in mapping.items():
+            require(digest(expected), 'Invalid SHA256')
+            if base is not None:
+                require(Path(value).name == value and value not in ('', '.', '..'), 'Artifact basename required')
+                value = Path(base)/value
+            key = str(self.path(value))
+            require(key not in result or result[key] == expected, 'Conflicting canonical hash')
+            require(self.hash(key) == expected, 'Hash mismatch: '+key)
+            result[key] = expected
+        return result
+
+
+def number(value):
+    return type(value) in (int, float) and math.isfinite(value)
+
+
+def selection(rows, open_rows):
+    def check(group):
+        require(isinstance(group, list) and len(group) == 3 and
+                all(isinstance(row, dict) and row.get('name') == name for row, name in zip(group, NAMES)),
+                'Three ordered training arms required')
+    check(rows); check(open_rows)
+    fields = (('training', 'cagr'), ('training', 'sharpe'), ('training', 'max_drawdown'),
+              ('early', 'cagr'), ('recent', 'cagr'))
+    def compare(candidate, reference, strict):
+        values = [row[a].get(b) if isinstance(row.get(a), dict) else None for row in (candidate,reference) for a,b in fields]
+        if not all(number(x) for x in values):return False
+        candidate,reference = values[:5],values[5:]
+        first = candidate[0] > reference[0]+1e-12 if strict else candidate[0] >= reference[0]-1e-12
+        return bool(first and all(a >= b-t for a,b,t in zip(candidate[1:],reference[1:],(.05,.03,.025,.025))))
+    guards = {name:compare(rows[2],rows[i],True) for i,name in enumerate(NAMES[:2])}
+    open_guards = {name:compare(open_rows[2],open_rows[i],i==1) for i,name in enumerate(NAMES[:2])}
+    admitted = all(guards.values()) and all(open_guards.values())
+    return dict(primary=NAMES[2] if admitted else NAMES[0], admitted=admitted, guards=admitted,
+                guards_against=guards, next_open_guards_against=open_guards, mechanism_confirmed=all(open_guards.values()))
+
+
+def exact_count(obj, key, count):
+    require(type(obj.get(key)) is int and obj[key] == count, 'Wrong count: '+key)
+
+
+def subset(mapping, allowed, label):
+    require(all(allowed.get(key) == value for key, value in mapping.items()), 'Unbound '+label)
+
+
+def utc(value):
+    require(isinstance(value, str) and value.endswith(('Z', '+00:00')), 'UTC timestamp required')
+    result = datetime.fromisoformat(value[:-1]+'+00:00' if value.endswith('Z') else value)
+    require(result.utcoffset().total_seconds() == 0, 'UTC timestamp required')
+    return result
+
+
+def protected_scan(reader, plan, proof):
+    ref = plan['inputs']['protected_manifest']
+    require(ref['sha256'] == PROTECTED_SHA and reader.hash(ref['path']) == PROTECTED_SHA,
+            'Original protected manifest binding')
+    require(proof.get('passed') is True and not proof.get('changed') and not proof.get('missing')
+            and proof.get('read_or_identity_errors') == []
+            and 'changed' in proof and 'missing' in proof, 'Protected receipt incomplete')
+    exact_count(proof, 'checked', PROTECTED_COUNT)
+    exact_count(proof, 'verified', PROTECTED_COUNT)
+    require(proof.get('manifest_sha256') == PROTECTED_SHA, 'Protected receipt manifest mismatch')
+    manifest = reader.read(ref['path'])
+    require(isinstance(manifest, dict) and len(manifest) == PROTECTED_COUNT, 'Full protected inventory required')
+    resolved = set()
+    for name, expected in manifest.items():
+        raw = Path(name)
+        path = reader.path(name)
+        require(raw.is_absolute() and raw == path and path.is_relative_to(reader.root),
+                'Protected member must be an exact local path without symlinks')
+        require(path not in resolved and stat.S_ISREG(path.stat().st_mode), 'Unique regular protected member required')
+        resolved.add(path)
+        require(digest(expected) and reader.hash(path) == expected, 'Protected member changed: '+name)
+    return len(resolved)
+
+
+ADMISSION_FILES = ('PLAN.json','POLICY.json','DATA.json','AUDIT.json','MANIFEST.json','TESTS.json')
+ADMISSION_CHECKS = ('all_eighty_values_and_scales_preserved','all_twenty_events_preserved',
+    'causal_identity_windows','four_rejection_sentinels_retained','latest_invalid_blocks_fallback',
+    'missing_AMD2019_not_fabricated','old_measurement_definition_not_merged',
+    'same_current_release_four_cells','strict_next_session_availability','two_annual_periods_checked')
+CERTIFICATIONS = ('first_public_version_verified','complete_correction_history_verified','certified_daily_security_master')
+SOURCE_COUNTS = dict(events=20,conditionally_admitted=16,rejected=4,raw_values=80)
+
+
+def verify_admission(reader, plan, pins):
+    """Validate frozen source receipts and closure only; no financial arithmetic."""
+    refs=plan['inputs'];base=reader.root/'outputs/monthly_same_report144_admission'
+    require(reader.path(refs['source_admission']['path'])==base/'AUDIT.json' and
+            reader.path(refs['admitted_dataset']['path'])==base/'DATA.json','Exact source admission paths')
+    files={name:reader.read(base/name) for name in ADMISSION_FILES}
+    receipt=files['AUDIT.json'];source_plan=files['PLAN.json'];policy=files['POLICY.json'];data=files['DATA.json']
+    require(receipt.get('stage')=='conditional_source_admission' and receipt.get('passed') is True,
+            'Conditional source admission required')
+    require(type(receipt.get('checks')) is dict and set(receipt['checks'])==set(ADMISSION_CHECKS)
+            and all(receipt['checks'][key] is True for key in ADMISSION_CHECKS),'Complete source admission checks')
+    for field,name in (('data_sha256','DATA.json'),('plan_sha256','PLAN.json'),('policy_sha256','POLICY.json')):
+        require(receipt.get(field)==reader.hash(base/name),'Admission input binding: '+field)
+    require(refs['source_admission']['sha256']==reader.hash(base/'AUDIT.json') and
+            refs['admitted_dataset']['sha256']==reader.hash(base/'DATA.json'),'Named source binding')
+    for key in ('financial_calculations','model_fits','ranks_computed','returns_computed','network_requests'):
+        exact_count(receipt,key,0)
+    for doc in (receipt,policy,data):
+        require(all(doc.get(key) is False for key in CERTIFICATIONS),'Source certification limitations must remain explicit')
+        require(doc.get('policy_id')=='same_report144_source_v1','Source policy identity')
+    require(data.get('model_admitted') is False and data.get('strategy_admitted') is False,'Source-only dataset')
+    for key in ('ratios_computed','signs_computed','ranks_computed','returns_computed'):exact_count(data,key,0)
+    for doc in (receipt,data):
+        require(type(doc.get('counts')) is dict and set(doc['counts'])==set(SOURCE_COUNTS),'Source count schema')
+        for key,value in SOURCE_COUNTS.items():exact_count(doc['counts'],key,value)
+    require(source_plan.get('stage')=='source_admission_plan' and
+            source_plan.get('policy_id')=='same_report144_source_v1' and
+            all(doc.get('method')=='same_current_release_annual_comparison' for doc in (source_plan,policy,data)) and
+            source_plan.get('financial_computations_permitted') is False and
+            source_plan.get('network_requests_permitted') is False,'Frozen source-only plan')
+    require(source_plan.get('outputs')==['DATA.json','AUDIT.json','MANIFEST.json'],'Source plan output scope')
+    sources=reader.verify(receipt['source_hashes']);code=reader.verify(receipt['source_code_hashes'])
+    require(sources==reader.verify(source_plan['source_hashes']) and
+            code==reader.verify(source_plan['source_code_hashes']),'Source PLAN/AUDIT closure mismatch')
+    expected_code={str(reader.root/'work'/x) for x in ('same_report144_admission.py','test_same_report144_admission.py')}
+    require(set(code)==expected_code,'Exact source mapper/test closure')
+    manifest=files['MANIFEST.json']
+    require(manifest.get('stage')=='conditional_source_admission_complete' and
+            manifest.get('plan_sha256')==reader.hash(base/'PLAN.json') and
+            manifest.get('output_hashes')=={name:reader.hash(base/name) for name in ('DATA.json','AUDIT.json')},
+            'Source manifest bindings')
+    tests=files['TESTS.json']
+    require(tests.get('passed') is True and tests.get('synthetic_only') is True,'Source synthetic tests required')
+    for key in ('failures','errors','actual_financial_calculations'):exact_count(tests,key,0)
+    require(type(tests.get('tests_run')) is int and tests['tests_run']>0 and
+            reader.verify(tests['source_code_hashes'])==code,'Source tests/code binding')
+    log=tests.get('log','')
+    require(isinstance(log,str) and re.search(r'Ran '+str(tests['tests_run'])+r' tests? in ',log)
+            and log.rstrip().endswith('OK'),'Source test log success')
+    closure={}
+    for group in (sources,code,{str(base/name):reader.hash(base/name) for name in ADMISSION_FILES}):
+        for key,value in group.items():
+            require(key not in closure or closure[key]==value,'Conflicting source closure')
+            closure[key]=value
+    require(closure==reader.verify(plan['fundamental_source_hashes']),'Exact admitted source closure')
+    subset(closure,pins,'admitted sources')
+    require(type(receipt.get('limitations')) is dict and receipt['limitations']==policy.get('assumptions')
+            and bool(receipt['limitations']),'Source assumptions must be carried unchanged')
+
+
+def validate(root, plan_sha):
+    reader = Reader(root)
+    out = reader.root/'outputs'/EXPERIMENT
+    require(digest(plan_sha) and reader.hash(out/'PLAN.json') == plan_sha, 'Exact PLAN SHA required')
+    plan = reader.read(out/'PLAN.json')
+    require(plan.get('round') == 144 and plan.get('status') == 'REGISTERED'
+            and plan.get('arms') == list(NAMES) and plan.get('primary_challenger') == NAMES[2]
+            and reader.path(plan['output_directory']) == out, 'Registered144 three-arm PLAN required')
+    pins = reader.verify(plan['hashes'])
+    require(str(reader.root/STATE) not in pins, 'Mutable continuation state cannot be an immutable PLAN pin')
+    for filename in ('complete_monthly_same_report144.py', 'test_complete_monthly_same_report144.py'):
+        path = reader.root/'work'/filename
+        require(pins.get(str(path)) == reader.hash(path), 'Closer source/test must be registered')
+    require(reader.hash(reader.root/'work/complete_monthly_same_report144.py') == sha(__file__),
+            'Running closer differs from bound source')
+    for name in ('raw_source_hashes', 'independent_prepare_source_hashes',
+                 'independent_outcome_source_hashes', 'fundamental_source_hashes'):
+        subset(reader.verify(plan[name]), pins, name)
+    require(len(plan['raw_source_hashes']) == 64, 'Original raw64 scope')
+    for name in ('actual_model_fits_before_registration', 'actual_feature_calculations_before_registration',
+                 'actual_returns_before_registration'):
+        exact_count(plan, name, 0)
+    require(set(plan['inputs']) == {'proposal', 'meta', 'policy', 'original_orders', 'prices', 'sessions',
+                                   'protected_manifest', 'admitted_dataset', 'source_admission'}, 'Exact named inputs')
+    for ref in plan['inputs'].values():
+        key = str(reader.path(ref['path']))
+        require(reader.hash(key) == ref['sha256'] == pins.get(key), 'Unbound named input')
+    require(plan['inputs']['proposal']['sha256'] == PROPOSAL_SHA, 'Frozen proposal binding')
+    verify_admission(reader, plan, pins)
+    proposal = reader.read(plan['inputs']['proposal']['path'])
+    contract=proposal.get('source_contract',{})
+    require(contract.get('directory')=='outputs/monthly_same_report144_admission' and
+            contract.get('method')=='same_current_release_annual_comparison' and
+            contract.get('dataset_sha256')==plan['inputs']['admitted_dataset']['sha256'] and
+            contract.get('audit_sha256')==plan['inputs']['source_admission']['sha256'],
+            'Final proposal source contract binding')
+    cache = reader.read(out/'CACHE.json')
+    require(set(cache) == set(CACHE), 'Six cache artifacts required')
+    cached = reader.verify(cache, out)
+    prep = reader.read(out/'INDEPENDENT_PREPARE.json')
+    outcome = reader.read(out/'INDEPENDENT_OUTCOME.json')
+    for report, stage, checks in ((prep, 'prepare', PREPARE_CHECKS), (outcome, 'evaluate', OUTCOME_CHECKS)):
+        require(report.get('passed') is True and report.get('stage') == stage
+                and all(report.get(key) is True for key in checks), 'Incomplete independent '+stage+' proof')
+        require(report.get('producer_modules_imported') is False, 'Independent producer isolation')
+        for key, file in (('plan_sha256', 'PLAN.json'), ('cache_sha256', 'CACHE.json'),
+                          ('orders_sha256', 'PRETRAIN_ORDERS.json')):
+            require(report.get(key) == reader.hash(out/file), 'Independent receipt binding: '+key)
+    require(prep.get('returns_or_nav_computed') is False,
+            'Prepare scope mismatch')
+    for key, count in (('orders_checked', 366), ('source_cells_checked', 5978), ('stock_cells_checked', 3904),
+                       ('monthly_label_models_fit', 0), ('new_model_fits', 0)):
+        exact_count(prep, key, count)
+    for key, count in (('execution_paths_verified', 9), ('total_monthly_orders_verified', 366),
+                       ('profitability_feature_matrices_verified', 3), ('models_fit', 0), ('producer_model_fits', 0)):
+        exact_count(outcome, key, count)
+    prepared_required = dict(cached, **{str(out/file):reader.hash(out/file) for file in ('PLAN.json', 'CACHE.json')})
+    outcome_files = (*CACHE, *FROZEN, 'CACHE.json', 'FROZEN.json', 'DIAGNOSE_STARTED.json',
+                     'RESULTS.json', 'MONTH_COMPARISON.json', 'ATTRIBUTION.json', 'VALIDATION.json')
+    outcome_files += tuple(name+'_'+mode+'_'+kind+'.json' for name in NAMES for mode in MODES
+                           for kind in ('DAILY', 'TRADES', 'HOLDINGS'))
+    outcome_required = {str(out/file):reader.hash(out/file) for file in outcome_files}
+    for report, source_key, required in ((prep, 'independent_prepare_source_hashes', prepared_required),
+                                       (outcome, 'independent_outcome_source_hashes', outcome_required)):
+        sources = reader.verify(report['source_hashes'])
+        require(sources == reader.verify(plan[source_key]), 'Independent source set mismatch')
+        artifacts = reader.verify(report['artifact_hashes'])
+        subset(required, artifacts, 'required independent artifacts')
+        subset(artifacts, dict(pins, **required), 'independent artifacts')
+    frozen = reader.read(out/'FROZEN.json')
+    require(set(frozen['hashes']) == set(FROZEN), 'Frozen preselection artifacts')
+    reader.verify(frozen['hashes'], out)
+    require(frozen.get('pristine_oos') is False and frozen.get('all_diagnostic_orders_frozen') is True,
+            'Frozen diagnostic scope')
+    train = reader.read(out/'TRAIN_TRIALS.json')
+    selected = selection(train, reader.read(out/'TRAIN_OPEN_TRIALS.json'))
+    require(frozen['selection'] == selected and outcome.get('selected_name') == selected['primary'],
+            'Frozen first88 selection mismatch')
+    require(outcome.get('frozen_sha256') == reader.hash(out/'FROZEN.json'), 'Outcome frozen binding')
+    marker = reader.read(out/'DIAGNOSE_STARTED.json')
+    require(set(marker) == {'plan_sha256', 'frozen_sha256', 'started_utc'} and
+            marker['plan_sha256'] == plan_sha and marker['frozen_sha256'] == reader.hash(out/'FROZEN.json')
+            and outcome.get('diagnose_started_sha256') == reader.hash(out/'DIAGNOSE_STARTED.json'),
+            'Diagnostic start binding')
+    require(utc(marker['started_utc']) < utc(outcome['audit_started_utc']) <= datetime.now(timezone.utc),
+            'Diagnostic start/audit chronology')
+    result = reader.read(out/'RESULTS.json')
+    require(set(result) == set(NAMES) and all(set(result[name]) == set(MODES) for name in NAMES),
+            'Three arms and nine execution paths required')
+    primary = selected['primary']
+    metrics = result[primary]['same_close']['metrics']
+    require(all(number(metrics.get(key)) for key in ('cagr', 'sharpe', 'max_drawdown')), 'Finite selected metrics')
+    require(number(outcome.get('primary_cagr')) and abs(outcome['primary_cagr']-metrics['cagr']) <= 1e-10,
+            'Independent selected CAGR mismatch')
+    target = metrics['cagr'] >= .7
+    require(type(outcome.get('primary_target_reached')) is bool and outcome['primary_target_reached'] == target,
+            'Target must use selected same-close CAGR')
+    orders = reader.read(out/'PRETRAIN_ORDERS.json')
+    require(set(orders) == set(NAMES) and all(isinstance(rows, list) and len(rows) == 122 for rows in orders.values()),
+            '366 original monthly orders required')
+    require(orders[NAMES[0]] == reader.read(plan['inputs']['original_orders']['path']), 'Incumbent orders changed')
+    feature = reader.read(out/'FEATURE_AUDIT.json')
+    exact_count(feature, 'new_model_fits', 0)
+    require(feature.get('latest_event_before_validity_filter') is True and
+            feature.get('same_current_release_for_both_periods') is True and
+            feature.get('sign_method') == 'exact_decimal_cross_products_after_declared_scale_normalization' and
+            feature.get('original_auxiliary_states_and_core_coefficients_preserved') is True and
+            feature.get('original_arrays_unchanged') is True and feature.get('returns_or_nav_computed') is False,
+            'Profitability feature contract')
+    exact_count(feature, 'original_months', 122)
+    exact_count(feature, 'original_width', 49)
+    cells=feature.get('cells')
+    require(isinstance(cells,list) and len(cells)==5978 and
+            all(isinstance(cell,dict) and type(cell.get('available')) is bool for cell in cells),
+            'All profitability source cells required')
+    available=sum(cell['available'] for cell in cells)
+    exact_count(feature, 'common_available_cells', available)
+    exact_count(outcome, 'available_feature_cells', available)
+    exact_count(outcome, 'unavailable_feature_cells', 5978-available)
+    for field,key in (('source_admission_sha256','source_admission'),('admitted_dataset_sha256','admitted_dataset')):
+        expected=plan['inputs'][key]['sha256']
+        require(feature.get(field)==expected and outcome.get(field)==expected,'Feature/outcome admission binding: '+field)
+    tests = reader.read(out/'TESTS.json')
+    require(pins.get(str(out/'TESTS.json')) == reader.hash(out/'TESTS.json'), 'Exact test manifest must be registered')
+    require(tests.get('passed') is True and isinstance(tests.get('suites'), list) ,
+            'Synthetic suites required')
+    found = {}
+    for suite in tests['suites']:
+        name = suite['name']
+        require(isinstance(name, str) and name not in found and suite.get('passed') is True, 'Unique passed synthetic suite')
+        require(type(suite.get('count')) is int and suite['count'] > 0, 'Positive synthetic test count required')
+        for field in ('source', 'log'):
+            ref = suite[field]; key = str(reader.path(ref['path']))
+            require(reader.hash(key) == ref['sha256'] == pins.get(key), 'Unbound synthetic source/log')
+        if name in SUITE_SOURCES:
+            require(Path(suite['source']['path']).name == SUITE_SOURCES[name], 'Wrong suite source identity')
+        ref = suite['log']
+        text = reader.path(ref['path']).read_text()
+        require(re.search(r'Ran '+str(suite['count'])+r' tests? in ', text) and text.rstrip().endswith('OK'),
+                'Synthetic log does not report success')
+        found[name] = suite['count']
+    require(set(SUITE_NAMES) <= set(found), 'All new synthetic suites required')
+    exact_count(tests, 'test_count', sum(found.values()))
+    protected = protected_scan(reader, plan, reader.read(out/'PROTECTED_AFTER.json'))
+    return reader, plan, prep, outcome, frozen, result, orders, train, proposal, protected, found
+
+
+def expected_queue(plan, plan_sha):
+    return [dict(round=144, directory=EXPERIMENT,
+                 plan=dict(path='outputs/'+EXPERIMENT+'/PLAN.json', sha256=plan_sha),
+                 registered_utc=plan['registered_utc'])]
+
+
+def predecessor(state, plan, plan_sha):
+    require(isinstance(state.get('completed'), list) and len(state['completed']) == 143
+            and all(type(x.get('trials')) is int and x['trials'] >= 0 for x in state['completed'])
+            and sum(x['trials'] for x in state['completed']) == 929, 'Expected143 completed rounds and929 trials')
+    require(state['completed'][-1].get('directory') == 'monthly_paired_target143', 'Round143 must be the immediate predecessor')
+    require(not any(x.get('directory') == EXPERIMENT for x in state['completed']), 'Round144 already in history')
+    require(state.get('registered_queue') == expected_queue(plan, plan_sha), 'Exact registered144 queue required')
+
+
+def build(root, plan_sha):
+    root = Path(root).resolve(); out = root/'outputs'/EXPERIMENT
+    require(not (out/'COMPLETION.json').exists(), 'Completion exists; use exact --resume-completion-sha')
+    reader, plan, prep, outcome, frozen, result, orders, train, proposal, protected, suites = validate(root, plan_sha)
+    state_raw = (root/STATE).read_bytes(); state = decode(state_raw)
+    predecessor(state, plan, plan_sha)
+    primary = frozen['selection']['primary']; metrics = result[primary]['same_close']['metrics']
+    base = orders[NAMES[0]]
+    changes = {name:dict(ordered=sum(a['symbols'] != b['symbols'] for a,b in zip(rows,base)),
+                         sets=sum(set(a['symbols']) != set(b['symbols']) for a,b in zip(rows,base)))
+               for name, rows in orders.items()}
+    def ref(path):return dict(path=str(path.relative_to(root)), sha256=reader.hash(path))
+    artifacts = {name:ref(out/name) for name in sorted({Path(p).name for p in reader.seen if Path(p).parent == out})}
+    now = datetime.now(timezone.utc).isoformat()
+    record = dict(schema_version=1, round=144, experiment=EXPERIMENT,
+        status='completed_independently_verified', completed_utc=now, plan_sha256=plan_sha,
+        strategy_evaluations=3, new_challengers=1, new_admitted=int(frozen['selection']['admitted']),
+        new_model_fits=0, primary=primary, selection=frozen['selection'], primary_metrics=metrics,
+        primary_next_open_cost=result[primary]['next_open_cost']['metrics'], all_arm_results=result,
+        target_reached=metrics['cagr'] >= .7, holding_changes=changes,
+        finding='Same-report profitability-improvement candidate passed the fixed first88 dual-execution gate.' if frozen['selection']['admitted'] else
+                'Same-report profitability-improvement candidate failed the fixed first88 dual-execution gate; retain local67.',
+        feature_audit=ref(out/'FEATURE_AUDIT.json'),
+        source_admission=dict(plan['inputs']['source_admission']), admitted_dataset=dict(plan['inputs']['admitted_dataset']),
+        source_admission_is_conditional=True, first_public_version_verified=False,
+        complete_correction_history_verified=False, certified_daily_security_master=False,
+        source_assumptions=reader.read(plan['inputs']['source_admission']['path'])['limitations'],
+        verification=dict(independent_execution_paths=9, independent_orders=366, profitability_feature_matrices=3,
+            source_admission_bound=True, common_availability_verified=True, first88_dual_execution_selection_verified=True,
+            original_arrays_unchanged=True, protected_files=protected, protected_members_rehashed=True,
+            live_cloud_account_state_certified=False,
+            prepare_report=ref(out/'INDEPENDENT_PREPARE.json'), outcome_report=ref(out/'INDEPENDENT_OUTCOME.json'),
+            protected_report=ref(out/'PROTECTED_AFTER.json'), synthetic_tests=suites,
+            max_independent_nav_absolute_error=outcome['max_nav_absolute_difference']),
+        limitations=proposal.get('interpretation_limits',proposal.get('limitations',[]))+['Same-close zero-cost primary is idealized; next-open zero and5bp per side use identical frozen orders.',
+            'No observer, ledger, automation or real order was changed.'],
+        artifacts=artifacts, input_hashes=dict(reader.seen),
+        state_precondition=dict(path=STATE, sha256=hashlib.sha256(state_raw).hexdigest()),
+        continuation_before=state)
+    record['first88_next_open_training'] = reader.read(out/'TRAIN_OPEN_TRIALS.json')
+    record['diagnostic_summary'] = {name:dict(same_close=result[name]['same_close']['metrics'],
+        next_open_cost=result[name]['next_open_cost']['metrics'], training=train[i]['training'],
+        later34=result[name]['same_close']['slices']['later34']) for i,name in enumerate(NAMES)}
+    return record
+
+
+def sync_directory(path):
+    fd = os.open(str(path), os.O_RDONLY)
+    try:os.fsync(fd)
+    finally:os.close(fd)
+
+
+def publish(path, value):
+    """Publish complete fsynced bytes with an exclusive link, never overwrite."""
+    path = Path(path); temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(dir=path.parent, prefix='.COMPLETION.', suffix='.tmp', delete=False) as stream:
+            temporary = Path(stream.name); stream.write(encoded(value)); stream.flush(); os.fsync(stream.fileno())
+        os.link(temporary, path)
+        sync_directory(path.parent)
+    finally:
+        if temporary is not None:temporary.unlink(missing_ok=True)
+
+
+def state_after(completion, completion_ref):
+    state = deepcopy(completion['continuation_before'])
+    metrics = completion['primary_metrics']; primary = completion['primary']; now = completion['completed_utc']
+    state['completed'].append(dict(completed_utc=now, completion=completion_ref, directory=EXPERIMENT,
+        independent_execution_paths=9, new_admitted=completion['new_admitted'], primary=primary,
+        primary_cagr=metrics['cagr'], primary_sharpe=metrics['sharpe'], protected_files=PROTECTED_COUNT,
+        target_reached=completion['target_reached'], trials=3))
+    state['registered_queue'] = []
+    state.update(current=EXPERIMENT, current_status='completed_independently_verified', updated_utc=now,
+        latest_round_receipt=completion_ref, last_result_review=completion['verification']['outcome_report'],
+        last_protected_check=completion['verification']['protected_report'])
+    best = state['best_training_selected_candidate']
+    require(number(best['cagr']), 'Existing best CAGR invalid')
+    if completion['new_admitted'] == 1 and metrics['cagr'] > best['cagr']:
+        state['best_training_selected_candidate'] = dict(directory=EXPERIMENT, spec=primary,
+            cagr=metrics['cagr'], sharpe=metrics['sharpe'], max_drawdown=metrics['max_drawdown'],
+            next_open_5bp_cagr=completion['primary_next_open_cost']['cagr'], observer_promotion=False)
+    state['next_step'] = ('Keep the training-selected incumbent. Further research requires a distinct economic hypothesis '
+        'and prospective registration; do not promote a diagnostic control or rescue this candidate with later34.')
+    state['last_goal_turn_classification'] = ('progress: completed independent profitability-improvement and nine-path validation; target '
+        + ('reached in repeated historical research' if completion['target_reached'] else 'unmet')+'.')
+    return state
+
+
+def commit(root, completion_sha):
+    root = Path(root).resolve(); reader = Reader(root); path = root/'outputs'/EXPERIMENT/'COMPLETION.json'
+    require(digest(completion_sha) and reader.hash(path) == completion_sha, 'Exact completion SHA required')
+    completion = reader.read(path)
+    require(completion.get('round') == 144 and completion.get('experiment') == EXPERIMENT
+            and completion.get('status') == 'completed_independently_verified', 'Wrong completion')
+    require(completion['state_precondition']['path'] == STATE, 'Wrong state precondition')
+    exact_count(completion, 'strategy_evaluations', 3)
+    exact_count(completion, 'new_challengers', 1)
+    exact_count(completion, 'new_model_fits', 0)
+    plan = reader.read(root/'outputs'/EXPERIMENT/'PLAN.json')
+    require(reader.hash(root/'outputs'/EXPERIMENT/'PLAN.json') == completion['plan_sha256'], 'Completion PLAN changed')
+    recorded = completion['input_hashes']
+    require(isinstance(recorded, dict), 'Completion input hash closure required')
+    for key, expected in plan['hashes'].items():
+        require(recorded.get(str(reader.path(key))) == expected, 'Completion omitted a PLAN dependency')
+    manifest = reader.read(plan['inputs']['protected_manifest']['path'])
+    require(len(manifest) == PROTECTED_COUNT, 'Full protected inventory required on resume')
+    for name, expected in manifest.items():
+        member_path = reader.path(name)
+        require(Path(name).is_absolute() and Path(name) == member_path and member_path.is_relative_to(root)
+                and stat.S_ISREG(member_path.stat().st_mode), 'Protected resume member path changed')
+        require(recorded.get(str(member_path)) == expected, 'Completion omitted a protected member')
+    reader.verify(recorded)
+    chosen = selection(reader.read(root/'outputs'/EXPERIMENT/'TRAIN_TRIALS.json'),
+                       reader.read(root/'outputs'/EXPERIMENT/'TRAIN_OPEN_TRIALS.json'))
+    require(completion['selection'] == chosen and completion['primary'] == chosen['primary']
+            and type(completion['new_admitted']) is int
+            and completion['new_admitted'] == int(chosen['admitted']), 'Completion selected arm changed')
+    source_receipt = reader.read(plan['inputs']['source_admission']['path'])
+    require(completion.get('source_admission_is_conditional') is True and
+            all(completion.get(key) is False for key in CERTIFICATIONS) and
+            completion.get('source_assumptions') == source_receipt.get('limitations'),
+            'Completion changed conditional source assumptions')
+    require(completion.get('source_admission') == plan['inputs']['source_admission'] and
+            completion.get('admitted_dataset') == plan['inputs']['admitted_dataset'],
+            'Completion source references changed')
+    results = reader.read(root/'outputs'/EXPERIMENT/'RESULTS.json')
+    metrics = results[chosen['primary']]['same_close']['metrics']
+    require(completion['primary_metrics'] == metrics and number(metrics['cagr'])
+            and type(completion['target_reached']) is bool and completion['target_reached'] == (metrics['cagr'] >= .7),
+            'Completion selected target changed')
+    predecessor(completion['continuation_before'], plan, completion['plan_sha256'])
+    ref = dict(path=str(path.relative_to(root)), sha256=completion_sha)
+    wanted = state_after(completion, ref)
+    destination = root/STATE; before = destination.read_bytes(); current = decode(before)
+    if current == wanted:return False
+    expected = completion['state_precondition']['sha256']
+    require(hashlib.sha256(before).hexdigest() == expected and current == completion['continuation_before'],
+            'Continuation changed; refusing to overwrite history')
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(dir=destination.parent, prefix='.CONTINUATION_STATUS.', suffix='.tmp', delete=False) as stream:
+            temporary=Path(stream.name);stream.write(encoded(wanted));stream.flush();os.fsync(stream.fileno())
+        require(sha(destination) == expected, 'Continuation changed before commit')
+        require(sha(path) == completion_sha, 'Completion changed before commit')
+        os.replace(temporary, destination);sync_directory(destination.parent)
+    finally:
+        if temporary is not None:temporary.unlink(missing_ok=True)
+    return True
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--root', type=Path, default=ROOT)
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument('--plan-sha')
+    mode.add_argument('--resume-completion-sha')
+    args = parser.parse_args(); root=args.root.resolve()
+    path=root/'outputs'/EXPERIMENT/'COMPLETION.json'
+    if args.plan_sha:
+        record=build(root,args.plan_sha);publish(path,record);completion_sha=sha(path)
+    else:completion_sha=args.resume_completion_sha
+    changed=commit(root,completion_sha)
+    record=decode(path.read_bytes())
+    print(json.dumps(dict(completion=dict(path=str(path.relative_to(root)),sha256=completion_sha),
+        state_committed=changed,completed_rounds=144,strategy_evaluations=932,
+        primary=record['primary'],cagr=record['primary_metrics']['cagr'],target_reached=record['target_reached'])))
+
+
+if __name__ == '__main__':main()

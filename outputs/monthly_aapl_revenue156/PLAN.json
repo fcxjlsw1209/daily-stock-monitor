@@ -1,0 +1,474 @@
+{
+  "created_utc": "2026-10-20T19:45:55.542151+00:00",
+  "financial_computations": 0,
+  "freeze_reads": "Metadata and raw-byte hashes only; no PDF or financial body parsed in this phase.",
+  "inputs": {
+    "local.sandbox.sb": {
+      "bytes": 224,
+      "path": "local.sandbox.sb",
+      "sha256": "5fb2aa8b95b27f9574087eb2f1b3c65f234f166fbfb3762b21ba02cbec51100d"
+    },
+    "local_run.py": {
+      "bytes": 11260,
+      "path": "local_run.py",
+      "sha256": "d348efedd4b402e9b9b95fdcccfe79aadc79fa7f38b0c29d4caedcd9f65a7477"
+    },
+    "outputs/monthly_aapl_revenue156/TESTS.json": {
+      "bytes": 2097,
+      "path": "outputs/monthly_aapl_revenue156/TESTS.json",
+      "sha256": "8ff6ea6b43adabcac3e0130c91795b1a482ad4f96c00b179d33a5423f8d39596"
+    },
+    "outputs/monthly_forward_guidance_preflight_v1/SESSIONS.json": {
+      "bytes": 58997,
+      "path": "outputs/monthly_forward_guidance_preflight_v1/SESSIONS.json",
+      "sha256": "c05c15f19bc1f7a3428e456a71199d64f05799ef3c432fa45f7bc485d0ff3cf4"
+    },
+    "outputs/monthly_profitability_extension_sources_v1/EXTRACTION_PLAN.json": {
+      "bytes": 52687,
+      "path": "outputs/monthly_profitability_extension_sources_v1/EXTRACTION_PLAN.json",
+      "sha256": "cc6f7b11ce8a4f80a72fab27bb6ce7676f0dd893bfe92adb9d0de5513d01ae50"
+    },
+    "run_local.sh": {
+      "bytes": 228,
+      "path": "run_local.sh",
+      "sha256": "b8a84186d5b4501017fed46c5fb339f924b5500b1935510236e6cdc3a3bda4e9"
+    },
+    "work/after141_aapl_source_extract.py": {
+      "bytes": 7558,
+      "path": "work/after141_aapl_source_extract.py",
+      "sha256": "a4e18ca94928e4924e8e6a40c8863e184c5fc42bf92a5da7cd9213313d496fda"
+    },
+    "work/after155_aapl_revenue_source.py": {
+      "bytes": 24003,
+      "path": "work/after155_aapl_revenue_source.py",
+      "sha256": "1965d6792d9cc8fa0a132e17bee84d4f3bfc4cc4631bd4dc4297d8d17bdc1080"
+    },
+    "work/after155_aapl_revenue_tests.py": {
+      "bytes": 10462,
+      "path": "work/after155_aapl_revenue_tests.py",
+      "sha256": "0ee33d0adf22a1d3f73dac7952bb18e473e776e38eadef5638fc171de040d9a5"
+    },
+    "work/after155_multi_issuer_source_map.json": {
+      "bytes": 12991,
+      "path": "work/after155_multi_issuer_source_map.json",
+      "sha256": "f4bb4432920b6e57c46626a148be1b58555a64a05704a89483630251726ba041"
+    }
+  },
+  "known_exclusions": [
+    {
+      "fiscal_year": 2015,
+      "reason": "FY2016 comparative is not an FY2015 original. Earlier start metadata remains unknown.",
+      "status": "NO_SCOPED_OWN_YEAR_ORIGINAL"
+    }
+  ],
+  "new_trials": 0,
+  "observer_writes": 0,
+  "pdf_runtime": {
+    "bundle_site_packages": "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages",
+    "execution": "./run_local.sh",
+    "note": "pdfplumber cannot import under pinned Python3.9; use already installed compatible pypdf and PDFium without downloading.",
+    "project_python": "3.9.6",
+    "pypdf": "6.10.0",
+    "pypdfium2": "5.14.0"
+  },
+  "pdf_runtime_hashes": {
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/__init__.py": "612ff566b4378c13c7b1180cb2da89ac0b6cde5500a63fe530e30ae6a88b1b9c",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_cmap.py": "0b8eea205808d522a7e4bad3e222b39c6964752b58a3a3b7259904292ee09241",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_codecs/__init__.py": "035d44440b70b56ae91953b34d296b0b56b74fd1c29562c1591c067b7fcf7eed",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_codecs/_codecs.py": "e3aa11649c92c06c42269d648c87abee3b3f4d84a38f81acda2d9471edeff9e1",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_codecs/adobe_glyphs.py": "b7770314f0eac08cf5c3d07481d5738dd73c7842bd02e4639397fb95a130fdf6",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_codecs/core_font_metrics.py": "14b3d66d3678871790597820d63a397b8a972821642846397bce54d9b2c533a9",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_codecs/pdfdoc.py": "c5f4af30562cbf1b9a490d14bbdbd90ca681d16bbce61d6e0a20758bdac07145",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_codecs/std.py": "0f240cb84a40184a52f6ecb58d67f87278fe92a4a13ce0228f9b08ed0d580fc1",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_codecs/symbol.py": "9c86864089615822623cc1ebc149661871fefdf397c842af82e466b8a5dc1809",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_codecs/zapfding.py": "3d0c63c510bad7a778d711777b15713f55bc9cce10ad97e33b7966b4bc6913fb",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_crypt_providers/__init__.py": "2b767a02e5e15d579780b7adf93ba4ab682df47eba3a076ea6cbf1212d429a42",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_crypt_providers/_base.py": "fdfe77323eaf8af84464c438bcdc4de46d083a0158fa7e7f95e91ed1cfea88d5",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_crypt_providers/_cryptography.py": "f733a4933312b17e1a974454934a8cd1d29f7dc1e47b8c1f9845caf64c28450f",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_crypt_providers/_fallback.py": "bec628a30475602015feaf87add21986451cac26fa1ef44134c626d3742d094f",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_crypt_providers/_pycryptodome.py": "bb8bed2e8ecdbfa02a6513671f5a0d3425af4d86a8c1f4957febe5916def4fab",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_doc_common.py": "54a5f4cd06ba5f658a9ed175b9c6224134b3dcf9f98ab11fc4da1f36e02a262e",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_encryption.py": "319f3e012455b473ceb9c51df87f4a45f94eab902f88f14f8e5769901540a1ce",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_font.py": "50ad53071d7979e53daa4661bf38a0e1823eb6365382007eca20b414b73767bb",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_page.py": "f93c459a77c433dbd2541e94d1fdfa599e486ca5fe3e3efe9348eaf94552639c",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_page_labels.py": "bfa0a9bba3495c2f5143f05e19d866d39695f19eb3c623d1367eaa129d41b951",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_protocols.py": "eeacfdd8b55d3eb6244a97543e9029f54e065b98f13414df55ca545b052110ea",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_reader.py": "9aaa6780e62c061509f0d3b658dbdac185404fecadac01f7f9d35ac009ce2024",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_text_extraction/__init__.py": "6b7677deb4154e230a1adc2deff6df5e53e8b1b493f2bcc42e8367b74e77fd0c",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_text_extraction/_layout_mode/__init__.py": "454408c22530ce778db5c9639d533a8e445a7a6ea980fee6383dbe3019ada6fc",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_text_extraction/_layout_mode/_fixed_width_page.py": "789bde0dbc8ca281bdef4a893a13394706fd668cb2243ca7cd6a55f5aec84b6d",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_text_extraction/_layout_mode/_text_state_manager.py": "5d5ac88de4dde6349d31ec41431b34b4be48e5150e8ad4663759842ce70a626e",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_text_extraction/_layout_mode/_text_state_params.py": "872c3aa670bcba9064a055542772c7f21048207acdc22a9aa9c632cc8232afa6",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_text_extraction/_text_extractor.py": "b54a9bbc2ebd305706406501b7f63caeab1535ffbcb0c171003c8a9da8b4a232",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_utils.py": "2df8188c0ad153b97d19201bb681b3bbdbd507e7243e2d657b4eb543a7072656",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_version.py": "2416f2ebd53fb332339ad719e9569c95eedc0157bb9e1573ee0205d0d07716aa",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_writer.py": "1819e02d0b0bcd9c1fa483dc5c22e2a7849be22c93474c33c235dd6dd076a4e3",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/annotations/__init__.py": "7f693ffa3027dfd082076ecac50fdef771a29e7ce40076d49e749e1899758f21",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/annotations/_base.py": "79ea1cf6fdb0d798c05212978f8f25d5b07ae98801815fb6bf92085091febf0b",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/annotations/_markup_annotations.py": "b162a1181086ed7f688c0bc4691304a093fe7d8e8572b94574e9ad79f219066d",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/annotations/_non_markup_annotations.py": "676214bdc08e713729261497adec7ff6b8983360fae17c4543fbda735d013515",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/constants.py": "9f672ef873a6a16e7feb14165442a8e36ad2249d0ff7484bd6cf33fa9174a1cb",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/errors.py": "070d56f61c4eb03830ab053a628436974f89894c93aba979423542afe5b81850",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/filters.py": "237c2d528bdaeccdd68233730b2a74ac634854a9899a34bcebc8d8af5c0b347f",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/generic/__init__.py": "56ba9d61fb5010278f0d4dab5d532012a45a60547ccce57f7ef260a35f71feec",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/generic/_appearance_stream.py": "31c0cbd2070a34df4d5cd53a64fc60b7b398a25dbe168356615980c20030e0f3",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/generic/_base.py": "f488de45b70b1eb73f94b1947d564c8ee83ca3eb7af17ece35295f9c32a73e64",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/generic/_data_structures.py": "35f76eb49aa9f253fb1cd3e5eb9e3875b80f9bbc2616c755e376bde054e7b782",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/generic/_files.py": "36d4a4468e890608ac8b840ecab56778ef3dd5ba15b2e636e614708a3e97f510",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/generic/_fit.py": "5ff8800c98f5618e0f512b52eeb1560b6c51d8b5154af2ad500932d001402033",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/generic/_image_inline.py": "2a5000fd91a2446ce368f1b74af6eda8619e36a6d065517e515536302f2efd28",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/generic/_image_xobject.py": "7f560334bae2f927a5faaa72ca75c0ee7c7e662493a8061433ce9338414883af",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/generic/_link.py": "b4da99d86616c6a80566c948d032d97a85e59ed6b182c1c2f1791615f496c781",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/generic/_outline.py": "a8a6cc5f8d8e59faa7a2922213a054cba12f7532c67b766d8da89637ce49a5a6",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/generic/_rectangle.py": "94ea927c58af43180137d2d4f5aa87a313c7f1a08f4c350d81166c34451de9f7",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/generic/_utils.py": "bd30c07ac7c6f9c24d0ca8a5cff91b805a1d0084f37797a3a695871a3bc2a279",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/generic/_viewerpref.py": "b6a5445a6bddfc359316848ca51393b25d528a338d9ef71267e8d74e8fdc8cea",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/pagerange.py": "d9bb76d634199bef5aab66d57f74d7b87f3fc06571edbf53e94acc1570842614",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/papersizes.py": "e93cf9b1f34dff724e51aa58f3753e95a928867a57600d2148440d98e54b14bf",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/types.py": "b09ef01f393b111fc227b90ffacf2ef5ac459e40979c5a6bf27cdc8f50314dab",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/xmp.py": "00289e95b3fb680b03cb67e67b8a3d61de32ec7e0a7c46d4337494c4c97c8c8e",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/__init__.py": "d9df3b168e9e4fdc936fc42006c9a7d0c9dc682ee2564bfed76c0e51d56ba8cc",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/__main__.py": "1fa1222f691b29143a1f135e294fb07876f78dae1f9a57162e3ee1a5408acbf5",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/_helpers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/_helpers/attachment.py": "20e57c328d582213c278a9e128e7f168cbdaa9626c447709252d02a101b419c4",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/_helpers/bitmap.py": "ddb2143ea6865ba030aa1d0f668b11f9b51689678aa25849bd0aba9479304204",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/_helpers/document.py": "e3c4828943b9961601276e0debcc8e69a01561f1e2de4def05ba47c50ed44dfc",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/_helpers/matrix.py": "8866395a615baf73ce0d5bab839df5ec4b70f3e6f1912e323ec3d182ea12f724",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/_helpers/misc.py": "2be55133d3defe64992d8f6d7d9276722ac3a05f26c26a81e70a4d51c7ac8457",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/_helpers/page.py": "447690f7b2cbf788e0a463a851f75df0bb6762b4f1b8f62e0c901e5f38255fcb",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/_helpers/pageobjects.py": "b29852d92ac3bc48da8afb42e98b641cce22a9908ffb7dfb798d27755f715dde",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/_helpers/sysfontinfo.py": "a197cab5eb076d42969a7027ddeefc3e4e30418a9459a2c9854c6817a6e5a5c1",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/_helpers/textpage.py": "fd76e47093831b666f7b8f28ce76810917e1b1fc9b23a2c5e311e96567add0f1",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/_helpers/unsupported.py": "b7df3f0d4ff42a146d79cc8cdd06847287376a8063ad2764e264119b3898a4d2",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/_lazy.py": "0620fb7e50b2e84e48eed21206f20965f616e36c00a2ee8b7883c417cc0ce8f4",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/_library_scope.py": "e9c89014250f7ed85b995f630788a67a5353681aab1b5550c4c3c230381116ba",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/internal/__init__.py": "4275d69011d28d2fc540ed106e8e4f7305122f16c57e9beb4271733165c05911",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/internal/bases.py": "b37b938fd8c4e3397755f0dfd7323b24e700ec0f10c46836a3cf49e3a92a729d",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/internal/consts.py": "392066ae4081cf603658849f79fcddbdb1869619b1e4bf18de8d4c548e83b56b",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/internal/utils.py": "4575735eabb3ab14da4fb0a6ebd75b6bebc7c8dc3b4819bd74d9cd2b727de1eb",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/raw.py": "34390a3e3e0f7c20ad9cf699c569c97212838f7f08584ea44bebabf40b4880da",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/version.json": "5b7842f5110adcf3202b291d3f65492fc27aaa707bf08084f53fd1e5e1e626f0",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2/version.py": "61a9a45801e7afcf8a59bb4b3a740df5fb782142b11b7fac811302937f56aedf",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2_raw/__init__.py": "6a794fed6419c21f801de1a0ca185e4f8637b8ef0665d95160d916fdf6307578",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2_raw/bindings.py": "4fd3f84e5f321353546748ec7e25f4984180f53c14e6087830c109b5cbbbacfa",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2_raw/libpdfium.dylib": "d50859db55d1c97ad54c88aebfe0e306c72d5836709b6b52bfba9681d995c6d6",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2_raw/version.json": "3d5823a04ac7e0dfd9074c27ac98a5c699aad8c933e12e705483aedaa92754bf",
+    "/Users/shiweili/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdfium2_raw/version.py": "873743f830681b1070c5a6e3ad48298ede926ba87e5527e65beafe5cf5409ee4"
+  },
+  "profile": {
+    "admission": "No financial, identity, currency, accounting-chain, factor or strategy admission.",
+    "allowed_days": [
+      364,
+      371
+    ],
+    "ambiguity": "Preserve every planned year, explicit HELD with reason; never choose replacement sources or later comparative values.",
+    "annual_end": "Final Saturday of September, matching declared original fiscal year.",
+    "availability": "First pinned calendar session strictly after current parent release date for BOTH cells and all contextual notes; date-only precision. Historical first-public bytes unverified.",
+    "balance_sheet_page_1based": 2,
+    "columns": {
+      "comparative_annual": 3,
+      "current_annual": 2,
+      "current_quarter": 0,
+      "prior_quarter": 1
+    },
+    "comparative_start": "Earlier scoped ORIGINAL supplies its current-period boundary metadata only, and must precede current publication; otherwise explicit unknown. No value substitution.",
+    "currency": "Preserve literal dollar evidence; dollar_literal_only, ISO unset. No USD certification from the symbol or issuer nationality.",
+    "current_start": "Day after prior fiscal end explicitly printed in the same original balance sheet, checked against operations comparative end.",
+    "duration_literal": "Twelve Months Ended",
+    "exact_total_labels": [
+      "Net sales",
+      "Total net sales"
+    ],
+    "fiscal_years": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "issuer": "Apple Inc.",
+    "notes": "Bounded keyword context from all PDF pages and parent article body. Keywords are review leads, not confirmed restatements. Absence does not establish accounting continuity.",
+    "operations_page_1based": 1,
+    "row_policy": "Exactly one complete four-cell row across both total labels; section-only labels excluded. Duplicate/ambiguous totals held. Never sum products/services.",
+    "scale": "Explicit operations heading In millions; retain multiplier separately from exact displayed decimal.",
+    "symbol": "AAPL"
+  },
+  "sources": [
+    {
+      "fiscal_year": 2016,
+      "fiscal_year_end": "2016-09-24",
+      "parent_receipt": {
+        "bytes": 470,
+        "path": "outputs/monthly_earnings_repair/apple/raw/0690ca16919ea0b1.meta.json",
+        "sha256": "5a023d1631c605de0722b12c2f8099b8382cf1d7c192dba92682fb5f5fba2918"
+      },
+      "parent_release": {
+        "bytes": 138659,
+        "path": "outputs/monthly_earnings_repair/apple/raw/0690ca16919ea0b1.html",
+        "sha256": "f416c3442fcc7c116daf6f2ae4ee47d53a24107f141c65416b6a5b11bf15f4ed"
+      },
+      "raw": {
+        "bytes": 128276,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/2cf04e57817572db21f7.response",
+        "sha256": "726ea95ab6be8a65ed84cf9ab859558bf07a3eedf6395d2f6553bb475b65e555"
+      },
+      "receipt": {
+        "bytes": 804,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/2cf04e57817572db21f7.meta.json",
+        "sha256": "6ad002bc83f6fe56cd2cee08b20904ddabf88ed296a38e57ffdbf9ee00cc2494"
+      },
+      "release_date": "2016-10-25",
+      "source_url": "https://www.apple.com/newsroom/pdfs/Q4FY16ConsolidatedFinancialStatements.pdf",
+      "symbol": "AAPL"
+    },
+    {
+      "fiscal_year": 2017,
+      "fiscal_year_end": "2017-09-30",
+      "parent_receipt": {
+        "bytes": 470,
+        "path": "outputs/monthly_earnings_repair/apple/raw/f35d0127c50a42e9.meta.json",
+        "sha256": "6e8232b30c597885cf6e0d36e4fccf209d75633e209fa76cfe3bfae416864ba1"
+      },
+      "parent_release": {
+        "bytes": 141046,
+        "path": "outputs/monthly_earnings_repair/apple/raw/f35d0127c50a42e9.html",
+        "sha256": "cda0510726992059c839d5c5917f515c8765bc3c7d65da968cbbf594cb6dba51"
+      },
+      "raw": {
+        "bytes": 100791,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/2475857c4f2fafadde0c.response",
+        "sha256": "3aaedcaad7d3a3375c48a2ed05bc1147f55b6e84767ddd7571739987c09e0205"
+      },
+      "receipt": {
+        "bytes": 820,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/2475857c4f2fafadde0c.meta.json",
+        "sha256": "62f4442a93d365b74e1ffd73576404267c283e56c4642553033ed018e8efc449"
+      },
+      "release_date": "2017-11-02",
+      "source_url": "https://www.apple.com/newsroom/pdfs/fy17-q4/Q4FY17ConsolidatedFinancialStatements.pdf",
+      "symbol": "AAPL"
+    },
+    {
+      "fiscal_year": 2018,
+      "fiscal_year_end": "2018-09-29",
+      "parent_receipt": {
+        "bytes": 470,
+        "path": "outputs/monthly_earnings_repair/apple/raw/3dec23df79e5e7fb.meta.json",
+        "sha256": "8d903e7958dc4b089893a989d6f6f8bc23ce590413a0dac69ebcddc59bdef9eb"
+      },
+      "parent_release": {
+        "bytes": 142936,
+        "path": "outputs/monthly_earnings_repair/apple/raw/3dec23df79e5e7fb.html",
+        "sha256": "46a456503621219ceb998bf397bf953dc81be64149014a2bc915e367c4af981c"
+      },
+      "raw": {
+        "bytes": 126709,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/ff482478590ec481518b.response",
+        "sha256": "c1840d03c47114c92b9c71dc44d3c6738ba07564e8fd8922e92abf13e535857a"
+      },
+      "receipt": {
+        "bytes": 812,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/ff482478590ec481518b.meta.json",
+        "sha256": "65bc24e67ca7e6f836279df8a7c9e2919ad64465a962279756dd1489f8e1928b"
+      },
+      "release_date": "2018-11-01",
+      "source_url": "https://www.apple.com/newsroom/pdfs/Q4-FY18-Consolidated-Financial-Statements.pdf",
+      "symbol": "AAPL"
+    },
+    {
+      "fiscal_year": 2019,
+      "fiscal_year_end": "2019-09-28",
+      "parent_receipt": {
+        "bytes": 470,
+        "path": "outputs/monthly_earnings_repair/apple/raw/95b0a74e41e19912.meta.json",
+        "sha256": "812169938660cbb0cffb2a5d8c10d0d7237fe99d785c987415962dbf9dec3172"
+      },
+      "parent_release": {
+        "bytes": 141806,
+        "path": "outputs/monthly_earnings_repair/apple/raw/95b0a74e41e19912.html",
+        "sha256": "65bbb60de97ee9469fb6107a1c81c1b16de1d26dca0d59fbd2062553aaee946e"
+      },
+      "raw": {
+        "bytes": 134685,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/2eef253397c804142241.response",
+        "sha256": "f8f23442744ca4e655a485dc4dce0dc32b524954c2dec5f21a4b2302905b9819"
+      },
+      "receipt": {
+        "bytes": 828,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/2eef253397c804142241.meta.json",
+        "sha256": "50eadacea7e34c47d71a04fc3bfefdf46825cc7d37845330eac94a9ad15d5b6a"
+      },
+      "release_date": "2019-10-30",
+      "source_url": "https://www.apple.com/newsroom/pdfs/Q4%20FY19%20Consolidated%20Financial%20Statements.pdf",
+      "symbol": "AAPL"
+    },
+    {
+      "fiscal_year": 2020,
+      "fiscal_year_end": "2020-09-26",
+      "parent_receipt": {
+        "bytes": 470,
+        "path": "outputs/monthly_earnings_repair/apple/raw/4b6c4dba223af656.meta.json",
+        "sha256": "f0ef80a02780f4aec6f9da36a4aed4556d48510e0845068d226d9e4ccb66bf00"
+      },
+      "parent_release": {
+        "bytes": 142194,
+        "path": "outputs/monthly_earnings_repair/apple/raw/4b6c4dba223af656.html",
+        "sha256": "2b3dda862079598c762a8a4031b95f4474fc6dc75fd3ed3cc18088c196756a63"
+      },
+      "raw": {
+        "bytes": 1168227,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/5ee12714815052ca3660.response",
+        "sha256": "039f634214265f74b42bbbc64810481e0d5b4a85a03d42b8510b67964ac8c618"
+      },
+      "receipt": {
+        "bytes": 814,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/5ee12714815052ca3660.meta.json",
+        "sha256": "1efb63c20c6dcf8fc90baf4ecde757c86289c56d4a2f248e363701e0588bc84e"
+      },
+      "release_date": "2020-10-29",
+      "source_url": "https://www.apple.com/newsroom/pdfs/FY20_Q4_Consolidated_Financial_Statements.pdf",
+      "symbol": "AAPL"
+    },
+    {
+      "fiscal_year": 2021,
+      "fiscal_year_end": "2021-09-25",
+      "parent_receipt": {
+        "bytes": 470,
+        "path": "outputs/monthly_earnings_repair/apple/raw/1bb7611b4e2e7bd7.meta.json",
+        "sha256": "021068488bb9faa1228a5a761eaddd813d7b1a9006e2c4c7211e962eee824164"
+      },
+      "parent_release": {
+        "bytes": 142653,
+        "path": "outputs/monthly_earnings_repair/apple/raw/1bb7611b4e2e7bd7.html",
+        "sha256": "889ed907e354bdd1385abdb72ac2b500edb139cc5addfeed0c522258d766e3e3"
+      },
+      "raw": {
+        "bytes": 884792,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/b957f41499326dc7a838.response",
+        "sha256": "1f4d188c324cf611e46c640b4232687a398d309178f89876dd9f63272537f6c9"
+      },
+      "receipt": {
+        "bytes": 812,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/b957f41499326dc7a838.meta.json",
+        "sha256": "5012e39e390212c0247c756ef006bf64fa8f3bf2c79bc054bad2250f12bdb81c"
+      },
+      "release_date": "2021-10-28",
+      "source_url": "https://www.apple.com/newsroom/pdfs/FY21_Q4_Consolidated_Financial_Statements.pdf",
+      "symbol": "AAPL"
+    },
+    {
+      "fiscal_year": 2022,
+      "fiscal_year_end": "2022-09-24",
+      "parent_receipt": {
+        "bytes": 470,
+        "path": "outputs/monthly_earnings_repair/apple/raw/02a47e6c4985a8a4.meta.json",
+        "sha256": "0a3df4aa8742697f686f8831e0c0bbc4e64de0069aba44fd2f53ca731e6c8a67"
+      },
+      "parent_release": {
+        "bytes": 140496,
+        "path": "outputs/monthly_earnings_repair/apple/raw/02a47e6c4985a8a4.html",
+        "sha256": "b8e3879a84a6e8e05fca3dbc85242c267a9e182ec98837f0a0740c8c2c53921a"
+      },
+      "raw": {
+        "bytes": 4003486,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/4cc1456de96abea82af3.response",
+        "sha256": "bf169af3c7143cf0c39d70fa7c077a804bdfdb131671d949e838d35161e31ec9"
+      },
+      "receipt": {
+        "bytes": 814,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/4cc1456de96abea82af3.meta.json",
+        "sha256": "a78fc501374ff9f3af2ae61899bff7af9160688d5bbf1f84ef9b60744b5a4fae"
+      },
+      "release_date": "2022-10-27",
+      "source_url": "https://www.apple.com/newsroom/pdfs/FY22_Q4_Consolidated_Financial_Statements.pdf",
+      "symbol": "AAPL"
+    },
+    {
+      "fiscal_year": 2023,
+      "fiscal_year_end": "2023-09-30",
+      "parent_receipt": {
+        "bytes": 470,
+        "path": "outputs/monthly_earnings_repair/apple/raw/a8725cfd0fab3b62.meta.json",
+        "sha256": "9281f4c2f994e7c7f05437fdb11d2a041fb2a5e00383fa645b9ccef2839f6230"
+      },
+      "parent_release": {
+        "bytes": 142504,
+        "path": "outputs/monthly_earnings_repair/apple/raw/a8725cfd0fab3b62.html",
+        "sha256": "64b3a6b82cae310a623f9943b23d4c004d051b516480366e7a58a8dba75581da"
+      },
+      "raw": {
+        "bytes": 4007247,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/8955213a52fa234d6c9c.response",
+        "sha256": "db786041d2e0f87d77a731323a56a3baa3457750fdfe8c61d88264f1465f4234"
+      },
+      "receipt": {
+        "bytes": 834,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/8955213a52fa234d6c9c.meta.json",
+        "sha256": "135d1d99c09d9e6be2adc365bb4b48926c41ffa1a6ec91fd55937d3f261846d7"
+      },
+      "release_date": "2023-11-02",
+      "source_url": "https://www.apple.com/newsroom/pdfs/fy2023-q4/FY23_Q4_Consolidated_Financial_Statements.pdf",
+      "symbol": "AAPL"
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_year_end": "2024-09-28",
+      "parent_receipt": {
+        "bytes": 470,
+        "path": "outputs/monthly_earnings_repair/apple/raw/ed443f513b342ba1.meta.json",
+        "sha256": "ac39a273dc4054f811477aba473d6cd026d91acf934a2c2adfa5dd8e26307b0b"
+      },
+      "parent_release": {
+        "bytes": 139831,
+        "path": "outputs/monthly_earnings_repair/apple/raw/ed443f513b342ba1.html",
+        "sha256": "e93362b442be85ed43030d9817e422c962814fff1510762df926b3f5cf06bccd"
+      },
+      "raw": {
+        "bytes": 4919216,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/15c64bbf6304155f8d0d.response",
+        "sha256": "af9646018330484238d357f1168ae74194fd768f4ea9921e4b2828c88309320c"
+      },
+      "receipt": {
+        "bytes": 834,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/15c64bbf6304155f8d0d.meta.json",
+        "sha256": "4340cda95569e4ed0c4451eeedf6cfa4ea91781665a3d947fcdac493319ec738"
+      },
+      "release_date": "2024-10-31",
+      "source_url": "https://www.apple.com/newsroom/pdfs/fy2024-q4/FY24_Q4_Consolidated_Financial_Statements.pdf",
+      "symbol": "AAPL"
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_year_end": "2025-09-27",
+      "parent_receipt": {
+        "bytes": 470,
+        "path": "outputs/monthly_earnings_repair/apple/raw/93a74315b98d9959.meta.json",
+        "sha256": "1d3bf833b2baedd00bd7165b9eb3dfc87fa288aa9a03ab3cad2e3b9b14b3ecc8"
+      },
+      "parent_release": {
+        "bytes": 140270,
+        "path": "outputs/monthly_earnings_repair/apple/raw/93a74315b98d9959.html",
+        "sha256": "e2242e2aadbe82784037d8d31fa9629db03ce3b4824e2b547a2ccc9654ceca5f"
+      },
+      "raw": {
+        "bytes": 4919649,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/bddb7684ae5b6ce16fb3.response",
+        "sha256": "43e7f0730b3cce0fc37301a2f43c29712bbde6ab299d97c6df345fd0c754508a"
+      },
+      "receipt": {
+        "bytes": 834,
+        "path": "outputs/monthly_aapl_newsroom_financial_source_v1/raw/bddb7684ae5b6ce16fb3.meta.json",
+        "sha256": "6811a478b9a2f0a93f99cac0c970a2c8c85b66100702eb017816786a2d3d1763"
+      },
+      "release_date": "2025-10-30",
+      "source_url": "https://www.apple.com/newsroom/pdfs/fy2025-q4/FY25_Q4_Consolidated_Financial_Statements.pdf",
+      "symbol": "AAPL"
+    }
+  ],
+  "status": "FROZEN_SOURCE_ONLY_PROFILE"
+}

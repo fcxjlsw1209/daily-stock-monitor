@@ -1,0 +1,48 @@
+"""Construct a new unfrozen196 host from completed195 lifecycle; no signals."""
+from pathlib import Path
+p=Path('work/monthly_pairwise_majority196_host.py');assert not p.exists()
+s=Path('work/monthly_volume_cluster195_host.py').read_text()
+s=s.replace('monthly_volume_cluster195','monthly_pairwise_majority196').replace('volumecluster195','majority196').replace('volume195','majority196').replace('VOLUME_CLUSTER195','PAIRWISE_MAJORITY196')
+s=s.replace('Round195','Round196').replace('unsigned high-volume event clustering','pairwise block-return majority').replace('unsigned volume clustering and matched frequency','pairwise majority and matched pooled balance').replace('unsigned high-volume clustering versus frequency','pairwise monthly majority versus pooled win balance').replace('new_volume_cluster_features','new_pairwise_majority_features')
+s=s.replace("PRIOR = ROOT / 'outputs/monthly_trade_wc194'", "PRIOR = ROOT / 'outputs/monthly_volume_cluster195'")
+s=s.replace("'volume_cluster', 'volume_frequency_control'", "'tournament_majority', 'tournament_balance_control'")
+s=s.replace("ESTIMATE_FIELDS = ('event_observations', 'adjacent_pair_observations', 'rolling_medians_computed')", "ESTIMATE_FIELDS = ('valid_price_observations', 'block_comparisons', 'pair_majority_decisions')")
+a=s.index('MODEL_FIT_ACCOUNTING = ');b=s.index('\nCONTEXT =',a)
+s=s[:a]+"MODEL_FIT_ACCOUNTING = 'Zero new predictive model fits; exact descriptive block-return comparisons and opponent majorities. Each unordered pair counted once, main pass only; repeated observations are not independent samples.'"+s[b:]
+s=s.replace('1a6e06499d35667ae435887f3d2d2e56fce4ea4194531032b2ab4969b046b0a0','9d95fc3b4fba608a2751aa0ecaeab0eacaee1d5b9bdfdad6f51024b7af628d3b')
+s=s.replace('ea5d8c96d8c340cf01d6a6db4ec424a1379c03a6545446039821d2e17828fe40','PENDING_SOURCE196')
+s=s.replace('6bac3e3aedf4aa9350cbc1b9583c0d7231236f44aa88b1b5d5276aad10bd531c','170af7dd7ac97eb2aaa61e239a1937dd574f159d80040d5ab5d0be9f388a9374')
+s=s.replace('ab8a8171a27dd7218408633145bcc8aaee6398ccb16f52b3d58d6926f6ee8219','a5192918944fd2b6d92ab4d88805b2223de188e46e953de6cd2dd1e8fe0e502c')
+s=s.replace('670802971a2cf2d4975b3cc387f3f470a338835d6db03ba086bca99638a0bf16','fbb68f08a4e65616f73276b6d5f042e66ef443d5873a6bc0d871f3b0efe6a5dc')
+a=s.index('FEATURE_FLAGS = ');b=s.index('\nTEST_RECEIPT',a)
+s=s[:a]+"FEATURE_FLAGS = ('passed','independent_scalar_rebuild','exact_binary_ratio_comparisons_checked','opponent_specific_majorities_checked','matched_balance_checked','full253_price_support_checked','official_session_windows_checked','monthend_queries_checked','exact_common_availability','audit_checked','no_future_or_outcome_inputs','centered_high_tie_ranks_checked')"+s[b:]
+s=s.replace("limitation=context['limitations'] + ['Source audit clarifies native as original stored heterogeneous normalized/raw volume, not one uniform share-volume convention. Formula and original context bytes unchanged.'],source_unit_clarification='See hash-bound source_label_correction; no new adjustments or masks; within-window corporate-action consistency is not certified.',", "limitation=context['limitations'],")
+s=s.replace('Physically truncate volume','Physically truncate adjusted close').replace('Truncated source prefix audit','Truncated adjusted-close source prefix audit')
+s=s.replace('volume_source_binding','price_source_binding').replace('volume_inputs','price_inputs')
+s=s.replace("source_column='Original stored heterogeneous normalized/raw volume; no re-adjustment or imputation'", "source_column='Original stored adjusted close; exact binary64 rational comparisons; no new adjustment or imputation'")
+s=s.replace('Volume source admission','Adjusted-close source admission').replace('Volume raw source lineage','Adjusted-close raw source lineage')
+s=s.replace("source.get('volume')", "source.get('adj')").replace("return {'volume':source['volume']}", "return {'adj':source['adj']}")
+s=s.replace('Original stored volume required','Original stored adjusted close required').replace("set(panel) == {'volume'}", "set(panel) == {'adj'}").replace('Original stored volume frame required','Original stored adjusted-close frame required')
+a=s.index('def estimate_counts(check):');b=s.index('\n\ndef feature_prefix_panel',a)
+s=s[:a]+'''def estimate_counts(check):
+    sizes=check.get('source_available_by_event')
+    require(isinstance(sizes,list) and len(sizes)==122 and all(type(n) is int and 0<=n<=49 for n in sizes),'Invalid source-domain sizes')
+    require(type(check.get('source_available_cells')) is int and check['source_available_cells']==sum(sizes),'Source coverage differs')
+    require(type(check.get('available_cells')) is int and check['available_cells']==sum(n if n>=2 else 0 for n in sizes),'Shared pair support differs')
+    pairs=sum(n*(n-1)//2 for n in sizes)
+    expected=dict(valid_price_observations=253*sum(sizes),block_comparisons=12*pairs,pair_majority_decisions=pairs)
+    counts={key:check.get(key) for key in ESTIMATE_FIELDS}
+    require(all(type(value) is int and value==expected[key] for key,value in counts.items()),'Descriptive pair/price counts differ')
+    return counts
+'''+s[b:]
+s=s.replace("len(state['completed']) == 192 and sum(r['trials'] for r in state['completed']) == 1093", "len(state['completed']) == 193 and sum(r['trials'] for r in state['completed']) == 1096")
+s=s.replace('Expected192 completed entries /1093 trials','Expected193 completed entries /1096 trials').replace('Round194 must','Round195 must')
+s=s.replace('actual_volume_events_before_registration=0, actual_rolling_medians_before_registration=0', 'actual_block_comparisons_before_registration=0, actual_pair_majority_decisions_before_registration=0')
+s=s.replace("lo,hi=(-.25,.25) if key=='candidate' else (0.,1.)", "lo,hi=-1.,1.")
+s=s.replace("feature_panel='original stored heterogeneous normalized/raw volume'", "feature_panel='original stored adjusted close with exact endpoint comparisons'")
+s=s.replace('close_vs_frequency','close_vs_balance').replace('open_vs_frequency','open_vs_balance')
+s=s.replace('unsigned_volume_cluster=True', 'pairwise_monthly_majority=True')
+s=s.replace("len(state['completed']) == 193 and sum(r['trials'] for r in state['completed']) == 1096, 'Wrong final counters'", "len(state['completed']) == 194 and sum(r['trials'] for r in state['completed']) == 1099, 'Wrong final counters'")
+s=s.replace('All actual features and portfolio returns require a prospectively bound PLAN.\nSynthetic tests fit no predictive model. Rolling medians are descriptive estimates; no predictive model fits.', 'All actual features and portfolio returns require a prospectively bound PLAN.\nSynthetic tests fit no predictive model; pairwise historical comparisons are descriptive.')
+p.write_text(s)
+print('New host written; source review still unbound, not registered.')

@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-10-12T17:56:18.926102+00:00",
+  "purpose": "Long-horizon trading-amount confirmation, time spent awaiting a new high, and year-block stability of small annual Ridge boundary corrections.",
+  "guidance": "Long momentum remains dominant and skips latest42sessions. No required current pullback,no intramonth trading/stops,no leverage,no issuer/date exceptions. Three equal,two half,fewer than two cash.",
+  "inputs": "Identical122 cached Top32-estimate plus assumedtheme17 pools and original past-only eligibility;2016-08-17 initialization through2026-09-24. Unknown author ETF17 and market-cap/sector proxies inherited; not exact author recovery.",
+  "bases": "Unchanged registered65.34 score(core50/52%) and independent75%raw skip42 momentum+25%vol126. Prior66.36 exact orders additional control, not a searched base.",
+  "hand": "Two directional signals endingt-42. volume_confirmation:210*sum(w*logreturn)/sum(w)-sum(logreturn), w=clip(rawclose*volume/prior63mean_dollarvolume,.25,4). recovery_speed:-mean(days since latest within-window running high)/210 over211prices t-252..t-42. Rank finite event-pool values centered; missing gives exact zero correction, original eligibility unchanged. Extra volume warmup disclosed.",
+  "support": "Hand adds budget*(clip(originalsupport+factor,-.5,.5)-originalsupport), budgets2.5/7.5%. Original core unchanged, equivalent convex auxiliary replacement. Numerical zero or missing is exact nochange.",
+  "ml": "Pooled pointwise Ridge,10 existing plain features. Annual past5years actual-next-calendar-month mature centered excessSPY labels,month balanced24month decay,alpha10. At least36months and4signal-year blocks; delete each actualyear and refit scaler/weights/model,at least18months per fold. No author labels and no outcome-based eligibility.",
+  "ml_selection": "Start each month with base top3,lock top2; only base ranks4/5 within.02 of third may challenge. Pair delta=full_forecast(challenger)-full_forecast(third). StabilitySE=sqrt((B-1)/B*sum((fold_delta-mean_fold_delta)^2)); lower=delta-kSE. Challenger wins iff lower>0 and budget*.5*tanh(lower/.05)>base-score-gap; largest corrected score then symbol tie-break. Budget2.5/5%,k0/1/2. No prior-month incumbent retention. SE is training-year sensitivity,not a calibrated confidence interval. Unknown forecasts exactly nochange.",
+  "grid": "22 fixed rows:2bases*(1control+2handfactors*2budgets+2MLbudgets*3penalties). No combining families or extending grid after returns.",
+  "training": "First88 through2023-11-30,early53 and recent35 guards relative original65:trainCAGR>=base,trainSharpe>=base-.05,DD>=base-.03,earlyCAGR>=base,recentCAGR>=base-.02. Max admitted training CAGR primary,else original65. Per-base/family best trainingCAGR descriptive diagnostics frozen even if unqualified. ML penalty matched0/1/2 frozen at selected budget. Later34 replay only after freeze; no reselection.",
+  "execution": "Zero-cost full-close signal/same-close idealization primary,next-openzero and5bps/side sensitivity. InitialAug2016 and lastSep2026 partial periods. Independently validate daily fixed-unit replay.",
+  "reporting": "Period/year results,changedmonths and stock contributions,undo best1/3changes diagnostic. Sequential36/60/76 selections withintraining. History repeatedly used,not pristineOOS. No guaranteed80% return.",
+  "protection": "New isolated files only. Do not change old plans,prices,ledgers,strategy fingerprints,automations or live observers.",
+  "references": [
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/0022-1082.00280",
+      "scope": "Volume/momentum relationship motivates a hypothesis; not replication of paper or proof our factor works."
+    },
+    {
+      "url": "https://arxiv.org/abs/1505.01333",
+      "scope": "Duration-based ranking motivation only; our mean age is not the paper estimator."
+    }
+  ]
+}

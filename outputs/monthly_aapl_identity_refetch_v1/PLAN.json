@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-10-19T21:31:38.224692+00:00",
+  "urls": [
+    "https://www.nasdaqtrader.com/TraderNews.aspx?id=dtn2014-16",
+    "https://www.nasdaqtrader.com/TraderNews.aspx?id=dtn2019-04"
+  ],
+  "scope": "new public retrieval only; never restore or claim original hashes",
+  "stop_rule": "on any HTTP error/429, no further requests this run; honor Retry-After",
+  "requests_max": 2,
+  "credentials_used": false,
+  "offline_replay": false,
+  "model_calls": 0
+}

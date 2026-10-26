@@ -1,0 +1,500 @@
+{
+  "created_at": "2026-10-12T18:19:29.587217+00:00",
+  "selected": {
+    "primary": {
+      "spec": {
+        "id": 8,
+        "base": "original65",
+        "family": "budget",
+        "key": "fixed",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.535407501717869,
+        "sharpe": 1.6044694309962697,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 21.73765113392435
+      },
+      "early": {
+        "cagr": 0.44995299588657445,
+        "sharpe": 1.4220215613729061,
+        "max_drawdown": -0.3112599582174368,
+        "total_return": 4.075863621311598
+      },
+      "recent": {
+        "cagr": 0.6732145548691513,
+        "sharpe": 1.8709083131431252,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4795630517844653
+      },
+      "admitted": true
+    },
+    "original65": {
+      "spec": {
+        "id": 0,
+        "base": "original65",
+        "family": "control",
+        "key": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.5349155442763764,
+        "sharpe": 1.6031917771530346,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.684626736023116
+      },
+      "early": {
+        "cagr": 0.44808994995802753,
+        "sharpe": 1.416891036956853,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.047408386340172
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": true
+    },
+    "simple": {
+      "spec": {
+        "id": 15,
+        "base": "simple",
+        "family": "control",
+        "key": "none",
+        "budget": 0.0
+      },
+      "training": {
+        "cagr": 0.26553411815423433,
+        "sharpe": 0.9045395345165506,
+        "max_drawdown": -0.3811673741293322,
+        "total_return": 4.560622433966353
+      },
+      "early": {
+        "cagr": 0.33754085912445975,
+        "sharpe": 1.1271329053890147,
+        "max_drawdown": -0.2930350119017284,
+        "total_return": 2.566725726855218
+      },
+      "recent": {
+        "cagr": 0.1646661972376664,
+        "sharpe": 0.6172748826125392,
+        "max_drawdown": -0.38116737412933255,
+        "total_return": 0.5590272030446082
+      },
+      "admitted": false
+    },
+    "original65_continuity_floor": {
+      "spec": {
+        "id": 1,
+        "base": "original65",
+        "family": "segment",
+        "key": "continuity_floor",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.4953652442740213,
+        "sharpe": 1.5096824400481361,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 17.755716248618775
+      },
+      "early": {
+        "cagr": 0.4271317752118944,
+        "sharpe": 1.3500400438961848,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 3.7357036365967167
+      },
+      "recent": {
+        "cagr": 0.603951217187831,
+        "sharpe": 1.7494965815140446,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 2.9604919749787064
+      },
+      "admitted": false
+    },
+    "original65_quality_improvement": {
+      "spec": {
+        "id": 3,
+        "base": "original65",
+        "family": "segment",
+        "key": "quality_improvement",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.4827004302493283,
+        "sharpe": 1.4949247654696272,
+        "max_drawdown": -0.31267651900469695,
+        "total_return": 16.628757826339072
+      },
+      "early": {
+        "cagr": 0.415777419751892,
+        "sharpe": 1.3352506262175132,
+        "max_drawdown": -0.31267651900469695,
+        "total_return": 3.5731570690084107
+      },
+      "recent": {
+        "cagr": 0.5891317826847882,
+        "sharpe": 1.734799566534004,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 2.8548332279699062
+      },
+      "admitted": false
+    },
+    "original65_downside_improvement": {
+      "spec": {
+        "id": 5,
+        "base": "original65",
+        "family": "segment",
+        "key": "downside_improvement",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.4883745962492485,
+        "sharpe": 1.5109067572841206,
+        "max_drawdown": -0.31125995821743657,
+        "total_return": 17.12622109039977
+      },
+      "early": {
+        "cagr": 0.4368748665982587,
+        "sharpe": 1.3927633178186434,
+        "max_drawdown": -0.31125995821743657,
+        "total_return": 3.8787044686142327
+      },
+      "recent": {
+        "cagr": 0.569157630427402,
+        "sharpe": 1.686339708055691,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 2.7153759173177376
+      },
+      "admitted": false
+    },
+    "original65_dynamic": {
+      "spec": {
+        "id": 9,
+        "base": "original65",
+        "family": "budget",
+        "key": "dynamic",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.5349155442763764,
+        "sharpe": 1.6031917771530346,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 21.684626736023116
+      },
+      "early": {
+        "cagr": 0.44808994995802753,
+        "sharpe": 1.416891036956853,
+        "max_drawdown": -0.3112599582174367,
+        "total_return": 4.047408386340172
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": true
+    },
+    "original65_fixed": {
+      "spec": {
+        "id": 7,
+        "base": "original65",
+        "family": "budget",
+        "key": "fixed",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.533206081823768,
+        "sharpe": 1.5999075127359195,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 21.501205124999835
+      },
+      "early": {
+        "cagr": 0.4454036815551037,
+        "sharpe": 1.4112570727446856,
+        "max_drawdown": -0.31125995821743646,
+        "total_return": 4.006596439620119
+      },
+      "recent": {
+        "cagr": 0.6751035896184099,
+        "sharpe": 1.875574426281807,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 3.4943117338027694
+      },
+      "admitted": false
+    },
+    "original65_portfolio": {
+      "spec": {
+        "id": 11,
+        "base": "original65",
+        "family": "pair",
+        "key": "portfolio",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.5059365732865919,
+        "sharpe": 1.548619755261688,
+        "max_drawdown": -0.3126765190046974,
+        "total_return": 18.74345325910633
+      },
+      "early": {
+        "cagr": 0.45256440119779673,
+        "sharpe": 1.4274622145895348,
+        "max_drawdown": -0.3126765190046974,
+        "total_return": 4.115957004930187
+      },
+      "recent": {
+        "cagr": 0.5897481775140232,
+        "sharpe": 1.7286728126676503,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 2.8591906147920696
+      },
+      "admitted": false
+    },
+    "original65_stock": {
+      "spec": {
+        "id": 13,
+        "base": "original65",
+        "family": "pair",
+        "key": "stock",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.5104310166727257,
+        "sharpe": 1.557735838604849,
+        "max_drawdown": -0.3126765190046974,
+        "total_return": 19.176796198467162
+      },
+      "early": {
+        "cagr": 0.45256440119779673,
+        "sharpe": 1.4274622145895348,
+        "max_drawdown": -0.3126765190046974,
+        "total_return": 4.115957004930187
+      },
+      "recent": {
+        "cagr": 0.6016406711973161,
+        "sharpe": 1.7510273641763,
+        "max_drawdown": -0.26943979580801936,
+        "total_return": 2.943894794077242
+      },
+      "admitted": false
+    },
+    "simple_continuity_floor": {
+      "spec": {
+        "id": 17,
+        "base": "simple",
+        "family": "segment",
+        "key": "continuity_floor",
+        "budget": 0.075
+      },
+      "training": {
+        "cagr": 0.27098706306052756,
+        "sharpe": 0.9142417007927555,
+        "max_drawdown": -0.34301218277538237,
+        "total_return": 4.7375640883478525
+      },
+      "early": {
+        "cagr": 0.3339263163240056,
+        "sharpe": 1.1195045001026382,
+        "max_drawdown": -0.29303501190172854,
+        "total_return": 2.524772983488685
+      },
+      "recent": {
+        "cagr": 0.1820486085356885,
+        "sharpe": 0.6557296093561072,
+        "max_drawdown": -0.3430121827753827,
+        "total_return": 0.6277825877651384
+      },
+      "admitted": false
+    },
+    "simple_quality_improvement": {
+      "spec": {
+        "id": 18,
+        "base": "simple",
+        "family": "segment",
+        "key": "quality_improvement",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.26861863618513104,
+        "sharpe": 0.9070566595674057,
+        "max_drawdown": -0.35023812317152814,
+        "total_return": 4.660123711982188
+      },
+      "early": {
+        "cagr": 0.34314530573180835,
+        "sharpe": 1.1373291892815445,
+        "max_drawdown": -0.2915411332601521,
+        "total_return": 2.632534956623123
+      },
+      "recent": {
+        "cagr": 0.16444751622092668,
+        "sharpe": 0.613047555398256,
+        "max_drawdown": -0.35023812317152747,
+        "total_return": 0.5581746024665777
+      },
+      "admitted": false
+    },
+    "simple_downside_improvement": {
+      "spec": {
+        "id": 20,
+        "base": "simple",
+        "family": "segment",
+        "key": "downside_improvement",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.28984237456316064,
+        "sharpe": 0.9604678433912286,
+        "max_drawdown": -0.35023812317152814,
+        "total_return": 5.387376148583899
+      },
+      "early": {
+        "cagr": 0.3675674558555706,
+        "sharpe": 1.2009307786714045,
+        "max_drawdown": -0.29154113326015196,
+        "total_return": 2.9303157629193155
+      },
+      "recent": {
+        "cagr": 0.18139351275327575,
+        "sharpe": 0.6548888457734273,
+        "max_drawdown": -0.3502381231715279,
+        "total_return": 0.62515597572231
+      },
+      "admitted": false
+    },
+    "simple_dynamic": {
+      "spec": {
+        "id": 24,
+        "base": "simple",
+        "family": "budget",
+        "key": "dynamic",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.2687795565049773,
+        "sharpe": 0.9124966529065367,
+        "max_drawdown": -0.38116737412933266,
+        "total_return": 4.665356611894972
+      },
+      "early": {
+        "cagr": 0.3432611389221203,
+        "sharpe": 1.141059933827169,
+        "max_drawdown": -0.29303501190172854,
+        "total_return": 2.633904912519263
+      },
+      "recent": {
+        "cagr": 0.1646661972376664,
+        "sharpe": 0.6172748826125392,
+        "max_drawdown": -0.38116737412933255,
+        "total_return": 0.5590272030446082
+      },
+      "admitted": false
+    },
+    "simple_fixed": {
+      "spec": {
+        "id": 22,
+        "base": "simple",
+        "family": "budget",
+        "key": "fixed",
+        "budget": 0.025
+      },
+      "training": {
+        "cagr": 0.2774288366434403,
+        "sharpe": 0.9309909585164103,
+        "max_drawdown": -0.38116737412933177,
+        "total_return": 4.952832240955372
+      },
+      "early": {
+        "cagr": 0.36374427445253676,
+        "sharpe": 1.1918102389083123,
+        "max_drawdown": -0.29303501190172865,
+        "total_return": 2.882499058992596
+      },
+      "recent": {
+        "cagr": 0.15801901488209813,
+        "sharpe": 0.5977757111585162,
+        "max_drawdown": -0.38116737412933255,
+        "total_return": 0.5332475682556794
+      },
+      "admitted": false
+    },
+    "simple_portfolio": {
+      "spec": {
+        "id": 27,
+        "base": "simple",
+        "family": "pair",
+        "key": "portfolio",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.2630414348925678,
+        "sharpe": 0.8954186023445068,
+        "max_drawdown": -0.35023812317152847,
+        "total_return": 4.481318845943324
+      },
+      "early": {
+        "cagr": 0.34021173167385443,
+        "sharpe": 1.1372575834654686,
+        "max_drawdown": -0.29303501190172854,
+        "total_return": 2.5979722430909957
+      },
+      "recent": {
+        "cagr": 0.15547263822230883,
+        "sharpe": 0.5902627135560895,
+        "max_drawdown": -0.35023812317152836,
+        "total_return": 0.5234466737393075
+      },
+      "admitted": false
+    },
+    "simple_stock": {
+      "spec": {
+        "id": 29,
+        "base": "simple",
+        "family": "pair",
+        "key": "stock",
+        "budget": 0.05
+      },
+      "training": {
+        "cagr": 0.26140515946221443,
+        "sharpe": 0.8914999190638523,
+        "max_drawdown": -0.35023812317152847,
+        "total_return": 4.429793649576817
+      },
+      "early": {
+        "cagr": 0.34021173167385443,
+        "sharpe": 1.1372575834654686,
+        "max_drawdown": -0.29303501190172854,
+        "total_return": 2.5979722430909957
+      },
+      "recent": {
+        "cagr": 0.1517325713069817,
+        "sharpe": 0.5810452496746679,
+        "max_drawdown": -0.35023812317152836,
+        "total_return": 0.5091260528769737
+      },
+      "admitted": false
+    }
+  },
+  "trials": 30,
+  "new_admitted": 2,
+  "hashes": {
+    "PLAN.json": "e9693c96e5015be3c0c6b932e30ece6b3f2c85436cb37c50f0558a3c4db6df2a",
+    "GRID.json": "00c15b66e281d45fd084d2739bd32447ec8325f5eec07831dbd81845624d3c03",
+    "DATA.npz": "f04636d66c6e97f071fd2dc716bfa9076d0d6a6da82694596b5d27e2666eac09",
+    "META.json": "ce3a6d8c751f05e4afa876a6b69db6786287c28fd7c2f7000a6aa333f2d5e31e",
+    "INPUT_HASHES.json": "4482cde7f0f62a237ffc0344b4781fdcde3703d279344bb220f11b2d755ef786",
+    "FORECASTS.npz": "74fac9d854ff8dd2b0a8195327ce6a669b9214f909e4eed5b426eb1df82ca221",
+    "FORECAST_AUDIT.json": "6bd7fd7c16253da3c3d3d12de84133db5fc1c8b13f6bf3dd5d2ae27c8c64377a",
+    "FORECAST_INPUT_HASHES.json": "75f3d2139377bffda8f435bae5bc133d185efad9a7bb8850fbea7492d98520d0",
+    "study.py": "f843ba3ede036df427c34e358cc02899a649d5eda655e54aeff0041b4c07fbb5",
+    "segment_features.py": "929f8c78ce2e9d78bca536a27e0ca24270bd6db2cb2d9d72b1506ddc6150c6a0",
+    "portfolio_model.py": "77ce44d98feecc163c9c87831fb405062431829bd05b05c27aa424adf4ee1ef8",
+    "baseline_adapter.py": "298a2c363069a035b105415ae8273074ac7ba7e1403161164b5366644def73db",
+    "dynamic_budget.py": "12630887417bfa054de2d41970f41db5e08a1cd5c938ce5f52ed3401d3ad0618"
+  },
+  "author_labels_used": false,
+  "diagnostics_may_be_unqualified": true
+}

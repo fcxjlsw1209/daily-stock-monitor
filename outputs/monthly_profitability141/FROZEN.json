@@ -1,0 +1,21 @@
+{
+  "all_diagnostic_orders_frozen": true,
+  "hashes": {
+    "CACHE.json": "c3419135cec6a15ae6354b6068430954e679b65356decf6b448b676d48a612c4",
+    "INDEPENDENT_PREPARE.json": "db89968cc376ed0755ad52860720cf3cb099f0360f69ba975f5e7cb0bb511af4",
+    "PLAN.json": "26ef4ff3a78491bc54f795c41651ce2987994d6c912601205988c4c43e978169",
+    "PRETRAIN_ORDERS.json": "ed8ae584b225bee67998605ed8d94daa3f8a8846b8d9a305ccdf37af49c98a4b",
+    "TRAIN_TRIALS.json": "1de3e58eeae85aef87003c3b286b45defc47a2f6a19d4657395388247b39a10d",
+    "WALKFORWARD.json": "93933b17a4f72279451291d5a3d74ce612f16863588f3be563967dc1f8da6996"
+  },
+  "pristine_oos": false,
+  "selection": {
+    "admitted": false,
+    "guards": false,
+    "guards_against": {
+      "annual_gross_profit_growth_sign": false,
+      "incumbent_local67": false
+    },
+    "primary": "incumbent_local67"
+  }
+}

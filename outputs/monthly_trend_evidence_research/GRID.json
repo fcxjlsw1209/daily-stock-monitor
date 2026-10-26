@@ -1,0 +1,178 @@
+[
+  {
+    "id": 0,
+    "base": "original65",
+    "family": "control",
+    "key": "none",
+    "budget": 0.0,
+    "k": 0.0
+  },
+  {
+    "id": 1,
+    "base": "original65",
+    "family": "hand",
+    "key": "volume_confirmation",
+    "budget": 0.025,
+    "k": 0.0
+  },
+  {
+    "id": 2,
+    "base": "original65",
+    "family": "hand",
+    "key": "volume_confirmation",
+    "budget": 0.075,
+    "k": 0.0
+  },
+  {
+    "id": 3,
+    "base": "original65",
+    "family": "hand",
+    "key": "recovery_speed",
+    "budget": 0.025,
+    "k": 0.0
+  },
+  {
+    "id": 4,
+    "base": "original65",
+    "family": "hand",
+    "key": "recovery_speed",
+    "budget": 0.075,
+    "k": 0.0
+  },
+  {
+    "id": 5,
+    "base": "original65",
+    "family": "ml",
+    "key": "block_stability",
+    "budget": 0.025,
+    "k": 0.0
+  },
+  {
+    "id": 6,
+    "base": "original65",
+    "family": "ml",
+    "key": "block_stability",
+    "budget": 0.025,
+    "k": 1.0
+  },
+  {
+    "id": 7,
+    "base": "original65",
+    "family": "ml",
+    "key": "block_stability",
+    "budget": 0.025,
+    "k": 2.0
+  },
+  {
+    "id": 8,
+    "base": "original65",
+    "family": "ml",
+    "key": "block_stability",
+    "budget": 0.05,
+    "k": 0.0
+  },
+  {
+    "id": 9,
+    "base": "original65",
+    "family": "ml",
+    "key": "block_stability",
+    "budget": 0.05,
+    "k": 1.0
+  },
+  {
+    "id": 10,
+    "base": "original65",
+    "family": "ml",
+    "key": "block_stability",
+    "budget": 0.05,
+    "k": 2.0
+  },
+  {
+    "id": 11,
+    "base": "simple",
+    "family": "control",
+    "key": "none",
+    "budget": 0.0,
+    "k": 0.0
+  },
+  {
+    "id": 12,
+    "base": "simple",
+    "family": "hand",
+    "key": "volume_confirmation",
+    "budget": 0.025,
+    "k": 0.0
+  },
+  {
+    "id": 13,
+    "base": "simple",
+    "family": "hand",
+    "key": "volume_confirmation",
+    "budget": 0.075,
+    "k": 0.0
+  },
+  {
+    "id": 14,
+    "base": "simple",
+    "family": "hand",
+    "key": "recovery_speed",
+    "budget": 0.025,
+    "k": 0.0
+  },
+  {
+    "id": 15,
+    "base": "simple",
+    "family": "hand",
+    "key": "recovery_speed",
+    "budget": 0.075,
+    "k": 0.0
+  },
+  {
+    "id": 16,
+    "base": "simple",
+    "family": "ml",
+    "key": "block_stability",
+    "budget": 0.025,
+    "k": 0.0
+  },
+  {
+    "id": 17,
+    "base": "simple",
+    "family": "ml",
+    "key": "block_stability",
+    "budget": 0.025,
+    "k": 1.0
+  },
+  {
+    "id": 18,
+    "base": "simple",
+    "family": "ml",
+    "key": "block_stability",
+    "budget": 0.025,
+    "k": 2.0
+  },
+  {
+    "id": 19,
+    "base": "simple",
+    "family": "ml",
+    "key": "block_stability",
+    "budget": 0.05,
+    "k": 0.0
+  },
+  {
+    "id": 20,
+    "base": "simple",
+    "family": "ml",
+    "key": "block_stability",
+    "budget": 0.05,
+    "k": 1.0
+  },
+  {
+    "id": 21,
+    "base": "simple",
+    "family": "ml",
+    "key": "block_stability",
+    "budget": 0.05,
+    "k": 2.0
+  }
+]

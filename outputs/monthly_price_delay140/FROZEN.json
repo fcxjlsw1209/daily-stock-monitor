@@ -1,0 +1,21 @@
+{
+  "all_diagnostic_orders_frozen": true,
+  "hashes": {
+    "CACHE.json": "2308f2799828295fff3da9ac7d3122903260f4e2cf57e116136f28ec575c6e85",
+    "INDEPENDENT_PREPARE.json": "9b3be46c157417b2bc687eedfe2939d8334ce1d425067f72503056d909bb55ad",
+    "PLAN.json": "625c2481e7b2524c0fb229d93f89d2d39737a59550af73c2dba8cafc15f0b95f",
+    "PRETRAIN_ORDERS.json": "43dc9d15b397f4bfca143b53f1bb15933c8b67f04e6f0515a76e881159f95fe4",
+    "TRAIN_TRIALS.json": "d46ff5fe03b72c8952e6163e7e1586c403d7c030982e32ddebdf99bbfd60a274",
+    "WALKFORWARD.json": "ef9c91cfb23b1f2a33774a919706ef0dc63bbcbf2b782b4ab9a72154b74c3de0"
+  },
+  "pristine_oos": false,
+  "selection": {
+    "admitted": false,
+    "guards": false,
+    "guards_against": {
+      "contemporaneous_nonfit": true,
+      "incumbent_local67": false
+    },
+    "primary": "incumbent_local67"
+  }
+}

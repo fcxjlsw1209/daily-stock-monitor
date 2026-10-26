@@ -1,0 +1,40 @@
+{
+  "date_utc": "2026-10-26",
+  "source_export": {
+    "files": 2892,
+    "python_syntax_checks": 2601,
+    "bytes": 97216754,
+    "source_and_destination_digests_match": true,
+    "work_allowlist_count": 1881,
+    "excluded_local_scripts": 8
+  },
+  "tests": [
+    {
+      "command": "python -B -m unittest discover -s tests -v",
+      "tests": 23,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s outputs/paired_stock_monitor -p 'test_*.py' -v",
+      "tests": 101,
+      "exit_code": 1,
+      "failures": 3,
+      "errors": 2,
+      "cause": "Default macOS temporary directory alias violated execution registry canonical-path guard."
+    },
+    {
+      "command": "TMPDIR=/private/tmp python -B -m unittest discover -s outputs/paired_stock_monitor -p 'test_*.py' -v",
+      "tests": 101,
+      "exit_code": 0,
+      "frozen_source_modified_for_rerun": false
+    }
+  ],
+  "private_history_replayed_in_checkout": false,
+  "live_observers_executed": false,
+  "source_workspaces_modified_by_export": false,
+  "reviewed_publication_adaptations": [
+    "outputs/daily_stock_monitor/test_monitor.py",
+    "outputs/pressure_shadow_monitor/test_monitor.py"
+  ],
+  "manifest_sha256": "e340e9136dfaeaf6d07bc05734d8a427d0a0be830b127a81bb1da87b6b7d6a35"
+}

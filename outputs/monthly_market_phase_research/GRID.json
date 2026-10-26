@@ -1,0 +1,296 @@
+[
+  {
+    "id": 0,
+    "base": "original65",
+    "profile": "none",
+    "mode": "control",
+    "budget": 0.0
+  },
+  {
+    "id": 1,
+    "base": "original65",
+    "profile": "distress_lowdown",
+    "mode": "phase",
+    "budget": 0.025
+  },
+  {
+    "id": 2,
+    "base": "original65",
+    "profile": "distress_lowdown",
+    "mode": "phase",
+    "budget": 0.075
+  },
+  {
+    "id": 3,
+    "base": "original65",
+    "profile": "distress_lowdown",
+    "mode": "static",
+    "budget": 0.025
+  },
+  {
+    "id": 4,
+    "base": "original65",
+    "profile": "distress_lowdown",
+    "mode": "static",
+    "budget": 0.075
+  },
+  {
+    "id": 5,
+    "base": "original65",
+    "profile": "repair_volatility",
+    "mode": "phase",
+    "budget": 0.025
+  },
+  {
+    "id": 6,
+    "base": "original65",
+    "profile": "repair_volatility",
+    "mode": "phase",
+    "budget": 0.075
+  },
+  {
+    "id": 7,
+    "base": "original65",
+    "profile": "repair_volatility",
+    "mode": "static",
+    "budget": 0.025
+  },
+  {
+    "id": 8,
+    "base": "original65",
+    "profile": "repair_volatility",
+    "mode": "static",
+    "budget": 0.075
+  },
+  {
+    "id": 9,
+    "base": "original65",
+    "profile": "duration_relative",
+    "mode": "phase",
+    "budget": 0.025
+  },
+  {
+    "id": 10,
+    "base": "original65",
+    "profile": "duration_relative",
+    "mode": "phase",
+    "budget": 0.075
+  },
+  {
+    "id": 11,
+    "base": "original65",
+    "profile": "duration_relative",
+    "mode": "static",
+    "budget": 0.025
+  },
+  {
+    "id": 12,
+    "base": "original65",
+    "profile": "duration_relative",
+    "mode": "static",
+    "budget": 0.075
+  },
+  {
+    "id": 13,
+    "base": "original65",
+    "profile": "peer_participation",
+    "mode": "peer",
+    "budget": 0.025
+  },
+  {
+    "id": 14,
+    "base": "original65",
+    "profile": "peer_participation",
+    "mode": "peer",
+    "budget": 0.075
+  },
+  {
+    "id": 15,
+    "base": "original65",
+    "profile": "peer_broadening",
+    "mode": "peer",
+    "budget": 0.025
+  },
+  {
+    "id": 16,
+    "base": "original65",
+    "profile": "peer_broadening",
+    "mode": "peer",
+    "budget": 0.075
+  },
+  {
+    "id": 17,
+    "base": "original65",
+    "profile": "market_participation",
+    "mode": "peer",
+    "budget": 0.025
+  },
+  {
+    "id": 18,
+    "base": "original65",
+    "profile": "market_participation",
+    "mode": "peer",
+    "budget": 0.075
+  },
+  {
+    "id": 19,
+    "base": "original65",
+    "profile": "market_broadening",
+    "mode": "peer",
+    "budget": 0.025
+  },
+  {
+    "id": 20,
+    "base": "original65",
+    "profile": "market_broadening",
+    "mode": "peer",
+    "budget": 0.075
+  },
+  {
+    "id": 21,
+    "base": "simple",
+    "profile": "none",
+    "mode": "control",
+    "budget": 0.0
+  },
+  {
+    "id": 22,
+    "base": "simple",
+    "profile": "distress_lowdown",
+    "mode": "phase",
+    "budget": 0.025
+  },
+  {
+    "id": 23,
+    "base": "simple",
+    "profile": "distress_lowdown",
+    "mode": "phase",
+    "budget": 0.075
+  },
+  {
+    "id": 24,
+    "base": "simple",
+    "profile": "distress_lowdown",
+    "mode": "static",
+    "budget": 0.025
+  },
+  {
+    "id": 25,
+    "base": "simple",
+    "profile": "distress_lowdown",
+    "mode": "static",
+    "budget": 0.075
+  },
+  {
+    "id": 26,
+    "base": "simple",
+    "profile": "repair_volatility",
+    "mode": "phase",
+    "budget": 0.025
+  },
+  {
+    "id": 27,
+    "base": "simple",
+    "profile": "repair_volatility",
+    "mode": "phase",
+    "budget": 0.075
+  },
+  {
+    "id": 28,
+    "base": "simple",
+    "profile": "repair_volatility",
+    "mode": "static",
+    "budget": 0.025
+  },
+  {
+    "id": 29,
+    "base": "simple",
+    "profile": "repair_volatility",
+    "mode": "static",
+    "budget": 0.075
+  },
+  {
+    "id": 30,
+    "base": "simple",
+    "profile": "duration_relative",
+    "mode": "phase",
+    "budget": 0.025
+  },
+  {
+    "id": 31,
+    "base": "simple",
+    "profile": "duration_relative",
+    "mode": "phase",
+    "budget": 0.075
+  },
+  {
+    "id": 32,
+    "base": "simple",
+    "profile": "duration_relative",
+    "mode": "static",
+    "budget": 0.025
+  },
+  {
+    "id": 33,
+    "base": "simple",
+    "profile": "duration_relative",
+    "mode": "static",
+    "budget": 0.075
+  },
+  {
+    "id": 34,
+    "base": "simple",
+    "profile": "peer_participation",
+    "mode": "peer",
+    "budget": 0.025
+  },
+  {
+    "id": 35,
+    "base": "simple",
+    "profile": "peer_participation",
+    "mode": "peer",
+    "budget": 0.075
+  },
+  {
+    "id": 36,
+    "base": "simple",
+    "profile": "peer_broadening",
+    "mode": "peer",
+    "budget": 0.025
+  },
+  {
+    "id": 37,
+    "base": "simple",
+    "profile": "peer_broadening",
+    "mode": "peer",
+    "budget": 0.075
+  },
+  {
+    "id": 38,
+    "base": "simple",
+    "profile": "market_participation",
+    "mode": "peer",
+    "budget": 0.025
+  },
+  {
+    "id": 39,
+    "base": "simple",
+    "profile": "market_participation",
+    "mode": "peer",
+    "budget": 0.075
+  },
+  {
+    "id": 40,
+    "base": "simple",
+    "profile": "market_broadening",
+    "mode": "peer",
+    "budget": 0.025
+  },
+  {
+    "id": 41,
+    "base": "simple",
+    "profile": "market_broadening",
+    "mode": "peer",
+    "budget": 0.075
+  }
+]

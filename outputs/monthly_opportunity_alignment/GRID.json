@@ -1,0 +1,212 @@
+[
+  {
+    "id": 0,
+    "base": "original65",
+    "family": "control",
+    "key": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 1,
+    "base": "original65",
+    "family": "segment",
+    "key": "continuity_floor",
+    "budget": 0.025
+  },
+  {
+    "id": 2,
+    "base": "original65",
+    "family": "segment",
+    "key": "continuity_floor",
+    "budget": 0.075
+  },
+  {
+    "id": 3,
+    "base": "original65",
+    "family": "segment",
+    "key": "quality_improvement",
+    "budget": 0.025
+  },
+  {
+    "id": 4,
+    "base": "original65",
+    "family": "segment",
+    "key": "quality_improvement",
+    "budget": 0.075
+  },
+  {
+    "id": 5,
+    "base": "original65",
+    "family": "segment",
+    "key": "downside_improvement",
+    "budget": 0.025
+  },
+  {
+    "id": 6,
+    "base": "original65",
+    "family": "segment",
+    "key": "downside_improvement",
+    "budget": 0.075
+  },
+  {
+    "id": 7,
+    "base": "original65",
+    "family": "budget",
+    "key": "fixed",
+    "budget": 0.025
+  },
+  {
+    "id": 8,
+    "base": "original65",
+    "family": "budget",
+    "key": "fixed",
+    "budget": 0.05
+  },
+  {
+    "id": 9,
+    "base": "original65",
+    "family": "budget",
+    "key": "dynamic",
+    "budget": 0.025
+  },
+  {
+    "id": 10,
+    "base": "original65",
+    "family": "budget",
+    "key": "dynamic",
+    "budget": 0.05
+  },
+  {
+    "id": 11,
+    "base": "original65",
+    "family": "pair",
+    "key": "portfolio",
+    "budget": 0.025
+  },
+  {
+    "id": 12,
+    "base": "original65",
+    "family": "pair",
+    "key": "portfolio",
+    "budget": 0.05
+  },
+  {
+    "id": 13,
+    "base": "original65",
+    "family": "pair",
+    "key": "stock",
+    "budget": 0.025
+  },
+  {
+    "id": 14,
+    "base": "original65",
+    "family": "pair",
+    "key": "stock",
+    "budget": 0.05
+  },
+  {
+    "id": 15,
+    "base": "simple",
+    "family": "control",
+    "key": "none",
+    "budget": 0.0
+  },
+  {
+    "id": 16,
+    "base": "simple",
+    "family": "segment",
+    "key": "continuity_floor",
+    "budget": 0.025
+  },
+  {
+    "id": 17,
+    "base": "simple",
+    "family": "segment",
+    "key": "continuity_floor",
+    "budget": 0.075
+  },
+  {
+    "id": 18,
+    "base": "simple",
+    "family": "segment",
+    "key": "quality_improvement",
+    "budget": 0.025
+  },
+  {
+    "id": 19,
+    "base": "simple",
+    "family": "segment",
+    "key": "quality_improvement",
+    "budget": 0.075
+  },
+  {
+    "id": 20,
+    "base": "simple",
+    "family": "segment",
+    "key": "downside_improvement",
+    "budget": 0.025
+  },
+  {
+    "id": 21,
+    "base": "simple",
+    "family": "segment",
+    "key": "downside_improvement",
+    "budget": 0.075
+  },
+  {
+    "id": 22,
+    "base": "simple",
+    "family": "budget",
+    "key": "fixed",
+    "budget": 0.025
+  },
+  {
+    "id": 23,
+    "base": "simple",
+    "family": "budget",
+    "key": "fixed",
+    "budget": 0.05
+  },
+  {
+    "id": 24,
+    "base": "simple",
+    "family": "budget",
+    "key": "dynamic",
+    "budget": 0.025
+  },
+  {
+    "id": 25,
+    "base": "simple",
+    "family": "budget",
+    "key": "dynamic",
+    "budget": 0.05
+  },
+  {
+    "id": 26,
+    "base": "simple",
+    "family": "pair",
+    "key": "portfolio",
+    "budget": 0.025
+  },
+  {
+    "id": 27,
+    "base": "simple",
+    "family": "pair",
+    "key": "portfolio",
+    "budget": 0.05
+  },
+  {
+    "id": 28,
+    "base": "simple",
+    "family": "pair",
+    "key": "stock",
+    "budget": 0.025
+  },
+  {
+    "id": 29,
+    "base": "simple",
+    "family": "pair",
+    "key": "stock",
+    "budget": 0.05
+  }
+]

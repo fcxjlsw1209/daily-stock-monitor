@@ -1,0 +1,13 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import hashlib,json
+R=Path(__file__).resolve().parents[1]
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+pre=R/'work/after196_recovery_retention_preflight.json'
+assert sha(pre)=='aff4119c4cdf93655a4a408b407bdd44ea21948ef552d70d8e3e4dd630488370'
+x=json.loads(pre.read_text())
+p=R/'work/monthly_recovery_durability197_context.json';assert not p.exists()
+f=dict(earliest_offset=294,latest_offset=42,price_count=253,anchor_last=210,recovery_horizon=21,durability_horizon=21,**x['formation'])
+out=dict(created_utc=datetime.now(timezone.utc).isoformat(),round=197,name='monthly_recovery_durability197',status='PROSPECTIVE_DEFINITION_PENDING_SOURCE_AND_CODE_ADMISSION',registered=False,previous_goal_turn_classification='progress',previous_evidence='196 completed/rejected: majority63.53968%, balance65.06473%, incumbent67.66617%; no observer changes.',hypothesis=x['hypothesis'],novelty_scope=x['novelty_scope']+' Missing older originals leave exhaustive overlap UNKNOWN.',arms=x['integration']['arms'],candidate='recovery_durability',control_nonpromotable='recovery_frequency_control',formation=f,integration=x['integration'],evaluation=dict(period=['2016-08-17','2026-09-24'],training_months=88,later_months=34,executions=['same_close_zero','next_open_zero','next_open_5bp_each_side'],gates=x['proposed_selection'],independent_verification='All5978cells and exact anchor paths; truncated-source prefixes0/1/53/88/122; all123orderprefixes; original27arrays/orders;9executionpaths45slices;21444protectedfiles.'),accounting=dict(predictive_model_fits=0,valid_price_observations='253 times source-available cells, reused observations not independent samples.',negative_anchors='Sum of negative days s1..210 over all source-valid cells.',recovered_anchors='Sum of events first recovering within21 sessions.',durable_anchors='Sum of recovered events with no strict rebreach during the following21 sessions.',counts_scope='Main pass only; independent/prefix reruns excluded.'),limitations=x['limitations'],actual_new_feature_evaluations=0,actual_new_orders=0,actual_new_returns=0,evidence_sha256={str(v.relative_to(R)):sha(v) for v in [pre,R/'work/after196_recovery_retention_preflight.py',R/'outputs/monthly_pairwise_majority196/RESEARCH_REVIEW.json',R/'outputs/monthly_pairwise_majority196/COMPLETION.json',R/'work/monthly_pairwise_majority196_host.py']},execution_gate='Source review, synthetic tests, independent code review, then hash-boundPLAN; no actual features/orders/returns before registration.')
+with p.open('x') as w:json.dump(out,w,ensure_ascii=False,indent=2);w.write('\n')
+print(sha(p))
