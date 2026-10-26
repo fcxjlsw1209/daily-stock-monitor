@@ -1,0 +1,82 @@
+{
+  "completed_utc": "2026-10-26T18:40:04.517200+00:00",
+  "base_commit": "544916078587003408f8acaabe6698bd853cb9f2",
+  "purpose": "Incremental source sync: additive experiment-264 saved-reader fee-summary review and unregistered experiment-265 synthetic source, independent mathematics and selection integration.",
+  "source_export": {
+    "files": 2915,
+    "source_hashes_match": true,
+    "published_hashes_match": true,
+    "modes_match": true,
+    "unchanged_observer_exports": 106,
+    "changed_existing_exported_files": 0,
+    "new_files": [
+      "work/gain_concentration265_sources.py",
+      "work/monthly_gain_concentration265_math_independent.py",
+      "work/monthly_gain_concentration265_selection.py",
+      "work/monthly_gain_survival264_saved_reader_v5.py",
+      "work/test_gain_concentration265_sources.py",
+      "work/test_monthly_gain_concentration265_math_independent.py",
+      "work/test_monthly_gain_concentration265_selection.py",
+      "work/test_monthly_gain_survival264_saved_reader_v5.py"
+    ],
+    "manifest_sha256": "26d49d517a7e16286d1b229c8d99157ce8e4fad714782099768f22be144a9533"
+  },
+  "tests": [
+    {
+      "suite": "base_and_exporter",
+      "tests": 24,
+      "exit_code": 0,
+      "root_terminal_chunk": "62c80d",
+      "log_sha256": "13268e15a636247cd393fb2bf4916340872cb8c0518555eb9a44fa942ce2047c",
+      "reused_earlier_unchanged_source_validation": false
+    },
+    {
+      "suite": "saved_reader_v5_synthetic",
+      "tests": 44,
+      "exit_code": 0,
+      "root_terminal_chunk": "e58a8a",
+      "log_sha256": "1dafe07dca5e5238dd79928872e25a91cc1081d4e8c5d46b1e6d4f2d82bb053f",
+      "reused_earlier_unchanged_source_validation": false
+    },
+    {
+      "suite": "gain_concentration265_selection_synthetic",
+      "tests": 41,
+      "exit_code": 0,
+      "root_terminal_chunk": "e9e80e",
+      "log_sha256": "f2f60533858feed5b4305ddd06240e86a7614ab3f05710fda4c769568899ad3b",
+      "reused_earlier_unchanged_source_validation": false
+    },
+    {
+      "suite": "gain_concentration265_independent_math_synthetic",
+      "tests": 21,
+      "exit_code": 0,
+      "root_terminal_chunk": "4174a0",
+      "log_sha256": "945ddbe15f17e6dd75f99efbbbc82cb4b0a301f5e43c3e828f4c835cef1fee95",
+      "reused_earlier_unchanged_source_validation": true
+    },
+    {
+      "suite": "gain_concentration265_source_binding_synthetic",
+      "tests": 8,
+      "exit_code": 0,
+      "root_terminal_chunk": "aadbf8",
+      "log_sha256": "90012c6e17f7f7fb429c9ff6e74e0a3ed12348b20ba979f04e3f6338e5dd3a53",
+      "reused_earlier_unchanged_source_validation": true
+    }
+  ],
+  "total_tests": 138,
+  "experiment264_actual_phases_finished": true,
+  "experiment264_formally_closed": false,
+  "saved_reader_v4_actual_failed": true,
+  "saved_reader_v5_actual_run": false,
+  "candidate265_registered": false,
+  "candidate265_actual_backtest_run": false,
+  "candidate_promoted": false,
+  "source_roots_modified_by_sync": false,
+  "live_observers_run": false,
+  "private_data_or_credentials_exported": false,
+  "git_diff_check": {
+    "exit_code": 2,
+    "finding": "One trailing blank line in test_monthly_gain_concentration265_selection.py, identical to the source workspace; preserved to maintain exact source hashes.",
+    "other_findings": 0
+  }
+}

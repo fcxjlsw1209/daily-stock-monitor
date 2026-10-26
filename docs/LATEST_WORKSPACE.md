@@ -59,12 +59,14 @@ The exact current primary source hashes passed 141 synthetic tests; the saved
 result reader and its tests passed another 21 synthetic checks. The registration
 PLAN SHA-256 is
 `fef75a47d4607476c42a1a96e74a44ce7497c707487d2ffe844300d0deaddf84`.
-At this snapshot, actual input preparation and truncated-history checks are in
-progress; no prepared results or experiment-264 returns have been published.
-The first-88-month admission check and later-period diagnostics have not yet
-completed. No strategy is promoted by this source sync. The completed research
-chain still ends at experiment 263 and the retained headline result remains
-67.67% at zero transaction cost.
+Actual preparation, first-88-month selection, and later-period diagnostics have
+finished locally. The candidate failed the training admission gates and the
+incumbent was retained. Formal experiment closure is still pending: saved-reader
+V4 rejected a one-ULP difference in the incumbent's diagnostic cumulative cost
+display, although orders, economic metrics, and both zero-cost exports matched.
+The completed research chain therefore still ends at experiment 263. No strategy
+is promoted by this source sync; the retained headline result remains 67.67% at
+zero transaction cost.
 
 Private contracts, validation receipts, inputs and runtime progress files remain
 outside the Git snapshot. The earlier `SYNC_DRAFT264_VALIDATION_20261026.json`
@@ -87,11 +89,22 @@ synthetic regression checks passed, including the original 21 reader checks.
 The private addendum and receipt are still required for an actual local review;
 publishing this correction does not claim that experiment 264 has completed.
 
-The unregistered `monthly_gain_concentration265_kernel.py` compares daily
-positive-gain concentration with concentration across twelve fixed 21-session
-blocks. Its 22 synthetic tests passed. It has no data loading, strategy
-integration, ranking, training, orders, or backtest result. This source snapshot
-does not promote the prototype or change the retained 67.67% result.
+The additive `monthly_gain_survival264_saved_reader_v5.py` addresses that
+post-outcome accounting-display discrepancy. It binds each summary fee exactly
+to its own chronological period-fee sum, retaining the existing bounded
+period-display check and exact checks on other summary fields and exports.
+It adds no aggregate tolerance and leaves frozen V4 and strategy files unchanged.
+Its 44 synthetic checks passed. Actual V5 review and experiment closure have not
+run in this source-sync step; the V4 failure remains part of local evidence.
+
+The unregistered experiment-265 prototype compares daily positive-gain
+concentration with concentration across twelve fixed 21-session blocks. Its
+pure kernel has 22 previously passed synthetic tests. This increment adds an
+independent mathematical implementation, metadata source binding, and selection
+integration with 21, 8, and 41 synthetic checks respectively. The integration
+retains the original universe, 52% non-calm core weight, and original support
+rules. No actual experiment-265 features, strategy backtest, registration, or
+promotion are included. Synthetic checks do not establish a return improvement.
 
 ## Observer versions and account continuity
 
