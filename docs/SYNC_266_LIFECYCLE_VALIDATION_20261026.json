@@ -1,0 +1,49 @@
+{
+  "purpose": "Publish current experiment-266 lifecycle and saved-reader source after synthetic validation; no actual experiment claim.",
+  "snapshot_utc": "2026-10-26T20:36:30.423396+00:00",
+  "base_commit": "dbe320980af4d30d234185dc0906b23b0bb10cbc",
+  "new_files": {
+    "work/monthly_monotone_tree266_host.py": "120749e65750f3a8a9daa5d2aa65b31993ce56c4e5d3c9dc08730d86a93a3d76",
+    "work/monthly_monotone_tree266_saved_reader.py": "eb117fa95c4d7940b96797b1a5a2bd08320b64f3663660a9569915f624e56a8d",
+    "work/test_monthly_monotone_tree266_host.py": "787138f17f184111a14829424d2af90a31ef8e2e5cd5c3b49c9e6e04ad005ab0",
+    "work/test_monthly_monotone_tree266_saved_reader.py": "7bb5a08f600e69b62cb4eec9eb49f4df7e86ca9df0bd391b8823e9391bb79d75"
+  },
+  "exported_files": 2934,
+  "unchanged_previous_exports": 2930,
+  "unchanged_observer_exports": 106,
+  "checks": {
+    "host": {
+      "tests": 35,
+      "exit_code": 0,
+      "session_id": 8471,
+      "terminal_chunk": "cb9b0a",
+      "log_sha256": "467b7bd021ba71a9691911d5137af5e0b8cc3d6a299959bcc1aea44f0d7ef20a"
+    },
+    "reader": {
+      "tests": 60,
+      "exit_code": 0,
+      "session_id": 45718,
+      "terminal_chunk": "80a463",
+      "log_sha256": "9253b38acc0a8ccafcd3d65764e4417696ee488f6a39c76722751947d7e80488"
+    },
+    "base": {
+      "tests": 24,
+      "exit_code": 0,
+      "session_id": 50289,
+      "terminal_chunk": "dc1394",
+      "log_sha256": "aa2bb84d4684186f73b30e751fbcd5e7efb6e10118dfe8930c43997522c90782"
+    }
+  },
+  "independent_narrow_code_review": "passed: required source pins, consumed-prefix reference integrity, accounting schema; no publication blocker",
+  "source_checks": {
+    "syntax": "passed",
+    "credential_scan": true,
+    "hashes": "passed",
+    "modes": "passed"
+  },
+  "registered": false,
+  "actual_266_run_claimed": false,
+  "observer_code_or_state_changed": false,
+  "private_inputs_artifacts_credentials_exported": false,
+  "source_manifest_sha256": "a284e816519b3c9cc8d2a4aa0faf1a5f08829432a232bc274fc35464fbd0b2ec"
+}

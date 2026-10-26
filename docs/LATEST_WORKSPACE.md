@@ -147,11 +147,21 @@ bindings to inputs already verified by the caller. It does not load historical
 data, authenticate a caller merely from a `passed` flag, or establish actual
 historical-control parity on its own.
 
-Experiment 266 is still prospective: no registration, actual-data fitting,
-selection, return improvement, or observer promotion is claimed. Its lifecycle
-host and final frozen contracts are not yet complete. Private draft contracts,
-progress records, fixtures, and model artifacts remain outside this snapshot.
-Experiment 265's actual preparation is still separate and pending at this sync.
+The lifecycle host and saved-result reader are now included, together with their
+synthetic tests. The host requires all ten primary source/test files and both
+reader files to be pinned, verifies consumed historical-reference prefixes before
+and after each comparison helper, and checks zero-cost outputs against the actual
+nested accounting schema. The reader checks saved phase evidence, source bindings,
+historical-control mappings and accounting exports. Its 60 synthetic tests and
+the host's 35 synthetic tests passed on the exact source hashes published here.
+These tests do not constitute an actual historical replay.
+
+Experiment 266 is still prospective: final frozen contracts and registration are
+pending. No actual-data fitting, selection, return improvement, or observer
+promotion is claimed. Private draft contracts, progress records, fixtures, and
+model artifacts remain outside this snapshot. Experiment 265's actual preparation
+is separate and pending at this sync. See
+[the lifecycle sync validation](SYNC_266_LIFECYCLE_VALIDATION_20261026.json).
 
 ## Observer versions and account continuity
 
