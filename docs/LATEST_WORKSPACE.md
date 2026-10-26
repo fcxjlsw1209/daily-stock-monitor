@@ -237,7 +237,8 @@ On macOS, use the canonical `/private/tmp` temporary path for the observer
 fixtures: an unresolved `/var` alias correctly trips the registry alias guard.
 The initial default-temp run hit five fixture-path failures; rerunning with the
 canonical temporary directory passed all 101 observer tests without changing
-frozen source. The base/exporter suite passed 23 tests.
+frozen source. The base/exporter suite passed 24 tests in the latest lifecycle
+source sync; the observer tests above describe the earlier unchanged-source check.
 
 The exporter tests use temporary synthetic fixtures. Full historical parity
 suites additionally need the excluded input bundle; missing data must remain an
