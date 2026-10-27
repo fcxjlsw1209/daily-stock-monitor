@@ -721,6 +721,7 @@
     "outputs/monthly_ineligible_source227/PLAN.json": "d2b8eb195a7c54fc61a3acb910653ad3f86dabbbb6d23cdf41c187260ab20ae1",
     "outputs/monthly_jnj_policies_source_v1/collect.py": "c598b6868d179ff7c38ea8a80f65ea21e26375c9e87e876b98a353db58e1025d",
     "outputs/monthly_joint_error226/PLAN.json": "996a6f80084cb95c48427949786caff84b6935c8e73126433bd12980fec26d25",
+    "outputs/monthly_joint_growth271/PLAN.json": "2bc48c28b64a18abc8aedd647d6e1d62ebc516a6d8e021e1e23f0d768ea172a7",
     "outputs/monthly_joint_identity259/PLAN.json": "1a771e9d74a66f68353725d4c5f33073d24b6ecbc6f93ab464287c9e9dceebff",
     "outputs/monthly_latent_state134/FROZEN.json": "d85964f0e45ab93696dbd01fede7b6f22e7e68f0bd36a45cf17626e82c93ec5a",
     "outputs/monthly_latent_state134/PLAN.json": "a5c762d170f1b8bbee493411f2a85b171160e2a19ece703cd047827edb7bcbee",
@@ -1733,6 +1734,12 @@
     "work/monthly_joint_error226_host.py": "e1e76abd384eeee9509788c59ce29e975d51a96f74bf89e35072ada2ca468848",
     "work/monthly_joint_error226_independent.py": "bda9cb3e17c55fb45291753323ea3bfecb6f273570ae98a170fffe4b5d23276a",
     "work/monthly_joint_error226_model.py": "e17be025196ac3a6cc476435b53013c0ae5dd8d399fedd1e8dbadaa719367869",
+    "work/monthly_joint_growth271_adapter.py": "07e5a60f61f795671bf418faf3f31cb0b7e89cb962428a1f34f20d34cd9eda9b",
+    "work/monthly_joint_growth271_host.py": "9075b34a216dccce5fe05e847f7c81cc60fc9538fef6bc7cf9303c230c58caea",
+    "work/monthly_joint_growth271_independent.py": "18521b0049e7faa17eb44f92f3aa4e0cd2bcc8594479e1ddba40493b7d0f2790",
+    "work/monthly_joint_growth271_kernel.py": "ff5a5a863aa3a7e56e16493f0104c8a0de8a067f57742dc6c816da952baf8d88",
+    "work/monthly_joint_growth271_saved_review.py": "a4f10837fe2f7b096c63f5d4bceaa3a946c049f1fde80db71d861a933dc83cd3",
+    "work/monthly_joint_growth271_saved_review_v2.py": "9e864d87cbcbdb5239afcd050310868d17f62e98711fc5b137451a5235b31a73",
     "work/monthly_joint_identity259_host.py": "f19a29d199ba6e77e327d03dbbd974d30ea7b837f8a5ef46dc3422e8bce49124",
     "work/monthly_joint_identity259_independent.py": "217407ac3f1ec71c6898f245d7ba0ddea8e138609f115f75e3d7d13323762c2d",
     "work/monthly_joint_identity259_kernel.py": "c50ca6cd71673f27b65ae208089aad332eaaf5a7180e8008707f2d4019eb48bf",
@@ -2605,6 +2612,10 @@
     "work/test_monthly_joint_error226_host.py": "2f818e6c032a55a3291d22a558e76d06da43b6383b37f4c886d155f064db9b3a",
     "work/test_monthly_joint_error226_independent.py": "10142c24162ce87a35c56b70ae8861cb319ff3c1f37a87d4dd16035b44ad8209",
     "work/test_monthly_joint_error226_model.py": "abe7fc19d1456239c2fc526aa06ba09afb5fdbcb7ed3f66663536b10dfe0735e",
+    "work/test_monthly_joint_growth271_adapter.py": "94d8c07d38a34735002e0e76b21ec2e8824af38bcd73acdae2cf7d6d667fcf43",
+    "work/test_monthly_joint_growth271_host.py": "5b08905bc9b2700bec03e656898beaeea162a25513759c105d2d9e2ba1220068",
+    "work/test_monthly_joint_growth271_independent.py": "33c5282ed794a163adcd5c03f0a4faa5873ec6237df726d05725327ea8813e24",
+    "work/test_monthly_joint_growth271_kernel.py": "8d0e0a2e43e0366458489b19c223371e7a79b8d866398eda383fd1357c055093",
     "work/test_monthly_joint_identity259_host.py": "15bed7427cd527d3dbaf64386f1c70f783004708288b6f0e540e44e69404e84a",
     "work/test_monthly_joint_identity259_independent.py": "ac5d8b048d4a256a97fe90eb0e71e79e3ed6cc9c2569c6c7fc238807f3d42b70",
     "work/test_monthly_joint_identity259_kernel.py": "bb278f605a76bf4fcaf90f1e24b4121bd9458000b8e86999930836910cbf43fa",
@@ -7293,6 +7304,12 @@
       "workspace": "research",
       "path": "outputs/monthly_joint_error226/PLAN.json",
       "sha256": "996a6f80084cb95c48427949786caff84b6935c8e73126433bd12980fec26d25",
+      "mode": "0o644"
+    },
+    "outputs/monthly_joint_growth271/PLAN.json": {
+      "workspace": "research",
+      "path": "outputs/monthly_joint_growth271/PLAN.json",
+      "sha256": "2bc48c28b64a18abc8aedd647d6e1d62ebc516a6d8e021e1e23f0d768ea172a7",
       "mode": "0o644"
     },
     "outputs/monthly_joint_identity259/PLAN.json": {
@@ -13367,6 +13384,42 @@
       "sha256": "e17be025196ac3a6cc476435b53013c0ae5dd8d399fedd1e8dbadaa719367869",
       "mode": "0o644"
     },
+    "work/monthly_joint_growth271_adapter.py": {
+      "workspace": "research",
+      "path": "work/monthly_joint_growth271_adapter.py",
+      "sha256": "07e5a60f61f795671bf418faf3f31cb0b7e89cb962428a1f34f20d34cd9eda9b",
+      "mode": "0o644"
+    },
+    "work/monthly_joint_growth271_host.py": {
+      "workspace": "research",
+      "path": "work/monthly_joint_growth271_host.py",
+      "sha256": "9075b34a216dccce5fe05e847f7c81cc60fc9538fef6bc7cf9303c230c58caea",
+      "mode": "0o644"
+    },
+    "work/monthly_joint_growth271_independent.py": {
+      "workspace": "research",
+      "path": "work/monthly_joint_growth271_independent.py",
+      "sha256": "18521b0049e7faa17eb44f92f3aa4e0cd2bcc8594479e1ddba40493b7d0f2790",
+      "mode": "0o644"
+    },
+    "work/monthly_joint_growth271_kernel.py": {
+      "workspace": "research",
+      "path": "work/monthly_joint_growth271_kernel.py",
+      "sha256": "ff5a5a863aa3a7e56e16493f0104c8a0de8a067f57742dc6c816da952baf8d88",
+      "mode": "0o644"
+    },
+    "work/monthly_joint_growth271_saved_review.py": {
+      "workspace": "research",
+      "path": "work/monthly_joint_growth271_saved_review.py",
+      "sha256": "a4f10837fe2f7b096c63f5d4bceaa3a946c049f1fde80db71d861a933dc83cd3",
+      "mode": "0o644"
+    },
+    "work/monthly_joint_growth271_saved_review_v2.py": {
+      "workspace": "research",
+      "path": "work/monthly_joint_growth271_saved_review_v2.py",
+      "sha256": "9e864d87cbcbdb5239afcd050310868d17f62e98711fc5b137451a5235b31a73",
+      "mode": "0o644"
+    },
     "work/monthly_joint_identity259_host.py": {
       "workspace": "research",
       "path": "work/monthly_joint_identity259_host.py",
@@ -18597,6 +18650,30 @@
       "workspace": "research",
       "path": "work/test_monthly_joint_error226_model.py",
       "sha256": "abe7fc19d1456239c2fc526aa06ba09afb5fdbcb7ed3f66663536b10dfe0735e",
+      "mode": "0o644"
+    },
+    "work/test_monthly_joint_growth271_adapter.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_joint_growth271_adapter.py",
+      "sha256": "94d8c07d38a34735002e0e76b21ec2e8824af38bcd73acdae2cf7d6d667fcf43",
+      "mode": "0o644"
+    },
+    "work/test_monthly_joint_growth271_host.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_joint_growth271_host.py",
+      "sha256": "5b08905bc9b2700bec03e656898beaeea162a25513759c105d2d9e2ba1220068",
+      "mode": "0o644"
+    },
+    "work/test_monthly_joint_growth271_independent.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_joint_growth271_independent.py",
+      "sha256": "33c5282ed794a163adcd5c03f0a4faa5873ec6237df726d05725327ea8813e24",
+      "mode": "0o644"
+    },
+    "work/test_monthly_joint_growth271_kernel.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_joint_growth271_kernel.py",
+      "sha256": "8d0e0a2e43e0366458489b19c223371e7a79b8d866398eda383fd1357c055093",
       "mode": "0o644"
     },
     "work/test_monthly_joint_identity259_host.py": {

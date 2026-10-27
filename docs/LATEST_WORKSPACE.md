@@ -2,8 +2,8 @@
 
 This snapshot includes the six daily paper observers, four frozen monthly
 observers, historical-data validation tools, and the independent monthly
-research chain through completed experiment 269. Experiments 266–269 have
-completed local replay, saved-evidence review and protected-archive closure.
+research chain through completed experiment 271. Experiments 266–269 and 271
+have completed local replay, saved-evidence review and protected-archive closure.
 The separate three-field financial-source prototype described below has only
 completed synthetic validation; it is not a new admitted dataset or strategy.
 Research sources retain their `outputs/`
@@ -229,6 +229,37 @@ returned 67.33% same-close zero-cost CAGR with Sharpe 1.729, below the retained
 and source are included; generated forecasts, raw inputs and private review
 receipts remain outside this snapshot.
 
+### Completed experiment 271: member and joint log growth
+
+This comparison first validates every originally eligible security's 253 adjusted
+prices ending 42 sessions before the signal. It keeps at most six positive annual
+momentum leaders, then compares the three strongest individual annual trends
+with the trio maximizing joint equal-weight log growth over twelve fixed
+21-session historical blocks. Exact rational products determine rankings;
+displayed logarithms do not determine ties. Deployment remains monthly,
+equal-weight and fixed-unit between rebalances. The long-momentum shortlist is
+an explicit new domain; this is not an unchanged numerical 52% Local67 core.
+
+The eight formal source/test files passed 112 synthetic tests locally. The
+published additive v2 saved-result reader passed nine self-tests and an independent
+review; it accepts the recorded root-owner phase metadata while preserving the
+original accounting rules. The original reader remains as historical source.
+Actual preparation, first-88-month selection, diagnostics, independent saved-result
+review and protected closure completed. All 123 cached prefixes, four freshly
+computed physical prefixes, full-prefix reuse, nine accounting paths, 45 slices
+and 18 training groups were checked in their documented scopes; 21,444 protected
+files were unchanged. The saved reader rechecked saved price-window mathematics,
+not a new raw-panel reconstruction or return replay.
+
+Neither candidate passed the first-88-month admission gates. The incumbent
+remains `monthly_local_linear70`, with the 67.67% same-close zero-cost CAGR above;
+the 70% target remains unmet. This publication adds the ten verified Python
+files and original registered PLAN. It does not include input windows, choices,
+models, return exports, private source evidence or author-supplied ledger files.
+The PLAN retains its original registration-time status and dependency digests;
+its historical flags are not a claim that the completed run is still prospective.
+See [the experiment 271 sync validation](SYNC_271_VALIDATION_20261027.json).
+
 ### Source-only prototype 270: same-report financial field scope
 
 `work/roa_field_scope270.py` separately assesses the source requirements for
@@ -246,8 +277,10 @@ evidence before any actual admission. No real report, cross-report chain or
 strategy has been admitted by this prototype, and no return is attributed to it.
 The older source gates and frozen observation accounts are unchanged.
 
-See [the latest source-sync validation](SYNC_269_270_VALIDATION_20261027.json)
-for exact published hashes and the scope of the local checks.
+The [269/270 source-sync validation](SYNC_269_270_VALIDATION_20261027.json)
+records that earlier publication. Later 270 v3 consumer and policy work is still
+under review and is excluded from this snapshot. No author-ledger preservation
+files or tools are published.
 
 ## Observer versions and account continuity
 

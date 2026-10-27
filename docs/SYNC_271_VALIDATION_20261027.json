@@ -1,0 +1,173 @@
+{
+  "purpose": "Publish completed experiment271 source/tests, saved-result readers and original registered PLAN; no source data or account state.",
+  "snapshot_utc": "2026-10-27T19:55:37.226998+00:00",
+  "base_commit": "696221bff21037f8292565ca8fa6bc6bfb006508",
+  "exported_files": 2983,
+  "work_allowlist_files": 1965,
+  "unchanged_previous_exports": 2972,
+  "unchanged_observer_exports": 106,
+  "new_files": {
+    "outputs/monthly_joint_growth271/PLAN.json": "2bc48c28b64a18abc8aedd647d6e1d62ebc516a6d8e021e1e23f0d768ea172a7",
+    "work/monthly_joint_growth271_adapter.py": "07e5a60f61f795671bf418faf3f31cb0b7e89cb962428a1f34f20d34cd9eda9b",
+    "work/monthly_joint_growth271_host.py": "9075b34a216dccce5fe05e847f7c81cc60fc9538fef6bc7cf9303c230c58caea",
+    "work/monthly_joint_growth271_independent.py": "18521b0049e7faa17eb44f92f3aa4e0cd2bcc8594479e1ddba40493b7d0f2790",
+    "work/monthly_joint_growth271_kernel.py": "ff5a5a863aa3a7e56e16493f0104c8a0de8a067f57742dc6c816da952baf8d88",
+    "work/monthly_joint_growth271_saved_review.py": "a4f10837fe2f7b096c63f5d4bceaa3a946c049f1fde80db71d861a933dc83cd3",
+    "work/monthly_joint_growth271_saved_review_v2.py": "9e864d87cbcbdb5239afcd050310868d17f62e98711fc5b137451a5235b31a73",
+    "work/test_monthly_joint_growth271_adapter.py": "94d8c07d38a34735002e0e76b21ec2e8824af38bcd73acdae2cf7d6d667fcf43",
+    "work/test_monthly_joint_growth271_host.py": "5b08905bc9b2700bec03e656898beaeea162a25513759c105d2d9e2ba1220068",
+    "work/test_monthly_joint_growth271_independent.py": "33c5282ed794a163adcd5c03f0a4faa5873ec6237df726d05725327ea8813e24",
+    "work/test_monthly_joint_growth271_kernel.py": "8d0e0a2e43e0366458489b19c223371e7a79b8d866398eda383fd1357c055093"
+  },
+  "new_modes": {
+    "outputs/monthly_joint_growth271/PLAN.json": "0o644",
+    "work/monthly_joint_growth271_adapter.py": "0o644",
+    "work/monthly_joint_growth271_host.py": "0o644",
+    "work/monthly_joint_growth271_independent.py": "0o644",
+    "work/monthly_joint_growth271_kernel.py": "0o644",
+    "work/monthly_joint_growth271_saved_review.py": "0o644",
+    "work/monthly_joint_growth271_saved_review_v2.py": "0o644",
+    "work/test_monthly_joint_growth271_adapter.py": "0o644",
+    "work/test_monthly_joint_growth271_host.py": "0o644",
+    "work/test_monthly_joint_growth271_independent.py": "0o644",
+    "work/test_monthly_joint_growth271_kernel.py": "0o644"
+  },
+  "source_manifest_sha256": "d1a5337b1ea28a993b1a326ce7cda8fb254185ef3fec1af29dfd3ec56c755c51",
+  "updated_prior_exports": [],
+  "checks": {
+    "export_and_full_candidate_secret_preflight": {
+      "command": "python3 -B scripts/sync_workspace.py /absolute/research/workspace --observer-workspace /absolute/observer/runtime --include-work-source --work-source-manifest docs/WORK_SOURCE_ALLOWLIST.json --include-local-launchers",
+      "session_id": 94221,
+      "terminal_chunk": "fd1429",
+      "exit_code": 0
+    },
+    "all_source_and_published_hashes_and_modes_match": true,
+    "prior_exports_unchanged": true,
+    "source_verification": {
+      "session_id": 46631,
+      "terminal_chunk": "ea02a8",
+      "exit_code": 0
+    },
+    "new_python_ast_files": 10,
+    "new_export_files_secret_rescanned": 11,
+    "plan_review": {
+      "metadata_only": true,
+      "dependency_paths_and_hashes_retained": true,
+      "raw_or_model_numeric_arrays": 0,
+      "author_records_embedded": false,
+      "scope": "Recursively reviewed JSON types, list contents and numerical fields; numerical leaves are registered parameters and counts. Dependency paths are references, not their contents."
+    },
+    "base_and_exporter_synthetic": {
+      "command": "python -B -m unittest discover -s tests -v",
+      "tests": 24,
+      "elapsed_seconds": 0.381,
+      "session_id": 79597,
+      "terminal_chunk": "4d736b",
+      "exit_code": 0,
+      "log_sha256": "904e1a9c48da6c17fe015ff93df2a402b301af225e057e6d45112b7e763e9536"
+    },
+    "independent_review": {
+      "reviewer": "parent agent /root",
+      "terminal_chunk": "3d6cdc",
+      "exit_code": 0,
+      "reported_scope": "2983 manifest entries; all2972 prior published hashes unchanged; 11 additions match source and parse; private ledger and270v3 excluded; README/LATEST scope checked."
+    }
+  },
+  "experiment271": {
+    "status": "COMPLETED_INDEPENDENTLY_VERIFIED",
+    "completion_sha256": "64fb4bda4307f20f2d98cfc1dd0500646a601ce9245671fcf3c5e700a0c16bd0",
+    "plan_sha256": "2bc48c28b64a18abc8aedd647d6e1d62ebc516a6d8e021e1e23f0d768ea172a7",
+    "result_review_sha256": "45ba85ad587c225bc5e82287f9b0d56980f42bab8cbf0a6ca6edcf2d076e94da",
+    "formal_synthetic": {
+      "tests": 112,
+      "passed_locally": true,
+      "receipt_sha256": "b53352911d2b7fc607e19d868068590d53f7ba10bafb2927a91b400fb5a43fe4",
+      "terminal_chunk": "6026ea",
+      "session_id": 53310,
+      "exit_code": 0,
+      "exact_published_code_bindings": {
+        "work/monthly_joint_growth271_host.py": "9075b34a216dccce5fe05e847f7c81cc60fc9538fef6bc7cf9303c230c58caea",
+        "work/test_monthly_joint_growth271_host.py": "5b08905bc9b2700bec03e656898beaeea162a25513759c105d2d9e2ba1220068",
+        "work/monthly_joint_growth271_adapter.py": "07e5a60f61f795671bf418faf3f31cb0b7e89cb962428a1f34f20d34cd9eda9b",
+        "work/test_monthly_joint_growth271_adapter.py": "94d8c07d38a34735002e0e76b21ec2e8824af38bcd73acdae2cf7d6d667fcf43",
+        "work/monthly_joint_growth271_kernel.py": "ff5a5a863aa3a7e56e16493f0104c8a0de8a067f57742dc6c816da952baf8d88",
+        "work/test_monthly_joint_growth271_kernel.py": "8d0e0a2e43e0366458489b19c223371e7a79b8d866398eda383fd1357c055093",
+        "work/monthly_joint_growth271_independent.py": "18521b0049e7faa17eb44f92f3aa4e0cd2bcc8594479e1ddba40493b7d0f2790",
+        "work/test_monthly_joint_growth271_independent.py": "33c5282ed794a163adcd5c03f0a4faa5873ec6237df726d05725327ea8813e24"
+      }
+    },
+    "saved_reader_v2_synthetic": {
+      "tests": 9,
+      "passed_locally": true,
+      "receipt_sha256": "648f0dbeb832adb27bf7a45b0efe783ae3d7468efbb49f65034db84e13b76a5b",
+      "terminal": {
+        "chunk_id": "2511c4",
+        "exit_code": 0,
+        "owner": "/root/sync_exporter",
+        "session_id": null
+      },
+      "exact_published_code_bindings": {
+        "work/monthly_joint_growth271_saved_review_v2.py": "9e864d87cbcbdb5239afcd050310868d17f62e98711fc5b137451a5235b31a73"
+      }
+    },
+    "saved_reader_v2_code_review_sha256": "0045eadb6e19e13fd81c798aa7e5b3cafcd69ff97fef36c09be46eed20675c12",
+    "phases": {
+      "prepare": {
+        "session_id": 90609,
+        "terminal_chunk": "6ca6df",
+        "exit_code": 0
+      },
+      "select": {
+        "session_id": 85195,
+        "terminal_chunk": "51ea17",
+        "exit_code": 0
+      },
+      "diagnose": {
+        "session_id": 27731,
+        "terminal_chunk": "164b9c",
+        "exit_code": 0
+      },
+      "saved_review": {
+        "session_id": 17634,
+        "terminal_chunk": "dd983a",
+        "exit_code": 0
+      },
+      "close": {
+        "session_id": 88781,
+        "terminal_chunk": "03426d",
+        "exit_code": 0
+      }
+    },
+    "cached_prefixes": 123,
+    "fresh_physical_prefixes": [
+      0,
+      1,
+      53,
+      88
+    ],
+    "full_prefix_reused": 122,
+    "independent_accounting_paths": 9,
+    "slices": 45,
+    "training_groups": 18,
+    "protected_files": 21444,
+    "primary": "incumbent_local67",
+    "new_candidate_admitted": false,
+    "retained_candidate": "monthly_local_linear70",
+    "target_reached": false,
+    "same_close_zero_cost_incumbent_cagr": 0.6766617372041686,
+    "validation_scope": "Previously completed local synthetic tests, registered execution, saved-evidence review and closure. This source sync does not rerun write-once research phases. Saved-reader arithmetic uses saved windows, not a new raw-panel reconstruction or portfolio replay."
+  },
+  "excluded_from_this_publication": [
+    "unfinished270v3 consumer/policy/tests and newsource evidence",
+    "author-supplied original ledger and its local provenance/membership audit or preservation tool",
+    "raw prices and source facts",
+    "prepared inputs and numerical features",
+    "holdings, return exports and model fits",
+    "private contracts/review receipts and runtime environments",
+    "observer ledgers, plans and account state"
+  ],
+  "observer_code_or_state_changed": false,
+  "private_inputs_artifacts_credentials_exported": false,
+  "fresh_checkout_is_complete_replay_bundle": false,
+  "fully_point_in_time_universe_or_independent_oos_claimed": false
+}
