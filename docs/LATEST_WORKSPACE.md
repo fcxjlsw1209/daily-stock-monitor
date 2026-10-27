@@ -11,6 +11,30 @@ Research sources retain their `outputs/`
 and `work/` paths. Observer sources come from the separate active local runtime;
 the research workspace's old observer backups are not the publishing source.
 
+## Unregistered experiment 273 draft
+
+The latest source increment includes `monthly_matured_clock273`: an unfinished
+test of updating the small pooled Ridge correction monthly, using only matured
+holding-period labels, while retaining the long-momentum core and monthly fixed
+holdings. It is a conditional replication of an earlier research direction,
+not a claim of a novel factor or improved returns.
+
+The pure input, model and independent-mathematics modules have synthetic test
+suites. The lifecycle host remains a draft: its host test, prospective review,
+registration and actual-data integration have not been completed. No experiment
+273 PLAN, actual model fits, selected portfolios or performance results exist.
+Do not run its actual phases before completing those gates. This sync does not
+advance the completed-research counters or change any observer account.
+
+The exact source snapshot and checks are recorded in
+`SYNC_DRAFT273_VALIDATION_20261027.json`. A source backup and passing module tests
+do not establish that the complete experiment can run or reproduce a return.
+
+The source-only `roa_field_scope270_pdf_rerender.py` and its synthetic tests are
+also included. Actual rendering requires separately pinned and approved local
+evidence; the PDFs, images, runtime binaries and private review records are not
+published. Rendering evidence does not itself admit financial data or a strategy.
+
 `WORKSPACE_SOURCE_MANIFEST.json` records every exported file's source label,
 relative path, mode, source SHA-256, and published SHA-256. The only source
 adaptations are the existing private-fixture guards in two historical tests.
@@ -414,8 +438,8 @@ On macOS, use the canonical `/private/tmp` temporary path for the observer
 fixtures: an unresolved `/var` alias correctly trips the registry alias guard.
 The initial default-temp run hit five fixture-path failures; rerunning with the
 canonical temporary directory passed all 101 observer tests without changing
-frozen source. The base/exporter suite passed 24 tests in the latest lifecycle
-source sync; the observer tests above describe the earlier unchanged-source check.
+frozen source. The base/exporter suite passed 26 tests in the latest source
+sync; the observer tests above describe the earlier unchanged-source check.
 
 The exporter tests use temporary synthetic fixtures. Full historical parity
 suites additionally need the excluded input bundle; missing data must remain an

@@ -1770,6 +1770,10 @@
     "work/monthly_market_drift231_host.py": "65bd9d8a2cec77beefe09113230929ce6dba17de0438ea45d7b2c505dffa1e7f",
     "work/monthly_market_drift231_independent.py": "ad8aa27968c6ba9569de78fe344ddffbeec6c28b363822b957ea3b5877096e06",
     "work/monthly_market_drift231_model.py": "483ee382d4ef2fecb9c2681ade3d938fb30f4c4e52ae789aa0aaf405d94d41f0",
+    "work/monthly_matured_clock273_host.py": "e91f02abfcde4df7253dbb80c2613146622d6f61d0ef50bd8e21d474d4755e21",
+    "work/monthly_matured_clock273_independent.py": "d80ff56caa0baaa8906bdd82b5c0fba582275f2116c4b1b30eade0da61fcb25e",
+    "work/monthly_matured_clock273_inputs.py": "ae766a7cfbe1f2cce5a383264cb97b8a23ba0bb644ef4991361d4666703a3c9d",
+    "work/monthly_matured_clock273_kernel.py": "3e1110f8b0fe6db34f114dc2e7c17d593800a3b6450998f1ef3278829cd61ef3",
     "work/monthly_median_risk201_host.py": "1af7b4bafd1cfe6316dc24b5892ba78a9237b26a8375df93dcda9a310f75349c",
     "work/monthly_median_risk201_independent.py": "39da098392548e6e5ab76de10cbfdc96d8dc831fb2ff0dabdb8437209b5e7ab3",
     "work/monthly_median_risk201_kernel.py": "a539ad18d639fb6b40cd9f9e4869093627b0533a1d7dab5c4cf98fd04aacc087",
@@ -2208,6 +2212,7 @@
     "work/roa_field_scope270_host_v3.py": "7355ab75e52c71c9fc6c88180b7afe679f715727715a900d383fa3cfa06da750",
     "work/roa_field_scope270_host_v4.py": "61965bbaea5d7f19a1ffaa77faed18f53e1bb399b8888a1e541b58ca1439a186",
     "work/roa_field_scope270_increment.py": "5811de66fc354e951577f131ce1d787feb0d3c6ff7a96780df74ed161db065c9",
+    "work/roa_field_scope270_pdf_rerender.py": "df7a3e7acedd953c624d4f48ddf1d6f841beeb44671211a6d42e2a4d98a4c244",
     "work/roa_field_scope270_v2.py": "cb764f99635b39469720714f256f903734ef812d1554710483529c1a29f2211e",
     "work/roa_stability220_saved_review.py": "6a10ee16c43d919523d2bc4034c774de4469e39142178fa8ad5499e4215a7a7b",
     "work/roa_stability220_source_review_metadata.py": "efce3664daae9ec558bda1b97ba087ace5831c2c922f20bff41a0f2800e89152",
@@ -2657,6 +2662,9 @@
     "work/test_monthly_market_drift231_host.py": "a3e0795f3d6345a628a63958092e5b983ac8a405f1a440ee8e4d5c885cc5f8a6",
     "work/test_monthly_market_drift231_independent.py": "1d36ccad832daed0869fb270f3c301a79a19dafc997241195d6c721c321ca516",
     "work/test_monthly_market_drift231_model.py": "767a2a99cfebea52cc67ee7fae0e427f0b7b897f0c35088276a9d7d7106d3346",
+    "work/test_monthly_matured_clock273_independent.py": "c5c7ab2cafd008d4f0d2e1ddb1bc416d4ed6a6731a30f1556050da33ec2d5bae",
+    "work/test_monthly_matured_clock273_inputs.py": "5859766387f8e09f99073324150d19d4bfc5bfaa07832ca2e37ab52e1ea24542",
+    "work/test_monthly_matured_clock273_kernel.py": "4b6ede2f8213048536369b7e4a14db891636a0759d16db6a755e7fdcab430f12",
     "work/test_monthly_median_risk201_host.py": "02e47551a83c6d0e79b4ece9dc1f602ce4ada4ea7c470807722098036b98bff1",
     "work/test_monthly_median_risk201_independent.py": "464d4da9a90e81b96783b2101d7075ae57582231889f591208d735ebc4d42c55",
     "work/test_monthly_median_risk201_kernel.py": "b6a91856fe3e82e8f7f462a2b93854e18e256a52f789a5b3433c77cc181ff1ff",
@@ -2926,6 +2934,7 @@
     "work/test_roa_field_scope270_host_v3.py": "decc9da6d052cb70b45597d535f34bf37aed8f134687989df8800338eaa551ce",
     "work/test_roa_field_scope270_host_v4.py": "3911647f9958c2cf6f8aec9240f94ca6233413a566f2ac51bc6e94b9fb92db43",
     "work/test_roa_field_scope270_increment.py": "b15b44149af10a7224e69244993950cf2f7beaaca77b093c0cb27b070630a2ce",
+    "work/test_roa_field_scope270_pdf_rerender.py": "c57136e12c0f8b0966185ec62aceaa34b9851d028788bcd76a6abfc73465ed66",
     "work/test_roa_field_scope270_v2.py": "604a464aacf350834a9d53072fbf97fd7140badbf402e3372ca0f0fed19581d4",
     "work/test_roa_stability_preflight_math.py": "85cf2e675e02f888a32a628076de3eb230689c011e69c59d2474e3733db942ae",
     "work/test_run163_host.py": "26a75b735a61af433be37507b5f3568a2ae578ea6002e1845cef52e17e356ec1",
@@ -13623,6 +13632,30 @@
       "sha256": "483ee382d4ef2fecb9c2681ade3d938fb30f4c4e52ae789aa0aaf405d94d41f0",
       "mode": "0o644"
     },
+    "work/monthly_matured_clock273_host.py": {
+      "workspace": "research",
+      "path": "work/monthly_matured_clock273_host.py",
+      "sha256": "e91f02abfcde4df7253dbb80c2613146622d6f61d0ef50bd8e21d474d4755e21",
+      "mode": "0o644"
+    },
+    "work/monthly_matured_clock273_independent.py": {
+      "workspace": "research",
+      "path": "work/monthly_matured_clock273_independent.py",
+      "sha256": "d80ff56caa0baaa8906bdd82b5c0fba582275f2116c4b1b30eade0da61fcb25e",
+      "mode": "0o644"
+    },
+    "work/monthly_matured_clock273_inputs.py": {
+      "workspace": "research",
+      "path": "work/monthly_matured_clock273_inputs.py",
+      "sha256": "ae766a7cfbe1f2cce5a383264cb97b8a23ba0bb644ef4991361d4666703a3c9d",
+      "mode": "0o644"
+    },
+    "work/monthly_matured_clock273_kernel.py": {
+      "workspace": "research",
+      "path": "work/monthly_matured_clock273_kernel.py",
+      "sha256": "3e1110f8b0fe6db34f114dc2e7c17d593800a3b6450998f1ef3278829cd61ef3",
+      "mode": "0o644"
+    },
     "work/monthly_median_risk201_host.py": {
       "workspace": "research",
       "path": "work/monthly_median_risk201_host.py",
@@ -16249,6 +16282,12 @@
       "workspace": "research",
       "path": "work/roa_field_scope270_increment.py",
       "sha256": "5811de66fc354e951577f131ce1d787feb0d3c6ff7a96780df74ed161db065c9",
+      "mode": "0o644"
+    },
+    "work/roa_field_scope270_pdf_rerender.py": {
+      "workspace": "research",
+      "path": "work/roa_field_scope270_pdf_rerender.py",
+      "sha256": "df7a3e7acedd953c624d4f48ddf1d6f841beeb44671211a6d42e2a4d98a4c244",
       "mode": "0o644"
     },
     "work/roa_field_scope270_v2.py": {
@@ -18945,6 +18984,24 @@
       "sha256": "767a2a99cfebea52cc67ee7fae0e427f0b7b897f0c35088276a9d7d7106d3346",
       "mode": "0o644"
     },
+    "work/test_monthly_matured_clock273_independent.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_matured_clock273_independent.py",
+      "sha256": "c5c7ab2cafd008d4f0d2e1ddb1bc416d4ed6a6731a30f1556050da33ec2d5bae",
+      "mode": "0o644"
+    },
+    "work/test_monthly_matured_clock273_inputs.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_matured_clock273_inputs.py",
+      "sha256": "5859766387f8e09f99073324150d19d4bfc5bfaa07832ca2e37ab52e1ea24542",
+      "mode": "0o644"
+    },
+    "work/test_monthly_matured_clock273_kernel.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_matured_clock273_kernel.py",
+      "sha256": "4b6ede2f8213048536369b7e4a14db891636a0759d16db6a755e7fdcab430f12",
+      "mode": "0o644"
+    },
     "work/test_monthly_median_risk201_host.py": {
       "workspace": "research",
       "path": "work/test_monthly_median_risk201_host.py",
@@ -20557,6 +20614,12 @@
       "workspace": "research",
       "path": "work/test_roa_field_scope270_increment.py",
       "sha256": "b15b44149af10a7224e69244993950cf2f7beaaca77b093c0cb27b070630a2ce",
+      "mode": "0o644"
+    },
+    "work/test_roa_field_scope270_pdf_rerender.py": {
+      "workspace": "research",
+      "path": "work/test_roa_field_scope270_pdf_rerender.py",
+      "sha256": "c57136e12c0f8b0966185ec62aceaa34b9851d028788bcd76a6abfc73465ed66",
       "mode": "0o644"
     },
     "work/test_roa_field_scope270_v2.py": {
