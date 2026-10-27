@@ -1,0 +1,108 @@
+{
+  "purpose": "Publish ten validated source270 Python files only; no actual source-admission claim or private evidence bundle.",
+  "snapshot_utc": "2026-10-27T20:18:47.320228+00:00",
+  "base_commit": "d9348e82f338497de157035a7015c817331268ad",
+  "exported_files": 2993,
+  "work_allowlist_files": 1975,
+  "unchanged_previous_exports": 2983,
+  "unchanged_observer_exports": 106,
+  "new_files": {
+    "work/roa_field_scope270_host.py": "6edef14380155ce6a99c220fb1145057d34ad1cd22393e57bbc5b64eda80b1f3",
+    "work/test_roa_field_scope270_host.py": "b87c58fe325685ab46e41d314c7bea03b350e57abf1f8d289fe86ff4bddc16a1",
+    "work/roa_field_scope270_v2.py": "cb764f99635b39469720714f256f903734ef812d1554710483529c1a29f2211e",
+    "work/test_roa_field_scope270_v2.py": "604a464aacf350834a9d53072fbf97fd7140badbf402e3372ca0f0fed19581d4",
+    "work/roa_field_scope270_host_v3.py": "7355ab75e52c71c9fc6c88180b7afe679f715727715a900d383fa3cfa06da750",
+    "work/test_roa_field_scope270_host_v3.py": "decc9da6d052cb70b45597d535f34bf37aed8f134687989df8800338eaa551ce",
+    "work/prepare_roa_field_scope270_policy_v3.py": "4fc35f94c8438461398b1b4fab8a7846cec917e0f111ae2234b44a5ecb6bbf22",
+    "work/roa_field_scope270_host_v4.py": "61965bbaea5d7f19a1ffaa77faed18f53e1bb399b8888a1e541b58ca1439a186",
+    "work/test_roa_field_scope270_host_v4.py": "3911647f9958c2cf6f8aec9240f94ca6233413a566f2ac51bc6e94b9fb92db43",
+    "work/prepare_roa_field_scope270_policy_v4.py": "626b75dcb04c8bbdde5373e32001cf03ca759f034d34f6b11335204ca4055c09"
+  },
+  "new_modes": {
+    "work/roa_field_scope270_host.py": "0o644",
+    "work/test_roa_field_scope270_host.py": "0o644",
+    "work/roa_field_scope270_v2.py": "0o644",
+    "work/test_roa_field_scope270_v2.py": "0o644",
+    "work/roa_field_scope270_host_v3.py": "0o644",
+    "work/test_roa_field_scope270_host_v3.py": "0o644",
+    "work/prepare_roa_field_scope270_policy_v3.py": "0o644",
+    "work/roa_field_scope270_host_v4.py": "0o644",
+    "work/test_roa_field_scope270_host_v4.py": "0o644",
+    "work/prepare_roa_field_scope270_policy_v4.py": "0o644"
+  },
+  "source_manifest_sha256": "c642e4633d5d6561a08fd5cce4ccf291ad12fb4edf24a7506bd436f36d6ad1f6",
+  "updated_prior_exports": [],
+  "checks": {
+    "export_and_full_candidate_secret_preflight": {
+      "command": "python3 -B scripts/sync_workspace.py /absolute/research/workspace --observer-workspace /absolute/observer/runtime --include-work-source --work-source-manifest docs/WORK_SOURCE_ALLOWLIST.json --include-local-launchers",
+      "session_id": 80931,
+      "terminal_chunk": "c013bb",
+      "exit_code": 0
+    },
+    "full_hash_and_mode_comparison": {
+      "session_id": 67520,
+      "terminal_chunk": "765375",
+      "exit_code": 0,
+      "all_source_and_published_hashes_and_modes_match": true,
+      "previous_source_manifest_records_unchanged": true
+    },
+    "new_python_ast_and_secret_checks": 10,
+    "direct_local_import_dependencies_published": true,
+    "dependency_check_terminal": "a826f0",
+    "base_and_exporter_synthetic": {
+      "command": "python -B -m unittest discover -s tests -v",
+      "tests": 24,
+      "elapsed_seconds": 0.359,
+      "session_id": 67217,
+      "terminal_chunk": "9a8a3f",
+      "exit_code": 0,
+      "log_sha256": "b6108fd36ac964963aa82d6193d31bb676b4f7c954aa653f4079007a8a3866f1"
+    },
+    "scanner_change": {
+      "scope": "One exact filename and URL literal added to the existing synthetic URL-rejection fixture allowlist. No general credential detection changed.",
+      "filename": "test_roa_field_scope270_v2.py",
+      "fixture_url": "https://user:pass@synthetic.example/r",
+      "existing_regression": "The existing parameterized exporter test rejects that literal in another filename and altered userinfo in the reviewed filename."
+    }
+  },
+  "source270": {
+    "status": "SYNTHETIC_VALIDATED_AND_STATIC_REVIEWED_NOT_ACTUAL_ADMITTED",
+    "v3_actual_policy_attempt": "Failed on historical schema-example reference before publishing a policy or running a census; v3 and failure evidence remain unchanged locally.",
+    "v4_change": "Exact authenticated declaring-document and JSON-pointer classification of known schema examples; other active references remain verified.",
+    "v4_synthetic": {
+      "tests": 48,
+      "duration_seconds": 23.649,
+      "session_id": 86635,
+      "terminal_chunk": "6dde51",
+      "exit_code": 0,
+      "receipt_sha256": "25044d20bf4db40eb9e6db438e041cada739c91d00e51d0f44076acdb6db153d",
+      "log_sha256": "0ab81f10ff096bd25da7623ed0a6a2aa66c544c8d9f2f312fe8d9690b3b0fcda",
+      "scope": "14 metadata tests,6 synthetic integration tests,28 unchanged v3 tests; existing verified owner run, not rerun by source sync."
+    },
+    "v4_independent_review": {
+      "passed": true,
+      "unresolved_blockers": [],
+      "receipt_sha256": "0ddb8a2ebd918c0e475d4cf850ac62f8779ad70c1319eeb281bffeceb4634221",
+      "code_sha256_exactly_matches_published_ten": true,
+      "scope": "Independent static and synthetic-coverage review, not actual source admission."
+    },
+    "actual_v4_policy_generated_at_snapshot": false,
+    "actual_v4_census_run_at_snapshot": false,
+    "financial_ratio_computed_by_sync": false,
+    "chain_admitted_by_sync": false,
+    "strategy_or_observer_changed": false
+  },
+  "excluded_from_this_publication": [
+    "raw market and financial source data, extracted facts and PDF render outputs",
+    "private classification, policy, design, test and review receipts",
+    "author original ledger, provenance, membership audit and preservation tool",
+    "financial coverage/dedup notes",
+    "credentials and local runtime environments",
+    "account ledgers and saved plans",
+    "unused historical policy builder and PDF renderer source"
+  ],
+  "private_inputs_artifacts_credentials_exported": false,
+  "observer_code_or_state_changed": false,
+  "fresh_checkout_is_complete_replay_bundle": false,
+  "fully_point_in_time_or_independent_oos_claimed": false
+}

@@ -278,9 +278,27 @@ strategy has been admitted by this prototype, and no return is attributed to it.
 The older source gates and frozen observation accounts are unchanged.
 
 The [269/270 source-sync validation](SYNC_269_270_VALIDATION_20261027.json)
-records that earlier publication. Later 270 v3 consumer and policy work is still
-under review and is excluded from this snapshot. No author-ledger preservation
-files or tools are published.
+records that earlier publication. This increment adds ten Python files: the v2
+pure validator and its tests, the original evidence-binding host and its tests,
+and the v3/v4 hosts, tests and policy builders. These are source-validation tools;
+they do not calculate financial ratios or portfolio returns.
+
+V3 keeps individually declared historical runtime dependencies separate from
+active source verification and binds new PDF evidence to the original report
+cells. Its actual policy-building attempt failed on a historical schema-example
+reference before publishing a policy or running a census. V4 adds exact,
+document-bound recognition of those declared schema examples; unknown examples
+and active references still fail closed. The v4 suite passed 48 synthetic tests
+on the published source hashes, including the 28 unchanged v3 checks, and the
+increment passed independent static review. V4 has not yet built an actual
+policy or run source admission. Synthetic tests and code review do not establish
+actual runtime closure, field admission, cross-report chain admission or strategy
+performance.
+
+Classification records, evidence, policies, private validation receipts and
+runtime packages are excluded, so a Git clone cannot perform the real source
+census on its own. No author-ledger preservation files or tools are published.
+See [the v4 source-sync validation](SYNC_SOURCE270_V4_VALIDATION_20261027.json).
 
 ## Observer versions and account continuity
 

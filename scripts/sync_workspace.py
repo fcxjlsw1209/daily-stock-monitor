@@ -42,6 +42,7 @@ REVIEWED_TEST_URLS = {
     'test_after157_annual_body_collect.py': {'https://user:pass@www.microsoft.com/x'},
     'test_after157_msft_iframe_collect.py': {'https://user:pass@microsoft.gcs-web.com/x'},
     'test_after157_walmart_collect.py': {'https://user:pass@stock.walmart.com/x'},
+    'test_roa_field_scope270_v2.py': {'https://user:pass@synthetic.example/r'},
 }
 REVIEWED_TEST_VALUES = {
     'test_verify_residual246_vox2014_source.py': {'not-a-secret'},

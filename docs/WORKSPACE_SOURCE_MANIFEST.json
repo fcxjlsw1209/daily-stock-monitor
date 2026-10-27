@@ -2075,6 +2075,8 @@
     "work/prepare_reference_gain250_context.py": "c1a9c4434230f23063e27554af2e3eb5f5177759ea64784ed38bb71943ad3c04",
     "work/prepare_reference_gain250_source.py": "b2d61b20f7bdcadb5f7320a8a668ac9c146a5c2300fd39306a42b3a9f74e90a3",
     "work/prepare_revenue_persistence156_proposal.py": "557a0acf266479ee45b8fd814d91a6bf2076e8271f476f6fd91ccf4ef17a3da0",
+    "work/prepare_roa_field_scope270_policy_v3.py": "4fc35f94c8438461398b1b4fab8a7846cec917e0f111ae2234b44a5ecb6bbf22",
+    "work/prepare_roa_field_scope270_policy_v4.py": "626b75dcb04c8bbdde5373e32001cf03ca759f034d34f6b11335204ca4055c09",
     "work/prepare_same_report144_test_manifest.py": "4fd8f59d213262c4bb83d897841a9f401f05faab60f6addb1084b4184a2f56b2",
     "work/prepare_same_report145_test_manifest.py": "cdebfb2b507b5765c233e1207a14efc72c57db75ffbfb11da9e633176bc3099e",
     "work/prepare_session_cluster148_concept.py": "ba37dad36967b5643f375177890d52804ec1a9c119b2eda55ff36e7b69006c55",
@@ -2196,6 +2198,10 @@
     "work/risk_reliability223_saved_review.py": "914fbc728013d73499a1404e639ff504bb5319f17f04b366607bf640fa51f7d1",
     "work/risk_reliability223_source_metadata.py": "12c4e0210cdca6e40cbc076e957bba6786e0e0b03b2331da8e8dc131bc73bc01",
     "work/roa_field_scope270.py": "28567702366a549e04b7fb1235fd95b047867cf3adb32b5045b20a02e373abd5",
+    "work/roa_field_scope270_host.py": "6edef14380155ce6a99c220fb1145057d34ad1cd22393e57bbc5b64eda80b1f3",
+    "work/roa_field_scope270_host_v3.py": "7355ab75e52c71c9fc6c88180b7afe679f715727715a900d383fa3cfa06da750",
+    "work/roa_field_scope270_host_v4.py": "61965bbaea5d7f19a1ffaa77faed18f53e1bb399b8888a1e541b58ca1439a186",
+    "work/roa_field_scope270_v2.py": "cb764f99635b39469720714f256f903734ef812d1554710483529c1a29f2211e",
     "work/roa_stability220_saved_review.py": "6a10ee16c43d919523d2bc4034c774de4469e39142178fa8ad5499e4215a7a7b",
     "work/roa_stability220_source_review_metadata.py": "efce3664daae9ec558bda1b97ba087ace5831c2c922f20bff41a0f2800e89152",
     "work/roa_stability_preflight_math.py": "a9a74f7a65b758a35b8f559510376213866967bde41a6ab7a5a6781a5409b56e",
@@ -2904,6 +2910,10 @@
     "work/test_relative_path209_close_review.py": "5366dead6da7e5015029c184e0db3ad1636e56b7d5a3a60cd6574303266ea3be",
     "work/test_review_msft_nvda_same_report_preflight.py": "5b49aa52a22bb22693d51840b7b6e3674cda68aac83bb106026eb710e04aee6d",
     "work/test_roa_field_scope270.py": "cabf0ad37dca05142edafc883a9a312ed5a6c1063490bbcce74735f724d377c1",
+    "work/test_roa_field_scope270_host.py": "b87c58fe325685ab46e41d314c7bea03b350e57abf1f8d289fe86ff4bddc16a1",
+    "work/test_roa_field_scope270_host_v3.py": "decc9da6d052cb70b45597d535f34bf37aed8f134687989df8800338eaa551ce",
+    "work/test_roa_field_scope270_host_v4.py": "3911647f9958c2cf6f8aec9240f94ca6233413a566f2ac51bc6e94b9fb92db43",
+    "work/test_roa_field_scope270_v2.py": "604a464aacf350834a9d53072fbf97fd7140badbf402e3372ca0f0fed19581d4",
     "work/test_roa_stability_preflight_math.py": "85cf2e675e02f888a32a628076de3eb230689c011e69c59d2474e3733db942ae",
     "work/test_run163_host.py": "26a75b735a61af433be37507b5f3568a2ae578ea6002e1845cef52e17e356ec1",
     "work/test_run163_independent.py": "5dd0903c63cbd00eb4eac367fe8520b8ab36d44bc1e0fa57bf63737d99d575b0",
@@ -15430,6 +15440,18 @@
       "sha256": "557a0acf266479ee45b8fd814d91a6bf2076e8271f476f6fd91ccf4ef17a3da0",
       "mode": "0o644"
     },
+    "work/prepare_roa_field_scope270_policy_v3.py": {
+      "workspace": "research",
+      "path": "work/prepare_roa_field_scope270_policy_v3.py",
+      "sha256": "4fc35f94c8438461398b1b4fab8a7846cec917e0f111ae2234b44a5ecb6bbf22",
+      "mode": "0o644"
+    },
+    "work/prepare_roa_field_scope270_policy_v4.py": {
+      "workspace": "research",
+      "path": "work/prepare_roa_field_scope270_policy_v4.py",
+      "sha256": "626b75dcb04c8bbdde5373e32001cf03ca759f034d34f6b11335204ca4055c09",
+      "mode": "0o644"
+    },
     "work/prepare_same_report144_test_manifest.py": {
       "workspace": "research",
       "path": "work/prepare_same_report144_test_manifest.py",
@@ -16154,6 +16176,30 @@
       "workspace": "research",
       "path": "work/roa_field_scope270.py",
       "sha256": "28567702366a549e04b7fb1235fd95b047867cf3adb32b5045b20a02e373abd5",
+      "mode": "0o644"
+    },
+    "work/roa_field_scope270_host.py": {
+      "workspace": "research",
+      "path": "work/roa_field_scope270_host.py",
+      "sha256": "6edef14380155ce6a99c220fb1145057d34ad1cd22393e57bbc5b64eda80b1f3",
+      "mode": "0o644"
+    },
+    "work/roa_field_scope270_host_v3.py": {
+      "workspace": "research",
+      "path": "work/roa_field_scope270_host_v3.py",
+      "sha256": "7355ab75e52c71c9fc6c88180b7afe679f715727715a900d383fa3cfa06da750",
+      "mode": "0o644"
+    },
+    "work/roa_field_scope270_host_v4.py": {
+      "workspace": "research",
+      "path": "work/roa_field_scope270_host_v4.py",
+      "sha256": "61965bbaea5d7f19a1ffaa77faed18f53e1bb399b8888a1e541b58ca1439a186",
+      "mode": "0o644"
+    },
+    "work/roa_field_scope270_v2.py": {
+      "workspace": "research",
+      "path": "work/roa_field_scope270_v2.py",
+      "sha256": "cb764f99635b39469720714f256f903734ef812d1554710483529c1a29f2211e",
       "mode": "0o644"
     },
     "work/roa_stability220_saved_review.py": {
@@ -20402,6 +20448,30 @@
       "workspace": "research",
       "path": "work/test_roa_field_scope270.py",
       "sha256": "cabf0ad37dca05142edafc883a9a312ed5a6c1063490bbcce74735f724d377c1",
+      "mode": "0o644"
+    },
+    "work/test_roa_field_scope270_host.py": {
+      "workspace": "research",
+      "path": "work/test_roa_field_scope270_host.py",
+      "sha256": "b87c58fe325685ab46e41d314c7bea03b350e57abf1f8d289fe86ff4bddc16a1",
+      "mode": "0o644"
+    },
+    "work/test_roa_field_scope270_host_v3.py": {
+      "workspace": "research",
+      "path": "work/test_roa_field_scope270_host_v3.py",
+      "sha256": "decc9da6d052cb70b45597d535f34bf37aed8f134687989df8800338eaa551ce",
+      "mode": "0o644"
+    },
+    "work/test_roa_field_scope270_host_v4.py": {
+      "workspace": "research",
+      "path": "work/test_roa_field_scope270_host_v4.py",
+      "sha256": "3911647f9958c2cf6f8aec9240f94ca6233413a566f2ac51bc6e94b9fb92db43",
+      "mode": "0o644"
+    },
+    "work/test_roa_field_scope270_v2.py": {
+      "workspace": "research",
+      "path": "work/test_roa_field_scope270_v2.py",
+      "sha256": "604a464aacf350834a9d53072fbf97fd7140badbf402e3372ca0f0fed19581d4",
       "mode": "0o644"
     },
     "work/test_roa_stability_preflight_math.py": {
