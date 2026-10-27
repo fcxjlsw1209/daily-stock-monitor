@@ -1,9 +1,11 @@
-# Current workspace source — 2026-10-26
+# Current workspace source — 2026-10-27
 
 This snapshot includes the six daily paper observers, four frozen monthly
 observers, historical-data validation tools, and the independent monthly
-research chain through completed experiment 268. Experiments 266–268 have
+research chain through completed experiment 269. Experiments 266–269 have
 completed local replay, saved-evidence review and protected-archive closure.
+The separate three-field financial-source prototype described below has only
+completed synthetic validation; it is not a new admitted dataset or strategy.
 Research sources retain their `outputs/`
 and `work/` paths. Observer sources come from the separate active local runtime;
 the research workspace's old observer backups are not the publishing source.
@@ -207,6 +209,45 @@ prices, private contracts, source evidence, forecasts, model fits, author
 transactions and observer ledgers remain excluded. A clone alone is not a
 complete historical replay bundle. See
 [the completion-sync validation](SYNC_267_268_COMPLETION_VALIDATION_20261026.json).
+
+### Completed experiment 269: forecast spacing
+
+This matched comparison keeps the original momentum weights, eligible universe,
+forecast inputs, adjustment budget and boundary selector. It tests replacing
+percentile ranks with an affine map that retains the spacing between raw
+forecasts, for the pooled forecast alone and for both forecast components.
+The first 88 months determine admission before the later 34 months and full-period
+diagnostics are examined.
+
+The exact published primary code passed 111 synthetic checks; the saved-result
+reader passed another 38. All 123 cached decision prefixes, four freshly
+recomputed physical prefixes, full-prefix reuse and nine accounting paths passed
+locally, and all 21,444 protected files
+remained unchanged. Both candidates changed only one monthly holding set and
+returned 67.33% same-close zero-cost CAGR with Sharpe 1.729, below the retained
+67.67% / 1.735 candidate. Neither passed admission. The original registered PLAN
+and source are included; generated forecasts, raw inputs and private review
+receipts remain outside this snapshot.
+
+### Source-only prototype 270: same-report financial field scope
+
+`work/roa_field_scope270.py` separately assesses the source requirements for
+current annual consolidated net income, opening total assets and closing total
+assets. It can identify two specifically named comparison-flow duration holds
+as inapplicable to this three-field scope while preserving all original holds.
+Missing required fields, conflicting dates, mixed currency declarations and
+unknown holds still fail. The function binds the complete event and three cells
+to supplied review references without reading files or calculating a ratio.
+
+The module and its tests passed 36 synthetic checks and an independent static
+review. A successful pure-function result does not authenticate source files or
+review receipts. The caller must still verify those bytes and their substantive
+evidence before any actual admission. No real report, cross-report chain or
+strategy has been admitted by this prototype, and no return is attributed to it.
+The older source gates and frozen observation accounts are unchanged.
+
+See [the latest source-sync validation](SYNC_269_270_VALIDATION_20261027.json)
+for exact published hashes and the scope of the local checks.
 
 ## Observer versions and account continuity
 

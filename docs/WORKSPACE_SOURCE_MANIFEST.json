@@ -691,6 +691,7 @@
     "outputs/monthly_followthrough166/FROZEN.json": "18c8e9b5a1b302847a326b24354b92018852a86e1324fb07e605b6a28fe4eb6a",
     "outputs/monthly_followthrough166/PLAN.json": "a1b02a7b37ef9da95f2b83ac59e2e35113eefe8c1629b67affd6ed36a95de002",
     "outputs/monthly_forecast_blend211/PLAN.json": "8e230176fb49ea40dfafb41d6ebd2be2d66853b7d7b06fc91cb8ee383bba139e",
+    "outputs/monthly_forecast_spacing269/PLAN.json": "7e718da72890e73a6a104ef95ee44a05d17ea96c56cb8d1d7de0d4f76a8e15c0",
     "outputs/monthly_formation142/FROZEN.json": "7f0d499d89f44c1d08c0ffd830a2f381b5a1d3f6e469af868620d0952837247a",
     "outputs/monthly_formation142/PLAN.json": "b575682e3b131bf952e1765975da0b1f69d26dedd866c444abc62518bf08ac99",
     "outputs/monthly_gain_concentration265/PLAN.json": "628cd752c6112288cca49fce9d26144e43021a48ca63a5644e4567ed9a6eff48",
@@ -1691,6 +1692,11 @@
     "work/monthly_forecast_blend211_host.py": "7861a3c4dd5e3b3fec1861f00a2aa3cf7fd488bb5a3912899f84039e9cb43ea9",
     "work/monthly_forecast_blend211_independent.py": "d322f1b78b2fde8954a24ea1b64cefb6b0a06388fc69f915619a672c9f5a64b0",
     "work/monthly_forecast_blend211_model.py": "ea2ba79725f87b822628635d023c1d05e7461a10ba13c592bbc9980bd106f48c",
+    "work/monthly_forecast_spacing269_admission.py": "3c55b87cb2a77b0fe7ce5b7a5cee8b74d24a8e76fb08f8c7b816c78d461aac50",
+    "work/monthly_forecast_spacing269_host.py": "983305a716531510e9550783d47230f5e5d8babfd5908478743f30961a4b3989",
+    "work/monthly_forecast_spacing269_independent.py": "68cbc920f4d1001cf47f46b79788f440e2bfc994e0dad66c1a8f785a07407dda",
+    "work/monthly_forecast_spacing269_kernel.py": "7efbe1dbe70aebe12d74deb03aa09ed8d5c6bb027c5e50dc7c482f4771144108",
+    "work/monthly_forecast_spacing269_saved_reader.py": "d6ef8059988c1142693dcf52a7a394bbff8c95c0af199d3913e06691669a81b4",
     "work/monthly_formation142_features.py": "63d03372bec4370155563c32d222e017b2bd655ac7956234167d0d5c5ca34da2",
     "work/monthly_formation142_outcome_review.py": "9c1d1ed725e62d8c833880dfd24b6d072c6e1930343d095b490a3364e91c4e08",
     "work/monthly_formation142_prepare_review.py": "b1646f150a61eb9596b3a170230354826af1fb3ca5993785d99cafcefb29034a",
@@ -2182,6 +2188,7 @@
     "work/risk_forecast223_identity_probe.py": "828f77ce07850a6d77d345a866be8c7292c5c4c421722ed795d4273abec70ac7",
     "work/risk_reliability223_saved_review.py": "914fbc728013d73499a1404e639ff504bb5319f17f04b366607bf640fa51f7d1",
     "work/risk_reliability223_source_metadata.py": "12c4e0210cdca6e40cbc076e957bba6786e0e0b03b2331da8e8dc131bc73bc01",
+    "work/roa_field_scope270.py": "28567702366a549e04b7fb1235fd95b047867cf3adb32b5045b20a02e373abd5",
     "work/roa_stability220_saved_review.py": "6a10ee16c43d919523d2bc4034c774de4469e39142178fa8ad5499e4215a7a7b",
     "work/roa_stability220_source_review_metadata.py": "efce3664daae9ec558bda1b97ba087ace5831c2c922f20bff41a0f2800e89152",
     "work/roa_stability_preflight_math.py": "a9a74f7a65b758a35b8f559510376213866967bde41a6ab7a5a6781a5409b56e",
@@ -2558,6 +2565,11 @@
     "work/test_monthly_forecast_blend211_host.py": "7ffdf553f98ce819a2c4e1dda303a1926d55b5392229c38319e3b6b8e3f3a8b4",
     "work/test_monthly_forecast_blend211_independent.py": "56db66f68abaa53562830ca17d003683b74cd5fa7c8d5f7675150894b6d89768",
     "work/test_monthly_forecast_blend211_model.py": "d3f281a81137a3594846264f2c8df796730e5dbe89d808dfdecc0b6cfb329fb9",
+    "work/test_monthly_forecast_spacing269_admission.py": "fdf31c5963c781c86ad13fcc3f58374ae2615c82d4a63817fcbacfc30c628c79",
+    "work/test_monthly_forecast_spacing269_host.py": "37715240afca366ff2b1b0dde4c95a9c8be758a695dea9f4db32a6c326366e22",
+    "work/test_monthly_forecast_spacing269_independent.py": "ef5f02a08b09a1cc796e73b74d8f08c5c8fee4cd2ce0697989829d0a6c2e1f85",
+    "work/test_monthly_forecast_spacing269_kernel.py": "2db5251a5cc6a21b8c5aab8de2e98389fc3cec9b0d5fb49ac747fec4e59c076d",
+    "work/test_monthly_forecast_spacing269_saved_reader.py": "678883feed98d79c246e077ca64ace9a3516bbe1a00a6a90c8d965f18c044c43",
     "work/test_monthly_formation142_features.py": "9515ec014053e3bc6a14e04eec63b5099215e8dd8588e4e0caf5dac5feb47633",
     "work/test_monthly_formation142_outcome_review.py": "793a34297f1e8985900309ba88e1fffe6e2cc5cb5df96a12dbd51544fef3c0ec",
     "work/test_monthly_formation142_prepare_review.py": "87b18d0d0297934e644f2cce44e7cff6aa200d7862e78065c062b69e51a21ec0",
@@ -2880,6 +2892,7 @@
     "work/test_register_monthly_same_report145.py": "dadc0bcc9fc87050b64cb92ab06f16d80915b5465283618420346f822672e7a3",
     "work/test_relative_path209_close_review.py": "5366dead6da7e5015029c184e0db3ad1636e56b7d5a3a60cd6574303266ea3be",
     "work/test_review_msft_nvda_same_report_preflight.py": "5b49aa52a22bb22693d51840b7b6e3674cda68aac83bb106026eb710e04aee6d",
+    "work/test_roa_field_scope270.py": "cabf0ad37dca05142edafc883a9a312ed5a6c1063490bbcce74735f724d377c1",
     "work/test_roa_stability_preflight_math.py": "85cf2e675e02f888a32a628076de3eb230689c011e69c59d2474e3733db942ae",
     "work/test_run163_host.py": "26a75b735a61af433be37507b5f3568a2ae578ea6002e1845cef52e17e356ec1",
     "work/test_run163_independent.py": "5dd0903c63cbd00eb4eac367fe8520b8ab36d44bc1e0fa57bf63737d99d575b0",
@@ -7100,6 +7113,12 @@
       "workspace": "research",
       "path": "outputs/monthly_forecast_blend211/PLAN.json",
       "sha256": "8e230176fb49ea40dfafb41d6ebd2be2d66853b7d7b06fc91cb8ee383bba139e",
+      "mode": "0o644"
+    },
+    "outputs/monthly_forecast_spacing269/PLAN.json": {
+      "workspace": "research",
+      "path": "outputs/monthly_forecast_spacing269/PLAN.json",
+      "sha256": "7e718da72890e73a6a104ef95ee44a05d17ea96c56cb8d1d7de0d4f76a8e15c0",
       "mode": "0o644"
     },
     "outputs/monthly_formation142/FROZEN.json": {
@@ -13102,6 +13121,36 @@
       "sha256": "ea2ba79725f87b822628635d023c1d05e7461a10ba13c592bbc9980bd106f48c",
       "mode": "0o644"
     },
+    "work/monthly_forecast_spacing269_admission.py": {
+      "workspace": "research",
+      "path": "work/monthly_forecast_spacing269_admission.py",
+      "sha256": "3c55b87cb2a77b0fe7ce5b7a5cee8b74d24a8e76fb08f8c7b816c78d461aac50",
+      "mode": "0o644"
+    },
+    "work/monthly_forecast_spacing269_host.py": {
+      "workspace": "research",
+      "path": "work/monthly_forecast_spacing269_host.py",
+      "sha256": "983305a716531510e9550783d47230f5e5d8babfd5908478743f30961a4b3989",
+      "mode": "0o644"
+    },
+    "work/monthly_forecast_spacing269_independent.py": {
+      "workspace": "research",
+      "path": "work/monthly_forecast_spacing269_independent.py",
+      "sha256": "68cbc920f4d1001cf47f46b79788f440e2bfc994e0dad66c1a8f785a07407dda",
+      "mode": "0o644"
+    },
+    "work/monthly_forecast_spacing269_kernel.py": {
+      "workspace": "research",
+      "path": "work/monthly_forecast_spacing269_kernel.py",
+      "sha256": "7efbe1dbe70aebe12d74deb03aa09ed8d5c6bb027c5e50dc7c482f4771144108",
+      "mode": "0o644"
+    },
+    "work/monthly_forecast_spacing269_saved_reader.py": {
+      "workspace": "research",
+      "path": "work/monthly_forecast_spacing269_saved_reader.py",
+      "sha256": "d6ef8059988c1142693dcf52a7a394bbff8c95c0af199d3913e06691669a81b4",
+      "mode": "0o644"
+    },
     "work/monthly_formation142_features.py": {
       "workspace": "research",
       "path": "work/monthly_formation142_features.py",
@@ -16048,6 +16097,12 @@
       "sha256": "12c4e0210cdca6e40cbc076e957bba6786e0e0b03b2331da8e8dc131bc73bc01",
       "mode": "0o644"
     },
+    "work/roa_field_scope270.py": {
+      "workspace": "research",
+      "path": "work/roa_field_scope270.py",
+      "sha256": "28567702366a549e04b7fb1235fd95b047867cf3adb32b5045b20a02e373abd5",
+      "mode": "0o644"
+    },
     "work/roa_stability220_saved_review.py": {
       "workspace": "research",
       "path": "work/roa_stability220_saved_review.py",
@@ -18304,6 +18359,36 @@
       "sha256": "d3f281a81137a3594846264f2c8df796730e5dbe89d808dfdecc0b6cfb329fb9",
       "mode": "0o644"
     },
+    "work/test_monthly_forecast_spacing269_admission.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_forecast_spacing269_admission.py",
+      "sha256": "fdf31c5963c781c86ad13fcc3f58374ae2615c82d4a63817fcbacfc30c628c79",
+      "mode": "0o644"
+    },
+    "work/test_monthly_forecast_spacing269_host.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_forecast_spacing269_host.py",
+      "sha256": "37715240afca366ff2b1b0dde4c95a9c8be758a695dea9f4db32a6c326366e22",
+      "mode": "0o644"
+    },
+    "work/test_monthly_forecast_spacing269_independent.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_forecast_spacing269_independent.py",
+      "sha256": "ef5f02a08b09a1cc796e73b74d8f08c5c8fee4cd2ce0697989829d0a6c2e1f85",
+      "mode": "0o644"
+    },
+    "work/test_monthly_forecast_spacing269_kernel.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_forecast_spacing269_kernel.py",
+      "sha256": "2db5251a5cc6a21b8c5aab8de2e98389fc3cec9b0d5fb49ac747fec4e59c076d",
+      "mode": "0o644"
+    },
+    "work/test_monthly_forecast_spacing269_saved_reader.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_forecast_spacing269_saved_reader.py",
+      "sha256": "678883feed98d79c246e077ca64ace9a3516bbe1a00a6a90c8d965f18c044c43",
+      "mode": "0o644"
+    },
     "work/test_monthly_formation142_features.py": {
       "workspace": "research",
       "path": "work/test_monthly_formation142_features.py",
@@ -20234,6 +20319,12 @@
       "workspace": "research",
       "path": "work/test_review_msft_nvda_same_report_preflight.py",
       "sha256": "5b49aa52a22bb22693d51840b7b6e3674cda68aac83bb106026eb710e04aee6d",
+      "mode": "0o644"
+    },
+    "work/test_roa_field_scope270.py": {
+      "workspace": "research",
+      "path": "work/test_roa_field_scope270.py",
+      "sha256": "cabf0ad37dca05142edafc883a9a312ed5a6c1063490bbcce74735f724d377c1",
       "mode": "0o644"
     },
     "work/test_roa_stability_preflight_math.py": {

@@ -1,0 +1,132 @@
+{
+  "purpose": "Publish completed experiment269 source and PLAN plus a tested pure financial-source prototype; no raw inputs or account state.",
+  "snapshot_utc": "2026-10-27T18:16:21.225636+00:00",
+  "base_commit": "4bce023d53c6fd762436b1c16d5c6f6c20d6d446",
+  "exported_files": 2972,
+  "work_allowlist_files": 1955,
+  "unchanged_previous_exports": 2959,
+  "unchanged_observer_exports": 106,
+  "new_files": {
+    "outputs/monthly_forecast_spacing269/PLAN.json": "7e718da72890e73a6a104ef95ee44a05d17ea96c56cb8d1d7de0d4f76a8e15c0",
+    "work/monthly_forecast_spacing269_admission.py": "3c55b87cb2a77b0fe7ce5b7a5cee8b74d24a8e76fb08f8c7b816c78d461aac50",
+    "work/monthly_forecast_spacing269_host.py": "983305a716531510e9550783d47230f5e5d8babfd5908478743f30961a4b3989",
+    "work/monthly_forecast_spacing269_independent.py": "68cbc920f4d1001cf47f46b79788f440e2bfc994e0dad66c1a8f785a07407dda",
+    "work/monthly_forecast_spacing269_kernel.py": "7efbe1dbe70aebe12d74deb03aa09ed8d5c6bb027c5e50dc7c482f4771144108",
+    "work/monthly_forecast_spacing269_saved_reader.py": "d6ef8059988c1142693dcf52a7a394bbff8c95c0af199d3913e06691669a81b4",
+    "work/roa_field_scope270.py": "28567702366a549e04b7fb1235fd95b047867cf3adb32b5045b20a02e373abd5",
+    "work/test_monthly_forecast_spacing269_admission.py": "fdf31c5963c781c86ad13fcc3f58374ae2615c82d4a63817fcbacfc30c628c79",
+    "work/test_monthly_forecast_spacing269_host.py": "37715240afca366ff2b1b0dde4c95a9c8be758a695dea9f4db32a6c326366e22",
+    "work/test_monthly_forecast_spacing269_independent.py": "ef5f02a08b09a1cc796e73b74d8f08c5c8fee4cd2ce0697989829d0a6c2e1f85",
+    "work/test_monthly_forecast_spacing269_kernel.py": "2db5251a5cc6a21b8c5aab8de2e98389fc3cec9b0d5fb49ac747fec4e59c076d",
+    "work/test_monthly_forecast_spacing269_saved_reader.py": "678883feed98d79c246e077ca64ace9a3516bbe1a00a6a90c8d965f18c044c43",
+    "work/test_roa_field_scope270.py": "cabf0ad37dca05142edafc883a9a312ed5a6c1063490bbcce74735f724d377c1"
+  },
+  "updated_prior_exports": [],
+  "source_manifest_sha256": "3c14e396c782cab7765ffd5fd859da1e260b412019632987c8981cdedfc11933",
+  "checks": {
+    "preflight_source_scan": {
+      "exit_code": 0,
+      "session_id": 64105,
+      "terminal_chunk": "c6c994"
+    },
+    "export": {
+      "exit_code": 0,
+      "session_id": 98919,
+      "terminal_chunk": "aefa6a"
+    },
+    "all_source_and_published_hashes_and_modes_match": true,
+    "prior_exports_unchanged": true,
+    "diff_check": {
+      "exit_code": 0,
+      "terminal_chunk": "1fcbcf"
+    }
+  },
+  "experiment269": {
+    "status": "COMPLETED_INDEPENDENTLY_VERIFIED",
+    "completion_sha256": "56fe86a469213612da89134f1785ca068ffcbda4b6afff178e8d23c77a59b963",
+    "plan_sha256": "7e718da72890e73a6a104ef95ee44a05d17ea96c56cb8d1d7de0d4f76a8e15c0",
+    "result_review_sha256": "ba682c63fb305ca391a4d9f9603dafb50bd751fdc44a9a24ea2f78eac8d5004b",
+    "protected_files": 21444,
+    "checks": {
+      "formal_synthetic": {
+        "tests": 111,
+        "passed_locally": true,
+        "receipt_sha256": "7979505bdb0da317899cb0e9499b20d2e61723acad3f7d7918c3c5d9fcee8fa2",
+        "exact_published_code_bindings": {
+          "work/monthly_forecast_spacing269_host.py": "983305a716531510e9550783d47230f5e5d8babfd5908478743f30961a4b3989",
+          "work/test_monthly_forecast_spacing269_host.py": "37715240afca366ff2b1b0dde4c95a9c8be758a695dea9f4db32a6c326366e22",
+          "work/monthly_forecast_spacing269_kernel.py": "7efbe1dbe70aebe12d74deb03aa09ed8d5c6bb027c5e50dc7c482f4771144108",
+          "work/test_monthly_forecast_spacing269_kernel.py": "2db5251a5cc6a21b8c5aab8de2e98389fc3cec9b0d5fb49ac747fec4e59c076d",
+          "work/monthly_forecast_spacing269_independent.py": "68cbc920f4d1001cf47f46b79788f440e2bfc994e0dad66c1a8f785a07407dda",
+          "work/test_monthly_forecast_spacing269_independent.py": "ef5f02a08b09a1cc796e73b74d8f08c5c8fee4cd2ce0697989829d0a6c2e1f85",
+          "work/monthly_forecast_spacing269_admission.py": "3c55b87cb2a77b0fe7ce5b7a5cee8b74d24a8e76fb08f8c7b816c78d461aac50",
+          "work/test_monthly_forecast_spacing269_admission.py": "fdf31c5963c781c86ad13fcc3f58374ae2615c82d4a63817fcbacfc30c628c79"
+        }
+      },
+      "saved_reader_synthetic": {
+        "tests": 38,
+        "passed_locally": true,
+        "receipt_sha256": "c10aa8739324722d776637c9a5b24163c5ed6e84f4d9f2ea6bb50fbdc19a444d",
+        "exact_published_code_bindings": {
+          "work/monthly_forecast_spacing269_saved_reader.py": "d6ef8059988c1142693dcf52a7a394bbff8c95c0af199d3913e06691669a81b4",
+          "work/test_monthly_forecast_spacing269_saved_reader.py": "678883feed98d79c246e077ca64ace9a3516bbe1a00a6a90c8d965f18c044c43"
+        }
+      }
+    },
+    "same_close_zero_cost_metrics": {
+      "incumbent_local67": {
+        "start": "2016-08-17",
+        "end": "2026-09-24",
+        "cagr": 0.6766617372041686,
+        "sharpe": 1.7348767578075763,
+        "max_drawdown": -0.31258703401830956,
+        "cost_per_side": 0.0
+      },
+      "pooled_affine": {
+        "start": "2016-08-17",
+        "end": "2026-09-24",
+        "cagr": 0.6732627981978399,
+        "sharpe": 1.7288692085387078,
+        "max_drawdown": -0.3125870340183099,
+        "cost_per_side": 0.0
+      },
+      "mixed_affine": {
+        "start": "2016-08-17",
+        "end": "2026-09-24",
+        "cagr": 0.6732627981978399,
+        "sharpe": 1.7288692085387078,
+        "max_drawdown": -0.3125870340183099,
+        "cost_per_side": 0.0
+      }
+    },
+    "retained_candidate": "monthly_local_linear70",
+    "target_reached": false,
+    "new_candidate_admitted": false,
+    "validation_scope": "Previously completed local synthetic tests, replay, saved-evidence review and closure. This sync verifies identical source bytes; it does not rerun write-once phases."
+  },
+  "source_prototype270": {
+    "status": "PURE_SOURCE_PROTOTYPE_TESTED_NOT_REAL_DATA_ADMISSION",
+    "exact_published_code_bindings": {
+      "work/roa_field_scope270.py": "28567702366a549e04b7fb1235fd95b047867cf3adb32b5045b20a02e373abd5",
+      "work/test_roa_field_scope270.py": "cabf0ad37dca05142edafc883a9a312ed5a6c1063490bbcce74735f724d377c1"
+    },
+    "implementation_status_sha256": "85fe6409bdc9c9e8721091d91c4067799b64ecc5a7a2820c5b5fc2656469e457",
+    "synthetic_tests": {
+      "tests": 36,
+      "exit_code": 0,
+      "terminal_chunk": "49bf10",
+      "log_sha256": "6d12ff53d3f1d1e6c6531dc6345d365a01022efcba19b34049bec67707c01d97"
+    },
+    "independent_static_review_passed": true,
+    "actual_data_assessment_executed": false,
+    "source_or_review_bytes_authenticated_by_pure_function": false,
+    "new_real_report_admissions": 0,
+    "ratios_computed": false,
+    "chains_admitted": false,
+    "strategy_trials": 0
+  },
+  "observer_code_or_state_changed": false,
+  "private_inputs_artifacts_credentials_exported": false,
+  "fresh_checkout_is_complete_replay_bundle": false,
+  "fully_point_in_time_universe_or_independent_oos_claimed": false
+}
