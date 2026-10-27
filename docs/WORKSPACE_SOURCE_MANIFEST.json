@@ -847,6 +847,7 @@
     "outputs/monthly_risk_clock263/PLAN.json": "019025b98b862f0d2d50b12c4fac992e80871e4baa1a9d5c8d0bf77b3b50f933",
     "outputs/monthly_risk_consensus219/PLAN.json": "8c745473754e4ffb54b1a0ab4c1a22c04a10f576b4963528c7d5df1803c291e8",
     "outputs/monthly_risk_reliability223/PLAN.json": "4e258b83445affbf7433edbe1ba3ee8028b880c20f403b6393976a4a62005420",
+    "outputs/monthly_roa_increment272/PLAN.json": "d4788a8b02d94eb8266d36d30f196bc397862e261110f5cc86fb5bd89d71e77f",
     "outputs/monthly_roa_stability220/PLAN.json": "dc17ecb6c74f4bb0dfae4b37b6fc1b276e7e123adb831493cde18a74194170a4",
     "outputs/monthly_run163/FROZEN.json": "f14320f06614c3999fe6cebb20cdf72979abd5d55edd84575f4307c939ef6450",
     "outputs/monthly_run163/PLAN.json": "71230985a767c9c3270b25c9d74ec6ec64ed965cfd07039a06f0a4c5d20b772e",
@@ -1884,6 +1885,11 @@
     "work/monthly_risk_reliability223_host.py": "0749e0e29a753990280fa1eb49dffb6a697258475c4da14a1465f25e1795c620",
     "work/monthly_risk_reliability223_independent.py": "5582d3be531da2b472cafaf7af9a2dc105572e715e872168181ce91efe6d76f2",
     "work/monthly_risk_reliability223_kernel.py": "e4d4f470f9b05b457a3c82aef17676432edc6b9229dff507e4866bdb53636ab5",
+    "work/monthly_roa_increment272_factor.py": "b81fcd857b0fd3053a67ef014f359ba12495c2bcedd1fa88c67040f60402b83c",
+    "work/monthly_roa_increment272_independent.py": "a83db7e0ef5cb9bb1c551c223961aecabab19d47b089b6f42b9b6257578598b0",
+    "work/monthly_roa_increment272_runner.py": "9ede8dbc7d99da32b5a01f8204ec917e9308ffbdc07cc65c331f7135dcb74ce1",
+    "work/monthly_roa_increment272_saved_reader.py": "5d48fb6b6afa66d03bdc8b8f630e4d7e42d732131eeb7d8ea2c79a1b49dec32c",
+    "work/monthly_roa_increment272_saved_reader_v2.py": "b0355ff78fae3829dcdc256a242a3e44315fa3f4225ae1029d306c17683a1edf",
     "work/monthly_roa_stability220_host.py": "9504312f026d9d533c08032f1ff6d9d80239b0631363df2a50a567330fb50367",
     "work/monthly_roa_stability220_independent.py": "b054a22d9779f616c40115532497cdc75c65b7380fc4247ca374aef5210b2e96",
     "work/monthly_roa_stability220_kernel.py": "36bac3a2c79ec6bcc57bf1a3b1066dc17500c57ee7830da1e638a89c6e5395c2",
@@ -2201,6 +2207,7 @@
     "work/roa_field_scope270_host.py": "6edef14380155ce6a99c220fb1145057d34ad1cd22393e57bbc5b64eda80b1f3",
     "work/roa_field_scope270_host_v3.py": "7355ab75e52c71c9fc6c88180b7afe679f715727715a900d383fa3cfa06da750",
     "work/roa_field_scope270_host_v4.py": "61965bbaea5d7f19a1ffaa77faed18f53e1bb399b8888a1e541b58ca1439a186",
+    "work/roa_field_scope270_increment.py": "5811de66fc354e951577f131ce1d787feb0d3c6ff7a96780df74ed161db065c9",
     "work/roa_field_scope270_v2.py": "cb764f99635b39469720714f256f903734ef812d1554710483529c1a29f2211e",
     "work/roa_stability220_saved_review.py": "6a10ee16c43d919523d2bc4034c774de4469e39142178fa8ad5499e4215a7a7b",
     "work/roa_stability220_source_review_metadata.py": "efce3664daae9ec558bda1b97ba087ace5831c2c922f20bff41a0f2800e89152",
@@ -2758,6 +2765,11 @@
     "work/test_monthly_risk_reliability223_host.py": "d5cdfc374307854490713acb0c802ba722247782d99ef7aa4e70ef9387341e4f",
     "work/test_monthly_risk_reliability223_independent.py": "69fcf5e310af2d14635e5613bd672b2e1b46d364e34d8b9834d944e48aac694a",
     "work/test_monthly_risk_reliability223_kernel.py": "64be74970032c9fa2cdc4a15ffb4448b30f480f149e3c717af6a361c100fbf45",
+    "work/test_monthly_roa_increment272_factor.py": "2d55709eed9c41541ca3fdfdffa21235d81245665caadba6e04b7dbecb58b65e",
+    "work/test_monthly_roa_increment272_independent.py": "0095e5f3ca26f8d80f21be21e7669923cca2ac32350b138d3c8383c6cd5420d1",
+    "work/test_monthly_roa_increment272_runner.py": "949253f18a6b5a57467eb0f4d4e3ea2285dc719ade2756ea7833bbb7b25943a0",
+    "work/test_monthly_roa_increment272_saved_reader.py": "cddaaf213925994171d2fe0a40cbf056e77a97c843245f3dadb7875e7af185cb",
+    "work/test_monthly_roa_increment272_saved_reader_v2.py": "c53fb60807e445165f148c321b665d60fa3875c7a0b04a30abd1d941224f33fa",
     "work/test_monthly_roa_stability220_host.py": "18f8f0253c8ff53f3e948f15ad738bec301c4bc2d2b057a8d46bc7e705b9a211",
     "work/test_monthly_roa_stability220_independent.py": "114ea6531a364a05b69773c9295be70fa9df9ca554eaa56ba8b3caa51568c642",
     "work/test_monthly_roa_stability220_kernel.py": "744df2d5c6a4b07af3d61073d1c9a250ebd9cc6a9b681368317b384e57ca1a48",
@@ -2913,6 +2925,7 @@
     "work/test_roa_field_scope270_host.py": "b87c58fe325685ab46e41d314c7bea03b350e57abf1f8d289fe86ff4bddc16a1",
     "work/test_roa_field_scope270_host_v3.py": "decc9da6d052cb70b45597d535f34bf37aed8f134687989df8800338eaa551ce",
     "work/test_roa_field_scope270_host_v4.py": "3911647f9958c2cf6f8aec9240f94ca6233413a566f2ac51bc6e94b9fb92db43",
+    "work/test_roa_field_scope270_increment.py": "b15b44149af10a7224e69244993950cf2f7beaaca77b093c0cb27b070630a2ce",
     "work/test_roa_field_scope270_v2.py": "604a464aacf350834a9d53072fbf97fd7140badbf402e3372ca0f0fed19581d4",
     "work/test_roa_stability_preflight_math.py": "85cf2e675e02f888a32a628076de3eb230689c011e69c59d2474e3733db942ae",
     "work/test_run163_host.py": "26a75b735a61af433be37507b5f3568a2ae578ea6002e1845cef52e17e356ec1",
@@ -8070,6 +8083,12 @@
       "workspace": "research",
       "path": "outputs/monthly_risk_reliability223/PLAN.json",
       "sha256": "4e258b83445affbf7433edbe1ba3ee8028b880c20f403b6393976a4a62005420",
+      "mode": "0o644"
+    },
+    "outputs/monthly_roa_increment272/PLAN.json": {
+      "workspace": "research",
+      "path": "outputs/monthly_roa_increment272/PLAN.json",
+      "sha256": "d4788a8b02d94eb8266d36d30f196bc397862e261110f5cc86fb5bd89d71e77f",
       "mode": "0o644"
     },
     "outputs/monthly_roa_stability220/PLAN.json": {
@@ -14294,6 +14313,36 @@
       "sha256": "e4d4f470f9b05b457a3c82aef17676432edc6b9229dff507e4866bdb53636ab5",
       "mode": "0o644"
     },
+    "work/monthly_roa_increment272_factor.py": {
+      "workspace": "research",
+      "path": "work/monthly_roa_increment272_factor.py",
+      "sha256": "b81fcd857b0fd3053a67ef014f359ba12495c2bcedd1fa88c67040f60402b83c",
+      "mode": "0o644"
+    },
+    "work/monthly_roa_increment272_independent.py": {
+      "workspace": "research",
+      "path": "work/monthly_roa_increment272_independent.py",
+      "sha256": "a83db7e0ef5cb9bb1c551c223961aecabab19d47b089b6f42b9b6257578598b0",
+      "mode": "0o644"
+    },
+    "work/monthly_roa_increment272_runner.py": {
+      "workspace": "research",
+      "path": "work/monthly_roa_increment272_runner.py",
+      "sha256": "9ede8dbc7d99da32b5a01f8204ec917e9308ffbdc07cc65c331f7135dcb74ce1",
+      "mode": "0o644"
+    },
+    "work/monthly_roa_increment272_saved_reader.py": {
+      "workspace": "research",
+      "path": "work/monthly_roa_increment272_saved_reader.py",
+      "sha256": "5d48fb6b6afa66d03bdc8b8f630e4d7e42d732131eeb7d8ea2c79a1b49dec32c",
+      "mode": "0o644"
+    },
+    "work/monthly_roa_increment272_saved_reader_v2.py": {
+      "workspace": "research",
+      "path": "work/monthly_roa_increment272_saved_reader_v2.py",
+      "sha256": "b0355ff78fae3829dcdc256a242a3e44315fa3f4225ae1029d306c17683a1edf",
+      "mode": "0o644"
+    },
     "work/monthly_roa_stability220_host.py": {
       "workspace": "research",
       "path": "work/monthly_roa_stability220_host.py",
@@ -16194,6 +16243,12 @@
       "workspace": "research",
       "path": "work/roa_field_scope270_host_v4.py",
       "sha256": "61965bbaea5d7f19a1ffaa77faed18f53e1bb399b8888a1e541b58ca1439a186",
+      "mode": "0o644"
+    },
+    "work/roa_field_scope270_increment.py": {
+      "workspace": "research",
+      "path": "work/roa_field_scope270_increment.py",
+      "sha256": "5811de66fc354e951577f131ce1d787feb0d3c6ff7a96780df74ed161db065c9",
       "mode": "0o644"
     },
     "work/roa_field_scope270_v2.py": {
@@ -19538,6 +19593,36 @@
       "sha256": "64be74970032c9fa2cdc4a15ffb4448b30f480f149e3c717af6a361c100fbf45",
       "mode": "0o644"
     },
+    "work/test_monthly_roa_increment272_factor.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_roa_increment272_factor.py",
+      "sha256": "2d55709eed9c41541ca3fdfdffa21235d81245665caadba6e04b7dbecb58b65e",
+      "mode": "0o644"
+    },
+    "work/test_monthly_roa_increment272_independent.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_roa_increment272_independent.py",
+      "sha256": "0095e5f3ca26f8d80f21be21e7669923cca2ac32350b138d3c8383c6cd5420d1",
+      "mode": "0o644"
+    },
+    "work/test_monthly_roa_increment272_runner.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_roa_increment272_runner.py",
+      "sha256": "949253f18a6b5a57467eb0f4d4e3ea2285dc719ade2756ea7833bbb7b25943a0",
+      "mode": "0o644"
+    },
+    "work/test_monthly_roa_increment272_saved_reader.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_roa_increment272_saved_reader.py",
+      "sha256": "cddaaf213925994171d2fe0a40cbf056e77a97c843245f3dadb7875e7af185cb",
+      "mode": "0o644"
+    },
+    "work/test_monthly_roa_increment272_saved_reader_v2.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_roa_increment272_saved_reader_v2.py",
+      "sha256": "c53fb60807e445165f148c321b665d60fa3875c7a0b04a30abd1d941224f33fa",
+      "mode": "0o644"
+    },
     "work/test_monthly_roa_stability220_host.py": {
       "workspace": "research",
       "path": "work/test_monthly_roa_stability220_host.py",
@@ -20466,6 +20551,12 @@
       "workspace": "research",
       "path": "work/test_roa_field_scope270_host_v4.py",
       "sha256": "3911647f9958c2cf6f8aec9240f94ca6233413a566f2ac51bc6e94b9fb92db43",
+      "mode": "0o644"
+    },
+    "work/test_roa_field_scope270_increment.py": {
+      "workspace": "research",
+      "path": "work/test_roa_field_scope270_increment.py",
+      "sha256": "b15b44149af10a7224e69244993950cf2f7beaaca77b093c0cb27b070630a2ce",
       "mode": "0o644"
     },
     "work/test_roa_field_scope270_v2.py": {

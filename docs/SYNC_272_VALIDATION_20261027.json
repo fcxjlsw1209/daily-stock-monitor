@@ -1,0 +1,153 @@
+{
+  "exported_files": 3006,
+  "work_allowlist_files": 1987,
+  "unchanged_previous_exports": 2993,
+  "unchanged_observer_exports": 106,
+  "new_files": {
+    "outputs/monthly_roa_increment272/PLAN.json": "d4788a8b02d94eb8266d36d30f196bc397862e261110f5cc86fb5bd89d71e77f",
+    "work/monthly_roa_increment272_factor.py": "b81fcd857b0fd3053a67ef014f359ba12495c2bcedd1fa88c67040f60402b83c",
+    "work/monthly_roa_increment272_independent.py": "a83db7e0ef5cb9bb1c551c223961aecabab19d47b089b6f42b9b6257578598b0",
+    "work/monthly_roa_increment272_runner.py": "9ede8dbc7d99da32b5a01f8204ec917e9308ffbdc07cc65c331f7135dcb74ce1",
+    "work/monthly_roa_increment272_saved_reader.py": "5d48fb6b6afa66d03bdc8b8f630e4d7e42d732131eeb7d8ea2c79a1b49dec32c",
+    "work/monthly_roa_increment272_saved_reader_v2.py": "b0355ff78fae3829dcdc256a242a3e44315fa3f4225ae1029d306c17683a1edf",
+    "work/roa_field_scope270_increment.py": "5811de66fc354e951577f131ce1d787feb0d3c6ff7a96780df74ed161db065c9",
+    "work/test_monthly_roa_increment272_factor.py": "2d55709eed9c41541ca3fdfdffa21235d81245665caadba6e04b7dbecb58b65e",
+    "work/test_monthly_roa_increment272_independent.py": "0095e5f3ca26f8d80f21be21e7669923cca2ac32350b138d3c8383c6cd5420d1",
+    "work/test_monthly_roa_increment272_runner.py": "949253f18a6b5a57467eb0f4d4e3ea2285dc719ade2756ea7833bbb7b25943a0",
+    "work/test_monthly_roa_increment272_saved_reader.py": "cddaaf213925994171d2fe0a40cbf056e77a97c843245f3dadb7875e7af185cb",
+    "work/test_monthly_roa_increment272_saved_reader_v2.py": "c53fb60807e445165f148c321b665d60fa3875c7a0b04a30abd1d941224f33fa",
+    "work/test_roa_field_scope270_increment.py": "b15b44149af10a7224e69244993950cf2f7beaaca77b093c0cb27b070630a2ce"
+  },
+  "new_modes": {
+    "outputs/monthly_roa_increment272/PLAN.json": "0o644",
+    "work/monthly_roa_increment272_factor.py": "0o644",
+    "work/monthly_roa_increment272_independent.py": "0o644",
+    "work/monthly_roa_increment272_runner.py": "0o644",
+    "work/monthly_roa_increment272_saved_reader.py": "0o644",
+    "work/monthly_roa_increment272_saved_reader_v2.py": "0o644",
+    "work/roa_field_scope270_increment.py": "0o644",
+    "work/test_monthly_roa_increment272_factor.py": "0o644",
+    "work/test_monthly_roa_increment272_independent.py": "0o644",
+    "work/test_monthly_roa_increment272_runner.py": "0o644",
+    "work/test_monthly_roa_increment272_saved_reader.py": "0o644",
+    "work/test_monthly_roa_increment272_saved_reader_v2.py": "0o644",
+    "work/test_roa_field_scope270_increment.py": "0o644"
+  },
+  "source_manifest_sha256": "3db6c35e0f757384701f76f18f56fc533f59cf67234274a5b3994ba169e9a8e9",
+  "all_source_and_published_hashes_and_modes_match": true,
+  "direct_local_import_dependencies_published": true,
+  "static_existing_python_path_dependencies_published": true,
+  "new_python_ast_and_secret_checks": 12,
+  "new_plan_secret_checked": true,
+  "purpose": "Publish twelve verified source/test files and the unchanged experiment272 registration PLAN; no private inputs, author records, runtime binaries or account data.",
+  "snapshot_utc": "2026-10-27T21:32:56.162226+00:00",
+  "base_commit": "0a3ad49b8a878bdf18b6462fa335b08ee7ecdf40",
+  "updated_prior_exports": [],
+  "checks": {
+    "export_and_full_candidate_secret_preflight": {
+      "command": "python3 -B scripts/sync_workspace.py /absolute/research/workspace --observer-workspace /absolute/observer/runtime --include-work-source --work-source-manifest docs/WORK_SOURCE_ALLOWLIST.json --include-local-launchers",
+      "session_id": 64430,
+      "terminal_chunk": "c629d3",
+      "exit_code": 0
+    },
+    "full_hash_and_mode_comparison": {
+      "session_id": 42325,
+      "terminal_chunk": "0a1556",
+      "exit_code": 0,
+      "all_source_and_published_hashes_and_modes_match": true,
+      "all_2993_previous_manifest_records_unchanged": true,
+      "publication_test_guards_unchanged": true
+    },
+    "base_and_exporter_synthetic": {
+      "command": "pinned-python -B -m unittest discover -s tests -v",
+      "tests": 26,
+      "previous_tests": 24,
+      "new_regression_tests": 2,
+      "elapsed_seconds": 0.443,
+      "session_id": 50765,
+      "terminal_chunk": "8e79c3",
+      "exit_code": 0,
+      "log_sha256": "bbfa7028b96e8490d6a287190169dc2ea18e4843b620d7c56f6ae66ea7ec6e82"
+    },
+    "source_increment_synthetic": {
+      "command": "./run_local.sh work/test_roa_field_scope270_increment.py",
+      "tests": 26,
+      "elapsed_seconds": 8.567,
+      "session_id": 36386,
+      "terminal_chunk": "891970",
+      "exit_code": 0,
+      "log_sha256": "16400afc58e9250e8d1ec8f44af6349a8155400d327774fce717798fca362014"
+    },
+    "saved_reader_v2_synthetic": {
+      "command": "./run_local.sh work/test_monthly_roa_increment272_saved_reader_v2.py",
+      "tests": 30,
+      "elapsed_seconds": 0.425,
+      "session_id": 3849,
+      "terminal_chunk": "126e64",
+      "exit_code": 0,
+      "log_sha256": "e76b525db8d41e268f266be042e56fa7d23aebfab9d522c39ee6a462bae63482"
+    },
+    "synthetic_execution_scope": "Base/exporter tests ran in this checkout with pinned Python. The two source suites ran through the existing offline wrapper on research source bytes verified identical to the published files. No actual research or source-admission phase was rerun.",
+    "scanner_correction": {
+      "scope": "Four document-digest entries only: exact PLAN relative suffix, complete document SHA, full nested JSON pointer and exact digest value must all match. Other credential fields, changed bytes/paths/values and unreviewed digest-shaped literals remain rejected.",
+      "document": "outputs/monthly_roa_increment272/PLAN.json",
+      "document_sha256": "d4788a8b02d94eb8266d36d30f196bc397862e261110f5cc86fb5bd89d71e77f",
+      "reviewed_pointer_count": 4,
+      "credential_checks_generally_relaxed": false
+    },
+    "plan_review": {
+      "metadata_only": true,
+      "numeric_leaves": 44,
+      "numeric_scope": "Only fixed counts, thresholds, dose and prefix indices; no raw/model arrays or author records.",
+      "dependency_paths_and_hashes_retained": true,
+      "referenced_private_inputs_published": false
+    },
+    "independent_review": {
+      "reviewer": "Parent agent /root",
+      "session_id": 57991,
+      "terminal_chunk": "4d06cb",
+      "exit_code": 0,
+      "scope": "All3006 source/published hashes and modes,2993 unchanged prior exports,106 unchanged observer files,13 additions, AST/secret checks and exporter/docs diff independently checked; no blocker."
+    }
+  },
+  "experiment272": {
+    "status": "COMPLETED_INDEPENDENTLY_VERIFIED",
+    "completion_sha256": "966b724897294b2f1a8b722c17055d8da808d5f130c9615bf7e36c577a0e8530",
+    "plan_sha256": "d4788a8b02d94eb8266d36d30f196bc397862e261110f5cc86fb5bd89d71e77f",
+    "result_review_sha256": "47552b195930ad8197a184285ac22579f44b9d5ba5d2d80496573134a44c9350",
+    "formal_synthetic_tests": 72,
+    "formal_test_receipt_sha256": "30bf7b0ae3afc4dbb76eb7955a43993e9fb74584be705d3e3ae8c3659e8c16fa",
+    "first88_candidate_admitted": false,
+    "retained_primary": "incumbent_local67",
+    "headline_same_close_zero_cost_cagr_percent_rounded": 67.67,
+    "target_percent": 70,
+    "target_reached": false,
+    "protected_files_unchanged": 21444,
+    "observer_promotion": false,
+    "registered_plan_bytes_unchanged": true,
+    "write_once_actual_phases_rerun_for_sync": false
+  },
+  "source270": {
+    "full_census_passed": false,
+    "full_census_events": 44,
+    "field_gate_admitted_events": 13,
+    "held_events": 31,
+    "old_admission_regressions": 21,
+    "failed_evidence_preserved": true,
+    "independently_accepted_increment_records": 3,
+    "scope": "Three predeclared single-report NI/assets records only; old admissions are not recertified, full-census failure remains, no cross-report-chain or strict-PIT certification.",
+    "increment_actual_review_sha256": "1d0bc07e1c1dfe7fe586e219ae7fca43b9b2aff98122032fbcdefc4d4f38a395"
+  },
+  "exclusions": [
+    "raw financial reports and images",
+    "market data and numeric/model caches",
+    "source policies, classifications and private reviews",
+    "private result and trade exports",
+    "author-supplied original ledger and preservation records/tools",
+    "credentials",
+    "observer ledgers and saved plans",
+    "runtime binaries",
+    "unreviewed work files"
+  ],
+  "clone_limit": "This is a source snapshot. Missing matching private inputs and provenance prevent a clean clone from replaying the completed experiments or admitting actual source records."
+}

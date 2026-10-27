@@ -2,10 +2,11 @@
 
 This snapshot includes the six daily paper observers, four frozen monthly
 observers, historical-data validation tools, and the independent monthly
-research chain through completed experiment 271. Experiments 266–269 and 271
+research chain through completed experiment 272. Experiments 266–269 and 271–272
 have completed local replay, saved-evidence review and protected-archive closure.
-The separate three-field financial-source prototype described below has only
-completed synthetic validation; it is not a new admitted dataset or strategy.
+The separate financial-source process retained its failed full-census result;
+a later, explicitly limited three-record source increment was independently
+accepted. That acceptance does not certify the full dataset or a trading strategy.
 Research sources retain their `outputs/`
 and `work/` paths. Observer sources come from the separate active local runtime;
 the research workspace's old observer backups are not the publishing source.
@@ -260,6 +261,41 @@ The PLAN retains its original registration-time status and dependency digests;
 its historical flags are not a claim that the completed run is still prospective.
 See [the experiment 271 sync validation](SYNC_271_VALIDATION_20261027.json).
 
+### Completed experiment 272 and exact-three source increment
+
+This increment publishes twelve Python source/test files plus the unchanged
+registered `monthly_roa_increment272/PLAN.json`. The source-only increment
+acceptor rechecks three predeclared report records against pinned saved evidence;
+it preserves all 44 original catalog entries and every prior decision. It does
+not rerun the failed source census, render reports, or admit cross-report chains.
+
+Experiment 272 compares the incumbent, the frozen experiment-154 financial
+control, and a candidate that fills only the three accepted records' previously
+missing intervals. It retains the original `.01` dose, long-momentum core,
+42-session skip, original selector, and monthly equal-weight fixed-unit holdings.
+The original control's shared financial-availability mask remains explicit.
+Only the first 88 months' same-close zero-cost results select the primary;
+next-open zero/cost and later-period results remain diagnostics.
+
+The six formal files passed 72 synthetic tests before registration. The original
+saved reader passed 18 tests; its additive v2 passed 30, including those 18.
+V2 only adds identity-and-SHA verification for one explicitly pinned system
+Python executable. The first reader failure and frozen code remain intact;
+no financial, selection or fee-accounting rule changed. Actual preparation,
+selection, diagnostics, saved-evidence review and protected closure all completed.
+The 123 cached prefixes, four fresh prefixes and full-prefix reuse retain their
+documented work accounting; nine paths, 45 slices and 18 diagnostic training
+groups were reconciled. All 21,444 protected archive members were unchanged.
+The candidate failed both first-88 reference gates, retaining the 67.67% incumbent.
+
+The registered PLAN SHA-256 is
+`d4788a8b02d94eb8266d36d30f196bc397862e261110f5cc86fb5bd89d71e77f`;
+the private completion receipt SHA-256 is
+`966b724897294b2f1a8b722c17055d8da808d5f130c9615bf7e36c577a0e8530`.
+The PLAN contains configuration and provenance references, not the referenced
+financial inputs or result arrays. Registration-time flags remain unchanged.
+See [the 272 sync validation](SYNC_272_VALIDATION_20261027.json).
+
 ### Source-only prototype 270: same-report financial field scope
 
 `work/roa_field_scope270.py` separately assesses the source requirements for
@@ -273,8 +309,8 @@ to supplied review references without reading files or calculating a ratio.
 The module and its tests passed 36 synthetic checks and an independent static
 review. A successful pure-function result does not authenticate source files or
 review receipts. The caller must still verify those bytes and their substantive
-evidence before any actual admission. No real report, cross-report chain or
-strategy has been admitted by this prototype, and no return is attributed to it.
+evidence before any actual admission. The pure prototype alone admits no actual report, cross-report chain or
+strategy; actual source acceptance requires the separate evidence process below.
 The older source gates and frozen observation accounts are unchanged.
 
 The [269/270 source-sync validation](SYNC_269_270_VALIDATION_20261027.json)
@@ -290,10 +326,14 @@ reference before publishing a policy or running a census. V4 adds exact,
 document-bound recognition of those declared schema examples; unknown examples
 and active references still fail closed. The v4 suite passed 48 synthetic tests
 on the published source hashes, including the 28 unchanged v3 checks, and the
-increment passed independent static review. V4 has not yet built an actual
-policy or run source admission. Synthetic tests and code review do not establish
-actual runtime closure, field admission, cross-report chain admission or strategy
-performance.
+increment passed independent static review. The subsequent actual v4 policy and 44-event census completed, but full-census
+acceptance failed: 13 events passed the field gate, 31 were held, and 21 former
+admissions regressed under a preserved generic accounting-context flag. These
+failures were not cleared or relabeled. A separate, predeclared exact-three
+increment was accepted after saved-evidence and independent review; its acceptor
+passed 26 synthetic tests. This narrow source acceptance does not recertify old
+admissions, establish strict point-in-time status, or admit cross-report chains.
+Only the later registered 272 experiment evaluates its fixed financial use.
 
 Classification records, evidence, policies, private validation receipts and
 runtime packages are excluded, so a Git clone cannot perform the real source

@@ -69,6 +69,20 @@ REVIEWED_LITERAL_HASHES = {
     'test_collect_residual246_vox2014.py': {
         'TOKEN': '0d1d1ecba07d4281fdaaf8719c47ff58729bc5889a2e3b2503309a60d1889398'},
 }
+# One reviewed registration document contains authorization-record filenames as
+# dependency-map keys, whose values are document digests, not credentials.
+# All four positions require this exact whole-document SHA, path and value.
+REVIEWED_JSON_DIGEST_PINS = {
+    ('outputs', 'monthly_roa_increment272', 'PLAN.json'): {
+        'document_sha256': 'd4788a8b02d94eb8266d36d30f196bc397862e261110f5cc86fb5bd89d71e77f',
+        'pins': {
+            ('context', 'input_sha256', 'work/roa_field_scope270_pdf_rerender_AUTHORIZATION.json'): '206276c3d7e3730274716200b70d1528d7d5c39c5714fe69d7b39002841f5a55',
+            ('implementation_contract', 'input_sha256', 'work/roa_field_scope270_pdf_rerender_AUTHORIZATION.json'): '206276c3d7e3730274716200b70d1528d7d5c39c5714fe69d7b39002841f5a55',
+            ('input_sha256', '/Users/shiweili/code/monthly-stock-research/work/roa_field_scope270_pdf_rerender_AUTHORIZATION.json'): '206276c3d7e3730274716200b70d1528d7d5c39c5714fe69d7b39002841f5a55',
+            ('source_increment', 'active_input_sha256', '/Users/shiweili/code/monthly-stock-research/work/roa_field_scope270_pdf_rerender_AUTHORIZATION.json'): '206276c3d7e3730274716200b70d1528d7d5c39c5714fe69d7b39002841f5a55',
+        },
+    },
+}
 MANIFEST_PATH = Path('docs/WORKSPACE_SOURCE_MANIFEST.json')
 
 
@@ -229,14 +243,21 @@ def inspect_source(path, content=None):
         except json.JSONDecodeError as exc:
             raise ValueError(f'Invalid JSON: {path.name}:{exc.lineno}') from None
 
-        def inspect_json(value):
+        reviewed = REVIEWED_JSON_DIGEST_PINS.get(tuple(path.parts[-3:]), {})
+        reviewed_pins = (reviewed.get('pins', {})
+                         if reviewed.get('document_sha256') == hashlib.sha256(content).hexdigest()
+                         else {})
+
+        def inspect_json(value, pointer=()):
             if isinstance(value, dict):
                 for name, item in value.items():
-                    check(name, item)
-                    inspect_json(item)
+                    child = pointer + (name,)
+                    if child not in reviewed_pins or item != reviewed_pins[child]:
+                        check(name, item)
+                    inspect_json(item, child)
             elif isinstance(value, list):
-                for item in value:
-                    inspect_json(item)
+                for index, item in enumerate(value):
+                    inspect_json(item, pointer + (index,))
         inspect_json(data)
     else:
         # Launcher scripts may contain assignments; command/environment reads

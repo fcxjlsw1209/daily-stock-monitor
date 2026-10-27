@@ -209,6 +209,48 @@ DEMO_URL = "https://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apike
             with self.subTest(path=path), self.assertRaises(ValueError):
                 sync.inspect_source(path, altered)
 
+    def test_reviewed_json_document_pins_require_exact_file_bytes_pointer_value(self):
+        filename = ('outputs', 'monthly_roa_increment272', 'PLAN.json')
+        record = sync.REVIEWED_JSON_DIGEST_PINS[filename]
+        data = {}
+        for pointer, value in record['pins'].items():
+            at = data
+            for key in pointer[:-1]:
+                at = at.setdefault(key, {})
+            at[pointer[-1]] = value
+        content = json.dumps(data).encode()
+        fixture = dict(document_sha256=hashlib.sha256(content).hexdigest(), pins=record['pins'])
+        path = Path(*filename)
+        with patch.dict(sync.REVIEWED_JSON_DIGEST_PINS, {filename: fixture}):
+            sync.inspect_source(path, content)
+            for other in (Path('PLAN.json'), Path('outputs/other/PLAN.json'), Path('outputs/monthly_roa_increment272/OTHER.json')):
+                with self.assertRaises(ValueError):
+                    sync.inspect_source(other, content)
+            with self.assertRaises(ValueError):
+                sync.inspect_source(path, content + b' ')
+            for change in ('pointer', 'value', 'credential'):
+                altered = json.loads(content)
+                if change == 'pointer':
+                    altered['wrong_context'] = altered.pop('context')
+                elif change == 'value':
+                    pointer = next(iter(record['pins']))
+                    altered[pointer[0]][pointer[1]][pointer[2]] = 'b' * 64
+                else:
+                    altered['token'] = 'synthetic-sensitive-value'
+                payload = json.dumps(altered).encode()
+                # Even approving these fixture bytes does not approve a new
+                # pointer, a changed value, or any other credential field.
+                fixture['document_sha256'] = hashlib.sha256(payload).hexdigest()
+                with self.subTest(change=change), self.assertRaises(ValueError):
+                    sync.inspect_source(path, payload)
+
+    def test_unreviewed_digest_looking_credentials_still_rejected(self):
+        for data in ({'authorization': 'a' * 64},
+                     {'input_sha256': {'work/OTHER_AUTHORIZATION.json': 'a' * 64}},
+                     {'token': 'a' * 64}):
+            with self.assertRaises(ValueError):
+                sync.inspect_source(Path('outputs/monthly_roa_increment272/PLAN.json'), json.dumps(data).encode())
+
     def test_every_candidate_is_checked_before_any_copy(self):
         existing = self.put(self.repo, 'outputs/study/a.py', 'VALUE = "keep"\n')
         self.put(self.research, 'outputs/study/a.py', 'VALUE = "new"\n')
