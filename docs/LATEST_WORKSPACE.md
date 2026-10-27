@@ -2,9 +2,8 @@
 
 This snapshot includes the six daily paper observers, four frozen monthly
 observers, historical-data validation tools, and the independent monthly
-research chain through completed experiment 265, registered experiment 266
-with local replay and saved-result review finished but final closure pending,
-and the unregistered experiment-267 prototype described below.
+research chain through completed experiment 268. Experiments 266–268 have
+completed local replay, saved-evidence review and protected-archive closure.
 Research sources retain their `outputs/`
 and `work/` paths. Observer sources come from the separate active local runtime;
 the research workspace's old observer backups are not the publishing source.
@@ -164,27 +163,50 @@ Actual preparation, first-88-month selection, later-period diagnostics, and the
 saved-result review passed locally. The constrained candidate and unconstrained
 control produced identical monthly holdings and about 66.85% same-close,
 zero-cost CAGR, below the retained 67.67% incumbent. The candidate failed the
-admission gates. The final protected-archive closure step is still pending;
-this publication does not run or claim that closure.
+admission gates. Its protected-archive closure has since completed locally;
+publishing the source does not rerun that experiment.
 
 Private contracts, progress records, fixtures, models and result exports remain
 outside this snapshot. The earlier
 [lifecycle sync validation](SYNC_266_LIFECYCLE_VALIDATION_20261026.json) records
 its then-prospective source state; it is not the current experiment status.
 
-### Unregistered experiment 267 prototype
+### Completed experiment 267: boundary-pair scoring
 
-Two new caller-input-only Python files implement and test a prospective Ridge
-comparison: learning the original rank-3 versus rank-4 return gap, with all
-pairs among the original top five as a control. They retain the original
-boundary-selector callback and add no file loading or live-account execution.
-The module requires a future caller to authenticate the original scores,
-eligibility, features and adjusted-price endpoints.
+The full lifecycle now includes the Ridge comparison of the original rank-3
+versus rank-4 return gap, with all pairs among the original top five as a
+control. The host authenticates original scores, eligibility, features and
+adjusted-price endpoints before candidates. It retains the original boundary
+selector and does not execute live accounts.
 
-All 43 synthetic checks passed on the published hashes. The prototype has not
-been registered or run on actual research data; synthetic tests do not establish
-historical coverage, a return improvement, or a production strategy. See
-[the current source-sync validation](SYNC_267_PROTOTYPE_VALIDATION_20261026.json).
+The final source passed 174 formal and 26 saved-reader synthetic checks locally.
+The first-88-month gate rejected the candidate. Full-period same-close zero-cost
+CAGR was 62.80% for the all-pairs control and 63.90% for rank-3/rank-4, versus
+67.67% for the incumbent. The earlier
+[prototype validation](SYNC_267_PROTOTYPE_VALIDATION_20261026.json) is retained
+as evidence of that earlier snapshot, not the current lifecycle status.
+
+### Completed experiment 268: selector scope
+
+This matched comparison keeps the original Local67 scores, eligibility, model
+effects, momentum weights and adjustment budget. It tests removing the top-two
+retention rule within the original top-five boundary group, and allowing all
+eligible names to compete. Admission for both candidates is evaluated using only
+the first 88 months before later-34/full-period and cost diagnostics.
+
+The exact published implementation passed 106 formal and 32 saved-reader
+synthetic checks locally. All 123 decision prefixes, four additional physical
+prefixes and nine accounting paths passed; 21,444 protected files remained
+unchanged. Both candidates changed zero holding sets across all 122 months,
+although five months reordered the same equal-weight names. All three strategy arms
+retain the same-close, zero-cost headline of 67.67% CAGR; neither candidate was admitted.
+These are historical research results, with the data limitations above.
+
+Source, PLANs and a compact aggregate validation receipt are published. Raw
+prices, private contracts, source evidence, forecasts, model fits, author
+transactions and observer ledgers remain excluded. A clone alone is not a
+complete historical replay bundle. See
+[the completion-sync validation](SYNC_267_268_COMPLETION_VALIDATION_20261026.json).
 
 ## Observer versions and account continuity
 

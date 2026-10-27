@@ -302,6 +302,7 @@
     "outputs/monthly_blend_optimization/test_blend.py": "d8da674be5dbfd54bcddc184b65d476eea33181a255cd66a45e35492b0b914d6",
     "outputs/monthly_block_sharpe242/PLAN.json": "f00bb5aa01bbf90514d19a95c41ed53cce6704eaab1954cd842442c218fded57",
     "outputs/monthly_boundary_funding70/study.py": "9cf159df97f73ce6156b8a2f7690cc39e3ccef14ef76d94b524944c9990fda75",
+    "outputs/monthly_boundary_pair267/PLAN.json": "e0234d8cbaa9bdfd58821e01d44419e6e192ffe3216d3199616046dbb7317829",
     "outputs/monthly_boundary_preserve70/placement.py": "62e447a85f8a35183acac5d0aa507139920a9e46fd2fb47f224d3aabfff2d21e",
     "outputs/monthly_boundary_preserve70/report.py": "b997a3b72386377582eb6e4fe6cce603ac4735763ad748b5cfeae8785d46ea30",
     "outputs/monthly_boundary_preserve70/study.py": "4429c7ad72efd9a1b76a2d8d649e6326cb79602272bb738ed963d6f2cc76cc70",
@@ -886,6 +887,7 @@
     "outputs/monthly_sector_recurrence192/PLAN.json": "36b65d71662805a2662b89e22077a6af6a831dfc3e9df4c7a4ad834838762259",
     "outputs/monthly_sector_signedrank233/PLAN.json": "dfe6a8db0793917596325bb80e7be1622a872d4c3523d00e2a4e77c945a66c2a",
     "outputs/monthly_sector_transition189/PLAN.json": "168212bc594e197ade1abe2c0a307ad0b6de3b0e3785d1c688f585fc56c46da1",
+    "outputs/monthly_selector_scope268/PLAN.json": "447c605dcedb0b789c2f96529c344e2bb25a2d8e471eb99fa2f952497d969044",
     "outputs/monthly_separate_history230/PLAN.json": "f8e0c1baceee92b2975117825ab077909b4cdabe0c7ab02fb5f59a9dc50e8b5c",
     "outputs/monthly_session_cluster148/FROZEN.json": "1b0a608437a81aad34eccc2f34452e07555bb0a6fa702ae62e2500c9da3e3e41",
     "outputs/monthly_session_cluster148/PLAN.json": "3574e88c562557961ba49ddd37ddd98192a2a4a8b195029b2c31a189fb7a37d6",
@@ -1552,7 +1554,12 @@
     "work/monthly_block_sharpe242_host.py": "06c79540c2bc87f7263932bdf957384971f161f971d9e950f5cc32376f40c2c9",
     "work/monthly_block_sharpe242_independent.py": "d06100f847103e258ff56a4905e3b2b93401d008d6d81a58f78edfb43f07c180",
     "work/monthly_block_sharpe242_kernel.py": "af2e04d922fbed27abeff78862216f03a879f8cfa4e57026160ef44eabfe9d2d",
+    "work/monthly_boundary_pair267_admission.py": "f857b35b8a21c0c31e8873bc0950e2e5615eff5241ad7c208ba01e28ff7b13a8",
+    "work/monthly_boundary_pair267_host.py": "8acb9207d5cb6b59487bdbdeb197182b202776e8c8b693260fd848f1fee4515f",
+    "work/monthly_boundary_pair267_independent.py": "f5449ed6c5c2e941f01e5abb6537d921197e51f8f2c6770f9943568880670195",
     "work/monthly_boundary_pair267_kernel.py": "fa0286f848c3f1dfb1e15df3e5bc69d3625b54cfddfccb13d15a1726dcf8e5a3",
+    "work/monthly_boundary_pair267_saved_reader.py": "29eb059828074123afdf6365c914b5ccb004fa3e0b1636a77dbef4050f73a06d",
+    "work/monthly_boundary_pair267_source.py": "782d495c9ca1c1225b5a3b34cd5e8147431af1ef53bb61333d586e8e22e523bf",
     "work/monthly_breadth_pair202_host.py": "7dd0c0fa76cab0f27d048ad8f43dcda48e328ec612af136e9b6a91bdc8227cbe",
     "work/monthly_breadth_pair202_independent.py": "da54cf664a1c511210c187c0e57dfb434e66bcbe1be799d27223fd72e6cba1d9",
     "work/monthly_breadth_pair202_kernel.py": "7188416e129f84c07abc8bada368af3da1c1b3807e83eaee6a7a95d9b9888862",
@@ -1898,6 +1905,11 @@
     "work/monthly_sector_transition189_host.py": "49a9d940b0417a5007e110c2d10899e735abdad04c51d73eb78deeadedaf3178",
     "work/monthly_sector_transition189_independent.py": "e83305d9f784ef9aa5ae0554cd1deb558d927b4182010af599b977efa69618dc",
     "work/monthly_sector_transition189_kernel.py": "87cabb34e866ffea0d0794a7f80624c4793bb5ae6db003c6875588a4c203e19c",
+    "work/monthly_selector_scope268_admission.py": "755f35713b197d72282f16b64a30d949bd308be15dbf974cc3840bf414389ebc",
+    "work/monthly_selector_scope268_host.py": "91a8a894b50db26e67f47834dac4d4a4a0c5d3ce79583551225ec77a2ea22192",
+    "work/monthly_selector_scope268_independent.py": "12ec572b1378bbf16fc698890b689523904dd4b7858060a5c4d35619d348d8d9",
+    "work/monthly_selector_scope268_kernel.py": "a0817f73d3b4eb78a95c92ca3760aa811d997b939db6175cc04cfeb145c3d643",
+    "work/monthly_selector_scope268_saved_reader.py": "ee9d371a0bb144c5072c62acb08e8200e7c18d9db9f7f8dddfdd7591f019b7d2",
     "work/monthly_separate_history230_host.py": "dfebb6895acf20d56c19cce780f88546cd5b9ee1be5c94bd10532bae5e0ce82f",
     "work/monthly_separate_history230_independent.py": "5deb1cdd84c5fe092d83ece82d01a8db81c098e80ee83661c6f8b2caef381544",
     "work/monthly_separate_history230_model.py": "ed7aba3fcd3c085952562f4cd8abd73c3cf4060dad732209fa9b95121bbed607",
@@ -2415,7 +2427,12 @@
     "work/test_monthly_block_sharpe242_host.py": "134eebdfb1449e7c10b264780e776b8d4c0b1326fbddbc50394900ad73e3f9d5",
     "work/test_monthly_block_sharpe242_independent.py": "ad703b3d095fffdb1407f0a8b86759e551286e6b44e10b31f699a1dccf87c25e",
     "work/test_monthly_block_sharpe242_kernel.py": "a0603a85fd7b10f4e66dd9f3b152fb15d24bc376dbeb1bc3916f7ce310912daf",
+    "work/test_monthly_boundary_pair267_admission.py": "13c550b8014d2a6f2b2d018922d10bda014991076e9b49b3e2fa4e64c4c290a4",
+    "work/test_monthly_boundary_pair267_host.py": "631f3d05e320d713a143c557c144848377069bcb86a59c43ed05a0ceebdbcbe0",
+    "work/test_monthly_boundary_pair267_independent.py": "101ea87f8f068565fbe9f5d8cd0c0c3e2c45a8cd34d5d9d4233fd36dbda663ae",
     "work/test_monthly_boundary_pair267_kernel.py": "75c567ea95c5309d6b7651255d99fd4e8297ee6e54f1bac3a2d29438bf51f796",
+    "work/test_monthly_boundary_pair267_saved_reader.py": "8ebdb6349fb120a6d913138782734a9d079db35a492eed5974806872c5e81d17",
+    "work/test_monthly_boundary_pair267_source.py": "9c52f9996fc75f3c1da0b0b57166285d188f0f6d2dc7a7497b0bea15a926f7c7",
     "work/test_monthly_breadth_pair202_host.py": "48fcec38769bc15b293f37b057864e5370f3af635287b6a0b5873e97e137e7fb",
     "work/test_monthly_breadth_pair202_independent.py": "2aac40f1aeeebe31d55e24484787b5c90e78deade5e9196d1a8ed1911759b138",
     "work/test_monthly_breadth_pair202_kernel.py": "e807313ad032c148c4dc1894369efc50b7fd4c43a293ebebd52054cde8f2ed47",
@@ -2745,6 +2762,11 @@
     "work/test_monthly_sector_transition189_host.py": "b6f200471fc27d2e0b756e7c94cfefd366e3ffa78188c46c8a6498249fa52087",
     "work/test_monthly_sector_transition189_independent.py": "1b2fa93830418a8328571d75c5693b18da23b3418d03fd2a514d42f63fde5525",
     "work/test_monthly_sector_transition189_kernel.py": "45a9cc06f33ab93bf4437fbf74ec670d1d7a672d20ffebc22654ba9cc09745da",
+    "work/test_monthly_selector_scope268_admission.py": "07765b00c4be5449e02fdca9a0d09f3ef2467b461e9cdf808b65bfa479221a23",
+    "work/test_monthly_selector_scope268_host.py": "55e231ffbbfd7b6e6ece410f2e5975c033f5620320f4f047c153be1ca533c803",
+    "work/test_monthly_selector_scope268_independent.py": "669e874df269ca8baa266d38264cc1fbd6107eff15cfe8762d6f9d8c9fc4afcb",
+    "work/test_monthly_selector_scope268_kernel.py": "2ab6fe61cf5f4fa10be3278467d93fa6daf2c1ddeac62df61ea7b65fd435e47c",
+    "work/test_monthly_selector_scope268_saved_reader.py": "4cf4f3d682a2d771f60950e58e80d9020372160f4f14ec293fe97a626b81e04d",
     "work/test_monthly_separate_history230_host.py": "790690fc83bf56b85f2cfb572a84a9404c5c979e37957f37bd08f23061ad55a3",
     "work/test_monthly_separate_history230_independent.py": "db7a22926281f94bdf388307a74170283a3592c6ebde4872b05b34ce380e6843",
     "work/test_monthly_separate_history230_model.py": "97140916928572ffbba907e758f92c8e116a61fb78dff4385d904ca5736e96d7",
@@ -4744,6 +4766,12 @@
       "workspace": "research",
       "path": "outputs/monthly_boundary_funding70/study.py",
       "sha256": "9cf159df97f73ce6156b8a2f7690cc39e3ccef14ef76d94b524944c9990fda75",
+      "mode": "0o644"
+    },
+    "outputs/monthly_boundary_pair267/PLAN.json": {
+      "workspace": "research",
+      "path": "outputs/monthly_boundary_pair267/PLAN.json",
+      "sha256": "e0234d8cbaa9bdfd58821e01d44419e6e192ffe3216d3199616046dbb7317829",
       "mode": "0o644"
     },
     "outputs/monthly_boundary_preserve70/placement.py": {
@@ -8248,6 +8276,12 @@
       "workspace": "research",
       "path": "outputs/monthly_sector_transition189/PLAN.json",
       "sha256": "168212bc594e197ade1abe2c0a307ad0b6de3b0e3785d1c688f585fc56c46da1",
+      "mode": "0o644"
+    },
+    "outputs/monthly_selector_scope268/PLAN.json": {
+      "workspace": "research",
+      "path": "outputs/monthly_selector_scope268/PLAN.json",
+      "sha256": "447c605dcedb0b789c2f96529c344e2bb25a2d8e471eb99fa2f952497d969044",
       "mode": "0o644"
     },
     "outputs/monthly_separate_history230/PLAN.json": {
@@ -12246,10 +12280,40 @@
       "sha256": "af2e04d922fbed27abeff78862216f03a879f8cfa4e57026160ef44eabfe9d2d",
       "mode": "0o644"
     },
+    "work/monthly_boundary_pair267_admission.py": {
+      "workspace": "research",
+      "path": "work/monthly_boundary_pair267_admission.py",
+      "sha256": "f857b35b8a21c0c31e8873bc0950e2e5615eff5241ad7c208ba01e28ff7b13a8",
+      "mode": "0o644"
+    },
+    "work/monthly_boundary_pair267_host.py": {
+      "workspace": "research",
+      "path": "work/monthly_boundary_pair267_host.py",
+      "sha256": "8acb9207d5cb6b59487bdbdeb197182b202776e8c8b693260fd848f1fee4515f",
+      "mode": "0o644"
+    },
+    "work/monthly_boundary_pair267_independent.py": {
+      "workspace": "research",
+      "path": "work/monthly_boundary_pair267_independent.py",
+      "sha256": "f5449ed6c5c2e941f01e5abb6537d921197e51f8f2c6770f9943568880670195",
+      "mode": "0o644"
+    },
     "work/monthly_boundary_pair267_kernel.py": {
       "workspace": "research",
       "path": "work/monthly_boundary_pair267_kernel.py",
       "sha256": "fa0286f848c3f1dfb1e15df3e5bc69d3625b54cfddfccb13d15a1726dcf8e5a3",
+      "mode": "0o644"
+    },
+    "work/monthly_boundary_pair267_saved_reader.py": {
+      "workspace": "research",
+      "path": "work/monthly_boundary_pair267_saved_reader.py",
+      "sha256": "29eb059828074123afdf6365c914b5ccb004fa3e0b1636a77dbef4050f73a06d",
+      "mode": "0o644"
+    },
+    "work/monthly_boundary_pair267_source.py": {
+      "workspace": "research",
+      "path": "work/monthly_boundary_pair267_source.py",
+      "sha256": "782d495c9ca1c1225b5a3b34cd5e8147431af1ef53bb61333d586e8e22e523bf",
       "mode": "0o644"
     },
     "work/monthly_breadth_pair202_host.py": {
@@ -14320,6 +14384,36 @@
       "workspace": "research",
       "path": "work/monthly_sector_transition189_kernel.py",
       "sha256": "87cabb34e866ffea0d0794a7f80624c4793bb5ae6db003c6875588a4c203e19c",
+      "mode": "0o644"
+    },
+    "work/monthly_selector_scope268_admission.py": {
+      "workspace": "research",
+      "path": "work/monthly_selector_scope268_admission.py",
+      "sha256": "755f35713b197d72282f16b64a30d949bd308be15dbf974cc3840bf414389ebc",
+      "mode": "0o644"
+    },
+    "work/monthly_selector_scope268_host.py": {
+      "workspace": "research",
+      "path": "work/monthly_selector_scope268_host.py",
+      "sha256": "91a8a894b50db26e67f47834dac4d4a4a0c5d3ce79583551225ec77a2ea22192",
+      "mode": "0o644"
+    },
+    "work/monthly_selector_scope268_independent.py": {
+      "workspace": "research",
+      "path": "work/monthly_selector_scope268_independent.py",
+      "sha256": "12ec572b1378bbf16fc698890b689523904dd4b7858060a5c4d35619d348d8d9",
+      "mode": "0o644"
+    },
+    "work/monthly_selector_scope268_kernel.py": {
+      "workspace": "research",
+      "path": "work/monthly_selector_scope268_kernel.py",
+      "sha256": "a0817f73d3b4eb78a95c92ca3760aa811d997b939db6175cc04cfeb145c3d643",
+      "mode": "0o644"
+    },
+    "work/monthly_selector_scope268_saved_reader.py": {
+      "workspace": "research",
+      "path": "work/monthly_selector_scope268_saved_reader.py",
+      "sha256": "ee9d371a0bb144c5072c62acb08e8200e7c18d9db9f7f8dddfdd7591f019b7d2",
       "mode": "0o644"
     },
     "work/monthly_separate_history230_host.py": {
@@ -17424,10 +17518,40 @@
       "sha256": "a0603a85fd7b10f4e66dd9f3b152fb15d24bc376dbeb1bc3916f7ce310912daf",
       "mode": "0o644"
     },
+    "work/test_monthly_boundary_pair267_admission.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_boundary_pair267_admission.py",
+      "sha256": "13c550b8014d2a6f2b2d018922d10bda014991076e9b49b3e2fa4e64c4c290a4",
+      "mode": "0o644"
+    },
+    "work/test_monthly_boundary_pair267_host.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_boundary_pair267_host.py",
+      "sha256": "631f3d05e320d713a143c557c144848377069bcb86a59c43ed05a0ceebdbcbe0",
+      "mode": "0o644"
+    },
+    "work/test_monthly_boundary_pair267_independent.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_boundary_pair267_independent.py",
+      "sha256": "101ea87f8f068565fbe9f5d8cd0c0c3e2c45a8cd34d5d9d4233fd36dbda663ae",
+      "mode": "0o644"
+    },
     "work/test_monthly_boundary_pair267_kernel.py": {
       "workspace": "research",
       "path": "work/test_monthly_boundary_pair267_kernel.py",
       "sha256": "75c567ea95c5309d6b7651255d99fd4e8297ee6e54f1bac3a2d29438bf51f796",
+      "mode": "0o644"
+    },
+    "work/test_monthly_boundary_pair267_saved_reader.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_boundary_pair267_saved_reader.py",
+      "sha256": "8ebdb6349fb120a6d913138782734a9d079db35a492eed5974806872c5e81d17",
+      "mode": "0o644"
+    },
+    "work/test_monthly_boundary_pair267_source.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_boundary_pair267_source.py",
+      "sha256": "9c52f9996fc75f3c1da0b0b57166285d188f0f6d2dc7a7497b0bea15a926f7c7",
       "mode": "0o644"
     },
     "work/test_monthly_breadth_pair202_host.py": {
@@ -19402,6 +19526,36 @@
       "workspace": "research",
       "path": "work/test_monthly_sector_transition189_kernel.py",
       "sha256": "45a9cc06f33ab93bf4437fbf74ec670d1d7a672d20ffebc22654ba9cc09745da",
+      "mode": "0o644"
+    },
+    "work/test_monthly_selector_scope268_admission.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_selector_scope268_admission.py",
+      "sha256": "07765b00c4be5449e02fdca9a0d09f3ef2467b461e9cdf808b65bfa479221a23",
+      "mode": "0o644"
+    },
+    "work/test_monthly_selector_scope268_host.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_selector_scope268_host.py",
+      "sha256": "55e231ffbbfd7b6e6ece410f2e5975c033f5620320f4f047c153be1ca533c803",
+      "mode": "0o644"
+    },
+    "work/test_monthly_selector_scope268_independent.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_selector_scope268_independent.py",
+      "sha256": "669e874df269ca8baa266d38264cc1fbd6107eff15cfe8762d6f9d8c9fc4afcb",
+      "mode": "0o644"
+    },
+    "work/test_monthly_selector_scope268_kernel.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_selector_scope268_kernel.py",
+      "sha256": "2ab6fe61cf5f4fa10be3278467d93fa6daf2c1ddeac62df61ea7b65fd435e47c",
+      "mode": "0o644"
+    },
+    "work/test_monthly_selector_scope268_saved_reader.py": {
+      "workspace": "research",
+      "path": "work/test_monthly_selector_scope268_saved_reader.py",
+      "sha256": "4cf4f3d682a2d771f60950e58e80d9020372160f4f14ec293fe97a626b81e04d",
       "mode": "0o644"
     },
     "work/test_monthly_separate_history230_host.py": {

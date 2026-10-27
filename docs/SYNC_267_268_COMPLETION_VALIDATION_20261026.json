@@ -1,0 +1,163 @@
+{
+  "purpose": "Publish completed experiments 267 and 268 source, registered PLANs and compact aggregate completion status; preserve frozen observers and private inputs.",
+  "snapshot_utc": "2026-10-27T05:14:43.822127+00:00",
+  "base_commit": "222c03d33241749dac44539986c4376ef17e84ca",
+  "exported_files": 2959,
+  "work_allowlist_files": 1943,
+  "unchanged_previous_exports": 2937,
+  "unchanged_observer_exports": 106,
+  "new_files": {
+    "outputs/monthly_boundary_pair267/PLAN.json": "e0234d8cbaa9bdfd58821e01d44419e6e192ffe3216d3199616046dbb7317829",
+    "outputs/monthly_selector_scope268/PLAN.json": "447c605dcedb0b789c2f96529c344e2bb25a2d8e471eb99fa2f952497d969044",
+    "work/monthly_boundary_pair267_admission.py": "f857b35b8a21c0c31e8873bc0950e2e5615eff5241ad7c208ba01e28ff7b13a8",
+    "work/monthly_boundary_pair267_host.py": "8acb9207d5cb6b59487bdbdeb197182b202776e8c8b693260fd848f1fee4515f",
+    "work/monthly_boundary_pair267_independent.py": "f5449ed6c5c2e941f01e5abb6537d921197e51f8f2c6770f9943568880670195",
+    "work/monthly_boundary_pair267_saved_reader.py": "29eb059828074123afdf6365c914b5ccb004fa3e0b1636a77dbef4050f73a06d",
+    "work/monthly_boundary_pair267_source.py": "782d495c9ca1c1225b5a3b34cd5e8147431af1ef53bb61333d586e8e22e523bf",
+    "work/monthly_selector_scope268_admission.py": "755f35713b197d72282f16b64a30d949bd308be15dbf974cc3840bf414389ebc",
+    "work/monthly_selector_scope268_host.py": "91a8a894b50db26e67f47834dac4d4a4a0c5d3ce79583551225ec77a2ea22192",
+    "work/monthly_selector_scope268_independent.py": "12ec572b1378bbf16fc698890b689523904dd4b7858060a5c4d35619d348d8d9",
+    "work/monthly_selector_scope268_kernel.py": "a0817f73d3b4eb78a95c92ca3760aa811d997b939db6175cc04cfeb145c3d643",
+    "work/monthly_selector_scope268_saved_reader.py": "ee9d371a0bb144c5072c62acb08e8200e7c18d9db9f7f8dddfdd7591f019b7d2",
+    "work/test_monthly_boundary_pair267_admission.py": "13c550b8014d2a6f2b2d018922d10bda014991076e9b49b3e2fa4e64c4c290a4",
+    "work/test_monthly_boundary_pair267_host.py": "631f3d05e320d713a143c557c144848377069bcb86a59c43ed05a0ceebdbcbe0",
+    "work/test_monthly_boundary_pair267_independent.py": "101ea87f8f068565fbe9f5d8cd0c0c3e2c45a8cd34d5d9d4233fd36dbda663ae",
+    "work/test_monthly_boundary_pair267_saved_reader.py": "8ebdb6349fb120a6d913138782734a9d079db35a492eed5974806872c5e81d17",
+    "work/test_monthly_boundary_pair267_source.py": "9c52f9996fc75f3c1da0b0b57166285d188f0f6d2dc7a7497b0bea15a926f7c7",
+    "work/test_monthly_selector_scope268_admission.py": "07765b00c4be5449e02fdca9a0d09f3ef2467b461e9cdf808b65bfa479221a23",
+    "work/test_monthly_selector_scope268_host.py": "55e231ffbbfd7b6e6ece410f2e5975c033f5620320f4f047c153be1ca533c803",
+    "work/test_monthly_selector_scope268_independent.py": "669e874df269ca8baa266d38264cc1fbd6107eff15cfe8762d6f9d8c9fc4afcb",
+    "work/test_monthly_selector_scope268_kernel.py": "2ab6fe61cf5f4fa10be3278467d93fa6daf2c1ddeac62df61ea7b65fd435e47c",
+    "work/test_monthly_selector_scope268_saved_reader.py": "4cf4f3d682a2d771f60950e58e80d9020372160f4f14ec293fe97a626b81e04d"
+  },
+  "updated_prior_exports": [],
+  "checks": {
+    "base_exporter": {
+      "tests": 24,
+      "exit_code": 0,
+      "session_id": 87121,
+      "terminal_chunk": "7fe8ca",
+      "log_sha256": "85706fed1af86c51bcb980e6e6e4927e395d238ed42bf999687d03bc37178d34"
+    },
+    "export": {
+      "exit_code": 0,
+      "session_id": 1867,
+      "terminal_chunk": "6fc60b"
+    },
+    "independent_manifest_audit": {
+      "exit_code": 0,
+      "session_id": 85813,
+      "terminal_chunk": "d5619e",
+      "all_source_published_hashes_and_modes_match": true
+    }
+  },
+  "source_checks": {
+    "syntax": "passed",
+    "credential_scan": true,
+    "hashes": "passed",
+    "modes": "passed"
+  },
+  "experiments": {
+    "monthly_boundary_pair267": {
+      "status": "COMPLETED_INDEPENDENTLY_VERIFIED",
+      "completion_sha256": "b429eebc44946764bd1731383332ae1c33911b40550f376311cfedd9230e828e",
+      "plan_sha256": "e0234d8cbaa9bdfd58821e01d44419e6e192ffe3216d3199616046dbb7317829",
+      "protected_files": 21444,
+      "target_reached": false,
+      "observer_changes": false,
+      "checks": {
+        "formal_synthetic": {
+          "tests": 174,
+          "passed_locally": true,
+          "receipt_sha256": "957d5e26a7238fd335554f8d5fcc57b8dd5ee2e5bffd2d3604f91be202963ef8",
+          "exact_published_code_bindings": {
+            "work/monthly_boundary_pair267_host.py": "8acb9207d5cb6b59487bdbdeb197182b202776e8c8b693260fd848f1fee4515f",
+            "work/test_monthly_boundary_pair267_host.py": "631f3d05e320d713a143c557c144848377069bcb86a59c43ed05a0ceebdbcbe0",
+            "work/monthly_boundary_pair267_kernel.py": "fa0286f848c3f1dfb1e15df3e5bc69d3625b54cfddfccb13d15a1726dcf8e5a3",
+            "work/test_monthly_boundary_pair267_kernel.py": "75c567ea95c5309d6b7651255d99fd4e8297ee6e54f1bac3a2d29438bf51f796",
+            "work/monthly_boundary_pair267_independent.py": "f5449ed6c5c2e941f01e5abb6537d921197e51f8f2c6770f9943568880670195",
+            "work/test_monthly_boundary_pair267_independent.py": "101ea87f8f068565fbe9f5d8cd0c0c3e2c45a8cd34d5d9d4233fd36dbda663ae",
+            "work/monthly_boundary_pair267_source.py": "782d495c9ca1c1225b5a3b34cd5e8147431af1ef53bb61333d586e8e22e523bf",
+            "work/test_monthly_boundary_pair267_source.py": "9c52f9996fc75f3c1da0b0b57166285d188f0f6d2dc7a7497b0bea15a926f7c7",
+            "work/monthly_boundary_pair267_admission.py": "f857b35b8a21c0c31e8873bc0950e2e5615eff5241ad7c208ba01e28ff7b13a8",
+            "work/test_monthly_boundary_pair267_admission.py": "13c550b8014d2a6f2b2d018922d10bda014991076e9b49b3e2fa4e64c4c290a4"
+          }
+        },
+        "saved_reader_synthetic": {
+          "tests": 26,
+          "passed_locally": true,
+          "receipt_sha256": "0b2a215636ab9f9cd120f3fcf10c84b0a6c55ab4c4435839cdd603da9047425f",
+          "exact_published_code_bindings": {
+            "work/monthly_boundary_pair267_saved_reader.py": "29eb059828074123afdf6365c914b5ccb004fa3e0b1636a77dbef4050f73a06d",
+            "work/test_monthly_boundary_pair267_saved_reader.py": "8ebdb6349fb120a6d913138782734a9d079db35a492eed5974806872c5e81d17"
+          }
+        }
+      },
+      "validation_scope": "Previously completed local synthetic tests, replay, saved-evidence review and archive closure; sync verifies exact published source hashes and does not rerun immutable phases."
+    },
+    "monthly_selector_scope268": {
+      "status": "COMPLETED_INDEPENDENTLY_VERIFIED",
+      "completion_sha256": "e55987c61bcce4d5e029472e768ec87d89b242d3d887c3cffddecca8c783154b",
+      "plan_sha256": "447c605dcedb0b789c2f96529c344e2bb25a2d8e471eb99fa2f952497d969044",
+      "protected_files": 21444,
+      "target_reached": false,
+      "observer_changes": false,
+      "checks": {
+        "formal_synthetic": {
+          "tests": 106,
+          "passed_locally": true,
+          "receipt_sha256": "fe4f0502ba831a13dd1c9f0e2e954374ae946707564d734b230573167137df1a",
+          "exact_published_code_bindings": {
+            "work/monthly_selector_scope268_host.py": "91a8a894b50db26e67f47834dac4d4a4a0c5d3ce79583551225ec77a2ea22192",
+            "work/test_monthly_selector_scope268_host.py": "55e231ffbbfd7b6e6ece410f2e5975c033f5620320f4f047c153be1ca533c803",
+            "work/monthly_selector_scope268_kernel.py": "a0817f73d3b4eb78a95c92ca3760aa811d997b939db6175cc04cfeb145c3d643",
+            "work/test_monthly_selector_scope268_kernel.py": "2ab6fe61cf5f4fa10be3278467d93fa6daf2c1ddeac62df61ea7b65fd435e47c",
+            "work/monthly_selector_scope268_independent.py": "12ec572b1378bbf16fc698890b689523904dd4b7858060a5c4d35619d348d8d9",
+            "work/test_monthly_selector_scope268_independent.py": "669e874df269ca8baa266d38264cc1fbd6107eff15cfe8762d6f9d8c9fc4afcb",
+            "work/monthly_selector_scope268_admission.py": "755f35713b197d72282f16b64a30d949bd308be15dbf974cc3840bf414389ebc",
+            "work/test_monthly_selector_scope268_admission.py": "07765b00c4be5449e02fdca9a0d09f3ef2467b461e9cdf808b65bfa479221a23"
+          }
+        },
+        "saved_reader_synthetic": {
+          "tests": 32,
+          "passed_locally": true,
+          "receipt_sha256": "e42e1a246455175d4b8058a959594350a121ab924b54624f533ad9dabb48ea97",
+          "exact_published_code_bindings": {
+            "work/monthly_selector_scope268_saved_reader.py": "ee9d371a0bb144c5072c62acb08e8200e7c18d9db9f7f8dddfdd7591f019b7d2",
+            "work/test_monthly_selector_scope268_saved_reader.py": "4cf4f3d682a2d771f60950e58e80d9020372160f4f14ec293fe97a626b81e04d"
+          }
+        }
+      },
+      "validation_scope": "Previously completed local synthetic tests, replay, saved-evidence review and archive closure; sync verifies exact published source hashes and does not rerun immutable phases."
+    }
+  },
+  "retained_candidate": {
+    "id": "monthly_local_linear70",
+    "start": "2016-08-17",
+    "end": "2026-09-24",
+    "same_close_zero_cost": {
+      "cagr": 0.6766617372041686,
+      "sharpe": 1.7348767578075763,
+      "max_drawdown": -0.31258703401830956
+    },
+    "next_open_zero_cost": {
+      "cagr": 0.6574262150568344
+    },
+    "next_open_cost_0_0005_per_side": {
+      "cagr": 0.6480349008244315
+    },
+    "target_reached": false,
+    "repeatedly_researched_historical_results": true,
+    "fully_point_in_time_universe_or_independent_oos_claimed": false
+  },
+  "experiment268_aggregate": {
+    "changed_holding_sets_each_candidate": 0,
+    "periods": 122,
+    "changed_ordering_months_each_candidate": 5,
+    "candidate_admitted": false
+  },
+  "observer_code_or_state_changed": false,
+  "private_inputs_artifacts_credentials_exported": false,
+  "fresh_checkout_is_complete_replay_bundle": false,
+  "source_manifest_sha256": "acd054b0daa0e63b3cf5be0efd334c5796aca11fc11608ef5ce53f666f16441e"
+}
