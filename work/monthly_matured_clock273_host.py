@@ -23,8 +23,9 @@ CENTRAL=old.CENTRAL
 TESTS=ROOT/'work/monthly_matured_clock273_TESTS.json'
 REVIEW=ROOT/'work/monthly_matured_clock273_CODE_REVIEW.json'
 RESULT_REVIEW=ROOT/'work/monthly_matured_clock273_RESULT_REVIEW.json'
+PHASE_TERMINALS=OUT/'PHASE_TERMINALS.json'
 ARMS=('incumbent_local67','monthly_pooled_clock')
-CODE=tuple('work/'+name for stem in ('host','kernel','inputs','independent') for name in ('monthly_matured_clock273_'+stem+'.py','test_monthly_matured_clock273_'+stem+'.py'))
+CODE=tuple('work/'+name for stem in ('host','kernel','inputs','independent','saved_reader') for name in ('monthly_matured_clock273_'+stem+'.py','test_monthly_matured_clock273_'+stem+'.py'))
 DESIGN={
  'objective':'2016-08-17..2026-09-24 same-close ZERO-cost CAGR>=70%; dominant skip42 long momentum, monthly EW3/2half/<2cash and fixed intramonth units.',
  'hypothesis':'Matured monthly observations may adapt the small pooled Ridge ranking correction sooner than the prior-Dec31 annual model. Test the full rolling training clock, not a larger ML allocation.',
@@ -37,16 +38,43 @@ DESIGN={
  'selection':'First88 months only, same-close ZERO. Single candidate strict145 guard: CAGR>inc+1e-12,Sharpe>=inc-.05,MDD>=inc-.03,early53/recent35 CAGR>=inc-.025. Freeze selection before later34/full122 and all next-open performance. No fee or later result selects. No parameter tuning after seeing outcomes.',
  'diagnostics':'Two arms x sameclose0,nextopen0,nextopen.0005/side; five slices including full122,first88,early53,recent35,later34. Independent cash/units/fees/accounting. Monthly calendar end==query labels allowed as same-close idealization; next-open separate.',
  'limitations':['Repeated historical development, not pristine OOS.','Estimated historical Top32 and assumed17ETF; strict_pit=false.','Annual local correction remains frozen; only pooled component updates.','No frozen observer, source, prior PLAN, source hashes, or ledger modifications.'],
- 'previous_goal_turn_classification':'progress: completed source272 validation and GitHub sync; audit found broad prior-factor overlap; no actual273 data yet.'}
+ 'previous_goal_turn_classification':'progress: GitHub sync completed and independently verified;273 pure modules passed synthetic tests, host remained draft. This turn completes integration before registration and actual data.'}
 sha,read,dump,require=ev.sha,ev.read,ev.dump,ev.require
 exact=source.exact_array
 
 def now():return datetime.now(timezone.utc).isoformat()
 def codes():return {s:sha(ROOT/s) for s in CODE}
+PREPARED_FILES=frozenset(('FORECASTS.npz','APPENDED_INPUTS.npz','SCORES.npz','PRE_SCORES.npz','META.json','ORDERS.json','APPEND_AUDIT.json','MODEL_AUDIT.json','DELTA_AUDIT.json','PREP_AUDIT.json','SOURCE_PARITY.json'))
+RESULT_FILES=frozenset(('RESULTS.json','INDEPENDENT_OUTCOME.json'))|frozenset(a+'_'+path+'_'+kind+'.json' for a in ARMS for path,_,_ in ev.PATHS for kind in ('DAILY','TRADES','HOLDINGS','DAILY_POSITIONS'))
+
 def checkpoint(folder,expected):
+    inventories={'prepared':PREPARED_FILES,'results':RESULT_FILES}
+    require(folder.name in inventories and folder.is_dir() and not folder.is_symlink(),'Known physical phase directory')
+    members=inventories[folder.name]
+    require({p.name for p in folder.iterdir()}==members|{'COMPLETION.json'},'Complete exact phase inventory')
+    require(all(p.is_file() and not p.is_symlink() for p in folder.iterdir()),'Physical phase files')
     c=read(folder/'COMPLETION.json');require(c['plan_sha256']==expected and c['status']=='COMPLETE','Phase completion')
+    require(type(c.get('artifacts_sha256')) is dict and set(c['artifacts_sha256'])==members,'Exact phase hash inventory')
     for name,h in c['artifacts_sha256'].items():require(sha(folder/name)==h,'Changed phase artifact '+name)
     return c
+
+def verified_models(train,combined,arrays,n):
+    """Independent annual gate must succeed before any candidate fit."""
+    import monthly_matured_clock273_kernel as kernel
+    import monthly_matured_clock273_independent as independent
+    controls=[]
+    def checked(proof,kind):
+        require(type(proof) is dict and proof.get('passed') is True and proof.get('schema')=='monthly_matured_clock273_independent_'+kind+'_v1' and proof.get('events')==n and proof.get('width')==arrays['baseline'].shape[1],'Independent model proof scope')
+        return proof
+    def callback(view):
+        require(view['candidate'] is None and view['audit']['annual_control_exact'] is True,'Annual control precedes candidate')
+        proof=checked(independent.verify_control_models(train,combined,arrays,view,n=n),'control')
+        controls.append(proof)
+        return proof
+    bundle=kernel.fit_models(train,combined,arrays,n=n,control_validator=callback)
+    require(len(controls)==1,'Exactly one annual gate')
+    proof=checked(independent.verify_models(train,combined,arrays,bundle,n=n),'models')
+    return bundle,proof,controls[0]
 
 def tests():
     require(not TESTS.exists(),'Tests write once')
@@ -70,11 +98,18 @@ def register():
     require(t['passed'] and t['synthetic_only'] and t['code_sha256']==codes() and t['runtime']==ev.runtime(),'Current formal tests')
     require(r['passed'] is True and r['unresolved_blockers']==[] and r['code_sha256']==codes() and r['tests_sha256']==sha(TESTS),'Prospective independent code review')
     pins=source.canonical_pins(read(PRIOR/'PLAN.json')['input_sha256']);closure=source.bind_source_closure(pins)
+    import monthly_basket_core251_independent as account
+    import monthly_selector_scope268_independent as selector
+    import monthly_matured_clock273_saved_reader as reader
+    import monthly_same_report145_runner as admission
     study=old.local()
     files=[ROOT/p for p in CODE]+[TESTS,REVIEW,PRIOR/'COMPLETION.json',PRIOR/'PLAN.json',old.PROTECTED,old.CALENDAR]
     files+=list(study.implementations())+list(study.source_files())+list(kernel.dependency_files())+list(inputs.dependency_files())+list(independent.dependency_files())
     files += [REFERENCE/n for n in ('COMPLETION.json','META.json','ORDERS.json','SCORES.npz','PRE_SCORES.npz')]
-    files += [Path(ev.__file__),Path(old.__file__),Path(source.__file__),Path(training_source.__file__),ev.PRICE]
+    files += [Path(ev.__file__),Path(old.__file__),Path(source.__file__),Path(training_source.__file__),Path(account.__file__),Path(selector.__file__),Path(admission.__file__),ev.PRICE]
+    files += list(account.dependency_files())+list(reader.dependency_files())
+    files += [PRIOR/'results'/name for name in ('COMPLETION.json','RESULTS.json')]
+    files += [PRIOR/'results'/(ARMS[0]+'_'+path+'_'+kind+'.json') for path,_,_ in ev.PATHS for kind in ('DAILY','TRADES','HOLDINGS','DAILY_POSITIONS')]
     for p in files:old.bind(pins,Path(p))
     raw=read(old.LOCAL/'PLAN.json')['raw_source_hashes'];require(len(raw)==64,'Original64 source map')
     for p,h in raw.items():old.bind(pins,Path(p),h)
@@ -98,7 +133,9 @@ def physical(arrays,meta,n):
 
 def decisions(study,arrays,meta,delta,*,reference=None):
     import monthly_selector_scope268_independent as independent
+    import monthly_matured_clock273_independent as math_check
     n=len(meta['dates']);require(delta.shape==arrays['baseline'].shape and np.isfinite(delta).all(),'Delta shape/finite')
+    before=old.array_snapshot(arrays);metadata=deepcopy(meta)
     P=study.modified_pre_score(study.configs()[4],arrays,n)[:n].copy()
     source.forecast_inputs(study,P,arrays,meta,n)
     orders={};scores={};pres={};proofs={}
@@ -106,14 +143,19 @@ def decisions(study,arrays,meta,delta,*,reference=None):
         p=P.copy()
         if arm==ARMS[1]:
             active=delta!=0.;p[active]+=delta[active]
-        args=source.selector_inputs(study,p,arrays,meta,n)
+        args=source.selector_inputs(study,p,arrays,meta,n);snapshot=deepcopy(args)
         original=dict(baseline=args[4],core=args[5],core_weight=args[6],state_calm10=args[7],state_weak_narrow=args[8])
         choices,F=study.ep.select_boundary(p,args[1],args[2],args[3],original,dict(budget=.05,ceiling=5,gap=.02))
+        math_check.exact(args,snapshot,'Selector inputs preserved')
+        output_before=(deepcopy(choices),F.copy())
         proof=source.selector_receipt(independent.verify(*args,choices,F,'incumbent_local67'),n,p.shape[1])
+        math_check.exact(args,snapshot,'Independent selector inputs preserved')
+        math_check.exact((choices,F),output_before,'Independent selector outputs preserved')
         orders[arm]=study.rp.make_orders(choices,F,meta);scores[arm]=F;pres[arm]=p;proofs[arm]=proof
-    if reference is not None:
-        require(orders[ARMS[0]]==reference['orders'][:n],'Exact incumbent orders before candidate fits')
-        exact(scores[ARMS[0]],reference['scores'][:n],'Exact incumbent finalscore');exact(P,reference['pre'][:n],'Exact incumbent pre')
+        if arm==ARMS[0] and reference is not None:
+            require(orders[arm]==reference['orders'][:n],'Exact incumbent orders before candidate fits')
+            exact(F,reference['scores'][:n],'Exact incumbent finalscore');exact(P,reference['pre'][:n],'Exact incumbent pre')
+    require(before==old.array_snapshot(arrays) and meta==metadata,'Decision inputs mutated')
     return orders,scores,pres,proofs
 
 def prepare(expected):
@@ -125,19 +167,14 @@ def prepare(expected):
     require(len(meta['dates'])==122 and len(arrays)==27 and arrays['baseline'].shape==(122,49),'Source axes')
     reference=dict(orders=read(REFERENCE/'ORDERS.json')[ARMS[0]],scores=ev.load_arrays(REFERENCE/'SCORES.npz')[ARMS[0]],pre=ev.load_arrays(REFERENCE/'PRE_SCORES.npz')[ARMS[0]])
     require(read(REFERENCE/'META.json')==meta and reference['orders']==read(old.LOCAL/'local_linear_ORDERS.json'),'Reference metadata/orders')
-    decisions(study,arrays,meta,np.zeros((122,49)),reference=reference)
+    _,_,_,early_selector=decisions(study,arrays,meta,np.zeros((122,49)),reference=reference)
     train=ev.load_arrays(REBUILD/'TRAIN_INPUTS.npz');combined=read(REBUILD/'MONTHLY_META.json');require(combined['monthly']==meta,'Training/event identities')
     before=old.array_snapshot(arrays);tb=old.array_snapshot(train)
     panel,info=study.arch.old.panel_load(meta['etfs']);require(study.raw_source_hashes(info)==plan['raw_source_hashes'],'Original panel hashes')
     priceproof=study.verify_panel_parity(panel,px,opening);sessions=read(old.CALENDAR)['sessions']
     extended,append_audit=inputs.append_completed(train,combined,panel,sessions,asof=meta['dates'][-1])
     augmented=deepcopy(combined);augmented['training']=append_audit['training_metadata']
-    controls=[]
-    def control_validator(view):
-        require(view['candidate'] is None and view['audit']['annual_control_exact'] is True,'Annual control precedes candidate')
-        controls.append(view['n']);return dict(passed=True,original_orders_verified=True)
-    bundle=kernel.fit_models(extended,augmented,arrays,n=122,control_validator=control_validator)
-    modelproof=independent.verify_models(extended,augmented,arrays,bundle,n=122)
+    bundle,modelproof,controlproof=verified_models(extended,augmented,arrays,122)
     ranks,delta,delta_audit=kernel.rank_and_delta(arrays,meta,bundle,n=122)
     deltapr=independent.verify_delta(arrays,meta,bundle,ranks,delta,delta_audit,n=122)
     orders,scores,pres,selectorproof=decisions(study,arrays,meta,delta,reference=reference)
@@ -151,8 +188,7 @@ def prepare(expected):
     fresh=[]
     for n in (0,1,53,88):
         pt,pm,pa,scope=kernel.physical_inputs(extended,augmented,arrays,n)
-        small=kernel.fit_models(pt,pm,pa,n=n,control_validator=control_validator)
-        mp=independent.verify_models(pt,pm,pa,small,n=n)
+        small,mp,cp=verified_models(pt,pm,pa,n)
         rr,dd,da=kernel.rank_and_delta(pa,pm['monthly'],small,n=n)
         dp=independent.verify_delta(pa,pm['monthly'],small,rr,dd,da,n=n)
         for role in ('control','candidate'):
@@ -160,16 +196,20 @@ def prepare(expected):
         exact(dd,delta[:n],'Fresh deltaprefix')
         oo,ss,pp,sp=decisions(study,pa,pm['monthly'],dd,reference=reference)
         for arm in ARMS:require(oo[arm]==orders[arm][:n],'Fresh orderprefix');exact(ss[arm],scores[arm][:n],'Freshscoreprefix')
-        fresh.append(dict(n=n,model=mp,delta=dp,selector=sp,scope=scope))
+        fresh.append(dict(n=n,model=mp,control_gate=cp,producer_counts=small['audit']['counts'],delta=dp,delta_audit=da,selector=sp,scope=scope))
         print(json.dumps(dict(stage='273_fresh_prefix',n=n)),flush=True)
     require(before==old.array_snapshot(arrays) and tb==old.array_snapshot(train),'Original inputs mutated')
+    producer_counts=[bundle['audit']['counts']]+[x['producer_counts'] for x in fresh]
+    model_receipts=[modelproof,controlproof]+[r[k] for r in fresh for k in ('model','control_gate')]
+    work_totals=dict(prescore_calls=129,selector_calls=258,independent_selector_calls=258,make_orders_calls=258,producer_fits=sum(r['actual_model_fits'] for r in producer_counts),independent_canonical_solves=sum(r['work']['canonical_solves'] for r in model_receipts),independent_svd_solves=sum(r['work']['svd_solves'] for r in model_receipts))
     gate(expected);dest=OUT/'prepared';dest.mkdir()
     np.savez_compressed(dest/'FORECASTS.npz',**{role+'_'+key:bundle[role][key] for role in ('control','candidate') for key in ('raw','available','rank')},delta=delta)
     np.savez_compressed(dest/'APPENDED_INPUTS.npz',**extended)
     for name,value in [('SCORES',scores),('PRE_SCORES',pres)]:np.savez_compressed(dest/(name+'.npz'),**value)
-    records={'META.json':meta,'ORDERS.json':orders,'APPEND_AUDIT.json':append_audit,'MODEL_AUDIT.json':{'control':bundle['control']['audit'],'candidate':bundle['candidate']['audit'],'audit':bundle['audit']},'PREP_AUDIT.json':dict(model=modelproof,delta=deltapr,selector=selectorproof,cached_prefixes=prefixes,fresh_prefixes=fresh,full122_reuses_main=True,annual_control_calls=controls),'SOURCE_PARITY.json':dict(original_arrays_unchanged=True,original_training_unchanged=True,original_orders_exact=True,original_pre_and_scores_exact=True,original_array_fingerprints=old.array_fingerprints(arrays),original_training_fingerprints=old.array_fingerprints(train),price_parity=priceproof,raw_source_hashes=plan['raw_source_hashes'],strict_pit=False)}
+    records={'META.json':meta,'ORDERS.json':orders,'APPEND_AUDIT.json':append_audit,'MODEL_AUDIT.json':{'control':bundle['control']['audit'],'candidate':bundle['candidate']['audit'],'audit':bundle['audit']},'DELTA_AUDIT.json':delta_audit,'PREP_AUDIT.json':dict(work_totals=work_totals,early_selector=early_selector,model=modelproof,control_gate=controlproof,producer_counts=bundle['audit']['counts'],delta=deltapr,selector=selectorproof,cached_prefixes=prefixes,fresh_prefixes=fresh,full122_reuses_main=True,annual_control_calls=[122,0,1,53,88]),'SOURCE_PARITY.json':dict(original_arrays_unchanged=True,original_training_unchanged=True,original_orders_exact=True,original_pre_and_scores_exact=True,original_array_fingerprints=old.array_fingerprints(arrays),original_training_fingerprints=old.array_fingerprints(train),price_parity=priceproof,raw_source_hashes=plan['raw_source_hashes'],strict_pit=False)}
     for name,value in records.items():dump(dest/name,value)
     dump(dest/'COMPLETION.json',dict(status='COMPLETE',created_utc=now(),plan_sha256=expected,events=122,artifacts_sha256={p.name:sha(p) for p in dest.iterdir()},portfolio_returns_computed=False))
+    checkpoint(dest,expected)
     print(json.dumps(dict(status='PREPARED',completion_sha256=sha(dest/'COMPLETION.json'))),flush=True)
 
 def prepared(expected):
@@ -264,6 +304,7 @@ def diagnose(expected):
         for short,long in (('training','first88'),('early','early53'),('recent','recent35')):helper.check_metrics(proof['paths'][arm]['same_close_zero']['slices'][long],training[arm][short],arm+'/'+short)
     dump(dest/'INDEPENDENT_OUTCOME.json',proof);dump(dest/'RESULTS.json',dict(selection=f['selection'],arms=results,reused_sample=True,strict_pit=False,same_close_zero_primary=True,next_open_diagnostic_only=True,observer_promotion=False))
     gate(expected);dump(dest/'COMPLETION.json',dict(status='COMPLETE',created_utc=now(),plan_sha256=expected,frozen_sha256=sha(OUT/'selected/FROZEN.json'),paths=6,slices=30,artifacts_sha256={p.name:sha(p) for p in dest.iterdir()}))
+    checkpoint(dest,expected)
     print(json.dumps(dict(status='COMPLETE',full_cagr={a:results[a]['same_close_zero']['metrics']['cagr'] for a in ARMS})),flush=True)
 
 def close(expected):
@@ -273,14 +314,14 @@ def close(expected):
     require(review['passed'] is True and review['unresolved_blockers']==[] and review['plan_sha256']==expected and review['code_sha256']==codes(),'Independent saved review')
     for directory in ('prepared','results'):
         for p in (OUT/directory).iterdir():require(review['input_sha256'].get(str(p))==sha(p),'Review coverage '+p.name)
-    for p in (OUT/'PLAN.json',OUT/'selected/FROZEN.json',OUT/'selected/TRAIN_RESULTS.json'):require(review['input_sha256'].get(str(p))==sha(p),'Review selection coverage')
+    for p in (OUT/'PLAN.json',OUT/'selected/FROZEN.json',OUT/'selected/TRAIN_RESULTS.json',PHASE_TERMINALS):require(review['input_sha256'].get(str(p))==sha(p),'Review selection coverage')
     old.verify(review['input_sha256']);protected=read(old.PROTECTED);old.verify(protected);require(len(protected)==21444,'Protected archive')
     before=CENTRAL.read_bytes();state=json.loads(before);require(len(state['completed'])==267 and sum(x['trials'] for x in state['completed'])==1312,'Counters before close')
     r=read(OUT/'results/RESULTS.json');require(r['selection']==f['selection'],'Frozen primary')
     pick=f['selection']['primary'];a=r['arms'][pick];m=a['same_close_zero']['metrics'];best=state['best_training_selected_candidate']
     if f['selection']['admitted'] and m['cagr']>best['cagr']:
         best=dict(directory=OUT.name,spec={'arm':pick},cagr=m['cagr'],sharpe=m['sharpe'],max_drawdown=m['max_drawdown'],next_open_5bp_cagr=a['next_open_cost']['metrics']['cagr'],selected_on_first88=True,observer_promotion=False,limitations=DESIGN['limitations'])
-    dump(OUT/'COMPLETION.json',dict(status='COMPLETED_INDEPENDENTLY_VERIFIED',created_utc=now(),plan_sha256=expected,result_completion_sha256=sha(OUT/'results/COMPLETION.json'),result_review_sha256=sha(RESULT_REVIEW),new_trials=2,protected_files=21444,best_training_selected_candidate=best,target_reached=best['cagr']>=.7,observers_modified=False))
+    dump(OUT/'COMPLETION.json',dict(status='COMPLETED_INDEPENDENTLY_VERIFIED',created_utc=now(),plan_sha256=expected,result_completion_sha256=sha(OUT/'results/COMPLETION.json'),result_review_sha256=sha(RESULT_REVIEW),phase_terminals_sha256=sha(PHASE_TERMINALS),new_trials=2,protected_files=21444,best_training_selected_candidate=best,target_reached=best['cagr']>=.7,observers_modified=False))
     state['completed'].append(dict(directory=OUT.name,trials=2,completed_utc=now(),primary=pick,primary_cagr=m['cagr'],primary_sharpe=m['sharpe'],new_admitted=int(f['selection']['admitted']),independent_execution_paths=6,protected_files=21444,target_reached=best['cagr']>=.7,completion=dict(path=str(OUT/'COMPLETION.json'),sha256=sha(OUT/'COMPLETION.json'))))
     state.update(best_training_selected_candidate=best,latest_training_selected_candidate=dict(directory=OUT.name,arm=pick,selection=f['selection'],full_period_cagr=m['cagr'],full_period_sharpe=m['sharpe'],selected_on_first88=True),registered_queue=[],current_status='completed_independently_verified',updated_utc=now(),last_goal_turn_classification='progress',next_step='Review monthly matured pooled clock evidence; observers remain frozen.')
     old.commit_state(before,state,'matured_clock273_close');print(json.dumps(read(OUT/'COMPLETION.json')),flush=True)

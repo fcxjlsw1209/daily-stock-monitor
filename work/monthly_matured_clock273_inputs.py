@@ -35,6 +35,18 @@ HELPER_SHA256 = {
 }
 
 
+def dependency_files():
+    """Code-only registration inventory; includes the ordinal helper's import.
+
+    Merely lists paths: it does not import label implementations, read data or
+    calculate labels. The host binds these bytes before registration, and the
+    label loader separately checks their frozen expected SHA values at use.
+    Package/runtime bindings remain the host's responsibility.
+    """
+    root = Path(__file__).resolve().parents[1]
+    return tuple(root / relative for relative in HELPER_SHA256)
+
+
 def _need(ok, message):
     if not ok:
         raise ValueError(message)
@@ -174,8 +186,9 @@ def _validate(training, combined_meta, sessions, asof):
 
 def _load_helpers():
     root = Path(__file__).resolve().parents[1]
-    for rel, expected in HELPER_SHA256.items():
-        _need(hashlib.sha256((root / rel).read_bytes()).hexdigest() == expected,
+    for path in dependency_files():
+        rel = path.relative_to(root).as_posix()
+        _need(hashlib.sha256(path.read_bytes()).hexdigest() == HELPER_SHA256[rel],
               'frozen label helper SHA mismatch: ' + rel)
     modules = []
     for name, rel in (('ordinal273', 'outputs/monthly_core_expansion/ordinal_model.py'),

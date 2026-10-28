@@ -19,16 +19,21 @@ holding-period labels, while retaining the long-momentum core and monthly fixed
 holdings. It is a conditional replication of an earlier research direction,
 not a claim of a novel factor or improved returns.
 
-The pure input, model and independent-mathematics modules have synthetic test
-suites. The lifecycle host remains a draft: its host test, prospective review,
-registration and actual-data integration have not been completed. No experiment
-273 PLAN, actual model fits, selected portfolios or performance results exist.
-Do not run its actual phases before completing those gates. This sync does not
-advance the completed-research counters or change any observer account.
+The input, model, independent-mathematics, lifecycle-host and saved-result-reader
+modules now have synthetic test suites: all 133 checks passed on this source
+snapshot. The host verifies annual-control parity before fitting the monthly
+candidate and binds explicit source inventories; the new reader checks saved
+models, decisions and accounting artifacts. The source integration is complete,
+but prospective registration and actual-data execution remain pending. No
+experiment 273 PLAN, actual model fits, selected portfolios or performance results
+exist. Do not run its actual phases before completing those gates. This sync does
+not advance the completed-research counters or change any observer account.
 
-The exact source snapshot and checks are recorded in
-`SYNC_DRAFT273_VALIDATION_20261027.json`. A source backup and passing module tests
-do not establish that the complete experiment can run or reproduce a return.
+The latest source snapshot and checks are recorded in
+`SYNC_DRAFT273_INTEGRATION_VALIDATION_20261027.json`. The earlier
+`SYNC_DRAFT273_VALIDATION_20261027.json` remains a record of the preceding draft.
+A source backup and passing synthetic tests do not establish that the complete
+experiment can run on actual data or reproduce a return.
 
 The source-only `roa_field_scope270_pdf_rerender.py` and its synthetic tests are
 also included. Actual rendering requires separately pinned and approved local

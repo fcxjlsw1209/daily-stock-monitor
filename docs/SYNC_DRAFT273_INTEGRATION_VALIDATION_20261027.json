@@ -1,0 +1,107 @@
+{
+  "schema": "github_source_sync_validation_v1",
+  "snapshot_utc": "2026-10-28T04:25:47.592695+00:00",
+  "base_commit": "85524f2a827d851988fca79d0a9c82e4d2a88a3d",
+  "exported_files": 3018,
+  "new_files": {
+    "work/monthly_matured_clock273_saved_reader.py": "cd69b24884e5cec7060ed9f5a8035f597c0c400b597a1a2ec3eb46ff9d39d60a",
+    "work/test_monthly_matured_clock273_host.py": "2219ad19c4c946554737af1b9cab19e6abea0331566f35cadf2447bbf77a369a",
+    "work/test_monthly_matured_clock273_saved_reader.py": "5cbda08b0d4ed176b59e0d0ad81bf95bae51787863939448b62bc8a4736b90a9"
+  },
+  "updated_files": {
+    "work/monthly_matured_clock273_host.py": "e02aaa9e337824b16c2f0643f7a1ec7dd4483e9c301a01118c5d25109e60274e",
+    "work/monthly_matured_clock273_inputs.py": "a53e4c430943745a94e704999ca20bff8ec4869d40760e90d11785152ad81fcb",
+    "work/test_monthly_matured_clock273_inputs.py": "7a4f86039f09bc3f7681c07f663afd38a7c65830689b4bf1d3147cbb7bcee676"
+  },
+  "unchanged_previous_exports": 3012,
+  "unchanged_observer_exports": 106,
+  "all_source_and_published_hashes_and_modes_match": true,
+  "source_manifest_sha256": "a79156597e1c48e5683554d56ca97d53ecbedc88f56a75bd2e24d6d6334af9b5",
+  "export_secret_preflight_passed": true,
+  "export_terminal_chunk": "8cea37",
+  "checks": [
+    {
+      "suite": "clock273_inputs",
+      "tests": 27,
+      "passed": true,
+      "session_id": 44062,
+      "terminal_chunk": "a0dd79",
+      "exit_code": 0,
+      "log_sha256": "53340f9e3294829ebf3482e07e38704bd60140da0c03d7c722de81c89e9ce1bb"
+    },
+    {
+      "suite": "clock273_kernel",
+      "tests": 22,
+      "passed": true,
+      "session_id": 27927,
+      "terminal_chunk": "4d7f0a",
+      "exit_code": 0,
+      "log_sha256": "a204ba3b65e3aa4a9d75a41c7c0ac2212bbda49187de8b836d9dfbadf7cd0e9e"
+    },
+    {
+      "suite": "clock273_independent",
+      "tests": 31,
+      "passed": true,
+      "session_id": 57899,
+      "terminal_chunk": "4ef9ae",
+      "exit_code": 0,
+      "log_sha256": "4e8f4c265e62da41c9d363213b727e8b0178633e04d9abc6b03c1efdc913dbf3"
+    },
+    {
+      "suite": "clock273_host",
+      "tests": 27,
+      "passed": true,
+      "session_id": 92147,
+      "terminal_chunk": "4e3b43",
+      "exit_code": 0,
+      "log_sha256": "bb571a51594f926c199f7a7b4e291bf56d478d10846898cdafce495f53d8a11b"
+    },
+    {
+      "suite": "clock273_saved_reader",
+      "tests": 26,
+      "passed": true,
+      "session_id": 89981,
+      "terminal_chunk": "2a2c76",
+      "exit_code": 0,
+      "log_sha256": "692ac5cdb583e6c9789de14375a235aba142267846fd385ee41a6f6b1c28c684"
+    },
+    {
+      "suite": "repository_base_exporter",
+      "tests": 26,
+      "passed": true,
+      "session_id": 74634,
+      "terminal_chunk": "03ced4",
+      "exit_code": 0,
+      "log_sha256": "a38568a2c31524453fee05f98ce3aa87388802074e599057c41c7cc06cc3524c"
+    }
+  ],
+  "current_synthetic_tests_passed": 159,
+  "initial_test_attempt": {
+    "interpreter": "system_python",
+    "exit_code": 1,
+    "reason": "numpy unavailable in system interpreter; pinned project environment rerun passed",
+    "log_sha256": "0309ddd4657ce63d3c8a6aaa82ba4021f0dab20ed296fbc649a1e8cc5695bbcf"
+  },
+  "experiment273": {
+    "status": "UNREGISTERED_DRAFT_INTEGRATION_TESTED",
+    "actual_data_run": false,
+    "actual_backtest_run": false,
+    "synthetic_host_and_reader_suites_complete": true,
+    "formal_registration_complete": false,
+    "prospective_review_receipt_complete": false,
+    "retained_headline_same_close_zero_cost_cagr_percent_rounded": 67.67,
+    "target_reached": false
+  },
+  "validation_limit": "Synthetic tests and source export only; actual registered experiment and numerical outcomes remain unrun.",
+  "observer_modified": false,
+  "private_data_exported": false,
+  "exclusions": [
+    "credentials",
+    "raw market data and model caches",
+    "author original records",
+    "observer ledgers and trade plans",
+    "private financial source evidence and reviews",
+    "runtime binaries",
+    "private recovery scripts"
+  ]
+}
